@@ -1,4 +1,13 @@
 ﻿Public Class MachineCard
+    Public Property MachineImage As Image
+        Get
+            Return picMachine.Image
+        End Get
+        Set(value As Image)
+            picMachine.Image = value
+        End Set
+    End Property
+
     Public Property UnitNumber As Integer
         Get
             Return CInt(lblUnit.Text.Replace("Unit ", ""))

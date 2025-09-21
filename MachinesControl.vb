@@ -2,12 +2,18 @@
     Private selectedMachine As MachineCard = Nothing
 
     ' Attach click handler to a control and all nested children
+    ' --- Helper: Attach click handler to ctrl and children, but skip interactive controls ---
     Private Sub AttachClickHandlers(ctrl As Control, handler As EventHandler)
-        AddHandler ctrl.Click, handler
+        ' Skip interactive controls so they can receive input without triggering selection
+        If Not (TypeOf ctrl Is ComboBox Or TypeOf ctrl Is TextBox Or TypeOf ctrl Is Button Or TypeOf ctrl Is NumericUpDown Or TypeOf ctrl Is CheckBox Or TypeOf ctrl Is LinkLabel) Then
+            AddHandler ctrl.Click, handler
+        End If
+
         For Each child As Control In ctrl.Controls
             AttachClickHandlers(child, handler)
         Next
     End Sub
+
 
 
     Private Sub MachinesControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,12 +26,17 @@
         newMachine.Capacity = "10"
         newMachine.Status = "Available"
 
-        ' Attach click handler to the card and all its children
+        ' Example: Load a washing machine picture
+        'newMachine.MachineImage = My.Resources.washing_machine_icon
+        newMachine.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\washing-machine.png")
+        newMachine.picMachine.SizeMode = PictureBoxSizeMode.Zoom
+
         AttachClickHandlers(newMachine, AddressOf Machine_Click)
 
         flpMachines.Controls.Add(newMachine)
         RenumberMachines()
     End Sub
+
 
 
     ' Remove machine
@@ -54,16 +65,23 @@
 
     ' When a machine is clicked
     Private Sub Machine_Click(sender As Object, e As EventArgs)
-        Dim clicked As MachineCard = Nothing
+        Dim orig As Control = DirectCast(sender, Control)
 
-        ' Make sure we always get the parent MachineCard, even if a child was clicked
-        If TypeOf sender Is MachineCard Then
-            clicked = DirectCast(sender, MachineCard)
-        Else
-            clicked = DirectCast(DirectCast(sender, Control).Parent, MachineCard)
+        ' Extra safety: if the click started on an interactive control, ignore it
+        If TypeOf orig Is ComboBox Or TypeOf orig Is TextBox Or TypeOf orig Is Button Or TypeOf orig Is NumericUpDown Or TypeOf orig Is CheckBox Then
+            Return
         End If
 
-        ' Toggle (deselect if clicked again)
+        ' Walk up to find the MachineCard parent
+        Dim ctrl As Control = orig
+        While ctrl IsNot Nothing AndAlso Not TypeOf ctrl Is MachineCard
+            ctrl = ctrl.Parent
+        End While
+        If ctrl Is Nothing Then Return
+
+        Dim clicked As MachineCard = DirectCast(ctrl, MachineCard)
+
+        ' Toggle selection (same logic you used before)
         If selectedMachine Is clicked Then
             clicked.BorderStyle = BorderStyle.None
             clicked.BackColor = SystemColors.Control
@@ -74,10 +92,10 @@
         End If
 
         ' Clear highlight from all machines
-        For Each ctrl As Control In flpMachines.Controls
-            If TypeOf ctrl Is MachineCard Then
-                DirectCast(ctrl, MachineCard).BorderStyle = BorderStyle.None
-                ctrl.BackColor = SystemColors.Control
+        For Each mc As Control In flpMachines.Controls
+            If TypeOf mc Is MachineCard Then
+                DirectCast(mc, MachineCard).BorderStyle = BorderStyle.None
+                mc.BackColor = SystemColors.Control
             End If
         Next
 
@@ -88,6 +106,4 @@
         btnRemoveMachine.Enabled = True
         btnConfigure.Enabled = True
     End Sub
-
-
 End Class

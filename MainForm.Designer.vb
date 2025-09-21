@@ -22,6 +22,7 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         TableLayoutPanel1 = New TableLayoutPanel()
         lblTitle = New Label()
         btnMachines = New Button()
@@ -122,6 +123,7 @@ Partial Class MainForm
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(TableLayoutPanel1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "MainForm"
         Text = "Laundry Management System"
         TableLayoutPanel1.ResumeLayout(False)

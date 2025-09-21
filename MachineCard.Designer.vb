@@ -26,7 +26,9 @@ Partial Class MachineCard
         lblWeight = New Label()
         lblUnit = New Label()
         cmbStatus = New ComboBox()
+        picMachine = New PictureBox()
         TableLayoutPanel1.SuspendLayout()
+        CType(picMachine, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -36,6 +38,7 @@ Partial Class MachineCard
         TableLayoutPanel1.Controls.Add(lblWeight, 0, 2)
         TableLayoutPanel1.Controls.Add(lblUnit, 0, 1)
         TableLayoutPanel1.Controls.Add(cmbStatus, 0, 3)
+        TableLayoutPanel1.Controls.Add(picMachine, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -71,7 +74,7 @@ Partial Class MachineCard
         ' 
         ' cmbStatus
         ' 
-        cmbStatus.Dock = DockStyle.Fill
+        cmbStatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.FormattingEnabled = True
         cmbStatus.Items.AddRange(New Object() {"Available", "In-Use", "Damaged"})
@@ -79,6 +82,15 @@ Partial Class MachineCard
         cmbStatus.Name = "cmbStatus"
         cmbStatus.Size = New Size(192, 23)
         cmbStatus.TabIndex = 3
+        ' 
+        ' picMachine
+        ' 
+        picMachine.Dock = DockStyle.Fill
+        picMachine.Location = New Point(3, 3)
+        picMachine.Name = "picMachine"
+        picMachine.Size = New Size(192, 149)
+        picMachine.TabIndex = 4
+        picMachine.TabStop = False
         ' 
         ' MachineCard
         ' 
@@ -90,6 +102,7 @@ Partial Class MachineCard
         Size = New Size(198, 248)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
+        CType(picMachine, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -97,5 +110,6 @@ Partial Class MachineCard
     Friend WithEvents lblUnit As Label
     Friend WithEvents lblWeight As Label
     Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents picMachine As PictureBox
 
 End Class
