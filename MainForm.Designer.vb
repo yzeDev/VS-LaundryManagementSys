@@ -29,9 +29,7 @@ Partial Class MainForm
         btnStats = New Button()
         btnOptions = New Button()
         MainPanel = New Panel()
-        flpMachines = New FlowLayoutPanel()
         TableLayoutPanel1.SuspendLayout()
-        MainPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -111,21 +109,12 @@ Partial Class MainForm
         ' 
         ' MainPanel
         ' 
-        MainPanel.Controls.Add(flpMachines)
         MainPanel.Dock = DockStyle.Fill
         MainPanel.Location = New Point(133, 70)
         MainPanel.Name = "MainPanel"
         TableLayoutPanel1.SetRowSpan(MainPanel, 4)
         MainPanel.Size = New Size(664, 377)
         MainPanel.TabIndex = 5
-        ' 
-        ' flpMachines
-        ' 
-        flpMachines.Dock = DockStyle.Fill
-        flpMachines.Location = New Point(0, 0)
-        flpMachines.Name = "flpMachines"
-        flpMachines.Size = New Size(664, 377)
-        flpMachines.TabIndex = 0
         ' 
         ' MainForm
         ' 
@@ -137,7 +126,6 @@ Partial Class MainForm
         Text = "Laundry Management System"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
-        MainPanel.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -148,6 +136,5 @@ Partial Class MainForm
     Friend WithEvents btnStats As Button
     Friend WithEvents btnOptions As Button
     Friend WithEvents MainPanel As Panel
-    Friend WithEvents flpMachines As FlowLayoutPanel
 
 End Class
