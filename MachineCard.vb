@@ -1,4 +1,8 @@
-﻿Public Class MachineCard
+﻿Imports System.Data.OleDb
+
+Public Class MachineCard
+    Public Property MachineID As Integer
+
     Public Property MachineImage As Image
         Get
             Return picMachine.Image
@@ -33,4 +37,6 @@
             cmbStatus.SelectedItem = value
         End Set
     End Property
+
+
 End Class

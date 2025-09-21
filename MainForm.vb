@@ -1,4 +1,9 @@
-﻿Public Class MainForm
+﻿Imports System.Data.OleDb
+
+Public Class MainForm
+
+
+
 
     Private Sub ShowControl(ctrl As UserControl)
         MainPanel.Controls.Clear()

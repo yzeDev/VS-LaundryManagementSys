@@ -61,6 +61,7 @@ Partial Class MainForm
         lblTitle.AutoSize = True
         TableLayoutPanel1.SetColumnSpan(lblTitle, 2)
         lblTitle.Dock = DockStyle.Fill
+        lblTitle.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTitle.Location = New Point(3, 0)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(794, 67)
