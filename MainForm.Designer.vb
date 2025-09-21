@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -28,8 +28,10 @@ Partial Class Form1
         btnTransactions = New Button()
         btnStats = New Button()
         btnOptions = New Button()
+        MainPanel = New Panel()
         flpMachines = New FlowLayoutPanel()
         TableLayoutPanel1.SuspendLayout()
+        MainPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -42,7 +44,7 @@ Partial Class Form1
         TableLayoutPanel1.Controls.Add(btnTransactions, 0, 2)
         TableLayoutPanel1.Controls.Add(btnStats, 0, 3)
         TableLayoutPanel1.Controls.Add(btnOptions, 0, 4)
-        TableLayoutPanel1.Controls.Add(flpMachines, 1, 1)
+        TableLayoutPanel1.Controls.Add(MainPanel, 1, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -107,25 +109,35 @@ Partial Class Form1
         btnOptions.Text = "Options"
         btnOptions.UseVisualStyleBackColor = True
         ' 
+        ' MainPanel
+        ' 
+        MainPanel.Controls.Add(flpMachines)
+        MainPanel.Dock = DockStyle.Fill
+        MainPanel.Location = New Point(133, 70)
+        MainPanel.Name = "MainPanel"
+        TableLayoutPanel1.SetRowSpan(MainPanel, 4)
+        MainPanel.Size = New Size(664, 377)
+        MainPanel.TabIndex = 5
+        ' 
         ' flpMachines
         ' 
         flpMachines.Dock = DockStyle.Fill
-        flpMachines.Location = New Point(133, 70)
+        flpMachines.Location = New Point(0, 0)
         flpMachines.Name = "flpMachines"
-        TableLayoutPanel1.SetRowSpan(flpMachines, 4)
         flpMachines.Size = New Size(664, 377)
-        flpMachines.TabIndex = 5
+        flpMachines.TabIndex = 0
         ' 
-        ' Form1
+        ' MainForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(TableLayoutPanel1)
-        Name = "Form1"
+        Name = "MainForm"
         Text = "Laundry Management System"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
+        MainPanel.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -135,6 +147,7 @@ Partial Class Form1
     Friend WithEvents btnTransactions As Button
     Friend WithEvents btnStats As Button
     Friend WithEvents btnOptions As Button
+    Friend WithEvents MainPanel As Panel
     Friend WithEvents flpMachines As FlowLayoutPanel
 
 End Class
