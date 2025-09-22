@@ -1,4 +1,8 @@
-﻿Public Class MachineCard
+﻿Imports System.Data.OleDb
+
+Public Class MachineCard
+    Public Property MachineID As Integer
+
     Public Property MachineImage As Image
         Get
             Return picMachine.Image
@@ -18,10 +22,10 @@
     End Property
     Public Property Capacity As String
         Get
-            Return lblWeight.Text
+            Return lblWeightValue.Text
         End Get
         Set(value As String)
-            lblWeight.Text = value & " kg"
+            lblWeightValue.Text = value & " kg"
         End Set
     End Property
 
@@ -33,4 +37,5 @@
             cmbStatus.SelectedItem = value
         End Set
     End Property
+
 End Class
