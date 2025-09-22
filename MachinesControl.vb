@@ -15,8 +15,9 @@ Public Class MachinesControl
     Private Sub SaveMachineToDB(machine As MachineCard)
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
-            Dim query As String = "INSERT INTO UnitData (Capacity, Status) VALUES (@cap, @status)"
+            Dim query As String = "INSERT INTO UnitData (UnitNumber, Capacity, Status) VALUES (@unitnum, @cap, @status)"
             Using cmd As New OleDbCommand(query, conn)
+                cmd.Parameters.AddWithValue("@unitnum", machine.UnitNumber)
                 cmd.Parameters.AddWithValue("@cap", CInt(machine.Capacity.Replace(" kg", "")))
                 cmd.Parameters.AddWithValue("@status", machine.Status)
                 cmd.ExecuteNonQuery()

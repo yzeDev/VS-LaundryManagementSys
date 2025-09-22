@@ -23,12 +23,12 @@ Partial Class MachineCard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         TableLayoutPanel1 = New TableLayoutPanel()
+        lblWeightValue = New Label()
         lblWeightText = New Label()
         lblUnit = New Label()
-        cmbStatus = New ComboBox()
         picMachine = New PictureBox()
         lblMachineIDText = New Label()
-        lblWeightValue = New Label()
+        cmbStatus = New ComboBox()
         Label1 = New Label()
         lblTransactionID = New Label()
         TableLayoutPanel1.SuspendLayout()
@@ -61,6 +61,17 @@ Partial Class MachineCard
         TableLayoutPanel1.Size = New Size(250, 320)
         TableLayoutPanel1.TabIndex = 0
         ' 
+        ' lblWeightValue
+        ' 
+        lblWeightValue.AutoSize = True
+        lblWeightValue.Dock = DockStyle.Fill
+        lblWeightValue.Location = New Point(128, 223)
+        lblWeightValue.Name = "lblWeightValue"
+        lblWeightValue.Size = New Size(119, 32)
+        lblWeightValue.TabIndex = 6
+        lblWeightValue.Text = "Weight:"
+        lblWeightValue.TextAlign = ContentAlignment.TopCenter
+        ' 
         ' lblWeightText
         ' 
         lblWeightText.AutoSize = True
@@ -85,17 +96,6 @@ Partial Class MachineCard
         lblUnit.Text = "Unit"
         lblUnit.TextAlign = ContentAlignment.TopCenter
         ' 
-        ' cmbStatus
-        ' 
-        cmbStatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbStatus.FormattingEnabled = True
-        cmbStatus.Items.AddRange(New Object() {"Available", "In-Use", "Damaged"})
-        cmbStatus.Location = New Point(128, 258)
-        cmbStatus.Name = "cmbStatus"
-        cmbStatus.Size = New Size(119, 23)
-        cmbStatus.TabIndex = 3
-        ' 
         ' picMachine
         ' 
         TableLayoutPanel1.SetColumnSpan(picMachine, 2)
@@ -118,16 +118,16 @@ Partial Class MachineCard
         lblMachineIDText.Text = "Machine ID:"
         lblMachineIDText.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' lblWeightValue
+        ' cmbStatus
         ' 
-        lblWeightValue.AutoSize = True
-        lblWeightValue.Dock = DockStyle.Fill
-        lblWeightValue.Location = New Point(128, 223)
-        lblWeightValue.Name = "lblWeightValue"
-        lblWeightValue.Size = New Size(119, 32)
-        lblWeightValue.TabIndex = 6
-        lblWeightValue.Text = "Weight:"
-        lblWeightValue.TextAlign = ContentAlignment.TopCenter
+        cmbStatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbStatus.FormattingEnabled = True
+        cmbStatus.Items.AddRange(New Object() {"Available", "In-Use", "Damaged"})
+        cmbStatus.Location = New Point(128, 258)
+        cmbStatus.Name = "cmbStatus"
+        cmbStatus.Size = New Size(119, 23)
+        cmbStatus.TabIndex = 3
         ' 
         ' Label1
         ' 
