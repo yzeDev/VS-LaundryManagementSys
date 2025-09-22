@@ -2,13 +2,11 @@
 
 Public Class MainForm
 
-
-
-
     Private Sub ShowControl(ctrl As UserControl)
         MainPanel.Controls.Clear()
         ctrl.Dock = DockStyle.Fill  ' <- here we force it to resize and fill MainPanel
         MainPanel.Controls.Add(ctrl)
+
     End Sub
 
     ' Single event handler for all navigation buttons
