@@ -23,6 +23,7 @@ Public Class MainForm
                 ctrl = New StatsControl()
             Case "btnOptions"
                 ctrl = New OptionsControl()
+
         End Select
 
         If ctrl IsNot Nothing Then
