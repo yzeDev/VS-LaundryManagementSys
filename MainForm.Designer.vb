@@ -96,7 +96,7 @@ Partial Class MainForm
         ' 
         ' btnDashboard
         ' 
-        btnDashboard.Location = New Point(3, 8)
+        btnDashboard.Location = New Point(3, 0)
         btnDashboard.Name = "btnDashboard"
         btnDashboard.Size = New Size(121, 36)
         btnDashboard.TabIndex = 5
@@ -106,7 +106,7 @@ Partial Class MainForm
         ' 
         ' btnMachines
         ' 
-        btnMachines.Location = New Point(3, 50)
+        btnMachines.Location = New Point(3, 42)
         btnMachines.Name = "btnMachines"
         btnMachines.Size = New Size(121, 36)
         btnMachines.TabIndex = 1
@@ -116,7 +116,7 @@ Partial Class MainForm
         ' 
         ' btnStats
         ' 
-        btnStats.Location = New Point(3, 130)
+        btnStats.Location = New Point(3, 122)
         btnStats.Name = "btnStats"
         btnStats.Size = New Size(121, 36)
         btnStats.TabIndex = 3
@@ -126,7 +126,7 @@ Partial Class MainForm
         ' 
         ' btnTransactions
         ' 
-        btnTransactions.Location = New Point(3, 92)
+        btnTransactions.Location = New Point(3, 84)
         btnTransactions.Name = "btnTransactions"
         btnTransactions.Size = New Size(121, 36)
         btnTransactions.TabIndex = 2
@@ -136,7 +136,7 @@ Partial Class MainForm
         ' 
         ' btnOptions
         ' 
-        btnOptions.Location = New Point(3, 172)
+        btnOptions.Location = New Point(3, 164)
         btnOptions.Name = "btnOptions"
         btnOptions.Size = New Size(121, 36)
         btnOptions.TabIndex = 4
