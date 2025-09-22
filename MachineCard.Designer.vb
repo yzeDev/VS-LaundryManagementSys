@@ -80,7 +80,7 @@ Partial Class MachineCard
         lblWeightText.Name = "lblWeightText"
         lblWeightText.Size = New Size(119, 32)
         lblWeightText.TabIndex = 2
-        lblWeightText.Text = "Weight:"
+        lblWeightText.Text = "Max Weight Capacity:"
         lblWeightText.TextAlign = ContentAlignment.TopCenter
         ' 
         ' lblUnit

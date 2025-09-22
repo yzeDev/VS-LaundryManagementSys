@@ -103,19 +103,34 @@ Public Class MachinesControl
 
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
+        ' --- Ask the user for capacity ---
+        Dim input As String = InputBox("Enter the maximum weight capacity (in kg):", "New Machine", "10")
+
+        ' If user cancels or leaves blank, stop
+        If String.IsNullOrWhiteSpace(input) Then
+            MessageBox.Show("Machine not added. Capacity is required.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        ' Validate numeric input
+        Dim capacityKg As Integer
+        If Not Integer.TryParse(input, capacityKg) OrElse capacityKg <= 0 Then
+            MessageBox.Show("Invalid capacity. Please enter a positive number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
         ' --- Find the next available UnitNumber ---
         Dim nextUnitNumber As Integer = GetNextAvailableUnitNumber()
 
         ' --- Create machine card ---
         Dim newMachine As New MachineCard()
         newMachine.UnitNumber = nextUnitNumber
-        newMachine.Capacity = "10"
+        newMachine.Capacity = capacityKg.ToString() & " kg"
         newMachine.Status = "Available"
 
         Try
             newMachine.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\washing-machine.png")
         Catch
-            ' Optional: fallback if image not found
             newMachine.MachineImage = Nothing
         End Try
         newMachine.picMachine.SizeMode = PictureBoxSizeMode.Zoom
@@ -126,6 +141,7 @@ Public Class MachinesControl
         ' --- Refresh UI from DB ---
         LoadMachinesFromDB()
     End Sub
+
 
 
 
@@ -194,7 +210,7 @@ Public Class MachinesControl
         ' Check DB for highest UnitNumber
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
-            Dim query As String = "SELECT MAX(UnitNumber) FROM UnitData"
+            Dim query As String = "SELECT Max(UnitNumber) FROM UnitData"
             Using cmd As New OleDbCommand(query, conn)
                 Dim result = cmd.ExecuteScalar()
                 If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
@@ -268,6 +284,5 @@ Public Class MachinesControl
             LoadMachinesFromDB()
         End If
     End Sub
-
 
 End Class

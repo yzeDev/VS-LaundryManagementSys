@@ -102,6 +102,7 @@ Partial Class MachinesControl
         ' 
         ' flpMachines
         ' 
+        flpMachines.AutoScroll = True
         flpMachines.Dock = DockStyle.Fill
         flpMachines.Location = New Point(123, 3)
         flpMachines.Name = "flpMachines"

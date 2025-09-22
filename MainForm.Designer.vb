@@ -111,6 +111,7 @@ Partial Class MainForm
         ' 
         ' MainPanel
         ' 
+        MainPanel.AutoScroll = True
         MainPanel.Dock = DockStyle.Fill
         MainPanel.Location = New Point(133, 70)
         MainPanel.Name = "MainPanel"
