@@ -22,10 +22,10 @@ Public Class MachineCard
     End Property
     Public Property Capacity As String
         Get
-            Return lblWeight.Text
+            Return lblWeightText.Text
         End Get
         Set(value As String)
-            lblWeight.Text = value & " kg"
+            lblWeightText.Text = value & " kg"
         End Set
     End Property
 

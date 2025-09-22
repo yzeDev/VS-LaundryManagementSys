@@ -23,51 +23,64 @@ Partial Class MachineCard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         TableLayoutPanel1 = New TableLayoutPanel()
-        lblWeight = New Label()
+        lblWeightText = New Label()
         lblUnit = New Label()
         cmbStatus = New ComboBox()
         picMachine = New PictureBox()
+        lblMachineIDText = New Label()
+        lblWeightValue = New Label()
+        Label1 = New Label()
+        lblTransactionID = New Label()
         TableLayoutPanel1.SuspendLayout()
         CType(picMachine, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
         ' 
-        TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Controls.Add(lblWeight, 0, 2)
-        TableLayoutPanel1.Controls.Add(lblUnit, 0, 1)
-        TableLayoutPanel1.Controls.Add(cmbStatus, 0, 3)
-        TableLayoutPanel1.Controls.Add(picMachine, 0, 0)
+        TableLayoutPanel1.ColumnCount = 2
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.Controls.Add(lblWeightValue, 1, 3)
+        TableLayoutPanel1.Controls.Add(lblWeightText, 0, 3)
+        TableLayoutPanel1.Controls.Add(lblUnit, 0, 0)
+        TableLayoutPanel1.Controls.Add(picMachine, 0, 1)
+        TableLayoutPanel1.Controls.Add(lblMachineIDText, 0, 2)
+        TableLayoutPanel1.Controls.Add(cmbStatus, 1, 4)
+        TableLayoutPanel1.Controls.Add(Label1, 0, 4)
+        TableLayoutPanel1.Controls.Add(lblTransactionID, 0, 5)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 4
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 62.6174049F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.460865F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.460865F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.460865F))
-        TableLayoutPanel1.Size = New Size(198, 248)
+        TableLayoutPanel1.RowCount = 6
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 8.264462F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 51.7499161F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.2982359F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.2982359F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.2982349F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 9.090908F))
+        TableLayoutPanel1.Size = New Size(250, 320)
         TableLayoutPanel1.TabIndex = 0
         ' 
-        ' lblWeight
+        ' lblWeightText
         ' 
-        lblWeight.AutoSize = True
-        lblWeight.Dock = DockStyle.Fill
-        lblWeight.Location = New Point(3, 185)
-        lblWeight.Name = "lblWeight"
-        lblWeight.Size = New Size(192, 30)
-        lblWeight.TabIndex = 2
-        lblWeight.Text = "Weight:"
-        lblWeight.TextAlign = ContentAlignment.TopCenter
+        lblWeightText.AutoSize = True
+        lblWeightText.Dock = DockStyle.Fill
+        lblWeightText.Location = New Point(3, 223)
+        lblWeightText.Name = "lblWeightText"
+        lblWeightText.Size = New Size(119, 32)
+        lblWeightText.TabIndex = 2
+        lblWeightText.Text = "Weight:"
+        lblWeightText.TextAlign = ContentAlignment.TopCenter
         ' 
         ' lblUnit
         ' 
         lblUnit.AutoSize = True
+        TableLayoutPanel1.SetColumnSpan(lblUnit, 2)
         lblUnit.Dock = DockStyle.Fill
-        lblUnit.Location = New Point(3, 155)
+        lblUnit.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUnit.Location = New Point(3, 0)
         lblUnit.Name = "lblUnit"
-        lblUnit.Size = New Size(192, 30)
+        lblUnit.Size = New Size(244, 26)
         lblUnit.TabIndex = 0
         lblUnit.Text = "Unit"
         lblUnit.TextAlign = ContentAlignment.TopCenter
@@ -78,19 +91,66 @@ Partial Class MachineCard
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.FormattingEnabled = True
         cmbStatus.Items.AddRange(New Object() {"Available", "In-Use", "Damaged"})
-        cmbStatus.Location = New Point(3, 218)
+        cmbStatus.Location = New Point(128, 258)
         cmbStatus.Name = "cmbStatus"
-        cmbStatus.Size = New Size(192, 23)
+        cmbStatus.Size = New Size(119, 23)
         cmbStatus.TabIndex = 3
         ' 
         ' picMachine
         ' 
+        TableLayoutPanel1.SetColumnSpan(picMachine, 2)
         picMachine.Dock = DockStyle.Fill
-        picMachine.Location = New Point(3, 3)
+        picMachine.Location = New Point(3, 29)
         picMachine.Name = "picMachine"
-        picMachine.Size = New Size(192, 149)
+        picMachine.Size = New Size(244, 159)
         picMachine.TabIndex = 4
         picMachine.TabStop = False
+        ' 
+        ' lblMachineIDText
+        ' 
+        lblMachineIDText.AutoSize = True
+        TableLayoutPanel1.SetColumnSpan(lblMachineIDText, 2)
+        lblMachineIDText.Dock = DockStyle.Fill
+        lblMachineIDText.Location = New Point(3, 191)
+        lblMachineIDText.Name = "lblMachineIDText"
+        lblMachineIDText.Size = New Size(244, 32)
+        lblMachineIDText.TabIndex = 5
+        lblMachineIDText.Text = "Machine ID:"
+        lblMachineIDText.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblWeightValue
+        ' 
+        lblWeightValue.AutoSize = True
+        lblWeightValue.Dock = DockStyle.Fill
+        lblWeightValue.Location = New Point(128, 223)
+        lblWeightValue.Name = "lblWeightValue"
+        lblWeightValue.Size = New Size(119, 32)
+        lblWeightValue.TabIndex = 6
+        lblWeightValue.Text = "Weight:"
+        lblWeightValue.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Dock = DockStyle.Fill
+        Label1.Location = New Point(3, 255)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(119, 32)
+        Label1.TabIndex = 7
+        Label1.Text = "Machine Status:"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblTransactionID
+        ' 
+        lblTransactionID.AutoSize = True
+        TableLayoutPanel1.SetColumnSpan(lblTransactionID, 2)
+        lblTransactionID.Dock = DockStyle.Fill
+        lblTransactionID.Location = New Point(3, 287)
+        lblTransactionID.Name = "lblTransactionID"
+        lblTransactionID.Size = New Size(244, 33)
+        lblTransactionID.TabIndex = 8
+        lblTransactionID.Text = "Transaction ID:"
+        lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' MachineCard
         ' 
@@ -99,7 +159,7 @@ Partial Class MachineCard
         BorderStyle = BorderStyle.FixedSingle
         Controls.Add(TableLayoutPanel1)
         Name = "MachineCard"
-        Size = New Size(198, 248)
+        Size = New Size(250, 320)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         CType(picMachine, ComponentModel.ISupportInitialize).EndInit()
@@ -108,8 +168,12 @@ Partial Class MachineCard
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents lblUnit As Label
-    Friend WithEvents lblWeight As Label
+    Friend WithEvents lblWeightText As Label
     Friend WithEvents cmbStatus As ComboBox
     Friend WithEvents picMachine As PictureBox
+    Friend WithEvents lblMachineIDText As Label
+    Friend WithEvents lblWeightValue As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTransactionID As Label
 
 End Class
