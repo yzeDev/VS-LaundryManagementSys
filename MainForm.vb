@@ -10,7 +10,7 @@ Public Class MainForm
     End Sub
 
     ' Single event handler for all navigation buttons
-    Private Sub Navigation_Click(sender As Object, e As EventArgs) Handles btnMachines.Click, btnTransactions.Click, btnStats.Click, btnOptions.Click
+    Private Sub Navigation_Click(sender As Object, e As EventArgs) Handles btnMachines.Click, btnTransactions.Click, btnStats.Click, btnOptions.Click, btnDashboard.Click
         Dim clickedButton As Button = DirectCast(sender, Button)
         Dim ctrl As UserControl = Nothing
 
@@ -23,6 +23,8 @@ Public Class MainForm
                 ctrl = New StatsControl()
             Case "btnOptions"
                 ctrl = New OptionsControl()
+            Case "btnDashboard"
+                ctrl = New DashboardControl()
         End Select
 
         If ctrl IsNot Nothing Then
