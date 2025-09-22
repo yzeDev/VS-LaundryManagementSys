@@ -186,7 +186,7 @@ Partial Class DashboardControl
         Label5.Name = "Label5"
         Label5.Size = New Size(622, 50)
         Label5.TabIndex = 0
-        Label5.Text = "MACHINES:"
+        Label5.Text = "MACHINES"
         Label5.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel9
@@ -269,9 +269,10 @@ Partial Class DashboardControl
         ' 
         lblPendingOrderText.AutoSize = True
         TableLayoutPanel2.SetColumnSpan(lblPendingOrderText, 2)
+        lblPendingOrderText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         lblPendingOrderText.Location = New Point(3, 0)
         lblPendingOrderText.Name = "lblPendingOrderText"
-        lblPendingOrderText.Size = New Size(89, 15)
+        lblPendingOrderText.Size = New Size(123, 21)
         lblPendingOrderText.TabIndex = 0
         lblPendingOrderText.Text = "Pending Orders"
         ' 
@@ -325,9 +326,10 @@ Partial Class DashboardControl
         ' 
         lblInProgressText.AutoSize = True
         TableLayoutPanel3.SetColumnSpan(lblInProgressText, 2)
+        lblInProgressText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         lblInProgressText.Location = New Point(3, 0)
         lblInProgressText.Name = "lblInProgressText"
-        lblInProgressText.Size = New Size(65, 15)
+        lblInProgressText.Size = New Size(92, 21)
         lblInProgressText.TabIndex = 0
         lblInProgressText.Text = "In Progress"
         ' 
@@ -381,9 +383,10 @@ Partial Class DashboardControl
         ' 
         lblOutForDeliveryText.AutoSize = True
         TableLayoutPanel4.SetColumnSpan(lblOutForDeliveryText, 2)
+        lblOutForDeliveryText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         lblOutForDeliveryText.Location = New Point(3, 0)
         lblOutForDeliveryText.Name = "lblOutForDeliveryText"
-        lblOutForDeliveryText.Size = New Size(90, 15)
+        lblOutForDeliveryText.Size = New Size(127, 21)
         lblOutForDeliveryText.TabIndex = 0
         lblOutForDeliveryText.Text = "Out for Delivery"
         ' 
@@ -437,9 +440,10 @@ Partial Class DashboardControl
         ' 
         lblCompletedText.AutoSize = True
         TableLayoutPanel5.SetColumnSpan(lblCompletedText, 2)
+        lblCompletedText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         lblCompletedText.Location = New Point(3, 0)
         lblCompletedText.Name = "lblCompletedText"
-        lblCompletedText.Size = New Size(66, 15)
+        lblCompletedText.Size = New Size(92, 21)
         lblCompletedText.TabIndex = 0
         lblCompletedText.Text = "Completed"
         ' 
