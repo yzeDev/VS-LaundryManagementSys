@@ -31,12 +31,11 @@ Public Class MachineCard
 
     Public Property Status As String
         Get
-            Return cmbStatus.SelectedItem?.ToString()
+            Return lblStatus.Text
         End Get
         Set(value As String)
-            cmbStatus.SelectedItem = value
+            lblStatus.Text = value
         End Set
     End Property
-
 
 End Class

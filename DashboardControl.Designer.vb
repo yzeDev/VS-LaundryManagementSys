@@ -64,7 +64,10 @@ Partial Class DashboardControl
         PictureBox4 = New PictureBox()
         lblCompletedValue = New Label()
         Panel7 = New Panel()
-        Label7 = New Label()
+        SplitContainer1 = New SplitContainer()
+        Label1 = New Label()
+        btnReloadDashboard = New Button()
+        Button2 = New Button()
         TableLayoutPanel1.SuspendLayout()
         Panel1.SuspendLayout()
         TableLayoutPanel6.SuspendLayout()
@@ -90,6 +93,10 @@ Partial Class DashboardControl
         TableLayoutPanel5.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
+        SplitContainer1.Panel1.SuspendLayout()
+        SplitContainer1.Panel2.SuspendLayout()
+        SplitContainer1.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -608,24 +615,65 @@ Partial Class DashboardControl
         ' Panel7
         ' 
         TableLayoutPanel1.SetColumnSpan(Panel7, 5)
-        Panel7.Controls.Add(Label7)
+        Panel7.Controls.Add(SplitContainer1)
         Panel7.Dock = DockStyle.Fill
         Panel7.Location = New Point(3, 3)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(1094, 64)
         Panel7.TabIndex = 6
         ' 
-        ' Label7
+        ' SplitContainer1
         ' 
-        Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ImageAlign = ContentAlignment.MiddleLeft
-        Label7.Location = New Point(0, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(1094, 64)
-        Label7.TabIndex = 0
-        Label7.Text = "WELCOME BACK, ADMIN!"
-        Label7.TextAlign = ContentAlignment.MiddleLeft
+        SplitContainer1.Dock = DockStyle.Fill
+        SplitContainer1.Location = New Point(0, 0)
+        SplitContainer1.Name = "SplitContainer1"
+        ' 
+        ' SplitContainer1.Panel1
+        ' 
+        SplitContainer1.Panel1.Controls.Add(Label1)
+        ' 
+        ' SplitContainer1.Panel2
+        ' 
+        SplitContainer1.Panel2.BackgroundImageLayout = ImageLayout.Zoom
+        SplitContainer1.Panel2.Controls.Add(btnReloadDashboard)
+        SplitContainer1.Panel2.Controls.Add(Button2)
+        SplitContainer1.Size = New Size(1094, 64)
+        SplitContainer1.SplitterDistance = 999
+        SplitContainer1.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.Dock = DockStyle.Fill
+        Label1.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ImageAlign = ContentAlignment.MiddleLeft
+        Label1.Location = New Point(0, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(999, 64)
+        Label1.TabIndex = 0
+        Label1.Text = "WELCOME BACK, ADMIN !"
+        Label1.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' btnReloadDashboard
+        ' 
+        btnReloadDashboard.BackgroundImage = My.Resources.Resources.refresh
+        btnReloadDashboard.BackgroundImageLayout = ImageLayout.Zoom
+        btnReloadDashboard.Dock = DockStyle.Fill
+        btnReloadDashboard.FlatAppearance.BorderSize = 0
+        btnReloadDashboard.FlatStyle = FlatStyle.Flat
+        btnReloadDashboard.Location = New Point(0, 0)
+        btnReloadDashboard.Name = "btnReloadDashboard"
+        btnReloadDashboard.Size = New Size(91, 64)
+        btnReloadDashboard.TabIndex = 1
+        btnReloadDashboard.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(312, 3)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(75, 23)
+        Button2.TabIndex = 0
+        Button2.Text = "Button2"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' DashboardControl
         ' 
@@ -671,6 +719,10 @@ Partial Class DashboardControl
         TableLayoutPanel5.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         Panel7.ResumeLayout(False)
+        SplitContainer1.Panel1.ResumeLayout(False)
+        SplitContainer1.Panel2.ResumeLayout(False)
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
+        SplitContainer1.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -707,8 +759,6 @@ Partial Class DashboardControl
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Label6 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label7 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents lblAvailableValue As Label
     Friend WithEvents lblAvailableText As Label
@@ -718,5 +768,10 @@ Partial Class DashboardControl
     Friend WithEvents Panel10 As Panel
     Friend WithEvents lblBrokenValue As Label
     Friend WithEvents lblBrokenText As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents btnReloadDashboard As Button
 
 End Class

@@ -76,7 +76,7 @@ Public Class DashboardControl
                             lblAvailableValue.Text = count.ToString()
                         Case "in-use"
                             lblInUseValue.Text = count.ToString()
-                        Case "damaged", "broken"
+                        Case "damaged", "broken", "maintenance"
                             lblBrokenValue.Text = count.ToString()
                     End Select
                 End While
@@ -89,6 +89,8 @@ Public Class DashboardControl
         End Using
     End Sub
 
-
-
+    Private Sub btnReloadDashboard_Click(sender As Object, e As EventArgs) Handles btnReloadDashboard.Click
+        LoadOrderCounts()
+        LoadMachineCounts()
+    End Sub
 End Class
