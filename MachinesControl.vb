@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Module DatabaseHelper
-    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\LaundryDatabase.accdb"
+    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data SourceC:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb"
 End Module
 
 
