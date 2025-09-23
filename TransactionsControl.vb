@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Globalization
 
 Public Class TransactionsControl
 
@@ -23,6 +24,11 @@ Public Class TransactionsControl
         dgvTransactionsData.DefaultCellStyle.SelectionForeColor = dgvTransactionsData.DefaultCellStyle.ForeColor
         dgvTransactionsData.RowHeadersVisible = False
 
+        AddHandler cmbStatus.SelectedIndexChanged, AddressOf ApplyFilters
+        AddHandler tbSearch.TextChanged, AddressOf ApplyFilters
+        AddHandler cmbFilter.SelectedIndexChanged, AddressOf ApplyFilters
+        AddHandler dtpDateFilter.ValueChanged, AddressOf ApplyFilters
+        AddHandler chkAllDates.CheckedChanged, AddressOf ApplyFilters
     End Sub
 
     Private Sub LoadTransactions()
@@ -102,50 +108,113 @@ Public Class TransactionsControl
     Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
         ApplyFilters()
     End Sub
+
+    ' ... other imports (e.g. System.Data.OleDb) ...
+
     Private Sub ApplyFilters()
-        If dv Is Nothing Then Return
+        If dv Is Nothing OrElse dt Is Nothing Then Return
 
-        Dim filterParts As New List(Of String)
+        Dim filterParts As New List(Of String)()
 
-        ' --- Filter by Status ---
+        ' --- 1) STATUS filter (exact match) ---
         If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
             filterParts.Add("Status = '" & cmbStatus.SelectedItem.ToString().Replace("'", "''") & "'")
         End If
 
-        ' --- Filter by Search ---
-        If tbSearch.Text.Trim() <> "" Then
-            Dim searchText As String = tbSearch.Text.Replace("'", "''")  ' keep original case
+        ' --- 2) SEARCH (either specific column or all columns) ---
+        Dim searchTextRaw As String = tbSearch.Text.Trim()
+        If searchTextRaw <> "" Then
+            Dim searchText As String = searchTextRaw.Replace("'", "''") ' escape single quotes
 
-            If cmbFilter.SelectedItem IsNot Nothing Then
-                ' ✅ Search only in the selected column
+            If cmbFilter.SelectedItem IsNot Nothing AndAlso dt.Columns.Contains(cmbFilter.SelectedItem.ToString()) Then
+                ' Search only in selected column
                 Dim colName As String = cmbFilter.SelectedItem.ToString()
-                filterParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
+                Dim colType As Type = dt.Columns(colName).DataType
+
+                If colType Is GetType(String) Then
+                    filterParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
+                ElseIf colType Is GetType(Integer) OrElse colType Is GetType(Long) _
+                       OrElse colType Is GetType(Decimal) OrElse colType Is GetType(Double) Then
+                    If IsNumeric(searchText) Then
+                        filterParts.Add("[" & colName & "] = " & searchText)
+                    Else
+                        ' non-numeric search for numeric column -> no match; add impossible predicate
+                        filterParts.Add("1 = 0")
+                    End If
+                ElseIf colType Is GetType(DateTime) Then
+                    ' If a date column is selected and user typed a date, try parsing
+                    Dim d As DateTime
+                    If DateTime.TryParse(searchTextRaw, d) Then
+                        Dim startD As Date = d.Date
+                        Dim endD As Date = startD.AddDays(1)
+                        filterParts.Add("[" & colName & "] >= #" & startD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "# AND [" & colName & "] < #" & endD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "#")
+                    Else
+                        ' no valid date typed -> impossible predicate
+                        filterParts.Add("1 = 0")
+                    End If
+                End If
             Else
-                ' ✅ Search in ALL string columns instead
+                ' Search across ALL columns (strings + numeric + date)
                 Dim searchParts As New List(Of String)
                 For Each col As DataColumn In dt.Columns
-                    If col.DataType Is GetType(String) Then
-                        searchParts.Add("[" & col.ColumnName & "] LIKE '%" & searchText & "%'")
+                    Dim colName As String = col.ColumnName
+                    Dim ct As Type = col.DataType
+
+                    If ct Is GetType(String) Then
+                        searchParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
+                    ElseIf ct Is GetType(Integer) OrElse ct Is GetType(Long) _
+                           OrElse ct Is GetType(Decimal) OrElse ct Is GetType(Double) Then
+                        If IsNumeric(searchText) Then
+                            searchParts.Add("[" & colName & "] = " & searchText)
+                        End If
+                    ElseIf ct Is GetType(DateTime) Then
+                        ' try parse search text as date; if it parses, add date-range match
+                        Dim d As DateTime
+                        If DateTime.TryParse(searchTextRaw, d) Then
+                            Dim sD As Date = d.Date
+                            Dim eD As Date = sD.AddDays(1)
+                            searchParts.Add("([" & colName & "] >= #" & sD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "# AND [" & colName & "] < #" & eD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "#)")
+                        End If
                     End If
                 Next
+
                 If searchParts.Count > 0 Then
                     filterParts.Add("(" & String.Join(" OR ", searchParts) & ")")
                 End If
             End If
         End If
 
-        ' --- Apply combined filter ---
-        dv.RowFilter = String.Join(" AND ", filterParts)
+        ' --- 3) DATE filter using dtpDateFilter + chkAllDates ---
+        If Not chkAllDates.Checked Then
+            Dim selectedDate As Date = dtpDateFilter.Value.Date
+            Dim nextDay As Date = selectedDate.AddDays(1)
 
-        ' --- Optional: Sort by Status ---
+            ' Transaction Date must be >= selectedDate and < nextDay
+            filterParts.Add("[Transaction Date] >= #" & selectedDate.ToString("MM/dd/yyyy") & "# AND [Transaction Date] < #" & nextDay.ToString("MM/dd/yyyy") & "#")
+        End If
+
+
+        ' --- 4) Combine and apply ---
+        Dim combinedFilter As String = If(filterParts.Count > 0, String.Join(" AND ", filterParts), String.Empty)
+        Try
+            dv.RowFilter = combinedFilter
+        Catch ex As Exception
+            ' Show the filter for debugging and fall back to no filter
+            Debug.WriteLine("RowFilter failed: " & combinedFilter)
+            MessageBox.Show("Filter error: " & ex.Message & vbCrLf & "Filter string: " & combinedFilter)
+            dv.RowFilter = ""
+        End Try
+
+        ' Optional: sorting behavior (unchanged)
         If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
             dv.Sort = "Status ASC"
         Else
             dv.Sort = ""
         End If
 
-        ' Debug
-        Console.WriteLine("Applied Filter: " & dv.RowFilter)
+        ' Debug output
+        Debug.WriteLine("Applied Filter: " & combinedFilter)
     End Sub
+
 
 End Class
