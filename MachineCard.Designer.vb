@@ -70,7 +70,7 @@ Partial Class MachineCard
         lblWeightValue.Size = New Size(119, 32)
         lblWeightValue.TabIndex = 6
         lblWeightValue.Text = "Weight:"
-        lblWeightValue.TextAlign = ContentAlignment.TopCenter
+        lblWeightValue.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblWeightText
         ' 

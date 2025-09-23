@@ -35,9 +35,7 @@ Partial Class TransactionsControl
         TableLayoutPanel4 = New TableLayoutPanel()
         Label2 = New Label()
         Label3 = New Label()
-        Label4 = New Label()
         cmbStatus = New ComboBox()
-        cmbFilter = New ComboBox()
         tbSearch = New TextBox()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -190,17 +188,15 @@ Partial Class TransactionsControl
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
         TableLayoutPanel4.Controls.Add(Label2, 0, 0)
         TableLayoutPanel4.Controls.Add(Label3, 0, 1)
-        TableLayoutPanel4.Controls.Add(Label4, 0, 2)
         TableLayoutPanel4.Controls.Add(cmbStatus, 1, 0)
-        TableLayoutPanel4.Controls.Add(cmbFilter, 1, 2)
         TableLayoutPanel4.Controls.Add(tbSearch, 1, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(580, 3)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
-        TableLayoutPanel4.RowCount = 3
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel4.RowCount = 2
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel4.Size = New Size(317, 113)
         TableLayoutPanel4.TabIndex = 3
         ' 
@@ -211,61 +207,38 @@ Partial Class TransactionsControl
         Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         Label2.Location = New Point(3, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(89, 37)
+        Label2.Size = New Size(89, 56)
         Label2.TabIndex = 0
         Label2.Text = "Status:"
-        Label2.TextAlign = ContentAlignment.MiddleCenter
+        Label2.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
         Label3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
-        Label3.Location = New Point(3, 37)
+        Label3.Location = New Point(3, 56)
         Label3.Name = "Label3"
-        Label3.Size = New Size(89, 37)
+        Label3.Size = New Size(89, 57)
         Label3.TabIndex = 1
         Label3.Text = "Search:"
-        Label3.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
-        Label4.Location = New Point(3, 74)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(89, 39)
-        Label4.TabIndex = 2
-        Label4.Text = "Filter by:"
-        Label4.TextAlign = ContentAlignment.MiddleCenter
+        Label3.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' cmbStatus
         ' 
-        cmbStatus.Dock = DockStyle.Fill
+        cmbStatus.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.FormattingEnabled = True
         cmbStatus.Items.AddRange(New Object() {"", "Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
-        cmbStatus.Location = New Point(98, 3)
+        cmbStatus.Location = New Point(98, 30)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.Size = New Size(216, 23)
         cmbStatus.TabIndex = 3
         ' 
-        ' cmbFilter
-        ' 
-        cmbFilter.Dock = DockStyle.Fill
-        cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbFilter.FormattingEnabled = True
-        cmbFilter.Items.AddRange(New Object() {"", "Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
-        cmbFilter.Location = New Point(98, 77)
-        cmbFilter.Name = "cmbFilter"
-        cmbFilter.Size = New Size(216, 23)
-        cmbFilter.TabIndex = 4
-        ' 
         ' tbSearch
         ' 
-        tbSearch.Dock = DockStyle.Fill
-        tbSearch.Location = New Point(98, 40)
+        tbSearch.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        tbSearch.Location = New Point(98, 87)
         tbSearch.Name = "tbSearch"
         tbSearch.Size = New Size(216, 23)
         tbSearch.TabIndex = 5
@@ -299,9 +272,7 @@ Partial Class TransactionsControl
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents cmbStatus As ComboBox
-    Friend WithEvents cmbFilter As ComboBox
     Friend WithEvents tbSearch As TextBox
     Friend WithEvents chkAllDates As CheckBox
     Friend WithEvents btnReloadData As Button

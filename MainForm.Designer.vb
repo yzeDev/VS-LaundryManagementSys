@@ -25,11 +25,11 @@ Partial Class MainForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Panel2 = New Panel()
         TableLayoutPanel2 = New TableLayoutPanel()
-        btnDashboard = New Button()
         btnOptions = New Button()
         btnStats = New Button()
         btnTransactions = New Button()
         btnMachines = New Button()
+        btnDashboard = New Button()
         MainPanel = New Panel()
         TableLayoutPanel1 = New TableLayoutPanel()
         Panel2.SuspendLayout()
@@ -52,11 +52,11 @@ Partial Class MainForm
         ' 
         TableLayoutPanel2.ColumnCount = 1
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel2.Controls.Add(btnDashboard, 0, 0)
         TableLayoutPanel2.Controls.Add(btnOptions, 0, 4)
         TableLayoutPanel2.Controls.Add(btnStats, 0, 3)
         TableLayoutPanel2.Controls.Add(btnTransactions, 0, 2)
         TableLayoutPanel2.Controls.Add(btnMachines, 0, 1)
+        TableLayoutPanel2.Controls.Add(btnDashboard, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -68,21 +68,6 @@ Partial Class MainForm
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
         TableLayoutPanel2.Size = New Size(94, 555)
         TableLayoutPanel2.TabIndex = 0
-        ' 
-        ' btnDashboard
-        ' 
-        btnDashboard.Anchor = AnchorStyles.None
-        btnDashboard.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnDashboard.BackgroundImage = My.Resources.Resources._1
-        btnDashboard.BackgroundImageLayout = ImageLayout.Zoom
-        btnDashboard.FlatAppearance.BorderSize = 0
-        btnDashboard.FlatStyle = FlatStyle.Flat
-        btnDashboard.Location = New Point(12, 20)
-        btnDashboard.Name = "btnDashboard"
-        btnDashboard.Size = New Size(70, 70)
-        btnDashboard.TabIndex = 5
-        btnDashboard.TabStop = False
-        btnDashboard.UseVisualStyleBackColor = True
         ' 
         ' btnOptions
         ' 
@@ -143,6 +128,21 @@ Partial Class MainForm
         btnMachines.TabIndex = 1
         btnMachines.TabStop = False
         btnMachines.UseVisualStyleBackColor = True
+        ' 
+        ' btnDashboard
+        ' 
+        btnDashboard.Anchor = AnchorStyles.None
+        btnDashboard.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnDashboard.BackgroundImage = My.Resources.Resources._1
+        btnDashboard.BackgroundImageLayout = ImageLayout.Zoom
+        btnDashboard.FlatAppearance.BorderSize = 0
+        btnDashboard.FlatStyle = FlatStyle.Flat
+        btnDashboard.Location = New Point(3, 20)
+        btnDashboard.Name = "btnDashboard"
+        btnDashboard.Size = New Size(88, 70)
+        btnDashboard.TabIndex = 5
+        btnDashboard.TabStop = False
+        btnDashboard.UseVisualStyleBackColor = True
         ' 
         ' MainPanel
         ' 

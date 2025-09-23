@@ -26,7 +26,6 @@ Public Class TransactionsControl
 
         AddHandler cmbStatus.SelectedIndexChanged, AddressOf ApplyFilters
         AddHandler tbSearch.TextChanged, AddressOf ApplyFilters
-        AddHandler cmbFilter.SelectedIndexChanged, AddressOf ApplyFilters
         AddHandler dtpDateFilter.ValueChanged, AddressOf ApplyFilters
         AddHandler chkAllDates.CheckedChanged, AddressOf ApplyFilters
 
@@ -62,15 +61,6 @@ Public Class TransactionsControl
                     col.SortMode = DataGridViewColumnSortMode.NotSortable
                 Next
 
-                ' ---------------------
-                ' Populate cmbFilter with the actual DataTable column names
-                ' ---------------------
-                cmbFilter.Items.Clear()
-                cmbFilter.Items.Add("") ' blank / no-column option
-                For Each c As DataColumn In dt.Columns
-                    cmbFilter.Items.Add(c.ColumnName)
-                Next
-                cmbFilter.SelectedIndex = 0
 
                 ' ---------------------
                 ' Populate cmbStatus with distinct status values (and "All")
@@ -132,10 +122,6 @@ Public Class TransactionsControl
         ApplyFilters()
     End Sub
 
-    Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
-        ApplyFilters()
-    End Sub
-
     Private Sub ApplyFilters()
         If dv Is Nothing OrElse dt Is Nothing Then Return
 
@@ -152,34 +138,8 @@ Public Class TransactionsControl
         If searchTextRaw <> "" Then
             Dim searchText As String = searchTextRaw.Replace("'", "''") ' escape single quotes
 
-            ' If a specific column is selected
-            If cmbFilter.SelectedItem IsNot Nothing AndAlso cmbFilter.SelectedItem.ToString().Trim() <> "" AndAlso dt.Columns.Contains(cmbFilter.SelectedItem.ToString()) Then
-                Dim colName As String = cmbFilter.SelectedItem.ToString()
-                Dim colType As Type = dt.Columns(colName).DataType
-
-                If colType Is GetType(String) Then
-                    filterParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
-                ElseIf colType Is GetType(Integer) OrElse colType Is GetType(Long) _
-               OrElse colType Is GetType(Decimal) OrElse colType Is GetType(Double) Then
-                    If IsNumeric(searchText) Then
-                        filterParts.Add("[" & colName & "] = " & searchText)
-                    Else
-                        filterParts.Add("1 = 0") ' force no match if non-numeric search
-                    End If
-                ElseIf colType Is GetType(DateTime) Then
-                    Dim d As DateTime
-                    If DateTime.TryParse(searchTextRaw, d) Then
-                        Dim startD As Date = d.Date
-                        Dim endD As Date = startD.AddDays(1)
-                        filterParts.Add("[" & colName & "] >= #" & startD.ToString("MM/dd/yyyy") & "# AND [" & colName & "] < #" & endD.ToString("MM/dd/yyyy") & "#")
-                    Else
-                        filterParts.Add("1 = 0")
-                    End If
-                End If
-
-            Else
-                ' No specific column selected -> search across all
-                Dim searchParts As New List(Of String)
+            ' No specific column selected -> search across all
+            Dim searchParts As New List(Of String)
                 For Each col As DataColumn In dt.Columns
                     Dim colName As String = col.ColumnName
                     Dim ct As Type = col.DataType
@@ -205,7 +165,6 @@ Public Class TransactionsControl
                     filterParts.Add("(" & String.Join(" OR ", searchParts) & ")")
                 End If
             End If
-        End If
 
 
         ' --- 3) DATE filter using dtpDateFilter + chkAllDates ---
@@ -248,7 +207,6 @@ Public Class TransactionsControl
             ' --- Reset filters ---
             cmbStatus.SelectedIndex = -1   ' Clear status filter
             tbSearch.Clear()               ' Clear search box
-            cmbFilter.SelectedIndex = -1   ' Clear column filter
             dtpDateFilter.Value = Date.Today ' Reset date filter to today
             chkAllDates.Checked = True     ' Show all dates
 

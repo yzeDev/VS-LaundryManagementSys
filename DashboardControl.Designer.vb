@@ -207,7 +207,7 @@ Partial Class DashboardControl
         ' 
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Cascadia Code", 8.25F)
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(862, 50)
@@ -347,7 +347,7 @@ Partial Class DashboardControl
         ' 
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Cascadia Code", 8.25F)
         Label6.Location = New Point(3, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(862, 50)
@@ -396,10 +396,10 @@ Partial Class DashboardControl
         ' 
         lblPendingOrderText.AutoSize = True
         TableLayoutPanel2.SetColumnSpan(lblPendingOrderText, 2)
-        lblPendingOrderText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblPendingOrderText.Font = New Font("Cascadia Mono", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblPendingOrderText.Location = New Point(3, 0)
         lblPendingOrderText.Name = "lblPendingOrderText"
-        lblPendingOrderText.Size = New Size(123, 21)
+        lblPendingOrderText.Size = New Size(166, 25)
         lblPendingOrderText.TabIndex = 0
         lblPendingOrderText.Text = "Pending Orders"
         ' 
@@ -418,7 +418,7 @@ Partial Class DashboardControl
         ' 
         lblPendingOrdersValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblPendingOrdersValue.AutoSize = True
-        lblPendingOrdersValue.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
+        lblPendingOrdersValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
         lblPendingOrdersValue.Location = New Point(3, 34)
         lblPendingOrdersValue.Name = "lblPendingOrdersValue"
         lblPendingOrdersValue.Size = New Size(101, 89)
@@ -458,10 +458,10 @@ Partial Class DashboardControl
         ' 
         lblInProgressText.AutoSize = True
         TableLayoutPanel3.SetColumnSpan(lblInProgressText, 2)
-        lblInProgressText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblInProgressText.Font = New Font("Cascadia Code SemiBold", 12F, FontStyle.Bold)
         lblInProgressText.Location = New Point(3, 0)
         lblInProgressText.Name = "lblInProgressText"
-        lblInProgressText.Size = New Size(94, 21)
+        lblInProgressText.Size = New Size(109, 21)
         lblInProgressText.TabIndex = 0
         lblInProgressText.Text = "In-Progress"
         ' 
@@ -480,7 +480,7 @@ Partial Class DashboardControl
         ' 
         lblInProgressValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInProgressValue.AutoSize = True
-        lblInProgressValue.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
+        lblInProgressValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
         lblInProgressValue.Location = New Point(3, 37)
         lblInProgressValue.Name = "lblInProgressValue"
         lblInProgressValue.Size = New Size(101, 86)
@@ -520,10 +520,10 @@ Partial Class DashboardControl
         ' 
         lblOutForDeliveryText.AutoSize = True
         TableLayoutPanel4.SetColumnSpan(lblOutForDeliveryText, 2)
-        lblOutForDeliveryText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblOutForDeliveryText.Font = New Font("Cascadia Code SemiBold", 12F, FontStyle.Bold)
         lblOutForDeliveryText.Location = New Point(3, 0)
         lblOutForDeliveryText.Name = "lblOutForDeliveryText"
-        lblOutForDeliveryText.Size = New Size(127, 21)
+        lblOutForDeliveryText.Size = New Size(154, 21)
         lblOutForDeliveryText.TabIndex = 0
         lblOutForDeliveryText.Text = "Out for Delivery"
         ' 
@@ -542,7 +542,7 @@ Partial Class DashboardControl
         ' 
         lblOutForDeliveryValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblOutForDeliveryValue.AutoSize = True
-        lblOutForDeliveryValue.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
+        lblOutForDeliveryValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
         lblOutForDeliveryValue.Location = New Point(3, 35)
         lblOutForDeliveryValue.Name = "lblOutForDeliveryValue"
         lblOutForDeliveryValue.Size = New Size(101, 88)
@@ -582,10 +582,10 @@ Partial Class DashboardControl
         ' 
         lblCompletedText.AutoSize = True
         TableLayoutPanel5.SetColumnSpan(lblCompletedText, 2)
-        lblCompletedText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblCompletedText.Font = New Font("Cascadia Code SemiBold", 12F, FontStyle.Bold)
         lblCompletedText.Location = New Point(3, 0)
         lblCompletedText.Name = "lblCompletedText"
-        lblCompletedText.Size = New Size(92, 21)
+        lblCompletedText.Size = New Size(91, 21)
         lblCompletedText.TabIndex = 0
         lblCompletedText.Text = "Completed"
         ' 
@@ -604,7 +604,7 @@ Partial Class DashboardControl
         ' 
         lblCompletedValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblCompletedValue.AutoSize = True
-        lblCompletedValue.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
+        lblCompletedValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
         lblCompletedValue.Location = New Point(3, 35)
         lblCompletedValue.Name = "lblCompletedValue"
         lblCompletedValue.Size = New Size(101, 88)
@@ -644,7 +644,7 @@ Partial Class DashboardControl
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Cascadia Code", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ImageAlign = ContentAlignment.MiddleLeft
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
