@@ -29,6 +29,8 @@ Public Class TransactionsControl
         AddHandler cmbFilter.SelectedIndexChanged, AddressOf ApplyFilters
         AddHandler dtpDateFilter.ValueChanged, AddressOf ApplyFilters
         AddHandler chkAllDates.CheckedChanged, AddressOf ApplyFilters
+
+
     End Sub
 
     Private Sub LoadTransactions()
@@ -41,23 +43,16 @@ Public Class TransactionsControl
                 Dim sql As String = "SELECT TransactionID as [Transaction ID], CustomerName as [Customer Name], ServiceType as [Service Type], Status, MachineUsed as [Machine Used], TransactionDate as [Transaction Date], TotalPayment as [Total Payment] FROM Transactions"
                 Dim adapter As New OleDbDataAdapter(sql, conn)
 
-                ' ✅ Use the class-level dt, not a new local one
                 dt = New DataTable()
                 adapter.Fill(dt)
-
-                ' ✅ Create DataView from dt
                 dv = New DataView(dt)
-
-                ' ✅ Bind DataGridView to dv (not dt)
                 dgvTransactionsData.DataSource = dv
 
-                ' ✅ Formatting
                 dgvTransactionsData.ReadOnly = True
                 dgvTransactionsData.AllowUserToAddRows = False
                 dgvTransactionsData.AllowUserToDeleteRows = False
                 dgvTransactionsData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 
-                ' ✅ Disable sorting
                 For Each col As DataGridViewColumn In dgvTransactionsData.Columns
                     col.SortMode = DataGridViewColumnSortMode.NotSortable
                 Next
@@ -71,11 +66,9 @@ Public Class TransactionsControl
 
 
     Private Sub dgvTransactionsData_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactionsData.CellContentClick
-        ' Check if View button was clicked
         If e.ColumnIndex >= 0 AndAlso dgvTransactionsData.Columns(e.ColumnIndex).Name = "btnView" AndAlso e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = dgvTransactionsData.Rows(e.RowIndex)
 
-            ' Example: grab row data
             Dim transactionId As Integer = Convert.ToInt32(row.Cells("Transaction ID").Value)
             Dim customerName As String = row.Cells("Customer Name").Value.ToString()
             Dim serviceType As String = row.Cells("Service Type").Value.ToString()
@@ -84,16 +77,14 @@ Public Class TransactionsControl
             Dim transDate As Date = Convert.ToDateTime(row.Cells("Transaction Date").Value)
             Dim totalPayment As Decimal = Convert.ToDecimal(row.Cells("Total Payment").Value)
 
-            ' Open a pop-up form and pass details
             Dim detailsForm As New TransactionDetailsForm(transactionId, customerName, serviceType, status, machineUsed, transDate, totalPayment)
             detailsForm.ShowDialog()
         End If
     End Sub
 
     Private Sub dgvTransactionsData_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactionsData.CellClick
-        ' Allow only the "View" button to be clickable
         If e.RowIndex >= 0 AndAlso dgvTransactionsData.Columns(e.ColumnIndex).Name <> "btnView" Then
-            dgvTransactionsData.ClearSelection()   ' remove highlight
+            dgvTransactionsData.ClearSelection()
         End If
     End Sub
 
@@ -108,8 +99,6 @@ Public Class TransactionsControl
     Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
         ApplyFilters()
     End Sub
-
-    ' ... other imports (e.g. System.Data.OleDb) ...
 
     Private Sub ApplyFilters()
         If dv Is Nothing OrElse dt Is Nothing Then Return
@@ -216,5 +205,25 @@ Public Class TransactionsControl
         Debug.WriteLine("Applied Filter: " & combinedFilter)
     End Sub
 
+    Private Sub btnReloadData_Click(sender As Object, e As EventArgs) Handles btnReloadData.Click
+        Try
+            ' Reload from DB
+            LoadTransactions()
 
+            ' --- Reset filters ---
+            cmbStatus.SelectedIndex = -1   ' Clear status filter
+            tbSearch.Clear()               ' Clear search box
+            cmbFilter.SelectedIndex = -1   ' Clear column filter
+            dtpDateFilter.Value = Date.Today ' Reset date filter to today
+            chkAllDates.Checked = True     ' Show all dates
+
+            ' Clear DataView filter so all data shows
+            If dv IsNot Nothing Then dv.RowFilter = ""
+
+            MessageBox.Show("Data reloaded and filters reset.", "Reload", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+            MessageBox.Show("Error while reloading data: " & ex.Message, "Reload Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 End Class

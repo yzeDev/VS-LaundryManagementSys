@@ -178,6 +178,7 @@ Partial Class MainForm
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(900, 500)
         Name = "MainForm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Laundry Management System"
         Panel2.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
