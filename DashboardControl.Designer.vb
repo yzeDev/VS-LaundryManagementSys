@@ -54,6 +54,8 @@ Partial Class DashboardControl
         lblCompletedText = New Label()
         PictureBox4 = New PictureBox()
         Label4 = New Label()
+        Panel7 = New Panel()
+        Label7 = New Label()
         TableLayoutPanel1.SuspendLayout()
         Panel1.SuspendLayout()
         TableLayoutPanel6.SuspendLayout()
@@ -74,6 +76,7 @@ Partial Class DashboardControl
         Panel6.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        Panel7.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -84,16 +87,18 @@ Partial Class DashboardControl
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel1.Controls.Add(Panel1, 4, 0)
-        TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
-        TableLayoutPanel1.Controls.Add(Panel3, 0, 0)
-        TableLayoutPanel1.Controls.Add(Panel4, 1, 0)
-        TableLayoutPanel1.Controls.Add(Panel5, 2, 0)
-        TableLayoutPanel1.Controls.Add(Panel6, 3, 0)
+        TableLayoutPanel1.Controls.Add(Panel1, 4, 1)
+        TableLayoutPanel1.Controls.Add(Panel2, 0, 2)
+        TableLayoutPanel1.Controls.Add(Panel3, 0, 1)
+        TableLayoutPanel1.Controls.Add(Panel4, 1, 1)
+        TableLayoutPanel1.Controls.Add(Panel5, 2, 1)
+        TableLayoutPanel1.Controls.Add(Panel6, 3, 1)
+        TableLayoutPanel1.Controls.Add(Panel7, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowCount = 3
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 70F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 30F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 70F))
         TableLayoutPanel1.Size = New Size(800, 500)
@@ -103,10 +108,10 @@ Partial Class DashboardControl
         ' 
         Panel1.Controls.Add(TableLayoutPanel6)
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(643, 3)
+        Panel1.Location = New Point(643, 73)
         Panel1.Name = "Panel1"
         TableLayoutPanel1.SetRowSpan(Panel1, 2)
-        Panel1.Size = New Size(154, 494)
+        Panel1.Size = New Size(154, 424)
         Panel1.TabIndex = 0
         ' 
         ' TableLayoutPanel6
@@ -122,16 +127,16 @@ Partial Class DashboardControl
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
-        TableLayoutPanel6.Size = New Size(154, 494)
+        TableLayoutPanel6.Size = New Size(154, 424)
         TableLayoutPanel6.TabIndex = 0
         ' 
         ' Button1
         ' 
         Button1.Dock = DockStyle.Fill
         Button1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(3, 372)
+        Button1.Location = New Point(3, 321)
         Button1.Name = "Button1"
-        Button1.Size = New Size(148, 119)
+        Button1.Size = New Size(148, 100)
         Button1.TabIndex = 0
         Button1.Text = "ADD ORDER" & vbCrLf & "(+)" & vbCrLf
         Button1.UseVisualStyleBackColor = True
@@ -141,9 +146,9 @@ Partial Class DashboardControl
         TableLayoutPanel1.SetColumnSpan(Panel2, 4)
         Panel2.Controls.Add(TableLayoutPanel7)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(3, 153)
+        Panel2.Location = New Point(3, 202)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(634, 344)
+        Panel2.Size = New Size(634, 295)
         Panel2.TabIndex = 1
         ' 
         ' TableLayoutPanel7
@@ -159,7 +164,7 @@ Partial Class DashboardControl
         TableLayoutPanel7.RowCount = 2
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.Size = New Size(634, 344)
+        TableLayoutPanel7.Size = New Size(634, 295)
         TableLayoutPanel7.TabIndex = 0
         ' 
         ' TableLayoutPanel8
@@ -174,7 +179,7 @@ Partial Class DashboardControl
         TableLayoutPanel8.RowCount = 2
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle())
-        TableLayoutPanel8.Size = New Size(628, 166)
+        TableLayoutPanel8.Size = New Size(628, 141)
         TableLayoutPanel8.TabIndex = 0
         ' 
         ' Label5
@@ -210,12 +215,12 @@ Partial Class DashboardControl
         TableLayoutPanel10.Controls.Add(Label6, 0, 0)
         TableLayoutPanel10.Controls.Add(DataGridView1, 0, 1)
         TableLayoutPanel10.Dock = DockStyle.Fill
-        TableLayoutPanel10.Location = New Point(3, 175)
+        TableLayoutPanel10.Location = New Point(3, 150)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 2
         TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
         TableLayoutPanel10.RowStyles.Add(New RowStyle())
-        TableLayoutPanel10.Size = New Size(628, 166)
+        TableLayoutPanel10.Size = New Size(628, 142)
         TableLayoutPanel10.TabIndex = 1
         ' 
         ' Label6
@@ -243,9 +248,9 @@ Partial Class DashboardControl
         ' 
         Panel3.Controls.Add(TableLayoutPanel2)
         Panel3.Dock = DockStyle.Fill
-        Panel3.Location = New Point(3, 3)
+        Panel3.Location = New Point(3, 73)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(154, 144)
+        Panel3.Size = New Size(154, 123)
         Panel3.TabIndex = 2
         ' 
         ' TableLayoutPanel2
@@ -262,7 +267,7 @@ Partial Class DashboardControl
         TableLayoutPanel2.RowCount = 2
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Size = New Size(154, 144)
+        TableLayoutPanel2.Size = New Size(154, 123)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' lblPendingOrderText
@@ -279,9 +284,9 @@ Partial Class DashboardControl
         ' PictureBox1
         ' 
         PictureBox1.Dock = DockStyle.Fill
-        PictureBox1.Location = New Point(80, 75)
+        PictureBox1.Location = New Point(80, 64)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(71, 66)
+        PictureBox1.Size = New Size(71, 56)
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
@@ -290,7 +295,7 @@ Partial Class DashboardControl
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label1.Location = New Point(49, 72)
+        Label1.Location = New Point(49, 61)
         Label1.Name = "Label1"
         Label1.Size = New Size(25, 30)
         Label1.TabIndex = 2
@@ -300,9 +305,9 @@ Partial Class DashboardControl
         ' 
         Panel4.Controls.Add(TableLayoutPanel3)
         Panel4.Dock = DockStyle.Fill
-        Panel4.Location = New Point(163, 3)
+        Panel4.Location = New Point(163, 73)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(154, 144)
+        Panel4.Size = New Size(154, 123)
         Panel4.TabIndex = 3
         ' 
         ' TableLayoutPanel3
@@ -319,7 +324,7 @@ Partial Class DashboardControl
         TableLayoutPanel3.RowCount = 2
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Size = New Size(154, 144)
+        TableLayoutPanel3.Size = New Size(154, 123)
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' lblInProgressText
@@ -336,9 +341,9 @@ Partial Class DashboardControl
         ' PictureBox2
         ' 
         PictureBox2.Dock = DockStyle.Fill
-        PictureBox2.Location = New Point(80, 75)
+        PictureBox2.Location = New Point(80, 64)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(71, 66)
+        PictureBox2.Size = New Size(71, 56)
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
         ' 
@@ -347,7 +352,7 @@ Partial Class DashboardControl
         Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label2.Location = New Point(49, 72)
+        Label2.Location = New Point(49, 61)
         Label2.Name = "Label2"
         Label2.Size = New Size(25, 30)
         Label2.TabIndex = 2
@@ -357,9 +362,9 @@ Partial Class DashboardControl
         ' 
         Panel5.Controls.Add(TableLayoutPanel4)
         Panel5.Dock = DockStyle.Fill
-        Panel5.Location = New Point(323, 3)
+        Panel5.Location = New Point(323, 73)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(154, 144)
+        Panel5.Size = New Size(154, 123)
         Panel5.TabIndex = 4
         ' 
         ' TableLayoutPanel4
@@ -376,7 +381,7 @@ Partial Class DashboardControl
         TableLayoutPanel4.RowCount = 2
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Size = New Size(154, 144)
+        TableLayoutPanel4.Size = New Size(154, 123)
         TableLayoutPanel4.TabIndex = 0
         ' 
         ' lblOutForDeliveryText
@@ -393,9 +398,9 @@ Partial Class DashboardControl
         ' PictureBox3
         ' 
         PictureBox3.Dock = DockStyle.Fill
-        PictureBox3.Location = New Point(80, 75)
+        PictureBox3.Location = New Point(80, 64)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(71, 66)
+        PictureBox3.Size = New Size(71, 56)
         PictureBox3.TabIndex = 1
         PictureBox3.TabStop = False
         ' 
@@ -404,7 +409,7 @@ Partial Class DashboardControl
         Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label3.Location = New Point(49, 72)
+        Label3.Location = New Point(49, 61)
         Label3.Name = "Label3"
         Label3.Size = New Size(25, 30)
         Label3.TabIndex = 2
@@ -414,9 +419,9 @@ Partial Class DashboardControl
         ' 
         Panel6.Controls.Add(TableLayoutPanel5)
         Panel6.Dock = DockStyle.Fill
-        Panel6.Location = New Point(483, 3)
+        Panel6.Location = New Point(483, 73)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(154, 144)
+        Panel6.Size = New Size(154, 123)
         Panel6.TabIndex = 5
         ' 
         ' TableLayoutPanel5
@@ -433,7 +438,7 @@ Partial Class DashboardControl
         TableLayoutPanel5.RowCount = 2
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.Size = New Size(154, 144)
+        TableLayoutPanel5.Size = New Size(154, 123)
         TableLayoutPanel5.TabIndex = 0
         ' 
         ' lblCompletedText
@@ -450,9 +455,9 @@ Partial Class DashboardControl
         ' PictureBox4
         ' 
         PictureBox4.Dock = DockStyle.Fill
-        PictureBox4.Location = New Point(80, 75)
+        PictureBox4.Location = New Point(80, 64)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(71, 66)
+        PictureBox4.Size = New Size(71, 56)
         PictureBox4.TabIndex = 1
         PictureBox4.TabStop = False
         ' 
@@ -461,11 +466,33 @@ Partial Class DashboardControl
         Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label4.Location = New Point(49, 72)
+        Label4.Location = New Point(49, 61)
         Label4.Name = "Label4"
         Label4.Size = New Size(25, 30)
         Label4.TabIndex = 2
         Label4.Text = "0"
+        ' 
+        ' Panel7
+        ' 
+        TableLayoutPanel1.SetColumnSpan(Panel7, 5)
+        Panel7.Controls.Add(Label7)
+        Panel7.Dock = DockStyle.Fill
+        Panel7.Location = New Point(3, 3)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(794, 64)
+        Panel7.TabIndex = 6
+        ' 
+        ' Label7
+        ' 
+        Label7.Dock = DockStyle.Fill
+        Label7.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ImageAlign = ContentAlignment.MiddleLeft
+        Label7.Location = New Point(0, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(794, 64)
+        Label7.TabIndex = 0
+        Label7.Text = "WELCOME BACK, ADMIN!"
+        Label7.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' DashboardControl
         ' 
@@ -501,6 +528,7 @@ Partial Class DashboardControl
         TableLayoutPanel5.ResumeLayout(False)
         TableLayoutPanel5.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        Panel7.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -536,5 +564,7 @@ Partial Class DashboardControl
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Label6 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label7 As Label
 
 End Class

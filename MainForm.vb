@@ -6,7 +6,6 @@ Public Class MainForm
         MainPanel.Controls.Clear()
         ctrl.Dock = DockStyle.Fill  ' <- here we force it to resize and fill MainPanel
         MainPanel.Controls.Add(ctrl)
-
     End Sub
 
     ' Single event handler for all navigation buttons
@@ -32,4 +31,7 @@ Public Class MainForm
         End If
     End Sub
 
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ShowControl(New DashboardControl())
+    End Sub
 End Class
