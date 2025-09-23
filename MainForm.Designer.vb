@@ -23,27 +23,139 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        TableLayoutPanel1 = New TableLayoutPanel()
-        lblTitle = New Label()
-        MainPanel = New Panel()
-        Panel1 = New Panel()
+        Panel2 = New Panel()
+        TableLayoutPanel2 = New TableLayoutPanel()
         btnDashboard = New Button()
-        btnMachines = New Button()
+        btnOptions = New Button()
         btnStats = New Button()
         btnTransactions = New Button()
-        btnOptions = New Button()
+        btnMachines = New Button()
+        MainPanel = New Panel()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        Panel2.SuspendLayout()
+        TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
-        Panel1.SuspendLayout()
         SuspendLayout()
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
+        Panel2.Controls.Add(TableLayoutPanel2)
+        Panel2.Dock = DockStyle.Fill
+        Panel2.Location = New Point(3, 3)
+        Panel2.Name = "Panel2"
+        TableLayoutPanel1.SetRowSpan(Panel2, 5)
+        Panel2.Size = New Size(124, 555)
+        Panel2.TabIndex = 7
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 1
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.Controls.Add(btnDashboard, 0, 0)
+        TableLayoutPanel2.Controls.Add(btnOptions, 0, 4)
+        TableLayoutPanel2.Controls.Add(btnStats, 0, 3)
+        TableLayoutPanel2.Controls.Add(btnTransactions, 0, 2)
+        TableLayoutPanel2.Controls.Add(btnMachines, 0, 1)
+        TableLayoutPanel2.Dock = DockStyle.Fill
+        TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 5
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
+        TableLayoutPanel2.Size = New Size(124, 555)
+        TableLayoutPanel2.TabIndex = 0
+        ' 
+        ' btnDashboard
+        ' 
+        btnDashboard.BackgroundImage = My.Resources.Resources._1
+        btnDashboard.BackgroundImageLayout = ImageLayout.Zoom
+        btnDashboard.Dock = DockStyle.Fill
+        btnDashboard.FlatAppearance.BorderSize = 0
+        btnDashboard.FlatStyle = FlatStyle.Flat
+        btnDashboard.Location = New Point(3, 3)
+        btnDashboard.Name = "btnDashboard"
+        btnDashboard.Size = New Size(118, 105)
+        btnDashboard.TabIndex = 5
+        btnDashboard.TabStop = False
+        btnDashboard.UseVisualStyleBackColor = True
+        ' 
+        ' btnOptions
+        ' 
+        btnOptions.BackgroundImage = My.Resources.Resources._5
+        btnOptions.BackgroundImageLayout = ImageLayout.Zoom
+        btnOptions.Dock = DockStyle.Fill
+        btnOptions.FlatAppearance.BorderSize = 0
+        btnOptions.FlatStyle = FlatStyle.Flat
+        btnOptions.Location = New Point(3, 447)
+        btnOptions.Name = "btnOptions"
+        btnOptions.Size = New Size(118, 105)
+        btnOptions.TabIndex = 4
+        btnOptions.TabStop = False
+        btnOptions.UseVisualStyleBackColor = True
+        ' 
+        ' btnStats
+        ' 
+        btnStats.BackgroundImage = My.Resources.Resources._4
+        btnStats.BackgroundImageLayout = ImageLayout.Zoom
+        btnStats.Dock = DockStyle.Fill
+        btnStats.FlatAppearance.BorderSize = 0
+        btnStats.FlatStyle = FlatStyle.Flat
+        btnStats.Location = New Point(3, 336)
+        btnStats.Name = "btnStats"
+        btnStats.Size = New Size(118, 105)
+        btnStats.TabIndex = 3
+        btnStats.TabStop = False
+        btnStats.UseVisualStyleBackColor = True
+        ' 
+        ' btnTransactions
+        ' 
+        btnTransactions.BackgroundImage = My.Resources.Resources._3
+        btnTransactions.BackgroundImageLayout = ImageLayout.Zoom
+        btnTransactions.Dock = DockStyle.Fill
+        btnTransactions.FlatAppearance.BorderSize = 0
+        btnTransactions.FlatStyle = FlatStyle.Flat
+        btnTransactions.Location = New Point(3, 225)
+        btnTransactions.Name = "btnTransactions"
+        btnTransactions.Size = New Size(118, 105)
+        btnTransactions.TabIndex = 2
+        btnTransactions.TabStop = False
+        btnTransactions.UseVisualStyleBackColor = True
+        ' 
+        ' btnMachines
+        ' 
+        btnMachines.BackgroundImage = My.Resources.Resources._2
+        btnMachines.BackgroundImageLayout = ImageLayout.Zoom
+        btnMachines.Dock = DockStyle.Fill
+        btnMachines.FlatAppearance.BorderSize = 0
+        btnMachines.FlatStyle = FlatStyle.Flat
+        btnMachines.Location = New Point(3, 114)
+        btnMachines.Name = "btnMachines"
+        btnMachines.Size = New Size(118, 105)
+        btnMachines.TabIndex = 1
+        btnMachines.TabStop = False
+        btnMachines.UseVisualStyleBackColor = True
+        ' 
+        ' MainPanel
+        ' 
+        MainPanel.AutoScroll = True
+        MainPanel.Dock = DockStyle.Fill
+        MainPanel.Location = New Point(133, 3)
+        MainPanel.Name = "MainPanel"
+        TableLayoutPanel1.SetRowSpan(MainPanel, 5)
+        MainPanel.Size = New Size(948, 555)
+        MainPanel.TabIndex = 5
         ' 
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 130.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 130F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel1.Controls.Add(lblTitle, 0, 0)
-        TableLayoutPanel1.Controls.Add(MainPanel, 1, 1)
-        TableLayoutPanel1.Controls.Add(Panel1, 0, 1)
+        TableLayoutPanel1.Controls.Add(MainPanel, 1, 0)
+        TableLayoutPanel1.Controls.Add(Panel2, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -53,100 +165,13 @@ Partial Class MainForm
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.Size = New Size(1084, 561)
         TableLayoutPanel1.TabIndex = 0
         ' 
-        ' lblTitle
-        ' 
-        lblTitle.AutoSize = True
-        TableLayoutPanel1.SetColumnSpan(lblTitle, 2)
-        lblTitle.Dock = DockStyle.Fill
-        lblTitle.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(3, 0)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(1078, 84)
-        lblTitle.TabIndex = 0
-        lblTitle.Text = "Laundry Management System"
-        lblTitle.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' MainPanel
-        ' 
-        MainPanel.AutoScroll = True
-        MainPanel.Dock = DockStyle.Fill
-        MainPanel.Location = New Point(133, 87)
-        MainPanel.Name = "MainPanel"
-        TableLayoutPanel1.SetRowSpan(MainPanel, 4)
-        MainPanel.Size = New Size(948, 471)
-        MainPanel.TabIndex = 5
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Controls.Add(btnDashboard)
-        Panel1.Controls.Add(btnMachines)
-        Panel1.Controls.Add(btnStats)
-        Panel1.Controls.Add(btnTransactions)
-        Panel1.Controls.Add(btnOptions)
-        Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(3, 87)
-        Panel1.Name = "Panel1"
-        TableLayoutPanel1.SetRowSpan(Panel1, 2)
-        Panel1.Size = New Size(124, 232)
-        Panel1.TabIndex = 6
-        ' 
-        ' btnDashboard
-        ' 
-        btnDashboard.Location = New Point(3, 0)
-        btnDashboard.Name = "btnDashboard"
-        btnDashboard.Size = New Size(121, 36)
-        btnDashboard.TabIndex = 5
-        btnDashboard.TabStop = False
-        btnDashboard.Text = "Dashboard"
-        btnDashboard.UseVisualStyleBackColor = True
-        ' 
-        ' btnMachines
-        ' 
-        btnMachines.Location = New Point(3, 42)
-        btnMachines.Name = "btnMachines"
-        btnMachines.Size = New Size(121, 36)
-        btnMachines.TabIndex = 1
-        btnMachines.TabStop = False
-        btnMachines.Text = "Machines"
-        btnMachines.UseVisualStyleBackColor = True
-        ' 
-        ' btnStats
-        ' 
-        btnStats.Location = New Point(3, 122)
-        btnStats.Name = "btnStats"
-        btnStats.Size = New Size(121, 36)
-        btnStats.TabIndex = 3
-        btnStats.TabStop = False
-        btnStats.Text = "Statistics"
-        btnStats.UseVisualStyleBackColor = True
-        ' 
-        ' btnTransactions
-        ' 
-        btnTransactions.Location = New Point(3, 84)
-        btnTransactions.Name = "btnTransactions"
-        btnTransactions.Size = New Size(121, 36)
-        btnTransactions.TabIndex = 2
-        btnTransactions.TabStop = False
-        btnTransactions.Text = "Transactions"
-        btnTransactions.UseVisualStyleBackColor = True
-        ' 
-        ' btnOptions
-        ' 
-        btnOptions.Location = New Point(3, 164)
-        btnOptions.Name = "btnOptions"
-        btnOptions.Size = New Size(121, 36)
-        btnOptions.TabIndex = 4
-        btnOptions.TabStop = False
-        btnOptions.Text = "Options"
-        btnOptions.UseVisualStyleBackColor = True
-        ' 
         ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(96.0F, 96.0F)
+        AutoScaleDimensions = New SizeF(96F, 96F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(1084, 561)
         Controls.Add(TableLayoutPanel1)
@@ -154,20 +179,20 @@ Partial Class MainForm
         MinimumSize = New Size(900, 500)
         Name = "MainForm"
         Text = "Laundry Management System"
+        Panel2.ResumeLayout(False)
+        TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
-        TableLayoutPanel1.PerformLayout()
-        Panel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents lblTitle As Label
-    Friend WithEvents btnMachines As Button
-    Friend WithEvents btnTransactions As Button
-    Friend WithEvents btnStats As Button
-    Friend WithEvents btnOptions As Button
-    Friend WithEvents MainPanel As Panel
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents btnDashboard As Button
+    Friend WithEvents btnOptions As Button
+    Friend WithEvents btnStats As Button
+    Friend WithEvents btnTransactions As Button
+    Friend WithEvents btnMachines As Button
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents MainPanel As Panel
 
 End Class

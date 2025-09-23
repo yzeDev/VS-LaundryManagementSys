@@ -22,6 +22,7 @@ Partial Class ConfigureMachineForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConfigureMachineForm))
         TableLayoutPanel1 = New TableLayoutPanel()
         btnSave = New Button()
         Panel1 = New Panel()
@@ -67,13 +68,13 @@ Partial Class ConfigureMachineForm
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
-        TableLayoutPanel1.Size = New Size(348, 322)
+        TableLayoutPanel1.Size = New Size(284, 311)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' btnSave
         ' 
         btnSave.Anchor = AnchorStyles.None
-        btnSave.Location = New Point(136, 269)
+        btnSave.Location = New Point(104, 259)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(75, 23)
         btnSave.TabIndex = 1
@@ -86,7 +87,7 @@ Partial Class ConfigureMachineForm
         Panel1.Dock = DockStyle.Fill
         Panel1.Location = New Point(3, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(342, 74)
+        Panel1.Size = New Size(278, 71)
         Panel1.TabIndex = 1
         ' 
         ' SplitContainer1
@@ -103,33 +104,35 @@ Partial Class ConfigureMachineForm
         ' SplitContainer1.Panel2
         ' 
         SplitContainer1.Panel2.Controls.Add(lblUnitNumber)
-        SplitContainer1.Size = New Size(342, 74)
-        SplitContainer1.SplitterDistance = 170
+        SplitContainer1.Size = New Size(278, 71)
+        SplitContainer1.SplitterDistance = 138
         SplitContainer1.TabIndex = 0
         ' 
         ' lblUnitNumberText
         ' 
-        lblUnitNumberText.AutoSize = True
-        lblUnitNumberText.Location = New Point(130, 37)
+        lblUnitNumberText.Dock = DockStyle.Fill
+        lblUnitNumberText.Location = New Point(0, 0)
         lblUnitNumberText.Name = "lblUnitNumberText"
-        lblUnitNumberText.Size = New Size(42, 15)
+        lblUnitNumberText.Size = New Size(138, 71)
         lblUnitNumberText.TabIndex = 0
         lblUnitNumberText.Text = "Unit #:"
+        lblUnitNumberText.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' lblUnitNumber
         ' 
-        lblUnitNumber.AutoSize = True
-        lblUnitNumber.Location = New Point(-1, 37)
+        lblUnitNumber.Dock = DockStyle.Fill
+        lblUnitNumber.Location = New Point(0, 0)
         lblUnitNumber.Name = "lblUnitNumber"
-        lblUnitNumber.Size = New Size(41, 15)
+        lblUnitNumber.Size = New Size(136, 71)
         lblUnitNumber.TabIndex = 0
         lblUnitNumber.Text = "Label2"
+        lblUnitNumber.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' SplitContainer2
         ' 
         SplitContainer2.Dock = DockStyle.Fill
         SplitContainer2.IsSplitterFixed = True
-        SplitContainer2.Location = New Point(3, 83)
+        SplitContainer2.Location = New Point(3, 80)
         SplitContainer2.Name = "SplitContainer2"
         SplitContainer2.Orientation = Orientation.Horizontal
         ' 
@@ -140,15 +143,15 @@ Partial Class ConfigureMachineForm
         ' SplitContainer2.Panel2
         ' 
         SplitContainer2.Panel2.Controls.Add(nudCapacity)
-        SplitContainer2.Size = New Size(342, 74)
-        SplitContainer2.SplitterDistance = 35
+        SplitContainer2.Size = New Size(278, 71)
+        SplitContainer2.SplitterDistance = 33
         SplitContainer2.TabIndex = 2
         ' 
         ' lblWeightText
         ' 
         lblWeightText.Anchor = AnchorStyles.None
         lblWeightText.AutoSize = True
-        lblWeightText.Location = New Point(151, 20)
+        lblWeightText.Location = New Point(119, 19)
         lblWeightText.Name = "lblWeightText"
         lblWeightText.Size = New Size(45, 15)
         lblWeightText.TabIndex = 1
@@ -158,7 +161,7 @@ Partial Class ConfigureMachineForm
         ' nudCapacity
         ' 
         nudCapacity.Anchor = AnchorStyles.None
-        nudCapacity.Location = New Point(134, 9)
+        nudCapacity.Location = New Point(102, 9)
         nudCapacity.Name = "nudCapacity"
         nudCapacity.Size = New Size(84, 23)
         nudCapacity.TabIndex = 0
@@ -167,7 +170,7 @@ Partial Class ConfigureMachineForm
         ' 
         SplitContainer3.Dock = DockStyle.Fill
         SplitContainer3.IsSplitterFixed = True
-        SplitContainer3.Location = New Point(3, 163)
+        SplitContainer3.Location = New Point(3, 157)
         SplitContainer3.Name = "SplitContainer3"
         SplitContainer3.Orientation = Orientation.Horizontal
         ' 
@@ -178,15 +181,15 @@ Partial Class ConfigureMachineForm
         ' SplitContainer3.Panel2
         ' 
         SplitContainer3.Panel2.Controls.Add(cboStatus)
-        SplitContainer3.Size = New Size(342, 74)
-        SplitContainer3.SplitterDistance = 30
+        SplitContainer3.Size = New Size(278, 71)
+        SplitContainer3.SplitterDistance = 28
         SplitContainer3.TabIndex = 3
         ' 
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.None
         Label1.AutoSize = True
-        Label1.Location = New Point(151, 15)
+        Label1.Location = New Point(119, 14)
         Label1.Name = "Label1"
         Label1.Size = New Size(39, 15)
         Label1.TabIndex = 2
@@ -198,7 +201,7 @@ Partial Class ConfigureMachineForm
         cboStatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         cboStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cboStatus.FormattingEnabled = True
-        cboStatus.Location = New Point(130, 14)
+        cboStatus.Location = New Point(98, 14)
         cboStatus.Name = "cboStatus"
         cboStatus.Size = New Size(84, 23)
         cboStatus.TabIndex = 0
@@ -207,16 +210,16 @@ Partial Class ConfigureMachineForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(348, 322)
+        ClientSize = New Size(284, 311)
         Controls.Add(TableLayoutPanel1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "ConfigureMachineForm"
-        Text = "ConfigureMachineForm"
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Configure Form"
         TableLayoutPanel1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         SplitContainer1.Panel1.ResumeLayout(False)
-        SplitContainer1.Panel1.PerformLayout()
         SplitContainer1.Panel2.ResumeLayout(False)
-        SplitContainer1.Panel2.PerformLayout()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         SplitContainer2.Panel1.ResumeLayout(False)

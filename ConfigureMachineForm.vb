@@ -6,7 +6,7 @@ Public Class ConfigureMachineForm
     Public Property Status As String
 
     Private Sub ConfigureMachineForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MessageBox.Show($"Loaded Unit {UnitNumber}, Cap={Capacity}, Status={Status}")
+        'MessageBox.Show($"Loaded Unit {UnitNumber}, Cap={Capacity}, Status={Status}")
 
         lblUnitNumber.Text = UnitNumber.ToString()
         nudCapacity.Minimum = 5
