@@ -147,6 +147,7 @@ Partial Class MainForm
         ' MainPanel
         ' 
         MainPanel.AutoScroll = True
+        MainPanel.AutoSize = True
         MainPanel.Dock = DockStyle.Fill
         MainPanel.Location = New Point(103, 3)
         MainPanel.Name = "MainPanel"
@@ -187,6 +188,7 @@ Partial Class MainForm
         Panel2.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
+        TableLayoutPanel1.PerformLayout()
         ResumeLayout(False)
     End Sub
 
