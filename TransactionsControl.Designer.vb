@@ -245,7 +245,7 @@ Partial Class TransactionsControl
         cmbStatus.Dock = DockStyle.Fill
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.FormattingEnabled = True
-        cmbStatus.Items.AddRange(New Object() {"Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
+        cmbStatus.Items.AddRange(New Object() {"", "Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
         cmbStatus.Location = New Point(98, 3)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.Size = New Size(216, 23)
@@ -256,7 +256,7 @@ Partial Class TransactionsControl
         cmbFilter.Dock = DockStyle.Fill
         cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList
         cmbFilter.FormattingEnabled = True
-        cmbFilter.Items.AddRange(New Object() {"Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
+        cmbFilter.Items.AddRange(New Object() {"", "Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
         cmbFilter.Location = New Point(98, 77)
         cmbFilter.Name = "cmbFilter"
         cmbFilter.Size = New Size(216, 23)

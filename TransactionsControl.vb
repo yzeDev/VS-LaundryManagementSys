@@ -43,19 +43,55 @@ Public Class TransactionsControl
                 Dim sql As String = "SELECT TransactionID as [Transaction ID], CustomerName as [Customer Name], ServiceType as [Service Type], Status, MachineUsed as [Machine Used], TransactionDate as [Transaction Date], TotalPayment as [Total Payment] FROM Transactions"
                 Dim adapter As New OleDbDataAdapter(sql, conn)
 
+                ' Use class-level dt so ApplyFilters can use it
                 dt = New DataTable()
                 adapter.Fill(dt)
+
+                ' Wrap in DataView and bind
                 dv = New DataView(dt)
                 dgvTransactionsData.DataSource = dv
 
+                ' Formatting
                 dgvTransactionsData.ReadOnly = True
                 dgvTransactionsData.AllowUserToAddRows = False
                 dgvTransactionsData.AllowUserToDeleteRows = False
                 dgvTransactionsData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 
+                ' Disable sorting
                 For Each col As DataGridViewColumn In dgvTransactionsData.Columns
                     col.SortMode = DataGridViewColumnSortMode.NotSortable
                 Next
+
+                ' ---------------------
+                ' Populate cmbFilter with the actual DataTable column names
+                ' ---------------------
+                cmbFilter.Items.Clear()
+                cmbFilter.Items.Add("") ' blank / no-column option
+                For Each c As DataColumn In dt.Columns
+                    cmbFilter.Items.Add(c.ColumnName)
+                Next
+                cmbFilter.SelectedIndex = 0
+
+                ' ---------------------
+                ' Populate cmbStatus with distinct status values (and "All")
+                ' ---------------------
+                cmbStatus.Items.Clear()
+                cmbStatus.Items.Add("All")
+                Try
+                    Dim distinctStatuses = dt.AsEnumerable() _
+                    .Where(Function(r) Not IsDBNull(r("Status"))) _
+                    .Select(Function(r) r.Field(Of String)("Status")) _
+                    .Distinct().ToList()
+                    For Each s In distinctStatuses
+                        cmbStatus.Items.Add(s)
+                    Next
+                Catch
+                    ' ignore if column missing or type mismatch
+                End Try
+                cmbStatus.SelectedIndex = 0
+
+                ' Apply any filters that may already be set in UI
+                ApplyFilters()
 
             Catch ex As Exception
                 MessageBox.Show("Error loading transactions: " & ex.Message)
@@ -106,44 +142,43 @@ Public Class TransactionsControl
         Dim filterParts As New List(Of String)()
 
         ' --- 1) STATUS filter (exact match) ---
-        If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
+        If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString().Trim() <> "" AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
             filterParts.Add("Status = '" & cmbStatus.SelectedItem.ToString().Replace("'", "''") & "'")
         End If
+
 
         ' --- 2) SEARCH (either specific column or all columns) ---
         Dim searchTextRaw As String = tbSearch.Text.Trim()
         If searchTextRaw <> "" Then
             Dim searchText As String = searchTextRaw.Replace("'", "''") ' escape single quotes
 
-            If cmbFilter.SelectedItem IsNot Nothing AndAlso dt.Columns.Contains(cmbFilter.SelectedItem.ToString()) Then
-                ' Search only in selected column
+            ' If a specific column is selected
+            If cmbFilter.SelectedItem IsNot Nothing AndAlso cmbFilter.SelectedItem.ToString().Trim() <> "" AndAlso dt.Columns.Contains(cmbFilter.SelectedItem.ToString()) Then
                 Dim colName As String = cmbFilter.SelectedItem.ToString()
                 Dim colType As Type = dt.Columns(colName).DataType
 
                 If colType Is GetType(String) Then
                     filterParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
                 ElseIf colType Is GetType(Integer) OrElse colType Is GetType(Long) _
-                       OrElse colType Is GetType(Decimal) OrElse colType Is GetType(Double) Then
+               OrElse colType Is GetType(Decimal) OrElse colType Is GetType(Double) Then
                     If IsNumeric(searchText) Then
                         filterParts.Add("[" & colName & "] = " & searchText)
                     Else
-                        ' non-numeric search for numeric column -> no match; add impossible predicate
-                        filterParts.Add("1 = 0")
+                        filterParts.Add("1 = 0") ' force no match if non-numeric search
                     End If
                 ElseIf colType Is GetType(DateTime) Then
-                    ' If a date column is selected and user typed a date, try parsing
                     Dim d As DateTime
                     If DateTime.TryParse(searchTextRaw, d) Then
                         Dim startD As Date = d.Date
                         Dim endD As Date = startD.AddDays(1)
-                        filterParts.Add("[" & colName & "] >= #" & startD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "# AND [" & colName & "] < #" & endD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "#")
+                        filterParts.Add("[" & colName & "] >= #" & startD.ToString("MM/dd/yyyy") & "# AND [" & colName & "] < #" & endD.ToString("MM/dd/yyyy") & "#")
                     Else
-                        ' no valid date typed -> impossible predicate
                         filterParts.Add("1 = 0")
                     End If
                 End If
+
             Else
-                ' Search across ALL columns (strings + numeric + date)
+                ' No specific column selected -> search across all
                 Dim searchParts As New List(Of String)
                 For Each col As DataColumn In dt.Columns
                     Dim colName As String = col.ColumnName
@@ -152,17 +187,16 @@ Public Class TransactionsControl
                     If ct Is GetType(String) Then
                         searchParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
                     ElseIf ct Is GetType(Integer) OrElse ct Is GetType(Long) _
-                           OrElse ct Is GetType(Decimal) OrElse ct Is GetType(Double) Then
+                   OrElse ct Is GetType(Decimal) OrElse ct Is GetType(Double) Then
                         If IsNumeric(searchText) Then
                             searchParts.Add("[" & colName & "] = " & searchText)
                         End If
                     ElseIf ct Is GetType(DateTime) Then
-                        ' try parse search text as date; if it parses, add date-range match
                         Dim d As DateTime
                         If DateTime.TryParse(searchTextRaw, d) Then
                             Dim sD As Date = d.Date
                             Dim eD As Date = sD.AddDays(1)
-                            searchParts.Add("([" & colName & "] >= #" & sD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "# AND [" & colName & "] < #" & eD.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture) & "#)")
+                            searchParts.Add("([" & colName & "] >= #" & sD.ToString("MM/dd/yyyy") & "# AND [" & colName & "] < #" & eD.ToString("MM/dd/yyyy") & "#)")
                         End If
                     End If
                 Next
@@ -172,6 +206,7 @@ Public Class TransactionsControl
                 End If
             End If
         End If
+
 
         ' --- 3) DATE filter using dtpDateFilter + chkAllDates ---
         If Not chkAllDates.Checked Then
