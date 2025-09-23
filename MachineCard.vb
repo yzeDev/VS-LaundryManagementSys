@@ -38,4 +38,5 @@ Public Class MachineCard
         End Set
     End Property
 
+
 End Class
