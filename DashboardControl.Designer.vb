@@ -198,7 +198,7 @@ Partial Class DashboardControl
         TableLayoutPanel8.Location = New Point(3, 3)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 2
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle())
         TableLayoutPanel8.Size = New Size(868, 141)
         TableLayoutPanel8.TabIndex = 0
@@ -207,10 +207,10 @@ Partial Class DashboardControl
         ' 
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Cascadia Code", 8.25F)
+        Label5.Font = New Font("Cascadia Code", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(862, 50)
+        Label5.Size = New Size(862, 30)
         Label5.TabIndex = 0
         Label5.Text = "MACHINES"
         Label5.TextAlign = ContentAlignment.MiddleLeft
@@ -225,7 +225,7 @@ Partial Class DashboardControl
         TableLayoutPanel9.Controls.Add(Panel9, 1, 0)
         TableLayoutPanel9.Controls.Add(Panel10, 2, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
-        TableLayoutPanel9.Location = New Point(3, 53)
+        TableLayoutPanel9.Location = New Point(3, 33)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
         TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -245,18 +245,18 @@ Partial Class DashboardControl
         ' lblAvailableValue
         ' 
         lblAvailableValue.Dock = DockStyle.Top
-        lblAvailableValue.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
+        lblAvailableValue.Font = New Font("Cascadia Code", 20.25F)
         lblAvailableValue.Location = New Point(0, 23)
         lblAvailableValue.Name = "lblAvailableValue"
         lblAvailableValue.Size = New Size(281, 47)
         lblAvailableValue.TabIndex = 1
         lblAvailableValue.Text = "0"
-        lblAvailableValue.TextAlign = ContentAlignment.MiddleCenter
+        lblAvailableValue.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' lblAvailableText
         ' 
         lblAvailableText.Dock = DockStyle.Top
-        lblAvailableText.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
+        lblAvailableText.Font = New Font("Cascadia Code", 14.25F)
         lblAvailableText.Location = New Point(0, 0)
         lblAvailableText.Name = "lblAvailableText"
         lblAvailableText.Size = New Size(281, 23)
@@ -277,18 +277,18 @@ Partial Class DashboardControl
         ' lblInUseValue
         ' 
         lblInUseValue.Dock = DockStyle.Top
-        lblInUseValue.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
+        lblInUseValue.Font = New Font("Cascadia Code", 20.25F)
         lblInUseValue.Location = New Point(0, 23)
         lblInUseValue.Name = "lblInUseValue"
         lblInUseValue.Size = New Size(281, 39)
         lblInUseValue.TabIndex = 1
         lblInUseValue.Text = "0"
-        lblInUseValue.TextAlign = ContentAlignment.MiddleCenter
+        lblInUseValue.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' lblInUseText
         ' 
         lblInUseText.Dock = DockStyle.Top
-        lblInUseText.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
+        lblInUseText.Font = New Font("Cascadia Code", 14.25F)
         lblInUseText.Location = New Point(0, 0)
         lblInUseText.Name = "lblInUseText"
         lblInUseText.Size = New Size(281, 23)
@@ -309,18 +309,18 @@ Partial Class DashboardControl
         ' lblBrokenValue
         ' 
         lblBrokenValue.Dock = DockStyle.Top
-        lblBrokenValue.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
+        lblBrokenValue.Font = New Font("Cascadia Code", 20.25F)
         lblBrokenValue.Location = New Point(0, 23)
         lblBrokenValue.Name = "lblBrokenValue"
         lblBrokenValue.Size = New Size(282, 39)
         lblBrokenValue.TabIndex = 1
         lblBrokenValue.Text = "0"
-        lblBrokenValue.TextAlign = ContentAlignment.MiddleCenter
+        lblBrokenValue.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' lblBrokenText
         ' 
         lblBrokenText.Dock = DockStyle.Top
-        lblBrokenText.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
+        lblBrokenText.Font = New Font("Cascadia Code", 14.25F)
         lblBrokenText.Location = New Point(0, 0)
         lblBrokenText.Name = "lblBrokenText"
         lblBrokenText.Size = New Size(282, 23)
@@ -338,7 +338,7 @@ Partial Class DashboardControl
         TableLayoutPanel10.Location = New Point(3, 150)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 2
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
         TableLayoutPanel10.RowStyles.Add(New RowStyle())
         TableLayoutPanel10.Size = New Size(868, 142)
         TableLayoutPanel10.TabIndex = 1
@@ -347,10 +347,10 @@ Partial Class DashboardControl
         ' 
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Cascadia Code", 8.25F)
+        Label6.Font = New Font("Cascadia Code", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(3, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(862, 50)
+        Label6.Size = New Size(862, 30)
         Label6.TabIndex = 0
         Label6.Text = "FOR PICK UP"
         Label6.TextAlign = ContentAlignment.MiddleLeft
@@ -359,7 +359,7 @@ Partial Class DashboardControl
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Dock = DockStyle.Fill
-        DataGridView1.Location = New Point(3, 53)
+        DataGridView1.Location = New Point(3, 33)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.Size = New Size(862, 150)
         DataGridView1.TabIndex = 1
