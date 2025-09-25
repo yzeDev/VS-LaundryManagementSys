@@ -24,12 +24,12 @@ Partial Class TransactionsControl
     Private Sub InitializeComponent()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
-        btnAddOrder = New Button()
         TableLayoutPanel3 = New TableLayoutPanel()
         Label1 = New Label()
         dtpDateFilter = New DateTimePicker()
         chkAllDates = New CheckBox()
         btnReloadData = New Button()
+        btnAdd = New Button()
         dgvTransactionsData = New DataGridView()
         lblOrderListText = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
@@ -69,9 +69,9 @@ Partial Class TransactionsControl
         TableLayoutPanel2.ColumnCount = 2
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
-        TableLayoutPanel2.Controls.Add(btnAddOrder, 0, 0)
         TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 0, 1)
         TableLayoutPanel2.Controls.Add(btnReloadData, 1, 0)
+        TableLayoutPanel2.Controls.Add(btnAdd, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(3, 3)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -80,19 +80,6 @@ Partial Class TransactionsControl
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
         TableLayoutPanel2.Size = New Size(249, 113)
         TableLayoutPanel2.TabIndex = 0
-        ' 
-        ' btnAddOrder
-        ' 
-        btnAddOrder.Dock = DockStyle.Fill
-        btnAddOrder.FlatAppearance.BorderSize = 0
-        btnAddOrder.FlatStyle = FlatStyle.Flat
-        btnAddOrder.ImageAlign = ContentAlignment.MiddleRight
-        btnAddOrder.Location = New Point(3, 3)
-        btnAddOrder.Name = "btnAddOrder"
-        btnAddOrder.Size = New Size(168, 39)
-        btnAddOrder.TabIndex = 0
-        btnAddOrder.Text = "ADD ORDER"
-        btnAddOrder.UseVisualStyleBackColor = True
         ' 
         ' TableLayoutPanel3
         ' 
@@ -157,6 +144,16 @@ Partial Class TransactionsControl
         btnReloadData.Size = New Size(69, 39)
         btnReloadData.TabIndex = 2
         btnReloadData.UseVisualStyleBackColor = True
+        ' 
+        ' btnAdd
+        ' 
+        btnAdd.Dock = DockStyle.Fill
+        btnAdd.Location = New Point(3, 3)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(168, 39)
+        btnAdd.TabIndex = 3
+        btnAdd.Text = "Add Order"
+        btnAdd.UseVisualStyleBackColor = True
         ' 
         ' dgvTransactionsData
         ' 
@@ -263,7 +260,6 @@ Partial Class TransactionsControl
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents btnAddOrder As Button
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents dtpDateFilter As DateTimePicker
@@ -276,5 +272,6 @@ Partial Class TransactionsControl
     Friend WithEvents tbSearch As TextBox
     Friend WithEvents chkAllDates As CheckBox
     Friend WithEvents btnReloadData As Button
+    Friend WithEvents btnAdd As Button
 
 End Class

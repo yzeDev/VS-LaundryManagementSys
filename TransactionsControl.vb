@@ -33,7 +33,7 @@ Public Class TransactionsControl
     End Sub
 
     Private Sub LoadTransactions()
-        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connStr)
             Try
@@ -140,31 +140,31 @@ Public Class TransactionsControl
 
             ' No specific column selected -> search across all
             Dim searchParts As New List(Of String)
-                For Each col As DataColumn In dt.Columns
-                    Dim colName As String = col.ColumnName
-                    Dim ct As Type = col.DataType
+            For Each col As DataColumn In dt.Columns
+                Dim colName As String = col.ColumnName
+                Dim ct As Type = col.DataType
 
-                    If ct Is GetType(String) Then
-                        searchParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
-                    ElseIf ct Is GetType(Integer) OrElse ct Is GetType(Long) _
-                   OrElse ct Is GetType(Decimal) OrElse ct Is GetType(Double) Then
-                        If IsNumeric(searchText) Then
-                            searchParts.Add("[" & colName & "] = " & searchText)
-                        End If
-                    ElseIf ct Is GetType(DateTime) Then
-                        Dim d As DateTime
-                        If DateTime.TryParse(searchTextRaw, d) Then
-                            Dim sD As Date = d.Date
-                            Dim eD As Date = sD.AddDays(1)
-                            searchParts.Add("([" & colName & "] >= #" & sD.ToString("MM/dd/yyyy") & "# AND [" & colName & "] < #" & eD.ToString("MM/dd/yyyy") & "#)")
-                        End If
+                If ct Is GetType(String) Then
+                    searchParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
+                ElseIf ct Is GetType(Integer) OrElse ct Is GetType(Long) _
+               OrElse ct Is GetType(Decimal) OrElse ct Is GetType(Double) Then
+                    If IsNumeric(searchText) Then
+                        searchParts.Add("[" & colName & "] = " & searchText)
                     End If
-                Next
-
-                If searchParts.Count > 0 Then
-                    filterParts.Add("(" & String.Join(" OR ", searchParts) & ")")
+                ElseIf ct Is GetType(DateTime) Then
+                    Dim d As DateTime
+                    If DateTime.TryParse(searchTextRaw, d) Then
+                        Dim sD As Date = d.Date
+                        Dim eD As Date = sD.AddDays(1)
+                        searchParts.Add("([" & colName & "] >= #" & sD.ToString("MM/dd/yyyy") & "# AND [" & colName & "] < #" & eD.ToString("MM/dd/yyyy") & "#)")
+                    End If
                 End If
+            Next
+
+            If searchParts.Count > 0 Then
+                filterParts.Add("(" & String.Join(" OR ", searchParts) & ")")
             End If
+        End If
 
 
         ' --- 3) DATE filter using dtpDateFilter + chkAllDates ---
@@ -218,5 +218,10 @@ Public Class TransactionsControl
         Catch ex As Exception
             MessageBox.Show("Error while reloading data: " & ex.Message, "Reload Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim popup As New Transaction_Form()
+        popup.ShowDialog() ' Shows it as a modal popup
     End Sub
 End Class

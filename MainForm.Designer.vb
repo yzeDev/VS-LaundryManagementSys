@@ -51,7 +51,7 @@ Partial Class MainForm
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 1
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel2.Controls.Add(btnOptions, 0, 4)
         TableLayoutPanel2.Controls.Add(btnStats, 0, 3)
         TableLayoutPanel2.Controls.Add(btnTransactions, 0, 2)
@@ -61,11 +61,11 @@ Partial Class MainForm
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 5
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
         TableLayoutPanel2.Size = New Size(94, 555)
         TableLayoutPanel2.TabIndex = 0
         ' 
@@ -158,7 +158,7 @@ Partial Class MainForm
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100.0F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
         TableLayoutPanel1.Controls.Add(MainPanel, 1, 0)
         TableLayoutPanel1.Controls.Add(Panel2, 0, 0)
@@ -176,7 +176,7 @@ Partial Class MainForm
         ' 
         ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleDimensions = New SizeF(96.0F, 96.0F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(1084, 561)
         Controls.Add(TableLayoutPanel1)

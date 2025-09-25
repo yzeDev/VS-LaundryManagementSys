@@ -5,7 +5,7 @@ Public Class DashboardControl
         LoadMachineCounts()
     End Sub
     Private Sub LoadOrderCounts()
-        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connStr)
             Try
