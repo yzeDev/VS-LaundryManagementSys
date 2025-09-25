@@ -397,6 +397,7 @@ Partial Class DashboardControl
         lblPendingOrderText.AutoSize = True
         TableLayoutPanel2.SetColumnSpan(lblPendingOrderText, 2)
         lblPendingOrderText.Font = New Font("Cascadia Mono", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblPendingOrderText.ForeColor = SystemColors.Window
         lblPendingOrderText.Location = New Point(3, 0)
         lblPendingOrderText.Name = "lblPendingOrderText"
         lblPendingOrderText.Size = New Size(166, 25)
@@ -418,7 +419,8 @@ Partial Class DashboardControl
         ' 
         lblPendingOrdersValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblPendingOrdersValue.AutoSize = True
-        lblPendingOrdersValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
+        lblPendingOrdersValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblPendingOrdersValue.ForeColor = SystemColors.Window
         lblPendingOrdersValue.Location = New Point(3, 34)
         lblPendingOrdersValue.Name = "lblPendingOrdersValue"
         lblPendingOrdersValue.Size = New Size(101, 89)
@@ -458,10 +460,11 @@ Partial Class DashboardControl
         ' 
         lblInProgressText.AutoSize = True
         TableLayoutPanel3.SetColumnSpan(lblInProgressText, 2)
-        lblInProgressText.Font = New Font("Cascadia Code SemiBold", 12F, FontStyle.Bold)
+        lblInProgressText.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInProgressText.ForeColor = SystemColors.Window
         lblInProgressText.Location = New Point(3, 0)
         lblInProgressText.Name = "lblInProgressText"
-        lblInProgressText.Size = New Size(109, 21)
+        lblInProgressText.Size = New Size(133, 25)
         lblInProgressText.TabIndex = 0
         lblInProgressText.Text = "In-Progress"
         ' 
@@ -480,7 +483,8 @@ Partial Class DashboardControl
         ' 
         lblInProgressValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInProgressValue.AutoSize = True
-        lblInProgressValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
+        lblInProgressValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblInProgressValue.ForeColor = SystemColors.Window
         lblInProgressValue.Location = New Point(3, 37)
         lblInProgressValue.Name = "lblInProgressValue"
         lblInProgressValue.Size = New Size(101, 86)
@@ -520,10 +524,11 @@ Partial Class DashboardControl
         ' 
         lblOutForDeliveryText.AutoSize = True
         TableLayoutPanel4.SetColumnSpan(lblOutForDeliveryText, 2)
-        lblOutForDeliveryText.Font = New Font("Cascadia Code SemiBold", 12F, FontStyle.Bold)
+        lblOutForDeliveryText.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblOutForDeliveryText.ForeColor = SystemColors.Window
         lblOutForDeliveryText.Location = New Point(3, 0)
         lblOutForDeliveryText.Name = "lblOutForDeliveryText"
-        lblOutForDeliveryText.Size = New Size(154, 21)
+        lblOutForDeliveryText.Size = New Size(188, 25)
         lblOutForDeliveryText.TabIndex = 0
         lblOutForDeliveryText.Text = "Out for Delivery"
         ' 
@@ -542,7 +547,8 @@ Partial Class DashboardControl
         ' 
         lblOutForDeliveryValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblOutForDeliveryValue.AutoSize = True
-        lblOutForDeliveryValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
+        lblOutForDeliveryValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblOutForDeliveryValue.ForeColor = SystemColors.Window
         lblOutForDeliveryValue.Location = New Point(3, 35)
         lblOutForDeliveryValue.Name = "lblOutForDeliveryValue"
         lblOutForDeliveryValue.Size = New Size(101, 88)
@@ -582,10 +588,11 @@ Partial Class DashboardControl
         ' 
         lblCompletedText.AutoSize = True
         TableLayoutPanel5.SetColumnSpan(lblCompletedText, 2)
-        lblCompletedText.Font = New Font("Cascadia Code SemiBold", 12F, FontStyle.Bold)
+        lblCompletedText.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompletedText.ForeColor = SystemColors.Window
         lblCompletedText.Location = New Point(3, 0)
         lblCompletedText.Name = "lblCompletedText"
-        lblCompletedText.Size = New Size(91, 21)
+        lblCompletedText.Size = New Size(111, 25)
         lblCompletedText.TabIndex = 0
         lblCompletedText.Text = "Completed"
         ' 
@@ -604,7 +611,8 @@ Partial Class DashboardControl
         ' 
         lblCompletedValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblCompletedValue.AutoSize = True
-        lblCompletedValue.Font = New Font("Cascadia Code", 15.75F, FontStyle.Bold)
+        lblCompletedValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblCompletedValue.ForeColor = SystemColors.Window
         lblCompletedValue.Location = New Point(3, 35)
         lblCompletedValue.Name = "lblCompletedValue"
         lblCompletedValue.Size = New Size(101, 88)
