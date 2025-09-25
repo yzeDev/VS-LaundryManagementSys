@@ -6,7 +6,6 @@ Public Class MainForm
         MainPanel.Controls.Clear()
         ctrl.Dock = DockStyle.Fill  ' <- here we force it to resize and fill MainPanel
         MainPanel.Controls.Add(ctrl)
-
     End Sub
 
     ' Single event handler for all navigation buttons
@@ -30,6 +29,14 @@ Public Class MainForm
         If ctrl IsNot Nothing Then
             ShowControl(ctrl)
         End If
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ShowControl(New DashboardControl())
+    End Sub
+
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+
     End Sub
 
 End Class

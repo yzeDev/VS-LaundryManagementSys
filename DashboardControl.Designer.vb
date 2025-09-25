@@ -31,6 +31,15 @@ Partial Class DashboardControl
         TableLayoutPanel8 = New TableLayoutPanel()
         Label5 = New Label()
         TableLayoutPanel9 = New TableLayoutPanel()
+        Panel8 = New Panel()
+        lblAvailableValue = New Label()
+        lblAvailableText = New Label()
+        Panel9 = New Panel()
+        lblInUseValue = New Label()
+        lblInUseText = New Label()
+        Panel10 = New Panel()
+        lblBrokenValue = New Label()
+        lblBrokenText = New Label()
         TableLayoutPanel10 = New TableLayoutPanel()
         Label6 = New Label()
         DataGridView1 = New DataGridView()
@@ -38,28 +47,37 @@ Partial Class DashboardControl
         TableLayoutPanel2 = New TableLayoutPanel()
         lblPendingOrderText = New Label()
         PictureBox1 = New PictureBox()
-        Label1 = New Label()
+        lblPendingOrdersValue = New Label()
         Panel4 = New Panel()
         TableLayoutPanel3 = New TableLayoutPanel()
         lblInProgressText = New Label()
         PictureBox2 = New PictureBox()
-        Label2 = New Label()
+        lblInProgressValue = New Label()
         Panel5 = New Panel()
         TableLayoutPanel4 = New TableLayoutPanel()
         lblOutForDeliveryText = New Label()
         PictureBox3 = New PictureBox()
-        Label3 = New Label()
+        lblOutForDeliveryValue = New Label()
         Panel6 = New Panel()
         TableLayoutPanel5 = New TableLayoutPanel()
         lblCompletedText = New Label()
         PictureBox4 = New PictureBox()
-        Label4 = New Label()
+        lblCompletedValue = New Label()
+        Panel7 = New Panel()
+        SplitContainer1 = New SplitContainer()
+        Label1 = New Label()
+        btnReloadDashboard = New Button()
+        Button2 = New Button()
         TableLayoutPanel1.SuspendLayout()
         Panel1.SuspendLayout()
         TableLayoutPanel6.SuspendLayout()
         Panel2.SuspendLayout()
         TableLayoutPanel7.SuspendLayout()
         TableLayoutPanel8.SuspendLayout()
+        TableLayoutPanel9.SuspendLayout()
+        Panel8.SuspendLayout()
+        Panel9.SuspendLayout()
+        Panel10.SuspendLayout()
         TableLayoutPanel10.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -74,39 +92,47 @@ Partial Class DashboardControl
         Panel6.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        Panel7.SuspendLayout()
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
+        SplitContainer1.Panel1.SuspendLayout()
+        SplitContainer1.Panel2.SuspendLayout()
+        SplitContainer1.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
         ' 
+        TableLayoutPanel1.AutoSize = True
         TableLayoutPanel1.ColumnCount = 5
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel1.Controls.Add(Panel1, 4, 0)
-        TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
-        TableLayoutPanel1.Controls.Add(Panel3, 0, 0)
-        TableLayoutPanel1.Controls.Add(Panel4, 1, 0)
-        TableLayoutPanel1.Controls.Add(Panel5, 2, 0)
-        TableLayoutPanel1.Controls.Add(Panel6, 3, 0)
+        TableLayoutPanel1.Controls.Add(Panel1, 4, 1)
+        TableLayoutPanel1.Controls.Add(Panel2, 0, 2)
+        TableLayoutPanel1.Controls.Add(Panel3, 0, 1)
+        TableLayoutPanel1.Controls.Add(Panel4, 1, 1)
+        TableLayoutPanel1.Controls.Add(Panel5, 2, 1)
+        TableLayoutPanel1.Controls.Add(Panel6, 3, 1)
+        TableLayoutPanel1.Controls.Add(Panel7, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowCount = 3
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 70F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 30F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 70F))
-        TableLayoutPanel1.Size = New Size(800, 500)
+        TableLayoutPanel1.Size = New Size(1100, 500)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' Panel1
         ' 
         Panel1.Controls.Add(TableLayoutPanel6)
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(643, 3)
+        Panel1.Location = New Point(883, 73)
         Panel1.Name = "Panel1"
         TableLayoutPanel1.SetRowSpan(Panel1, 2)
-        Panel1.Size = New Size(154, 494)
+        Panel1.Size = New Size(214, 424)
         Panel1.TabIndex = 0
         ' 
         ' TableLayoutPanel6
@@ -122,16 +148,16 @@ Partial Class DashboardControl
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
-        TableLayoutPanel6.Size = New Size(154, 494)
+        TableLayoutPanel6.Size = New Size(214, 424)
         TableLayoutPanel6.TabIndex = 0
         ' 
         ' Button1
         ' 
         Button1.Dock = DockStyle.Fill
         Button1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(3, 372)
+        Button1.Location = New Point(3, 321)
         Button1.Name = "Button1"
-        Button1.Size = New Size(148, 119)
+        Button1.Size = New Size(208, 100)
         Button1.TabIndex = 0
         Button1.Text = "ADD ORDER" & vbCrLf & "(+)" & vbCrLf
         Button1.UseVisualStyleBackColor = True
@@ -141,9 +167,9 @@ Partial Class DashboardControl
         TableLayoutPanel1.SetColumnSpan(Panel2, 4)
         Panel2.Controls.Add(TableLayoutPanel7)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(3, 153)
+        Panel2.Location = New Point(3, 202)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(634, 344)
+        Panel2.Size = New Size(874, 295)
         Panel2.TabIndex = 1
         ' 
         ' TableLayoutPanel7
@@ -159,7 +185,7 @@ Partial Class DashboardControl
         TableLayoutPanel7.RowCount = 2
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.Size = New Size(634, 344)
+        TableLayoutPanel7.Size = New Size(874, 295)
         TableLayoutPanel7.TabIndex = 0
         ' 
         ' TableLayoutPanel8
@@ -172,19 +198,19 @@ Partial Class DashboardControl
         TableLayoutPanel8.Location = New Point(3, 3)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 2
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle())
-        TableLayoutPanel8.Size = New Size(628, 166)
+        TableLayoutPanel8.Size = New Size(868, 141)
         TableLayoutPanel8.TabIndex = 0
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Cascadia Code", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(622, 50)
+        Label5.Size = New Size(862, 30)
         Label5.TabIndex = 0
         Label5.Text = "MACHINES"
         Label5.TextAlign = ContentAlignment.MiddleLeft
@@ -195,13 +221,112 @@ Partial Class DashboardControl
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel9.Controls.Add(Panel8, 0, 0)
+        TableLayoutPanel9.Controls.Add(Panel9, 1, 0)
+        TableLayoutPanel9.Controls.Add(Panel10, 2, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
-        TableLayoutPanel9.Location = New Point(3, 53)
+        TableLayoutPanel9.Location = New Point(3, 33)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
         TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel9.Size = New Size(622, 110)
+        TableLayoutPanel9.Size = New Size(862, 110)
         TableLayoutPanel9.TabIndex = 1
+        ' 
+        ' Panel8
+        ' 
+        Panel8.Controls.Add(lblAvailableValue)
+        Panel8.Controls.Add(lblAvailableText)
+        Panel8.Dock = DockStyle.Fill
+        Panel8.Location = New Point(3, 3)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(281, 104)
+        Panel8.TabIndex = 0
+        ' 
+        ' lblAvailableValue
+        ' 
+        lblAvailableValue.Dock = DockStyle.Top
+        lblAvailableValue.Font = New Font("Cascadia Code", 20.25F)
+        lblAvailableValue.Location = New Point(0, 23)
+        lblAvailableValue.Name = "lblAvailableValue"
+        lblAvailableValue.Size = New Size(281, 47)
+        lblAvailableValue.TabIndex = 1
+        lblAvailableValue.Text = "0"
+        lblAvailableValue.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' lblAvailableText
+        ' 
+        lblAvailableText.Dock = DockStyle.Top
+        lblAvailableText.Font = New Font("Cascadia Code", 14.25F)
+        lblAvailableText.Location = New Point(0, 0)
+        lblAvailableText.Name = "lblAvailableText"
+        lblAvailableText.Size = New Size(281, 23)
+        lblAvailableText.TabIndex = 0
+        lblAvailableText.Text = "AVAILABLE"
+        lblAvailableText.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Panel9
+        ' 
+        Panel9.Controls.Add(lblInUseValue)
+        Panel9.Controls.Add(lblInUseText)
+        Panel9.Dock = DockStyle.Fill
+        Panel9.Location = New Point(290, 3)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(281, 104)
+        Panel9.TabIndex = 1
+        ' 
+        ' lblInUseValue
+        ' 
+        lblInUseValue.Dock = DockStyle.Top
+        lblInUseValue.Font = New Font("Cascadia Code", 20.25F)
+        lblInUseValue.Location = New Point(0, 23)
+        lblInUseValue.Name = "lblInUseValue"
+        lblInUseValue.Size = New Size(281, 39)
+        lblInUseValue.TabIndex = 1
+        lblInUseValue.Text = "0"
+        lblInUseValue.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' lblInUseText
+        ' 
+        lblInUseText.Dock = DockStyle.Top
+        lblInUseText.Font = New Font("Cascadia Code", 14.25F)
+        lblInUseText.Location = New Point(0, 0)
+        lblInUseText.Name = "lblInUseText"
+        lblInUseText.Size = New Size(281, 23)
+        lblInUseText.TabIndex = 0
+        lblInUseText.Text = "IN-USE"
+        lblInUseText.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Panel10
+        ' 
+        Panel10.Controls.Add(lblBrokenValue)
+        Panel10.Controls.Add(lblBrokenText)
+        Panel10.Dock = DockStyle.Fill
+        Panel10.Location = New Point(577, 3)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(282, 104)
+        Panel10.TabIndex = 2
+        ' 
+        ' lblBrokenValue
+        ' 
+        lblBrokenValue.Dock = DockStyle.Top
+        lblBrokenValue.Font = New Font("Cascadia Code", 20.25F)
+        lblBrokenValue.Location = New Point(0, 23)
+        lblBrokenValue.Name = "lblBrokenValue"
+        lblBrokenValue.Size = New Size(282, 39)
+        lblBrokenValue.TabIndex = 1
+        lblBrokenValue.Text = "0"
+        lblBrokenValue.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' lblBrokenText
+        ' 
+        lblBrokenText.Dock = DockStyle.Top
+        lblBrokenText.Font = New Font("Cascadia Code", 14.25F)
+        lblBrokenText.Location = New Point(0, 0)
+        lblBrokenText.Name = "lblBrokenText"
+        lblBrokenText.Size = New Size(282, 23)
+        lblBrokenText.TabIndex = 0
+        lblBrokenText.Text = "BROKEN"
+        lblBrokenText.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' TableLayoutPanel10
         ' 
@@ -210,22 +335,22 @@ Partial Class DashboardControl
         TableLayoutPanel10.Controls.Add(Label6, 0, 0)
         TableLayoutPanel10.Controls.Add(DataGridView1, 0, 1)
         TableLayoutPanel10.Dock = DockStyle.Fill
-        TableLayoutPanel10.Location = New Point(3, 175)
+        TableLayoutPanel10.Location = New Point(3, 150)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 2
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
         TableLayoutPanel10.RowStyles.Add(New RowStyle())
-        TableLayoutPanel10.Size = New Size(628, 166)
+        TableLayoutPanel10.Size = New Size(868, 142)
         TableLayoutPanel10.TabIndex = 1
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Cascadia Code", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(3, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(622, 50)
+        Label6.Size = New Size(862, 30)
         Label6.TabIndex = 0
         Label6.Text = "FOR PICK UP"
         Label6.TextAlign = ContentAlignment.MiddleLeft
@@ -234,247 +359,339 @@ Partial Class DashboardControl
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Dock = DockStyle.Fill
-        DataGridView1.Location = New Point(3, 53)
+        DataGridView1.Location = New Point(3, 33)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(622, 150)
+        DataGridView1.Size = New Size(862, 150)
         DataGridView1.TabIndex = 1
         ' 
         ' Panel3
         ' 
         Panel3.Controls.Add(TableLayoutPanel2)
         Panel3.Dock = DockStyle.Fill
-        Panel3.Location = New Point(3, 3)
+        Panel3.Location = New Point(3, 73)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(154, 144)
+        Panel3.Size = New Size(214, 123)
         Panel3.TabIndex = 2
         ' 
         ' TableLayoutPanel2
         ' 
+        TableLayoutPanel2.AutoSize = True
+        TableLayoutPanel2.BackColor = Color.FromArgb(CByte(98), CByte(142), CByte(203))
         TableLayoutPanel2.ColumnCount = 2
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.Controls.Add(lblPendingOrderText, 0, 0)
         TableLayoutPanel2.Controls.Add(PictureBox1, 1, 1)
-        TableLayoutPanel2.Controls.Add(Label1, 0, 1)
+        TableLayoutPanel2.Controls.Add(lblPendingOrdersValue, 0, 1)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Size = New Size(154, 144)
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 27.7406521F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 72.259346F))
+        TableLayoutPanel2.Size = New Size(214, 123)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' lblPendingOrderText
         ' 
         lblPendingOrderText.AutoSize = True
         TableLayoutPanel2.SetColumnSpan(lblPendingOrderText, 2)
-        lblPendingOrderText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblPendingOrderText.Font = New Font("Cascadia Mono", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblPendingOrderText.ForeColor = SystemColors.Window
         lblPendingOrderText.Location = New Point(3, 0)
         lblPendingOrderText.Name = "lblPendingOrderText"
-        lblPendingOrderText.Size = New Size(123, 21)
+        lblPendingOrderText.Size = New Size(166, 25)
         lblPendingOrderText.TabIndex = 0
         lblPendingOrderText.Text = "Pending Orders"
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackgroundImage = My.Resources.Resources._81
+        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox1.Dock = DockStyle.Fill
-        PictureBox1.Location = New Point(80, 75)
+        PictureBox1.Location = New Point(110, 37)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(71, 66)
+        PictureBox1.Size = New Size(101, 83)
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
-        ' Label1
+        ' lblPendingOrdersValue
         ' 
-        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label1.Location = New Point(49, 72)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(25, 30)
-        Label1.TabIndex = 2
-        Label1.Text = "0"
+        lblPendingOrdersValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblPendingOrdersValue.AutoSize = True
+        lblPendingOrdersValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblPendingOrdersValue.ForeColor = SystemColors.Window
+        lblPendingOrdersValue.Location = New Point(3, 34)
+        lblPendingOrdersValue.Name = "lblPendingOrdersValue"
+        lblPendingOrdersValue.Size = New Size(101, 89)
+        lblPendingOrdersValue.TabIndex = 2
+        lblPendingOrdersValue.Text = "0"
+        lblPendingOrdersValue.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Panel4
         ' 
         Panel4.Controls.Add(TableLayoutPanel3)
         Panel4.Dock = DockStyle.Fill
-        Panel4.Location = New Point(163, 3)
+        Panel4.Location = New Point(223, 73)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(154, 144)
+        Panel4.Size = New Size(214, 123)
         Panel4.TabIndex = 3
         ' 
         ' TableLayoutPanel3
         ' 
+        TableLayoutPanel3.AutoSize = True
+        TableLayoutPanel3.BackColor = Color.FromArgb(CByte(98), CByte(142), CByte(203))
         TableLayoutPanel3.ColumnCount = 2
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.Controls.Add(lblInProgressText, 0, 0)
         TableLayoutPanel3.Controls.Add(PictureBox2, 1, 1)
-        TableLayoutPanel3.Controls.Add(Label2, 0, 1)
+        TableLayoutPanel3.Controls.Add(lblInProgressValue, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(0, 0)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Size = New Size(154, 144)
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 30.5583115F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 69.44168F))
+        TableLayoutPanel3.Size = New Size(214, 123)
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' lblInProgressText
         ' 
         lblInProgressText.AutoSize = True
         TableLayoutPanel3.SetColumnSpan(lblInProgressText, 2)
-        lblInProgressText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblInProgressText.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInProgressText.ForeColor = SystemColors.Window
         lblInProgressText.Location = New Point(3, 0)
         lblInProgressText.Name = "lblInProgressText"
-        lblInProgressText.Size = New Size(92, 21)
+        lblInProgressText.Size = New Size(133, 25)
         lblInProgressText.TabIndex = 0
-        lblInProgressText.Text = "In Progress"
+        lblInProgressText.Text = "In-Progress"
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.BackgroundImage = My.Resources.Resources._91
+        PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox2.Dock = DockStyle.Fill
-        PictureBox2.Location = New Point(80, 75)
+        PictureBox2.Location = New Point(110, 40)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(71, 66)
+        PictureBox2.Size = New Size(101, 80)
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
         ' 
-        ' Label2
+        ' lblInProgressValue
         ' 
-        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label2.Location = New Point(49, 72)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(25, 30)
-        Label2.TabIndex = 2
-        Label2.Text = "0"
+        lblInProgressValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblInProgressValue.AutoSize = True
+        lblInProgressValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblInProgressValue.ForeColor = SystemColors.Window
+        lblInProgressValue.Location = New Point(3, 37)
+        lblInProgressValue.Name = "lblInProgressValue"
+        lblInProgressValue.Size = New Size(101, 86)
+        lblInProgressValue.TabIndex = 2
+        lblInProgressValue.Text = "0"
+        lblInProgressValue.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Panel5
         ' 
         Panel5.Controls.Add(TableLayoutPanel4)
         Panel5.Dock = DockStyle.Fill
-        Panel5.Location = New Point(323, 3)
+        Panel5.Location = New Point(443, 73)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(154, 144)
+        Panel5.Size = New Size(214, 123)
         Panel5.TabIndex = 4
         ' 
         ' TableLayoutPanel4
         ' 
+        TableLayoutPanel4.AutoSize = True
+        TableLayoutPanel4.BackColor = Color.FromArgb(CByte(98), CByte(142), CByte(203))
         TableLayoutPanel4.ColumnCount = 2
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Controls.Add(lblOutForDeliveryText, 0, 0)
         TableLayoutPanel4.Controls.Add(PictureBox3, 1, 1)
-        TableLayoutPanel4.Controls.Add(Label3, 0, 1)
+        TableLayoutPanel4.Controls.Add(lblOutForDeliveryValue, 0, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(0, 0)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Size = New Size(154, 144)
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 28.977272F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 71.02273F))
+        TableLayoutPanel4.Size = New Size(214, 123)
         TableLayoutPanel4.TabIndex = 0
         ' 
         ' lblOutForDeliveryText
         ' 
         lblOutForDeliveryText.AutoSize = True
         TableLayoutPanel4.SetColumnSpan(lblOutForDeliveryText, 2)
-        lblOutForDeliveryText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblOutForDeliveryText.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblOutForDeliveryText.ForeColor = SystemColors.Window
         lblOutForDeliveryText.Location = New Point(3, 0)
         lblOutForDeliveryText.Name = "lblOutForDeliveryText"
-        lblOutForDeliveryText.Size = New Size(127, 21)
+        lblOutForDeliveryText.Size = New Size(188, 25)
         lblOutForDeliveryText.TabIndex = 0
         lblOutForDeliveryText.Text = "Out for Delivery"
         ' 
         ' PictureBox3
         ' 
+        PictureBox3.BackgroundImage = My.Resources.Resources._101
+        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox3.Dock = DockStyle.Fill
-        PictureBox3.Location = New Point(80, 75)
+        PictureBox3.Location = New Point(110, 38)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(71, 66)
+        PictureBox3.Size = New Size(101, 82)
         PictureBox3.TabIndex = 1
         PictureBox3.TabStop = False
         ' 
-        ' Label3
+        ' lblOutForDeliveryValue
         ' 
-        Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label3.Location = New Point(49, 72)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(25, 30)
-        Label3.TabIndex = 2
-        Label3.Text = "0"
+        lblOutForDeliveryValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblOutForDeliveryValue.AutoSize = True
+        lblOutForDeliveryValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblOutForDeliveryValue.ForeColor = SystemColors.Window
+        lblOutForDeliveryValue.Location = New Point(3, 35)
+        lblOutForDeliveryValue.Name = "lblOutForDeliveryValue"
+        lblOutForDeliveryValue.Size = New Size(101, 88)
+        lblOutForDeliveryValue.TabIndex = 2
+        lblOutForDeliveryValue.Text = "0"
+        lblOutForDeliveryValue.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Panel6
         ' 
         Panel6.Controls.Add(TableLayoutPanel5)
         Panel6.Dock = DockStyle.Fill
-        Panel6.Location = New Point(483, 3)
+        Panel6.Location = New Point(663, 73)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(154, 144)
+        Panel6.Size = New Size(214, 123)
         Panel6.TabIndex = 5
         ' 
         ' TableLayoutPanel5
         ' 
+        TableLayoutPanel5.AutoSize = True
+        TableLayoutPanel5.BackColor = Color.FromArgb(CByte(98), CByte(142), CByte(203))
         TableLayoutPanel5.ColumnCount = 2
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.Controls.Add(lblCompletedText, 0, 0)
         TableLayoutPanel5.Controls.Add(PictureBox4, 1, 1)
-        TableLayoutPanel5.Controls.Add(Label4, 0, 1)
+        TableLayoutPanel5.Controls.Add(lblCompletedValue, 0, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(0, 0)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 2
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.Size = New Size(154, 144)
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 28.977272F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 71.02273F))
+        TableLayoutPanel5.Size = New Size(214, 123)
         TableLayoutPanel5.TabIndex = 0
         ' 
         ' lblCompletedText
         ' 
         lblCompletedText.AutoSize = True
         TableLayoutPanel5.SetColumnSpan(lblCompletedText, 2)
-        lblCompletedText.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblCompletedText.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompletedText.ForeColor = SystemColors.Window
         lblCompletedText.Location = New Point(3, 0)
         lblCompletedText.Name = "lblCompletedText"
-        lblCompletedText.Size = New Size(92, 21)
+        lblCompletedText.Size = New Size(111, 25)
         lblCompletedText.TabIndex = 0
         lblCompletedText.Text = "Completed"
         ' 
         ' PictureBox4
         ' 
+        PictureBox4.BackgroundImage = My.Resources.Resources._111
+        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox4.Dock = DockStyle.Fill
-        PictureBox4.Location = New Point(80, 75)
+        PictureBox4.Location = New Point(110, 38)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(71, 66)
+        PictureBox4.Size = New Size(101, 82)
         PictureBox4.TabIndex = 1
         PictureBox4.TabStop = False
         ' 
-        ' Label4
+        ' lblCompletedValue
         ' 
-        Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold)
-        Label4.Location = New Point(49, 72)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(25, 30)
-        Label4.TabIndex = 2
-        Label4.Text = "0"
+        lblCompletedValue.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblCompletedValue.AutoSize = True
+        lblCompletedValue.Font = New Font("Cascadia Mono", 20.25F, FontStyle.Bold)
+        lblCompletedValue.ForeColor = SystemColors.Window
+        lblCompletedValue.Location = New Point(3, 35)
+        lblCompletedValue.Name = "lblCompletedValue"
+        lblCompletedValue.Size = New Size(101, 88)
+        lblCompletedValue.TabIndex = 2
+        lblCompletedValue.Text = "0"
+        lblCompletedValue.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Panel7
+        ' 
+        TableLayoutPanel1.SetColumnSpan(Panel7, 5)
+        Panel7.Controls.Add(SplitContainer1)
+        Panel7.Dock = DockStyle.Fill
+        Panel7.Location = New Point(3, 3)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(1094, 64)
+        Panel7.TabIndex = 6
+        ' 
+        ' SplitContainer1
+        ' 
+        SplitContainer1.Dock = DockStyle.Fill
+        SplitContainer1.Location = New Point(0, 0)
+        SplitContainer1.Name = "SplitContainer1"
+        ' 
+        ' SplitContainer1.Panel1
+        ' 
+        SplitContainer1.Panel1.Controls.Add(Label1)
+        ' 
+        ' SplitContainer1.Panel2
+        ' 
+        SplitContainer1.Panel2.BackgroundImageLayout = ImageLayout.Zoom
+        SplitContainer1.Panel2.Controls.Add(btnReloadDashboard)
+        SplitContainer1.Panel2.Controls.Add(Button2)
+        SplitContainer1.Size = New Size(1094, 64)
+        SplitContainer1.SplitterDistance = 999
+        SplitContainer1.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.Dock = DockStyle.Fill
+        Label1.Font = New Font("Cascadia Code", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ImageAlign = ContentAlignment.MiddleLeft
+        Label1.Location = New Point(0, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(999, 64)
+        Label1.TabIndex = 0
+        Label1.Text = "WELCOME BACK, ADMIN !"
+        Label1.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' btnReloadDashboard
+        ' 
+        btnReloadDashboard.BackgroundImage = My.Resources.Resources.refresh
+        btnReloadDashboard.BackgroundImageLayout = ImageLayout.Zoom
+        btnReloadDashboard.Dock = DockStyle.Fill
+        btnReloadDashboard.FlatAppearance.BorderSize = 0
+        btnReloadDashboard.FlatStyle = FlatStyle.Flat
+        btnReloadDashboard.Location = New Point(0, 0)
+        btnReloadDashboard.Name = "btnReloadDashboard"
+        btnReloadDashboard.Size = New Size(91, 64)
+        btnReloadDashboard.TabIndex = 1
+        btnReloadDashboard.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(312, 3)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(75, 23)
+        Button2.TabIndex = 0
+        Button2.Text = "Button2"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' DashboardControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ButtonHighlight
         Controls.Add(TableLayoutPanel1)
         Margin = New Padding(10)
         Name = "DashboardControl"
-        Size = New Size(800, 500)
+        Size = New Size(1100, 500)
         TableLayoutPanel1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         TableLayoutPanel6.ResumeLayout(False)
@@ -482,26 +699,40 @@ Partial Class DashboardControl
         TableLayoutPanel7.ResumeLayout(False)
         TableLayoutPanel8.ResumeLayout(False)
         TableLayoutPanel8.PerformLayout()
+        TableLayoutPanel9.ResumeLayout(False)
+        Panel8.ResumeLayout(False)
+        Panel9.ResumeLayout(False)
+        Panel10.ResumeLayout(False)
         TableLayoutPanel10.ResumeLayout(False)
         TableLayoutPanel10.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         TableLayoutPanel3.ResumeLayout(False)
         TableLayoutPanel3.PerformLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
         TableLayoutPanel4.ResumeLayout(False)
         TableLayoutPanel4.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
         TableLayoutPanel5.ResumeLayout(False)
         TableLayoutPanel5.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        Panel7.ResumeLayout(False)
+        SplitContainer1.Panel1.ResumeLayout(False)
+        SplitContainer1.Panel2.ResumeLayout(False)
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
+        SplitContainer1.ResumeLayout(False)
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -523,10 +754,10 @@ Partial Class DashboardControl
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents lblCompletedText As Label
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblPendingOrdersValue As Label
+    Friend WithEvents lblInProgressValue As Label
+    Friend WithEvents lblOutForDeliveryValue As Label
+    Friend WithEvents lblCompletedValue As Label
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Button1 As Button
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
@@ -536,5 +767,19 @@ Partial Class DashboardControl
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Label6 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents lblAvailableValue As Label
+    Friend WithEvents lblAvailableText As Label
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents lblInUseValue As Label
+    Friend WithEvents lblInUseText As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents lblBrokenValue As Label
+    Friend WithEvents lblBrokenText As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents btnReloadDashboard As Button
 
 End Class

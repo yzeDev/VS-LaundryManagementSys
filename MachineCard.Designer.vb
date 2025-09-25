@@ -28,9 +28,9 @@ Partial Class MachineCard
         lblUnit = New Label()
         picMachine = New PictureBox()
         lblMachineIDText = New Label()
-        cmbStatus = New ComboBox()
         Label1 = New Label()
         lblTransactionID = New Label()
+        lblStatus = New Label()
         TableLayoutPanel1.SuspendLayout()
         CType(picMachine, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -45,9 +45,9 @@ Partial Class MachineCard
         TableLayoutPanel1.Controls.Add(lblUnit, 0, 0)
         TableLayoutPanel1.Controls.Add(picMachine, 0, 1)
         TableLayoutPanel1.Controls.Add(lblMachineIDText, 0, 2)
-        TableLayoutPanel1.Controls.Add(cmbStatus, 1, 4)
         TableLayoutPanel1.Controls.Add(Label1, 0, 4)
         TableLayoutPanel1.Controls.Add(lblTransactionID, 0, 5)
+        TableLayoutPanel1.Controls.Add(lblStatus, 1, 4)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -70,7 +70,7 @@ Partial Class MachineCard
         lblWeightValue.Size = New Size(119, 32)
         lblWeightValue.TabIndex = 6
         lblWeightValue.Text = "Weight:"
-        lblWeightValue.TextAlign = ContentAlignment.TopCenter
+        lblWeightValue.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblWeightText
         ' 
@@ -118,17 +118,6 @@ Partial Class MachineCard
         lblMachineIDText.Text = "Machine ID:"
         lblMachineIDText.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' cmbStatus
-        ' 
-        cmbStatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbStatus.FormattingEnabled = True
-        cmbStatus.Items.AddRange(New Object() {"Available", "In-Use", "Damaged"})
-        cmbStatus.Location = New Point(128, 258)
-        cmbStatus.Name = "cmbStatus"
-        cmbStatus.Size = New Size(119, 23)
-        cmbStatus.TabIndex = 3
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -152,6 +141,17 @@ Partial Class MachineCard
         lblTransactionID.Text = "Transaction ID:"
         lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' lblStatus
+        ' 
+        lblStatus.AutoSize = True
+        lblStatus.Dock = DockStyle.Fill
+        lblStatus.Location = New Point(128, 255)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(119, 32)
+        lblStatus.TabIndex = 9
+        lblStatus.Text = "Status"
+        lblStatus.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' MachineCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -169,11 +169,11 @@ Partial Class MachineCard
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents lblUnit As Label
     Friend WithEvents lblWeightText As Label
-    Friend WithEvents cmbStatus As ComboBox
     Friend WithEvents picMachine As PictureBox
     Friend WithEvents lblMachineIDText As Label
     Friend WithEvents lblWeightValue As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblTransactionID As Label
+    Friend WithEvents lblStatus As Label
 
 End Class

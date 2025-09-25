@@ -14,7 +14,7 @@ Public Class ConfigureMachineForm
         nudCapacity.Value = Capacity
 
         cboStatus.Items.Clear()
-        cboStatus.Items.AddRange(New String() {"Available", "In Use", "Maintenance"})
+        cboStatus.Items.AddRange(New String() {"Available", "In-Use", "Maintenance"})
         If Not String.IsNullOrEmpty(Status) Then
             cboStatus.SelectedItem = Status
         Else

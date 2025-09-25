@@ -11,20 +11,6 @@ Public Class MachinesControl
         btnRemoveMachine.Enabled = False
     End Sub
 
-
-    Private Sub SaveMachineToDB(machine As MachineCard)
-        Using conn As New OleDbConnection(ConnectionString)
-            conn.Open()
-            Dim query As String = "INSERT INTO UnitData (UnitNumber, Capacity, Status) VALUES (@unitnum, @cap, @status)"
-            Using cmd As New OleDbCommand(query, conn)
-                cmd.Parameters.AddWithValue("@unitnum", machine.UnitNumber)
-                cmd.Parameters.AddWithValue("@cap", CInt(machine.Capacity.Replace(" kg", "")))
-                cmd.Parameters.AddWithValue("@status", machine.Status)
-                cmd.ExecuteNonQuery()
-            End Using
-        End Using
-    End Sub
-
     Private Sub UpdateMachineInDB(machine As MachineCard)
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
@@ -70,6 +56,7 @@ Public Class MachinesControl
                         ' store capacity as a number, MachineCard property can format with "kg" if you want
                         card.Capacity = If(IsDBNull(reader("Capacity")), "0", reader("Capacity").ToString())
                         card.Status = If(IsDBNull(reader("Status")), "Available", reader("Status").ToString())
+                        card.lblMachineIDText.Text = "Machine ID: " & card.MachineID.ToString()
 
                         ' Set picture if you have one (use My.Resources or fallback to file)
                         Try
@@ -106,13 +93,11 @@ Public Class MachinesControl
         ' --- Ask the user for capacity ---
         Dim input As String = InputBox("Enter the maximum weight capacity (in kg):", "New Machine", "10")
 
-        ' If user cancels or leaves blank, stop
         If String.IsNullOrWhiteSpace(input) Then
             MessageBox.Show("Machine not added. Capacity is required.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
 
-        ' Validate numeric input
         Dim capacityKg As Integer
         If Not Integer.TryParse(input, capacityKg) OrElse capacityKg <= 0 Then
             MessageBox.Show("Invalid capacity. Please enter a positive number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -135,21 +120,19 @@ Public Class MachinesControl
         End Try
         newMachine.picMachine.SizeMode = PictureBoxSizeMode.Zoom
 
-        ' --- Save to DB with unique UnitNumber ---
-        SaveMachineToDB(newMachine)
+        ' --- Save to DB and get new MachineID ---
+        Dim newID As Integer = SaveMachineToDB(newMachine)
+        newMachine.MachineID = newID
+        newMachine.lblMachineIDText.Text = "Machine ID: " & newID.ToString()
 
         ' --- Refresh UI from DB ---
         LoadMachinesFromDB()
     End Sub
 
-
-
-
     ' Remove
     Private Sub btnRemoveMachine_Click(sender As Object, e As EventArgs) Handles btnRemoveMachine.Click
         If selectedMachine Is Nothing Then Return
 
-        ' --- Delete from database ---
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
             Dim query As String = "DELETE FROM UnitData WHERE UnitNumber=@unit"
@@ -159,13 +142,17 @@ Public Class MachinesControl
             End Using
         End Using
 
-        ' Refresh UI (auto-renumber after delete)
+        ' Re-adjust numbering in DB first
+        ReAdjustUnitNumbers()
+
+        ' Then reload UI
         LoadMachinesFromDB()
 
         selectedMachine = Nothing
         btnRemoveMachine.Enabled = False
         btnConfigure.Enabled = False
     End Sub
+
 
     ' Re-assign unit numbers sequentially
     Private Sub RenumberMachines()
@@ -284,5 +271,50 @@ Public Class MachinesControl
             LoadMachinesFromDB()
         End If
     End Sub
+
+    Private Sub ReAdjustUnitNumbers()
+        Using conn As New OleDbConnection(ConnectionString)
+            conn.Open()
+
+            Dim sql As String = "SELECT ID FROM UnitData ORDER BY UnitNumber"
+            Using cmd As New OleDbCommand(sql, conn)
+                Using reader As OleDbDataReader = cmd.ExecuteReader()
+                    Dim counter As Integer = 1
+                    While reader.Read()
+                        Dim machineID As Integer = Convert.ToInt32(reader("ID"))
+
+                        Dim updateSql As String = "UPDATE UnitData SET UnitNumber = @UnitNumber WHERE ID = @MachineID"
+                        Using updateCmd As New OleDbCommand(updateSql, conn)
+                            updateCmd.Parameters.AddWithValue("@UnitNumber", counter)
+                            updateCmd.Parameters.AddWithValue("@MachineID", machineID)
+                            updateCmd.ExecuteNonQuery()
+                        End Using
+
+                        counter += 1
+                    End While
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Function SaveMachineToDB(machine As MachineCard) As Integer
+        Dim newID As Integer = -1
+        Using conn As New OleDbConnection(ConnectionString)
+            conn.Open()
+            Dim query As String = "INSERT INTO UnitData (UnitNumber, Capacity, Status) VALUES (@unitnum, @cap, @status)"
+            Using cmd As New OleDbCommand(query, conn)
+                cmd.Parameters.AddWithValue("@unitnum", machine.UnitNumber)
+                cmd.Parameters.AddWithValue("@cap", CInt(machine.Capacity.Replace(" kg", "")))
+                cmd.Parameters.AddWithValue("@status", machine.Status)
+                cmd.ExecuteNonQuery()
+            End Using
+
+            ' Get the last inserted ID
+            Dim idCmd As New OleDbCommand("SELECT @@IDENTITY", conn)
+            newID = Convert.ToInt32(idCmd.ExecuteScalar())
+        End Using
+        Return newID
+    End Function
+
 
 End Class
