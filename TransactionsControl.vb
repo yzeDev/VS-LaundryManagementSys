@@ -221,7 +221,7 @@ Public Class TransactionsControl
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim popup As New Transaction_Form()
+        Dim popup As New TransactionOption()
         popup.ShowDialog() ' Shows it as a modal popup
     End Sub
 End Class
