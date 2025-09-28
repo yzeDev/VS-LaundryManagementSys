@@ -75,4 +75,12 @@
         UpdateFinishButton()
     End Sub
 
+    Private Sub btnFinish_Click(sender As Object, e As EventArgs) Handles btnFinish.Click
+        InvoiceForm.tbCustomerName.Text = txtboxCustomer.Text
+        InvoiceForm.tbContactNumber.Text = txtboxContact.Text
+        InvoiceForm.tbAddress.Text = txtboxAddress.Text
+        InvoiceForm.Show()
+        Me.Hide()
+
+    End Sub
 End Class

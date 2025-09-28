@@ -35,11 +35,11 @@ Partial Class TransactionOption
         ' 
         lblLaundryText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
         lblLaundryText.Dock = DockStyle.Top
-        lblLaundryText.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblLaundryText.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblLaundryText.ForeColor = Color.White
         lblLaundryText.Location = New Point(0, 0)
         lblLaundryText.Name = "lblLaundryText"
-        lblLaundryText.Size = New Size(372, 56)
+        lblLaundryText.Size = New Size(372, 37)
         lblLaundryText.TabIndex = 1
         lblLaundryText.Text = "Laundry Management System"
         lblLaundryText.TextAlign = ContentAlignment.MiddleCenter
@@ -48,7 +48,7 @@ Partial Class TransactionOption
         ' 
         lblTransactionFormText.Dock = DockStyle.Top
         lblTransactionFormText.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTransactionFormText.Location = New Point(0, 56)
+        lblTransactionFormText.Location = New Point(0, 37)
         lblTransactionFormText.Name = "lblTransactionFormText"
         lblTransactionFormText.Size = New Size(372, 89)
         lblTransactionFormText.TabIndex = 2
@@ -63,13 +63,13 @@ Partial Class TransactionOption
         TableLayoutPanel1.Controls.Add(btnDryCleaning, 0, 1)
         TableLayoutPanel1.Controls.Add(btnFullSelfServiceText, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
-        TableLayoutPanel1.Location = New Point(0, 145)
+        TableLayoutPanel1.Location = New Point(0, 126)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 3
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 67F))
-        TableLayoutPanel1.Size = New Size(372, 376)
+        TableLayoutPanel1.Size = New Size(372, 395)
         TableLayoutPanel1.TabIndex = 3
         ' 
         ' btnCancelOrder
@@ -78,7 +78,7 @@ Partial Class TransactionOption
         btnCancelOrder.BackColor = Color.FromArgb(CByte(255), CByte(87), CByte(87))
         btnCancelOrder.FlatStyle = FlatStyle.Flat
         btnCancelOrder.ForeColor = Color.White
-        btnCancelOrder.Location = New Point(3, 330)
+        btnCancelOrder.Location = New Point(3, 349)
         btnCancelOrder.Name = "btnCancelOrder"
         btnCancelOrder.Size = New Size(114, 43)
         btnCancelOrder.TabIndex = 13
@@ -90,10 +90,11 @@ Partial Class TransactionOption
         btnDryCleaning.Anchor = AnchorStyles.None
         btnDryCleaning.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
         btnDryCleaning.FlatStyle = FlatStyle.Flat
+        btnDryCleaning.Font = New Font("Microsoft Sans Serif", 15.75F)
         btnDryCleaning.ForeColor = Color.White
-        btnDryCleaning.Location = New Point(113, 191)
+        btnDryCleaning.Location = New Point(56, 206)
         btnDryCleaning.Name = "btnDryCleaning"
-        btnDryCleaning.Size = New Size(146, 79)
+        btnDryCleaning.Size = New Size(259, 79)
         btnDryCleaning.TabIndex = 12
         btnDryCleaning.Text = "Dry Cleaning"
         btnDryCleaning.UseVisualStyleBackColor = False
@@ -103,10 +104,11 @@ Partial Class TransactionOption
         btnFullSelfServiceText.Anchor = AnchorStyles.None
         btnFullSelfServiceText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
         btnFullSelfServiceText.FlatStyle = FlatStyle.Flat
+        btnFullSelfServiceText.Font = New Font("Microsoft Sans Serif", 15.75F)
         btnFullSelfServiceText.ForeColor = Color.White
-        btnFullSelfServiceText.Location = New Point(113, 37)
+        btnFullSelfServiceText.Location = New Point(56, 42)
         btnFullSelfServiceText.Name = "btnFullSelfServiceText"
-        btnFullSelfServiceText.Size = New Size(146, 79)
+        btnFullSelfServiceText.Size = New Size(259, 79)
         btnFullSelfServiceText.TabIndex = 11
         btnFullSelfServiceText.Text = "Full-Service/Self-Service"
         btnFullSelfServiceText.UseVisualStyleBackColor = False

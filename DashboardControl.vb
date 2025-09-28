@@ -99,4 +99,8 @@ Public Class DashboardControl
         TransactionOption.Show()
         Me.Hide()
     End Sub
+
+    Private Sub lblPendingOrderText_Click(sender As Object, e As EventArgs) Handles lblPendingOrderText.Click
+
+    End Sub
 End Class

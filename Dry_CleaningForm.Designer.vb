@@ -49,11 +49,11 @@ Partial Class Dry_CleaningForm
         ' 
         lblLaundryText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
         lblLaundryText.Dock = DockStyle.Top
-        lblLaundryText.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblLaundryText.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblLaundryText.ForeColor = Color.White
         lblLaundryText.Location = New Point(0, 0)
         lblLaundryText.Name = "lblLaundryText"
-        lblLaundryText.Size = New Size(473, 56)
+        lblLaundryText.Size = New Size(473, 37)
         lblLaundryText.TabIndex = 1
         lblLaundryText.Text = "Laundry Management System"
         lblLaundryText.TextAlign = ContentAlignment.MiddleCenter
@@ -62,7 +62,7 @@ Partial Class Dry_CleaningForm
         ' 
         lblDryCleaningForm.Dock = DockStyle.Top
         lblDryCleaningForm.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDryCleaningForm.Location = New Point(0, 56)
+        lblDryCleaningForm.Location = New Point(0, 37)
         lblDryCleaningForm.Name = "lblDryCleaningForm"
         lblDryCleaningForm.Size = New Size(473, 89)
         lblDryCleaningForm.TabIndex = 2
@@ -76,12 +76,12 @@ Partial Class Dry_CleaningForm
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
-        TableLayoutPanel1.Location = New Point(0, 145)
+        TableLayoutPanel1.Location = New Point(0, 126)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 65.4784241F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 34.5215759F))
-        TableLayoutPanel1.Size = New Size(473, 533)
+        TableLayoutPanel1.Size = New Size(473, 552)
         TableLayoutPanel1.TabIndex = 3
         ' 
         ' TableLayoutPanel2
@@ -110,14 +110,14 @@ Partial Class Dry_CleaningForm
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 18.6770439F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.68288F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.68288F))
-        TableLayoutPanel2.Size = New Size(467, 343)
+        TableLayoutPanel2.Size = New Size(467, 355)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' txtboxQuantity
         ' 
         txtboxQuantity.Anchor = AnchorStyles.Left
         txtboxQuantity.Font = New Font("Segoe UI", 18.0F)
-        txtboxQuantity.Location = New Point(196, 176)
+        txtboxQuantity.Location = New Point(196, 182)
         txtboxQuantity.Name = "txtboxQuantity"
         txtboxQuantity.Size = New Size(219, 39)
         txtboxQuantity.TabIndex = 18
@@ -126,7 +126,7 @@ Partial Class Dry_CleaningForm
         ' 
         txtboxAddress.Anchor = AnchorStyles.Left
         txtboxAddress.Font = New Font("Segoe UI", 18.0F)
-        txtboxAddress.Location = New Point(196, 294)
+        txtboxAddress.Location = New Point(196, 305)
         txtboxAddress.Name = "txtboxAddress"
         txtboxAddress.Size = New Size(268, 39)
         txtboxAddress.TabIndex = 17
@@ -135,7 +135,7 @@ Partial Class Dry_CleaningForm
         ' 
         txtboxContact.Anchor = AnchorStyles.Left
         txtboxContact.Font = New Font("Segoe UI", 18.0F)
-        txtboxContact.Location = New Point(196, 66)
+        txtboxContact.Location = New Point(196, 69)
         txtboxContact.Name = "txtboxContact"
         txtboxContact.Size = New Size(219, 39)
         txtboxContact.TabIndex = 13
@@ -145,7 +145,7 @@ Partial Class Dry_CleaningForm
         lblAddress.Anchor = AnchorStyles.Right
         lblAddress.AutoSize = True
         lblAddress.Font = New Font("Segoe UI", 11.25F)
-        lblAddress.Location = New Point(125, 304)
+        lblAddress.Location = New Point(125, 314)
         lblAddress.Name = "lblAddress"
         lblAddress.Size = New Size(65, 20)
         lblAddress.TabIndex = 10
@@ -156,7 +156,7 @@ Partial Class Dry_CleaningForm
         lblQuantityText.Anchor = AnchorStyles.Right
         lblQuantityText.AutoSize = True
         lblQuantityText.Font = New Font("Segoe UI", 11.25F)
-        lblQuantityText.Location = New Point(122, 186)
+        lblQuantityText.Location = New Point(122, 192)
         lblQuantityText.Name = "lblQuantityText"
         lblQuantityText.Size = New Size(68, 20)
         lblQuantityText.TabIndex = 6
@@ -167,7 +167,7 @@ Partial Class Dry_CleaningForm
         lblClothesSizeText.Anchor = AnchorStyles.Right
         lblClothesSizeText.AutoSize = True
         lblClothesSizeText.Font = New Font("Segoe UI", 11.25F)
-        lblClothesSizeText.Location = New Point(98, 129)
+        lblClothesSizeText.Location = New Point(98, 133)
         lblClothesSizeText.Name = "lblClothesSizeText"
         lblClothesSizeText.Size = New Size(92, 20)
         lblClothesSizeText.TabIndex = 4
@@ -178,7 +178,7 @@ Partial Class Dry_CleaningForm
         lblContactNumberText.Anchor = AnchorStyles.Right
         lblContactNumberText.AutoSize = True
         lblContactNumberText.Font = New Font("Segoe UI", 11.25F)
-        lblContactNumberText.Location = New Point(69, 75)
+        lblContactNumberText.Location = New Point(69, 78)
         lblContactNumberText.Name = "lblContactNumberText"
         lblContactNumberText.Size = New Size(121, 20)
         lblContactNumberText.TabIndex = 2
@@ -189,7 +189,7 @@ Partial Class Dry_CleaningForm
         lblCustomerNameText.Anchor = AnchorStyles.Right
         lblCustomerNameText.AutoSize = True
         lblCustomerNameText.Font = New Font("Segoe UI", 11.25F)
-        lblCustomerNameText.Location = New Point(71, 18)
+        lblCustomerNameText.Location = New Point(71, 19)
         lblCustomerNameText.Name = "lblCustomerNameText"
         lblCustomerNameText.Size = New Size(119, 20)
         lblCustomerNameText.TabIndex = 0
@@ -199,7 +199,7 @@ Partial Class Dry_CleaningForm
         ' 
         txtboxCustomer.Anchor = AnchorStyles.Left
         txtboxCustomer.Font = New Font("Segoe UI", 18.0F)
-        txtboxCustomer.Location = New Point(196, 9)
+        txtboxCustomer.Location = New Point(196, 10)
         txtboxCustomer.Name = "txtboxCustomer"
         txtboxCustomer.Size = New Size(219, 39)
         txtboxCustomer.TabIndex = 12
@@ -209,7 +209,7 @@ Partial Class Dry_CleaningForm
         CheckBoxDelivery.Anchor = AnchorStyles.Left
         CheckBoxDelivery.AutoSize = True
         CheckBoxDelivery.Font = New Font("Segoe UI", 11.25F)
-        CheckBoxDelivery.Location = New Point(196, 244)
+        CheckBoxDelivery.Location = New Point(196, 252)
         CheckBoxDelivery.Name = "CheckBoxDelivery"
         CheckBoxDelivery.Size = New Size(161, 24)
         CheckBoxDelivery.TabIndex = 11
@@ -222,7 +222,7 @@ Partial Class Dry_CleaningForm
         ComboBox1.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Small", "Medium ", "Large"})
-        ComboBox1.Location = New Point(196, 117)
+        ComboBox1.Location = New Point(196, 121)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(219, 38)
         ComboBox1.TabIndex = 15
@@ -235,11 +235,11 @@ Partial Class Dry_CleaningForm
         TableLayoutPanel3.Controls.Add(btnFinish, 1, 0)
         TableLayoutPanel3.Controls.Add(btnCancel, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
-        TableLayoutPanel3.Location = New Point(3, 352)
+        TableLayoutPanel3.Location = New Point(3, 364)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 1
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel3.Size = New Size(467, 178)
+        TableLayoutPanel3.Size = New Size(467, 185)
         TableLayoutPanel3.TabIndex = 1
         ' 
         ' btnFinish
@@ -248,7 +248,7 @@ Partial Class Dry_CleaningForm
         btnFinish.BackColor = Color.FromArgb(CByte(57), CByte(134), CByte(90))
         btnFinish.FlatStyle = FlatStyle.Flat
         btnFinish.ForeColor = Color.White
-        btnFinish.Location = New Point(277, 49)
+        btnFinish.Location = New Point(277, 53)
         btnFinish.Name = "btnFinish"
         btnFinish.Size = New Size(146, 79)
         btnFinish.TabIndex = 10
@@ -261,7 +261,7 @@ Partial Class Dry_CleaningForm
         btnCancel.BackColor = Color.FromArgb(CByte(134), CByte(57), CByte(57))
         btnCancel.FlatStyle = FlatStyle.Flat
         btnCancel.ForeColor = Color.White
-        btnCancel.Location = New Point(43, 49)
+        btnCancel.Location = New Point(43, 53)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(146, 79)
         btnCancel.TabIndex = 9

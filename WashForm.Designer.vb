@@ -22,7 +22,6 @@ Partial Class WashForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        lblLaundryText = New Label()
         lblTransactionFormText = New Label()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -42,6 +41,7 @@ Partial Class WashForm
         TableLayoutPanel3 = New TableLayoutPanel()
         btnFinish = New Button()
         btnCancel = New Button()
+        lblLaundryText = New Label()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         Panel1.SuspendLayout()
@@ -49,24 +49,11 @@ Partial Class WashForm
         TableLayoutPanel3.SuspendLayout()
         SuspendLayout()
         ' 
-        ' lblLaundryText
-        ' 
-        lblLaundryText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
-        lblLaundryText.Dock = DockStyle.Top
-        lblLaundryText.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblLaundryText.ForeColor = Color.White
-        lblLaundryText.Location = New Point(0, 0)
-        lblLaundryText.Name = "lblLaundryText"
-        lblLaundryText.Size = New Size(473, 56)
-        lblLaundryText.TabIndex = 0
-        lblLaundryText.Text = "Laundry Management System"
-        lblLaundryText.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' lblTransactionFormText
         ' 
         lblTransactionFormText.Dock = DockStyle.Top
         lblTransactionFormText.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTransactionFormText.Location = New Point(0, 56)
+        lblTransactionFormText.Location = New Point(0, 37)
         lblTransactionFormText.Name = "lblTransactionFormText"
         lblTransactionFormText.Size = New Size(473, 89)
         lblTransactionFormText.TabIndex = 1
@@ -80,12 +67,13 @@ Partial Class WashForm
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
-        TableLayoutPanel1.Location = New Point(0, 145)
+        TableLayoutPanel1.Location = New Point(0, 126)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 64.72796F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 35.2720451F))
-        TableLayoutPanel1.Size = New Size(473, 533)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.Size = New Size(473, 552)
         TableLayoutPanel1.TabIndex = 2
         ' 
         ' TableLayoutPanel2
@@ -114,14 +102,14 @@ Partial Class WashForm
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
-        TableLayoutPanel2.Size = New Size(467, 339)
+        TableLayoutPanel2.Size = New Size(467, 351)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' txtboxAddress
         ' 
         txtboxAddress.Anchor = AnchorStyles.Left
         txtboxAddress.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtboxAddress.Location = New Point(196, 290)
+        txtboxAddress.Location = New Point(196, 301)
         txtboxAddress.Name = "txtboxAddress"
         txtboxAddress.Size = New Size(268, 39)
         txtboxAddress.TabIndex = 7
@@ -132,7 +120,7 @@ Partial Class WashForm
         lblkgText.AutoSize = True
         lblkgText.Font = New Font("Segoe UI", 11.25F)
         lblkgText.ImageAlign = ContentAlignment.BottomCenter
-        lblkgText.Location = New Point(160, 74)
+        lblkgText.Location = New Point(160, 77)
         lblkgText.Name = "lblkgText"
         lblkgText.Size = New Size(30, 20)
         lblkgText.TabIndex = 2
@@ -145,7 +133,7 @@ Partial Class WashForm
         lblServiceTypeText.AutoSize = True
         lblServiceTypeText.Font = New Font("Segoe UI", 11.25F)
         lblServiceTypeText.ImageAlign = ContentAlignment.BottomCenter
-        lblServiceTypeText.Location = New Point(96, 130)
+        lblServiceTypeText.Location = New Point(96, 135)
         lblServiceTypeText.Name = "lblServiceTypeText"
         lblServiceTypeText.Size = New Size(94, 20)
         lblServiceTypeText.TabIndex = 0
@@ -157,7 +145,7 @@ Partial Class WashForm
         lblAddressText.Anchor = AnchorStyles.Right
         lblAddressText.AutoSize = True
         lblAddressText.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblAddressText.Location = New Point(121, 299)
+        lblAddressText.Location = New Point(121, 310)
         lblAddressText.Name = "lblAddressText"
         lblAddressText.Size = New Size(69, 20)
         lblAddressText.TabIndex = 0
@@ -167,7 +155,7 @@ Partial Class WashForm
         ' 
         txtboxKG.Anchor = AnchorStyles.Left
         txtboxKG.Font = New Font("Segoe UI", 18F)
-        txtboxKG.Location = New Point(196, 64)
+        txtboxKG.Location = New Point(196, 67)
         txtboxKG.Name = "txtboxKG"
         txtboxKG.Size = New Size(219, 39)
         txtboxKG.TabIndex = 2
@@ -178,7 +166,7 @@ Partial Class WashForm
         lblContactText.AutoSize = True
         lblContactText.Font = New Font("Segoe UI", 11.25F)
         lblContactText.ImageAlign = ContentAlignment.BottomCenter
-        lblContactText.Location = New Point(69, 186)
+        lblContactText.Location = New Point(69, 193)
         lblContactText.Name = "lblContactText"
         lblContactText.Size = New Size(121, 20)
         lblContactText.TabIndex = 8
@@ -189,7 +177,7 @@ Partial Class WashForm
         ' 
         txtboxContact.Anchor = AnchorStyles.Left
         txtboxContact.Font = New Font("Segoe UI", 18F)
-        txtboxContact.Location = New Point(196, 176)
+        txtboxContact.Location = New Point(196, 183)
         txtboxContact.Name = "txtboxContact"
         txtboxContact.Size = New Size(219, 39)
         txtboxContact.TabIndex = 4
@@ -200,7 +188,7 @@ Partial Class WashForm
         lblCustomerNameText.AutoSize = True
         lblCustomerNameText.Font = New Font("Segoe UI", 11.25F)
         lblCustomerNameText.ImageAlign = ContentAlignment.BottomCenter
-        lblCustomerNameText.Location = New Point(71, 18)
+        lblCustomerNameText.Location = New Point(71, 19)
         lblCustomerNameText.Name = "lblCustomerNameText"
         lblCustomerNameText.Size = New Size(119, 20)
         lblCustomerNameText.TabIndex = 6
@@ -211,7 +199,7 @@ Partial Class WashForm
         ' 
         txtboxCustomerName.Anchor = AnchorStyles.Left
         txtboxCustomerName.Font = New Font("Segoe UI", 18F)
-        txtboxCustomerName.Location = New Point(196, 8)
+        txtboxCustomerName.Location = New Point(196, 9)
         txtboxCustomerName.Name = "txtboxCustomerName"
         txtboxCustomerName.Size = New Size(219, 39)
         txtboxCustomerName.TabIndex = 1
@@ -222,7 +210,7 @@ Partial Class WashForm
         cmbServiceType.DropDownStyle = ComboBoxStyle.DropDownList
         cmbServiceType.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbServiceType.FormattingEnabled = True
-        cmbServiceType.Location = New Point(196, 120)
+        cmbServiceType.Location = New Point(196, 125)
         cmbServiceType.Name = "cmbServiceType"
         cmbServiceType.Size = New Size(219, 40)
         cmbServiceType.TabIndex = 3
@@ -232,9 +220,9 @@ Partial Class WashForm
         TableLayoutPanel2.SetColumnSpan(Panel1, 2)
         Panel1.Controls.Add(TableLayoutPanel4)
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(3, 227)
+        Panel1.Location = New Point(3, 235)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(461, 50)
+        Panel1.Size = New Size(461, 52)
         Panel1.TabIndex = 15
         ' 
         ' TableLayoutPanel4
@@ -249,7 +237,7 @@ Partial Class WashForm
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Size = New Size(461, 50)
+        TableLayoutPanel4.Size = New Size(461, 52)
         TableLayoutPanel4.TabIndex = 0
         ' 
         ' CheckBoxDelivery
@@ -257,7 +245,7 @@ Partial Class WashForm
         CheckBoxDelivery.Anchor = AnchorStyles.Left
         CheckBoxDelivery.AutoSize = True
         CheckBoxDelivery.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        CheckBoxDelivery.Location = New Point(194, 14)
+        CheckBoxDelivery.Location = New Point(194, 15)
         CheckBoxDelivery.Name = "CheckBoxDelivery"
         CheckBoxDelivery.Size = New Size(158, 21)
         CheckBoxDelivery.TabIndex = 5
@@ -273,11 +261,11 @@ Partial Class WashForm
         TableLayoutPanel3.Controls.Add(btnFinish, 1, 0)
         TableLayoutPanel3.Controls.Add(btnCancel, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
-        TableLayoutPanel3.Location = New Point(3, 348)
+        TableLayoutPanel3.Location = New Point(3, 360)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 1
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Size = New Size(467, 182)
+        TableLayoutPanel3.Size = New Size(467, 189)
         TableLayoutPanel3.TabIndex = 1
         ' 
         ' btnFinish
@@ -286,7 +274,7 @@ Partial Class WashForm
         btnFinish.BackColor = Color.FromArgb(CByte(57), CByte(134), CByte(90))
         btnFinish.FlatStyle = FlatStyle.Flat
         btnFinish.ForeColor = Color.White
-        btnFinish.Location = New Point(277, 51)
+        btnFinish.Location = New Point(277, 55)
         btnFinish.Name = "btnFinish"
         btnFinish.Size = New Size(146, 79)
         btnFinish.TabIndex = 9
@@ -299,12 +287,25 @@ Partial Class WashForm
         btnCancel.BackColor = Color.FromArgb(CByte(134), CByte(57), CByte(57))
         btnCancel.FlatStyle = FlatStyle.Flat
         btnCancel.ForeColor = Color.White
-        btnCancel.Location = New Point(38, 51)
+        btnCancel.Location = New Point(38, 55)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(156, 79)
         btnCancel.TabIndex = 8
         btnCancel.Text = "Cancel Order"
         btnCancel.UseVisualStyleBackColor = False
+        ' 
+        ' lblLaundryText
+        ' 
+        lblLaundryText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
+        lblLaundryText.Dock = DockStyle.Top
+        lblLaundryText.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblLaundryText.ForeColor = Color.White
+        lblLaundryText.Location = New Point(0, 0)
+        lblLaundryText.Name = "lblLaundryText"
+        lblLaundryText.Size = New Size(473, 37)
+        lblLaundryText.TabIndex = 0
+        lblLaundryText.Text = "Laundry Management System"
+        lblLaundryText.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' WashForm
         ' 
@@ -327,8 +328,6 @@ Partial Class WashForm
         TableLayoutPanel3.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents lblLaundryText As Label
     Friend WithEvents lblTransactionFormText As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
@@ -350,4 +349,5 @@ Partial Class WashForm
     Friend WithEvents txtboxAddress As TextBox
     Friend WithEvents CheckBoxDelivery As CheckBox
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents lblLaundryText As Label
 End Class
