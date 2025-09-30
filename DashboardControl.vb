@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Transactions
 Public Class DashboardControl
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadOrderCounts()
@@ -49,7 +50,7 @@ Public Class DashboardControl
     End Sub
 
     Private Sub LoadMachineCounts()
-        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\laundryfiles\Resources\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connStr)
             Try
@@ -92,5 +93,14 @@ Public Class DashboardControl
     Private Sub btnReloadDashboard_Click(sender As Object, e As EventArgs) Handles btnReloadDashboard.Click
         LoadOrderCounts()
         LoadMachineCounts()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        TransactionOption.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub lblPendingOrderText_Click(sender As Object, e As EventArgs) Handles lblPendingOrderText.Click
+
     End Sub
 End Class
