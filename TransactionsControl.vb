@@ -33,7 +33,7 @@ Public Class TransactionsControl
     End Sub
 
     Private Sub LoadTransactions()
-        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connStr)
             Try
@@ -61,7 +61,6 @@ Public Class TransactionsControl
                     col.SortMode = DataGridViewColumnSortMode.NotSortable
                 Next
 
-
                 ' ---------------------
                 ' Populate cmbStatus with distinct status values (and "All")
                 ' ---------------------
@@ -79,10 +78,8 @@ Public Class TransactionsControl
                     ' ignore if column missing or type mismatch
                 End Try
                 cmbStatus.SelectedIndex = 0
-
                 ' Apply any filters that may already be set in UI
                 ApplyFilters()
-
             Catch ex As Exception
                 MessageBox.Show("Error loading transactions: " & ex.Message)
             End Try

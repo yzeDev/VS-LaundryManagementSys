@@ -22,8 +22,15 @@ Partial Class StatsControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        SuspendLayout()
+        ' 
+        ' StatsControl
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        Name = "StatsControl"
+        Size = New Size(615, 546)
+        ResumeLayout(False)
     End Sub
 
 End Class
