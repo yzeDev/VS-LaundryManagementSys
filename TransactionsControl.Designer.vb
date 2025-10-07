@@ -31,8 +31,11 @@ Partial Class TransactionsControl
         btnAdd = New Button()
         lblOrderListText = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
-        Label2 = New Label()
+        Panel1 = New Panel()
+        Panel2 = New Panel()
         Label3 = New Label()
+        Label2 = New Label()
+        Panel3 = New Panel()
         cmbStatus = New ComboBox()
         tbSearch = New TextBox()
         flpTransactions = New FlowLayoutPanel()
@@ -40,6 +43,8 @@ Partial Class TransactionsControl
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
+        Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -165,10 +170,9 @@ Partial Class TransactionsControl
         TableLayoutPanel4.ColumnCount = 2
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
-        TableLayoutPanel4.Controls.Add(Label2, 0, 0)
-        TableLayoutPanel4.Controls.Add(Label3, 0, 1)
-        TableLayoutPanel4.Controls.Add(cmbStatus, 1, 0)
-        TableLayoutPanel4.Controls.Add(tbSearch, 1, 1)
+        TableLayoutPanel4.Controls.Add(Panel1, 0, 0)
+        TableLayoutPanel4.Controls.Add(Panel2, 0, 1)
+        TableLayoutPanel4.Controls.Add(Panel3, 1, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(829, 5)
         TableLayoutPanel4.Margin = New Padding(4, 5, 4, 5)
@@ -176,54 +180,86 @@ Partial Class TransactionsControl
         TableLayoutPanel4.RowCount = 2
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 34F))
         TableLayoutPanel4.Size = New Size(453, 189)
         TableLayoutPanel4.TabIndex = 3
         ' 
-        ' Label2
+        ' Panel1
         ' 
-        Label2.AutoSize = True
-        Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
-        Label2.Location = New Point(4, 0)
-        Label2.Margin = New Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(127, 94)
-        Label2.TabIndex = 0
-        Label2.Text = "Status:"
-        Label2.TextAlign = ContentAlignment.BottomCenter
+        Panel1.AutoSize = True
+        Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        TableLayoutPanel4.SetColumnSpan(Panel1, 2)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(3, 3)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(447, 88)
+        Panel1.TabIndex = 6
+        ' 
+        ' Panel2
+        ' 
+        Panel2.AutoSize = True
+        Panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Panel2.Controls.Add(Label3)
+        Panel2.Controls.Add(Label2)
+        Panel2.Dock = DockStyle.Fill
+        Panel2.Location = New Point(3, 97)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(129, 89)
+        Panel2.TabIndex = 7
         ' 
         ' Label3
         ' 
-        Label3.AutoSize = True
-        Label3.Dock = DockStyle.Fill
+        Label3.Dock = DockStyle.Bottom
         Label3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
-        Label3.Location = New Point(4, 94)
+        Label3.Location = New Point(0, 61)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(127, 95)
+        Label3.Size = New Size(129, 28)
         Label3.TabIndex = 1
         Label3.Text = "Search:"
         Label3.TextAlign = ContentAlignment.TopCenter
         ' 
+        ' Label2
+        ' 
+        Label2.Dock = DockStyle.Top
+        Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
+        Label2.Location = New Point(0, 0)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(129, 28)
+        Label2.TabIndex = 0
+        Label2.Text = "Status:"
+        Label2.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' Panel3
+        ' 
+        Panel3.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Panel3.Controls.Add(cmbStatus)
+        Panel3.Controls.Add(tbSearch)
+        Panel3.Dock = DockStyle.Fill
+        Panel3.Location = New Point(138, 97)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(312, 89)
+        Panel3.TabIndex = 8
+        ' 
         ' cmbStatus
         ' 
-        cmbStatus.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        cmbStatus.Dock = DockStyle.Top
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.FormattingEnabled = True
         cmbStatus.Items.AddRange(New Object() {"", "Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
-        cmbStatus.Location = New Point(139, 56)
+        cmbStatus.Location = New Point(0, 0)
         cmbStatus.Margin = New Padding(4, 5, 4, 5)
         cmbStatus.Name = "cmbStatus"
-        cmbStatus.Size = New Size(306, 33)
+        cmbStatus.Size = New Size(312, 33)
         cmbStatus.TabIndex = 3
         ' 
         ' tbSearch
         ' 
-        tbSearch.Location = New Point(139, 99)
+        tbSearch.Dock = DockStyle.Bottom
+        tbSearch.Location = New Point(0, 58)
         tbSearch.Margin = New Padding(4, 5, 4, 5)
         tbSearch.Name = "tbSearch"
-        tbSearch.Size = New Size(306, 31)
+        tbSearch.Size = New Size(312, 31)
         tbSearch.TabIndex = 5
         ' 
         ' flpTransactions
@@ -254,6 +290,9 @@ Partial Class TransactionsControl
         TableLayoutPanel3.PerformLayout()
         TableLayoutPanel4.ResumeLayout(False)
         TableLayoutPanel4.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -266,10 +305,13 @@ Partial Class TransactionsControl
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents cmbStatus As ComboBox
     Friend WithEvents tbSearch As TextBox
     Friend WithEvents chkAllDates As CheckBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents flpTransactions As FlowLayoutPanel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
 
 End Class
