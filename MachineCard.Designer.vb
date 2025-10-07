@@ -83,8 +83,8 @@ Partial Class MachineCard
         lblWeightText.Name = "lblWeightText"
         lblWeightText.Size = New Size(170, 54)
         lblWeightText.TabIndex = 2
-        lblWeightText.Text = "Max Weight Capacity:"
-        lblWeightText.TextAlign = ContentAlignment.TopCenter
+        lblWeightText.Text = "Max W. Capacity:"
+        lblWeightText.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblUnit
         ' 
@@ -147,7 +147,7 @@ Partial Class MachineCard
         lblTransactionID.Size = New Size(349, 52)
         lblTransactionID.TabIndex = 8
         lblTransactionID.Text = "Transaction ID:"
-        lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
+        lblTransactionID.TextAlign = ContentAlignment.TopCenter
         ' 
         ' lblStatus
         ' 

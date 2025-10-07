@@ -28,19 +28,17 @@ Partial Class TransactionsControl
         Label1 = New Label()
         dtpDateFilter = New DateTimePicker()
         chkAllDates = New CheckBox()
-        btnReloadData = New Button()
         btnAdd = New Button()
-        dgvTransactionsData = New DataGridView()
         lblOrderListText = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
         Label2 = New Label()
         Label3 = New Label()
         cmbStatus = New ComboBox()
         tbSearch = New TextBox()
+        flpTransactions = New FlowLayoutPanel()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
-        CType(dgvTransactionsData, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel4.SuspendLayout()
         SuspendLayout()
         ' 
@@ -51,18 +49,18 @@ Partial Class TransactionsControl
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.8085823F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.8085823F))
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
-        TableLayoutPanel1.Controls.Add(dgvTransactionsData, 0, 1)
         TableLayoutPanel1.Controls.Add(lblOrderListText, 1, 0)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel4, 2, 0)
+        TableLayoutPanel1.Controls.Add(flpTransactions, 0, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(3, 4, 3, 4)
+        TableLayoutPanel1.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 3
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.9245586F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 38.03772F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 38.03772F))
-        TableLayoutPanel1.Size = New Size(1029, 667)
+        TableLayoutPanel1.Size = New Size(1286, 834)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' TableLayoutPanel2
@@ -71,16 +69,15 @@ Partial Class TransactionsControl
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
         TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 0, 1)
-        TableLayoutPanel2.Controls.Add(btnReloadData, 1, 0)
         TableLayoutPanel2.Controls.Add(btnAdd, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
-        TableLayoutPanel2.Location = New Point(3, 4)
-        TableLayoutPanel2.Margin = New Padding(3, 4, 3, 4)
+        TableLayoutPanel2.Location = New Point(4, 5)
+        TableLayoutPanel2.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
-        TableLayoutPanel2.Size = New Size(286, 151)
+        TableLayoutPanel2.Size = New Size(357, 189)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' TableLayoutPanel3
@@ -93,13 +90,13 @@ Partial Class TransactionsControl
         TableLayoutPanel3.Controls.Add(dtpDateFilter, 0, 1)
         TableLayoutPanel3.Controls.Add(chkAllDates, 1, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
-        TableLayoutPanel3.Location = New Point(3, 64)
-        TableLayoutPanel3.Margin = New Padding(3, 4, 3, 4)
+        TableLayoutPanel3.Location = New Point(4, 80)
+        TableLayoutPanel3.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Size = New Size(280, 83)
+        TableLayoutPanel3.Size = New Size(349, 104)
         TableLayoutPanel3.TabIndex = 1
         ' 
         ' Label1
@@ -107,9 +104,10 @@ Partial Class TransactionsControl
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
         Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(3, 0)
+        Label1.Location = New Point(4, 0)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(134, 41)
+        Label1.Size = New Size(166, 52)
         Label1.TabIndex = 0
         Label1.Text = "Date:"
         ' 
@@ -117,10 +115,10 @@ Partial Class TransactionsControl
         ' 
         TableLayoutPanel3.SetColumnSpan(dtpDateFilter, 2)
         dtpDateFilter.Dock = DockStyle.Fill
-        dtpDateFilter.Location = New Point(3, 45)
-        dtpDateFilter.Margin = New Padding(3, 4, 3, 4)
+        dtpDateFilter.Location = New Point(4, 57)
+        dtpDateFilter.Margin = New Padding(4, 5, 4, 5)
         dtpDateFilter.Name = "dtpDateFilter"
-        dtpDateFilter.Size = New Size(274, 27)
+        dtpDateFilter.Size = New Size(341, 31)
         dtpDateFilter.TabIndex = 1
         ' 
         ' chkAllDates
@@ -129,63 +127,38 @@ Partial Class TransactionsControl
         chkAllDates.Checked = True
         chkAllDates.CheckState = CheckState.Checked
         chkAllDates.Dock = DockStyle.Fill
-        chkAllDates.Location = New Point(143, 4)
-        chkAllDates.Margin = New Padding(3, 4, 3, 4)
+        chkAllDates.Location = New Point(178, 5)
+        chkAllDates.Margin = New Padding(4, 5, 4, 5)
         chkAllDates.Name = "chkAllDates"
-        chkAllDates.Size = New Size(134, 33)
+        chkAllDates.Size = New Size(167, 42)
         chkAllDates.TabIndex = 2
         chkAllDates.Text = "Show All Dates"
         chkAllDates.UseVisualStyleBackColor = True
         ' 
-        ' btnReloadData
-        ' 
-        btnReloadData.BackgroundImage = My.Resources.Resources.refresh
-        btnReloadData.BackgroundImageLayout = ImageLayout.Zoom
-        btnReloadData.Dock = DockStyle.Fill
-        btnReloadData.FlatAppearance.BorderSize = 0
-        btnReloadData.FlatStyle = FlatStyle.Flat
-        btnReloadData.Location = New Point(203, 4)
-        btnReloadData.Margin = New Padding(3, 4, 3, 4)
-        btnReloadData.Name = "btnReloadData"
-        btnReloadData.Size = New Size(80, 52)
-        btnReloadData.TabIndex = 2
-        btnReloadData.UseVisualStyleBackColor = True
-        ' 
         ' btnAdd
         ' 
+        TableLayoutPanel2.SetColumnSpan(btnAdd, 2)
         btnAdd.Dock = DockStyle.Fill
-        btnAdd.Location = New Point(3, 4)
-        btnAdd.Margin = New Padding(3, 4, 3, 4)
+        btnAdd.Location = New Point(4, 5)
+        btnAdd.Margin = New Padding(4, 5, 4, 5)
         btnAdd.Name = "btnAdd"
-        btnAdd.Size = New Size(194, 52)
+        btnAdd.Size = New Size(349, 65)
         btnAdd.TabIndex = 3
         btnAdd.Text = "Add Order"
         btnAdd.UseVisualStyleBackColor = True
-        ' 
-        ' dgvTransactionsData
-        ' 
-        dgvTransactionsData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        TableLayoutPanel1.SetColumnSpan(dgvTransactionsData, 3)
-        dgvTransactionsData.Dock = DockStyle.Fill
-        dgvTransactionsData.Location = New Point(3, 163)
-        dgvTransactionsData.Margin = New Padding(3, 4, 3, 4)
-        dgvTransactionsData.Name = "dgvTransactionsData"
-        dgvTransactionsData.RowHeadersWidth = 51
-        TableLayoutPanel1.SetRowSpan(dgvTransactionsData, 2)
-        dgvTransactionsData.Size = New Size(1023, 500)
-        dgvTransactionsData.TabIndex = 1
         ' 
         ' lblOrderListText
         ' 
         lblOrderListText.AutoSize = True
         lblOrderListText.Dock = DockStyle.Fill
         lblOrderListText.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblOrderListText.Location = New Point(295, 0)
+        lblOrderListText.Location = New Point(369, 0)
+        lblOrderListText.Margin = New Padding(4, 0, 4, 0)
         lblOrderListText.Name = "lblOrderListText"
-        lblOrderListText.Size = New Size(362, 159)
+        lblOrderListText.Size = New Size(452, 199)
         lblOrderListText.TabIndex = 2
-        lblOrderListText.Text = "ORDER LIST"
-        lblOrderListText.TextAlign = ContentAlignment.MiddleCenter
+        lblOrderListText.Text = "TRANSACTION LIST"
+        lblOrderListText.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' TableLayoutPanel4
         ' 
@@ -197,14 +170,14 @@ Partial Class TransactionsControl
         TableLayoutPanel4.Controls.Add(cmbStatus, 1, 0)
         TableLayoutPanel4.Controls.Add(tbSearch, 1, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
-        TableLayoutPanel4.Location = New Point(663, 4)
-        TableLayoutPanel4.Margin = New Padding(3, 4, 3, 4)
+        TableLayoutPanel4.Location = New Point(829, 5)
+        TableLayoutPanel4.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
-        TableLayoutPanel4.Size = New Size(363, 151)
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel4.Size = New Size(453, 189)
         TableLayoutPanel4.TabIndex = 3
         ' 
         ' Label2
@@ -212,9 +185,10 @@ Partial Class TransactionsControl
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Fill
         Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
-        Label2.Location = New Point(3, 0)
+        Label2.Location = New Point(4, 0)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(102, 75)
+        Label2.Size = New Size(127, 94)
         Label2.TabIndex = 0
         Label2.Text = "Status:"
         Label2.TextAlign = ContentAlignment.BottomCenter
@@ -224,12 +198,13 @@ Partial Class TransactionsControl
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
         Label3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
-        Label3.Location = New Point(3, 75)
+        Label3.Location = New Point(4, 94)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(102, 76)
+        Label3.Size = New Size(127, 95)
         Label3.TabIndex = 1
         Label3.Text = "Search:"
-        Label3.TextAlign = ContentAlignment.BottomCenter
+        Label3.TextAlign = ContentAlignment.TopCenter
         ' 
         ' cmbStatus
         ' 
@@ -237,35 +212,46 @@ Partial Class TransactionsControl
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.FormattingEnabled = True
         cmbStatus.Items.AddRange(New Object() {"", "Pending", "In-Progress", "To be delivered", "Ready for Pickup", "Completed"})
-        cmbStatus.Location = New Point(111, 43)
-        cmbStatus.Margin = New Padding(3, 4, 3, 4)
+        cmbStatus.Location = New Point(139, 56)
+        cmbStatus.Margin = New Padding(4, 5, 4, 5)
         cmbStatus.Name = "cmbStatus"
-        cmbStatus.Size = New Size(246, 28)
+        cmbStatus.Size = New Size(306, 33)
         cmbStatus.TabIndex = 3
         ' 
         ' tbSearch
         ' 
-        tbSearch.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        tbSearch.Location = New Point(111, 120)
-        tbSearch.Margin = New Padding(3, 4, 3, 4)
+        tbSearch.Location = New Point(139, 99)
+        tbSearch.Margin = New Padding(4, 5, 4, 5)
         tbSearch.Name = "tbSearch"
-        tbSearch.Size = New Size(246, 27)
+        tbSearch.Size = New Size(306, 31)
         tbSearch.TabIndex = 5
+        ' 
+        ' flpTransactions
+        ' 
+        flpTransactions.AutoScroll = True
+        TableLayoutPanel1.SetColumnSpan(flpTransactions, 3)
+        flpTransactions.Dock = DockStyle.Fill
+        flpTransactions.FlowDirection = FlowDirection.TopDown
+        flpTransactions.Location = New Point(3, 202)
+        flpTransactions.Name = "flpTransactions"
+        TableLayoutPanel1.SetRowSpan(flpTransactions, 2)
+        flpTransactions.Size = New Size(1280, 629)
+        flpTransactions.TabIndex = 4
+        flpTransactions.WrapContents = False
         ' 
         ' TransactionsControl
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(3, 4, 3, 4)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "TransactionsControl"
-        Size = New Size(1029, 667)
+        Size = New Size(1286, 834)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel3.ResumeLayout(False)
         TableLayoutPanel3.PerformLayout()
-        CType(dgvTransactionsData, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel4.ResumeLayout(False)
         TableLayoutPanel4.PerformLayout()
         ResumeLayout(False)
@@ -276,7 +262,6 @@ Partial Class TransactionsControl
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents dtpDateFilter As DateTimePicker
-    Friend WithEvents dgvTransactionsData As DataGridView
     Friend WithEvents lblOrderListText As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label2 As Label
@@ -284,7 +269,7 @@ Partial Class TransactionsControl
     Friend WithEvents cmbStatus As ComboBox
     Friend WithEvents tbSearch As TextBox
     Friend WithEvents chkAllDates As CheckBox
-    Friend WithEvents btnReloadData As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents flpTransactions As FlowLayoutPanel
 
 End Class

@@ -1,0 +1,172 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class TransactionRow
+    Inherits System.Windows.Forms.UserControl
+
+    'UserControl overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        lblTotal = New Label()
+        lblDate = New Label()
+        lblMachine = New Label()
+        lblStatus = New Label()
+        lblServiceType = New Label()
+        lblCustomer = New Label()
+        lblTransactionID = New Label()
+        btnView = New Button()
+        TableLayoutPanel1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' TableLayoutPanel1
+        ' 
+        TableLayoutPanel1.ColumnCount = 8
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.Controls.Add(lblTotal, 6, 0)
+        TableLayoutPanel1.Controls.Add(lblDate, 5, 0)
+        TableLayoutPanel1.Controls.Add(lblMachine, 4, 0)
+        TableLayoutPanel1.Controls.Add(lblStatus, 3, 0)
+        TableLayoutPanel1.Controls.Add(lblServiceType, 2, 0)
+        TableLayoutPanel1.Controls.Add(lblCustomer, 1, 0)
+        TableLayoutPanel1.Controls.Add(lblTransactionID, 0, 0)
+        TableLayoutPanel1.Controls.Add(btnView, 7, 0)
+        TableLayoutPanel1.Dock = DockStyle.Fill
+        TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 1
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel1.Size = New Size(863, 40)
+        TableLayoutPanel1.TabIndex = 0
+        ' 
+        ' lblTotal
+        ' 
+        lblTotal.AutoSize = True
+        lblTotal.Dock = DockStyle.Fill
+        lblTotal.Location = New Point(645, 0)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(101, 40)
+        lblTotal.TabIndex = 6
+        lblTotal.Text = "Total"
+        lblTotal.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblDate
+        ' 
+        lblDate.AutoSize = True
+        lblDate.Dock = DockStyle.Fill
+        lblDate.Location = New Point(538, 0)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(101, 40)
+        lblDate.TabIndex = 5
+        lblDate.Text = "Date"
+        lblDate.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblMachine
+        ' 
+        lblMachine.AutoSize = True
+        lblMachine.Dock = DockStyle.Fill
+        lblMachine.Location = New Point(431, 0)
+        lblMachine.Name = "lblMachine"
+        lblMachine.Size = New Size(101, 40)
+        lblMachine.TabIndex = 4
+        lblMachine.Text = "Machine"
+        lblMachine.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.AutoSize = True
+        lblStatus.Dock = DockStyle.Fill
+        lblStatus.Location = New Point(324, 0)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(101, 40)
+        lblStatus.TabIndex = 3
+        lblStatus.Text = "Status"
+        lblStatus.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblServiceType
+        ' 
+        lblServiceType.AutoSize = True
+        lblServiceType.Dock = DockStyle.Fill
+        lblServiceType.Location = New Point(217, 0)
+        lblServiceType.Name = "lblServiceType"
+        lblServiceType.Size = New Size(101, 40)
+        lblServiceType.TabIndex = 2
+        lblServiceType.Text = "Service"
+        lblServiceType.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblCustomer
+        ' 
+        lblCustomer.AutoSize = True
+        lblCustomer.Dock = DockStyle.Fill
+        lblCustomer.Location = New Point(110, 0)
+        lblCustomer.Name = "lblCustomer"
+        lblCustomer.Size = New Size(101, 40)
+        lblCustomer.TabIndex = 1
+        lblCustomer.Text = "Name"
+        lblCustomer.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblTransactionID
+        ' 
+        lblTransactionID.AutoSize = True
+        lblTransactionID.Dock = DockStyle.Fill
+        lblTransactionID.Location = New Point(3, 0)
+        lblTransactionID.Name = "lblTransactionID"
+        lblTransactionID.Size = New Size(101, 40)
+        lblTransactionID.TabIndex = 0
+        lblTransactionID.Text = "Transac"
+        lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' btnView
+        ' 
+        btnView.Location = New Point(752, 3)
+        btnView.Name = "btnView"
+        btnView.Size = New Size(108, 34)
+        btnView.TabIndex = 7
+        btnView.Text = "View"
+        btnView.UseVisualStyleBackColor = True
+        ' 
+        ' TransactionRow
+        ' 
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(TableLayoutPanel1)
+        Name = "TransactionRow"
+        Size = New Size(863, 40)
+        TableLayoutPanel1.ResumeLayout(False)
+        TableLayoutPanel1.PerformLayout()
+        ResumeLayout(False)
+    End Sub
+
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents lblTransactionID As Label
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents lblDate As Label
+    Friend WithEvents lblMachine As Label
+    Friend WithEvents lblStatus As Label
+    Friend WithEvents lblServiceType As Label
+    Friend WithEvents lblCustomer As Label
+    Friend WithEvents btnView As Button
+
+End Class

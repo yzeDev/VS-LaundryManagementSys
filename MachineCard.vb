@@ -24,7 +24,7 @@ Public Class MachineCard
             If String.IsNullOrWhiteSpace(_reason) Then
                 lblMachineIDText.Text = "Machine ID: " & _machineID.ToString()
             Else
-                lblMachineIDText.Text = $"Machine ID: {_machineID} | Reason: {_reason}"
+                lblTransactionID.Text = $"Reason: {_reason}"
             End If
         End Set
     End Property
@@ -73,10 +73,9 @@ Public Class MachineCard
                 If String.IsNullOrWhiteSpace(_reason) Then
                     lblMachineIDText.Text = "Machine ID: " & _machineID.ToString()
                 Else
-                    lblMachineIDText.Text = $"Machine ID: {_machineID} | Reason: {_reason}"
+                    lblTransactionID.Text = $"Reason: {_reason}"
                 End If
             End If
         End Set
     End Property
-
 End Class

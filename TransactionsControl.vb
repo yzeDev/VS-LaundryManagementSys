@@ -3,215 +3,134 @@ Imports System.Globalization
 
 Public Class TransactionsControl
 
-    Private dt As DataTable
-    Private dv As DataView
+    Private Sub flpTransactions_SizeChanged(sender As Object, e As EventArgs)
+        For Each ctrl As Control In flpTransactions.Controls
+            ctrl.Width = flpTransactions.ClientSize.Width - flpTransactions.Padding.Horizontal - SystemInformation.VerticalScrollBarWidth
+        Next
+    End Sub
 
+
+    ' No longer using DataGridView or DataView
     Private Sub TransactionsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadTransactions()
 
-        ' Add "View" button column if not already added
-        If dgvTransactionsData.Columns("btnView") Is Nothing Then
-            Dim btnCol As New DataGridViewButtonColumn()
-            btnCol.Name = "btnView"
-            btnCol.HeaderText = "Action"
-            btnCol.Text = "View"
-            btnCol.UseColumnTextForButtonValue = True
-            dgvTransactionsData.Columns.Add(btnCol)
-        End If
-        dgvTransactionsData.ReadOnly = True
-        dgvTransactionsData.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvTransactionsData.DefaultCellStyle.SelectionBackColor = dgvTransactionsData.DefaultCellStyle.BackColor
-        dgvTransactionsData.DefaultCellStyle.SelectionForeColor = dgvTransactionsData.DefaultCellStyle.ForeColor
-        dgvTransactionsData.RowHeadersVisible = False
-
+        ' Hook up filter handlers
         AddHandler cmbStatus.SelectedIndexChanged, AddressOf ApplyFilters
         AddHandler tbSearch.TextChanged, AddressOf ApplyFilters
         AddHandler dtpDateFilter.ValueChanged, AddressOf ApplyFilters
         AddHandler chkAllDates.CheckedChanged, AddressOf ApplyFilters
+        ' FlowLayoutPanel visual tweaks
+        flpTransactions.FlowDirection = FlowDirection.TopDown
+        flpTransactions.WrapContents = False
+        flpTransactions.AutoScroll = True
+        flpTransactions.Dock = DockStyle.Fill
 
-
+        AddHandler flpTransactions.SizeChanged, AddressOf flpTransactions_SizeChanged
     End Sub
 
+    ' -------------------------
+    ' LOAD TRANSACTIONS
+    ' -------------------------
     Private Sub LoadTransactions()
         Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
+        flpTransactions.Controls.Clear()
+        AddHeaderRow() ' Add header before rows
+
         Using conn As New OleDbConnection(connStr)
-            Try
-                conn.Open()
-
-                Dim sql As String = "SELECT TransactionID as [Transaction ID], CustomerName as [Customer Name], ServiceType as [Service Type], Status, MachineUsed as [Machine Used], TransactionDate as [Transaction Date], TotalPayment as [Total Payment] FROM Transactions"
-                Dim adapter As New OleDbDataAdapter(sql, conn)
-
-                ' Use class-level dt so ApplyFilters can use it
-                dt = New DataTable()
-                adapter.Fill(dt)
-
-                ' Wrap in DataView and bind
-                dv = New DataView(dt)
-                dgvTransactionsData.DataSource = dv
-
-                ' Formatting
-                dgvTransactionsData.ReadOnly = True
-                dgvTransactionsData.AllowUserToAddRows = False
-                dgvTransactionsData.AllowUserToDeleteRows = False
-                dgvTransactionsData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-
-                ' Disable sorting
-                For Each col As DataGridViewColumn In dgvTransactionsData.Columns
-                    col.SortMode = DataGridViewColumnSortMode.NotSortable
-                Next
-
-                ' ---------------------
-                ' Populate cmbStatus with distinct status values (and "All")
-                ' ---------------------
-                cmbStatus.Items.Clear()
-                cmbStatus.Items.Add("All")
-                Try
-                    Dim distinctStatuses = dt.AsEnumerable() _
-                    .Where(Function(r) Not IsDBNull(r("Status"))) _
-                    .Select(Function(r) r.Field(Of String)("Status")) _
-                    .Distinct().ToList()
-                    For Each s In distinctStatuses
-                        cmbStatus.Items.Add(s)
-                    Next
-                Catch
-                    ' ignore if column missing or type mismatch
-                End Try
-                cmbStatus.SelectedIndex = 0
-                ' Apply any filters that may already be set in UI
-                ApplyFilters()
-            Catch ex As Exception
-                MessageBox.Show("Error loading transactions: " & ex.Message)
-            End Try
+            conn.Open()
+            Dim sql As String = "SELECT TransactionID, CustomerName, ServiceType, Status, MachineUsed, TransactionDate, TotalPayment FROM Transactions"
+            Using cmd As New OleDbCommand(sql, conn)
+                Using reader As OleDbDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        Dim row As New TransactionRow()
+                        row.SetData(
+                            reader("TransactionID"),
+                            reader("CustomerName").ToString(),
+                            reader("ServiceType").ToString(),
+                            reader("Status").ToString(),
+                            reader("MachineUsed").ToString(),
+                            Convert.ToDateTime(reader("TransactionDate")),
+                            Convert.ToDecimal(reader("TotalPayment"))
+                        )
+                        flpTransactions.Controls.Add(row)
+                    End While
+                End Using
+            End Using
         End Using
+
+        ' Populate cmbStatus with distinct values + "All"
+        PopulateStatusFilter()
     End Sub
 
+    ' -------------------------
+    ' FILTERS
+    ' -------------------------
+    Private Sub PopulateStatusFilter()
+        cmbStatus.Items.Clear()
+        cmbStatus.Items.Add("All")
 
+        Dim statuses As New HashSet(Of String)(StringComparer.OrdinalIgnoreCase)
+        For Each ctrl As Control In flpTransactions.Controls
+            If TypeOf ctrl Is TransactionRow Then
+                Dim row As TransactionRow = DirectCast(ctrl, TransactionRow)
+                statuses.Add(row.lblStatus.Text)
+            End If
+        Next
 
-    Private Sub dgvTransactionsData_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactionsData.CellContentClick
-        If e.ColumnIndex >= 0 AndAlso dgvTransactionsData.Columns(e.ColumnIndex).Name = "btnView" AndAlso e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = dgvTransactionsData.Rows(e.RowIndex)
+        For Each s In statuses
+            cmbStatus.Items.Add(s)
+        Next
 
-            Dim transactionId As Integer = Convert.ToInt32(row.Cells("Transaction ID").Value)
-            Dim customerName As String = row.Cells("Customer Name").Value.ToString()
-            Dim serviceType As String = row.Cells("Service Type").Value.ToString()
-            Dim status As String = row.Cells("Status").Value.ToString()
-            Dim machineUsed As String = row.Cells("Machine Used").Value.ToString()
-            Dim transDate As Date = Convert.ToDateTime(row.Cells("Transaction Date").Value)
-            Dim totalPayment As Decimal = Convert.ToDecimal(row.Cells("Total Payment").Value)
-
-            Dim detailsForm As New TransactionDetailsForm(transactionId, customerName, serviceType, status, machineUsed, transDate, totalPayment)
-            detailsForm.ShowDialog()
-        End If
-    End Sub
-
-    Private Sub dgvTransactionsData_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactionsData.CellClick
-        If e.RowIndex >= 0 AndAlso dgvTransactionsData.Columns(e.ColumnIndex).Name <> "btnView" Then
-            dgvTransactionsData.ClearSelection()
-        End If
-    End Sub
-
-    Private Sub cmbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbStatus.SelectedIndexChanged
-        ApplyFilters()
-    End Sub
-
-    Private Sub tbSearch_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
-        ApplyFilters()
+        cmbStatus.SelectedIndex = 0
     End Sub
 
     Private Sub ApplyFilters()
-        If dv Is Nothing OrElse dt Is Nothing Then Return
+        For Each ctrl As Control In flpTransactions.Controls
+            If TypeOf ctrl Is TransactionRow Then
+                Dim row As TransactionRow = DirectCast(ctrl, TransactionRow)
+                Dim visible As Boolean = True
 
-        Dim filterParts As New List(Of String)()
-
-        ' --- 1) STATUS filter (exact match) ---
-        If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString().Trim() <> "" AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
-            filterParts.Add("Status = '" & cmbStatus.SelectedItem.ToString().Replace("'", "''") & "'")
-        End If
-
-
-        ' --- 2) SEARCH (either specific column or all columns) ---
-        Dim searchTextRaw As String = tbSearch.Text.Trim()
-        If searchTextRaw <> "" Then
-            Dim searchText As String = searchTextRaw.Replace("'", "''") ' escape single quotes
-
-            ' No specific column selected -> search across all
-            Dim searchParts As New List(Of String)
-            For Each col As DataColumn In dt.Columns
-                Dim colName As String = col.ColumnName
-                Dim ct As Type = col.DataType
-
-                If ct Is GetType(String) Then
-                    searchParts.Add("[" & colName & "] LIKE '%" & searchText & "%'")
-                ElseIf ct Is GetType(Integer) OrElse ct Is GetType(Long) _
-               OrElse ct Is GetType(Decimal) OrElse ct Is GetType(Double) Then
-                    If IsNumeric(searchText) Then
-                        searchParts.Add("[" & colName & "] = " & searchText)
-                    End If
-                ElseIf ct Is GetType(DateTime) Then
-                    Dim d As DateTime
-                    If DateTime.TryParse(searchTextRaw, d) Then
-                        Dim sD As Date = d.Date
-                        Dim eD As Date = sD.AddDays(1)
-                        searchParts.Add("([" & colName & "] >= #" & sD.ToString("MM/dd/yyyy") & "# AND [" & colName & "] < #" & eD.ToString("MM/dd/yyyy") & "#)")
+                ' 1. Status Filter
+                If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
+                    If Not row.lblStatus.Text.Equals(cmbStatus.SelectedItem.ToString(), StringComparison.OrdinalIgnoreCase) Then
+                        visible = False
                     End If
                 End If
-            Next
 
-            If searchParts.Count > 0 Then
-                filterParts.Add("(" & String.Join(" OR ", searchParts) & ")")
+                ' 2. Search Filter
+                Dim searchTerm As String = tbSearch.Text.Trim().ToLower()
+                If visible AndAlso searchTerm <> "" Then
+                    Dim match As Boolean =
+                        row.lblCustomer.Text.ToLower().Contains(searchTerm) _
+                        OrElse row.lblServiceType.Text.ToLower().Contains(searchTerm) _
+                        OrElse row.lblMachine.Text.ToLower().Contains(searchTerm)
+                    visible = match
+                End If
+
+                ' 3. Date Filter
+                If visible AndAlso Not chkAllDates.Checked Then
+                    Dim selectedDate As Date = dtpDateFilter.Value.Date
+                    Dim rowDate As Date = Date.Parse(row.lblDate.Text).Date
+                    visible = (rowDate = selectedDate)
+                End If
+
+                row.Visible = visible
             End If
-        End If
-
-
-        ' --- 3) DATE filter using dtpDateFilter + chkAllDates ---
-        If Not chkAllDates.Checked Then
-            Dim selectedDate As Date = dtpDateFilter.Value.Date
-            Dim nextDay As Date = selectedDate.AddDays(1)
-
-            ' Transaction Date must be >= selectedDate and < nextDay
-            filterParts.Add("[Transaction Date] >= #" & selectedDate.ToString("MM/dd/yyyy") & "# AND [Transaction Date] < #" & nextDay.ToString("MM/dd/yyyy") & "#")
-        End If
-
-
-        ' --- 4) Combine and apply ---
-        Dim combinedFilter As String = If(filterParts.Count > 0, String.Join(" AND ", filterParts), String.Empty)
-        Try
-            dv.RowFilter = combinedFilter
-        Catch ex As Exception
-            ' Show the filter for debugging and fall back to no filter
-            Debug.WriteLine("RowFilter failed: " & combinedFilter)
-            MessageBox.Show("Filter error: " & ex.Message & vbCrLf & "Filter string: " & combinedFilter)
-            dv.RowFilter = ""
-        End Try
-
-        ' Optional: sorting behavior (unchanged)
-        If cmbStatus.SelectedItem IsNot Nothing AndAlso cmbStatus.SelectedItem.ToString() <> "All" Then
-            dv.Sort = "Status ASC"
-        Else
-            dv.Sort = ""
-        End If
-
-        ' Debug output
-        Debug.WriteLine("Applied Filter: " & combinedFilter)
+        Next
     End Sub
 
-    Private Sub btnReloadData_Click(sender As Object, e As EventArgs) Handles btnReloadData.Click
+    ' -------------------------
+    ' BUTTONS
+    ' -------------------------
+    Private Sub btnReloadData_Click(sender As Object, e As EventArgs)
         Try
-            ' Reload from DB
             LoadTransactions()
-
-            ' --- Reset filters ---
-            cmbStatus.SelectedIndex = -1   ' Clear status filter
-            tbSearch.Clear()               ' Clear search box
-            dtpDateFilter.Value = Date.Today ' Reset date filter to today
-            chkAllDates.Checked = True     ' Show all dates
-
-            ' Clear DataView filter so all data shows
-            If dv IsNot Nothing Then dv.RowFilter = ""
-
+            cmbStatus.SelectedIndex = 0
+            tbSearch.Clear()
+            dtpDateFilter.Value = Date.Today
+            chkAllDates.Checked = True
             MessageBox.Show("Data reloaded and filters reset.", "Reload", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         Catch ex As Exception
             MessageBox.Show("Error while reloading data: " & ex.Message, "Reload Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -219,6 +138,38 @@ Public Class TransactionsControl
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim popup As New TransactionOption()
-        popup.ShowDialog() ' Shows it as a modal popup
+        popup.ShowDialog()
     End Sub
+
+    ' -------------------------
+    ' HEADER ROW
+    ' -------------------------
+    Private Sub AddHeaderRow()
+        Dim header As New Panel With {
+            .Height = 35,
+            .Dock = DockStyle.Top,
+            .BackColor = Color.LightGray
+        }
+
+        Dim labels = {"ID", "Customer", "Service", "Status", "Machine", "Date", "Total", "Action"}
+        Dim widths = {60, 150, 120, 100, 120, 120, 100, 80}
+        Dim x As Integer = 10
+
+        For i As Integer = 0 To labels.Length - 1
+            Dim lbl As New Label With {
+                .Text = labels(i),
+                .Font = New Font("Segoe UI", 9, FontStyle.Bold),
+                .AutoSize = False,
+                .Width = widths(i),
+                .Left = x,
+                .Top = 8,
+                .TextAlign = ContentAlignment.MiddleLeft
+            }
+            header.Controls.Add(lbl)
+            x += widths(i)
+        Next
+
+        flpTransactions.Controls.Add(header)
+    End Sub
+
 End Class
