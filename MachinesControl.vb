@@ -44,48 +44,51 @@ Public Class MachinesControl
 
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
-            Dim query As String = "SELECT ID, UnitNumber, Capacity, Status FROM UnitData ORDER BY UnitNumber"
+            Dim query As String = "SELECT ID, UnitNumber, Capacity, Status, Reason FROM UnitData ORDER BY IIF(Status='Unavailable',1,0), UnitNumber"
             Using cmd As New OleDbCommand(query, conn)
                 Using reader As OleDbDataReader = cmd.ExecuteReader()
                     While reader.Read()
                         Dim card As New MachineCard()
 
-                        ' Assign DB fields (adjust conversions if your types differ)
+                        ' ID and numeric unit number
                         card.MachineID = If(IsDBNull(reader("ID")), 0, CInt(reader("ID")))
-                        card.UnitNumber = If(IsDBNull(reader("UnitNumber")), 0, CInt(reader("UnitNumber")))
-                        ' store capacity as a number, MachineCard property can format with "kg" if you want
+                        Dim unitNum As Integer = If(IsDBNull(reader("UnitNumber")), 0, CInt(reader("UnitNumber")))
+                        card.UnitNumber = unitNum
+
+                        ' Capacity & Status
                         card.Capacity = If(IsDBNull(reader("Capacity")), "0", reader("Capacity").ToString())
                         card.Status = If(IsDBNull(reader("Status")), "Available", reader("Status").ToString())
-                        card.lblMachineIDText.Text = "Machine ID: " & card.MachineID.ToString()
 
-                        ' Set picture if you have one (use My.Resources or fallback to file)
+                        ' Reason (may be empty)
+                        Dim reason As String = If(IsDBNull(reader("Reason")), "", reader("Reason").ToString())
+                        card.Reason = reason  ' MachineCard.Reason updates lblMachineIDText
+
+                        ' Picture (keep your existing try/catch)
                         Try
-                            ' Prefer resources: My.Resources.washing_machine_icon
-                            'card.MachineImage = My.Resources.washing_machine_icon
                             card.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\washing-machine.png")
-                        Catch ex As Exception
-                            ' fallback to file (optional)
-                            Try
-                                card.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\washing-machine.png")
-                            Catch
-                                ' ignore if missing
-                            End Try
+                        Catch
+                            card.MachineImage = Nothing
                         End Try
                         card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
 
-                        ' Important: attach handler to the card and all allowed children
-                        AttachClickHandlers(card, AddressOf Machine_Click)
+                        ' If unavailable, visually mark and DO NOT attach click handlers
+                        If card.Status = "Unavailable" Then
+                            card.lblUnit.Text = "Unavailable"   ' visible text only
+                            card.BackColor = Color.LightGray
+                            ' Ensure it has no click handlers (defensive)
+                            DisableAllClicks(card)
+                        Else
+                            ' Only attach clicks for available machines
+                            AttachClickHandlers(card, AddressOf Machine_Click)
+                        End If
 
-                        ' Add to UI
                         flpMachines.Controls.Add(card)
                     End While
                 End Using
             End Using
         End Using
-
-        ' If you maintain UnitNumber in DB, no automatic renumber here.
-        ' If you want UI ordering by UnitNumber ensured, you already ORDER BY UnitNumber in SQL.
     End Sub
+
 
 
     ' Add 
@@ -103,6 +106,8 @@ Public Class MachinesControl
             MessageBox.Show("Invalid capacity. Please enter a positive number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
+
+
 
         ' --- Find the next available UnitNumber ---
         Dim nextUnitNumber As Integer = GetNextAvailableUnitNumber()
@@ -133,19 +138,35 @@ Public Class MachinesControl
     Private Sub btnRemoveMachine_Click(sender As Object, e As EventArgs) Handles btnRemoveMachine.Click
         If selectedMachine Is Nothing Then Return
 
+        ' Ask for reason
+        Dim reason As String = InputBox("Enter the reason why this machine is unavailable:", "Mark as Unavailable", "")
+        If String.IsNullOrWhiteSpace(reason) Then
+            MessageBox.Show("No reason entered. Operation cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        ' Update the selected machine’s display
+        selectedMachine.Status = "Unavailable"
+        selectedMachine.lblUnit.Text = "Unavailable"
+        selectedMachine.lblMachineIDText.Text = "Unavailable: " & reason
+        selectedMachine.Enabled = False ' Make the card unclickable
+
+        ' Update database: set UnitNumber = NULL so it's not counted in the sequence
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
-            Dim query As String = "DELETE FROM UnitData WHERE UnitNumber=@unit"
+            Dim query As String = "UPDATE UnitData SET Status=@status, Reason=@reason, UnitNumber=NULL WHERE ID=@id"
             Using cmd As New OleDbCommand(query, conn)
-                cmd.Parameters.AddWithValue("@unit", selectedMachine.UnitNumber)
+                cmd.Parameters.AddWithValue("@status", "Unavailable")
+                cmd.Parameters.AddWithValue("@reason", reason)
+                cmd.Parameters.AddWithValue("@id", selectedMachine.MachineID)
                 cmd.ExecuteNonQuery()
             End Using
         End Using
 
-        ' Re-adjust numbering in DB first
-        ReAdjustUnitNumbers()
+        ' Reorder remaining machines in the UI (only available ones)
+        RearrangeMachines()
 
-        ' Then reload UI
+        ' Refresh everything from DB
         LoadMachinesFromDB()
 
         selectedMachine = Nothing
@@ -223,6 +244,7 @@ Public Class MachinesControl
             Return
         End If
 
+
         ' Walk up to find the MachineCard parent
         Dim ctrl As Control = orig
         While ctrl IsNot Nothing AndAlso Not TypeOf ctrl Is MachineCard
@@ -231,6 +253,10 @@ Public Class MachinesControl
         If ctrl Is Nothing Then Return
 
         Dim clicked As MachineCard = DirectCast(ctrl, MachineCard)
+        ' Ignore clicks on unavailable machines
+        If clicked.Status = "Unavailable" Then
+            Return
+        End If
 
         ' Toggle selection (same logic you used before)
         If selectedMachine Is clicked Then
@@ -276,7 +302,8 @@ Public Class MachinesControl
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
 
-            Dim sql As String = "SELECT ID FROM UnitData ORDER BY UnitNumber"
+            ' Only renumber AVAILABLE units (unavailable ones will stay 0)
+            Dim sql As String = "SELECT ID FROM UnitData WHERE Status <> 'Unavailable' ORDER BY UnitNumber"
             Using cmd As New OleDbCommand(sql, conn)
                 Using reader As OleDbDataReader = cmd.ExecuteReader()
                     Dim counter As Integer = 1
@@ -297,6 +324,8 @@ Public Class MachinesControl
         End Using
     End Sub
 
+
+
     Private Function SaveMachineToDB(machine As MachineCard) As Integer
         Dim newID As Integer = -1
         Using conn As New OleDbConnection(ConnectionString)
@@ -316,5 +345,36 @@ Public Class MachinesControl
         Return newID
     End Function
 
+    Private Sub DisableAllClicks(ctrl As Control)
+        For Each child As Control In ctrl.Controls
+            RemoveHandler child.Click, AddressOf Machine_Click
+            DisableAllClicks(child)
+        Next
+        RemoveHandler ctrl.Click, AddressOf Machine_Click
+    End Sub
+
+    Private Sub RearrangeMachines()
+        Dim available As New List(Of Control)
+        Dim unavailable As New List(Of Control)
+
+        For Each ctrl As Control In flpMachines.Controls
+            If TypeOf ctrl Is MachineCard Then
+                Dim mc As MachineCard = DirectCast(ctrl, MachineCard)
+                If mc.Status = "Unavailable" Then
+                    unavailable.Add(mc)
+                Else
+                    available.Add(mc)
+                End If
+            End If
+        Next
+
+        flpMachines.Controls.Clear()
+        For Each mc In available
+            flpMachines.Controls.Add(mc)
+        Next
+        For Each mc In unavailable
+            flpMachines.Controls.Add(mc)
+        Next
+    End Sub
 
 End Class

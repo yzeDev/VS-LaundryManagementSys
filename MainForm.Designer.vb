@@ -23,8 +23,6 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Panel2 = New Panel()
-        TableLayoutPanel2 = New TableLayoutPanel()
         btnOptions = New Button()
         btnStats = New Button()
         btnTransactions = New Button()
@@ -32,124 +30,92 @@ Partial Class MainForm
         btnDashboard = New Button()
         MainPanel = New Panel()
         TableLayoutPanel1 = New TableLayoutPanel()
-        Panel2.SuspendLayout()
-        TableLayoutPanel2.SuspendLayout()
+        Panel1 = New Panel()
+        Label1 = New Label()
+        Panel2 = New Panel()
         TableLayoutPanel1.SuspendLayout()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
-        Panel2.Controls.Add(TableLayoutPanel2)
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(4, 4)
-        Panel2.Margin = New Padding(4)
-        Panel2.Name = "Panel2"
-        TableLayoutPanel1.SetRowSpan(Panel2, 5)
-        Panel2.Size = New Size(117, 693)
-        Panel2.TabIndex = 7
-        ' 
-        ' TableLayoutPanel2
-        ' 
-        TableLayoutPanel2.ColumnCount = 1
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel2.Controls.Add(btnOptions, 0, 4)
-        TableLayoutPanel2.Controls.Add(btnStats, 0, 3)
-        TableLayoutPanel2.Controls.Add(btnTransactions, 0, 2)
-        TableLayoutPanel2.Controls.Add(btnMachines, 0, 1)
-        TableLayoutPanel2.Controls.Add(btnDashboard, 0, 0)
-        TableLayoutPanel2.Dock = DockStyle.Fill
-        TableLayoutPanel2.Location = New Point(0, 0)
-        TableLayoutPanel2.Margin = New Padding(4)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 5
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.Size = New Size(117, 693)
-        TableLayoutPanel2.TabIndex = 0
         ' 
         ' btnOptions
         ' 
         btnOptions.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnOptions.BackgroundImage = My.Resources.Resources.logos_5
+        btnOptions.BackColor = Color.White
         btnOptions.BackgroundImageLayout = ImageLayout.Zoom
-        btnOptions.Dock = DockStyle.Fill
         btnOptions.FlatAppearance.BorderSize = 0
         btnOptions.FlatStyle = FlatStyle.Flat
-        btnOptions.Location = New Point(4, 556)
-        btnOptions.Margin = New Padding(4)
+        btnOptions.Location = New Point(0, 279)
+        btnOptions.Margin = New Padding(5)
         btnOptions.Name = "btnOptions"
-        btnOptions.Size = New Size(109, 133)
+        btnOptions.Size = New Size(144, 60)
         btnOptions.TabIndex = 4
         btnOptions.TabStop = False
-        btnOptions.UseVisualStyleBackColor = True
+        btnOptions.Text = "Options"
+        btnOptions.UseVisualStyleBackColor = False
         ' 
         ' btnStats
         ' 
         btnStats.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnStats.BackgroundImage = My.Resources.Resources.logos_4
+        btnStats.BackColor = Color.White
         btnStats.BackgroundImageLayout = ImageLayout.Zoom
-        btnStats.Dock = DockStyle.Fill
         btnStats.FlatAppearance.BorderSize = 0
         btnStats.FlatStyle = FlatStyle.Flat
-        btnStats.Location = New Point(4, 418)
-        btnStats.Margin = New Padding(4)
+        btnStats.Location = New Point(0, 209)
+        btnStats.Margin = New Padding(5)
         btnStats.Name = "btnStats"
-        btnStats.Size = New Size(109, 130)
+        btnStats.Size = New Size(144, 60)
         btnStats.TabIndex = 3
         btnStats.TabStop = False
-        btnStats.UseVisualStyleBackColor = True
+        btnStats.Text = "Statistics"
+        btnStats.UseVisualStyleBackColor = False
         ' 
         ' btnTransactions
         ' 
         btnTransactions.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnTransactions.BackgroundImage = My.Resources.Resources.logos_3
+        btnTransactions.BackColor = Color.White
         btnTransactions.BackgroundImageLayout = ImageLayout.Zoom
-        btnTransactions.Dock = DockStyle.Fill
         btnTransactions.FlatAppearance.BorderSize = 0
         btnTransactions.FlatStyle = FlatStyle.Flat
-        btnTransactions.Location = New Point(4, 280)
-        btnTransactions.Margin = New Padding(4)
+        btnTransactions.Location = New Point(0, 139)
+        btnTransactions.Margin = New Padding(5)
         btnTransactions.Name = "btnTransactions"
-        btnTransactions.Size = New Size(109, 130)
+        btnTransactions.Size = New Size(144, 60)
         btnTransactions.TabIndex = 2
         btnTransactions.TabStop = False
-        btnTransactions.UseVisualStyleBackColor = True
+        btnTransactions.Text = "Transactions"
+        btnTransactions.UseVisualStyleBackColor = False
         ' 
         ' btnMachines
         ' 
         btnMachines.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnMachines.BackgroundImage = My.Resources.Resources.logos_2
+        btnMachines.BackColor = Color.White
         btnMachines.BackgroundImageLayout = ImageLayout.Zoom
-        btnMachines.Dock = DockStyle.Fill
         btnMachines.FlatAppearance.BorderSize = 0
         btnMachines.FlatStyle = FlatStyle.Flat
-        btnMachines.Location = New Point(4, 142)
-        btnMachines.Margin = New Padding(4)
+        btnMachines.Location = New Point(0, 69)
+        btnMachines.Margin = New Padding(5)
         btnMachines.Name = "btnMachines"
-        btnMachines.Size = New Size(109, 130)
+        btnMachines.Size = New Size(144, 60)
         btnMachines.TabIndex = 1
         btnMachines.TabStop = False
-        btnMachines.UseVisualStyleBackColor = True
+        btnMachines.Text = "Machines"
+        btnMachines.UseVisualStyleBackColor = False
         ' 
         ' btnDashboard
         ' 
         btnDashboard.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnDashboard.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
-        btnDashboard.BackgroundImage = My.Resources.Resources.logos_1
+        btnDashboard.BackColor = Color.White
         btnDashboard.BackgroundImageLayout = ImageLayout.Zoom
-        btnDashboard.Dock = DockStyle.Fill
         btnDashboard.FlatAppearance.BorderSize = 0
         btnDashboard.FlatStyle = FlatStyle.Flat
-        btnDashboard.Location = New Point(4, 4)
-        btnDashboard.Margin = New Padding(4)
+        btnDashboard.Location = New Point(0, -1)
+        btnDashboard.Margin = New Padding(5)
         btnDashboard.Name = "btnDashboard"
-        btnDashboard.Size = New Size(109, 130)
+        btnDashboard.Size = New Size(144, 60)
         btnDashboard.TabIndex = 5
         btnDashboard.TabStop = False
+        btnDashboard.Text = "Home"
         btnDashboard.UseVisualStyleBackColor = False
         ' 
         ' MainPanel
@@ -157,54 +123,81 @@ Partial Class MainForm
         MainPanel.AutoScroll = True
         MainPanel.AutoSize = True
         MainPanel.Dock = DockStyle.Fill
-        MainPanel.Location = New Point(129, 4)
-        MainPanel.Margin = New Padding(4)
+        MainPanel.Location = New Point(155, 5)
+        MainPanel.Margin = New Padding(5)
         MainPanel.Name = "MainPanel"
-        TableLayoutPanel1.SetRowSpan(MainPanel, 5)
-        MainPanel.Size = New Size(1222, 693)
+        TableLayoutPanel1.SetRowSpan(MainPanel, 2)
+        MainPanel.Size = New Size(1466, 831)
         MainPanel.TabIndex = 5
         ' 
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 125F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 150F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
         TableLayoutPanel1.Controls.Add(MainPanel, 1, 0)
-        TableLayoutPanel1.Controls.Add(Panel2, 0, 0)
+        TableLayoutPanel1.Controls.Add(Panel1, 0, 0)
+        TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(4)
+        TableLayoutPanel1.Margin = New Padding(5)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 5
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 15.0657663F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 21.2335587F))
-        TableLayoutPanel1.Size = New Size(1355, 701)
+        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.92296F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 89.077034F))
+        TableLayoutPanel1.Size = New Size(1626, 841)
         TableLayoutPanel1.TabIndex = 0
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Controls.Add(Label1)
+        Panel1.Location = New Point(3, 3)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(144, 85)
+        Panel1.TabIndex = 8
+        ' 
+        ' Label1
+        ' 
+        Label1.Dock = DockStyle.Fill
+        Label1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(0, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(144, 85)
+        Label1.TabIndex = 0
+        Label1.Text = "ADMIN"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(btnOptions)
+        Panel2.Controls.Add(btnDashboard)
+        Panel2.Controls.Add(btnStats)
+        Panel2.Controls.Add(btnMachines)
+        Panel2.Controls.Add(btnTransactions)
+        Panel2.Dock = DockStyle.Fill
+        Panel2.Location = New Point(3, 94)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(144, 744)
+        Panel2.TabIndex = 9
         ' 
         ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(120F, 120F)
+        AutoScaleDimensions = New SizeF(144F, 144F)
         AutoScaleMode = AutoScaleMode.Dpi
-        ClientSize = New Size(1355, 701)
+        ClientSize = New Size(1626, 841)
         Controls.Add(TableLayoutPanel1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Margin = New Padding(4)
-        MinimumSize = New Size(1120, 613)
+        Margin = New Padding(5)
+        MinimumSize = New Size(1340, 724)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Laundry Management System"
-        Panel2.ResumeLayout(False)
-        TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel2.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents btnDashboard As Button
     Friend WithEvents btnOptions As Button
     Friend WithEvents btnStats As Button
@@ -212,5 +205,8 @@ Partial Class MainForm
     Friend WithEvents btnMachines As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents MainPanel As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
 
 End Class

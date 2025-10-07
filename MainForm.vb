@@ -35,7 +35,7 @@ Public Class MainForm
         ShowControl(New DashboardControl())
     End Sub
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 

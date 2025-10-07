@@ -50,6 +50,7 @@ Partial Class MachineCard
         TableLayoutPanel1.Controls.Add(lblStatus, 1, 4)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 6
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 8.264462F))
@@ -58,16 +59,17 @@ Partial Class MachineCard
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.2982359F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.2982349F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 9.090908F))
-        TableLayoutPanel1.Size = New Size(250, 320)
+        TableLayoutPanel1.Size = New Size(357, 533)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' lblWeightValue
         ' 
         lblWeightValue.AutoSize = True
         lblWeightValue.Dock = DockStyle.Fill
-        lblWeightValue.Location = New Point(128, 223)
+        lblWeightValue.Location = New Point(182, 373)
+        lblWeightValue.Margin = New Padding(4, 0, 4, 0)
         lblWeightValue.Name = "lblWeightValue"
-        lblWeightValue.Size = New Size(119, 32)
+        lblWeightValue.Size = New Size(171, 54)
         lblWeightValue.TabIndex = 6
         lblWeightValue.Text = "Weight:"
         lblWeightValue.TextAlign = ContentAlignment.MiddleCenter
@@ -76,9 +78,10 @@ Partial Class MachineCard
         ' 
         lblWeightText.AutoSize = True
         lblWeightText.Dock = DockStyle.Fill
-        lblWeightText.Location = New Point(3, 223)
+        lblWeightText.Location = New Point(4, 373)
+        lblWeightText.Margin = New Padding(4, 0, 4, 0)
         lblWeightText.Name = "lblWeightText"
-        lblWeightText.Size = New Size(119, 32)
+        lblWeightText.Size = New Size(170, 54)
         lblWeightText.TabIndex = 2
         lblWeightText.Text = "Max Weight Capacity:"
         lblWeightText.TextAlign = ContentAlignment.TopCenter
@@ -89,9 +92,10 @@ Partial Class MachineCard
         TableLayoutPanel1.SetColumnSpan(lblUnit, 2)
         lblUnit.Dock = DockStyle.Fill
         lblUnit.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblUnit.Location = New Point(3, 0)
+        lblUnit.Location = New Point(4, 0)
+        lblUnit.Margin = New Padding(4, 0, 4, 0)
         lblUnit.Name = "lblUnit"
-        lblUnit.Size = New Size(244, 26)
+        lblUnit.Size = New Size(349, 44)
         lblUnit.TabIndex = 0
         lblUnit.Text = "Unit"
         lblUnit.TextAlign = ContentAlignment.TopCenter
@@ -100,9 +104,10 @@ Partial Class MachineCard
         ' 
         TableLayoutPanel1.SetColumnSpan(picMachine, 2)
         picMachine.Dock = DockStyle.Fill
-        picMachine.Location = New Point(3, 29)
+        picMachine.Location = New Point(4, 49)
+        picMachine.Margin = New Padding(4, 5, 4, 5)
         picMachine.Name = "picMachine"
-        picMachine.Size = New Size(244, 159)
+        picMachine.Size = New Size(349, 265)
         picMachine.TabIndex = 4
         picMachine.TabStop = False
         ' 
@@ -111,9 +116,10 @@ Partial Class MachineCard
         lblMachineIDText.AutoSize = True
         TableLayoutPanel1.SetColumnSpan(lblMachineIDText, 2)
         lblMachineIDText.Dock = DockStyle.Fill
-        lblMachineIDText.Location = New Point(3, 191)
+        lblMachineIDText.Location = New Point(4, 319)
+        lblMachineIDText.Margin = New Padding(4, 0, 4, 0)
         lblMachineIDText.Name = "lblMachineIDText"
-        lblMachineIDText.Size = New Size(244, 32)
+        lblMachineIDText.Size = New Size(349, 54)
         lblMachineIDText.TabIndex = 5
         lblMachineIDText.Text = "Machine ID:"
         lblMachineIDText.TextAlign = ContentAlignment.MiddleCenter
@@ -122,9 +128,10 @@ Partial Class MachineCard
         ' 
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
-        Label1.Location = New Point(3, 255)
+        Label1.Location = New Point(4, 427)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(119, 32)
+        Label1.Size = New Size(170, 54)
         Label1.TabIndex = 7
         Label1.Text = "Machine Status:"
         Label1.TextAlign = ContentAlignment.MiddleCenter
@@ -134,9 +141,10 @@ Partial Class MachineCard
         lblTransactionID.AutoSize = True
         TableLayoutPanel1.SetColumnSpan(lblTransactionID, 2)
         lblTransactionID.Dock = DockStyle.Fill
-        lblTransactionID.Location = New Point(3, 287)
+        lblTransactionID.Location = New Point(4, 481)
+        lblTransactionID.Margin = New Padding(4, 0, 4, 0)
         lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(244, 33)
+        lblTransactionID.Size = New Size(349, 52)
         lblTransactionID.TabIndex = 8
         lblTransactionID.Text = "Transaction ID:"
         lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
@@ -145,21 +153,23 @@ Partial Class MachineCard
         ' 
         lblStatus.AutoSize = True
         lblStatus.Dock = DockStyle.Fill
-        lblStatus.Location = New Point(128, 255)
+        lblStatus.Location = New Point(182, 427)
+        lblStatus.Margin = New Padding(4, 0, 4, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(119, 32)
+        lblStatus.Size = New Size(171, 54)
         lblStatus.TabIndex = 9
         lblStatus.Text = "Status"
         lblStatus.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' MachineCard
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BorderStyle = BorderStyle.FixedSingle
         Controls.Add(TableLayoutPanel1)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "MachineCard"
-        Size = New Size(250, 320)
+        Size = New Size(357, 533)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         CType(picMachine, ComponentModel.ISupportInitialize).EndInit()
