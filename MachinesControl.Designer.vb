@@ -36,18 +36,17 @@ Partial Class MachinesControl
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 171F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 120F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
         TableLayoutPanel1.Controls.Add(Panel1, 0, 0)
         TableLayoutPanel1.Controls.Add(flpMachines, 1, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Size = New Size(714, 834)
+        TableLayoutPanel1.Size = New Size(500, 500)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' Panel1
@@ -57,39 +56,35 @@ Partial Class MachinesControl
         Panel1.Controls.Add(btnAddMachine)
         Panel1.Controls.Add(Label1)
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(4, 5)
-        Panel1.Margin = New Padding(4, 5, 4, 5)
+        Panel1.Location = New Point(3, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(163, 407)
+        Panel1.Size = New Size(114, 244)
         Panel1.TabIndex = 0
         ' 
         ' btnConfigure
         ' 
         btnConfigure.Enabled = False
-        btnConfigure.Location = New Point(4, 151)
-        btnConfigure.Margin = New Padding(4, 5, 4, 5)
+        btnConfigure.Location = New Point(3, 91)
         btnConfigure.Name = "btnConfigure"
-        btnConfigure.Size = New Size(154, 39)
+        btnConfigure.Size = New Size(108, 23)
         btnConfigure.TabIndex = 3
         btnConfigure.Text = "Configure"
         btnConfigure.UseVisualStyleBackColor = True
         ' 
         ' btnRemoveMachine
         ' 
-        btnRemoveMachine.Location = New Point(4, 104)
-        btnRemoveMachine.Margin = New Padding(4, 5, 4, 5)
+        btnRemoveMachine.Location = New Point(3, 62)
         btnRemoveMachine.Name = "btnRemoveMachine"
-        btnRemoveMachine.Size = New Size(159, 39)
+        btnRemoveMachine.Size = New Size(111, 23)
         btnRemoveMachine.TabIndex = 2
         btnRemoveMachine.Text = "Unavailable"
         btnRemoveMachine.UseVisualStyleBackColor = True
         ' 
         ' btnAddMachine
         ' 
-        btnAddMachine.Location = New Point(4, 55)
-        btnAddMachine.Margin = New Padding(4, 5, 4, 5)
+        btnAddMachine.Location = New Point(3, 33)
         btnAddMachine.Name = "btnAddMachine"
-        btnAddMachine.Size = New Size(154, 39)
+        btnAddMachine.Size = New Size(108, 23)
         btnAddMachine.TabIndex = 1
         btnAddMachine.Text = "Add Machine"
         btnAddMachine.UseVisualStyleBackColor = True
@@ -100,9 +95,8 @@ Partial Class MachinesControl
         Label1.Dock = DockStyle.Top
         Label1.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(0, 0)
-        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(127, 28)
+        Label1.Size = New Size(86, 17)
         Label1.TabIndex = 0
         Label1.Text = "Machines: (#)"
         ' 
@@ -110,21 +104,19 @@ Partial Class MachinesControl
         ' 
         flpMachines.AutoScroll = True
         flpMachines.Dock = DockStyle.Fill
-        flpMachines.Location = New Point(175, 5)
-        flpMachines.Margin = New Padding(4, 5, 4, 5)
+        flpMachines.Location = New Point(123, 3)
         flpMachines.Name = "flpMachines"
         TableLayoutPanel1.SetRowSpan(flpMachines, 2)
-        flpMachines.Size = New Size(535, 824)
+        flpMachines.Size = New Size(374, 494)
         flpMachines.TabIndex = 1
         ' 
         ' MachinesControl
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(4, 5, 4, 5)
         Name = "MachinesControl"
-        Size = New Size(714, 834)
+        Size = New Size(500, 500)
         TableLayoutPanel1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

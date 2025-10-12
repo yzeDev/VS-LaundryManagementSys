@@ -55,107 +55,111 @@ Partial Class TransactionRow
         TableLayoutPanel1.Controls.Add(btnView, 7, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel1.Size = New Size(863, 40)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.Size = New Size(602, 43)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' lblTotal
         ' 
-        lblTotal.AutoSize = True
         lblTotal.Dock = DockStyle.Fill
-        lblTotal.Location = New Point(645, 0)
+        lblTotal.Location = New Point(452, 0)
+        lblTotal.Margin = New Padding(2, 0, 2, 0)
         lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(101, 40)
+        lblTotal.Size = New Size(71, 43)
         lblTotal.TabIndex = 6
         lblTotal.Text = "Total"
-        lblTotal.TextAlign = ContentAlignment.MiddleCenter
+        lblTotal.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblDate
         ' 
-        lblDate.AutoSize = True
         lblDate.Dock = DockStyle.Fill
-        lblDate.Location = New Point(538, 0)
+        lblDate.Location = New Point(377, 0)
+        lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
-        lblDate.Size = New Size(101, 40)
+        lblDate.Size = New Size(71, 43)
         lblDate.TabIndex = 5
         lblDate.Text = "Date"
-        lblDate.TextAlign = ContentAlignment.MiddleCenter
+        lblDate.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblMachine
         ' 
-        lblMachine.AutoSize = True
         lblMachine.Dock = DockStyle.Fill
-        lblMachine.Location = New Point(431, 0)
+        lblMachine.Location = New Point(302, 0)
+        lblMachine.Margin = New Padding(2, 0, 2, 0)
         lblMachine.Name = "lblMachine"
-        lblMachine.Size = New Size(101, 40)
+        lblMachine.Size = New Size(71, 43)
         lblMachine.TabIndex = 4
         lblMachine.Text = "Machine"
-        lblMachine.TextAlign = ContentAlignment.MiddleCenter
+        lblMachine.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblStatus
         ' 
-        lblStatus.AutoSize = True
         lblStatus.Dock = DockStyle.Fill
-        lblStatus.Location = New Point(324, 0)
+        lblStatus.Location = New Point(227, 0)
+        lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(101, 40)
+        lblStatus.Size = New Size(71, 43)
         lblStatus.TabIndex = 3
         lblStatus.Text = "Status"
-        lblStatus.TextAlign = ContentAlignment.MiddleCenter
+        lblStatus.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblServiceType
         ' 
-        lblServiceType.AutoSize = True
         lblServiceType.Dock = DockStyle.Fill
-        lblServiceType.Location = New Point(217, 0)
+        lblServiceType.Location = New Point(152, 0)
+        lblServiceType.Margin = New Padding(2, 0, 2, 0)
         lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(101, 40)
+        lblServiceType.Size = New Size(71, 43)
         lblServiceType.TabIndex = 2
         lblServiceType.Text = "Service"
-        lblServiceType.TextAlign = ContentAlignment.MiddleCenter
+        lblServiceType.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblCustomer
         ' 
-        lblCustomer.AutoSize = True
         lblCustomer.Dock = DockStyle.Fill
-        lblCustomer.Location = New Point(110, 0)
+        lblCustomer.Location = New Point(77, 0)
+        lblCustomer.Margin = New Padding(2, 0, 2, 0)
         lblCustomer.Name = "lblCustomer"
-        lblCustomer.Size = New Size(101, 40)
+        lblCustomer.Size = New Size(71, 43)
         lblCustomer.TabIndex = 1
         lblCustomer.Text = "Name"
-        lblCustomer.TextAlign = ContentAlignment.MiddleCenter
+        lblCustomer.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblTransactionID
         ' 
-        lblTransactionID.AutoSize = True
         lblTransactionID.Dock = DockStyle.Fill
-        lblTransactionID.Location = New Point(3, 0)
+        lblTransactionID.Location = New Point(2, 0)
+        lblTransactionID.Margin = New Padding(2, 0, 2, 0)
         lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(101, 40)
+        lblTransactionID.Size = New Size(71, 43)
         lblTransactionID.TabIndex = 0
         lblTransactionID.Text = "Transac"
-        lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
+        lblTransactionID.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' btnView
         ' 
-        btnView.Location = New Point(752, 3)
+        btnView.Dock = DockStyle.Fill
+        btnView.Location = New Point(527, 2)
+        btnView.Margin = New Padding(2)
         btnView.Name = "btnView"
-        btnView.Size = New Size(108, 34)
+        btnView.Size = New Size(73, 39)
         btnView.TabIndex = 7
         btnView.Text = "View"
         btnView.UseVisualStyleBackColor = True
         ' 
         ' TransactionRow
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BorderStyle = BorderStyle.FixedSingle
         Controls.Add(TableLayoutPanel1)
+        Margin = New Padding(2)
         Name = "TransactionRow"
-        Size = New Size(863, 40)
+        Size = New Size(602, 43)
         TableLayoutPanel1.ResumeLayout(False)
-        TableLayoutPanel1.PerformLayout()
         ResumeLayout(False)
     End Sub
 
