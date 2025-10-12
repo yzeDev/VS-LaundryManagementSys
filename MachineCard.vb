@@ -14,6 +14,10 @@ Public Class MachineCard
     Private _unitNumber As Integer
     Private _reason As String
 
+    Private Sub lblWeightValue_Click(sender As Object, e As EventArgs) Handles lblWeightValue.Click
+
+    End Sub
+
     Public Property MachineID As Integer
         Get
             Return _machineID
