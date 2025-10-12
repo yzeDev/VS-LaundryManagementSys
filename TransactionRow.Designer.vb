@@ -59,7 +59,7 @@ Partial Class TransactionRow
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(602, 43)
+        TableLayoutPanel1.Size = New Size(604, 45)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' lblTotal
@@ -68,10 +68,10 @@ Partial Class TransactionRow
         lblTotal.Location = New Point(452, 0)
         lblTotal.Margin = New Padding(2, 0, 2, 0)
         lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(71, 43)
+        lblTotal.Size = New Size(71, 45)
         lblTotal.TabIndex = 6
         lblTotal.Text = "Total"
-        lblTotal.TextAlign = ContentAlignment.MiddleLeft
+        lblTotal.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblDate
         ' 
@@ -79,10 +79,10 @@ Partial Class TransactionRow
         lblDate.Location = New Point(377, 0)
         lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
-        lblDate.Size = New Size(71, 43)
+        lblDate.Size = New Size(71, 45)
         lblDate.TabIndex = 5
         lblDate.Text = "Date"
-        lblDate.TextAlign = ContentAlignment.MiddleLeft
+        lblDate.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblMachine
         ' 
@@ -90,10 +90,10 @@ Partial Class TransactionRow
         lblMachine.Location = New Point(302, 0)
         lblMachine.Margin = New Padding(2, 0, 2, 0)
         lblMachine.Name = "lblMachine"
-        lblMachine.Size = New Size(71, 43)
+        lblMachine.Size = New Size(71, 45)
         lblMachine.TabIndex = 4
         lblMachine.Text = "Machine"
-        lblMachine.TextAlign = ContentAlignment.MiddleLeft
+        lblMachine.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblStatus
         ' 
@@ -101,10 +101,10 @@ Partial Class TransactionRow
         lblStatus.Location = New Point(227, 0)
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(71, 43)
+        lblStatus.Size = New Size(71, 45)
         lblStatus.TabIndex = 3
         lblStatus.Text = "Status"
-        lblStatus.TextAlign = ContentAlignment.MiddleLeft
+        lblStatus.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblServiceType
         ' 
@@ -112,10 +112,10 @@ Partial Class TransactionRow
         lblServiceType.Location = New Point(152, 0)
         lblServiceType.Margin = New Padding(2, 0, 2, 0)
         lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(71, 43)
+        lblServiceType.Size = New Size(71, 45)
         lblServiceType.TabIndex = 2
         lblServiceType.Text = "Service"
-        lblServiceType.TextAlign = ContentAlignment.MiddleLeft
+        lblServiceType.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblCustomer
         ' 
@@ -123,10 +123,10 @@ Partial Class TransactionRow
         lblCustomer.Location = New Point(77, 0)
         lblCustomer.Margin = New Padding(2, 0, 2, 0)
         lblCustomer.Name = "lblCustomer"
-        lblCustomer.Size = New Size(71, 43)
+        lblCustomer.Size = New Size(71, 45)
         lblCustomer.TabIndex = 1
         lblCustomer.Text = "Name"
-        lblCustomer.TextAlign = ContentAlignment.MiddleLeft
+        lblCustomer.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblTransactionID
         ' 
@@ -134,10 +134,10 @@ Partial Class TransactionRow
         lblTransactionID.Location = New Point(2, 0)
         lblTransactionID.Margin = New Padding(2, 0, 2, 0)
         lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(71, 43)
+        lblTransactionID.Size = New Size(71, 45)
         lblTransactionID.TabIndex = 0
         lblTransactionID.Text = "Transac"
-        lblTransactionID.TextAlign = ContentAlignment.MiddleLeft
+        lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' btnView
         ' 
@@ -145,7 +145,7 @@ Partial Class TransactionRow
         btnView.Location = New Point(527, 2)
         btnView.Margin = New Padding(2)
         btnView.Name = "btnView"
-        btnView.Size = New Size(73, 39)
+        btnView.Size = New Size(75, 41)
         btnView.TabIndex = 7
         btnView.Text = "View"
         btnView.UseVisualStyleBackColor = True
@@ -154,11 +154,10 @@ Partial Class TransactionRow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BorderStyle = BorderStyle.FixedSingle
         Controls.Add(TableLayoutPanel1)
         Margin = New Padding(2)
         Name = "TransactionRow"
-        Size = New Size(602, 43)
+        Size = New Size(604, 45)
         TableLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
