@@ -3,22 +3,16 @@ Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class StatsControl
 
-    ' ==============================
-    ' DATABASE CONNECTION
-    ' ==============================
+
     Private dbPath As String = "D:\laundryfiles\Resources\LaundryDatabase.accdb"
     Private conString As String
 
-    ' ==============================
-    ' CHART VARIABLES
-    ' ==============================
+
     Private chartStats As Chart
     Private chartReady As Boolean = False  ' To avoid errors while chart is loading
 
 
-    ' ==============================
-    ' FORM LOAD
-    ' ==============================
+
     Private Sub StatsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conString = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={dbPath};"
 
@@ -36,9 +30,7 @@ Public Class StatsControl
     End Sub
 
 
-    ' ==============================
-    ' EVENT HANDLERS
-    ' ==============================
+
     Private Sub cmbPeriod_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPeriod.SelectedIndexChanged
         If chartReady Then
             CalculateStats()
@@ -54,9 +46,7 @@ Public Class StatsControl
     End Sub
 
 
-    ' ==============================
-    ' CHART SETUP
-    ' ==============================
+
     Private Sub SetupChart()
         chartStats = New Chart() With {
             .Dock = DockStyle.Fill,
@@ -121,10 +111,6 @@ Public Class StatsControl
     End Sub
 
 
-    ' ==============================
-    ' CHART UPDATE
-    ' (with monthly grouping for Semi-Annual & Annual)
-    ' ==============================
     Private Sub UpdateChart()
         If Not chartReady OrElse cmbPeriod.SelectedItem Is Nothing Then Exit Sub
         If chartStats.Series.IndexOf("Total Revenue") = -1 OrElse chartStats.Series.IndexOf("Total Orders") = -1 Then Exit Sub
@@ -216,9 +202,7 @@ Public Class StatsControl
     End Sub
 
 
-    ' ==============================
     ' CALCULATE STATS
-    ' ==============================
     Private Sub CalculateStats()
         If cmbPeriod.SelectedItem Is Nothing Then Exit Sub
 
@@ -276,10 +260,23 @@ Public Class StatsControl
     End Sub
 
 
-    ' ==============================
-    ' MISC
-    ' ==============================
+
     Private Sub statspanel_Paint(sender As Object, e As PaintEventArgs) Handles statspanel.Paint
     End Sub
 
+    Private Sub Label15_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TableLayoutPanel5_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub TableLayoutPanel5_Paint_1(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel5.Paint
+
+    End Sub
+
+    Private Sub Label15_Click_1(sender As Object, e As EventArgs) Handles Label15.Click
+
+    End Sub
 End Class

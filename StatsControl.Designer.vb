@@ -22,6 +22,17 @@ Partial Class StatsControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StatsControl))
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Panel1 = New Panel()
         Label1 = New Label()
@@ -37,33 +48,36 @@ Partial Class StatsControl
         Panel5 = New Panel()
         TableLayoutPanel2 = New TableLayoutPanel()
         Panel8 = New Panel()
-        lblOrderValue = New Label()
+        TableLayoutPanel8 = New TableLayoutPanel()
+        Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label16 = New Label()
+        lblOrderValue = New Label()
         Label9 = New Label()
         Label10 = New Label()
         Panel7 = New Panel()
+        TableLayoutPanel6 = New TableLayoutPanel()
+        Label12 = New Label()
         lblTotalRev = New Label()
         Label5 = New Label()
         Label6 = New Label()
-        Label12 = New Label()
+        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Panel6 = New Panel()
+        TableLayoutPanel7 = New TableLayoutPanel()
+        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label14 = New Label()
         lblTotalOrder = New Label()
         Label7 = New Label()
-        Label14 = New Label()
         Label8 = New Label()
         Panel9 = New Panel()
         TableLayoutPanel3 = New TableLayoutPanel()
         TableLayoutPanel4 = New TableLayoutPanel()
-        Panel11 = New Panel()
-        Panel10 = New Panel()
-        TextBox1 = New TextBox()
-        Label18 = New Label()
-        Panel12 = New Panel()
-        Label15 = New Label()
-        Panel13 = New Panel()
-        TextBox2 = New TextBox()
-        Label19 = New Label()
+        TableLayoutPanel5 = New TableLayoutPanel()
+        Label11 = New Label()
         statspanel = New Panel()
+        Label13 = New Label()
+        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Label15 = New Label()
         TableLayoutPanel1.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
@@ -72,15 +86,20 @@ Partial Class StatsControl
         Panel5.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         Panel8.SuspendLayout()
+        TableLayoutPanel8.SuspendLayout()
+        CType(Guna2PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
+        TableLayoutPanel6.SuspendLayout()
+        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
+        TableLayoutPanel7.SuspendLayout()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel9.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
-        Panel11.SuspendLayout()
-        Panel10.SuspendLayout()
-        Panel12.SuspendLayout()
-        Panel13.SuspendLayout()
+        TableLayoutPanel5.SuspendLayout()
+        Guna2CustomGradientPanel1.SuspendLayout()
+        Guna2CustomGradientPanel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -245,159 +264,288 @@ Partial Class StatsControl
         ' Panel8
         ' 
         Panel8.BorderStyle = BorderStyle.FixedSingle
-        Panel8.Controls.Add(lblOrderValue)
-        Panel8.Controls.Add(Label16)
-        Panel8.Controls.Add(Label9)
-        Panel8.Controls.Add(Label10)
+        Panel8.Controls.Add(TableLayoutPanel8)
         Panel8.Dock = DockStyle.Fill
         Panel8.Location = New Point(597, 3)
         Panel8.Name = "Panel8"
         Panel8.Size = New Size(294, 110)
         Panel8.TabIndex = 2
         ' 
-        ' lblOrderValue
+        ' TableLayoutPanel8
         ' 
-        lblOrderValue.AutoSize = True
-        lblOrderValue.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblOrderValue.Location = New Point(-1, 33)
-        lblOrderValue.Name = "lblOrderValue"
-        lblOrderValue.Size = New Size(89, 37)
-        lblOrderValue.TabIndex = 7
-        lblOrderValue.Text = "₱ 100"
+        TableLayoutPanel8.ColumnCount = 2
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0685F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 34.9315071F))
+        TableLayoutPanel8.Controls.Add(Guna2PictureBox3, 1, 0)
+        TableLayoutPanel8.Controls.Add(Label16, 0, 3)
+        TableLayoutPanel8.Controls.Add(lblOrderValue, 0, 2)
+        TableLayoutPanel8.Controls.Add(Label9, 0, 0)
+        TableLayoutPanel8.Controls.Add(Label10, 0, 1)
+        TableLayoutPanel8.Dock = DockStyle.Fill
+        TableLayoutPanel8.Location = New Point(0, 0)
+        TableLayoutPanel8.Name = "TableLayoutPanel8"
+        TableLayoutPanel8.RowCount = 4
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 24.7159061F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 15.4192772F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 39.909874F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 19.954937F))
+        TableLayoutPanel8.Size = New Size(292, 108)
+        TableLayoutPanel8.TabIndex = 0
+        ' 
+        ' Guna2PictureBox3
+        ' 
+        Guna2PictureBox3.BorderRadius = 37
+        CustomizableEdges1.BottomLeft = False
+        CustomizableEdges1.BottomRight = False
+        CustomizableEdges1.TopLeft = False
+        CustomizableEdges1.TopRight = False
+        Guna2PictureBox3.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox3.Dock = DockStyle.Fill
+        Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), Image)
+        Guna2PictureBox3.ImageRotate = 0F
+        Guna2PictureBox3.Location = New Point(193, 3)
+        Guna2PictureBox3.Name = "Guna2PictureBox3"
+        TableLayoutPanel8.SetRowSpan(Guna2PictureBox3, 4)
+        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox3.Size = New Size(96, 102)
+        Guna2PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        Guna2PictureBox3.TabIndex = 8
+        Guna2PictureBox3.TabStop = False
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
+        Label16.Dock = DockStyle.Fill
         Label16.Font = New Font("Segoe UI", 8.25F)
-        Label16.Location = New Point(-1, 71)
+        Label16.Location = New Point(3, 85)
         Label16.Name = "Label16"
-        Label16.Size = New Size(143, 13)
+        Label16.Size = New Size(184, 23)
         Label16.TabIndex = 6
         Label16.Text = "Revenue Effieciency Metric"
+        ' 
+        ' lblOrderValue
+        ' 
+        lblOrderValue.AutoSize = True
+        lblOrderValue.Dock = DockStyle.Fill
+        lblOrderValue.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblOrderValue.Location = New Point(3, 42)
+        lblOrderValue.Name = "lblOrderValue"
+        lblOrderValue.Size = New Size(184, 43)
+        lblOrderValue.TabIndex = 7
+        lblOrderValue.Text = "₱ 100"
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
+        Label9.Dock = DockStyle.Fill
         Label9.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
-        Label9.Location = New Point(-1, 0)
+        Label9.Location = New Point(3, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(182, 20)
+        Label9.Size = New Size(184, 26)
         Label9.TabIndex = 0
         Label9.Text = "AVERAGE ORDER VALUE"
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
+        Label10.Dock = DockStyle.Fill
         Label10.Font = New Font("Segoe UI", 8.25F)
-        Label10.Location = New Point(-1, 20)
+        Label10.Location = New Point(3, 26)
         Label10.Name = "Label10"
-        Label10.Size = New Size(129, 13)
+        Label10.Size = New Size(184, 16)
         Label10.TabIndex = 1
         Label10.Text = "Per Transaction Average"
         ' 
         ' Panel7
         ' 
         Panel7.BorderStyle = BorderStyle.FixedSingle
-        Panel7.Controls.Add(lblTotalRev)
-        Panel7.Controls.Add(Label5)
-        Panel7.Controls.Add(Label6)
-        Panel7.Controls.Add(Label12)
+        Panel7.Controls.Add(TableLayoutPanel6)
         Panel7.Dock = DockStyle.Fill
         Panel7.Location = New Point(3, 3)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(291, 110)
         Panel7.TabIndex = 1
         ' 
+        ' TableLayoutPanel6
+        ' 
+        TableLayoutPanel6.ColumnCount = 2
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 63.1641846F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 36.83582F))
+        TableLayoutPanel6.Controls.Add(Label12, 0, 3)
+        TableLayoutPanel6.Controls.Add(lblTotalRev, 0, 2)
+        TableLayoutPanel6.Controls.Add(Label5, 0, 0)
+        TableLayoutPanel6.Controls.Add(Label6, 0, 1)
+        TableLayoutPanel6.Controls.Add(Guna2PictureBox1, 1, 0)
+        TableLayoutPanel6.Dock = DockStyle.Fill
+        TableLayoutPanel6.Location = New Point(0, 0)
+        TableLayoutPanel6.Name = "TableLayoutPanel6"
+        TableLayoutPanel6.RowCount = 4
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 24.71815F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 15.4191751F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 39.9084549F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 19.9542274F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel6.Size = New Size(289, 108)
+        TableLayoutPanel6.TabIndex = 0
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Dock = DockStyle.Fill
+        Label12.Font = New Font("Segoe UI", 8.25F)
+        Label12.Location = New Point(3, 85)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(176, 23)
+        Label12.TabIndex = 4
+        Label12.Text = "All revenue for the past week"
+        ' 
         ' lblTotalRev
         ' 
         lblTotalRev.AutoSize = True
+        lblTotalRev.Dock = DockStyle.Fill
         lblTotalRev.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTotalRev.Location = New Point(-1, 34)
+        lblTotalRev.Location = New Point(3, 42)
         lblTotalRev.Name = "lblTotalRev"
-        lblTotalRev.Size = New Size(89, 37)
+        lblTotalRev.Size = New Size(176, 43)
         lblTotalRev.TabIndex = 3
         lblTotalRev.Text = "₱ 100"
+        lblTotalRev.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.Dock = DockStyle.Fill
         Label5.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(-1, 0)
+        Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(133, 21)
+        Label5.Size = New Size(176, 26)
         Label5.TabIndex = 2
         Label5.Text = "TOTAL REVENUE"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
+        Label6.Dock = DockStyle.Fill
         Label6.Font = New Font("Segoe UI", 8.25F)
-        Label6.Location = New Point(-1, 21)
+        Label6.Location = New Point(3, 26)
         Label6.Name = "Label6"
-        Label6.Size = New Size(122, 13)
+        Label6.Size = New Size(176, 16)
         Label6.TabIndex = 1
         Label6.Text = "Service + Delivery Fees"
         ' 
-        ' Label12
+        ' Guna2PictureBox1
         ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 8.25F)
-        Label12.Location = New Point(-1, 71)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(157, 13)
-        Label12.TabIndex = 4
-        Label12.Text = "All revenue for the past week"
+        Guna2PictureBox1.BorderRadius = 37
+        CustomizableEdges3.BottomLeft = False
+        CustomizableEdges3.BottomRight = False
+        CustomizableEdges3.TopLeft = False
+        CustomizableEdges3.TopRight = False
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox1.Dock = DockStyle.Fill
+        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.Location = New Point(185, 3)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        TableLayoutPanel6.SetRowSpan(Guna2PictureBox1, 4)
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2PictureBox1.Size = New Size(101, 102)
+        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        Guna2PictureBox1.TabIndex = 5
+        Guna2PictureBox1.TabStop = False
         ' 
         ' Panel6
         ' 
         Panel6.BorderStyle = BorderStyle.FixedSingle
-        Panel6.Controls.Add(lblTotalOrder)
-        Panel6.Controls.Add(Label7)
-        Panel6.Controls.Add(Label14)
-        Panel6.Controls.Add(Label8)
+        Panel6.Controls.Add(TableLayoutPanel7)
         Panel6.Dock = DockStyle.Fill
         Panel6.Location = New Point(300, 3)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(291, 110)
         Panel6.TabIndex = 0
         ' 
+        ' TableLayoutPanel7
+        ' 
+        TableLayoutPanel7.ColumnCount = 2
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 64.38994F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.61006F))
+        TableLayoutPanel7.Controls.Add(Guna2PictureBox2, 1, 0)
+        TableLayoutPanel7.Controls.Add(Label14, 0, 3)
+        TableLayoutPanel7.Controls.Add(lblTotalOrder, 0, 2)
+        TableLayoutPanel7.Controls.Add(Label7, 0, 0)
+        TableLayoutPanel7.Controls.Add(Label8, 0, 1)
+        TableLayoutPanel7.Dock = DockStyle.Fill
+        TableLayoutPanel7.Location = New Point(0, 0)
+        TableLayoutPanel7.Name = "TableLayoutPanel7"
+        TableLayoutPanel7.RowCount = 4
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 24.8491325F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 15.3202248F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 39.6534958F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 20.177145F))
+        TableLayoutPanel7.Size = New Size(289, 108)
+        TableLayoutPanel7.TabIndex = 0
+        ' 
+        ' Guna2PictureBox2
+        ' 
+        Guna2PictureBox2.BorderRadius = 37
+        CustomizableEdges5.BottomLeft = False
+        CustomizableEdges5.BottomRight = False
+        CustomizableEdges5.TopLeft = False
+        CustomizableEdges5.TopRight = False
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges5
+        Guna2PictureBox2.Dock = DockStyle.Fill
+        Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.Location = New Point(189, 3)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        TableLayoutPanel7.SetRowSpan(Guna2PictureBox2, 4)
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2PictureBox2.Size = New Size(97, 102)
+        Guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        Guna2PictureBox2.TabIndex = 6
+        Guna2PictureBox2.TabStop = False
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Dock = DockStyle.Fill
+        Label14.Font = New Font("Segoe UI", 8.25F)
+        Label14.Location = New Point(3, 84)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(180, 24)
+        Label14.TabIndex = 5
+        Label14.Text = "Business Activity Level"
+        ' 
         ' lblTotalOrder
         ' 
         lblTotalOrder.AutoSize = True
+        lblTotalOrder.Dock = DockStyle.Fill
         lblTotalOrder.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTotalOrder.Location = New Point(-1, 33)
+        lblTotalOrder.Location = New Point(3, 42)
         lblTotalOrder.Name = "lblTotalOrder"
-        lblTotalOrder.Size = New Size(89, 37)
+        lblTotalOrder.Size = New Size(180, 42)
         lblTotalOrder.TabIndex = 5
         lblTotalOrder.Text = "₱ 100"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
+        Label7.Dock = DockStyle.Fill
         Label7.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
-        Label7.Location = New Point(-1, 0)
+        Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(116, 20)
+        Label7.Size = New Size(180, 26)
         Label7.TabIndex = 0
         Label7.Text = "TOTAL ORDERS"
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI", 8.25F)
-        Label14.Location = New Point(-1, 71)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(118, 13)
-        Label14.TabIndex = 5
-        Label14.Text = "Business Activity Level"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
+        Label8.Dock = DockStyle.Fill
         Label8.Font = New Font("Segoe UI", 8.25F)
-        Label8.Location = New Point(-1, 20)
+        Label8.Location = New Point(3, 26)
         Label8.Name = "Label8"
-        Label8.Size = New Size(130, 13)
+        Label8.Size = New Size(180, 16)
         Label8.TabIndex = 1
         Label8.Text = "Completed Transactions"
         ' 
@@ -430,115 +578,43 @@ Partial Class StatsControl
         ' 
         TableLayoutPanel4.ColumnCount = 1
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel4.Controls.Add(Panel11, 0, 0)
-        TableLayoutPanel4.Controls.Add(Panel13, 0, 2)
+        TableLayoutPanel4.Controls.Add(Guna2CustomGradientPanel2, 0, 2)
+        TableLayoutPanel4.Controls.Add(TableLayoutPanel5, 0, 0)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(598, 3)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 3
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 56.2308235F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 43.76918F))
         TableLayoutPanel4.Size = New Size(293, 345)
         TableLayoutPanel4.TabIndex = 0
         ' 
-        ' Panel11
+        ' TableLayoutPanel5
         ' 
-        Panel11.Controls.Add(Panel10)
-        Panel11.Controls.Add(Panel12)
-        Panel11.Dock = DockStyle.Fill
-        Panel11.Location = New Point(3, 3)
-        Panel11.Name = "Panel11"
-        Panel11.Size = New Size(287, 156)
-        Panel11.TabIndex = 1
+        TableLayoutPanel5.ColumnCount = 1
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel5.Controls.Add(Label11, 0, 0)
+        TableLayoutPanel5.Controls.Add(Guna2CustomGradientPanel1, 0, 1)
+        TableLayoutPanel5.Dock = DockStyle.Fill
+        TableLayoutPanel5.Location = New Point(3, 3)
+        TableLayoutPanel5.Name = "TableLayoutPanel5"
+        TableLayoutPanel5.RowCount = 2
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 83.3333359F))
+        TableLayoutPanel5.Size = New Size(287, 176)
+        TableLayoutPanel5.TabIndex = 0
         ' 
-        ' Panel10
+        ' Label11
         ' 
-        Panel10.BackColor = Color.FromArgb(CByte(102), CByte(204), CByte(153))
-        Panel10.BorderStyle = BorderStyle.FixedSingle
-        Panel10.Controls.Add(TextBox1)
-        Panel10.Controls.Add(Label18)
-        Panel10.Dock = DockStyle.Fill
-        Panel10.Location = New Point(0, 22)
-        Panel10.Name = "Panel10"
-        Panel10.Size = New Size(287, 134)
-        Panel10.TabIndex = 1
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Dock = DockStyle.Bottom
-        TextBox1.Enabled = False
-        TextBox1.Location = New Point(0, 109)
-        TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(285, 23)
-        TextBox1.TabIndex = 1
-        ' 
-        ' Label18
-        ' 
-        Label18.Anchor = AnchorStyles.Right
-        Label18.AutoSize = True
-        Label18.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label18.ForeColor = Color.White
-        Label18.Location = New Point(150, 66)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(136, 21)
-        Label18.TabIndex = 0
-        Label18.Text = "Service Revenue"
-        ' 
-        ' Panel12
-        ' 
-        Panel12.Controls.Add(Label15)
-        Panel12.Dock = DockStyle.Top
-        Panel12.Location = New Point(0, 0)
-        Panel12.Name = "Panel12"
-        Panel12.Size = New Size(287, 22)
-        Panel12.TabIndex = 0
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Dock = DockStyle.Top
-        Label15.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(0, 0)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(190, 21)
-        Label15.TabIndex = 0
-        Label15.Text = "REVENUE BREAKDOWN"
-        ' 
-        ' Panel13
-        ' 
-        Panel13.BackColor = Color.FromArgb(CByte(255), CByte(183), CByte(51))
-        Panel13.BorderStyle = BorderStyle.FixedSingle
-        Panel13.Controls.Add(TextBox2)
-        Panel13.Controls.Add(Label19)
-        Panel13.Dock = DockStyle.Fill
-        Panel13.Location = New Point(3, 185)
-        Panel13.Name = "Panel13"
-        Panel13.Size = New Size(287, 157)
-        Panel13.TabIndex = 2
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Dock = DockStyle.Bottom
-        TextBox2.Enabled = False
-        TextBox2.Location = New Point(0, 132)
-        TextBox2.Name = "TextBox2"
-        TextBox2.ReadOnly = True
-        TextBox2.Size = New Size(285, 23)
-        TextBox2.TabIndex = 3
-        ' 
-        ' Label19
-        ' 
-        Label19.Anchor = AnchorStyles.Right
-        Label19.AutoSize = True
-        Label19.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label19.ForeColor = Color.White
-        Label19.Location = New Point(150, 93)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(112, 21)
-        Label19.TabIndex = 2
-        Label19.Text = "Delivery Fees"
+        Label11.AutoSize = True
+        Label11.Dock = DockStyle.Fill
+        Label11.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(3, 0)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(281, 29)
+        Label11.TabIndex = 0
+        Label11.Text = "REVENUE BREAKDOWN"
         ' 
         ' statspanel
         ' 
@@ -547,6 +623,64 @@ Partial Class StatsControl
         statspanel.Name = "statspanel"
         statspanel.Size = New Size(589, 345)
         statspanel.TabIndex = 1
+        ' 
+        ' Label13
+        ' 
+        Label13.Anchor = AnchorStyles.Right
+        Label13.AutoSize = True
+        Label13.BackColor = Color.Transparent
+        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.White
+        Label13.Location = New Point(187, 59)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(91, 17)
+        Label13.TabIndex = 4
+        Label13.Text = "Delivery Fees"
+        ' 
+        ' Guna2CustomGradientPanel1
+        ' 
+        Guna2CustomGradientPanel1.AutoRoundedCorners = True
+        Guna2CustomGradientPanel1.Controls.Add(Label13)
+        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges9
+        Guna2CustomGradientPanel1.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel1.FillColor = Color.FromArgb(CByte(102), CByte(204), CByte(153))
+        Guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(CByte(102), CByte(204), CByte(153))
+        Guna2CustomGradientPanel1.FillColor3 = Color.FromArgb(CByte(0), CByte(108), CByte(113))
+        Guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(CByte(0), CByte(108), CByte(113))
+        Guna2CustomGradientPanel1.Location = New Point(3, 32)
+        Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
+        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2CustomGradientPanel1.Size = New Size(281, 141)
+        Guna2CustomGradientPanel1.TabIndex = 0
+        ' 
+        ' Guna2CustomGradientPanel2
+        ' 
+        Guna2CustomGradientPanel2.AutoRoundedCorners = True
+        Guna2CustomGradientPanel2.Controls.Add(Label15)
+        Guna2CustomGradientPanel2.CustomizableEdges = CustomizableEdges7
+        Guna2CustomGradientPanel2.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel2.FillColor = Color.FromArgb(CByte(235), CByte(125), CByte(56))
+        Guna2CustomGradientPanel2.FillColor2 = Color.FromArgb(CByte(235), CByte(125), CByte(56))
+        Guna2CustomGradientPanel2.FillColor3 = Color.FromArgb(CByte(152), CByte(0), CByte(46))
+        Guna2CustomGradientPanel2.FillColor4 = Color.FromArgb(CByte(152), CByte(0), CByte(46))
+        Guna2CustomGradientPanel2.Location = New Point(3, 205)
+        Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
+        Guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2CustomGradientPanel2.Size = New Size(287, 137)
+        Guna2CustomGradientPanel2.TabIndex = 3
+        ' 
+        ' Label15
+        ' 
+        Label15.Anchor = AnchorStyles.Right
+        Label15.AutoSize = True
+        Label15.BackColor = Color.Transparent
+        Label15.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.ForeColor = Color.White
+        Label15.Location = New Point(190, 60)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(91, 17)
+        Label15.TabIndex = 4
+        Label15.Text = "Delivery Fees"
         ' 
         ' StatsControl
         ' 
@@ -568,21 +702,26 @@ Partial Class StatsControl
         Panel5.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
         Panel8.ResumeLayout(False)
-        Panel8.PerformLayout()
+        TableLayoutPanel8.ResumeLayout(False)
+        TableLayoutPanel8.PerformLayout()
+        CType(Guna2PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel7.ResumeLayout(False)
-        Panel7.PerformLayout()
+        TableLayoutPanel6.ResumeLayout(False)
+        TableLayoutPanel6.PerformLayout()
+        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
-        Panel6.PerformLayout()
+        TableLayoutPanel7.ResumeLayout(False)
+        TableLayoutPanel7.PerformLayout()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel9.ResumeLayout(False)
         TableLayoutPanel3.ResumeLayout(False)
         TableLayoutPanel4.ResumeLayout(False)
-        Panel11.ResumeLayout(False)
-        Panel10.ResumeLayout(False)
-        Panel10.PerformLayout()
-        Panel12.ResumeLayout(False)
-        Panel12.PerformLayout()
-        Panel13.ResumeLayout(False)
-        Panel13.PerformLayout()
+        TableLayoutPanel5.ResumeLayout(False)
+        TableLayoutPanel5.PerformLayout()
+        Guna2CustomGradientPanel1.ResumeLayout(False)
+        Guna2CustomGradientPanel1.PerformLayout()
+        Guna2CustomGradientPanel2.ResumeLayout(False)
+        Guna2CustomGradientPanel2.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -608,7 +747,6 @@ Partial Class StatsControl
     Friend WithEvents Label14 As Label
     Friend WithEvents lblTotalOrder As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents lblOrderValue As Label
     Friend WithEvents Panel7 As Panel
@@ -619,14 +757,18 @@ Partial Class StatsControl
     Friend WithEvents Panel9 As Panel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Panel13 As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label19 As Label
     Friend WithEvents statspanel As Panel
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Guna2CustomGradientPanel2 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents Label15 As Label
 
 End Class
