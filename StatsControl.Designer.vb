@@ -63,6 +63,7 @@ Partial Class StatsControl
         Panel13 = New Panel()
         TextBox2 = New TextBox()
         Label19 = New Label()
+        statspanel = New Panel()
         TableLayoutPanel1.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
@@ -416,6 +417,7 @@ Partial Class StatsControl
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 66.6666641F))
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel3.Controls.Add(TableLayoutPanel4, 1, 0)
+        TableLayoutPanel3.Controls.Add(statspanel, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(0, 0)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -538,6 +540,14 @@ Partial Class StatsControl
         Label19.TabIndex = 2
         Label19.Text = "Delivery Fees"
         ' 
+        ' statspanel
+        ' 
+        statspanel.Dock = DockStyle.Fill
+        statspanel.Location = New Point(3, 3)
+        statspanel.Name = "statspanel"
+        statspanel.Size = New Size(589, 345)
+        statspanel.TabIndex = 1
+        ' 
         ' StatsControl
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
@@ -617,5 +627,6 @@ Partial Class StatsControl
     Friend WithEvents Panel13 As Panel
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label19 As Label
+    Friend WithEvents statspanel As Panel
 
 End Class
