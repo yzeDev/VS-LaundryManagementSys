@@ -5,7 +5,7 @@ Public Class TransactionForm
     Public Property Mode As String = "View" ' "View" or "Edit"
     Public Property TransactionId As Integer
 
-    Private connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+    Private connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\source\repos\LaundryManagementSys\LaundryDatabase.accdb;"
 
     Public Sub New()
         InitializeComponent()

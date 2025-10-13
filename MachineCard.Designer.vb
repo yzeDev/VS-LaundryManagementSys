@@ -26,8 +26,8 @@ Partial Class MachineCard
         picMachine = New PictureBox()
         TableLayoutPanel2 = New TableLayoutPanel()
         lblUnit = New Label()
-        lblMachineIDText = New Label()
         lblTransactionID = New Label()
+        lblMachineIDText = New Label()
         lblWeightText = New Label()
         lblWeightValue = New Label()
         Label1 = New Label()
@@ -35,8 +35,8 @@ Partial Class MachineCard
         Label3 = New Label()
         Label4 = New Label()
         lblStatus = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
+        btnComplete = New Button()
+        btnViewDetails = New Button()
         TableLayoutPanel1.SuspendLayout()
         CType(picMachine, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel2.SuspendLayout()
@@ -50,8 +50,8 @@ Partial Class MachineCard
         TableLayoutPanel1.Controls.Add(picMachine, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 1, 1)
         TableLayoutPanel1.Controls.Add(lblStatus, 1, 0)
-        TableLayoutPanel1.Controls.Add(Button1, 0, 2)
-        TableLayoutPanel1.Controls.Add(Button2, 1, 2)
+        TableLayoutPanel1.Controls.Add(btnComplete, 0, 2)
+        TableLayoutPanel1.Controls.Add(btnViewDetails, 1, 2)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -111,19 +111,7 @@ Partial Class MachineCard
         lblUnit.Size = New Size(188, 36)
         lblUnit.TabIndex = 0
         lblUnit.Text = "Unit"
-        ' 
-        ' lblMachineIDText
-        ' 
-        lblMachineIDText.AutoSize = True
-        TableLayoutPanel2.SetColumnSpan(lblMachineIDText, 2)
-        lblMachineIDText.Dock = DockStyle.Fill
-        lblMachineIDText.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblMachineIDText.Location = New Point(3, 36)
-        lblMachineIDText.Name = "lblMachineIDText"
-        lblMachineIDText.Size = New Size(188, 36)
-        lblMachineIDText.TabIndex = 5
-        lblMachineIDText.Text = "Machine ID:"
-        lblMachineIDText.TextAlign = ContentAlignment.MiddleLeft
+        lblUnit.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblTransactionID
         ' 
@@ -137,6 +125,19 @@ Partial Class MachineCard
         lblTransactionID.TabIndex = 8
         lblTransactionID.Text = "Transaction ID:"
         lblTransactionID.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' lblMachineIDText
+        ' 
+        lblMachineIDText.AutoSize = True
+        TableLayoutPanel2.SetColumnSpan(lblMachineIDText, 2)
+        lblMachineIDText.Dock = DockStyle.Fill
+        lblMachineIDText.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblMachineIDText.Location = New Point(3, 36)
+        lblMachineIDText.Name = "lblMachineIDText"
+        lblMachineIDText.Size = New Size(188, 36)
+        lblMachineIDText.TabIndex = 5
+        lblMachineIDText.Text = "Machine ID:"
+        lblMachineIDText.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblWeightText
         ' 
@@ -220,25 +221,25 @@ Partial Class MachineCard
         lblStatus.Text = "Status"
         lblStatus.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Button1
+        ' btnComplete
         ' 
-        Button1.Dock = DockStyle.Fill
-        Button1.Location = New Point(3, 258)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(194, 39)
-        Button1.TabIndex = 11
-        Button1.Text = "Configure"
-        Button1.UseVisualStyleBackColor = True
+        btnComplete.Dock = DockStyle.Fill
+        btnComplete.Location = New Point(3, 258)
+        btnComplete.Name = "btnComplete"
+        btnComplete.Size = New Size(194, 39)
+        btnComplete.TabIndex = 11
+        btnComplete.Text = "Complete"
+        btnComplete.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnViewDetails
         ' 
-        Button2.Dock = DockStyle.Fill
-        Button2.Location = New Point(203, 258)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(194, 39)
-        Button2.TabIndex = 12
-        Button2.Text = "View Details"
-        Button2.UseVisualStyleBackColor = True
+        btnViewDetails.Dock = DockStyle.Fill
+        btnViewDetails.Location = New Point(203, 258)
+        btnViewDetails.Name = "btnViewDetails"
+        btnViewDetails.Size = New Size(194, 39)
+        btnViewDetails.TabIndex = 12
+        btnViewDetails.Text = "View Details"
+        btnViewDetails.UseVisualStyleBackColor = True
         ' 
         ' MachineCard
         ' 
@@ -269,7 +270,7 @@ Partial Class MachineCard
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnComplete As Button
+    Friend WithEvents btnViewDetails As Button
 
 End Class
