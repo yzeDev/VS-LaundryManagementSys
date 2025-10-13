@@ -85,8 +85,8 @@ Partial Class StatsControl
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Controls.Add(Panel1, 0, 0)
         TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
         TableLayoutPanel1.Controls.Add(Panel3, 1, 1)
@@ -102,7 +102,7 @@ Partial Class StatsControl
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 6.46108675F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 17.9148312F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 52.42291F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.Size = New Size(900, 681)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -120,7 +120,7 @@ Partial Class StatsControl
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 42)
         Label1.Name = "Label1"
         Label1.Size = New Size(590, 21)
@@ -130,7 +130,7 @@ Partial Class StatsControl
         ' lblStatistics
         ' 
         lblStatistics.AutoSize = True
-        lblStatistics.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblStatistics.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblStatistics.Location = New Point(-3, -3)
         lblStatistics.Name = "lblStatistics"
         lblStatistics.Size = New Size(151, 45)
@@ -236,8 +236,8 @@ Partial Class StatsControl
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel2.Size = New Size(894, 116)
         TableLayoutPanel2.TabIndex = 0
         ' 
@@ -290,7 +290,7 @@ Partial Class StatsControl
         Label10.Font = New Font("Segoe UI", 8.25F)
         Label10.Location = New Point(-1, 20)
         Label10.Name = "Label10"
-        Label10.Size = New Size(129, 13)
+        Label10.Size = New Size(128, 13)
         Label10.TabIndex = 1
         Label10.Text = "Per Transaction Average"
         ' 
@@ -320,7 +320,7 @@ Partial Class StatsControl
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(-1, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(133, 21)
@@ -386,7 +386,7 @@ Partial Class StatsControl
         Label14.Font = New Font("Segoe UI", 8.25F)
         Label14.Location = New Point(-1, 71)
         Label14.Name = "Label14"
-        Label14.Size = New Size(118, 13)
+        Label14.Size = New Size(119, 13)
         Label14.TabIndex = 5
         Label14.Text = "Business Activity Level"
         ' 
@@ -396,7 +396,7 @@ Partial Class StatsControl
         Label8.Font = New Font("Segoe UI", 8.25F)
         Label8.Location = New Point(-1, 20)
         Label8.Name = "Label8"
-        Label8.Size = New Size(130, 13)
+        Label8.Size = New Size(129, 13)
         Label8.TabIndex = 1
         Label8.Text = "Completed Transactions"
         ' 
@@ -420,23 +420,23 @@ Partial Class StatsControl
         TableLayoutPanel3.Location = New Point(0, 0)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 1
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.Size = New Size(894, 351)
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 1
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel4.Controls.Add(Panel11, 0, 0)
         TableLayoutPanel4.Controls.Add(Panel13, 0, 2)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(598, 3)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 3
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Size = New Size(293, 345)
         TableLayoutPanel4.TabIndex = 0
         ' 
@@ -476,7 +476,7 @@ Partial Class StatsControl
         ' 
         Label18.Anchor = AnchorStyles.Right
         Label18.AutoSize = True
-        Label18.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label18.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.White
         Label18.Location = New Point(150, 66)
         Label18.Name = "Label18"
@@ -497,7 +497,7 @@ Partial Class StatsControl
         ' 
         Label15.AutoSize = True
         Label15.Dock = DockStyle.Top
-        Label15.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(0, 0)
         Label15.Name = "Label15"
         Label15.Size = New Size(190, 21)
@@ -530,7 +530,7 @@ Partial Class StatsControl
         ' 
         Label19.Anchor = AnchorStyles.Right
         Label19.AutoSize = True
-        Label19.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label19.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.White
         Label19.Location = New Point(150, 93)
         Label19.Name = "Label19"
@@ -540,7 +540,7 @@ Partial Class StatsControl
         ' 
         ' StatsControl
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(TableLayoutPanel1)
         Margin = New Padding(3, 2, 3, 2)

@@ -3,7 +3,7 @@
 Public Class StatsControl
 
     ' ⚙️ UPDATE THIS PATH to match your actual file location
-    Private dbPath As String = "D:\laundryfiles\Resources\LaundryDatabase.accdb"
+    Private dbPath As String = "C:\Users\Eisen\source\repos\LaundryManagementSys\LaundryDatabase.accdb"
     Private connectionString As String
 
     Private Sub StatsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load

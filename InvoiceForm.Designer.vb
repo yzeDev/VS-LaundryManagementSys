@@ -44,7 +44,7 @@ Partial Class InvoiceForm
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Controls.Add(lblLaundryText, 0, 0)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
@@ -54,7 +54,7 @@ Partial Class InvoiceForm
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 6.841339F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 36.5356636F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 31.4410477F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel1.Size = New Size(627, 687)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -76,7 +76,7 @@ Partial Class InvoiceForm
         TableLayoutPanel2.ColumnCount = 3
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.5092945F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 72.49071F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82F))
         TableLayoutPanel2.Controls.Add(tbAmount, 1, 5)
         TableLayoutPanel2.Controls.Add(tbAddress, 1, 3)
         TableLayoutPanel2.Controls.Add(tbContactNumber, 1, 2)
@@ -241,7 +241,7 @@ Partial Class InvoiceForm
         ' 
         ' InvoiceForm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(627, 687)
         Controls.Add(TableLayoutPanel1)
