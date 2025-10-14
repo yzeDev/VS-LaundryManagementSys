@@ -1056,8 +1056,8 @@ Partial Class DashboardControl
         ' 
         ' DashboardControl
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleMode = AutoScaleMode.Dpi
         BackColor = Color.FromArgb(CByte(241), CByte(241), CByte(241))
         Controls.Add(TableLayoutPanel11)
         Controls.Add(Panel1)

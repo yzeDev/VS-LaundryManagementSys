@@ -50,12 +50,6 @@ Partial Class TransactionOption
         pbLogo = New PictureBox()
         lblTitle = New Label()
         Panel2 = New Panel()
-        TableLayoutPanel6 = New TableLayoutPanel()
-        Button4 = New Button()
-        TableLayoutPanel7 = New TableLayoutPanel()
-        Label2 = New Label()
-        Label4 = New Label()
-        PictureBox1 = New PictureBox()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel10.SuspendLayout()
         TableLayoutPanel11.SuspendLayout()
@@ -70,10 +64,6 @@ Partial Class TransactionOption
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         CType(pbLogo, ComponentModel.ISupportInitialize).BeginInit()
-        Panel2.SuspendLayout()
-        TableLayoutPanel6.SuspendLayout()
-        TableLayoutPanel7.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -421,88 +411,11 @@ Partial Class TransactionOption
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(TableLayoutPanel6)
         Panel2.Dock = DockStyle.Fill
         Panel2.Location = New Point(249, 153)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(240, 365)
         Panel2.TabIndex = 22
-        ' 
-        ' TableLayoutPanel6
-        ' 
-        TableLayoutPanel6.ColumnCount = 1
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel6.Controls.Add(Button4, 0, 2)
-        TableLayoutPanel6.Controls.Add(TableLayoutPanel7, 0, 0)
-        TableLayoutPanel6.Dock = DockStyle.Fill
-        TableLayoutPanel6.Location = New Point(0, 0)
-        TableLayoutPanel6.Name = "TableLayoutPanel6"
-        TableLayoutPanel6.RowCount = 3
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0000076F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel6.Size = New Size(240, 365)
-        TableLayoutPanel6.TabIndex = 1
-        ' 
-        ' Button4
-        ' 
-        Button4.Dock = DockStyle.Fill
-        Button4.Location = New Point(3, 327)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(234, 35)
-        Button4.TabIndex = 4
-        Button4.Text = "Select Service"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' TableLayoutPanel7
-        ' 
-        TableLayoutPanel7.ColumnCount = 1
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel7.Controls.Add(Label2, 0, 2)
-        TableLayoutPanel7.Controls.Add(Label4, 0, 1)
-        TableLayoutPanel7.Controls.Add(PictureBox1, 0, 0)
-        TableLayoutPanel7.Dock = DockStyle.Fill
-        TableLayoutPanel7.Location = New Point(3, 3)
-        TableLayoutPanel7.Name = "TableLayoutPanel7"
-        TableLayoutPanel7.RowCount = 3
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Absolute, 70F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.Size = New Size(234, 156)
-        TableLayoutPanel7.TabIndex = 0
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(3, 113)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(228, 43)
-        Label2.TabIndex = 2
-        Label2.Text = "Enjoy complete convenience. We take" & vbCrLf & "care of everything from washing and" & vbCrLf & " drying to folding and packing."
-        Label2.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(3, 70)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(228, 43)
-        Label4.TabIndex = 0
-        Label4.Text = "Full-Service"
-        Label4.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Anchor = AnchorStyles.None
-        PictureBox1.Location = New Point(67, 10)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(100, 50)
-        PictureBox1.TabIndex = 3
-        PictureBox1.TabStop = False
         ' 
         ' TransactionOption
         ' 
@@ -538,11 +451,6 @@ Partial Class TransactionOption
         TableLayoutPanel3.ResumeLayout(False)
         TableLayoutPanel3.PerformLayout()
         CType(pbLogo, ComponentModel.ISupportInitialize).EndInit()
-        Panel2.ResumeLayout(False)
-        TableLayoutPanel6.ResumeLayout(False)
-        TableLayoutPanel7.ResumeLayout(False)
-        TableLayoutPanel7.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -572,10 +480,4 @@ Partial Class TransactionOption
     Friend WithEvents Label3 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
-    Friend WithEvents Button4 As Button
-    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox1 As PictureBox
 End Class

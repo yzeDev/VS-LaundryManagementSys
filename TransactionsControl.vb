@@ -29,6 +29,13 @@ Public Class TransactionsControl
     ' LOAD
     ' -------------------------
     Private Sub TransactionsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' --- FIX START ---
+        Me.AutoScaleMode = AutoScaleMode.None
+        Me.Scale(New SizeF(1.0F, 1.0F))
+        Me.Dock = DockStyle.Fill
+        ' --- FIX END ---
+
         flpTransactions.FlowDirection = FlowDirection.TopDown
         flpTransactions.WrapContents = False
         flpTransactions.AutoScroll = True
@@ -37,7 +44,7 @@ Public Class TransactionsControl
 
         AddHandler cmbStatus.SelectedIndexChanged, AddressOf ApplyFilters
         AddHandler tbSearch.TextChanged, AddressOf ApplyFilters
-        AddHandler dtpDateFilter.ValueChanged, AddressOf ApplyFilters
+        AddHandler dtpDateFilter1.ValueChanged, AddressOf ApplyFilters
         AddHandler chkAllDates.CheckedChanged, AddressOf ApplyFilters
         AddHandler flpTransactions.SizeChanged, AddressOf flpTransactions_SizeChanged
 
@@ -218,7 +225,7 @@ Public Class TransactionsControl
 
                 ' Date Filter
                 If visible AndAlso Not chkAllDates.Checked Then
-                    Dim selectedDate As Date = dtpDateFilter.Value.Date
+                    Dim selectedDate As Date = dtpDateFilter1.Value.Date
                     Dim rowDate As Date = Date.Parse(row.lblDate.Text).Date
                     visible = (rowDate = selectedDate)
                 End If
@@ -236,37 +243,37 @@ Public Class TransactionsControl
         popup.ShowDialog()
     End Sub
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs)
         If selectedRow Is Nothing Then
             MessageBox.Show("Please select a transaction to edit.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
-        Dim form As New TransactionForm()
+        Dim form As New TransactionForm
         form.TransactionId = selectedRow.TransactionID
         form.Mode = "Edit"
 
-        If form.ShowDialog() = DialogResult.OK Then
+        If form.ShowDialog = DialogResult.OK Then
             LoadTransactions()
         End If
     End Sub
 
-    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
+    Private Sub btnRemove_Click(sender As Object, e As EventArgs)
         If selectedRow Is Nothing Then
             MessageBox.Show("Please select a transaction to remove.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
-        Dim transactionId As Integer = selectedRow.TransactionID
+        Dim transactionId = selectedRow.TransactionID
         Dim confirm = MessageBox.Show($"Are you sure you want to delete transaction #{transactionId}?",
                                   "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If confirm = DialogResult.Yes Then
             Try
-                Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+                Dim connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
                 Using conn As New OleDbConnection(connStr)
                     conn.Open()
-                    Dim sql As String = "DELETE FROM Transactions WHERE TransactionID = @id"
+                    Dim sql = "DELETE FROM Transactions WHERE TransactionID = @id"
                     Using cmd As New OleDbCommand(sql, conn)
                         cmd.Parameters.AddWithValue("@id", transactionId)
                         cmd.ExecuteNonQuery()

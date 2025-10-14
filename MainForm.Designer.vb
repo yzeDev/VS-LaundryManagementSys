@@ -1,10 +1,10 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
-    Protected Overrides Sub Dispose(disposing As Boolean)
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
                 components.Dispose()
@@ -20,193 +20,531 @@ Partial Class MainForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        btnOptions = New Button()
-        btnStats = New Button()
-        btnTransactions = New Button()
-        btnMachines = New Button()
-        btnDashboard = New Button()
-        MainPanel = New Panel()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        Panel1 = New Panel()
-        Label1 = New Label()
-        Panel2 = New Panel()
-        TableLayoutPanel1.SuspendLayout()
-        Panel1.SuspendLayout()
-        Panel2.SuspendLayout()
+        navbarPanel = New Guna.UI2.WinForms.Guna2GradientPanel()
+        navbarBtnPanel = New Panel()
+        navBottomDivider = New Panel()
+        settingsBtnPanel = New Panel()
+        settingsBtn = New Button()
+        adminPanel = New Panel()
+        adminnNavTblPanel = New TableLayoutPanel()
+        logoutBtn = New Button()
+        administratorLbl = New Label()
+        adminPicBox = New PictureBox()
+        adminNameLbl = New Label()
+        statsBtnPanel = New Panel()
+        statisticsBtn = New Button()
+        transacBtnPanel = New Panel()
+        transactionsBtn = New Button()
+        machineBtnPanel = New Panel()
+        machinesBtn = New Button()
+        dashBtnPanel = New Panel()
+        dashboardBtn = New Button()
+        logoTblPanel = New TableLayoutPanel()
+        shopLabel = New Label()
+        logoIcon = New PictureBox()
+        controlsPanel = New Panel()
+        controlsTblPanel = New TableLayoutPanel()
+        xBtn = New Button()
+        maximizeBtn = New Button()
+        minimizeBtn = New Button()
+        topDivider = New Panel()
+        contentSpacePanel = New Panel()
+        titleBarPanel = New Panel()
+        navbarPanel.SuspendLayout()
+        navbarBtnPanel.SuspendLayout()
+        settingsBtnPanel.SuspendLayout()
+        adminPanel.SuspendLayout()
+        adminnNavTblPanel.SuspendLayout()
+        CType(adminPicBox, ComponentModel.ISupportInitialize).BeginInit()
+        statsBtnPanel.SuspendLayout()
+        transacBtnPanel.SuspendLayout()
+        machineBtnPanel.SuspendLayout()
+        dashBtnPanel.SuspendLayout()
+        logoTblPanel.SuspendLayout()
+        CType(logoIcon, ComponentModel.ISupportInitialize).BeginInit()
+        controlsPanel.SuspendLayout()
+        controlsTblPanel.SuspendLayout()
         SuspendLayout()
         ' 
-        ' btnOptions
+        ' navbarPanel
         ' 
-        btnOptions.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnOptions.BackColor = Color.White
-        btnOptions.BackgroundImageLayout = ImageLayout.Zoom
-        btnOptions.FlatAppearance.BorderSize = 0
-        btnOptions.FlatStyle = FlatStyle.Flat
-        btnOptions.Location = New Point(0, 279)
-        btnOptions.Margin = New Padding(5)
-        btnOptions.Name = "btnOptions"
-        btnOptions.Size = New Size(144, 60)
-        btnOptions.TabIndex = 4
-        btnOptions.TabStop = False
-        btnOptions.Text = "Options"
-        btnOptions.UseVisualStyleBackColor = False
+        navbarPanel.Controls.Add(navbarBtnPanel)
+        navbarPanel.Controls.Add(logoTblPanel)
+        navbarPanel.CustomizableEdges = CustomizableEdges1
+        navbarPanel.Dock = DockStyle.Left
+        navbarPanel.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        navbarPanel.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        navbarPanel.Location = New Point(0, 0)
+        navbarPanel.Margin = New Padding(6, 7, 6, 7)
+        navbarPanel.Name = "navbarPanel"
+        navbarPanel.Padding = New Padding(0, 30, 0, 10)
+        navbarPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        navbarPanel.Size = New Size(220, 681)
+        navbarPanel.TabIndex = 0
         ' 
-        ' btnStats
+        ' navbarBtnPanel
         ' 
-        btnStats.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnStats.BackColor = Color.White
-        btnStats.BackgroundImageLayout = ImageLayout.Zoom
-        btnStats.FlatAppearance.BorderSize = 0
-        btnStats.FlatStyle = FlatStyle.Flat
-        btnStats.Location = New Point(0, 209)
-        btnStats.Margin = New Padding(5)
-        btnStats.Name = "btnStats"
-        btnStats.Size = New Size(144, 60)
-        btnStats.TabIndex = 3
-        btnStats.TabStop = False
-        btnStats.Text = "Statistics"
-        btnStats.UseVisualStyleBackColor = False
+        navbarBtnPanel.BackColor = Color.Transparent
+        navbarBtnPanel.Controls.Add(navBottomDivider)
+        navbarBtnPanel.Controls.Add(settingsBtnPanel)
+        navbarBtnPanel.Controls.Add(adminPanel)
+        navbarBtnPanel.Controls.Add(statsBtnPanel)
+        navbarBtnPanel.Controls.Add(transacBtnPanel)
+        navbarBtnPanel.Controls.Add(machineBtnPanel)
+        navbarBtnPanel.Controls.Add(dashBtnPanel)
+        navbarBtnPanel.Dock = DockStyle.Fill
+        navbarBtnPanel.Location = New Point(0, 117)
+        navbarBtnPanel.Name = "navbarBtnPanel"
+        navbarBtnPanel.Padding = New Padding(7, 0, 7, 0)
+        navbarBtnPanel.Size = New Size(220, 554)
+        navbarBtnPanel.TabIndex = 1
         ' 
-        ' btnTransactions
+        ' navBottomDivider
         ' 
-        btnTransactions.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnTransactions.BackColor = Color.White
-        btnTransactions.BackgroundImageLayout = ImageLayout.Zoom
-        btnTransactions.FlatAppearance.BorderSize = 0
-        btnTransactions.FlatStyle = FlatStyle.Flat
-        btnTransactions.Location = New Point(0, 139)
-        btnTransactions.Margin = New Padding(5)
-        btnTransactions.Name = "btnTransactions"
-        btnTransactions.Size = New Size(144, 60)
-        btnTransactions.TabIndex = 2
-        btnTransactions.TabStop = False
-        btnTransactions.Text = "Transactions"
-        btnTransactions.UseVisualStyleBackColor = False
+        navBottomDivider.BackColor = Color.White
+        navBottomDivider.Dock = DockStyle.Bottom
+        navBottomDivider.Location = New Point(7, 499)
+        navBottomDivider.Name = "navBottomDivider"
+        navBottomDivider.Size = New Size(206, 1)
+        navBottomDivider.TabIndex = 1
         ' 
-        ' btnMachines
+        ' settingsBtnPanel
         ' 
-        btnMachines.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnMachines.BackColor = Color.White
-        btnMachines.BackgroundImageLayout = ImageLayout.Zoom
-        btnMachines.FlatAppearance.BorderSize = 0
-        btnMachines.FlatStyle = FlatStyle.Flat
-        btnMachines.Location = New Point(0, 69)
-        btnMachines.Margin = New Padding(5)
-        btnMachines.Name = "btnMachines"
-        btnMachines.Size = New Size(144, 60)
-        btnMachines.TabIndex = 1
-        btnMachines.TabStop = False
-        btnMachines.Text = "Machines"
-        btnMachines.UseVisualStyleBackColor = False
+        settingsBtnPanel.BackColor = Color.Transparent
+        settingsBtnPanel.Controls.Add(settingsBtn)
+        settingsBtnPanel.Dock = DockStyle.Top
+        settingsBtnPanel.Location = New Point(7, 176)
+        settingsBtnPanel.Name = "settingsBtnPanel"
+        settingsBtnPanel.Size = New Size(206, 44)
+        settingsBtnPanel.TabIndex = 3
         ' 
-        ' btnDashboard
+        ' settingsBtn
         ' 
-        btnDashboard.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnDashboard.BackColor = Color.White
-        btnDashboard.BackgroundImageLayout = ImageLayout.Zoom
-        btnDashboard.FlatAppearance.BorderSize = 0
-        btnDashboard.FlatStyle = FlatStyle.Flat
-        btnDashboard.Location = New Point(0, -1)
-        btnDashboard.Margin = New Padding(5)
-        btnDashboard.Name = "btnDashboard"
-        btnDashboard.Size = New Size(144, 60)
-        btnDashboard.TabIndex = 5
-        btnDashboard.TabStop = False
-        btnDashboard.Text = "Home"
-        btnDashboard.UseVisualStyleBackColor = False
+        settingsBtn.Dock = DockStyle.Fill
+        settingsBtn.FlatAppearance.BorderSize = 0
+        settingsBtn.FlatStyle = FlatStyle.Flat
+        settingsBtn.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        settingsBtn.ForeColor = Color.White
+        settingsBtn.Image = CType(resources.GetObject("settingsBtn.Image"), Image)
+        settingsBtn.ImageAlign = ContentAlignment.MiddleLeft
+        settingsBtn.Location = New Point(0, 0)
+        settingsBtn.Name = "settingsBtn"
+        settingsBtn.Padding = New Padding(15, 4, 0, 4)
+        settingsBtn.Size = New Size(206, 44)
+        settingsBtn.TabIndex = 2
+        settingsBtn.Text = "         Settings"
+        settingsBtn.TextAlign = ContentAlignment.BottomLeft
+        settingsBtn.UseVisualStyleBackColor = True
         ' 
-        ' MainPanel
+        ' adminPanel
         ' 
-        MainPanel.AutoScroll = True
-        MainPanel.AutoSize = True
-        MainPanel.Dock = DockStyle.Fill
-        MainPanel.Location = New Point(155, 5)
-        MainPanel.Margin = New Padding(5)
-        MainPanel.Name = "MainPanel"
-        TableLayoutPanel1.SetRowSpan(MainPanel, 2)
-        MainPanel.Size = New Size(1466, 831)
-        MainPanel.TabIndex = 5
+        adminPanel.BackColor = Color.Transparent
+        adminPanel.Controls.Add(adminnNavTblPanel)
+        adminPanel.Dock = DockStyle.Bottom
+        adminPanel.Location = New Point(7, 500)
+        adminPanel.Name = "adminPanel"
+        adminPanel.Size = New Size(206, 54)
+        adminPanel.TabIndex = 1
         ' 
-        ' TableLayoutPanel1
+        ' adminnNavTblPanel
         ' 
-        TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 150F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel1.Controls.Add(MainPanel, 1, 0)
-        TableLayoutPanel1.Controls.Add(Panel1, 0, 0)
-        TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
-        TableLayoutPanel1.Dock = DockStyle.Fill
-        TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(5)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.92296F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 89.077034F))
-        TableLayoutPanel1.Size = New Size(1626, 841)
-        TableLayoutPanel1.TabIndex = 0
+        adminnNavTblPanel.BackColor = Color.Transparent
+        adminnNavTblPanel.ColumnCount = 3
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
+        adminnNavTblPanel.Controls.Add(logoutBtn, 2, 0)
+        adminnNavTblPanel.Controls.Add(administratorLbl, 1, 1)
+        adminnNavTblPanel.Controls.Add(adminPicBox, 0, 0)
+        adminnNavTblPanel.Controls.Add(adminNameLbl, 1, 0)
+        adminnNavTblPanel.Dock = DockStyle.Bottom
+        adminnNavTblPanel.Location = New Point(0, 14)
+        adminnNavTblPanel.Name = "adminnNavTblPanel"
+        adminnNavTblPanel.RowCount = 2
+        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        adminnNavTblPanel.Size = New Size(206, 40)
+        adminnNavTblPanel.TabIndex = 2
         ' 
-        ' Panel1
+        ' logoutBtn
         ' 
-        Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(3, 3)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(144, 85)
-        Panel1.TabIndex = 8
+        logoutBtn.BackColor = Color.Transparent
+        logoutBtn.Dock = DockStyle.Left
+        logoutBtn.FlatAppearance.BorderSize = 0
+        logoutBtn.FlatStyle = FlatStyle.Flat
+        logoutBtn.Image = CType(resources.GetObject("logoutBtn.Image"), Image)
+        logoutBtn.Location = New Point(167, 3)
+        logoutBtn.Name = "logoutBtn"
+        logoutBtn.Padding = New Padding(0, 0, 5, 0)
+        adminnNavTblPanel.SetRowSpan(logoutBtn, 2)
+        logoutBtn.Size = New Size(36, 34)
+        logoutBtn.TabIndex = 6
+        logoutBtn.UseVisualStyleBackColor = False
         ' 
-        ' Label1
+        ' administratorLbl
         ' 
-        Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(0, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(144, 85)
-        Label1.TabIndex = 0
-        Label1.Text = "ADMIN"
-        Label1.TextAlign = ContentAlignment.MiddleCenter
+        administratorLbl.AutoSize = True
+        administratorLbl.Dock = DockStyle.Fill
+        administratorLbl.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        administratorLbl.ForeColor = Color.White
+        administratorLbl.Location = New Point(62, 20)
+        administratorLbl.Name = "administratorLbl"
+        administratorLbl.Padding = New Padding(4, 0, 0, 0)
+        administratorLbl.Size = New Size(99, 20)
+        administratorLbl.TabIndex = 5
+        administratorLbl.Text = "Administrator"
+        administratorLbl.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Panel2
+        ' adminPicBox
         ' 
-        Panel2.Controls.Add(btnOptions)
-        Panel2.Controls.Add(btnDashboard)
-        Panel2.Controls.Add(btnStats)
-        Panel2.Controls.Add(btnMachines)
-        Panel2.Controls.Add(btnTransactions)
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(3, 94)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(144, 744)
-        Panel2.TabIndex = 9
+        adminPicBox.Dock = DockStyle.Right
+        adminPicBox.Image = CType(resources.GetObject("adminPicBox.Image"), Image)
+        adminPicBox.Location = New Point(17, 3)
+        adminPicBox.Name = "adminPicBox"
+        adminnNavTblPanel.SetRowSpan(adminPicBox, 2)
+        adminPicBox.Size = New Size(39, 34)
+        adminPicBox.SizeMode = PictureBoxSizeMode.Zoom
+        adminPicBox.TabIndex = 3
+        adminPicBox.TabStop = False
+        ' 
+        ' adminNameLbl
+        ' 
+        adminNameLbl.AutoSize = True
+        adminNameLbl.Dock = DockStyle.Fill
+        adminNameLbl.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        adminNameLbl.ForeColor = Color.White
+        adminNameLbl.Location = New Point(62, 0)
+        adminNameLbl.Name = "adminNameLbl"
+        adminNameLbl.Padding = New Padding(4, 0, 0, 0)
+        adminNameLbl.Size = New Size(99, 20)
+        adminNameLbl.TabIndex = 4
+        adminNameLbl.Text = "Admin Name"
+        adminNameLbl.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' statsBtnPanel
+        ' 
+        statsBtnPanel.BackColor = Color.Transparent
+        statsBtnPanel.Controls.Add(statisticsBtn)
+        statsBtnPanel.Dock = DockStyle.Top
+        statsBtnPanel.Location = New Point(7, 132)
+        statsBtnPanel.Name = "statsBtnPanel"
+        statsBtnPanel.Size = New Size(206, 44)
+        statsBtnPanel.TabIndex = 2
+        ' 
+        ' statisticsBtn
+        ' 
+        statisticsBtn.Dock = DockStyle.Fill
+        statisticsBtn.FlatAppearance.BorderSize = 0
+        statisticsBtn.FlatStyle = FlatStyle.Flat
+        statisticsBtn.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        statisticsBtn.ForeColor = Color.White
+        statisticsBtn.Image = CType(resources.GetObject("statisticsBtn.Image"), Image)
+        statisticsBtn.ImageAlign = ContentAlignment.MiddleLeft
+        statisticsBtn.Location = New Point(0, 0)
+        statisticsBtn.Name = "statisticsBtn"
+        statisticsBtn.Padding = New Padding(15, 4, 0, 4)
+        statisticsBtn.Size = New Size(206, 44)
+        statisticsBtn.TabIndex = 2
+        statisticsBtn.Text = "         Statistics"
+        statisticsBtn.TextAlign = ContentAlignment.BottomLeft
+        statisticsBtn.UseVisualStyleBackColor = True
+        ' 
+        ' transacBtnPanel
+        ' 
+        transacBtnPanel.BackColor = Color.Transparent
+        transacBtnPanel.Controls.Add(transactionsBtn)
+        transacBtnPanel.Dock = DockStyle.Top
+        transacBtnPanel.Location = New Point(7, 88)
+        transacBtnPanel.Name = "transacBtnPanel"
+        transacBtnPanel.Size = New Size(206, 44)
+        transacBtnPanel.TabIndex = 2
+        ' 
+        ' transactionsBtn
+        ' 
+        transactionsBtn.Dock = DockStyle.Fill
+        transactionsBtn.FlatAppearance.BorderSize = 0
+        transactionsBtn.FlatStyle = FlatStyle.Flat
+        transactionsBtn.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        transactionsBtn.ForeColor = Color.White
+        transactionsBtn.Image = CType(resources.GetObject("transactionsBtn.Image"), Image)
+        transactionsBtn.ImageAlign = ContentAlignment.MiddleLeft
+        transactionsBtn.Location = New Point(0, 0)
+        transactionsBtn.Name = "transactionsBtn"
+        transactionsBtn.Padding = New Padding(15, 4, 0, 4)
+        transactionsBtn.Size = New Size(206, 44)
+        transactionsBtn.TabIndex = 2
+        transactionsBtn.Text = "         Transactions"
+        transactionsBtn.TextAlign = ContentAlignment.BottomLeft
+        transactionsBtn.UseVisualStyleBackColor = True
+        ' 
+        ' machineBtnPanel
+        ' 
+        machineBtnPanel.BackColor = Color.Transparent
+        machineBtnPanel.Controls.Add(machinesBtn)
+        machineBtnPanel.Dock = DockStyle.Top
+        machineBtnPanel.Location = New Point(7, 44)
+        machineBtnPanel.Name = "machineBtnPanel"
+        machineBtnPanel.Size = New Size(206, 44)
+        machineBtnPanel.TabIndex = 3
+        ' 
+        ' machinesBtn
+        ' 
+        machinesBtn.Dock = DockStyle.Fill
+        machinesBtn.FlatAppearance.BorderSize = 0
+        machinesBtn.FlatStyle = FlatStyle.Flat
+        machinesBtn.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        machinesBtn.ForeColor = Color.White
+        machinesBtn.Image = CType(resources.GetObject("machinesBtn.Image"), Image)
+        machinesBtn.ImageAlign = ContentAlignment.MiddleLeft
+        machinesBtn.Location = New Point(0, 0)
+        machinesBtn.Name = "machinesBtn"
+        machinesBtn.Padding = New Padding(15, 4, 0, 4)
+        machinesBtn.Size = New Size(206, 44)
+        machinesBtn.TabIndex = 2
+        machinesBtn.Text = "         Machines"
+        machinesBtn.TextAlign = ContentAlignment.BottomLeft
+        machinesBtn.UseVisualStyleBackColor = True
+        ' 
+        ' dashBtnPanel
+        ' 
+        dashBtnPanel.BackColor = Color.Transparent
+        dashBtnPanel.Controls.Add(dashboardBtn)
+        dashBtnPanel.Dock = DockStyle.Top
+        dashBtnPanel.Location = New Point(7, 0)
+        dashBtnPanel.Name = "dashBtnPanel"
+        dashBtnPanel.Size = New Size(206, 44)
+        dashBtnPanel.TabIndex = 3
+        ' 
+        ' dashboardBtn
+        ' 
+        dashboardBtn.Dock = DockStyle.Fill
+        dashboardBtn.FlatAppearance.BorderSize = 0
+        dashboardBtn.FlatStyle = FlatStyle.Flat
+        dashboardBtn.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.ForeColor = Color.White
+        dashboardBtn.Image = CType(resources.GetObject("dashboardBtn.Image"), Image)
+        dashboardBtn.ImageAlign = ContentAlignment.MiddleLeft
+        dashboardBtn.Location = New Point(0, 0)
+        dashboardBtn.Name = "dashboardBtn"
+        dashboardBtn.Padding = New Padding(15, 4, 0, 4)
+        dashboardBtn.Size = New Size(206, 44)
+        dashboardBtn.TabIndex = 2
+        dashboardBtn.Text = "         Dashboard"
+        dashboardBtn.TextAlign = ContentAlignment.BottomLeft
+        dashboardBtn.UseVisualStyleBackColor = True
+        ' 
+        ' logoTblPanel
+        ' 
+        logoTblPanel.BackColor = Color.Transparent
+        logoTblPanel.ColumnCount = 2
+        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22F))
+        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78F))
+        logoTblPanel.Controls.Add(shopLabel, 1, 0)
+        logoTblPanel.Controls.Add(logoIcon, 0, 0)
+        logoTblPanel.Dock = DockStyle.Top
+        logoTblPanel.ForeColor = Color.White
+        logoTblPanel.Location = New Point(0, 30)
+        logoTblPanel.Name = "logoTblPanel"
+        logoTblPanel.Padding = New Padding(13, 0, 0, 40)
+        logoTblPanel.RowCount = 1
+        logoTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        logoTblPanel.Size = New Size(220, 87)
+        logoTblPanel.TabIndex = 1
+        ' 
+        ' shopLabel
+        ' 
+        shopLabel.AutoSize = True
+        shopLabel.Dock = DockStyle.Fill
+        shopLabel.ForeColor = Color.White
+        shopLabel.Location = New Point(61, 0)
+        shopLabel.Name = "shopLabel"
+        shopLabel.Size = New Size(156, 47)
+        shopLabel.TabIndex = 2
+        shopLabel.Text = "BubbleFresh"
+        shopLabel.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' logoIcon
+        ' 
+        logoIcon.Dock = DockStyle.Fill
+        logoIcon.Image = CType(resources.GetObject("logoIcon.Image"), Image)
+        logoIcon.Location = New Point(16, 3)
+        logoIcon.Name = "logoIcon"
+        logoIcon.Size = New Size(39, 41)
+        logoIcon.SizeMode = PictureBoxSizeMode.Zoom
+        logoIcon.TabIndex = 2
+        logoIcon.TabStop = False
+        ' 
+        ' controlsPanel
+        ' 
+        controlsPanel.BackColor = Color.White
+        controlsPanel.Controls.Add(controlsTblPanel)
+        controlsPanel.Dock = DockStyle.Top
+        controlsPanel.Location = New Point(220, 0)
+        controlsPanel.Margin = New Padding(3, 0, 3, 0)
+        controlsPanel.Name = "controlsPanel"
+        controlsPanel.Padding = New Padding(0, 3, 0, 3)
+        controlsPanel.Size = New Size(864, 25)
+        controlsPanel.TabIndex = 1
+        ' 
+        ' controlsTblPanel
+        ' 
+        controlsTblPanel.ColumnCount = 3
+        controlsTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333321F))
+        controlsTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333359F))
+        controlsTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333359F))
+        controlsTblPanel.Controls.Add(xBtn, 2, 0)
+        controlsTblPanel.Controls.Add(maximizeBtn, 1, 0)
+        controlsTblPanel.Controls.Add(minimizeBtn, 0, 0)
+        controlsTblPanel.Dock = DockStyle.Right
+        controlsTblPanel.Location = New Point(789, 3)
+        controlsTblPanel.Name = "controlsTblPanel"
+        controlsTblPanel.RowCount = 1
+        controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        controlsTblPanel.Size = New Size(75, 19)
+        controlsTblPanel.TabIndex = 0
+        ' 
+        ' xBtn
+        ' 
+        xBtn.BackColor = Color.Transparent
+        xBtn.Dock = DockStyle.Fill
+        xBtn.FlatAppearance.BorderSize = 0
+        xBtn.FlatStyle = FlatStyle.Flat
+        xBtn.Image = CType(resources.GetObject("xBtn.Image"), Image)
+        xBtn.Location = New Point(50, 0)
+        xBtn.Margin = New Padding(1, 0, 1, 0)
+        xBtn.Name = "xBtn"
+        xBtn.Size = New Size(24, 19)
+        xBtn.TabIndex = 3
+        xBtn.UseVisualStyleBackColor = False
+        ' 
+        ' maximizeBtn
+        ' 
+        maximizeBtn.BackColor = Color.Transparent
+        maximizeBtn.Dock = DockStyle.Fill
+        maximizeBtn.FlatAppearance.BorderSize = 0
+        maximizeBtn.FlatStyle = FlatStyle.Flat
+        maximizeBtn.Image = CType(resources.GetObject("maximizeBtn.Image"), Image)
+        maximizeBtn.Location = New Point(25, 0)
+        maximizeBtn.Margin = New Padding(1, 0, 1, 0)
+        maximizeBtn.Name = "maximizeBtn"
+        maximizeBtn.Size = New Size(23, 19)
+        maximizeBtn.TabIndex = 2
+        maximizeBtn.UseVisualStyleBackColor = False
+        ' 
+        ' minimizeBtn
+        ' 
+        minimizeBtn.BackColor = Color.Transparent
+        minimizeBtn.Dock = DockStyle.Fill
+        minimizeBtn.FlatAppearance.BorderSize = 0
+        minimizeBtn.FlatStyle = FlatStyle.Flat
+        minimizeBtn.Image = CType(resources.GetObject("minimizeBtn.Image"), Image)
+        minimizeBtn.Location = New Point(1, 0)
+        minimizeBtn.Margin = New Padding(1, 0, 1, 0)
+        minimizeBtn.Name = "minimizeBtn"
+        minimizeBtn.Size = New Size(22, 19)
+        minimizeBtn.TabIndex = 1
+        minimizeBtn.UseVisualStyleBackColor = False
+        ' 
+        ' topDivider
+        ' 
+        topDivider.BackColor = SystemColors.ActiveBorder
+        topDivider.Dock = DockStyle.Top
+        topDivider.Location = New Point(220, 25)
+        topDivider.Name = "topDivider"
+        topDivider.Size = New Size(864, 1)
+        topDivider.TabIndex = 2
+        ' 
+        ' contentSpacePanel
+        ' 
+        contentSpacePanel.AutoSize = True
+        contentSpacePanel.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        contentSpacePanel.BackColor = Color.FromArgb(CByte(241), CByte(241), CByte(241))
+        contentSpacePanel.Dock = DockStyle.Fill
+        contentSpacePanel.Location = New Point(220, 77)
+        contentSpacePanel.Name = "contentSpacePanel"
+        contentSpacePanel.Padding = New Padding(15)
+        contentSpacePanel.Size = New Size(864, 604)
+        contentSpacePanel.TabIndex = 4
+        ' 
+        ' titleBarPanel
+        ' 
+        titleBarPanel.BackColor = Color.White
+        titleBarPanel.Dock = DockStyle.Top
+        titleBarPanel.Location = New Point(220, 26)
+        titleBarPanel.Name = "titleBarPanel"
+        titleBarPanel.Size = New Size(864, 51)
+        titleBarPanel.TabIndex = 3
         ' 
         ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(144F, 144F)
-        AutoScaleMode = AutoScaleMode.Dpi
-        ClientSize = New Size(1626, 841)
-        Controls.Add(TableLayoutPanel1)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Margin = New Padding(5)
-        MinimumSize = New Size(1340, 724)
+        AutoScaleDimensions = New SizeF(13.0F, 37.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        ClientSize = New Size(1084, 681)
+        Controls.Add(contentSpacePanel)
+        Controls.Add(titleBarPanel)
+        Controls.Add(topDivider)
+        Controls.Add(controlsPanel)
+        Controls.Add(navbarPanel)
+        Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(6, 7, 6, 7)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Laundry Management System"
-        TableLayoutPanel1.ResumeLayout(False)
-        TableLayoutPanel1.PerformLayout()
-        Panel1.ResumeLayout(False)
-        Panel2.ResumeLayout(False)
+        Text = "newMainForm"
+        navbarPanel.ResumeLayout(False)
+        navbarBtnPanel.ResumeLayout(False)
+        settingsBtnPanel.ResumeLayout(False)
+        adminPanel.ResumeLayout(False)
+        adminnNavTblPanel.ResumeLayout(False)
+        adminnNavTblPanel.PerformLayout()
+        CType(adminPicBox, ComponentModel.ISupportInitialize).EndInit()
+        statsBtnPanel.ResumeLayout(False)
+        transacBtnPanel.ResumeLayout(False)
+        machineBtnPanel.ResumeLayout(False)
+        dashBtnPanel.ResumeLayout(False)
+        logoTblPanel.ResumeLayout(False)
+        logoTblPanel.PerformLayout()
+        CType(logoIcon, ComponentModel.ISupportInitialize).EndInit()
+        controlsPanel.ResumeLayout(False)
+        controlsTblPanel.ResumeLayout(False)
         ResumeLayout(False)
+        PerformLayout()
     End Sub
-    Friend WithEvents btnDashboard As Button
-    Friend WithEvents btnOptions As Button
-    Friend WithEvents btnStats As Button
-    Friend WithEvents btnTransactions As Button
-    Friend WithEvents btnMachines As Button
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents MainPanel As Panel
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel2 As Panel
 
+    Friend WithEvents navbarPanel As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents logoTblPanel As TableLayoutPanel
+    Friend WithEvents shopLabel As Label
+    Friend WithEvents logoIcon As PictureBox
+    Friend WithEvents navbarBtnPanel As Panel
+    Friend WithEvents settingsBtnPanel As Panel
+    Friend WithEvents settingsBtn As Button
+    Friend WithEvents statsBtnPanel As Panel
+    Friend WithEvents statisticsBtn As Button
+    Friend WithEvents transacBtnPanel As Panel
+    Friend WithEvents transactionsBtn As Button
+    Friend WithEvents machineBtnPanel As Panel
+    Friend WithEvents machinesBtn As Button
+    Friend WithEvents dashBtnPanel As Panel
+    Friend WithEvents dashboardBtn As Button
+    Friend WithEvents adminNameLbl As Label
+    Friend WithEvents adminPicBox As PictureBox
+    Friend WithEvents adminnNavTblPanel As TableLayoutPanel
+    Friend WithEvents logoutBtn As Button
+    Friend WithEvents administratorLbl As Label
+    Friend WithEvents adminPanel As Panel
+    Friend WithEvents navBottomDivider As Panel
+    Friend WithEvents controlsPanel As Panel
+    Friend WithEvents topDivider As Panel
+    Friend WithEvents contentSpacePanel As Panel
+    Friend WithEvents titleBarPanel As Panel
+    Friend WithEvents controlsTblPanel As TableLayoutPanel
+    Friend WithEvents xBtn As Button
+    Friend WithEvents maximizeBtn As Button
+    Friend WithEvents minimizeBtn As Button
 End Class
