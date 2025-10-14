@@ -22,6 +22,7 @@
     ' INITIALIZATION
     ' -------------------------
     Private Sub InitializeRow()
+        Me.Margin = New Padding(0)
         If isInitialized Then Return
         isInitialized = True
 
@@ -154,37 +155,51 @@
     End Sub
 
     ' Call this from ResizeHeader with the scaled widths & spacings
-    Public Sub AdjustColumnWidthsScaled(scaledWidths As Integer(), scaledSpacings As Integer())
+    ' scaledWidths, scaledSpacings calculated by ResizeHeader
+    Public Sub AdjustColumnWidthsScaled(scaledWidths As Integer(), scaledSpacings As Integer(), availWidth As Integer)
         Try
-            ' Ensure row fills the available width
+            ' Make row width match available width (account for scrollbar overlay)
             If Me.Parent IsNot Nothing Then
-                Dim panel As FlowLayoutPanel = TryCast(Me.Parent, FlowLayoutPanel)
-                If panel IsNot Nothing Then
-                    Me.Width = panel.ClientSize.Width - SystemInformation.VerticalScrollBarWidth
+                Dim pl As FlowLayoutPanel = TryCast(Me.Parent, FlowLayoutPanel)
+                If pl IsNot Nothing Then
+                    Dim vscrollVisible As Boolean = (pl.DisplayRectangle.Height > pl.ClientSize.Height)
+                    Dim extra As Integer = If(vscrollVisible, SystemInformation.VerticalScrollBarWidth, 0)
+                    Me.Width = Math.Max(0, pl.ClientSize.Width + extra - pl.Padding.Horizontal - 2)
                 End If
             End If
 
             Dim x As Integer = 10
             Dim labels = {lblTransactionID, lblCustomer, lblServiceType, lblStatus, lblMachine, lblDate, lblTotal}
 
-            ' Apply column scaling
             For i As Integer = 0 To Math.Min(labels.Length - 1, scaledWidths.Length - 1)
-                labels(i).AutoEllipsis = True
-                labels(i).Left = x
-                labels(i).Width = scaledWidths(i)
-                labels(i).Anchor = AnchorStyles.Left Or AnchorStyles.Top Or AnchorStyles.Right
+                Dim lbl = labels(i)
+                lbl.AutoEllipsis = True
+                lbl.Left = x
+                lbl.Width = scaledWidths(i)
+                lbl.Anchor = AnchorStyles.Left Or AnchorStyles.Top Or AnchorStyles.Right
                 x += scaledWidths(i) + If(i < scaledSpacings.Length, scaledSpacings(i), 10)
             Next
 
-            ' Fill any leftover space with the last column
+            ' Give leftover pixels (if any) to the last label so nothing is cut off
             If labels.Length > 0 AndAlso x < Me.Width Then
                 Dim lastLbl = labels(labels.Length - 1)
                 lastLbl.Width += (Me.Width - x - 10)
             End If
-        Catch ex As Exception
-            ' silently ignore layout issues
+        Catch
+            ' ignore layout errors
         End Try
     End Sub
+
+
+    Private Function flPHasVisibleVScroll(flP As FlowLayoutPanel) As Boolean
+        Try
+            ' This is the most consistent approach: compare DisplayRectangle height vs ClientSize height
+            Return flP.DisplayRectangle.Height > flP.ClientSize.Height
+        Catch
+            Return flP.VerticalScroll.Visible
+        End Try
+    End Function
+
 
 
 
