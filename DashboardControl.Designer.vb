@@ -53,28 +53,28 @@ Partial Class DashboardControl
         OFDeliveryPanel = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel7 = New TableLayoutPanel()
         TableLayoutPanel8 = New TableLayoutPanel()
-        Label8 = New Label()
+        lblDelivery = New Label()
         Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
         PictureBox3 = New PictureBox()
         Label4 = New Label()
         inProgressPanel = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel5 = New TableLayoutPanel()
         TableLayoutPanel6 = New TableLayoutPanel()
-        Label7 = New Label()
+        lblinProgress = New Label()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         PictureBox2 = New PictureBox()
         Label3 = New Label()
         pendingOrdersPanel = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel3 = New TableLayoutPanel()
         TableLayoutPanel4 = New TableLayoutPanel()
-        Label6 = New Label()
+        lblPendingOrders = New Label()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         PictureBox1 = New PictureBox()
         Label2 = New Label()
         completedPanel = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel9 = New TableLayoutPanel()
         TableLayoutPanel10 = New TableLayoutPanel()
-        Label9 = New Label()
+        lblCompleted = New Label()
         Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
         PictureBox4 = New PictureBox()
         Label5 = New Label()
@@ -83,38 +83,39 @@ Partial Class DashboardControl
         Panel2 = New Panel()
         addOrderBtn = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel11 = New TableLayoutPanel()
+        dashboardTblPanel = New Panel()
+        flpDashboardTransactions = New FlowLayoutPanel()
+        Panel3 = New Panel()
         TableLayoutPanel12 = New TableLayoutPanel()
-        salesSummaryPanel = New Panel()
-        Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel15 = New TableLayoutPanel()
         TableLayoutPanel16 = New TableLayoutPanel()
-        monthlySalesLbl = New Label()
-        Label17 = New Label()
+        Label6 = New Label()
+        Label7 = New Label()
         TableLayoutPanel20 = New TableLayoutPanel()
-        weeklySalesLbl = New Label()
-        Label19 = New Label()
+        Label8 = New Label()
+        Label9 = New Label()
         TableLayoutPanel21 = New TableLayoutPanel()
-        Panel6 = New Panel()
-        Label22 = New Label()
+        Label11 = New Label()
+        Panel4 = New Panel()
         TableLayoutPanel22 = New TableLayoutPanel()
-        todaySalesLbl = New Label()
-        Label21 = New Label()
-        Panel3 = New Panel()
+        Label12 = New Label()
+        Label14 = New Label()
         machineOverviewPanel = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel13 = New TableLayoutPanel()
         TableLayoutPanel19 = New TableLayoutPanel()
-        unavailMachLbl = New Label()
+        lblUnavailableMachines = New Label()
         Label15 = New Label()
         TableLayoutPanel18 = New TableLayoutPanel()
-        inuseMachLbl = New Label()
+        lblInUseMachines = New Label()
         Label13 = New Label()
         TableLayoutPanel14 = New TableLayoutPanel()
         Label23 = New Label()
         Panel5 = New Panel()
         TableLayoutPanel17 = New TableLayoutPanel()
-        availMachLbl = New Label()
+        lblAvailableMachines = New Label()
         Label10 = New Label()
-        dashboardTblPanel = New Panel()
+        Label16 = New Label()
         Panel1.SuspendLayout()
         Guna2Panel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -141,15 +142,15 @@ Partial Class DashboardControl
         TableLayoutPanel1.SuspendLayout()
         Panel2.SuspendLayout()
         TableLayoutPanel11.SuspendLayout()
+        dashboardTblPanel.SuspendLayout()
+        Panel3.SuspendLayout()
         TableLayoutPanel12.SuspendLayout()
-        salesSummaryPanel.SuspendLayout()
-        Guna2Panel11.SuspendLayout()
+        Guna2Panel2.SuspendLayout()
         TableLayoutPanel15.SuspendLayout()
         TableLayoutPanel16.SuspendLayout()
         TableLayoutPanel20.SuspendLayout()
         TableLayoutPanel21.SuspendLayout()
         TableLayoutPanel22.SuspendLayout()
-        Panel3.SuspendLayout()
         machineOverviewPanel.SuspendLayout()
         TableLayoutPanel13.SuspendLayout()
         TableLayoutPanel19.SuspendLayout()
@@ -239,7 +240,7 @@ Partial Class DashboardControl
         TableLayoutPanel8.ColumnCount = 2
         TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
         TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
-        TableLayoutPanel8.Controls.Add(Label8, 1, 0)
+        TableLayoutPanel8.Controls.Add(lblDelivery, 1, 0)
         TableLayoutPanel8.Controls.Add(Guna2Panel7, 0, 0)
         TableLayoutPanel8.Dock = DockStyle.Fill
         TableLayoutPanel8.Location = New Point(3, 42)
@@ -249,16 +250,16 @@ Partial Class DashboardControl
         TableLayoutPanel8.Size = New Size(174, 58)
         TableLayoutPanel8.TabIndex = 1
         ' 
-        ' Label8
+        ' lblDelivery
         ' 
-        Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(63, 0)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(108, 58)
-        Label8.TabIndex = 2
-        Label8.Text = "000"
-        Label8.TextAlign = ContentAlignment.MiddleLeft
+        lblDelivery.Dock = DockStyle.Fill
+        lblDelivery.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDelivery.Location = New Point(63, 0)
+        lblDelivery.Name = "lblDelivery"
+        lblDelivery.Size = New Size(108, 58)
+        lblDelivery.TabIndex = 2
+        lblDelivery.Text = "000"
+        lblDelivery.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2Panel7
         ' 
@@ -331,7 +332,7 @@ Partial Class DashboardControl
         TableLayoutPanel6.ColumnCount = 2
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
-        TableLayoutPanel6.Controls.Add(Label7, 1, 0)
+        TableLayoutPanel6.Controls.Add(lblinProgress, 1, 0)
         TableLayoutPanel6.Controls.Add(Guna2Panel5, 0, 0)
         TableLayoutPanel6.Dock = DockStyle.Fill
         TableLayoutPanel6.Location = New Point(3, 42)
@@ -341,16 +342,16 @@ Partial Class DashboardControl
         TableLayoutPanel6.Size = New Size(174, 58)
         TableLayoutPanel6.TabIndex = 1
         ' 
-        ' Label7
+        ' lblinProgress
         ' 
-        Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(63, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(108, 58)
-        Label7.TabIndex = 2
-        Label7.Text = "000"
-        Label7.TextAlign = ContentAlignment.MiddleLeft
+        lblinProgress.Dock = DockStyle.Fill
+        lblinProgress.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblinProgress.Location = New Point(63, 0)
+        lblinProgress.Name = "lblinProgress"
+        lblinProgress.Size = New Size(108, 58)
+        lblinProgress.TabIndex = 2
+        lblinProgress.Text = "000"
+        lblinProgress.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2Panel5
         ' 
@@ -423,7 +424,7 @@ Partial Class DashboardControl
         TableLayoutPanel4.ColumnCount = 2
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
-        TableLayoutPanel4.Controls.Add(Label6, 1, 0)
+        TableLayoutPanel4.Controls.Add(lblPendingOrders, 1, 0)
         TableLayoutPanel4.Controls.Add(Guna2Panel3, 0, 0)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(3, 42)
@@ -433,16 +434,16 @@ Partial Class DashboardControl
         TableLayoutPanel4.Size = New Size(174, 58)
         TableLayoutPanel4.TabIndex = 1
         ' 
-        ' Label6
+        ' lblPendingOrders
         ' 
-        Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(63, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(108, 58)
-        Label6.TabIndex = 1
-        Label6.Text = "000"
-        Label6.TextAlign = ContentAlignment.MiddleLeft
+        lblPendingOrders.Dock = DockStyle.Fill
+        lblPendingOrders.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPendingOrders.Location = New Point(63, 0)
+        lblPendingOrders.Name = "lblPendingOrders"
+        lblPendingOrders.Size = New Size(108, 58)
+        lblPendingOrders.TabIndex = 1
+        lblPendingOrders.Text = "000"
+        lblPendingOrders.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2Panel3
         ' 
@@ -515,7 +516,7 @@ Partial Class DashboardControl
         TableLayoutPanel10.ColumnCount = 2
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
-        TableLayoutPanel10.Controls.Add(Label9, 1, 0)
+        TableLayoutPanel10.Controls.Add(lblCompleted, 1, 0)
         TableLayoutPanel10.Controls.Add(Guna2Panel9, 0, 0)
         TableLayoutPanel10.Dock = DockStyle.Fill
         TableLayoutPanel10.Location = New Point(3, 42)
@@ -525,16 +526,16 @@ Partial Class DashboardControl
         TableLayoutPanel10.Size = New Size(177, 58)
         TableLayoutPanel10.TabIndex = 1
         ' 
-        ' Label9
+        ' lblCompleted
         ' 
-        Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(64, 0)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(110, 58)
-        Label9.TabIndex = 2
-        Label9.Text = "000"
-        Label9.TextAlign = ContentAlignment.MiddleLeft
+        lblCompleted.Dock = DockStyle.Fill
+        lblCompleted.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompleted.Location = New Point(64, 0)
+        lblCompleted.Name = "lblCompleted"
+        lblCompleted.Size = New Size(110, 58)
+        lblCompleted.TabIndex = 2
+        lblCompleted.Text = "000"
+        lblCompleted.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2Panel9
         ' 
@@ -630,61 +631,83 @@ Partial Class DashboardControl
         ' TableLayoutPanel11
         ' 
         TableLayoutPanel11.ColumnCount = 2
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
-        TableLayoutPanel11.Controls.Add(TableLayoutPanel12, 1, 0)
-        TableLayoutPanel11.Controls.Add(dashboardTblPanel, 0, 0)
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 220F))
+        TableLayoutPanel11.Controls.Add(dashboardTblPanel, 0, 1)
+        TableLayoutPanel11.Controls.Add(Panel3, 1, 1)
+        TableLayoutPanel11.Controls.Add(Label16, 0, 0)
         TableLayoutPanel11.Dock = DockStyle.Fill
         TableLayoutPanel11.Location = New Point(0, 198)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
-        TableLayoutPanel11.Padding = New Padding(0, 25, 0, 0)
-        TableLayoutPanel11.RowCount = 1
+        TableLayoutPanel11.RowCount = 2
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel11.Size = New Size(855, 406)
         TableLayoutPanel11.TabIndex = 1
+        ' 
+        ' dashboardTblPanel
+        ' 
+        dashboardTblPanel.Controls.Add(flpDashboardTransactions)
+        dashboardTblPanel.Dock = DockStyle.Fill
+        dashboardTblPanel.Location = New Point(3, 43)
+        dashboardTblPanel.Name = "dashboardTblPanel"
+        dashboardTblPanel.Padding = New Padding(3)
+        dashboardTblPanel.Size = New Size(629, 360)
+        dashboardTblPanel.TabIndex = 1
+        ' 
+        ' flpDashboardTransactions
+        ' 
+        flpDashboardTransactions.AutoScroll = True
+        flpDashboardTransactions.BackColor = Color.White
+        flpDashboardTransactions.Dock = DockStyle.Fill
+        flpDashboardTransactions.FlowDirection = FlowDirection.TopDown
+        flpDashboardTransactions.Location = New Point(3, 3)
+        flpDashboardTransactions.Margin = New Padding(0)
+        flpDashboardTransactions.Name = "flpDashboardTransactions"
+        flpDashboardTransactions.Size = New Size(623, 354)
+        flpDashboardTransactions.TabIndex = 0
+        flpDashboardTransactions.WrapContents = False
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(TableLayoutPanel12)
+        Panel3.Dock = DockStyle.Fill
+        Panel3.Location = New Point(638, 43)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(214, 360)
+        Panel3.TabIndex = 2
         ' 
         ' TableLayoutPanel12
         ' 
         TableLayoutPanel12.ColumnCount = 1
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel12.Controls.Add(salesSummaryPanel, 0, 1)
-        TableLayoutPanel12.Controls.Add(Panel3, 0, 0)
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel12.Controls.Add(Guna2Panel2, 0, 1)
+        TableLayoutPanel12.Controls.Add(machineOverviewPanel, 0, 0)
         TableLayoutPanel12.Dock = DockStyle.Fill
-        TableLayoutPanel12.Location = New Point(516, 28)
+        TableLayoutPanel12.Location = New Point(0, 0)
+        TableLayoutPanel12.Margin = New Padding(0)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
-        TableLayoutPanel12.Padding = New Padding(25, 0, 0, 0)
         TableLayoutPanel12.RowCount = 2
         TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel12.Size = New Size(336, 375)
+        TableLayoutPanel12.Size = New Size(214, 360)
         TableLayoutPanel12.TabIndex = 0
         ' 
-        ' salesSummaryPanel
+        ' Guna2Panel2
         ' 
-        salesSummaryPanel.Controls.Add(Guna2Panel11)
-        salesSummaryPanel.Dock = DockStyle.Fill
-        salesSummaryPanel.Location = New Point(28, 190)
-        salesSummaryPanel.Name = "salesSummaryPanel"
-        salesSummaryPanel.Padding = New Padding(0, 10, 0, 0)
-        salesSummaryPanel.Size = New Size(305, 182)
-        salesSummaryPanel.TabIndex = 1
-        ' 
-        ' Guna2Panel11
-        ' 
-        Guna2Panel11.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Guna2Panel11.BackColor = Color.Transparent
-        Guna2Panel11.BorderRadius = 15
-        Guna2Panel11.Controls.Add(TableLayoutPanel15)
-        Guna2Panel11.CustomizableEdges = CustomizableEdges21
-        Guna2Panel11.FillColor = Color.White
-        Guna2Panel11.Location = New Point(0, 6)
-        Guna2Panel11.Margin = New Padding(6)
-        Guna2Panel11.Name = "Guna2Panel11"
-        Guna2Panel11.Padding = New Padding(7)
-        Guna2Panel11.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        Guna2Panel11.Size = New Size(305, 171)
-        Guna2Panel11.TabIndex = 2
+        Guna2Panel2.BackColor = Color.Transparent
+        Guna2Panel2.BorderRadius = 15
+        Guna2Panel2.Controls.Add(TableLayoutPanel15)
+        Guna2Panel2.CustomizableEdges = CustomizableEdges21
+        Guna2Panel2.Dock = DockStyle.Fill
+        Guna2Panel2.FillColor = Color.White
+        Guna2Panel2.Location = New Point(0, 180)
+        Guna2Panel2.Margin = New Padding(0, 0, 0, 5)
+        Guna2Panel2.Name = "Guna2Panel2"
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2Panel2.Size = New Size(214, 175)
+        Guna2Panel2.TabIndex = 2
         ' 
         ' TableLayoutPanel15
         ' 
@@ -695,186 +718,179 @@ Partial Class DashboardControl
         TableLayoutPanel15.Controls.Add(TableLayoutPanel21, 0, 0)
         TableLayoutPanel15.Controls.Add(TableLayoutPanel22, 0, 1)
         TableLayoutPanel15.Dock = DockStyle.Fill
-        TableLayoutPanel15.Location = New Point(7, 7)
+        TableLayoutPanel15.Location = New Point(0, 0)
+        TableLayoutPanel15.Margin = New Padding(0)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 4
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 31F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
-        TableLayoutPanel15.Size = New Size(291, 157)
+        TableLayoutPanel15.Size = New Size(214, 175)
         TableLayoutPanel15.TabIndex = 1
         ' 
         ' TableLayoutPanel16
         ' 
         TableLayoutPanel16.ColumnCount = 2
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60F))
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
-        TableLayoutPanel16.Controls.Add(monthlySalesLbl, 1, 0)
-        TableLayoutPanel16.Controls.Add(Label17, 0, 0)
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel16.Controls.Add(Label6, 1, 0)
+        TableLayoutPanel16.Controls.Add(Label7, 0, 0)
         TableLayoutPanel16.Dock = DockStyle.Fill
-        TableLayoutPanel16.Location = New Point(3, 123)
+        TableLayoutPanel16.Location = New Point(3, 137)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 1
         TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel16.Size = New Size(285, 31)
+        TableLayoutPanel16.Size = New Size(208, 35)
         TableLayoutPanel16.TabIndex = 4
         ' 
-        ' monthlySalesLbl
+        ' Label6
         ' 
-        monthlySalesLbl.Dock = DockStyle.Fill
-        monthlySalesLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        monthlySalesLbl.Location = New Point(174, 0)
-        monthlySalesLbl.Name = "monthlySalesLbl"
-        monthlySalesLbl.Size = New Size(108, 31)
-        monthlySalesLbl.TabIndex = 1
-        monthlySalesLbl.Text = "0000"
-        monthlySalesLbl.TextAlign = ContentAlignment.MiddleRight
+        Label6.Dock = DockStyle.Fill
+        Label6.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = SystemColors.ButtonShadow
+        Label6.Location = New Point(159, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(46, 35)
+        Label6.TabIndex = 1
+        Label6.Text = "000"
+        Label6.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label17
+        ' Label7
         ' 
-        Label17.Dock = DockStyle.Fill
-        Label17.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(3, 0)
-        Label17.Name = "Label17"
-        Label17.Size = New Size(165, 31)
-        Label17.TabIndex = 0
-        Label17.Text = "Monthly Sales"
-        Label17.TextAlign = ContentAlignment.MiddleLeft
+        Label7.Dock = DockStyle.Fill
+        Label7.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(3, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(150, 35)
+        Label7.TabIndex = 0
+        Label7.Text = "Monthly Sales"
+        Label7.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel20
         ' 
         TableLayoutPanel20.ColumnCount = 2
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60F))
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
-        TableLayoutPanel20.Controls.Add(weeklySalesLbl, 1, 0)
-        TableLayoutPanel20.Controls.Add(Label19, 0, 0)
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel20.Controls.Add(Label8, 1, 0)
+        TableLayoutPanel20.Controls.Add(Label9, 0, 0)
         TableLayoutPanel20.Dock = DockStyle.Fill
-        TableLayoutPanel20.Location = New Point(3, 87)
+        TableLayoutPanel20.Location = New Point(3, 97)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
         TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel20.Size = New Size(285, 30)
+        TableLayoutPanel20.Size = New Size(208, 34)
         TableLayoutPanel20.TabIndex = 3
         ' 
-        ' weeklySalesLbl
+        ' Label8
         ' 
-        weeklySalesLbl.Dock = DockStyle.Fill
-        weeklySalesLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        weeklySalesLbl.Location = New Point(174, 0)
-        weeklySalesLbl.Name = "weeklySalesLbl"
-        weeklySalesLbl.Size = New Size(108, 30)
-        weeklySalesLbl.TabIndex = 1
-        weeklySalesLbl.Text = "0000"
-        weeklySalesLbl.TextAlign = ContentAlignment.MiddleRight
+        Label8.Dock = DockStyle.Fill
+        Label8.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
+        Label8.Location = New Point(159, 0)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(46, 34)
+        Label8.TabIndex = 1
+        Label8.Text = "000"
+        Label8.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label19
+        ' Label9
         ' 
-        Label19.Dock = DockStyle.Fill
-        Label19.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label19.Location = New Point(3, 0)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(165, 30)
-        Label19.TabIndex = 0
-        Label19.Text = "Weekly Sales"
-        Label19.TextAlign = ContentAlignment.MiddleLeft
+        Label9.Dock = DockStyle.Fill
+        Label9.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(3, 0)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(150, 34)
+        Label9.TabIndex = 0
+        Label9.Text = "Weekly Sales"
+        Label9.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel21
         ' 
         TableLayoutPanel21.ColumnCount = 1
         TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel21.Controls.Add(Panel6, 0, 1)
-        TableLayoutPanel21.Controls.Add(Label22, 0, 0)
+        TableLayoutPanel21.Controls.Add(Label11, 0, 0)
+        TableLayoutPanel21.Controls.Add(Panel4, 0, 1)
         TableLayoutPanel21.Dock = DockStyle.Fill
         TableLayoutPanel21.Location = New Point(3, 3)
         TableLayoutPanel21.Name = "TableLayoutPanel21"
         TableLayoutPanel21.RowCount = 2
         TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
         TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel21.Size = New Size(285, 42)
+        TableLayoutPanel21.Size = New Size(208, 48)
         TableLayoutPanel21.TabIndex = 1
         ' 
-        ' Panel6
+        ' Label11
         ' 
-        Panel6.BackColor = SystemColors.ActiveBorder
-        Panel6.Dock = DockStyle.Fill
-        Panel6.Location = New Point(3, 36)
-        Panel6.Name = "Panel6"
-        Panel6.Size = New Size(279, 3)
-        Panel6.TabIndex = 0
+        Label11.Dock = DockStyle.Fill
+        Label11.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(3, 0)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(202, 38)
+        Label11.TabIndex = 2
+        Label11.Text = "Sales Summary"
+        Label11.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label22
+        ' Panel4
         ' 
-        Label22.Dock = DockStyle.Fill
-        Label22.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label22.Location = New Point(3, 0)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(279, 33)
-        Label22.TabIndex = 1
-        Label22.Text = "Sales Summary"
-        Label22.TextAlign = ContentAlignment.MiddleLeft
+        Panel4.BackColor = SystemColors.ActiveBorder
+        Panel4.Dock = DockStyle.Fill
+        Panel4.Location = New Point(3, 41)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(202, 4)
+        Panel4.TabIndex = 0
         ' 
         ' TableLayoutPanel22
         ' 
         TableLayoutPanel22.ColumnCount = 2
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60F))
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
-        TableLayoutPanel22.Controls.Add(todaySalesLbl, 1, 0)
-        TableLayoutPanel22.Controls.Add(Label21, 0, 0)
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel22.Controls.Add(Label12, 1, 0)
+        TableLayoutPanel22.Controls.Add(Label14, 0, 0)
         TableLayoutPanel22.Dock = DockStyle.Fill
-        TableLayoutPanel22.Location = New Point(3, 51)
+        TableLayoutPanel22.Location = New Point(3, 57)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 1
         TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel22.Size = New Size(285, 30)
+        TableLayoutPanel22.Size = New Size(208, 34)
         TableLayoutPanel22.TabIndex = 2
         ' 
-        ' todaySalesLbl
+        ' Label12
         ' 
-        todaySalesLbl.Dock = DockStyle.Fill
-        todaySalesLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        todaySalesLbl.Location = New Point(174, 0)
-        todaySalesLbl.Name = "todaySalesLbl"
-        todaySalesLbl.Size = New Size(108, 30)
-        todaySalesLbl.TabIndex = 1
-        todaySalesLbl.Text = "0000"
-        todaySalesLbl.TextAlign = ContentAlignment.MiddleRight
+        Label12.Dock = DockStyle.Fill
+        Label12.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
+        Label12.Location = New Point(159, 0)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(46, 34)
+        Label12.TabIndex = 1
+        Label12.Text = "000"
+        Label12.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label21
+        ' Label14
         ' 
-        Label21.Dock = DockStyle.Fill
-        Label21.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label21.Location = New Point(3, 0)
-        Label21.Name = "Label21"
-        Label21.Size = New Size(165, 30)
-        Label21.TabIndex = 0
-        Label21.Text = "Today’s Sales"
-        Label21.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' Panel3
-        ' 
-        Panel3.Controls.Add(machineOverviewPanel)
-        Panel3.Dock = DockStyle.Fill
-        Panel3.Location = New Point(28, 3)
-        Panel3.Name = "Panel3"
-        Panel3.Padding = New Padding(3)
-        Panel3.Size = New Size(305, 181)
-        Panel3.TabIndex = 0
+        Label14.Dock = DockStyle.Fill
+        Label14.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Location = New Point(3, 0)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(150, 34)
+        Label14.TabIndex = 0
+        Label14.Text = "Today's Sales"
+        Label14.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' machineOverviewPanel
         ' 
-        machineOverviewPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         machineOverviewPanel.BackColor = Color.Transparent
         machineOverviewPanel.BorderRadius = 15
         machineOverviewPanel.Controls.Add(TableLayoutPanel13)
         machineOverviewPanel.CustomizableEdges = CustomizableEdges23
+        machineOverviewPanel.Dock = DockStyle.Fill
         machineOverviewPanel.FillColor = Color.White
-        machineOverviewPanel.Location = New Point(0, 7)
-        machineOverviewPanel.Margin = New Padding(6)
+        machineOverviewPanel.Location = New Point(0, 0)
+        machineOverviewPanel.Margin = New Padding(0, 0, 0, 10)
         machineOverviewPanel.Name = "machineOverviewPanel"
-        machineOverviewPanel.Padding = New Padding(7)
         machineOverviewPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        machineOverviewPanel.Size = New Size(305, 171)
+        machineOverviewPanel.Size = New Size(214, 170)
         machineOverviewPanel.TabIndex = 1
         ' 
         ' TableLayoutPanel13
@@ -886,14 +902,15 @@ Partial Class DashboardControl
         TableLayoutPanel13.Controls.Add(TableLayoutPanel14, 0, 0)
         TableLayoutPanel13.Controls.Add(TableLayoutPanel17, 0, 1)
         TableLayoutPanel13.Dock = DockStyle.Fill
-        TableLayoutPanel13.Location = New Point(7, 7)
+        TableLayoutPanel13.Location = New Point(0, 0)
+        TableLayoutPanel13.Margin = New Padding(0)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 4
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 31F))
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
-        TableLayoutPanel13.Size = New Size(291, 157)
+        TableLayoutPanel13.Size = New Size(214, 170)
         TableLayoutPanel13.TabIndex = 1
         ' 
         ' TableLayoutPanel19
@@ -901,27 +918,27 @@ Partial Class DashboardControl
         TableLayoutPanel19.ColumnCount = 2
         TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
         TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
-        TableLayoutPanel19.Controls.Add(unavailMachLbl, 1, 0)
+        TableLayoutPanel19.Controls.Add(lblUnavailableMachines, 1, 0)
         TableLayoutPanel19.Controls.Add(Label15, 0, 0)
         TableLayoutPanel19.Dock = DockStyle.Fill
-        TableLayoutPanel19.Location = New Point(3, 123)
+        TableLayoutPanel19.Location = New Point(3, 133)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 1
         TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel19.Size = New Size(285, 31)
+        TableLayoutPanel19.Size = New Size(208, 34)
         TableLayoutPanel19.TabIndex = 4
         ' 
-        ' unavailMachLbl
+        ' lblUnavailableMachines
         ' 
-        unavailMachLbl.Dock = DockStyle.Fill
-        unavailMachLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        unavailMachLbl.ForeColor = SystemColors.ButtonShadow
-        unavailMachLbl.Location = New Point(216, 0)
-        unavailMachLbl.Name = "unavailMachLbl"
-        unavailMachLbl.Size = New Size(66, 31)
-        unavailMachLbl.TabIndex = 1
-        unavailMachLbl.Text = "00"
-        unavailMachLbl.TextAlign = ContentAlignment.MiddleRight
+        lblUnavailableMachines.Dock = DockStyle.Fill
+        lblUnavailableMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUnavailableMachines.ForeColor = SystemColors.ButtonShadow
+        lblUnavailableMachines.Location = New Point(159, 0)
+        lblUnavailableMachines.Name = "lblUnavailableMachines"
+        lblUnavailableMachines.Size = New Size(46, 34)
+        lblUnavailableMachines.TabIndex = 1
+        lblUnavailableMachines.Text = "00"
+        lblUnavailableMachines.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label15
         ' 
@@ -929,7 +946,7 @@ Partial Class DashboardControl
         Label15.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(3, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(207, 31)
+        Label15.Size = New Size(150, 34)
         Label15.TabIndex = 0
         Label15.Text = "Unvailable Machines"
         Label15.TextAlign = ContentAlignment.MiddleLeft
@@ -939,27 +956,27 @@ Partial Class DashboardControl
         TableLayoutPanel18.ColumnCount = 2
         TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
         TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
-        TableLayoutPanel18.Controls.Add(inuseMachLbl, 1, 0)
+        TableLayoutPanel18.Controls.Add(lblInUseMachines, 1, 0)
         TableLayoutPanel18.Controls.Add(Label13, 0, 0)
         TableLayoutPanel18.Dock = DockStyle.Fill
-        TableLayoutPanel18.Location = New Point(3, 87)
+        TableLayoutPanel18.Location = New Point(3, 94)
         TableLayoutPanel18.Name = "TableLayoutPanel18"
         TableLayoutPanel18.RowCount = 1
         TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel18.Size = New Size(285, 30)
+        TableLayoutPanel18.Size = New Size(208, 33)
         TableLayoutPanel18.TabIndex = 3
         ' 
-        ' inuseMachLbl
+        ' lblInUseMachines
         ' 
-        inuseMachLbl.Dock = DockStyle.Fill
-        inuseMachLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        inuseMachLbl.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
-        inuseMachLbl.Location = New Point(216, 0)
-        inuseMachLbl.Name = "inuseMachLbl"
-        inuseMachLbl.Size = New Size(66, 30)
-        inuseMachLbl.TabIndex = 1
-        inuseMachLbl.Text = "00"
-        inuseMachLbl.TextAlign = ContentAlignment.MiddleRight
+        lblInUseMachines.Dock = DockStyle.Fill
+        lblInUseMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInUseMachines.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
+        lblInUseMachines.Location = New Point(159, 0)
+        lblInUseMachines.Name = "lblInUseMachines"
+        lblInUseMachines.Size = New Size(46, 33)
+        lblInUseMachines.TabIndex = 1
+        lblInUseMachines.Text = "00"
+        lblInUseMachines.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label13
         ' 
@@ -967,7 +984,7 @@ Partial Class DashboardControl
         Label13.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(207, 30)
+        Label13.Size = New Size(150, 33)
         Label13.TabIndex = 0
         Label13.Text = "In Use"
         Label13.TextAlign = ContentAlignment.MiddleLeft
@@ -984,7 +1001,7 @@ Partial Class DashboardControl
         TableLayoutPanel14.RowCount = 2
         TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
         TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel14.Size = New Size(285, 42)
+        TableLayoutPanel14.Size = New Size(208, 46)
         TableLayoutPanel14.TabIndex = 1
         ' 
         ' Label23
@@ -993,7 +1010,7 @@ Partial Class DashboardControl
         Label23.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label23.Location = New Point(3, 0)
         Label23.Name = "Label23"
-        Label23.Size = New Size(279, 33)
+        Label23.Size = New Size(202, 36)
         Label23.TabIndex = 2
         Label23.Text = "Machine Overview"
         Label23.TextAlign = ContentAlignment.MiddleLeft
@@ -1002,9 +1019,9 @@ Partial Class DashboardControl
         ' 
         Panel5.BackColor = SystemColors.ActiveBorder
         Panel5.Dock = DockStyle.Fill
-        Panel5.Location = New Point(3, 36)
+        Panel5.Location = New Point(3, 39)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(279, 3)
+        Panel5.Size = New Size(202, 4)
         Panel5.TabIndex = 0
         ' 
         ' TableLayoutPanel17
@@ -1012,27 +1029,27 @@ Partial Class DashboardControl
         TableLayoutPanel17.ColumnCount = 2
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
-        TableLayoutPanel17.Controls.Add(availMachLbl, 1, 0)
+        TableLayoutPanel17.Controls.Add(lblAvailableMachines, 1, 0)
         TableLayoutPanel17.Controls.Add(Label10, 0, 0)
         TableLayoutPanel17.Dock = DockStyle.Fill
-        TableLayoutPanel17.Location = New Point(3, 51)
+        TableLayoutPanel17.Location = New Point(3, 55)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel17.Size = New Size(285, 30)
+        TableLayoutPanel17.Size = New Size(208, 33)
         TableLayoutPanel17.TabIndex = 2
         ' 
-        ' availMachLbl
+        ' lblAvailableMachines
         ' 
-        availMachLbl.Dock = DockStyle.Fill
-        availMachLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        availMachLbl.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
-        availMachLbl.Location = New Point(216, 0)
-        availMachLbl.Name = "availMachLbl"
-        availMachLbl.Size = New Size(66, 30)
-        availMachLbl.TabIndex = 1
-        availMachLbl.Text = "00"
-        availMachLbl.TextAlign = ContentAlignment.MiddleRight
+        lblAvailableMachines.Dock = DockStyle.Fill
+        lblAvailableMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAvailableMachines.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
+        lblAvailableMachines.Location = New Point(159, 0)
+        lblAvailableMachines.Name = "lblAvailableMachines"
+        lblAvailableMachines.Size = New Size(46, 33)
+        lblAvailableMachines.TabIndex = 1
+        lblAvailableMachines.Text = "00"
+        lblAvailableMachines.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label10
         ' 
@@ -1040,19 +1057,23 @@ Partial Class DashboardControl
         Label10.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(3, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(207, 30)
+        Label10.Size = New Size(150, 33)
         Label10.TabIndex = 0
         Label10.Text = "Available Machines"
         Label10.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dashboardTblPanel
+        ' Label16
         ' 
-        dashboardTblPanel.Dock = DockStyle.Fill
-        dashboardTblPanel.Location = New Point(3, 28)
-        dashboardTblPanel.Name = "dashboardTblPanel"
-        dashboardTblPanel.Padding = New Padding(3)
-        dashboardTblPanel.Size = New Size(507, 375)
-        dashboardTblPanel.TabIndex = 1
+        Label16.AutoSize = True
+        Label16.BackColor = Color.Transparent
+        Label16.Dock = DockStyle.Fill
+        Label16.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0), True)
+        Label16.Location = New Point(3, 0)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(629, 40)
+        Label16.TabIndex = 3
+        Label16.Text = "For Pickup / Deliver Orders"
+        Label16.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' DashboardControl
         ' 
@@ -1091,15 +1112,16 @@ Partial Class DashboardControl
         TableLayoutPanel1.PerformLayout()
         Panel2.ResumeLayout(False)
         TableLayoutPanel11.ResumeLayout(False)
+        TableLayoutPanel11.PerformLayout()
+        dashboardTblPanel.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
         TableLayoutPanel12.ResumeLayout(False)
-        salesSummaryPanel.ResumeLayout(False)
-        Guna2Panel11.ResumeLayout(False)
+        Guna2Panel2.ResumeLayout(False)
         TableLayoutPanel15.ResumeLayout(False)
         TableLayoutPanel16.ResumeLayout(False)
         TableLayoutPanel20.ResumeLayout(False)
         TableLayoutPanel21.ResumeLayout(False)
         TableLayoutPanel22.ResumeLayout(False)
-        Panel3.ResumeLayout(False)
         machineOverviewPanel.ResumeLayout(False)
         TableLayoutPanel13.ResumeLayout(False)
         TableLayoutPanel19.ResumeLayout(False)
@@ -1134,48 +1156,49 @@ Partial Class DashboardControl
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblDelivery As Label
+    Friend WithEvents lblinProgress As Label
+    Friend WithEvents lblPendingOrders As Label
     Friend WithEvents completedPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lblCompleted As Label
     Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
-    Friend WithEvents salesSummaryPanel As Panel
-    Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents dashboardTblPanel As Panel
+    Friend WithEvents flpDashboardTransactions As FlowLayoutPanel
     Friend WithEvents machineOverviewPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
-    Friend WithEvents monthlySalesLbl As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents TableLayoutPanel20 As TableLayoutPanel
-    Friend WithEvents weeklySalesLbl As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents TableLayoutPanel21 As TableLayoutPanel
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents TableLayoutPanel22 As TableLayoutPanel
-    Friend WithEvents todaySalesLbl As Label
-    Friend WithEvents Label21 As Label
     Friend WithEvents TableLayoutPanel19 As TableLayoutPanel
-    Friend WithEvents unavailMachLbl As Label
+    Friend WithEvents lblUnavailableMachines As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents TableLayoutPanel18 As TableLayoutPanel
-    Friend WithEvents inuseMachLbl As Label
+    Friend WithEvents lblInUseMachines As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents availMachLbl As Label
-    Friend WithEvents Label22 As Label
+    Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
     Friend WithEvents Label23 As Label
-    Friend WithEvents dashboardTblPanel As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
+    Friend WithEvents lblAvailableMachines As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TableLayoutPanel20 As TableLayoutPanel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TableLayoutPanel21 As TableLayoutPanel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents TableLayoutPanel22 As TableLayoutPanel
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label16 As Label
 
 End Class
