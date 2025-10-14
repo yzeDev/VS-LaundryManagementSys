@@ -5,7 +5,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class TransactionControl
     Private selectedRow As TransactionRow = Nothing
     ' Shared column widths for both header and row alignment
-    Private ReadOnly columnWidths As Integer() = {60, 150, 120, 100, 120, 120, 100, 80}
+    Private ReadOnly columnWidths As Integer() = {60, 200, 120, 100, 120, 120, 100, 80}
     Private header As TransactionRow
 
     Private Sub EnableDoubleBuffering(ctrl As Control)
@@ -20,17 +20,30 @@ Public Class TransactionControl
     End Sub
 
     Private Sub flpTransactions_SizeChanged(sender As Object, e As EventArgs)
+        ' Calculate the usable width inside the FlowLayoutPanel
+        Dim usableWidth As Integer = flpTransactions.DisplayRectangle.Width
+
+        ' Subtract scrollbar width if it’s visible
+        If flpTransactions.VerticalScroll.Visible Then
+            usableWidth -= SystemInformation.VerticalScrollBarWidth
+        End If
+
+        ' Subtract horizontal padding to avoid overflow
+        usableWidth -= flpTransactions.Padding.Horizontal
+
+        ' Apply width to each TransactionRow control
         For Each ctrl As Control In flpTransactions.Controls
-            ctrl.Width = flpTransactions.ClientSize.Width - flpTransactions.Padding.Horizontal - SystemInformation.VerticalScrollBarWidth
+            ctrl.Width = usableWidth
         Next
     End Sub
+
+
 
     ' -------------------------
     ' LOAD
     ' -------------------------
     Private Sub TransactionsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' --- FIX START ---
-        Me.AutoScaleMode = AutoScaleMode.None
         Me.Scale(New SizeF(1.0F, 1.0F))
         Me.Dock = DockStyle.Fill
         ' --- FIX END ---
@@ -40,6 +53,8 @@ Public Class TransactionControl
         flpTransactions.WrapContents = False
         flpTransactions.AutoScroll = True
         flpTransactions.Dock = DockStyle.Fill
+        flpTransactions.Padding = New Padding(0)
+        flpTransactions.Margin = New Padding(0)
         EnableDoubleBuffering(flpTransactions)
 
         ' ✅ Ensure all filter handlers are connected to actual control names
@@ -420,30 +435,59 @@ Public Class TransactionControl
         If flpTransactions Is Nothing OrElse header Is Nothing OrElse columnWidths Is Nothing Then Exit Sub
         If header.Controls.Count = 0 Then Exit Sub
 
-        header.Width = flpTransactions.ClientSize.Width
+        ' Full available width inside the flowpanel for content.
+        ' Subtract a little margin and the vertical scrollbar width so things align exactly.
+        Dim availWidth As Integer = Math.Max(0, flpTransactions.ClientSize.Width - 20 - SystemInformation.VerticalScrollBarWidth)
+        header.Width = availWidth + 20 ' keep header width consistent (optional)
 
-        Dim totalWidth As Integer = columnWidths.Sum() + columnSpacings.Sum()
-        If totalWidth = 0 Then Exit Sub
+        ' Total logical width (columns + spacings)
+        Dim logicalTotal As Integer = columnWidths.Sum() + columnSpacings.Sum()
+        If logicalTotal = 0 Then Exit Sub
 
-        Dim scale As Double = (header.Width - 20) / totalWidth
+        ' Scale factor from logical units to available pixels
+        Dim scale As Double = availWidth / CDbl(logicalTotal)
+
+        ' Build arrays of scaled widths and scaled spacings (rounded to integers)
+        Dim scaledWidths(columnWidths.Length - 1) As Integer
+        For i As Integer = 0 To columnWidths.Length - 1
+            scaledWidths(i) = CInt(Math.Max(1, Math.Round(columnWidths(i) * scale)))
+        Next
+
+        Dim scaledSpacings(columnSpacings.Length - 1) As Integer
+        For i As Integer = 0 To columnSpacings.Length - 1
+            scaledSpacings(i) = CInt(Math.Round(columnSpacings(i) * scale))
+        Next
+
+        ' Fix: if rounding left some extra pixels, distribute them to the last column
+        Dim used As Integer = scaledWidths.Sum() + scaledSpacings.Sum()
+        Dim diff As Integer = availWidth - used
+        If diff <> 0 AndAlso scaledWidths.Length > 0 Then
+            scaledWidths(scaledWidths.Length - 1) += diff
+        End If
+
+        ' Position header labels using the scaled widths/spacings
         Dim x As Integer = 10
-
-        For i As Integer = 0 To header.Controls.Count - 1
-            Dim lbl As Label = TryCast(header.Controls(i), Label)
-            If lbl IsNot Nothing AndAlso i < columnWidths.Length Then
-                lbl.Width = CInt(columnWidths(i) * scale)
+        Dim labelIndex As Integer = 0
+        For Each ctrl As Control In header.Controls
+            Dim lbl As Label = TryCast(ctrl, Label)
+            If lbl IsNot Nothing AndAlso labelIndex < scaledWidths.Length Then
                 lbl.Left = x
-                x += lbl.Width + CInt(If(i < columnSpacings.Length, columnSpacings(i) * scale, 10))
+                lbl.Width = scaledWidths(labelIndex)
+                x += lbl.Width + CInt(If(labelIndex < scaledSpacings.Length, scaledSpacings(labelIndex), 10))
+                labelIndex += 1
+                lbl.AutoEllipsis = True
+                lbl.Anchor = AnchorStyles.Left Or AnchorStyles.Top Or AnchorStyles.Right
             End If
         Next
 
-        ' ✅ Sync TransactionRows for perfect alignment
+        ' Pass the scaled widths & spacings to each TransactionRow so they compute positions the same way
         For Each ctrl As Control In flpTransactions.Controls
             If TypeOf ctrl Is TransactionRow Then
-                DirectCast(ctrl, TransactionRow).AdjustColumnWidths(columnWidths)
+                DirectCast(ctrl, TransactionRow).AdjustColumnWidthsScaled(scaledWidths, scaledSpacings)
             End If
         Next
     End Sub
+
 
     Private Sub flpTransactions_Scroll(sender As Object, e As ScrollEventArgs) Handles flpTransactions.Scroll
         For Each ctrl As Control In flpTransactions.Controls

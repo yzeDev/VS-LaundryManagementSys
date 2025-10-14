@@ -36,6 +36,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Update="BasicServiceForm.vb" />
+    <Compile Update="MachinesControl.vb" />
     <Compile Update="TransactionsControl.vb" />
   </ItemGroup>
 

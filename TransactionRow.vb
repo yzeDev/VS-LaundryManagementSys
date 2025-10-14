@@ -153,6 +153,41 @@
         InitializeRow()
     End Sub
 
+    ' Call this from ResizeHeader with the scaled widths & spacings
+    Public Sub AdjustColumnWidthsScaled(scaledWidths As Integer(), scaledSpacings As Integer())
+        Try
+            ' Ensure row fills the available width
+            If Me.Parent IsNot Nothing Then
+                Dim panel As FlowLayoutPanel = TryCast(Me.Parent, FlowLayoutPanel)
+                If panel IsNot Nothing Then
+                    Me.Width = panel.ClientSize.Width - SystemInformation.VerticalScrollBarWidth
+                End If
+            End If
+
+            Dim x As Integer = 10
+            Dim labels = {lblTransactionID, lblCustomer, lblServiceType, lblStatus, lblMachine, lblDate, lblTotal}
+
+            ' Apply column scaling
+            For i As Integer = 0 To Math.Min(labels.Length - 1, scaledWidths.Length - 1)
+                labels(i).AutoEllipsis = True
+                labels(i).Left = x
+                labels(i).Width = scaledWidths(i)
+                labels(i).Anchor = AnchorStyles.Left Or AnchorStyles.Top Or AnchorStyles.Right
+                x += scaledWidths(i) + If(i < scaledSpacings.Length, scaledSpacings(i), 10)
+            Next
+
+            ' Fill any leftover space with the last column
+            If labels.Length > 0 AndAlso x < Me.Width Then
+                Dim lastLbl = labels(labels.Length - 1)
+                lastLbl.Width += (Me.Width - x - 10)
+            End If
+        Catch ex As Exception
+            ' silently ignore layout issues
+        End Try
+    End Sub
+
+
+
     ' -------------------------
     ' SELECTION HIGHLIGHT
     ' -------------------------

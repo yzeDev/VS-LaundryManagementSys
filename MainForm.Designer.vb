@@ -84,7 +84,7 @@ Partial Class MainForm
         navbarPanel.Name = "navbarPanel"
         navbarPanel.Padding = New Padding(0, 30, 0, 10)
         navbarPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        navbarPanel.Size = New Size(220, 681)
+        navbarPanel.Size = New Size(220, 700)
         navbarPanel.TabIndex = 0
         ' 
         ' navbarBtnPanel
@@ -101,14 +101,14 @@ Partial Class MainForm
         navbarBtnPanel.Location = New Point(0, 117)
         navbarBtnPanel.Name = "navbarBtnPanel"
         navbarBtnPanel.Padding = New Padding(7, 0, 7, 0)
-        navbarBtnPanel.Size = New Size(220, 554)
+        navbarBtnPanel.Size = New Size(220, 573)
         navbarBtnPanel.TabIndex = 1
         ' 
         ' navBottomDivider
         ' 
         navBottomDivider.BackColor = Color.White
         navBottomDivider.Dock = DockStyle.Bottom
-        navBottomDivider.Location = New Point(7, 499)
+        navBottomDivider.Location = New Point(7, 518)
         navBottomDivider.Name = "navBottomDivider"
         navBottomDivider.Size = New Size(206, 1)
         navBottomDivider.TabIndex = 1
@@ -146,7 +146,7 @@ Partial Class MainForm
         adminPanel.BackColor = Color.Transparent
         adminPanel.Controls.Add(adminnNavTblPanel)
         adminPanel.Dock = DockStyle.Bottom
-        adminPanel.Location = New Point(7, 500)
+        adminPanel.Location = New Point(7, 519)
         adminPanel.Name = "adminPanel"
         adminPanel.Size = New Size(206, 54)
         adminPanel.TabIndex = 1
@@ -155,9 +155,9 @@ Partial Class MainForm
         ' 
         adminnNavTblPanel.BackColor = Color.Transparent
         adminnNavTblPanel.ColumnCount = 3
-        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29F))
-        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51F))
-        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29.0F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51.0F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20.0F))
         adminnNavTblPanel.Controls.Add(logoutBtn, 2, 0)
         adminnNavTblPanel.Controls.Add(administratorLbl, 1, 1)
         adminnNavTblPanel.Controls.Add(adminPicBox, 0, 0)
@@ -166,8 +166,8 @@ Partial Class MainForm
         adminnNavTblPanel.Location = New Point(0, 14)
         adminnNavTblPanel.Name = "adminnNavTblPanel"
         adminnNavTblPanel.RowCount = 2
-        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         adminnNavTblPanel.Size = New Size(206, 40)
         adminnNavTblPanel.TabIndex = 2
         ' 
@@ -342,8 +342,8 @@ Partial Class MainForm
         ' 
         logoTblPanel.BackColor = Color.Transparent
         logoTblPanel.ColumnCount = 2
-        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22F))
-        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78F))
+        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.0F))
+        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78.0F))
         logoTblPanel.Controls.Add(shopLabel, 1, 0)
         logoTblPanel.Controls.Add(logoIcon, 0, 0)
         logoTblPanel.Dock = DockStyle.Top
@@ -352,7 +352,7 @@ Partial Class MainForm
         logoTblPanel.Name = "logoTblPanel"
         logoTblPanel.Padding = New Padding(13, 0, 0, 40)
         logoTblPanel.RowCount = 1
-        logoTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        logoTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         logoTblPanel.Size = New Size(220, 87)
         logoTblPanel.TabIndex = 1
         ' 
@@ -388,7 +388,7 @@ Partial Class MainForm
         controlsPanel.Margin = New Padding(3, 0, 3, 0)
         controlsPanel.Name = "controlsPanel"
         controlsPanel.Padding = New Padding(0, 3, 0, 3)
-        controlsPanel.Size = New Size(864, 25)
+        controlsPanel.Size = New Size(880, 25)
         controlsPanel.TabIndex = 1
         ' 
         ' controlsTblPanel
@@ -401,53 +401,54 @@ Partial Class MainForm
         controlsTblPanel.Controls.Add(maximizeBtn, 1, 0)
         controlsTblPanel.Controls.Add(minimizeBtn, 0, 0)
         controlsTblPanel.Dock = DockStyle.Right
-        controlsTblPanel.Location = New Point(789, 3)
+        controlsTblPanel.Location = New Point(805, 3)
         controlsTblPanel.Name = "controlsTblPanel"
         controlsTblPanel.RowCount = 1
-        controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         controlsTblPanel.Size = New Size(75, 19)
         controlsTblPanel.TabIndex = 0
         ' 
         ' xBtn
         ' 
-        xBtn.BackColor = Color.Transparent
+        xBtn.BackColor = Color.IndianRed
         xBtn.Dock = DockStyle.Fill
         xBtn.FlatAppearance.BorderSize = 0
         xBtn.FlatStyle = FlatStyle.Flat
         xBtn.Image = CType(resources.GetObject("xBtn.Image"), Image)
-        xBtn.Location = New Point(50, 0)
-        xBtn.Margin = New Padding(1, 0, 1, 0)
+        xBtn.Location = New Point(49, 0)
+        xBtn.Margin = New Padding(0)
         xBtn.Name = "xBtn"
-        xBtn.Size = New Size(24, 19)
+        xBtn.Size = New Size(26, 19)
         xBtn.TabIndex = 3
         xBtn.UseVisualStyleBackColor = False
         ' 
         ' maximizeBtn
         ' 
-        maximizeBtn.BackColor = Color.Transparent
+        maximizeBtn.BackColor = Color.FromArgb(CByte(182), CByte(213), CByte(255))
         maximizeBtn.Dock = DockStyle.Fill
         maximizeBtn.FlatAppearance.BorderSize = 0
         maximizeBtn.FlatStyle = FlatStyle.Flat
         maximizeBtn.Image = CType(resources.GetObject("maximizeBtn.Image"), Image)
-        maximizeBtn.Location = New Point(25, 0)
-        maximizeBtn.Margin = New Padding(1, 0, 1, 0)
+        maximizeBtn.Location = New Point(24, 0)
+        maximizeBtn.Margin = New Padding(0)
         maximizeBtn.Name = "maximizeBtn"
-        maximizeBtn.Size = New Size(23, 19)
+        maximizeBtn.Size = New Size(25, 19)
         maximizeBtn.TabIndex = 2
         maximizeBtn.UseVisualStyleBackColor = False
         ' 
         ' minimizeBtn
         ' 
-        minimizeBtn.BackColor = Color.Transparent
+        minimizeBtn.BackColor = Color.FromArgb(CByte(152), CByte(169), CByte(192))
         minimizeBtn.Dock = DockStyle.Fill
         minimizeBtn.FlatAppearance.BorderSize = 0
         minimizeBtn.FlatStyle = FlatStyle.Flat
-        minimizeBtn.Image = CType(resources.GetObject("minimizeBtn.Image"), Image)
-        minimizeBtn.Location = New Point(1, 0)
-        minimizeBtn.Margin = New Padding(1, 0, 1, 0)
+        minimizeBtn.ForeColor = Color.Transparent
+        minimizeBtn.Location = New Point(0, 0)
+        minimizeBtn.Margin = New Padding(0)
         minimizeBtn.Name = "minimizeBtn"
-        minimizeBtn.Size = New Size(22, 19)
-        minimizeBtn.TabIndex = 1
+        minimizeBtn.Size = New Size(24, 19)
+        minimizeBtn.TabIndex = 2
+        minimizeBtn.TextAlign = ContentAlignment.TopCenter
         minimizeBtn.UseVisualStyleBackColor = False
         ' 
         ' topDivider
@@ -456,19 +457,17 @@ Partial Class MainForm
         topDivider.Dock = DockStyle.Top
         topDivider.Location = New Point(220, 25)
         topDivider.Name = "topDivider"
-        topDivider.Size = New Size(864, 1)
+        topDivider.Size = New Size(880, 1)
         topDivider.TabIndex = 2
         ' 
         ' contentSpacePanel
         ' 
-        contentSpacePanel.AutoSize = True
-        contentSpacePanel.AutoSizeMode = AutoSizeMode.GrowAndShrink
         contentSpacePanel.BackColor = Color.FromArgb(CByte(241), CByte(241), CByte(241))
         contentSpacePanel.Dock = DockStyle.Fill
         contentSpacePanel.Location = New Point(220, 77)
+        contentSpacePanel.Margin = New Padding(0)
         contentSpacePanel.Name = "contentSpacePanel"
-        contentSpacePanel.Padding = New Padding(15)
-        contentSpacePanel.Size = New Size(864, 604)
+        contentSpacePanel.Size = New Size(880, 623)
         contentSpacePanel.TabIndex = 4
         ' 
         ' titleBarPanel
@@ -477,7 +476,7 @@ Partial Class MainForm
         titleBarPanel.Dock = DockStyle.Top
         titleBarPanel.Location = New Point(220, 26)
         titleBarPanel.Name = "titleBarPanel"
-        titleBarPanel.Size = New Size(864, 51)
+        titleBarPanel.Size = New Size(880, 51)
         titleBarPanel.TabIndex = 3
         ' 
         ' MainForm
@@ -485,7 +484,7 @@ Partial Class MainForm
         AutoScaleDimensions = New SizeF(13.0F, 37.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        ClientSize = New Size(1084, 681)
+        ClientSize = New Size(1100, 700)
         Controls.Add(contentSpacePanel)
         Controls.Add(titleBarPanel)
         Controls.Add(topDivider)
@@ -514,7 +513,6 @@ Partial Class MainForm
         controlsPanel.ResumeLayout(False)
         controlsTblPanel.ResumeLayout(False)
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents navbarPanel As Guna.UI2.WinForms.Guna2GradientPanel

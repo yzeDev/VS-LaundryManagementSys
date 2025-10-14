@@ -5,6 +5,9 @@
     Private ReadOnly ActiveColor As Color = Color.FromArgb(5, 33, 90)
     Private ReadOnly HoverColor As Color = Color.FromArgb(5, 33, 90)
     Private ReadOnly NormalColor As Color = Color.Transparent
+    Private originalClientSize As Size
+    Private isMaximizedManually As Boolean = False
+
 
     '  WINDOW CONTROL BUTTONS 
 
@@ -13,8 +16,45 @@
     End Sub
 
     Private Sub maximizeBtn_Click(sender As Object, e As EventArgs) Handles maximizeBtn.Click
-        Me.WindowState = If(Me.WindowState = FormWindowState.Maximized, FormWindowState.Normal, FormWindowState.Maximized)
+        If Me.WindowState = FormWindowState.Normal Then
+            isMaximizedManually = True
+            originalClientSize = Me.ClientSize
+            Me.WindowState = FormWindowState.Maximized
+        Else
+            Me.WindowState = FormWindowState.Normal
+        End If
     End Sub
+
+
+    Private Sub MainForm_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        ' Handle restore from maximized to normal
+        If Me.WindowState = FormWindowState.Normal AndAlso isMaximizedManually Then
+            isMaximizedManually = False
+
+            If contentSpacePanel.Controls.Count > 0 Then
+                Dim currentUC As UserControl = TryCast(contentSpacePanel.Controls(0), UserControl)
+                If currentUC IsNot Nothing Then
+                    ' 🔧 Reset scaling to original layout
+                    currentUC.SuspendLayout()
+                    currentUC.Dock = DockStyle.None
+
+                    ' Force back to original bounds relative to panel
+                    currentUC.Location = New Point(0, 0)
+                    currentUC.Size = contentSpacePanel.ClientSize
+
+                    ' Reset layout and scaling
+                    currentUC.AutoScaleMode = AutoScaleMode.None
+                    currentUC.PerformLayout()
+
+                    ' Reapply DockStyle.Fill so it resizes correctly again
+                    currentUC.Dock = DockStyle.Fill
+                    currentUC.ResumeLayout(True)
+                    currentUC.Refresh()
+                End If
+            End If
+        End If
+    End Sub
+
 
     Private Sub xBtn_Click(sender As Object, e As EventArgs) Handles xBtn.Click
         Dim exitPopup As New ExitConfirmForm()
@@ -47,12 +87,8 @@
         ' Clear and load content
         contentSpacePanel.Controls.Clear()
 
-        ' --- DPI / scaling fix ---
-        ' Force consistent scaling regardless of monitor DPI
         contentUC.AutoScaleMode = AutoScaleMode.None
-        contentUC.Scale(New SizeF(1.0F, 1.0F))
         contentUC.Dock = DockStyle.Fill
-        ' --- end fix ---
 
         contentSpacePanel.Controls.Add(contentUC)
     End Sub
