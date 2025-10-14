@@ -65,6 +65,7 @@ Partial Class TransactionRow
         ' lblTotal
         ' 
         lblTotal.Dock = DockStyle.Fill
+        lblTotal.Font = New Font("Poppins", 8.25F)
         lblTotal.Location = New Point(452, 0)
         lblTotal.Margin = New Padding(2, 0, 2, 0)
         lblTotal.Name = "lblTotal"
@@ -76,6 +77,7 @@ Partial Class TransactionRow
         ' lblDate
         ' 
         lblDate.Dock = DockStyle.Fill
+        lblDate.Font = New Font("Poppins", 8.25F)
         lblDate.Location = New Point(377, 0)
         lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
@@ -87,6 +89,7 @@ Partial Class TransactionRow
         ' lblMachine
         ' 
         lblMachine.Dock = DockStyle.Fill
+        lblMachine.Font = New Font("Poppins", 8.25F)
         lblMachine.Location = New Point(302, 0)
         lblMachine.Margin = New Padding(2, 0, 2, 0)
         lblMachine.Name = "lblMachine"
@@ -98,6 +101,7 @@ Partial Class TransactionRow
         ' lblStatus
         ' 
         lblStatus.Dock = DockStyle.Fill
+        lblStatus.Font = New Font("Poppins", 8.25F)
         lblStatus.Location = New Point(227, 0)
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
@@ -109,6 +113,7 @@ Partial Class TransactionRow
         ' lblServiceType
         ' 
         lblServiceType.Dock = DockStyle.Fill
+        lblServiceType.Font = New Font("Poppins", 8.25F)
         lblServiceType.Location = New Point(152, 0)
         lblServiceType.Margin = New Padding(2, 0, 2, 0)
         lblServiceType.Name = "lblServiceType"
@@ -120,6 +125,7 @@ Partial Class TransactionRow
         ' lblCustomer
         ' 
         lblCustomer.Dock = DockStyle.Fill
+        lblCustomer.Font = New Font("Poppins", 8.25F)
         lblCustomer.Location = New Point(77, 0)
         lblCustomer.Margin = New Padding(2, 0, 2, 0)
         lblCustomer.Name = "lblCustomer"
@@ -131,6 +137,7 @@ Partial Class TransactionRow
         ' lblTransactionID
         ' 
         lblTransactionID.Dock = DockStyle.Fill
+        lblTransactionID.Font = New Font("Poppins", 8.25F)
         lblTransactionID.Location = New Point(2, 0)
         lblTransactionID.Margin = New Padding(2, 0, 2, 0)
         lblTransactionID.Name = "lblTransactionID"
@@ -142,6 +149,7 @@ Partial Class TransactionRow
         ' btnView
         ' 
         btnView.Dock = DockStyle.Fill
+        btnView.Font = New Font("Poppins", 8.25F)
         btnView.Location = New Point(527, 2)
         btnView.Margin = New Padding(2)
         btnView.Name = "btnView"
