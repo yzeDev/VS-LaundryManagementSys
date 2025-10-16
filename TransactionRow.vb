@@ -34,8 +34,8 @@
 
             ' Bold & center all existing Labels
             For Each lbl As Label In Me.Controls.OfType(Of Label)()
-                lbl.Font = New Font("Segoe UI", 9, FontStyle.Bold)
-                lbl.TextAlign = ContentAlignment.MiddleCenter
+                lbl.Font = New Font("Poppins", 9, FontStyle.Bold)
+                lbl.TextAlign = ContentAlignment.MiddleLeft
                 lbl.BackColor = Color.Transparent
             Next
 

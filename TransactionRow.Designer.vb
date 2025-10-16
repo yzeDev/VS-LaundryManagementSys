@@ -37,14 +37,14 @@ Partial Class TransactionRow
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 8
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 60F))
         TableLayoutPanel1.Controls.Add(lblTotal, 6, 0)
         TableLayoutPanel1.Controls.Add(lblDate, 5, 0)
         TableLayoutPanel1.Controls.Add(lblMachine, 4, 0)
@@ -59,7 +59,7 @@ Partial Class TransactionRow
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(657, 45)
+        TableLayoutPanel1.Size = New Size(640, 45)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' lblTotal
@@ -155,7 +155,7 @@ Partial Class TransactionRow
         btnView.Location = New Point(576, 2)
         btnView.Margin = New Padding(2)
         btnView.Name = "btnView"
-        btnView.Size = New Size(79, 41)
+        btnView.Size = New Size(62, 41)
         btnView.TabIndex = 7
         btnView.Text = "VIEW"
         btnView.UseVisualStyleBackColor = False
@@ -168,7 +168,7 @@ Partial Class TransactionRow
         Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(0)
         Name = "TransactionRow"
-        Size = New Size(657, 45)
+        Size = New Size(640, 45)
         TableLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
