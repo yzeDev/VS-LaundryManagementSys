@@ -141,9 +141,7 @@
         MessageBox.Show("Order submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
-        InvoiceForm.tbCustomerName.Text = txtboxCustomerName.Text
-        InvoiceForm.tbContactNumber.Text = txtboxContact.Text
-        InvoiceForm.tbAddress.Text = txtboxAddress.Text
+
 
         InvoiceForm.Show()
         Me.Hide()

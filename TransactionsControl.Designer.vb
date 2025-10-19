@@ -22,17 +22,17 @@ Partial Class TransactionControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges55 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionControl))
-        Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges57 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges58 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges59 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges60 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         cmbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         TableLayoutPanel1 = New TableLayoutPanel()
         Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
@@ -56,7 +56,7 @@ Partial Class TransactionControl
         ' 
         cmbStatus.Anchor = AnchorStyles.None
         cmbStatus.BackColor = Color.Transparent
-        cmbStatus.CustomizableEdges = CustomizableEdges51
+        cmbStatus.CustomizableEdges = CustomizableEdges1
         cmbStatus.DrawMode = DrawMode.OwnerDrawFixed
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.DropDownWidth = 137
@@ -66,10 +66,10 @@ Partial Class TransactionControl
         cmbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbStatus.ItemHeight = 30
         cmbStatus.Location = New Point(642, 23)
-        cmbStatus.Margin = New Padding(4, 4, 4, 4)
+        cmbStatus.Margin = New Padding(4)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.RightToLeft = RightToLeft.Yes
-        cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges52
+        cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         cmbStatus.Size = New Size(307, 36)
         cmbStatus.TabIndex = 7
         cmbStatus.Tag = ""
@@ -87,7 +87,7 @@ Partial Class TransactionControl
         TableLayoutPanel1.Controls.Add(flpContainerPanel, 0, 2)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(4, 4, 4, 4)
+        TableLayoutPanel1.Margin = New Padding(4)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 3
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 90F))
@@ -104,7 +104,7 @@ Partial Class TransactionControl
         Guna2ShadowPanel1.Dock = DockStyle.Fill
         Guna2ShadowPanel1.FillColor = Color.White
         Guna2ShadowPanel1.Location = New Point(4, 4)
-        Guna2ShadowPanel1.Margin = New Padding(4, 4, 4, 4)
+        Guna2ShadowPanel1.Margin = New Padding(4)
         Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Guna2ShadowPanel1.ShadowColor = Color.Black
         Guna2ShadowPanel1.ShadowDepth = 50
@@ -124,7 +124,7 @@ Partial Class TransactionControl
         TableLayoutPanel2.Controls.Add(dtpDateFilter, 2, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
-        TableLayoutPanel2.Margin = New Padding(4, 4, 4, 4)
+        TableLayoutPanel2.Margin = New Padding(4)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -133,7 +133,7 @@ Partial Class TransactionControl
         ' 
         ' tbSearch
         ' 
-        tbSearch.CustomizableEdges = CustomizableEdges55
+        tbSearch.CustomizableEdges = CustomizableEdges3
         tbSearch.DefaultText = "Search"
         tbSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         tbSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -150,7 +150,7 @@ Partial Class TransactionControl
         tbSearch.Name = "tbSearch"
         tbSearch.PlaceholderText = ""
         tbSearch.SelectedText = ""
-        tbSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges56
+        tbSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         tbSearch.Size = New Size(625, 66)
         tbSearch.TabIndex = 8
         tbSearch.TextOffset = New Point(10, 0)
@@ -159,18 +159,18 @@ Partial Class TransactionControl
         ' 
         dtpDateFilter.Checked = True
         dtpDateFilter.CheckedState.FillColor = Color.White
-        dtpDateFilter.CustomizableEdges = CustomizableEdges57
+        dtpDateFilter.CustomizableEdges = CustomizableEdges5
         dtpDateFilter.Dock = DockStyle.Fill
         dtpDateFilter.FillColor = Color.White
         dtpDateFilter.FocusedColor = Color.White
         dtpDateFilter.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpDateFilter.Format = DateTimePickerFormat.Long
         dtpDateFilter.Location = New Point(959, 4)
-        dtpDateFilter.Margin = New Padding(4, 4, 4, 4)
+        dtpDateFilter.Margin = New Padding(4)
         dtpDateFilter.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpDateFilter.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpDateFilter.Name = "dtpDateFilter"
-        dtpDateFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges58
+        dtpDateFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         dtpDateFilter.Size = New Size(311, 74)
         dtpDateFilter.TabIndex = 9
         dtpDateFilter.Value = New Date(2025, 10, 14, 16, 9, 1, 495)
@@ -179,7 +179,7 @@ Partial Class TransactionControl
         ' 
         btnAdd.Anchor = AnchorStyles.None
         btnAdd.AutoRoundedCorners = True
-        btnAdd.CustomizableEdges = CustomizableEdges53
+        btnAdd.CustomizableEdges = CustomizableEdges7
         btnAdd.DisabledState.BorderColor = Color.DarkGray
         btnAdd.DisabledState.CustomBorderColor = Color.DarkGray
         btnAdd.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -190,7 +190,7 @@ Partial Class TransactionControl
         btnAdd.Location = New Point(8, 94)
         btnAdd.Margin = New Padding(8, 4, 4, 4)
         btnAdd.Name = "btnAdd"
-        btnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges54
+        btnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnAdd.Size = New Size(213, 51)
         btnAdd.TabIndex = 10
         btnAdd.Text = "+ Add Order"
@@ -204,7 +204,7 @@ Partial Class TransactionControl
         TableLayoutPanel3.Controls.Add(toggleDate, 1, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(757, 94)
-        TableLayoutPanel3.Margin = New Padding(4, 4, 4, 4)
+        TableLayoutPanel3.Margin = New Padding(4)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 1
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -231,11 +231,11 @@ Partial Class TransactionControl
         toggleDate.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         toggleDate.CheckedState.InnerBorderColor = Color.White
         toggleDate.CheckedState.InnerColor = Color.White
-        toggleDate.CustomizableEdges = CustomizableEdges59
+        toggleDate.CustomizableEdges = CustomizableEdges9
         toggleDate.Location = New Point(448, 12)
-        toggleDate.Margin = New Padding(4, 4, 4, 4)
+        toggleDate.Margin = New Padding(4)
         toggleDate.Name = "toggleDate"
-        toggleDate.ShadowDecoration.CustomizableEdges = CustomizableEdges60
+        toggleDate.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         toggleDate.Size = New Size(56, 27)
         toggleDate.TabIndex = 11
         toggleDate.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
@@ -272,7 +272,7 @@ Partial Class TransactionControl
         AutoScaleMode = AutoScaleMode.Dpi
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(15, 15, 15, 15)
+        Margin = New Padding(15)
         Name = "TransactionControl"
         Size = New Size(1282, 906)
         TableLayoutPanel1.ResumeLayout(False)
