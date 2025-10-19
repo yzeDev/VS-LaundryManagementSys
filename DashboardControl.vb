@@ -257,4 +257,9 @@ Public Class DashboardControl
         LoadMachineCounters()
         LoadDashboardTransactions()
     End Sub
+
+    Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
+        Dim popup As New FullServiceForm()
+        popup.ShowDialog()
+    End Sub
 End Class

@@ -261,7 +261,7 @@ Partial Class DashboardControl
         ' lblDelivery
         ' 
         lblDelivery.Dock = DockStyle.Fill
-        lblDelivery.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDelivery.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblDelivery.Location = New Point(63, 0)
         lblDelivery.Name = "lblDelivery"
         lblDelivery.Size = New Size(108, 52)
@@ -297,7 +297,7 @@ Partial Class DashboardControl
         ' Label4
         ' 
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(3, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(174, 35)
@@ -353,7 +353,7 @@ Partial Class DashboardControl
         ' lblinProgress
         ' 
         lblinProgress.Dock = DockStyle.Fill
-        lblinProgress.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblinProgress.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblinProgress.Location = New Point(63, 0)
         lblinProgress.Name = "lblinProgress"
         lblinProgress.Size = New Size(108, 52)
@@ -389,7 +389,7 @@ Partial Class DashboardControl
         ' Label3
         ' 
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(174, 35)
@@ -445,7 +445,7 @@ Partial Class DashboardControl
         ' lblPendingOrders
         ' 
         lblPendingOrders.Dock = DockStyle.Fill
-        lblPendingOrders.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPendingOrders.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPendingOrders.Location = New Point(63, 0)
         lblPendingOrders.Name = "lblPendingOrders"
         lblPendingOrders.Size = New Size(108, 52)
@@ -481,7 +481,7 @@ Partial Class DashboardControl
         ' Label2
         ' 
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(3, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(174, 35)
@@ -537,7 +537,7 @@ Partial Class DashboardControl
         ' lblCompleted
         ' 
         lblCompleted.Dock = DockStyle.Fill
-        lblCompleted.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompleted.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCompleted.Location = New Point(64, 0)
         lblCompleted.Name = "lblCompleted"
         lblCompleted.Size = New Size(110, 52)
@@ -573,7 +573,7 @@ Partial Class DashboardControl
         ' Label5
         ' 
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(177, 35)
@@ -599,7 +599,7 @@ Partial Class DashboardControl
         ' 
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(411, 53)
@@ -627,7 +627,7 @@ Partial Class DashboardControl
         addOrderBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         addOrderBtn.Dock = DockStyle.Right
         addOrderBtn.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
-        addOrderBtn.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        addOrderBtn.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         addOrderBtn.ForeColor = Color.Black
         addOrderBtn.Location = New Point(256, 8)
         addOrderBtn.Name = "addOrderBtn"
@@ -732,7 +732,7 @@ Partial Class DashboardControl
         ' Label6
         ' 
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = SystemColors.ButtonShadow
         Label6.Location = New Point(151, 0)
         Label6.Name = "Label6"
@@ -744,7 +744,7 @@ Partial Class DashboardControl
         ' Label7
         ' 
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(142, 34)
@@ -770,7 +770,7 @@ Partial Class DashboardControl
         ' Label8
         ' 
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
         Label8.Location = New Point(151, 0)
         Label8.Name = "Label8"
@@ -782,7 +782,7 @@ Partial Class DashboardControl
         ' Label9
         ' 
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(3, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(142, 33)
@@ -808,7 +808,7 @@ Partial Class DashboardControl
         ' Label11
         ' 
         Label11.Dock = DockStyle.Fill
-        Label11.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(192, 36)
@@ -843,7 +843,7 @@ Partial Class DashboardControl
         ' Label12
         ' 
         Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
         Label12.Location = New Point(151, 0)
         Label12.Name = "Label12"
@@ -855,7 +855,7 @@ Partial Class DashboardControl
         ' Label14
         ' 
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.Location = New Point(3, 0)
         Label14.Name = "Label14"
         Label14.Size = New Size(142, 33)
@@ -917,7 +917,7 @@ Partial Class DashboardControl
         ' lblUnavailableMachines
         ' 
         lblUnavailableMachines.Dock = DockStyle.Fill
-        lblUnavailableMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUnavailableMachines.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUnavailableMachines.ForeColor = SystemColors.ButtonShadow
         lblUnavailableMachines.Location = New Point(151, 0)
         lblUnavailableMachines.Name = "lblUnavailableMachines"
@@ -929,7 +929,7 @@ Partial Class DashboardControl
         ' Label15
         ' 
         Label15.Dock = DockStyle.Fill
-        Label15.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(3, 0)
         Label15.Name = "Label15"
         Label15.Size = New Size(142, 34)
@@ -955,7 +955,7 @@ Partial Class DashboardControl
         ' lblInUseMachines
         ' 
         lblInUseMachines.Dock = DockStyle.Fill
-        lblInUseMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInUseMachines.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblInUseMachines.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
         lblInUseMachines.Location = New Point(151, 0)
         lblInUseMachines.Name = "lblInUseMachines"
@@ -967,7 +967,7 @@ Partial Class DashboardControl
         ' Label13
         ' 
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
         Label13.Size = New Size(142, 33)
@@ -993,7 +993,7 @@ Partial Class DashboardControl
         ' Label23
         ' 
         Label23.Dock = DockStyle.Fill
-        Label23.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label23.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label23.Location = New Point(3, 0)
         Label23.Name = "Label23"
         Label23.Size = New Size(192, 36)
@@ -1028,7 +1028,7 @@ Partial Class DashboardControl
         ' lblAvailableMachines
         ' 
         lblAvailableMachines.Dock = DockStyle.Fill
-        lblAvailableMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAvailableMachines.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblAvailableMachines.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
         lblAvailableMachines.Location = New Point(151, 0)
         lblAvailableMachines.Name = "lblAvailableMachines"
@@ -1040,7 +1040,7 @@ Partial Class DashboardControl
         ' Label10
         ' 
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(3, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(142, 33)
@@ -1098,7 +1098,7 @@ Partial Class DashboardControl
         ' Label20
         ' 
         Label20.Dock = DockStyle.Fill
-        Label20.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.Location = New Point(3, 0)
         Label20.Name = "Label20"
         Label20.Size = New Size(603, 39)
