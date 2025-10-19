@@ -27,10 +27,10 @@ Partial Class DashboardTransactionRow
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardTransactionRow))
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
-        lblOrderID = New Label()
-        lblCustomerName = New Label()
-        lblContactNo = New Label()
         lblStatus = New Label()
+        lblContactNo = New Label()
+        lblCustomerName = New Label()
+        lblOrderID = New Label()
         btnNotify = New Guna.UI2.WinForms.Guna2Button()
         btnCheck = New Guna.UI2.WinForms.Guna2ImageButton()
         TableLayoutPanel1.SuspendLayout()
@@ -59,31 +59,18 @@ Partial Class DashboardTransactionRow
         TableLayoutPanel1.Size = New Size(657, 45)
         TableLayoutPanel1.TabIndex = 0
         ' 
-        ' lblOrderID
+        ' lblStatus
         ' 
-        lblOrderID.AutoSize = True
-        lblOrderID.BackColor = Color.Transparent
-        lblOrderID.Dock = DockStyle.Fill
-        lblOrderID.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblOrderID.Location = New Point(3, 0)
-        lblOrderID.Name = "lblOrderID"
-        lblOrderID.Size = New Size(115, 45)
-        lblOrderID.TabIndex = 0
-        lblOrderID.Text = "Transac ID"
-        lblOrderID.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' lblCustomerName
-        ' 
-        lblCustomerName.AutoSize = True
-        lblCustomerName.BackColor = Color.Transparent
-        lblCustomerName.Dock = DockStyle.Fill
-        lblCustomerName.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblCustomerName.Location = New Point(124, 0)
-        lblCustomerName.Name = "lblCustomerName"
-        lblCustomerName.Size = New Size(115, 45)
-        lblCustomerName.TabIndex = 1
-        lblCustomerName.Text = "CustomerName"
-        lblCustomerName.TextAlign = ContentAlignment.MiddleCenter
+        lblStatus.AutoSize = True
+        lblStatus.BackColor = Color.Transparent
+        lblStatus.Dock = DockStyle.Fill
+        lblStatus.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblStatus.Location = New Point(366, 0)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(115, 45)
+        lblStatus.TabIndex = 3
+        lblStatus.Text = "Status"
+        lblStatus.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblContactNo
         ' 
@@ -98,21 +85,35 @@ Partial Class DashboardTransactionRow
         lblContactNo.Text = "ContactNo"
         lblContactNo.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' lblStatus
+        ' lblCustomerName
         ' 
-        lblStatus.AutoSize = True
-        lblStatus.BackColor = Color.Transparent
-        lblStatus.Dock = DockStyle.Fill
-        lblStatus.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblStatus.Location = New Point(366, 0)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(115, 45)
-        lblStatus.TabIndex = 3
-        lblStatus.Text = "Status"
-        lblStatus.TextAlign = ContentAlignment.MiddleCenter
+        lblCustomerName.AutoSize = True
+        lblCustomerName.BackColor = Color.Transparent
+        lblCustomerName.Dock = DockStyle.Fill
+        lblCustomerName.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblCustomerName.Location = New Point(124, 0)
+        lblCustomerName.Name = "lblCustomerName"
+        lblCustomerName.Size = New Size(115, 45)
+        lblCustomerName.TabIndex = 1
+        lblCustomerName.Text = "CustomerName"
+        lblCustomerName.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblOrderID
+        ' 
+        lblOrderID.AutoSize = True
+        lblOrderID.BackColor = Color.Transparent
+        lblOrderID.Dock = DockStyle.Fill
+        lblOrderID.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblOrderID.Location = New Point(3, 0)
+        lblOrderID.Name = "lblOrderID"
+        lblOrderID.Size = New Size(115, 45)
+        lblOrderID.TabIndex = 0
+        lblOrderID.Text = "Transac ID"
+        lblOrderID.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' btnNotify
         ' 
+        btnNotify.AutoRoundedCorners = True
         btnNotify.BackColor = Color.White
         btnNotify.CustomizableEdges = CustomizableEdges1
         btnNotify.DisabledState.BorderColor = Color.DarkGray

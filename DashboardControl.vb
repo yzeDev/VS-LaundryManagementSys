@@ -1,8 +1,12 @@
 ﻿Imports System.Data.OleDb
+Imports System.Net.Http
+Imports System.Threading.Tasks
+Imports System.Collections.Generic
 
 Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
+    Private Shared ReadOnly httpClient As New HttpClient()
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -201,22 +205,45 @@ Public Class DashboardControl
     End Sub
 
 
-    Private Sub HandleNotifyClick(ByVal sender As DashboardTransactionRow)
-
-
+    Private Async Sub HandleNotifyClick(ByVal sender As DashboardTransactionRow)
         Dim status As String = sender.CurrentStatus
-        Dim message As String
+        Dim customerName As String = sender.CustomerName
+        Dim contactNumber As String = sender.ContactNumber
 
+        ' You can configure this globally at the top of the class
+        Dim apiKey As String = "YOUR_SEMAPHORE_API_KEY"
+        Dim senderName As String = "LaundryHub" ' optional, must be approved in Semaphore
+
+        Dim smsMessage As String
+
+        ' Customize message based on status
         If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
-            message = "The customer has been notified that their order is ready for pickup."
+            smsMessage = $"Hi {customerName}, your laundry is now ready for pickup. Thank you for choosing us!"
         ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
-            message = "The customer has been notified that their order is ready for delivery."
+            smsMessage = $"Hi {customerName}, your laundry is out for delivery and will arrive soon. Thank you for choosing us!"
         Else
-            message = "Notification sent."
+            smsMessage = $"Hi {customerName}, your laundry update: {status}."
         End If
 
-        MessageBox.Show(message, "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ' Confirm with user before sending
+        Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
+                                  "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm <> DialogResult.Yes Then Exit Sub
+
+        ' Disable the parent control temporarily
+        sender.Enabled = False
+
+        Try
+            Dim result As String = Await SendSmsAsync(apiKey, contactNumber, smsMessage, senderName)
+            MessageBox.Show($"SMS sent successfully!" & vbCrLf & $"Response: {result}",
+                        "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Failed to send SMS: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            sender.Enabled = True
+        End Try
     End Sub
+
 
 
     Private Sub HandleCheckClick(ByVal sender As DashboardTransactionRow)
@@ -259,4 +286,25 @@ Public Class DashboardControl
         LoadMachineCounters()
         LoadDashboardTransactions()
     End Sub
+
+    Private Async Function SendSmsAsync(apiKey As String, number As String, message As String, Optional senderName As String = "") As Task(Of String)
+        Dim url As String = "https://semaphore.co/api/v4/messages"
+
+        Dim form As New List(Of KeyValuePair(Of String, String)) From {
+        New KeyValuePair(Of String, String)("apikey", apiKey),
+        New KeyValuePair(Of String, String)("number", number),
+        New KeyValuePair(Of String, String)("message", message)
+    }
+
+        If Not String.IsNullOrWhiteSpace(senderName) Then
+            form.Add(New KeyValuePair(Of String, String)("sendername", senderName))
+        End If
+
+        Using content As New FormUrlEncodedContent(form)
+            Dim response As HttpResponseMessage = Await httpClient.PostAsync(url, content)
+            response.EnsureSuccessStatusCode()
+            Return Await response.Content.ReadAsStringAsync()
+        End Using
+    End Function
+
 End Class
