@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class InvoiceForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class InvoiceForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -194,8 +194,8 @@ Partial Class InvoiceForm
         ' 
         TableLayoutPanel1.BackColor = Color.Transparent
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.0F))
         TableLayoutPanel1.Controls.Add(TableLayoutPanel6, 1, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel5, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel4, 1, 0)
@@ -203,16 +203,18 @@ Partial Class InvoiceForm
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(2, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
-        TableLayoutPanel1.Size = New Size(436, 124)
-        TableLayoutPanel1.TabIndex = 1
+        TableLayoutPanel1.RowCount = 4
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 6.841339F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 36.5356636F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 31.4410477F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.Size = New Size(627, 687)
+        TableLayoutPanel1.TabIndex = 0
         ' 
         ' TableLayoutPanel6
         ' 
         TableLayoutPanel6.ColumnCount = 1
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel6.Controls.Add(timeLbl, 0, 2)
         TableLayoutPanel6.Controls.Add(dateLbl, 0, 1)
         TableLayoutPanel6.Controls.Add(Label8, 0, 0)
@@ -264,8 +266,8 @@ Partial Class InvoiceForm
         ' TableLayoutPanel5
         ' 
         TableLayoutPanel5.ColumnCount = 2
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 90F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 90.0F))
         TableLayoutPanel5.Controls.Add(Label7, 1, 2)
         TableLayoutPanel5.Controls.Add(Label6, 1, 1)
         TableLayoutPanel5.Controls.Add(Label5, 1, 0)
@@ -355,7 +357,7 @@ Partial Class InvoiceForm
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 1
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel4.Controls.Add(Label2, 0, 0)
         TableLayoutPanel4.Controls.Add(transacLbl, 0, 2)
         TableLayoutPanel4.Controls.Add(Label3, 0, 1)
@@ -363,10 +365,10 @@ Partial Class InvoiceForm
         TableLayoutPanel4.Location = New Point(264, 3)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 3
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 30F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 30F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 40.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 30.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 30.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel4.Size = New Size(169, 43)
         TableLayoutPanel4.TabIndex = 1
         ' 
@@ -408,38 +410,49 @@ Partial Class InvoiceForm
         ' 
         ' TableLayoutPanel2
         ' 
-        TableLayoutPanel2.ColumnCount = 2
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80F))
-        TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 1, 0)
-        TableLayoutPanel2.Controls.Add(PictureBox1, 0, 0)
+        TableLayoutPanel2.ColumnCount = 3
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.5092945F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 72.49071F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82.0F))
+        'TableLayoutPanel2.Controls.Add(tbAmount, 1, 5)
+        'TableLayoutPanel2.Controls.Add(tbAddress, 1, 3)
+        'TableLayoutPanel2.Controls.Add(tbContactNumber, 1, 2)
+        'TableLayoutPanel2.Controls.Add(tbCustomerName, 1, 1)
+        'TableLayoutPanel2.Controls.Add(lblAmountText, 0, 5)
+        'TableLayoutPanel2.Controls.Add(lblTransactionIDText, 0, 0)
+        'TableLayoutPanel2.Controls.Add(lblPaymentText, 0, 4)
+        'TableLayoutPanel2.Controls.Add(lblAddressText, 0, 3)
+        'TableLayoutPanel2.Controls.Add(lblContactNumberText, 0, 2)
+        'TableLayoutPanel2.Controls.Add(lblCustomerNameText, 0, 1)
+        'TableLayoutPanel2.Controls.Add(tbTransactionID, 1, 0)
+        'TableLayoutPanel2.Controls.Add(cmbPaymentMethod, 1, 4)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(3, 3)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel2.Size = New Size(255, 43)
         TableLayoutPanel2.TabIndex = 1
         ' 
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel3.Controls.Add(Label1, 0, 1)
         TableLayoutPanel3.Controls.Add(BubbleFresh, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(54, 3)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 60.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 40.0F))
         TableLayoutPanel3.Size = New Size(198, 37)
         TableLayoutPanel3.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 22)
         Label1.Margin = New Padding(0, 0, 3, 0)
@@ -475,8 +488,8 @@ Partial Class InvoiceForm
         ' TableLayoutPanel8
         ' 
         TableLayoutPanel8.ColumnCount = 2
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel8.Controls.Add(Guna2GradientPanel3, 1, 0)
         TableLayoutPanel8.Controls.Add(Guna2GradientPanel2, 0, 0)
         TableLayoutPanel8.Dock = DockStyle.Fill
@@ -484,7 +497,7 @@ Partial Class InvoiceForm
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.Padding = New Padding(4)
         TableLayoutPanel8.RowCount = 1
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel8.Size = New Size(434, 146)
         TableLayoutPanel8.TabIndex = 0
         ' 
@@ -510,7 +523,7 @@ Partial Class InvoiceForm
         ' 
         TableLayoutPanel12.BackColor = Color.Transparent
         TableLayoutPanel12.ColumnCount = 1
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel12.Controls.Add(packageTypeLbl, 0, 2)
         TableLayoutPanel12.Controls.Add(TableLayoutPanel14, 0, 4)
         TableLayoutPanel12.Controls.Add(serviceTypeLbl, 0, 1)
@@ -520,11 +533,11 @@ Partial Class InvoiceForm
         TableLayoutPanel12.Location = New Point(3, 3)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 5
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 30F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 14F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 15F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 3F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 38F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 30.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 14.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 15.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 3.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 38.0F))
         TableLayoutPanel12.Size = New Size(201, 126)
         TableLayoutPanel12.TabIndex = 1
         ' 
@@ -543,8 +556,8 @@ Partial Class InvoiceForm
         ' TableLayoutPanel14
         ' 
         TableLayoutPanel14.ColumnCount = 2
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.0F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0F))
         TableLayoutPanel14.Controls.Add(deliveryIndicator, 1, 2)
         TableLayoutPanel14.Controls.Add(Label20, 0, 2)
         TableLayoutPanel14.Controls.Add(rateLbl, 1, 1)
@@ -636,7 +649,7 @@ Partial Class InvoiceForm
         ' serviceTypeLbl
         ' 
         serviceTypeLbl.Dock = DockStyle.Fill
-        serviceTypeLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        serviceTypeLbl.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         serviceTypeLbl.ForeColor = Color.Black
         serviceTypeLbl.Location = New Point(3, 37)
         serviceTypeLbl.Name = "serviceTypeLbl"
@@ -648,15 +661,15 @@ Partial Class InvoiceForm
         ' TableLayoutPanel13
         ' 
         TableLayoutPanel13.ColumnCount = 2
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 15F))
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 85F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 15.0F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 85.0F))
         TableLayoutPanel13.Controls.Add(PictureBox7, 0, 0)
         TableLayoutPanel13.Controls.Add(Label12, 1, 0)
         TableLayoutPanel13.Dock = DockStyle.Fill
         TableLayoutPanel13.Location = New Point(3, 3)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 1
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel13.Size = New Size(195, 31)
         TableLayoutPanel13.TabIndex = 1
         ' 
@@ -714,7 +727,7 @@ Partial Class InvoiceForm
         ' 
         TableLayoutPanel9.BackColor = Color.Transparent
         TableLayoutPanel9.ColumnCount = 1
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel9.Controls.Add(customerNameLbl, 0, 1)
         TableLayoutPanel9.Controls.Add(TableLayoutPanel10, 0, 0)
         TableLayoutPanel9.Controls.Add(TableLayoutPanel11, 0, 2)
@@ -722,17 +735,17 @@ Partial Class InvoiceForm
         TableLayoutPanel9.Location = New Point(3, 3)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 4
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 28F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 15F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 22F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 35F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 28.0F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 15.0F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 22.0F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 35.0F))
         TableLayoutPanel9.Size = New Size(201, 126)
         TableLayoutPanel9.TabIndex = 1
         ' 
         ' customerNameLbl
         ' 
         customerNameLbl.Dock = DockStyle.Fill
-        customerNameLbl.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        customerNameLbl.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         customerNameLbl.ForeColor = Color.Black
         customerNameLbl.Location = New Point(3, 35)
         customerNameLbl.Name = "customerNameLbl"
@@ -744,15 +757,15 @@ Partial Class InvoiceForm
         ' TableLayoutPanel10
         ' 
         TableLayoutPanel10.ColumnCount = 2
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 15F))
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 85F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 15.0F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 85.0F))
         TableLayoutPanel10.Controls.Add(Label13, 1, 0)
         TableLayoutPanel10.Controls.Add(PictureBox5, 0, 0)
         TableLayoutPanel10.Dock = DockStyle.Fill
         TableLayoutPanel10.Location = New Point(3, 3)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel10.Size = New Size(195, 29)
         TableLayoutPanel10.TabIndex = 1
         ' 
@@ -782,15 +795,15 @@ Partial Class InvoiceForm
         ' TableLayoutPanel11
         ' 
         TableLayoutPanel11.ColumnCount = 2
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 90F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 90.0F))
         TableLayoutPanel11.Controls.Add(contactNoLbl, 1, 0)
         TableLayoutPanel11.Controls.Add(PictureBox6, 0, 0)
         TableLayoutPanel11.Dock = DockStyle.Fill
         TableLayoutPanel11.Location = New Point(3, 56)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel11.Size = New Size(195, 21)
         TableLayoutPanel11.TabIndex = 4
         ' 
@@ -822,7 +835,7 @@ Partial Class InvoiceForm
         ' TableLayoutPanel7
         ' 
         TableLayoutPanel7.ColumnCount = 1
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel7.Controls.Add(TableLayoutPanel8, 0, 0)
         TableLayoutPanel7.Controls.Add(Panel2, 0, 1)
         TableLayoutPanel7.Controls.Add(Panel4, 0, 2)
@@ -833,12 +846,12 @@ Partial Class InvoiceForm
         TableLayoutPanel7.Location = New Point(0, 128)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 6
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 26F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 14F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 18F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 17F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 5F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 26.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 14.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 18.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 17.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 5.0F))
         TableLayoutPanel7.Size = New Size(440, 587)
         TableLayoutPanel7.TabIndex = 1
         ' 
@@ -855,7 +868,7 @@ Partial Class InvoiceForm
         ' TableLayoutPanel15
         ' 
         TableLayoutPanel15.ColumnCount = 1
-        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel15.Controls.Add(TableLayoutPanel16, 0, 0)
         TableLayoutPanel15.Controls.Add(Panel3, 0, 1)
         TableLayoutPanel15.Controls.Add(addressTxtBox, 0, 2)
@@ -863,9 +876,9 @@ Partial Class InvoiceForm
         TableLayoutPanel15.Location = New Point(4, 4)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 3
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 3F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 57F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 40.0F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 3.0F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 57.0F))
         TableLayoutPanel15.Size = New Size(426, 68)
         TableLayoutPanel15.TabIndex = 0
         ' 
@@ -881,8 +894,8 @@ Partial Class InvoiceForm
         TableLayoutPanel16.Margin = New Padding(3, 0, 3, 0)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 1
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel16.Size = New Size(420, 27)
         TableLayoutPanel16.TabIndex = 2
         ' 
@@ -948,7 +961,7 @@ Partial Class InvoiceForm
         ' TableLayoutPanel17
         ' 
         TableLayoutPanel17.ColumnCount = 1
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel17.Controls.Add(TableLayoutPanel18, 0, 0)
         TableLayoutPanel17.Controls.Add(Panel5, 0, 1)
         TableLayoutPanel17.Controls.Add(TableLayoutPanel19, 0, 2)
@@ -958,26 +971,26 @@ Partial Class InvoiceForm
         TableLayoutPanel17.Location = New Point(4, 4)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 5
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 31F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 3F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 26F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 31.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 3.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 26.0F))
         TableLayoutPanel17.Size = New Size(426, 103)
         TableLayoutPanel17.TabIndex = 1
         ' 
         ' TableLayoutPanel18
         ' 
         TableLayoutPanel18.ColumnCount = 1
-        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel18.Controls.Add(Label24, 0, 0)
         TableLayoutPanel18.Dock = DockStyle.Fill
         TableLayoutPanel18.Location = New Point(3, 0)
         TableLayoutPanel18.Margin = New Padding(3, 0, 3, 0)
         TableLayoutPanel18.Name = "TableLayoutPanel18"
         TableLayoutPanel18.RowCount = 1
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel18.Size = New Size(420, 31)
         TableLayoutPanel18.TabIndex = 2
         ' 
@@ -1006,15 +1019,15 @@ Partial Class InvoiceForm
         ' TableLayoutPanel19
         ' 
         TableLayoutPanel19.ColumnCount = 2
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel19.Controls.Add(serviceFeeLbl, 1, 0)
         TableLayoutPanel19.Controls.Add(Label25, 0, 0)
         TableLayoutPanel19.Dock = DockStyle.Fill
         TableLayoutPanel19.Location = New Point(3, 37)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 1
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel19.Size = New Size(420, 14)
         TableLayoutPanel19.TabIndex = 3
         ' 
@@ -1047,15 +1060,15 @@ Partial Class InvoiceForm
         ' TableLayoutPanel20
         ' 
         TableLayoutPanel20.ColumnCount = 2
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel20.Controls.Add(deliveryFeeLbl, 1, 0)
         TableLayoutPanel20.Controls.Add(Label27, 0, 0)
         TableLayoutPanel20.Dock = DockStyle.Fill
         TableLayoutPanel20.Location = New Point(3, 57)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel20.Size = New Size(420, 14)
         TableLayoutPanel20.TabIndex = 4
         ' 
@@ -1088,8 +1101,8 @@ Partial Class InvoiceForm
         ' TableLayoutPanel21
         ' 
         TableLayoutPanel21.ColumnCount = 2
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel21.Controls.Add(totalAmountLbl, 1, 0)
         TableLayoutPanel21.Controls.Add(Label29, 0, 0)
         TableLayoutPanel21.Dock = DockStyle.Fill
@@ -1097,7 +1110,7 @@ Partial Class InvoiceForm
         TableLayoutPanel21.Name = "TableLayoutPanel21"
         TableLayoutPanel21.Padding = New Padding(0, 5, 0, 0)
         TableLayoutPanel21.RowCount = 1
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel21.Size = New Size(420, 23)
         TableLayoutPanel21.TabIndex = 5
         ' 
@@ -1159,7 +1172,7 @@ Partial Class InvoiceForm
         ' 
         TableLayoutPanel22.BackColor = Color.Transparent
         TableLayoutPanel22.ColumnCount = 1
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel22.Controls.Add(Label31, 0, 0)
         TableLayoutPanel22.Controls.Add(TableLayoutPanel23, 0, 1)
         TableLayoutPanel22.Controls.Add(confirmPayBtn, 0, 2)
@@ -1167,9 +1180,9 @@ Partial Class InvoiceForm
         TableLayoutPanel22.Location = New Point(3, 3)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 3
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 51F))
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 29F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 51.0F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 29.0F))
         TableLayoutPanel22.Size = New Size(420, 85)
         TableLayoutPanel22.TabIndex = 0
         ' 
@@ -1198,7 +1211,7 @@ Partial Class InvoiceForm
         TableLayoutPanel23.Location = New Point(3, 20)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 1
-        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel23.Size = New Size(414, 37)
         TableLayoutPanel23.TabIndex = 3
         ' 
@@ -1213,7 +1226,7 @@ Partial Class InvoiceForm
         GCashBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         GCashBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         GCashBtn.FillColor = Color.White
-        GCashBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GCashBtn.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GCashBtn.ForeColor = Color.Black
         GCashBtn.Image = CType(resources.GetObject("GCashBtn.Image"), Image)
         GCashBtn.ImageAlign = HorizontalAlignment.Left
@@ -1236,7 +1249,7 @@ Partial Class InvoiceForm
         cashBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         cashBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         cashBtn.FillColor = Color.White
-        cashBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cashBtn.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         cashBtn.ForeColor = Color.Black
         cashBtn.Image = CType(resources.GetObject("cashBtn.Image"), Image)
         cashBtn.ImageAlign = HorizontalAlignment.Left
@@ -1259,7 +1272,7 @@ Partial Class InvoiceForm
         mayaBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         mayaBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         mayaBtn.FillColor = Color.White
-        mayaBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        mayaBtn.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         mayaBtn.ForeColor = Color.Black
         mayaBtn.Image = CType(resources.GetObject("mayaBtn.Image"), Image)
         mayaBtn.ImageAlign = HorizontalAlignment.Left
@@ -1307,7 +1320,7 @@ Partial Class InvoiceForm
         ' TableLayoutPanel24
         ' 
         TableLayoutPanel24.ColumnCount = 1
-        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel24.Controls.Add(Label37, 0, 4)
         TableLayoutPanel24.Controls.Add(Label36, 0, 3)
         TableLayoutPanel24.Controls.Add(Label35, 0, 2)
@@ -1317,11 +1330,11 @@ Partial Class InvoiceForm
         TableLayoutPanel24.Location = New Point(4, 5)
         TableLayoutPanel24.Name = "TableLayoutPanel24"
         TableLayoutPanel24.RowCount = 5
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 24F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 24.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 19.0F))
         TableLayoutPanel24.Size = New Size(426, 84)
         TableLayoutPanel24.TabIndex = 6
         ' 
@@ -1398,15 +1411,15 @@ Partial Class InvoiceForm
         ' TableLayoutPanel25
         ' 
         TableLayoutPanel25.ColumnCount = 2
-        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel25.Controls.Add(backBtn, 0, 0)
         TableLayoutPanel25.Controls.Add(cancelBtn, 1, 0)
         TableLayoutPanel25.Dock = DockStyle.Fill
         TableLayoutPanel25.Location = New Point(3, 558)
         TableLayoutPanel25.Name = "TableLayoutPanel25"
         TableLayoutPanel25.RowCount = 1
-        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel25.Size = New Size(434, 26)
         TableLayoutPanel25.TabIndex = 5
         ' 
@@ -1459,7 +1472,7 @@ Partial Class InvoiceForm
         ' 
         ' InvoiceForm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(440, 715)
