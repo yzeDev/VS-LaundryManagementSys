@@ -10,14 +10,27 @@ Public Class MachineCard
         End Set
     End Property
 
+    ' Tracks the transaction currently assigned to this machine (if any)
+    Public Property TransactionID As Integer = 0
+
+    ' Optional: store basic transaction info if needed
+    Public Property DeliverMethod As String = ""
+
+
     Private _machineID As Integer
     Private _unitNumber As Integer
     Private _reason As String
     Private _status As String
 
-    Public ReadOnly Property ProceedButton As Button
+    Public ReadOnly Property ProceedButton As Guna.UI2.WinForms.Guna2Button
         Get
-            Return btnProceedMachine
+            Return Me.btnProceedMachine
+        End Get
+    End Property
+
+    Public ReadOnly Property ViewDetailsButton As Guna.UI2.WinForms.Guna2Button
+        Get
+            Return Me.btnViewDetails
         End Get
     End Property
 
@@ -89,7 +102,7 @@ Public Class MachineCard
         Select Case _status
             Case "Available"
                 Try
-                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unscreen.gif")
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\available.png")
                 Catch
                     picMachine.Image = Nothing
                 End Try
@@ -98,7 +111,7 @@ Public Class MachineCard
             Case "In-Use"
                 lblStatus.ForeColor = Color.OrangeRed
                 Try
-                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-working.gif")
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\available.png")
                 Catch
                     picMachine.Image = Nothing
                 End Try
@@ -108,7 +121,7 @@ Public Class MachineCard
             Case "Unavailable"
                 lblStatus.ForeColor = Color.Gray
                 Try
-                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unavailable.png")
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\unavailable.png")
                 Catch
                     picMachine.Image = Nothing
                 End Try
@@ -118,7 +131,7 @@ Public Class MachineCard
             Case "Damaged"
                 lblStatus.ForeColor = Color.Red
                 Try
-                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-damaged.png")
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\damaged.png")
                 Catch
                     picMachine.Image = Nothing
                 End Try
@@ -126,4 +139,17 @@ Public Class MachineCard
                 btnProceedMachine.BackColor = Color.LightGray
         End Select
     End Sub
+    ' Optional helper for showing machine details directly
+    Public Sub LoadMachineDetails(machineID As Integer)
+        Dim detailsForm As New MachineDetailsForm()
+        detailsForm.TransactionId = Me.TransactionID
+
+        If detailsForm.TransactionId > 0 Then
+            detailsForm.ShowDialog()
+        Else
+            MessageBox.Show("No active transaction for this machine.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+
 End Class

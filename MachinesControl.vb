@@ -65,21 +65,69 @@ Public Class MachinesControl
 
                         ' Picture (keep your existing try/catch)
                         Try
-                            card.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unscreen.gif")
+                            ' change image paths as needed
+                            Select Case card.Status
+                                Case "Damaged"
+                                    card.MachineImage = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\damaged.png")
+                                Case "Unavailable"
+                                    card.MachineImage = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\unavailable.png")
+                                Case Else
+                                    card.MachineImage = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\available.png")
+                            End Select
                         Catch
                             card.MachineImage = Nothing
                         End Try
                         card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
 
-                        ' If unavailable, visually mark and DO NOT attach click handlers
-                        If card.Status = "Unavailable" Then
-                            card.lblUnit.Text = "Unavailable"   ' visible text only
-                            card.BackColor = Color.LightGray
-                            ' Ensure it has no click handlers (defensive)
-                            DisableAllClicks(card)
+                        ' === BUTTON & CLICK STATE HANDLING ===
+                        ' Ensure the card exposes ProceedButton and ViewDetailsButton (Guna2Button)
+                        Dim proceedBtn = card.ProceedButton
+                        Dim viewBtn = card.ViewDetailsButton
+
+                        ' Defensive: make sure the properties exist
+                        If proceedBtn IsNot Nothing Then
+                            ' Remove previous handlers to avoid duplicates
+                            RemoveHandler proceedBtn.Click, AddressOf HandleMachineProceed
+                            AddHandler proceedBtn.Click, AddressOf HandleMachineProceed
+                        End If
+
+                        If viewBtn IsNot Nothing Then
+                            ' Remove previous handler to avoid duplicates
+                            RemoveHandler viewBtn.Click, Nothing
+
+                            ' Add inline handler for viewing machine details
+                            AddHandler viewBtn.Click, Sub()
+                                                          If card.TransactionID > 0 Then
+                                                              Dim detailsForm As New MachineDetailsForm()
+                                                              detailsForm.TransactionId = card.TransactionID
+                                                              detailsForm.ShowDialog()
+                                                          Else
+                                                              MessageBox.Show("No active transaction for this machine.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                                          End If
+                                                      End Sub
+
+                        End If
+
+
+                        ' If Unavailable or Damaged -> disable interactions and style accordingly
+                        If String.Equals(card.Status, "Unavailable", StringComparison.OrdinalIgnoreCase) OrElse
+                       String.Equals(card.Status, "Damaged", StringComparison.OrdinalIgnoreCase) Then
+
+                            ' Disable whole card except view details if you want it accessible
+                            card.Enabled = False
+
+                            ' Disable proceed button and style it grey (do not modify other default colors)
+                            If proceedBtn IsNot Nothing Then
+                                proceedBtn.Enabled = False
+                                ' Guna2Button uses FillColor property
+                                proceedBtn.FillColor = Color.Gray
+                            End If
+
+                            ' Optionally set special images handled above
                         Else
-                            ' Only attach clicks for available machines
-                            AttachClickHandlers(card, AddressOf Machine_Click)
+                            ' Available / In-Use: enable card
+                            card.Enabled = True
+                            If proceedBtn IsNot Nothing Then proceedBtn.Enabled = True
                         End If
 
                         flpMachines.Controls.Add(card)
@@ -88,6 +136,9 @@ Public Class MachinesControl
             End Using
         End Using
     End Sub
+
+
+
 
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
@@ -369,6 +420,106 @@ Public Class MachinesControl
         For Each mc In unavailable
             flpMachines.Controls.Add(mc)
         Next
+    End Sub
+
+    ' Handles the Get Pending / Complete flow
+    ' Handles the Get Pending / Complete flow
+    Private Sub HandleMachineProceed(sender As Object, e As EventArgs)
+        Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
+        If btn Is Nothing Then Return
+
+        ' Find parent MachineCard (walk up parents)
+        Dim parentCtrl As Control = btn
+        While parentCtrl IsNot Nothing AndAlso Not TypeOf parentCtrl Is MachineCard
+            parentCtrl = parentCtrl.Parent
+        End While
+        If parentCtrl Is Nothing Then Return
+        Dim card As MachineCard = DirectCast(parentCtrl, MachineCard)
+
+        If btn.Text = "Get Pending" Then
+            ' Grab one pending transaction and assign it to the machine
+            Using conn As New OleDbConnection(ConnectionString)
+                conn.Open()
+                Dim query As String = "SELECT TOP 1 * FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate"
+                Using cmd As New OleDbCommand(query, conn)
+                    Using reader As OleDbDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            Dim transID As Integer = If(IsDBNull(reader("TransactionID")), 0, Convert.ToInt32(reader("TransactionID")))
+                            Dim deliverMethod As String = If(IsDBNull(reader("DeliverMethod")), "", reader("DeliverMethod").ToString())
+                            Dim serviceDuration As String = If(IsDBNull(reader("ServiceDuration")), "", reader("ServiceDuration").ToString())
+
+                            ' Update machine card UI
+                            card.lblStatus.Text = "In-Use"
+                            card.lblTransactionID.Text = "Transaction #" & transID.ToString()
+                            card.lblServiceTime.Text = If(String.IsNullOrEmpty(serviceDuration), DateTime.Now.ToShortTimeString(), serviceDuration)
+
+                            ' Update transaction to In-Progress
+                            Using ucmd As New OleDbCommand("UPDATE Transactions SET Status='In-Progress' WHERE TransactionID=@id", conn)
+                                ucmd.Parameters.AddWithValue("@id", transID)
+                                ucmd.ExecuteNonQuery()
+                            End Using
+
+                            ' Change button to Complete stage (only change the button's FillColor now)
+                            btn.Text = "Complete"
+                            btn.FillColor = Color.LightGreen
+                        Else
+                            MessageBox.Show("No pending transactions available.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        End If
+                    End Using
+                End Using
+            End Using
+
+        ElseIf btn.Text = "Complete" Then
+            ' Complete current transaction assigned to this machine
+            Dim transText = card.lblTransactionID.Text.Replace("Transaction #", "").Trim()
+            Dim transID As Integer
+            If Integer.TryParse(transText, transID) Then
+                Using conn As New OleDbConnection(ConnectionString)
+                    conn.Open()
+                    ' find deliver method
+                    Dim deliverMethod As String = ""
+                    Using qcmd As New OleDbCommand("SELECT DeliverMethod FROM Transactions WHERE TransactionID=@id", conn)
+                        qcmd.Parameters.AddWithValue("@id", transID)
+                        Dim res = qcmd.ExecuteScalar()
+                        If res IsNot Nothing AndAlso res IsNot DBNull.Value Then deliverMethod = res.ToString()
+                    End Using
+
+                    Dim newStatus As String = If(String.Equals(deliverMethod, "Delivery", StringComparison.OrdinalIgnoreCase), "For Delivery", "For Pickup")
+                    Using ucmd As New OleDbCommand("UPDATE Transactions SET Status=@status WHERE TransactionID=@id", conn)
+                        ucmd.Parameters.AddWithValue("@status", newStatus)
+                        ucmd.Parameters.AddWithValue("@id", transID)
+                        ucmd.ExecuteNonQuery()
+                    End Using
+                End Using
+            End If
+
+            ' Reset card visuals to available
+            card.lblStatus.Text = "Available"
+            card.lblTransactionID.Text = ""
+            card.lblServiceTime.Text = ""
+            btn.Text = "Get Pending"
+            ' restore button FillColor — DO NOT assume a specific original color; reset to default by disabling override:
+            btn.FillColor = btn.Parent.BackColor ' this ensures it doesn't forcibly change your theme (or set to a known color)
+        End If
+    End Sub
+
+    ' Handles "View Details" button click
+    Private Sub HandleViewDetails(sender As Object, e As EventArgs)
+        Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
+        If btn Is Nothing Then Return
+
+        Dim parentCtrl As Control = btn
+        While parentCtrl IsNot Nothing AndAlso Not TypeOf parentCtrl Is MachineCard
+            parentCtrl = parentCtrl.Parent
+        End While
+        If parentCtrl Is Nothing Then Return
+        Dim card As MachineCard = DirectCast(parentCtrl, MachineCard)
+
+        ' open a machine details form or transaction form
+        ' Example: open a MachineDetailsForm (you should implement it to accept machine id)
+        Dim frm As New MachineDetailsForm()
+        frm.LoadMachineDetails(card.MachineID) ' implement this method
+        frm.ShowDialog()
     End Sub
 
 End Class

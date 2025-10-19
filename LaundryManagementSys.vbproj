@@ -39,6 +39,7 @@
     </Compile>
     <Compile Update="BasicServiceForm.vb" />
     <Compile Update="MachinesControl.vb" />
+    <Compile Update="MachineDetailsForm.vb" />
     <Compile Update="TransactionsControl.vb" />
   </ItemGroup>
 
