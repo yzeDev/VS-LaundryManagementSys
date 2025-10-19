@@ -20,7 +20,6 @@
         TransactionID = orderId
         CurrentStatus = status
 
-        ' Enable the "Check" button only for delivery/pickup statuses
         btnCheck.Enabled = status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) OrElse
                            status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase)
         btnCheck.Text = If(btnCheck.Enabled, "Mark Done", "✓")
