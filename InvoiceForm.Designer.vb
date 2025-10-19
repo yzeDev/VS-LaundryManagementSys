@@ -49,13 +49,14 @@ Partial Class InvoiceForm
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 4
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 6.841339F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 36.5356636F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 31.4410477F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
-        TableLayoutPanel1.Size = New Size(627, 687)
+        TableLayoutPanel1.Size = New Size(717, 916)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' lblLaundryText
@@ -66,7 +67,7 @@ Partial Class InvoiceForm
         lblLaundryText.ForeColor = Color.White
         lblLaundryText.Location = New Point(3, 0)
         lblLaundryText.Name = "lblLaundryText"
-        lblLaundryText.Size = New Size(621, 47)
+        lblLaundryText.Size = New Size(711, 62)
         lblLaundryText.TabIndex = 2
         lblLaundryText.Text = "Laundry Management System"
         lblLaundryText.TextAlign = ContentAlignment.MiddleCenter
@@ -76,7 +77,7 @@ Partial Class InvoiceForm
         TableLayoutPanel2.ColumnCount = 3
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.5092945F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 72.49071F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 95F))
         TableLayoutPanel2.Controls.Add(tbAmount, 1, 5)
         TableLayoutPanel2.Controls.Add(tbAddress, 1, 3)
         TableLayoutPanel2.Controls.Add(tbContactNumber, 1, 2)
@@ -90,7 +91,8 @@ Partial Class InvoiceForm
         TableLayoutPanel2.Controls.Add(tbTransactionID, 1, 0)
         TableLayoutPanel2.Controls.Add(cmbPaymentMethod, 1, 4)
         TableLayoutPanel2.Dock = DockStyle.Fill
-        TableLayoutPanel2.Location = New Point(3, 50)
+        TableLayoutPanel2.Location = New Point(3, 66)
+        TableLayoutPanel2.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 6
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.6666679F))
@@ -99,16 +101,17 @@ Partial Class InvoiceForm
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.6666679F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.6666679F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.6666679F))
-        TableLayoutPanel2.Size = New Size(621, 245)
+        TableLayoutPanel2.Size = New Size(711, 327)
         TableLayoutPanel2.TabIndex = 1
         ' 
         ' tbAmount
         ' 
         tbAmount.Dock = DockStyle.Fill
         tbAmount.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbAmount.Location = New Point(151, 203)
+        tbAmount.Location = New Point(172, 274)
+        tbAmount.Margin = New Padding(3, 4, 3, 4)
         tbAmount.Name = "tbAmount"
-        tbAmount.Size = New Size(384, 31)
+        tbAmount.Size = New Size(440, 37)
         tbAmount.TabIndex = 16
         ' 
         ' tbAddress
@@ -116,10 +119,11 @@ Partial Class InvoiceForm
         tbAddress.Dock = DockStyle.Fill
         tbAddress.Enabled = False
         tbAddress.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbAddress.Location = New Point(151, 123)
+        tbAddress.Location = New Point(172, 166)
+        tbAddress.Margin = New Padding(3, 4, 3, 4)
         tbAddress.Name = "tbAddress"
         tbAddress.ReadOnly = True
-        tbAddress.Size = New Size(384, 31)
+        tbAddress.Size = New Size(440, 37)
         tbAddress.TabIndex = 14
         ' 
         ' tbContactNumber
@@ -127,10 +131,11 @@ Partial Class InvoiceForm
         tbContactNumber.Dock = DockStyle.Fill
         tbContactNumber.Enabled = False
         tbContactNumber.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbContactNumber.Location = New Point(151, 83)
+        tbContactNumber.Location = New Point(172, 112)
+        tbContactNumber.Margin = New Padding(3, 4, 3, 4)
         tbContactNumber.Name = "tbContactNumber"
         tbContactNumber.ReadOnly = True
-        tbContactNumber.Size = New Size(384, 31)
+        tbContactNumber.Size = New Size(440, 37)
         tbContactNumber.TabIndex = 13
         ' 
         ' tbCustomerName
@@ -138,10 +143,11 @@ Partial Class InvoiceForm
         tbCustomerName.Dock = DockStyle.Fill
         tbCustomerName.Enabled = False
         tbCustomerName.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbCustomerName.Location = New Point(151, 43)
+        tbCustomerName.Location = New Point(172, 58)
+        tbCustomerName.Margin = New Padding(3, 4, 3, 4)
         tbCustomerName.Name = "tbCustomerName"
         tbCustomerName.ReadOnly = True
-        tbCustomerName.Size = New Size(384, 31)
+        tbCustomerName.Size = New Size(440, 37)
         tbCustomerName.TabIndex = 12
         ' 
         ' lblAmountText
@@ -149,9 +155,9 @@ Partial Class InvoiceForm
         lblAmountText.AutoSize = True
         lblAmountText.Dock = DockStyle.Fill
         lblAmountText.Font = New Font("Segoe UI", 11.25F)
-        lblAmountText.Location = New Point(3, 200)
+        lblAmountText.Location = New Point(3, 270)
         lblAmountText.Name = "lblAmountText"
-        lblAmountText.Size = New Size(142, 45)
+        lblAmountText.Size = New Size(163, 57)
         lblAmountText.TabIndex = 10
         lblAmountText.Text = "Amount Received: "
         lblAmountText.TextAlign = ContentAlignment.MiddleCenter
@@ -163,7 +169,7 @@ Partial Class InvoiceForm
         lblTransactionIDText.Font = New Font("Segoe UI", 11.25F)
         lblTransactionIDText.Location = New Point(3, 0)
         lblTransactionIDText.Name = "lblTransactionIDText"
-        lblTransactionIDText.Size = New Size(142, 40)
+        lblTransactionIDText.Size = New Size(163, 54)
         lblTransactionIDText.TabIndex = 0
         lblTransactionIDText.Text = "Transaction ID:"
         lblTransactionIDText.TextAlign = ContentAlignment.MiddleCenter
@@ -173,9 +179,9 @@ Partial Class InvoiceForm
         lblPaymentText.AutoSize = True
         lblPaymentText.Dock = DockStyle.Fill
         lblPaymentText.Font = New Font("Segoe UI", 11.25F)
-        lblPaymentText.Location = New Point(3, 160)
+        lblPaymentText.Location = New Point(3, 216)
         lblPaymentText.Name = "lblPaymentText"
-        lblPaymentText.Size = New Size(142, 40)
+        lblPaymentText.Size = New Size(163, 54)
         lblPaymentText.TabIndex = 8
         lblPaymentText.Text = "Payment Method:"
         lblPaymentText.TextAlign = ContentAlignment.MiddleCenter
@@ -185,9 +191,9 @@ Partial Class InvoiceForm
         lblAddressText.AutoSize = True
         lblAddressText.Dock = DockStyle.Fill
         lblAddressText.Font = New Font("Segoe UI", 11.25F)
-        lblAddressText.Location = New Point(3, 120)
+        lblAddressText.Location = New Point(3, 162)
         lblAddressText.Name = "lblAddressText"
-        lblAddressText.Size = New Size(142, 40)
+        lblAddressText.Size = New Size(163, 54)
         lblAddressText.TabIndex = 6
         lblAddressText.Text = "Address:"
         lblAddressText.TextAlign = ContentAlignment.MiddleCenter
@@ -197,9 +203,9 @@ Partial Class InvoiceForm
         lblContactNumberText.AutoSize = True
         lblContactNumberText.Dock = DockStyle.Fill
         lblContactNumberText.Font = New Font("Segoe UI", 11.25F)
-        lblContactNumberText.Location = New Point(3, 80)
+        lblContactNumberText.Location = New Point(3, 108)
         lblContactNumberText.Name = "lblContactNumberText"
-        lblContactNumberText.Size = New Size(142, 40)
+        lblContactNumberText.Size = New Size(163, 54)
         lblContactNumberText.TabIndex = 4
         lblContactNumberText.Text = "Contact Number: "
         lblContactNumberText.TextAlign = ContentAlignment.MiddleCenter
@@ -209,9 +215,9 @@ Partial Class InvoiceForm
         lblCustomerNameText.AutoSize = True
         lblCustomerNameText.Dock = DockStyle.Fill
         lblCustomerNameText.Font = New Font("Segoe UI", 11.25F)
-        lblCustomerNameText.Location = New Point(3, 40)
+        lblCustomerNameText.Location = New Point(3, 54)
         lblCustomerNameText.Name = "lblCustomerNameText"
-        lblCustomerNameText.Size = New Size(142, 40)
+        lblCustomerNameText.Size = New Size(163, 54)
         lblCustomerNameText.TabIndex = 2
         lblCustomerNameText.Text = "Customer Name: "
         lblCustomerNameText.TextAlign = ContentAlignment.MiddleCenter
@@ -221,10 +227,11 @@ Partial Class InvoiceForm
         tbTransactionID.Dock = DockStyle.Fill
         tbTransactionID.Enabled = False
         tbTransactionID.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbTransactionID.Location = New Point(151, 3)
+        tbTransactionID.Location = New Point(172, 4)
+        tbTransactionID.Margin = New Padding(3, 4, 3, 4)
         tbTransactionID.Name = "tbTransactionID"
         tbTransactionID.ReadOnly = True
-        tbTransactionID.Size = New Size(384, 31)
+        tbTransactionID.Size = New Size(440, 37)
         tbTransactionID.TabIndex = 11
         ' 
         ' cmbPaymentMethod
@@ -234,17 +241,19 @@ Partial Class InvoiceForm
         cmbPaymentMethod.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbPaymentMethod.FormattingEnabled = True
         cmbPaymentMethod.Items.AddRange(New Object() {"Cash", "Card"})
-        cmbPaymentMethod.Location = New Point(151, 163)
+        cmbPaymentMethod.Location = New Point(172, 220)
+        cmbPaymentMethod.Margin = New Padding(3, 4, 3, 4)
         cmbPaymentMethod.Name = "cmbPaymentMethod"
-        cmbPaymentMethod.Size = New Size(384, 33)
+        cmbPaymentMethod.Size = New Size(440, 40)
         cmbPaymentMethod.TabIndex = 17
         ' 
         ' InvoiceForm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(627, 687)
+        ClientSize = New Size(717, 916)
         Controls.Add(TableLayoutPanel1)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "InvoiceForm"
         Text = "InvoiceForm"
         TableLayoutPanel1.ResumeLayout(False)
