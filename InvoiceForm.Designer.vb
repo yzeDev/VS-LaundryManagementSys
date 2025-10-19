@@ -414,18 +414,6 @@ Partial Class InvoiceForm
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.5092945F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 72.49071F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82.0F))
-        TableLayoutPanel2.Controls.Add(tbAmount, 1, 5)
-        TableLayoutPanel2.Controls.Add(tbAddress, 1, 3)
-        TableLayoutPanel2.Controls.Add(tbContactNumber, 1, 2)
-        TableLayoutPanel2.Controls.Add(tbCustomerName, 1, 1)
-        TableLayoutPanel2.Controls.Add(lblAmountText, 0, 5)
-        TableLayoutPanel2.Controls.Add(lblTransactionIDText, 0, 0)
-        TableLayoutPanel2.Controls.Add(lblPaymentText, 0, 4)
-        TableLayoutPanel2.Controls.Add(lblAddressText, 0, 3)
-        TableLayoutPanel2.Controls.Add(lblContactNumberText, 0, 2)
-        TableLayoutPanel2.Controls.Add(lblCustomerNameText, 0, 1)
-        TableLayoutPanel2.Controls.Add(tbTransactionID, 1, 0)
-        TableLayoutPanel2.Controls.Add(cmbPaymentMethod, 1, 4)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(3, 3)
         TableLayoutPanel2.Name = "TableLayoutPanel2"

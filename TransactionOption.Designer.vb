@@ -80,13 +80,13 @@ Partial Class TransactionOption
         TableLayoutPanel1.Controls.Add(Panel2, 1, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(10)
+        TableLayoutPanel1.Margin = New Padding(14, 17, 14, 17)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 150F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 250F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel1.Size = New Size(984, 521)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
+        TableLayoutPanel1.Size = New Size(1397, 840)
         TableLayoutPanel1.TabIndex = 3
         ' 
         ' TableLayoutPanel10
@@ -96,21 +96,23 @@ Partial Class TransactionOption
         TableLayoutPanel10.Controls.Add(Button5, 0, 2)
         TableLayoutPanel10.Controls.Add(TableLayoutPanel11, 0, 0)
         TableLayoutPanel10.Dock = DockStyle.Fill
-        TableLayoutPanel10.Location = New Point(741, 153)
+        TableLayoutPanel10.Location = New Point(1051, 255)
+        TableLayoutPanel10.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 3
         TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0000076F))
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel10.Size = New Size(240, 365)
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 67F))
+        TableLayoutPanel10.Size = New Size(342, 580)
         TableLayoutPanel10.TabIndex = 25
         ' 
         ' Button5
         ' 
         Button5.Dock = DockStyle.Fill
-        Button5.Location = New Point(3, 327)
+        Button5.Location = New Point(4, 517)
+        Button5.Margin = New Padding(4, 5, 4, 5)
         Button5.Name = "Button5"
-        Button5.Size = New Size(234, 35)
+        Button5.Size = New Size(334, 58)
         Button5.TabIndex = 4
         Button5.Text = "Select Service"
         Button5.UseVisualStyleBackColor = True
@@ -123,13 +125,14 @@ Partial Class TransactionOption
         TableLayoutPanel11.Controls.Add(Label8, 0, 1)
         TableLayoutPanel11.Controls.Add(PictureBox4, 0, 0)
         TableLayoutPanel11.Dock = DockStyle.Fill
-        TableLayoutPanel11.Location = New Point(3, 3)
+        TableLayoutPanel11.Location = New Point(4, 5)
+        TableLayoutPanel11.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 3
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 70F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 117F))
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel11.Size = New Size(234, 156)
+        TableLayoutPanel11.Size = New Size(334, 246)
         TableLayoutPanel11.TabIndex = 0
         ' 
         ' Label7
@@ -137,9 +140,10 @@ Partial Class TransactionOption
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
         Label7.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(3, 113)
+        Label7.Location = New Point(4, 181)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(228, 43)
+        Label7.Size = New Size(326, 65)
         Label7.TabIndex = 2
         Label7.Text = "Ideal for those who like to do their" & vbCrLf & "laundry themselves — clean your way" & vbCrLf & "with our user-friendly machines."
         Label7.TextAlign = ContentAlignment.MiddleCenter
@@ -149,9 +153,10 @@ Partial Class TransactionOption
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
         Label8.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(3, 70)
+        Label8.Location = New Point(4, 117)
+        Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(228, 43)
+        Label8.Size = New Size(326, 64)
         Label8.TabIndex = 0
         Label8.Text = "Basic Services"
         Label8.TextAlign = ContentAlignment.MiddleCenter
@@ -159,9 +164,10 @@ Partial Class TransactionOption
         ' PictureBox4
         ' 
         PictureBox4.Anchor = AnchorStyles.None
-        PictureBox4.Location = New Point(67, 10)
+        PictureBox4.Location = New Point(95, 17)
+        PictureBox4.Margin = New Padding(4, 5, 4, 5)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(100, 50)
+        PictureBox4.Size = New Size(143, 83)
         PictureBox4.TabIndex = 3
         PictureBox4.TabStop = False
         ' 
@@ -172,13 +178,14 @@ Partial Class TransactionOption
         TableLayoutPanel8.Controls.Add(TableLayoutPanel9, 0, 0)
         TableLayoutPanel8.Controls.Add(Button3, 0, 2)
         TableLayoutPanel8.Dock = DockStyle.Fill
-        TableLayoutPanel8.Location = New Point(495, 153)
+        TableLayoutPanel8.Location = New Point(702, 255)
+        TableLayoutPanel8.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 3
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0000076F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel8.Size = New Size(240, 365)
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 67F))
+        TableLayoutPanel8.Size = New Size(341, 580)
         TableLayoutPanel8.TabIndex = 24
         ' 
         ' TableLayoutPanel9
@@ -189,13 +196,14 @@ Partial Class TransactionOption
         TableLayoutPanel9.Controls.Add(Label6, 0, 1)
         TableLayoutPanel9.Controls.Add(PictureBox3, 0, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
-        TableLayoutPanel9.Location = New Point(3, 3)
+        TableLayoutPanel9.Location = New Point(4, 5)
+        TableLayoutPanel9.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 3
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 70F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 117F))
         TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel9.Size = New Size(234, 156)
+        TableLayoutPanel9.Size = New Size(333, 246)
         TableLayoutPanel9.TabIndex = 0
         ' 
         ' Label5
@@ -203,9 +211,10 @@ Partial Class TransactionOption
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
         Label5.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(3, 113)
+        Label5.Location = New Point(4, 181)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(228, 43)
+        Label5.Size = New Size(325, 65)
         Label5.TabIndex = 2
         Label5.Text = "Where delicate fabrics meet expert " & vbCrLf & "handling. Professional dry cleaning " & vbCrLf & "tailored for your finest garments."
         Label5.TextAlign = ContentAlignment.MiddleCenter
@@ -215,9 +224,10 @@ Partial Class TransactionOption
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
         Label6.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(3, 70)
+        Label6.Location = New Point(4, 117)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(228, 43)
+        Label6.Size = New Size(325, 64)
         Label6.TabIndex = 0
         Label6.Text = "Dry Cleaning"
         Label6.TextAlign = ContentAlignment.MiddleCenter
@@ -225,18 +235,20 @@ Partial Class TransactionOption
         ' PictureBox3
         ' 
         PictureBox3.Anchor = AnchorStyles.None
-        PictureBox3.Location = New Point(67, 10)
+        PictureBox3.Location = New Point(95, 17)
+        PictureBox3.Margin = New Padding(4, 5, 4, 5)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(100, 50)
+        PictureBox3.Size = New Size(143, 83)
         PictureBox3.TabIndex = 3
         PictureBox3.TabStop = False
         ' 
         ' Button3
         ' 
         Button3.Dock = DockStyle.Fill
-        Button3.Location = New Point(3, 327)
+        Button3.Location = New Point(4, 517)
+        Button3.Margin = New Padding(4, 5, 4, 5)
         Button3.Name = "Button3"
-        Button3.Size = New Size(234, 35)
+        Button3.Size = New Size(333, 58)
         Button3.TabIndex = 2
         Button3.Text = "Select Service"
         Button3.UseVisualStyleBackColor = True
@@ -248,21 +260,23 @@ Partial Class TransactionOption
         TableLayoutPanel4.Controls.Add(Button2, 0, 2)
         TableLayoutPanel4.Controls.Add(TableLayoutPanel5, 0, 0)
         TableLayoutPanel4.Dock = DockStyle.Fill
-        TableLayoutPanel4.Location = New Point(3, 153)
+        TableLayoutPanel4.Location = New Point(4, 255)
+        TableLayoutPanel4.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 3
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0000076F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel4.Size = New Size(240, 365)
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 67F))
+        TableLayoutPanel4.Size = New Size(341, 580)
         TableLayoutPanel4.TabIndex = 23
         ' 
         ' Button2
         ' 
         Button2.Dock = DockStyle.Fill
-        Button2.Location = New Point(3, 327)
+        Button2.Location = New Point(4, 517)
+        Button2.Margin = New Padding(4, 5, 4, 5)
         Button2.Name = "Button2"
-        Button2.Size = New Size(234, 35)
+        Button2.Size = New Size(333, 58)
         Button2.TabIndex = 4
         Button2.Text = "Select Service"
         Button2.UseVisualStyleBackColor = True
@@ -275,13 +289,14 @@ Partial Class TransactionOption
         TableLayoutPanel5.Controls.Add(Label9, 0, 1)
         TableLayoutPanel5.Controls.Add(PictureBox2, 0, 0)
         TableLayoutPanel5.Dock = DockStyle.Fill
-        TableLayoutPanel5.Location = New Point(3, 3)
+        TableLayoutPanel5.Location = New Point(4, 5)
+        TableLayoutPanel5.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 3
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 70F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 117F))
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.Size = New Size(234, 156)
+        TableLayoutPanel5.Size = New Size(333, 246)
         TableLayoutPanel5.TabIndex = 0
         ' 
         ' Label3
@@ -289,9 +304,10 @@ Partial Class TransactionOption
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
         Label3.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(3, 113)
+        Label3.Location = New Point(4, 181)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(228, 43)
+        Label3.Size = New Size(325, 65)
         Label3.TabIndex = 2
         Label3.Text = "Ideal for those who like to do their" & vbCrLf & "laundry themselves — clean your way" & vbCrLf & "with our user-friendly machines."
         Label3.TextAlign = ContentAlignment.MiddleCenter
@@ -301,9 +317,10 @@ Partial Class TransactionOption
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
         Label9.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(3, 70)
+        Label9.Location = New Point(4, 117)
+        Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(228, 43)
+        Label9.Size = New Size(325, 64)
         Label9.TabIndex = 0
         Label9.Text = "Self-Service"
         Label9.TextAlign = ContentAlignment.MiddleCenter
@@ -311,9 +328,10 @@ Partial Class TransactionOption
         ' PictureBox2
         ' 
         PictureBox2.Anchor = AnchorStyles.None
-        PictureBox2.Location = New Point(67, 10)
+        PictureBox2.Location = New Point(95, 17)
+        PictureBox2.Margin = New Padding(4, 5, 4, 5)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(100, 50)
+        PictureBox2.Size = New Size(143, 83)
         PictureBox2.TabIndex = 3
         PictureBox2.TabStop = False
         ' 
@@ -322,9 +340,10 @@ Partial Class TransactionOption
         TableLayoutPanel1.SetColumnSpan(Panel1, 4)
         Panel1.Controls.Add(TableLayoutPanel2)
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(3, 3)
+        Panel1.Location = New Point(4, 5)
+        Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(978, 144)
+        Panel1.Size = New Size(1389, 240)
         Panel1.TabIndex = 14
         ' 
         ' TableLayoutPanel2
@@ -337,11 +356,12 @@ Partial Class TransactionOption
         TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 1, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel2.Size = New Size(978, 144)
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 240F))
+        TableLayoutPanel2.Size = New Size(1389, 240)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' btnCancelOrder
@@ -351,9 +371,10 @@ Partial Class TransactionOption
         btnCancelOrder.FlatAppearance.BorderSize = 0
         btnCancelOrder.FlatStyle = FlatStyle.Flat
         btnCancelOrder.ForeColor = Color.Black
-        btnCancelOrder.Location = New Point(920, 3)
+        btnCancelOrder.Location = New Point(1306, 5)
+        btnCancelOrder.Margin = New Padding(4, 5, 4, 5)
         btnCancelOrder.Name = "btnCancelOrder"
-        btnCancelOrder.Size = New Size(55, 43)
+        btnCancelOrder.Size = New Size(79, 72)
         btnCancelOrder.TabIndex = 13
         btnCancelOrder.Text = "X"
         btnCancelOrder.UseVisualStyleBackColor = False
@@ -362,18 +383,19 @@ Partial Class TransactionOption
         ' 
         TableLayoutPanel3.ColumnCount = 1
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 29F))
         TableLayoutPanel3.Controls.Add(Label1, 0, 2)
         TableLayoutPanel3.Controls.Add(pbLogo, 0, 0)
         TableLayoutPanel3.Controls.Add(lblTitle, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
-        TableLayoutPanel3.Location = New Point(328, 3)
+        TableLayoutPanel3.Location = New Point(466, 5)
+        TableLayoutPanel3.Margin = New Padding(4, 5, 4, 5)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 3
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel3.Size = New Size(320, 138)
+        TableLayoutPanel3.Size = New Size(455, 230)
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' Label1
@@ -381,9 +403,10 @@ Partial Class TransactionOption
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
         Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(3, 92)
+        Label1.Location = New Point(4, 152)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(314, 46)
+        Label1.Size = New Size(447, 78)
         Label1.TabIndex = 2
         Label1.Text = "Choose Your Laundry Service"
         Label1.TextAlign = ContentAlignment.TopCenter
@@ -391,9 +414,10 @@ Partial Class TransactionOption
         ' pbLogo
         ' 
         pbLogo.Anchor = AnchorStyles.None
-        pbLogo.Location = New Point(110, 3)
+        pbLogo.Location = New Point(156, 5)
+        pbLogo.Margin = New Padding(4, 5, 4, 5)
         pbLogo.Name = "pbLogo"
-        pbLogo.Size = New Size(100, 40)
+        pbLogo.Size = New Size(143, 66)
         pbLogo.TabIndex = 0
         pbLogo.TabStop = False
         ' 
@@ -402,9 +426,10 @@ Partial Class TransactionOption
         lblTitle.AutoSize = True
         lblTitle.Dock = DockStyle.Fill
         lblTitle.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(3, 46)
+        lblTitle.Location = New Point(4, 76)
+        lblTitle.Margin = New Padding(4, 0, 4, 0)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(314, 46)
+        lblTitle.Size = New Size(447, 76)
         lblTitle.TabIndex = 1
         lblTitle.Text = "BubbleFresh"
         lblTitle.TextAlign = ContentAlignment.MiddleCenter
@@ -412,23 +437,25 @@ Partial Class TransactionOption
         ' Panel2
         ' 
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(249, 153)
+        Panel2.Location = New Point(353, 255)
+        Panel2.Margin = New Padding(4, 5, 4, 5)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(240, 365)
+        Panel2.Size = New Size(341, 580)
         Panel2.TabIndex = 22
         ' 
         ' TransactionOption
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(984, 521)
+        ClientSize = New Size(1397, 840)
         ControlBox = False
         Controls.Add(TableLayoutPanel1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         IsMdiContainer = True
-        MaximumSize = New Size(1000, 560)
-        MinimumSize = New Size(1000, 560)
+        Margin = New Padding(4, 5, 4, 5)
+        MaximumSize = New Size(1419, 896)
+        MinimumSize = New Size(1419, 896)
         Name = "TransactionOption"
         StartPosition = FormStartPosition.CenterParent
         Text = "Transaction Selection"
