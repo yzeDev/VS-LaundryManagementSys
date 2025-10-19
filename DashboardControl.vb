@@ -202,6 +202,8 @@ Public Class DashboardControl
 
 
     Private Sub HandleNotifyClick(ByVal sender As DashboardTransactionRow)
+
+
         Dim status As String = sender.CurrentStatus
         Dim message As String
 

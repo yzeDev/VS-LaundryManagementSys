@@ -155,9 +155,9 @@ Partial Class MainForm
         ' 
         adminnNavTblPanel.BackColor = Color.Transparent
         adminnNavTblPanel.ColumnCount = 3
-        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29.0F))
-        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51.0F))
-        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20.0F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51F))
+        adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         adminnNavTblPanel.Controls.Add(logoutBtn, 2, 0)
         adminnNavTblPanel.Controls.Add(administratorLbl, 1, 1)
         adminnNavTblPanel.Controls.Add(adminPicBox, 0, 0)
@@ -166,8 +166,8 @@ Partial Class MainForm
         adminnNavTblPanel.Location = New Point(0, 14)
         adminnNavTblPanel.Name = "adminnNavTblPanel"
         adminnNavTblPanel.RowCount = 2
-        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         adminnNavTblPanel.Size = New Size(206, 40)
         adminnNavTblPanel.TabIndex = 2
         ' 
@@ -342,8 +342,8 @@ Partial Class MainForm
         ' 
         logoTblPanel.BackColor = Color.Transparent
         logoTblPanel.ColumnCount = 2
-        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.0F))
-        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78.0F))
+        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22F))
+        logoTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78F))
         logoTblPanel.Controls.Add(shopLabel, 1, 0)
         logoTblPanel.Controls.Add(logoIcon, 0, 0)
         logoTblPanel.Dock = DockStyle.Top
@@ -352,7 +352,7 @@ Partial Class MainForm
         logoTblPanel.Name = "logoTblPanel"
         logoTblPanel.Padding = New Padding(13, 0, 0, 40)
         logoTblPanel.RowCount = 1
-        logoTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        logoTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         logoTblPanel.Size = New Size(220, 87)
         logoTblPanel.TabIndex = 1
         ' 
@@ -404,7 +404,7 @@ Partial Class MainForm
         controlsTblPanel.Location = New Point(805, 3)
         controlsTblPanel.Name = "controlsTblPanel"
         controlsTblPanel.RowCount = 1
-        controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         controlsTblPanel.Size = New Size(75, 19)
         controlsTblPanel.TabIndex = 0
         ' 
@@ -481,7 +481,7 @@ Partial Class MainForm
         ' 
         ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(13.0F, 37.0F)
+        AutoScaleDimensions = New SizeF(13F, 37F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         ClientSize = New Size(1100, 700)
@@ -492,10 +492,11 @@ Partial Class MainForm
         Controls.Add(navbarPanel)
         Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(6, 7, 6, 7)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "newMainForm"
+        Text = "BubbleFresh"
         navbarPanel.ResumeLayout(False)
         navbarBtnPanel.ResumeLayout(False)
         settingsBtnPanel.ResumeLayout(False)

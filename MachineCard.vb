@@ -10,17 +10,20 @@ Public Class MachineCard
         End Set
     End Property
 
-    ' Tracks the transaction currently assigned to this machine (if any)
     Public Property TransactionID As Integer = 0
-
-    ' Optional: store basic transaction info if needed
     Public Property DeliverMethod As String = ""
-
+    Public Property MachineUnit As String ' e.g. "Unit 1"
 
     Private _machineID As Integer
     Private _unitNumber As Integer
     Private _reason As String
     Private _status As String
+    Public originalProceedColor As Color
+    Public originalProceedText As String
+
+    ' Change this to match your actual database path or connection setup
+    Private ReadOnly connectionString As String =
+        "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
     Public ReadOnly Property ProceedButton As Guna.UI2.WinForms.Guna2Button
         Get
@@ -63,7 +66,12 @@ Public Class MachineCard
             Return lblWeightValue.Text
         End Get
         Set(value As String)
-            lblWeightValue.Text = value & " kg"
+            ' Prevent double "kg"
+            If value.Trim().EndsWith("kg") Then
+                lblWeightValue.Text = value
+            Else
+                lblWeightValue.Text = value & " kg"
+            End If
         End Set
     End Property
 
@@ -74,7 +82,7 @@ Public Class MachineCard
         Set(value As String)
             _status = value
             lblStatus.Text = value
-            SetMachineVisuals() ' auto-update visuals when status changes
+            SetMachineVisuals()
         End Set
     End Property
 
@@ -95,9 +103,16 @@ Public Class MachineCard
     End Property
 
     Private Sub SetMachineVisuals()
-        ' Reset defaults
+        ' Cache original color and text only once
+        If originalProceedColor = Nothing OrElse String.IsNullOrEmpty(originalProceedText) Then
+            Try
+                originalProceedColor = btnProceedMachine.FillColor
+                originalProceedText = btnProceedMachine.Text
+            Catch
+            End Try
+        End If
+
         btnProceedMachine.Enabled = True
-        btnProceedMachine.BackColor = Color.LightSkyBlue
 
         Select Case _status
             Case "Available"
@@ -107,15 +122,17 @@ Public Class MachineCard
                     picMachine.Image = Nothing
                 End Try
                 lblStatus.ForeColor = Color.Green
+                btnProceedMachine.Text = originalProceedText
+                btnProceedMachine.FillColor = originalProceedColor
 
             Case "In-Use"
                 lblStatus.ForeColor = Color.OrangeRed
                 Try
-                    picMachine.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\available.png")
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\in-use.gif")
                 Catch
                     picMachine.Image = Nothing
                 End Try
-                btnProceedMachine.BackColor = Color.LightGreen
+                btnProceedMachine.FillColor = Color.LightGreen
                 btnProceedMachine.Text = "Complete"
 
             Case "Unavailable"
@@ -126,7 +143,7 @@ Public Class MachineCard
                     picMachine.Image = Nothing
                 End Try
                 btnProceedMachine.Enabled = False
-                btnProceedMachine.BackColor = Color.LightGray
+                btnProceedMachine.FillColor = Color.LightGray
 
             Case "Damaged"
                 lblStatus.ForeColor = Color.Red
@@ -136,10 +153,10 @@ Public Class MachineCard
                     picMachine.Image = Nothing
                 End Try
                 btnProceedMachine.Enabled = False
-                btnProceedMachine.BackColor = Color.LightGray
+                btnProceedMachine.FillColor = Color.LightGray
         End Select
     End Sub
-    ' Optional helper for showing machine details directly
+
     Public Sub LoadMachineDetails(machineID As Integer)
         Dim detailsForm As New MachineDetailsForm()
         detailsForm.TransactionId = Me.TransactionID
@@ -149,6 +166,40 @@ Public Class MachineCard
         Else
             MessageBox.Show("No active transaction for this machine.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    ' 🔹 New: Assigns a pending transaction and updates DB to "In-Progress"
+    Public Sub AssignPendingTransaction(transactionID As Integer)
+        If transactionID <= 0 Then Exit Sub
+
+        Me.TransactionID = transactionID ' ✅ Corrected line
+        Dim unitLabel As String = $"Unit {UnitNumber}"
+
+        Try
+            Using con As New OleDbConnection(connectionString)
+                con.Open()
+
+                Dim query As String =
+                    "UPDATE Transactions " &
+                    "SET Status = 'In-Progress', MachineUsed = @MachineUsed " &
+                    "WHERE TransactionID = @TransactionID AND Status = 'Pending'"
+
+                Using cmd As New OleDbCommand(query, con)
+                    cmd.Parameters.AddWithValue("@MachineUsed", unitLabel)
+                    cmd.Parameters.AddWithValue("@TransactionID", Me.TransactionID)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            ' Reflect visually on the machine card
+            lblStatus.Text = "In-Progress"
+            lblStatus.ForeColor = Color.Orange
+            Status = "In-Use"
+
+        Catch ex As Exception
+            MessageBox.Show("Error updating transaction status: " & ex.Message,
+                            "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
 

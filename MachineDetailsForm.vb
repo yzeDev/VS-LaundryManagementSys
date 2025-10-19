@@ -4,7 +4,7 @@ Public Class MachineDetailsForm
 
     Public Property TransactionId As Integer
 
-    Private connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\source\repos\LaundryManagementSys\LaundryDatabase.accdb;"
+    Private connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
     Private Sub MachineDetailsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If TransactionId > 0 Then
@@ -30,7 +30,7 @@ Public Class MachineDetailsForm
                             lblMachineNum.Text = reader("MachineUsed").ToString()
                             lblServiceType.Text = reader("ServiceType").ToString()
                             lblCustomerName.Text = reader("CustomerName").ToString()
-                            lblDeliverMethod.Text = reader("DeliveryMethod").ToString()
+                            lblDeliverMethod.Text = reader("DeliverMethod").ToString()
                             lblContactNum.Text = reader("ContactNumber").ToString()
                             lblAddress.Text = reader("Address").ToString()
                             lblTransactionWeight.Text = reader("Weight").ToString() & " kg"
