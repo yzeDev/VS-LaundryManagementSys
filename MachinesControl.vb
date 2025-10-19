@@ -89,8 +89,6 @@ Public Class MachinesControl
         End Using
     End Sub
 
-
-
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
         ' --- Ask the user for capacity ---
@@ -106,8 +104,6 @@ Public Class MachinesControl
             MessageBox.Show("Invalid capacity. Please enter a positive number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
-
-
 
         ' --- Find the next available UnitNumber ---
         Dim nextUnitNumber = GetNextAvailableUnitNumber()
@@ -323,8 +319,6 @@ Public Class MachinesControl
             End Using
         End Using
     End Sub
-
-
 
     Private Function SaveMachineToDB(machine As MachineCard) As Integer
         Dim newID As Integer = -1

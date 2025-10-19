@@ -13,10 +13,13 @@ Public Class MachineCard
     Private _machineID As Integer
     Private _unitNumber As Integer
     Private _reason As String
+    Private _status As String
 
-    Private Sub lblWeightValue_Click(sender As Object, e As EventArgs) Handles lblWeightValue.Click
-
-    End Sub
+    Public ReadOnly Property ProceedButton As Button
+        Get
+            Return btnProceedMachine
+        End Get
+    End Property
 
     Public Property MachineID As Integer
         Get
@@ -24,7 +27,6 @@ Public Class MachineCard
         End Get
         Set(value As Integer)
             _machineID = value
-            ' Update display with or without reason
             If String.IsNullOrWhiteSpace(_reason) Then
                 lblMachineIDText.Text = "Machine ID: " & _machineID.ToString()
             Else
@@ -39,12 +41,7 @@ Public Class MachineCard
         End Get
         Set(value As Integer)
             _unitNumber = value
-            ' Only change the label text — the numeric value is stored in _unitNumber
-            If value <= 0 Then
-                lblUnit.Text = "Unavailable"
-            Else
-                lblUnit.Text = "Unit " & value.ToString()
-            End If
+            lblUnit.Text = If(value <= 0, "Unavailable", "Unit " & value.ToString())
         End Set
     End Property
 
@@ -59,14 +56,15 @@ Public Class MachineCard
 
     Public Property Status As String
         Get
-            Return lblStatus.Text
+            Return _status
         End Get
         Set(value As String)
+            _status = value
             lblStatus.Text = value
+            SetMachineVisuals() ' auto-update visuals when status changes
         End Set
     End Property
 
-    ' Keep reason as a backing field and update lblMachineIDText accordingly
     Public Property Reason As String
         Get
             Return _reason
@@ -82,4 +80,50 @@ Public Class MachineCard
             End If
         End Set
     End Property
+
+    Private Sub SetMachineVisuals()
+        ' Reset defaults
+        btnProceedMachine.Enabled = True
+        btnProceedMachine.BackColor = Color.LightSkyBlue
+
+        Select Case _status
+            Case "Available"
+                Try
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unscreen.gif")
+                Catch
+                    picMachine.Image = Nothing
+                End Try
+                lblStatus.ForeColor = Color.Green
+
+            Case "In-Use"
+                lblStatus.ForeColor = Color.OrangeRed
+                Try
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-working.gif")
+                Catch
+                    picMachine.Image = Nothing
+                End Try
+                btnProceedMachine.BackColor = Color.LightGreen
+                btnProceedMachine.Text = "Complete"
+
+            Case "Unavailable"
+                lblStatus.ForeColor = Color.Gray
+                Try
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unavailable.png")
+                Catch
+                    picMachine.Image = Nothing
+                End Try
+                btnProceedMachine.Enabled = False
+                btnProceedMachine.BackColor = Color.LightGray
+
+            Case "Damaged"
+                lblStatus.ForeColor = Color.Red
+                Try
+                    picMachine.Image = Image.FromFile("C:\Users\Eisen\Downloads\laundry-damaged.png")
+                Catch
+                    picMachine.Image = Nothing
+                End Try
+                btnProceedMachine.Enabled = False
+                btnProceedMachine.BackColor = Color.LightGray
+        End Select
+    End Sub
 End Class
