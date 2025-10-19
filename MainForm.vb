@@ -1,42 +1,173 @@
-﻿Imports System.Data.OleDb
+﻿Public Class MainForm
 
-Public Class MainForm
+    Private activeNavButton As Button = Nothing
 
-    Private Sub ShowControl(ctrl As UserControl)
-        MainPanel.Controls.Clear()
-        ctrl.Dock = DockStyle.Fill  ' <- here we force it to resize and fill MainPanel
-        MainPanel.Controls.Add(ctrl)
+    Private ReadOnly ActiveColor As Color = Color.FromArgb(5, 33, 90)
+    Private ReadOnly HoverColor As Color = Color.FromArgb(5, 33, 90)
+    Private ReadOnly NormalColor As Color = Color.Transparent
+    Private originalClientSize As Size
+    Private isMaximizedManually As Boolean = False
+
+
+    '  WINDOW CONTROL BUTTONS 
+
+    Private Sub minimizeBtn_Click(sender As Object, e As EventArgs) Handles minimizeBtn.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    ' Single event handler for all navigation buttons
-    Private Sub Navigation_Click(sender As Object, e As EventArgs) Handles btnMachines.Click, btnTransactions.Click, btnStats.Click, btnOptions.Click, btnDashboard.Click
-        Dim clickedButton As Button = DirectCast(sender, Button)
-        Dim ctrl As UserControl = Nothing
-
-        Select Case clickedButton.Name
-            Case "btnMachines"
-                ctrl = New MachinesControl()
-            Case "btnTransactions"
-                ctrl = New TransactionsControl()
-            Case "btnStats"
-                ctrl = New StatsControl()
-            Case "btnOptions"
-                ctrl = New OptionsControl()
-            Case "btnDashboard"
-                ctrl = New DashboardControl()
-        End Select
-
-        If ctrl IsNot Nothing Then
-            ShowControl(ctrl)
+    Private Sub maximizeBtn_Click(sender As Object, e As EventArgs) Handles maximizeBtn.Click
+        If Me.WindowState = FormWindowState.Normal Then
+            isMaximizedManually = True
+            originalClientSize = Me.ClientSize
+            Me.WindowState = FormWindowState.Maximized
+        Else
+            Me.WindowState = FormWindowState.Normal
         End If
     End Sub
 
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ShowControl(New DashboardControl())
+
+    Private Sub MainForm_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        ' Handle restore from maximized to normal
+        If Me.WindowState = FormWindowState.Normal AndAlso isMaximizedManually Then
+            isMaximizedManually = False
+
+            If contentSpacePanel.Controls.Count > 0 Then
+                Dim currentUC As UserControl = TryCast(contentSpacePanel.Controls(0), UserControl)
+                If currentUC IsNot Nothing Then
+                    ' 🔧 Reset scaling to original layout
+                    currentUC.SuspendLayout()
+                    currentUC.Dock = DockStyle.None
+
+                    ' Force back to original bounds relative to panel
+                    currentUC.Location = New Point(0, 0)
+                    currentUC.Size = contentSpacePanel.ClientSize
+
+                    ' Reset layout and scaling
+                    currentUC.AutoScaleMode = AutoScaleMode.None
+                    currentUC.PerformLayout()
+
+                    ' Reapply DockStyle.Fill so it resizes correctly again
+                    currentUC.Dock = DockStyle.Fill
+                    currentUC.ResumeLayout(True)
+                    currentUC.Refresh()
+                End If
+            End If
+        End If
     End Sub
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
 
+    Private Sub xBtn_Click(sender As Object, e As EventArgs) Handles xBtn.Click
+        Dim exitPopup As New ExitConfirmForm()
+
+        exitPopup.Left = (Me.ClientSize.Width - exitPopup.Width) \ 2
+        exitPopup.Top = (Me.ClientSize.Height - exitPopup.Height) \ 2
+
+        Me.Controls.Add(exitPopup)
+        exitPopup.BringToFront()
+    End Sub
+
+    Protected Overrides Sub OnPaint(e As PaintEventArgs)
+        If Me.WindowState <> FormWindowState.Minimized Then MyBase.OnPaint(e)
+    End Sub
+
+    Protected Overrides Sub OnResize(e As EventArgs)
+        If Me.WindowState <> FormWindowState.Minimized Then MyBase.OnResize(e)
+    End Sub
+
+    Protected Overrides Sub OnPaintBackground(e As PaintEventArgs)
+        If Me.WindowState <> FormWindowState.Minimized Then MyBase.OnPaintBackground(e)
+    End Sub
+
+    Private Sub LoadUserControls(titleBarUC As UserControl, contentUC As UserControl)
+        ' Clear and load title bar
+        titleBarPanel.Controls.Clear()
+        titleBarUC.Dock = DockStyle.Fill
+        titleBarPanel.Controls.Add(titleBarUC)
+
+        ' Clear and load content
+        contentSpacePanel.Controls.Clear()
+
+        contentUC.AutoScaleMode = AutoScaleMode.None
+        contentUC.Dock = DockStyle.Fill
+
+        contentSpacePanel.Controls.Add(contentUC)
+    End Sub
+
+
+
+    Private Sub SetActiveButton(clickedButton As Button)
+        If activeNavButton IsNot Nothing Then
+            activeNavButton.BackColor = NormalColor
+        End If
+
+        clickedButton.BackColor = ActiveColor
+        activeNavButton = clickedButton
+    End Sub
+
+    Private Sub NavButton_Hover(sender As Object, e As EventArgs)
+        Dim btn As Button = CType(sender, Button)
+        If btn IsNot activeNavButton Then
+            If e.GetType Is GetType(MouseEventArgs) Then
+                btn.BackColor = HoverColor
+            Else
+                btn.BackColor = NormalColor
+            End If
+
+        End If
+    End Sub
+
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Attach the same handler to all navigation buttons
+        AddHandler dashboardBtn.Click, AddressOf NavButton_Click
+        AddHandler machinesBtn.Click, AddressOf NavButton_Click
+        AddHandler transactionsBtn.Click, AddressOf NavButton_Click
+        AddHandler statisticsBtn.Click, AddressOf NavButton_Click
+        AddHandler settingsBtn.Click, AddressOf NavButton_Click
+
+        ' Load default view
+        LoadSection(dashboardBtn)
+    End Sub
+
+    Private Sub NavButton_Click(sender As Object, e As EventArgs)
+        Dim clickedButton As Button = CType(sender, Button)
+        LoadSection(clickedButton)
+    End Sub
+
+    Private Sub LoadSection(clickedButton As Button)
+        Dim titleBar As UserControl = Nothing
+        Dim content As UserControl = Nothing
+
+        Select Case clickedButton.Name
+            Case "dashboardBtn"
+                titleBar = New dashboardTitleBarUser()
+                content = New DashboardControl()
+            Case "machinesBtn"
+                titleBar = New machTitleBarUser()
+                content = New MachinesControl()
+            Case "transactionsBtn"
+                titleBar = New transacTitleBarUser()
+                content = New TransactionControl()
+            Case "statisticsBtn"
+                titleBar = New statsTitleBarUser()
+                content = New StatsControl()
+            Case "settingsBtn"
+                titleBar = New settingsTitleBarUser()
+                content = New OptionsControl()
+            Case Else
+                Return
+        End Select
+
+        LoadUserControls(titleBar, content)
+        SetActiveButton(clickedButton)
+    End Sub
+
+
+    Private Sub contentSpacePanel_Resize(sender As Object, e As EventArgs) Handles contentSpacePanel.Resize
+        If contentSpacePanel.Controls.Count > 0 Then
+            Dim contentUC = contentSpacePanel.Controls(0)
+            contentUC.Dock = DockStyle.Fill
+        End If
     End Sub
 
 End Class

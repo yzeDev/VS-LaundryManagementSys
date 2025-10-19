@@ -21,6 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DashboardTransactionRowHeader.vb" />
+    <Compile Update="DryCleaningForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FullServiceForm.vb" />
+    <Compile Update="SelfServiceForm.vb" />
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -31,6 +37,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="BasicServiceForm.vb" />
+    <Compile Update="MachinesControl.vb" />
+    <Compile Update="TransactionsControl.vb" />
   </ItemGroup>
 
   <ItemGroup>

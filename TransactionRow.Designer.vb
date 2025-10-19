@@ -37,14 +37,14 @@ Partial Class TransactionRow
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 8
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 60F))
         TableLayoutPanel1.Controls.Add(lblTotal, 6, 0)
         TableLayoutPanel1.Controls.Add(lblDate, 5, 0)
         TableLayoutPanel1.Controls.Add(lblMachine, 4, 0)
@@ -59,16 +59,17 @@ Partial Class TransactionRow
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(604, 45)
+        TableLayoutPanel1.Size = New Size(640, 45)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' lblTotal
         ' 
         lblTotal.Dock = DockStyle.Fill
-        lblTotal.Location = New Point(452, 0)
+        lblTotal.Font = New Font("Poppins", 8.25F)
+        lblTotal.Location = New Point(494, 0)
         lblTotal.Margin = New Padding(2, 0, 2, 0)
         lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(71, 45)
+        lblTotal.Size = New Size(78, 45)
         lblTotal.TabIndex = 6
         lblTotal.Text = "Total"
         lblTotal.TextAlign = ContentAlignment.MiddleCenter
@@ -76,10 +77,11 @@ Partial Class TransactionRow
         ' lblDate
         ' 
         lblDate.Dock = DockStyle.Fill
-        lblDate.Location = New Point(377, 0)
+        lblDate.Font = New Font("Poppins", 8.25F)
+        lblDate.Location = New Point(412, 0)
         lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
-        lblDate.Size = New Size(71, 45)
+        lblDate.Size = New Size(78, 45)
         lblDate.TabIndex = 5
         lblDate.Text = "Date"
         lblDate.TextAlign = ContentAlignment.MiddleCenter
@@ -87,10 +89,11 @@ Partial Class TransactionRow
         ' lblMachine
         ' 
         lblMachine.Dock = DockStyle.Fill
-        lblMachine.Location = New Point(302, 0)
+        lblMachine.Font = New Font("Poppins", 8.25F)
+        lblMachine.Location = New Point(330, 0)
         lblMachine.Margin = New Padding(2, 0, 2, 0)
         lblMachine.Name = "lblMachine"
-        lblMachine.Size = New Size(71, 45)
+        lblMachine.Size = New Size(78, 45)
         lblMachine.TabIndex = 4
         lblMachine.Text = "Machine"
         lblMachine.TextAlign = ContentAlignment.MiddleCenter
@@ -98,10 +101,11 @@ Partial Class TransactionRow
         ' lblStatus
         ' 
         lblStatus.Dock = DockStyle.Fill
-        lblStatus.Location = New Point(227, 0)
+        lblStatus.Font = New Font("Poppins", 8.25F)
+        lblStatus.Location = New Point(248, 0)
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(71, 45)
+        lblStatus.Size = New Size(78, 45)
         lblStatus.TabIndex = 3
         lblStatus.Text = "Status"
         lblStatus.TextAlign = ContentAlignment.MiddleCenter
@@ -109,10 +113,11 @@ Partial Class TransactionRow
         ' lblServiceType
         ' 
         lblServiceType.Dock = DockStyle.Fill
-        lblServiceType.Location = New Point(152, 0)
+        lblServiceType.Font = New Font("Poppins", 8.25F)
+        lblServiceType.Location = New Point(166, 0)
         lblServiceType.Margin = New Padding(2, 0, 2, 0)
         lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(71, 45)
+        lblServiceType.Size = New Size(78, 45)
         lblServiceType.TabIndex = 2
         lblServiceType.Text = "Service"
         lblServiceType.TextAlign = ContentAlignment.MiddleCenter
@@ -120,10 +125,11 @@ Partial Class TransactionRow
         ' lblCustomer
         ' 
         lblCustomer.Dock = DockStyle.Fill
-        lblCustomer.Location = New Point(77, 0)
+        lblCustomer.Font = New Font("Poppins", 8.25F)
+        lblCustomer.Location = New Point(84, 0)
         lblCustomer.Margin = New Padding(2, 0, 2, 0)
         lblCustomer.Name = "lblCustomer"
-        lblCustomer.Size = New Size(71, 45)
+        lblCustomer.Size = New Size(78, 45)
         lblCustomer.TabIndex = 1
         lblCustomer.Text = "Name"
         lblCustomer.TextAlign = ContentAlignment.MiddleCenter
@@ -131,33 +137,38 @@ Partial Class TransactionRow
         ' lblTransactionID
         ' 
         lblTransactionID.Dock = DockStyle.Fill
+        lblTransactionID.Font = New Font("Poppins", 8.25F)
         lblTransactionID.Location = New Point(2, 0)
         lblTransactionID.Margin = New Padding(2, 0, 2, 0)
         lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(71, 45)
+        lblTransactionID.Size = New Size(78, 45)
         lblTransactionID.TabIndex = 0
         lblTransactionID.Text = "Transac"
         lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' btnView
         ' 
+        btnView.BackColor = Color.Transparent
         btnView.Dock = DockStyle.Fill
-        btnView.Location = New Point(527, 2)
+        btnView.Font = New Font("Poppins", 8.25F)
+        btnView.ForeColor = Color.Black
+        btnView.Location = New Point(576, 2)
         btnView.Margin = New Padding(2)
         btnView.Name = "btnView"
-        btnView.Size = New Size(75, 41)
+        btnView.Size = New Size(62, 41)
         btnView.TabIndex = 7
-        btnView.Text = "View"
-        btnView.UseVisualStyleBackColor = True
+        btnView.Text = "VIEW"
+        btnView.UseVisualStyleBackColor = False
         ' 
         ' TransactionRow
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7F, 22F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(2)
+        Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Margin = New Padding(0)
         Name = "TransactionRow"
-        Size = New Size(604, 45)
+        Size = New Size(640, 45)
         TableLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub

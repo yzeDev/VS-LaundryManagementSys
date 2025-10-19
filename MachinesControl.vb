@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Module DatabaseHelper
-    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 End Module
 
 
@@ -65,7 +65,7 @@ Public Class MachinesControl
 
                         ' Picture (keep your existing try/catch)
                         Try
-                            card.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\washing-machine.png")
+                            card.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unscreen.gif")
                         Catch
                             card.MachineImage = Nothing
                         End Try
@@ -94,7 +94,7 @@ Public Class MachinesControl
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
         ' --- Ask the user for capacity ---
-        Dim input As String = InputBox("Enter the maximum weight capacity (in kg):", "New Machine", "10")
+        Dim input = InputBox("Enter the maximum weight capacity (in kg):", "New Machine", "10")
 
         If String.IsNullOrWhiteSpace(input) Then
             MessageBox.Show("Machine not added. Capacity is required.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -110,25 +110,25 @@ Public Class MachinesControl
 
 
         ' --- Find the next available UnitNumber ---
-        Dim nextUnitNumber As Integer = GetNextAvailableUnitNumber()
+        Dim nextUnitNumber = GetNextAvailableUnitNumber()
 
         ' --- Create machine card ---
-        Dim newMachine As New MachineCard()
+        Dim newMachine As New MachineCard
         newMachine.UnitNumber = nextUnitNumber
-        newMachine.Capacity = capacityKg.ToString() & " kg"
+        newMachine.Capacity = capacityKg.ToString & " kg"
         newMachine.Status = "Available"
 
         Try
-            newMachine.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\washing-machine.png")
+            newMachine.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unscreen.gif")
         Catch
             newMachine.MachineImage = Nothing
         End Try
         newMachine.picMachine.SizeMode = PictureBoxSizeMode.Zoom
 
         ' --- Save to DB and get new MachineID ---
-        Dim newID As Integer = SaveMachineToDB(newMachine)
+        Dim newID = SaveMachineToDB(newMachine)
         newMachine.MachineID = newID
-        newMachine.lblMachineIDText.Text = "Machine ID: " & newID.ToString()
+        newMachine.lblMachineIDText.Text = "Machine ID: " & newID.ToString
 
         ' --- Refresh UI from DB ---
         LoadMachinesFromDB()
@@ -261,7 +261,7 @@ Public Class MachinesControl
         ' Toggle selection (same logic you used before)
         If selectedMachine Is clicked Then
             clicked.BorderStyle = BorderStyle.None
-            clicked.BackColor = SystemColors.Control
+            clicked.BackColor = Color.White
             selectedMachine = Nothing
             btnRemoveMachine.Enabled = False
             btnConfigure.Enabled = False
@@ -272,7 +272,7 @@ Public Class MachinesControl
         For Each mc As Control In flpMachines.Controls
             If TypeOf mc Is MachineCard Then
                 DirectCast(mc, MachineCard).BorderStyle = BorderStyle.None
-                mc.BackColor = SystemColors.Control
+                mc.BackColor = Color.White
             End If
         Next
 
