@@ -1152,6 +1152,7 @@ Partial Class DashboardControl
         dgvDashboardTransactions.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
         dgvDashboardTransactions.Size = New Size(584, 305)
         dgvDashboardTransactions.TabIndex = 2
+        dgvDashboardTransactions.TabStop = False
         dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.Font = Nothing
         dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
