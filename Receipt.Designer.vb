@@ -227,7 +227,7 @@ Partial Class Receipt
         ' Guna2PictureBox1
         ' 
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
-        Guna2PictureBox1.Image = My.Resources.Resources.logo
+        'Guna2PictureBox1.Image = My.Resources.Resources.logo
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(3, 3)
         Guna2PictureBox1.Name = "Guna2PictureBox1"

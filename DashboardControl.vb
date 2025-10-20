@@ -1,12 +1,14 @@
 ﻿Imports System.Data.OleDb
 Imports System.Net.Http
+Imports System.Net.Http.Headers
+Imports System.Text
 Imports System.Threading.Tasks
-Imports System.Collections.Generic
-
 Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
     Private Shared ReadOnly httpClient As New HttpClient()
+    Private Const EngageSparkApiUrl As String = "https://api.engagespark.com/v1/messages/sms"
+    Private Const EngageSparkApiKey As String = "a012a19db795e443280eb7809a93cfbb69de67c3" ' <-- Replace with your real API key
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -210,13 +212,7 @@ Public Class DashboardControl
         Dim customerName As String = sender.CustomerName
         Dim contactNumber As String = sender.ContactNumber
 
-        ' You can configure this globally at the top of the class
-        Dim apiKey As String = "YOUR_SEMAPHORE_API_KEY"
-        Dim senderName As String = "LaundryHub" ' optional, must be approved in Semaphore
-
         Dim smsMessage As String
-
-        ' Customize message based on status
         If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
             smsMessage = $"Hi {customerName}, your laundry is now ready for pickup. Thank you for choosing us!"
         ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
@@ -225,26 +221,45 @@ Public Class DashboardControl
             smsMessage = $"Hi {customerName}, your laundry update: {status}."
         End If
 
-        ' Confirm with user before sending
+        ' Ask confirmation before sending
         Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
-                                  "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                                      "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If confirm <> DialogResult.Yes Then Exit Sub
 
-        ' Disable the parent control temporarily
         sender.Enabled = False
-
         Try
-            Dim result As String = Await SendSmsAsync(apiKey, contactNumber, smsMessage, senderName)
-            MessageBox.Show($"SMS sent successfully!" & vbCrLf & $"Response: {result}",
-                        "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim result As String = Await SendSmsViaEngageSparkAsync(contactNumber, smsMessage)
+            MessageBox.Show($"✅ SMS sent successfully!" & vbCrLf & result, "Customer Notified",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-            MessageBox.Show("Failed to send SMS: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("❌ Failed to send SMS: " & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             sender.Enabled = True
         End Try
     End Sub
 
+    ' ================================
+    ' ENGAGESPARK SMS FUNCTION
+    ' ================================
+    Private Async Function SendSmsViaEngageSparkAsync(phoneNumber As String, messageText As String) As Task(Of String)
+        Dim jsonBody As String = $"{{""mobileNumbers"": [""{phoneNumber}""], ""message"": ""{messageText}"", ""organizationId"": null}}"
+        Dim authValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(EngageSparkApiKey & ":"))
 
+        Using client As New HttpClient()
+            client.DefaultRequestHeaders.Authorization = New AuthenticationHeaderValue("Basic", authValue)
+            Dim content As New StringContent(jsonBody, Encoding.UTF8, "application/json")
+
+            Dim response As HttpResponseMessage = Await client.PostAsync(EngageSparkApiUrl, content)
+            Dim responseBody As String = Await response.Content.ReadAsStringAsync()
+
+            If response.IsSuccessStatusCode Then
+                Return responseBody
+            Else
+                Throw New Exception($"HTTP {response.StatusCode}: {responseBody}")
+            End If
+        End Using
+    End Function
 
     Private Sub HandleCheckClick(ByVal sender As DashboardTransactionRow)
         Dim id As Integer = sender.TransactionID
@@ -286,25 +301,5 @@ Public Class DashboardControl
         LoadMachineCounters()
         LoadDashboardTransactions()
     End Sub
-
-    Private Async Function SendSmsAsync(apiKey As String, number As String, message As String, Optional senderName As String = "") As Task(Of String)
-        Dim url As String = "https://semaphore.co/api/v4/messages"
-
-        Dim form As New List(Of KeyValuePair(Of String, String)) From {
-        New KeyValuePair(Of String, String)("apikey", apiKey),
-        New KeyValuePair(Of String, String)("number", number),
-        New KeyValuePair(Of String, String)("message", message)
-    }
-
-        If Not String.IsNullOrWhiteSpace(senderName) Then
-            form.Add(New KeyValuePair(Of String, String)("sendername", senderName))
-        End If
-
-        Using content As New FormUrlEncodedContent(form)
-            Dim response As HttpResponseMessage = Await httpClient.PostAsync(url, content)
-            response.EnsureSuccessStatusCode()
-            Return Await response.Content.ReadAsStringAsync()
-        End Using
-    End Function
 
 End Class

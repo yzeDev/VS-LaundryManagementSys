@@ -120,8 +120,9 @@ Partial Class DashboardTransactionRow
         btnNotify.DisabledState.CustomBorderColor = Color.DarkGray
         btnNotify.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnNotify.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnNotify.FillColor = Color.White
-        btnNotify.Font = New Font("Segoe UI", 9F)
+        btnNotify.Dock = DockStyle.Fill
+        btnNotify.FillColor = Color.BurlyWood
+        btnNotify.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnNotify.ForeColor = Color.Black
         btnNotify.Location = New Point(487, 3)
         btnNotify.Name = "btnNotify"

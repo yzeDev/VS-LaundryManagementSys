@@ -216,11 +216,6 @@ Partial Class InvoiceForm
         ' 
         ' TableLayoutPanel5
         ' 
-        lblLaundryText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
-        lblLaundryText.Dock = DockStyle.Fill
-        lblLaundryText.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblLaundryText.ForeColor = Color.White
-        lblLaundryText.Location = New Point(3, 0)
         TableLayoutPanel5.Controls.Add(Label5, 0, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(308, 3)
@@ -408,7 +403,6 @@ Partial Class InvoiceForm
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.5092945F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 72.49071F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82.0F))
-        TableLayoutPanel2.Controls.Add(tbAmount, 1, 5)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(3, 3)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -1321,9 +1315,6 @@ Partial Class InvoiceForm
         ' 
         confirmPayBtn.BorderRadius = 3
         confirmPayBtn.CustomizableEdges = CustomizableEdges13
-        tbAmount.Location = New Point(151, 203)
-        tbAmount.Name = "tbAmount"
-        tbAmount.Size = New Size(384, 31)
         confirmPayBtn.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
         confirmPayBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         confirmPayBtn.Dock = DockStyle.Fill
@@ -1343,9 +1334,6 @@ Partial Class InvoiceForm
         ' 
         Panel7.Controls.Add(TableLayoutPanel24)
         Panel7.Controls.Add(Panel8)
-        tbAddress.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbAddress.Location = New Point(151, 123)
-        tbAddress.Name = "tbAddress"
         Panel7.Padding = New Padding(4)
         Panel7.Size = New Size(434, 93)
         Panel7.TabIndex = 4
@@ -1354,9 +1342,6 @@ Partial Class InvoiceForm
         ' 
         TableLayoutPanel24.ColumnCount = 1
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        tbContactNumber.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbContactNumber.Location = New Point(151, 83)
-        tbContactNumber.Name = "tbContactNumber"
         TableLayoutPanel24.Controls.Add(Label33, 0, 1)
         TableLayoutPanel24.Controls.Add(Label32, 0, 0)
         TableLayoutPanel24.Dock = DockStyle.Fill
@@ -1375,9 +1360,6 @@ Partial Class InvoiceForm
         ' 
         Label37.Dock = DockStyle.Fill
         Label37.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        tbCustomerName.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbCustomerName.Location = New Point(151, 43)
-        tbCustomerName.Name = "tbCustomerName"
         Label37.Size = New Size(420, 19)
         Label37.TabIndex = 8
         Label37.Text = "4. For delivery: Be available at the address during the scheduled time."
@@ -1387,9 +1369,6 @@ Partial Class InvoiceForm
         ' 
         Label36.Dock = DockStyle.Fill
         Label36.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        lblAmountText.Font = New Font("Segoe UI", 11.25F)
-        lblAmountText.Location = New Point(3, 200)
-        lblAmountText.Name = "lblAmountText"
         Label36.Size = New Size(420, 15)
         Label36.TabIndex = 7
         Label36.Text = "3. For store pickup: Please present your receipt when claiming."
@@ -1399,9 +1378,6 @@ Partial Class InvoiceForm
         ' 
         Label35.Dock = DockStyle.Fill
         Label35.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        lblTransactionIDText.Font = New Font("Segoe UI", 11.25F)
-        lblTransactionIDText.Location = New Point(3, 0)
-        lblTransactionIDText.Name = "lblTransactionIDText"
         Label35.Size = New Size(420, 15)
         Label35.TabIndex = 6
         Label35.Text = "2. You'll be notified via SMS/Email when your order is ready."
@@ -1411,9 +1387,6 @@ Partial Class InvoiceForm
         ' 
         Label33.Dock = DockStyle.Fill
         Label33.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        lblPaymentText.Font = New Font("Segoe UI", 11.25F)
-        lblPaymentText.Location = New Point(3, 160)
-        lblPaymentText.Name = "lblPaymentText"
         Label33.Size = New Size(420, 15)
         Label33.TabIndex = 4
         Label33.Text = "1. Payment is due upon confirmation of service."
@@ -1423,9 +1396,6 @@ Partial Class InvoiceForm
         ' 
         Label32.Dock = DockStyle.Fill
         Label32.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        lblAddressText.Font = New Font("Segoe UI", 11.25F)
-        lblAddressText.Location = New Point(3, 120)
-        lblAddressText.Name = "lblAddressText"
         Label32.Padding = New Padding(0, 4, 0, 0)
         Label32.Size = New Size(420, 20)
         Label32.TabIndex = 3
@@ -1436,18 +1406,12 @@ Partial Class InvoiceForm
         ' 
         Panel8.BackColor = SystemColors.ActiveBorder
         Panel8.Dock = DockStyle.Top
-        lblContactNumberText.Font = New Font("Segoe UI", 11.25F)
-        lblContactNumberText.Location = New Point(3, 80)
-        lblContactNumberText.Name = "lblContactNumberText"
         Panel8.TabIndex = 5
         ' 
         ' TableLayoutPanel25
         ' 
         TableLayoutPanel25.ColumnCount = 2
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        lblCustomerNameText.Font = New Font("Segoe UI", 11.25F)
-        lblCustomerNameText.Location = New Point(3, 40)
-        lblCustomerNameText.Name = "lblCustomerNameText"
         TableLayoutPanel25.Dock = DockStyle.Fill
         TableLayoutPanel25.Location = New Point(3, 558)
         TableLayoutPanel25.Name = "TableLayoutPanel25"
@@ -1460,9 +1424,6 @@ Partial Class InvoiceForm
         ' 
         backBtn.BorderRadius = 3
         backBtn.CustomizableEdges = CustomizableEdges17
-        tbTransactionID.Font = New Font("Microsoft Sans Serif", 15.75F)
-        tbTransactionID.Location = New Point(151, 3)
-        tbTransactionID.Name = "tbTransactionID"
         backBtn.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
         backBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         backBtn.Dock = DockStyle.Left
@@ -1485,9 +1446,6 @@ Partial Class InvoiceForm
         ' 
         cancelBtn.BorderRadius = 3
         cancelBtn.CustomizableEdges = CustomizableEdges19
-        cmbPaymentMethod.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        cmbPaymentMethod.FormattingEnabled = True
-        cmbPaymentMethod.Items.AddRange(New Object() {"Cash", "Card"})
         cancelBtn.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
         cancelBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         cancelBtn.Dock = DockStyle.Right

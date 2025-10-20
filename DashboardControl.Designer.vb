@@ -1117,7 +1117,9 @@ Partial Class DashboardControl
         ' 
         ' flpDashboardTransactions
         ' 
+        flpDashboardTransactions.AutoScroll = True
         flpDashboardTransactions.Dock = DockStyle.Fill
+        flpDashboardTransactions.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         flpDashboardTransactions.Location = New Point(3, 58)
         flpDashboardTransactions.Name = "flpDashboardTransactions"
         flpDashboardTransactions.Size = New Size(609, 295)
