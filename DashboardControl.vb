@@ -278,8 +278,8 @@ Public Class DashboardControl
         With dgvDashboardTransactions
             ' === BASIC STYLE SETTINGS ===
             .ReadOnly = True
-            .Font = New Font("Poppins", 10, FontStyle.Regular)
-            .ColumnHeadersHeight = 30
+            .Font = New Font("Poppins", 11, FontStyle.Regular)
+            .ColumnHeadersHeight = 35
             .ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
             .Columns.Clear()
             .AutoGenerateColumns = False
@@ -299,7 +299,7 @@ Public Class DashboardControl
             With .ColumnHeadersDefaultCellStyle
                 .BackColor = Color.White
                 .ForeColor = Color.Black
-                .Font = New Font("Poppins", 10, FontStyle.Bold)
+                .Font = New Font("Poppins", 12, FontStyle.Regular)
                 .Alignment = DataGridViewContentAlignment.MiddleCenter
                 .SelectionBackColor = Color.White
                 .SelectionForeColor = Color.Black
@@ -329,21 +329,19 @@ Public Class DashboardControl
     .Name = "btnNotify",
     .HeaderText = "Actions",
     .ImageLayout = DataGridViewImageCellLayout.Zoom,
-    .Width = 35
+    .Width = 20
 }
 
             Dim completeIconCol As New DataGridViewImageColumn() With {
     .Name = "btnComplete",
     .HeaderText = "",
     .ImageLayout = DataGridViewImageCellLayout.Zoom,
-    .Width = 35
+    .Width = 20
 }
 
-            ' Keep both icons grouped visually
             .Columns.Add(notifyIconCol)
             .Columns.Add(completeIconCol)
 
-            ' Optional: remove extra padding so icons appear closer
             .Columns("btnNotify").DefaultCellStyle.Padding = New Padding(0, 0, -5, 0)
             .Columns("btnComplete").DefaultCellStyle.Padding = New Padding(-5, 0, 0, 0)
 
