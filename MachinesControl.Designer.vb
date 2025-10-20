@@ -46,18 +46,18 @@ Partial Class MachinesControl
         ' 
         ' cmbStatus
         ' 
-        cmbStatus.Anchor = AnchorStyles.None
         cmbStatus.BackColor = Color.Transparent
         cmbStatus.CustomizableEdges = CustomizableEdges1
+        cmbStatus.Dock = DockStyle.Fill
         cmbStatus.DrawMode = DrawMode.OwnerDrawFixed
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.DropDownWidth = 137
         cmbStatus.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbStatus.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbStatus.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbStatus.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbStatus.ItemHeight = 30
-        cmbStatus.Location = New Point(752, 4)
+        cmbStatus.Location = New Point(752, 3)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.RightToLeft = RightToLeft.Yes
         cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges2

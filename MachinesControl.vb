@@ -8,6 +8,15 @@ Public Class MachinesControl
     Private selectedMachine As MachineCard = Nothing
 
     Private Sub MachinesControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Populate the status filter combobox
+        cmbStatus.Items.Clear()
+        cmbStatus.Items.Add("All")
+        cmbStatus.Items.Add("Available")
+        cmbStatus.Items.Add("In-Use")
+        cmbStatus.Items.Add("Unavailable")
+        cmbStatus.Items.Add("Maintenance")
+        cmbStatus.SelectedIndex = 0 ' Default to "All"
+
         LoadMachinesFromDB()
         btnRemoveMachine.Enabled = False
     End Sub
@@ -260,13 +269,7 @@ Public Class MachinesControl
             Exit Sub
         End If
 
-        ' Update the selected machine’s display
-        selectedMachine.Status = "Unavailable"
-        selectedMachine.lblUnit.Text = "Unavailable"
-        selectedMachine.lblMachineIDText.Text = "Unavailable: " & reason
-        selectedMachine.Enabled = False ' Make the card unclickable
-
-        ' Update database: set UnitNumber = NULL so it's not counted in the sequence
+        ' Update database: Set UnitNumber to NULL and mark as Unavailable
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
             Dim query As String = "UPDATE UnitData SET Status=@status, Reason=@reason, UnitNumber=NULL WHERE ID=@id"
@@ -278,8 +281,8 @@ Public Class MachinesControl
             End Using
         End Using
 
-        ' Reorder remaining machines in the UI (only available ones)
-        RearrangeMachines()
+        ' Now renumber all available machines to fill the gap
+        RenumberAvailableMachines()
 
         ' Refresh everything from DB
         LoadMachinesFromDB()
@@ -288,7 +291,6 @@ Public Class MachinesControl
         btnRemoveMachine.Enabled = False
         btnConfigure.Enabled = False
     End Sub
-
 
     ' Re-assign unit numbers sequentially
     Private Sub RenumberMachines()
@@ -318,35 +320,37 @@ Public Class MachinesControl
     End Sub
 
     Private Function GetNextAvailableUnitNumber() As Integer
-        Dim maxUnit As Integer = 0
+        ' Find the lowest available unit number (reusing gaps from unavailable machines)
+        Dim usedNumbers As New List(Of Integer)
 
-        ' Check existing machines in the UI (in case UI has unsaved ones)
-        For Each ctrl As Control In flpMachines.Controls
-            If TypeOf ctrl Is MachineCard Then
-                Dim mc As MachineCard = DirectCast(ctrl, MachineCard)
-                If mc.UnitNumber > maxUnit Then
-                    maxUnit = mc.UnitNumber
-                End If
-            End If
-        Next
-
-        ' Check DB for highest UnitNumber
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
-            Dim query As String = "SELECT Max(UnitNumber) FROM UnitData"
+            ' Get all unit numbers from AVAILABLE machines only
+            Dim query As String = "SELECT UnitNumber FROM UnitData WHERE Status <> 'Unavailable' AND UnitNumber IS NOT NULL ORDER BY UnitNumber"
             Using cmd As New OleDbCommand(query, conn)
-                Dim result = cmd.ExecuteScalar()
-                If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
-                    Dim dbMax As Integer = Convert.ToInt32(result)
-                    If dbMax > maxUnit Then
-                        maxUnit = dbMax
-                    End If
-                End If
+                Using reader As OleDbDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        If Not IsDBNull(reader("UnitNumber")) Then
+                            usedNumbers.Add(Convert.ToInt32(reader("UnitNumber")))
+                        End If
+                    End While
+                End Using
             End Using
         End Using
 
-        ' Return the next unused number
-        Return maxUnit + 1
+        ' Find the first gap in the sequence, or return the next number
+        Dim nextNumber As Integer = 1
+        For Each num In usedNumbers.OrderBy(Function(x) x)
+            If num = nextNumber Then
+                nextNumber += 1
+            Else
+                ' Found a gap, use it
+                Return nextNumber
+            End If
+        Next
+
+        ' No gaps found, return the next sequential number
+        Return nextNumber
     End Function
 
     ' Configure machine
@@ -592,4 +596,61 @@ Public Class MachinesControl
         frm.ShowDialog()
     End Sub
 
+    ' New method to renumber only available machines sequentially
+    Private Sub RenumberAvailableMachines()
+        Using conn As New OleDbConnection(ConnectionString)
+            conn.Open()
+
+            ' Get all available machines ordered by their current unit number
+            Dim query As String = "SELECT ID FROM UnitData WHERE Status <> 'Unavailable' ORDER BY UnitNumber"
+            Dim machineIDs As New List(Of Integer)
+
+            Using cmd As New OleDbCommand(query, conn)
+                Using reader As OleDbDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        machineIDs.Add(Convert.ToInt32(reader("ID")))
+                    End While
+                End Using
+            End Using
+
+            ' Renumber them sequentially starting from 1
+            Dim newUnitNumber As Integer = 1
+            For Each machineID In machineIDs
+                Dim updateQuery As String = "UPDATE UnitData SET UnitNumber=@unit WHERE ID=@id"
+                Using updateCmd As New OleDbCommand(updateQuery, conn)
+                    updateCmd.Parameters.AddWithValue("@unit", newUnitNumber)
+                    updateCmd.Parameters.AddWithValue("@id", machineID)
+                    updateCmd.ExecuteNonQuery()
+                End Using
+                newUnitNumber += 1
+            Next
+        End Using
+    End Sub
+
+    ' Filtering
+    Private Sub cmbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbStatus.SelectedIndexChanged
+        FilterMachinesByStatus()
+    End Sub
+
+    Private Sub FilterMachinesByStatus()
+        Dim selectedStatus As String = cmbStatus.SelectedItem.ToString()
+
+        ' Show all machines if "All" is selected
+        If selectedStatus = "All" Then
+            For Each ctrl As Control In flpMachines.Controls
+                If TypeOf ctrl Is MachineCard Then
+                    ctrl.Visible = True
+                End If
+            Next
+            Return
+        End If
+
+        ' Filter machines by selected status
+        For Each ctrl As Control In flpMachines.Controls
+            If TypeOf ctrl Is MachineCard Then
+                Dim card As MachineCard = DirectCast(ctrl, MachineCard)
+                card.Visible = (card.Status = selectedStatus)
+            End If
+        Next
+    End Sub
 End Class

@@ -22,12 +22,12 @@ Partial Class MachineCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
         lblUnit = New Label()
@@ -179,12 +179,12 @@ Partial Class MachineCard
         ' 
         ' picMachine
         ' 
-        picMachine.CustomizableEdges = CustomizableEdges7
+        picMachine.CustomizableEdges = CustomizableEdges1
         picMachine.Dock = DockStyle.Fill
         picMachine.ImageRotate = 0F
         picMachine.Location = New Point(3, 33)
         picMachine.Name = "picMachine"
-        picMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        picMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         picMachine.Size = New Size(194, 224)
         picMachine.SizeMode = PictureBoxSizeMode.AutoSize
         picMachine.TabIndex = 13
@@ -195,7 +195,7 @@ Partial Class MachineCard
         ' 
         btnProceedMachine.Anchor = AnchorStyles.None
         btnProceedMachine.AutoRoundedCorners = True
-        btnProceedMachine.CustomizableEdges = CustomizableEdges9
+        btnProceedMachine.CustomizableEdges = CustomizableEdges3
         btnProceedMachine.DisabledState.BorderColor = Color.DarkGray
         btnProceedMachine.DisabledState.CustomBorderColor = Color.DarkGray
         btnProceedMachine.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -205,7 +205,7 @@ Partial Class MachineCard
         btnProceedMachine.ForeColor = Color.Black
         btnProceedMachine.Location = New Point(10, 263)
         btnProceedMachine.Name = "btnProceedMachine"
-        btnProceedMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnProceedMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnProceedMachine.Size = New Size(180, 34)
         btnProceedMachine.TabIndex = 14
         btnProceedMachine.Text = "Get Pending"
@@ -214,7 +214,7 @@ Partial Class MachineCard
         ' 
         btnViewDetails.Anchor = AnchorStyles.None
         btnViewDetails.AutoRoundedCorners = True
-        btnViewDetails.CustomizableEdges = CustomizableEdges11
+        btnViewDetails.CustomizableEdges = CustomizableEdges5
         btnViewDetails.DisabledState.BorderColor = Color.DarkGray
         btnViewDetails.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewDetails.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -224,7 +224,7 @@ Partial Class MachineCard
         btnViewDetails.ForeColor = Color.Black
         btnViewDetails.Location = New Point(210, 263)
         btnViewDetails.Name = "btnViewDetails"
-        btnViewDetails.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnViewDetails.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnViewDetails.Size = New Size(180, 34)
         btnViewDetails.TabIndex = 16
         btnViewDetails.Text = "View Details"
@@ -247,7 +247,7 @@ Partial Class MachineCard
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(0)
+        Margin = New Padding(5)
         Name = "MachineCard"
         Size = New Size(400, 300)
         TableLayoutPanel1.ResumeLayout(False)

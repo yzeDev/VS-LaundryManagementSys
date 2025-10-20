@@ -49,6 +49,9 @@ Partial Class DashboardControl
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -120,7 +123,7 @@ Partial Class DashboardControl
         TableLayoutPanel26 = New TableLayoutPanel()
         Label20 = New Label()
         Panel6 = New Panel()
-        flpDashboardTransactions = New FlowLayoutPanel()
+        dgvDashboardTransactions = New Guna.UI2.WinForms.Guna2DataGridView()
         Panel1.SuspendLayout()
         Guna2Panel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -164,6 +167,7 @@ Partial Class DashboardControl
         Guna2Panel4.SuspendLayout()
         TableLayoutPanel23.SuspendLayout()
         TableLayoutPanel26.SuspendLayout()
+        CType(dgvDashboardTransactions, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -641,14 +645,14 @@ Partial Class DashboardControl
         TableLayoutPanel11.ColumnCount = 2
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 220F))
-        TableLayoutPanel11.Controls.Add(Panel3, 1, 1)
-        TableLayoutPanel11.Controls.Add(Guna2Panel4, 0, 1)
+        TableLayoutPanel11.Controls.Add(Panel3, 1, 0)
+        TableLayoutPanel11.Controls.Add(Guna2Panel4, 0, 0)
         TableLayoutPanel11.Dock = DockStyle.Fill
         TableLayoutPanel11.Location = New Point(0, 198)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
-        TableLayoutPanel11.RowCount = 2
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel11.RowCount = 1
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel11.Size = New Size(855, 406)
         TableLayoutPanel11.TabIndex = 1
         ' 
@@ -656,9 +660,9 @@ Partial Class DashboardControl
         ' 
         Panel3.Controls.Add(TableLayoutPanel12)
         Panel3.Dock = DockStyle.Fill
-        Panel3.Location = New Point(638, 43)
+        Panel3.Location = New Point(638, 3)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(214, 360)
+        Panel3.Size = New Size(214, 400)
         Panel3.TabIndex = 2
         ' 
         ' TableLayoutPanel12
@@ -675,7 +679,7 @@ Partial Class DashboardControl
         TableLayoutPanel12.RowCount = 2
         TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel12.Size = New Size(214, 360)
+        TableLayoutPanel12.Size = New Size(214, 400)
         TableLayoutPanel12.TabIndex = 0
         ' 
         ' Guna2Panel2
@@ -686,12 +690,12 @@ Partial Class DashboardControl
         Guna2Panel2.CustomizableEdges = CustomizableEdges21
         Guna2Panel2.Dock = DockStyle.Fill
         Guna2Panel2.FillColor = Color.White
-        Guna2Panel2.Location = New Point(0, 180)
-        Guna2Panel2.Margin = New Padding(0, 0, 0, 10)
+        Guna2Panel2.Location = New Point(0, 200)
+        Guna2Panel2.Margin = New Padding(0, 0, 0, 20)
         Guna2Panel2.Name = "Guna2Panel2"
         Guna2Panel2.Padding = New Padding(0, 0, 10, 0)
         Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        Guna2Panel2.Size = New Size(214, 170)
+        Guna2Panel2.Size = New Size(214, 180)
         Guna2Panel2.TabIndex = 2
         ' 
         ' TableLayoutPanel15
@@ -711,7 +715,7 @@ Partial Class DashboardControl
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
-        TableLayoutPanel15.Size = New Size(204, 170)
+        TableLayoutPanel15.Size = New Size(204, 180)
         TableLayoutPanel15.TabIndex = 1
         ' 
         ' TableLayoutPanel16
@@ -722,11 +726,11 @@ Partial Class DashboardControl
         TableLayoutPanel16.Controls.Add(Label6, 1, 0)
         TableLayoutPanel16.Controls.Add(Label7, 0, 0)
         TableLayoutPanel16.Dock = DockStyle.Fill
-        TableLayoutPanel16.Location = New Point(3, 133)
+        TableLayoutPanel16.Location = New Point(3, 140)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 1
         TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel16.Size = New Size(198, 34)
+        TableLayoutPanel16.Size = New Size(198, 37)
         TableLayoutPanel16.TabIndex = 4
         ' 
         ' Label6
@@ -736,7 +740,7 @@ Partial Class DashboardControl
         Label6.ForeColor = SystemColors.ButtonShadow
         Label6.Location = New Point(151, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(44, 34)
+        Label6.Size = New Size(44, 37)
         Label6.TabIndex = 1
         Label6.Text = "000"
         Label6.TextAlign = ContentAlignment.MiddleRight
@@ -747,7 +751,7 @@ Partial Class DashboardControl
         Label7.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(142, 34)
+        Label7.Size = New Size(142, 37)
         Label7.TabIndex = 0
         Label7.Text = "Monthly Sales"
         Label7.TextAlign = ContentAlignment.MiddleLeft
@@ -760,11 +764,11 @@ Partial Class DashboardControl
         TableLayoutPanel20.Controls.Add(Label8, 1, 0)
         TableLayoutPanel20.Controls.Add(Label9, 0, 0)
         TableLayoutPanel20.Dock = DockStyle.Fill
-        TableLayoutPanel20.Location = New Point(3, 94)
+        TableLayoutPanel20.Location = New Point(3, 99)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
         TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel20.Size = New Size(198, 33)
+        TableLayoutPanel20.Size = New Size(198, 35)
         TableLayoutPanel20.TabIndex = 3
         ' 
         ' Label8
@@ -774,7 +778,7 @@ Partial Class DashboardControl
         Label8.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
         Label8.Location = New Point(151, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(44, 33)
+        Label8.Size = New Size(44, 35)
         Label8.TabIndex = 1
         Label8.Text = "000"
         Label8.TextAlign = ContentAlignment.MiddleRight
@@ -785,7 +789,7 @@ Partial Class DashboardControl
         Label9.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(3, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(142, 33)
+        Label9.Size = New Size(142, 35)
         Label9.TabIndex = 0
         Label9.Text = "Weekly Sales"
         Label9.TextAlign = ContentAlignment.MiddleLeft
@@ -800,9 +804,9 @@ Partial Class DashboardControl
         TableLayoutPanel21.Location = New Point(3, 3)
         TableLayoutPanel21.Name = "TableLayoutPanel21"
         TableLayoutPanel21.RowCount = 2
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel21.Size = New Size(198, 46)
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Absolute, 10F))
+        TableLayoutPanel21.Size = New Size(198, 49)
         TableLayoutPanel21.TabIndex = 1
         ' 
         ' Label11
@@ -811,7 +815,7 @@ Partial Class DashboardControl
         Label11.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(192, 36)
+        Label11.Size = New Size(192, 39)
         Label11.TabIndex = 2
         Label11.Text = "Sales Summary"
         Label11.TextAlign = ContentAlignment.MiddleLeft
@@ -820,7 +824,7 @@ Partial Class DashboardControl
         ' 
         Panel4.BackColor = SystemColors.ActiveBorder
         Panel4.Dock = DockStyle.Fill
-        Panel4.Location = New Point(3, 39)
+        Panel4.Location = New Point(3, 42)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(192, 4)
         Panel4.TabIndex = 0
@@ -833,11 +837,11 @@ Partial Class DashboardControl
         TableLayoutPanel22.Controls.Add(Label12, 1, 0)
         TableLayoutPanel22.Controls.Add(Label14, 0, 0)
         TableLayoutPanel22.Dock = DockStyle.Fill
-        TableLayoutPanel22.Location = New Point(3, 55)
+        TableLayoutPanel22.Location = New Point(3, 58)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 1
         TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel22.Size = New Size(198, 33)
+        TableLayoutPanel22.Size = New Size(198, 35)
         TableLayoutPanel22.TabIndex = 2
         ' 
         ' Label12
@@ -847,7 +851,7 @@ Partial Class DashboardControl
         Label12.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
         Label12.Location = New Point(151, 0)
         Label12.Name = "Label12"
-        Label12.Size = New Size(44, 33)
+        Label12.Size = New Size(44, 35)
         Label12.TabIndex = 1
         Label12.Text = "000"
         Label12.TextAlign = ContentAlignment.MiddleRight
@@ -858,7 +862,7 @@ Partial Class DashboardControl
         Label14.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.Location = New Point(3, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(142, 33)
+        Label14.Size = New Size(142, 35)
         Label14.TabIndex = 0
         Label14.Text = "Today's Sales"
         Label14.TextAlign = ContentAlignment.MiddleLeft
@@ -871,12 +875,12 @@ Partial Class DashboardControl
         machineOverviewPanel.CustomizableEdges = CustomizableEdges23
         machineOverviewPanel.Dock = DockStyle.Fill
         machineOverviewPanel.FillColor = Color.White
-        machineOverviewPanel.Location = New Point(0, 0)
-        machineOverviewPanel.Margin = New Padding(0, 0, 0, 10)
+        machineOverviewPanel.Location = New Point(0, 17)
+        machineOverviewPanel.Margin = New Padding(0, 17, 0, 10)
         machineOverviewPanel.Name = "machineOverviewPanel"
         machineOverviewPanel.Padding = New Padding(0, 0, 10, 0)
         machineOverviewPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        machineOverviewPanel.Size = New Size(214, 170)
+        machineOverviewPanel.Size = New Size(214, 173)
         machineOverviewPanel.TabIndex = 1
         ' 
         ' TableLayoutPanel13
@@ -896,7 +900,7 @@ Partial Class DashboardControl
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
-        TableLayoutPanel13.Size = New Size(204, 170)
+        TableLayoutPanel13.Size = New Size(204, 173)
         TableLayoutPanel13.TabIndex = 1
         ' 
         ' TableLayoutPanel19
@@ -907,11 +911,11 @@ Partial Class DashboardControl
         TableLayoutPanel19.Controls.Add(lblUnavailableMachines, 1, 0)
         TableLayoutPanel19.Controls.Add(Label15, 0, 0)
         TableLayoutPanel19.Dock = DockStyle.Fill
-        TableLayoutPanel19.Location = New Point(3, 133)
+        TableLayoutPanel19.Location = New Point(3, 134)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 1
         TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel19.Size = New Size(198, 34)
+        TableLayoutPanel19.Size = New Size(198, 36)
         TableLayoutPanel19.TabIndex = 4
         ' 
         ' lblUnavailableMachines
@@ -921,7 +925,7 @@ Partial Class DashboardControl
         lblUnavailableMachines.ForeColor = SystemColors.ButtonShadow
         lblUnavailableMachines.Location = New Point(151, 0)
         lblUnavailableMachines.Name = "lblUnavailableMachines"
-        lblUnavailableMachines.Size = New Size(44, 34)
+        lblUnavailableMachines.Size = New Size(44, 36)
         lblUnavailableMachines.TabIndex = 1
         lblUnavailableMachines.Text = "00"
         lblUnavailableMachines.TextAlign = ContentAlignment.MiddleRight
@@ -932,7 +936,7 @@ Partial Class DashboardControl
         Label15.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(3, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(142, 34)
+        Label15.Size = New Size(142, 36)
         Label15.TabIndex = 0
         Label15.Text = "Unvailable Machines"
         Label15.TextAlign = ContentAlignment.MiddleLeft
@@ -945,7 +949,7 @@ Partial Class DashboardControl
         TableLayoutPanel18.Controls.Add(lblInUseMachines, 1, 0)
         TableLayoutPanel18.Controls.Add(Label13, 0, 0)
         TableLayoutPanel18.Dock = DockStyle.Fill
-        TableLayoutPanel18.Location = New Point(3, 94)
+        TableLayoutPanel18.Location = New Point(3, 95)
         TableLayoutPanel18.Name = "TableLayoutPanel18"
         TableLayoutPanel18.RowCount = 1
         TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -985,9 +989,9 @@ Partial Class DashboardControl
         TableLayoutPanel14.Location = New Point(3, 3)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 2
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel14.Size = New Size(198, 46)
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 10F))
+        TableLayoutPanel14.Size = New Size(198, 47)
         TableLayoutPanel14.TabIndex = 1
         ' 
         ' Label23
@@ -996,7 +1000,7 @@ Partial Class DashboardControl
         Label23.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label23.Location = New Point(3, 0)
         Label23.Name = "Label23"
-        Label23.Size = New Size(192, 36)
+        Label23.Size = New Size(192, 37)
         Label23.TabIndex = 2
         Label23.Text = "Machine Overview"
         Label23.TextAlign = ContentAlignment.MiddleLeft
@@ -1005,7 +1009,7 @@ Partial Class DashboardControl
         ' 
         Panel5.BackColor = SystemColors.ActiveBorder
         Panel5.Dock = DockStyle.Fill
-        Panel5.Location = New Point(3, 39)
+        Panel5.Location = New Point(3, 40)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(192, 4)
         Panel5.TabIndex = 0
@@ -1018,7 +1022,7 @@ Partial Class DashboardControl
         TableLayoutPanel17.Controls.Add(lblAvailableMachines, 1, 0)
         TableLayoutPanel17.Controls.Add(Label10, 0, 0)
         TableLayoutPanel17.Dock = DockStyle.Fill
-        TableLayoutPanel17.Location = New Point(3, 55)
+        TableLayoutPanel17.Location = New Point(3, 56)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -1051,17 +1055,17 @@ Partial Class DashboardControl
         ' Guna2Panel4
         ' 
         Guna2Panel4.BackColor = Color.Transparent
-        Guna2Panel4.BorderRadius = 15
+        Guna2Panel4.BorderRadius = 20
         Guna2Panel4.Controls.Add(TableLayoutPanel23)
         Guna2Panel4.CustomizableEdges = CustomizableEdges25
         Guna2Panel4.Dock = DockStyle.Fill
         Guna2Panel4.FillColor = Color.White
-        Guna2Panel4.Location = New Point(0, 40)
-        Guna2Panel4.Margin = New Padding(0, 0, 0, 10)
+        Guna2Panel4.Location = New Point(15, 20)
+        Guna2Panel4.Margin = New Padding(15, 20, 10, 20)
         Guna2Panel4.Name = "Guna2Panel4"
         Guna2Panel4.Padding = New Padding(10, 0, 10, 0)
         Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        Guna2Panel4.Size = New Size(635, 356)
+        Guna2Panel4.Size = New Size(610, 366)
         Guna2Panel4.TabIndex = 3
         ' 
         ' TableLayoutPanel23
@@ -1069,7 +1073,7 @@ Partial Class DashboardControl
         TableLayoutPanel23.ColumnCount = 1
         TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel23.Controls.Add(TableLayoutPanel26, 0, 0)
-        TableLayoutPanel23.Controls.Add(flpDashboardTransactions, 0, 1)
+        TableLayoutPanel23.Controls.Add(dgvDashboardTransactions, 0, 1)
         TableLayoutPanel23.Dock = DockStyle.Fill
         TableLayoutPanel23.Location = New Point(10, 0)
         TableLayoutPanel23.Margin = New Padding(0)
@@ -1077,7 +1081,7 @@ Partial Class DashboardControl
         TableLayoutPanel23.RowCount = 2
         TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Absolute, 55F))
         TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel23.Size = New Size(615, 356)
+        TableLayoutPanel23.Size = New Size(590, 366)
         TableLayoutPanel23.TabIndex = 1
         ' 
         ' TableLayoutPanel26
@@ -1092,7 +1096,7 @@ Partial Class DashboardControl
         TableLayoutPanel26.RowCount = 2
         TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
         TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel26.Size = New Size(609, 49)
+        TableLayoutPanel26.Size = New Size(584, 49)
         TableLayoutPanel26.TabIndex = 1
         ' 
         ' Label20
@@ -1101,7 +1105,7 @@ Partial Class DashboardControl
         Label20.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.Location = New Point(3, 0)
         Label20.Name = "Label20"
-        Label20.Size = New Size(603, 39)
+        Label20.Size = New Size(578, 39)
         Label20.TabIndex = 2
         Label20.Text = "For Pick-Up Orders "
         Label20.TextAlign = ContentAlignment.MiddleLeft
@@ -1112,18 +1116,63 @@ Partial Class DashboardControl
         Panel6.Dock = DockStyle.Fill
         Panel6.Location = New Point(3, 42)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(603, 4)
+        Panel6.Size = New Size(578, 4)
         Panel6.TabIndex = 0
         ' 
-        ' flpDashboardTransactions
+        ' dgvDashboardTransactions
         ' 
-        flpDashboardTransactions.AutoScroll = True
-        flpDashboardTransactions.Dock = DockStyle.Fill
-        flpDashboardTransactions.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        flpDashboardTransactions.Location = New Point(3, 58)
-        flpDashboardTransactions.Name = "flpDashboardTransactions"
-        flpDashboardTransactions.Size = New Size(609, 295)
-        flpDashboardTransactions.TabIndex = 2
+        dgvDashboardTransactions.AllowUserToAddRows = False
+        dgvDashboardTransactions.AllowUserToDeleteRows = False
+        dgvDashboardTransactions.AllowUserToResizeColumns = False
+        dgvDashboardTransactions.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = Color.White
+        dgvDashboardTransactions.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvDashboardTransactions.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvDashboardTransactions.ColumnHeadersHeight = 4
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvDashboardTransactions.DefaultCellStyle = DataGridViewCellStyle3
+        dgvDashboardTransactions.Dock = DockStyle.Fill
+        dgvDashboardTransactions.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvDashboardTransactions.Location = New Point(3, 58)
+        dgvDashboardTransactions.Name = "dgvDashboardTransactions"
+        dgvDashboardTransactions.RowHeadersVisible = False
+        dgvDashboardTransactions.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        dgvDashboardTransactions.Size = New Size(584, 305)
+        dgvDashboardTransactions.TabIndex = 2
+        dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
+        dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
+        dgvDashboardTransactions.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
+        dgvDashboardTransactions.ThemeStyle.BackColor = Color.White
+        dgvDashboardTransactions.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.Height = 4
+        dgvDashboardTransactions.ThemeStyle.ReadOnly = False
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.BackColor = Color.White
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.Height = 25
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' DashboardControl
         ' 
@@ -1179,6 +1228,7 @@ Partial Class DashboardControl
         Guna2Panel4.ResumeLayout(False)
         TableLayoutPanel23.ResumeLayout(False)
         TableLayoutPanel26.ResumeLayout(False)
+        CType(dgvDashboardTransactions, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -1253,6 +1303,6 @@ Partial Class DashboardControl
     Friend WithEvents TableLayoutPanel26 As TableLayoutPanel
     Friend WithEvents Label20 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents flpDashboardTransactions As FlowLayoutPanel
+    Friend WithEvents dgvDashboardTransactions As Guna.UI2.WinForms.Guna2DataGridView
 
 End Class
