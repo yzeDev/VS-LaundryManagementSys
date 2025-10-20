@@ -200,10 +200,10 @@ Partial Class DashboardControl
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 4
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel2.Controls.Add(OFDeliveryPanel, 2, 0)
         TableLayoutPanel2.Controls.Add(inProgressPanel, 1, 0)
         TableLayoutPanel2.Controls.Add(pendingOrdersPanel, 0, 0)
@@ -212,7 +212,7 @@ Partial Class DashboardControl
         TableLayoutPanel2.Location = New Point(10, 53)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel2.Size = New Size(835, 125)
         TableLayoutPanel2.TabIndex = 1
         ' 
@@ -235,37 +235,37 @@ Partial Class DashboardControl
         ' TableLayoutPanel7
         ' 
         TableLayoutPanel7.ColumnCount = 1
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel7.Controls.Add(TableLayoutPanel8, 0, 1)
         TableLayoutPanel7.Controls.Add(Label4, 0, 0)
         TableLayoutPanel7.Dock = DockStyle.Fill
         TableLayoutPanel7.Location = New Point(8, 8)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 2
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 38.0F))
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 62.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 38F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 62F))
         TableLayoutPanel7.Size = New Size(180, 93)
         TableLayoutPanel7.TabIndex = 2
         ' 
         ' TableLayoutPanel8
         ' 
         TableLayoutPanel8.ColumnCount = 2
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.0F))
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
         TableLayoutPanel8.Controls.Add(lblDelivery, 1, 0)
         TableLayoutPanel8.Controls.Add(Guna2Panel7, 0, 0)
         TableLayoutPanel8.Dock = DockStyle.Fill
         TableLayoutPanel8.Location = New Point(3, 38)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 1
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel8.Size = New Size(174, 52)
         TableLayoutPanel8.TabIndex = 1
         ' 
         ' lblDelivery
         ' 
         lblDelivery.Dock = DockStyle.Fill
-        lblDelivery.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
+        lblDelivery.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold)
         lblDelivery.Location = New Point(63, 0)
         lblDelivery.Name = "lblDelivery"
         lblDelivery.Size = New Size(108, 52)
@@ -327,37 +327,37 @@ Partial Class DashboardControl
         ' TableLayoutPanel5
         ' 
         TableLayoutPanel5.ColumnCount = 1
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel5.Controls.Add(TableLayoutPanel6, 0, 1)
         TableLayoutPanel5.Controls.Add(Label3, 0, 0)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(8, 8)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 2
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 38.0F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 62.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 38F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 62F))
         TableLayoutPanel5.Size = New Size(180, 93)
         TableLayoutPanel5.TabIndex = 2
         ' 
         ' TableLayoutPanel6
         ' 
         TableLayoutPanel6.ColumnCount = 2
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.0F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
         TableLayoutPanel6.Controls.Add(lblinProgress, 1, 0)
         TableLayoutPanel6.Controls.Add(Guna2Panel5, 0, 0)
         TableLayoutPanel6.Dock = DockStyle.Fill
         TableLayoutPanel6.Location = New Point(3, 38)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 1
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel6.Size = New Size(174, 52)
         TableLayoutPanel6.TabIndex = 1
         ' 
         ' lblinProgress
         ' 
         lblinProgress.Dock = DockStyle.Fill
-        lblinProgress.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
+        lblinProgress.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold)
         lblinProgress.Location = New Point(63, 0)
         lblinProgress.Name = "lblinProgress"
         lblinProgress.Size = New Size(108, 52)
@@ -419,37 +419,37 @@ Partial Class DashboardControl
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel3.Controls.Add(TableLayoutPanel4, 0, 1)
         TableLayoutPanel3.Controls.Add(Label2, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(8, 8)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 38.0F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 62.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 38F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 62F))
         TableLayoutPanel3.Size = New Size(180, 93)
         TableLayoutPanel3.TabIndex = 2
         ' 
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 2
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.0F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
         TableLayoutPanel4.Controls.Add(lblPendingOrders, 1, 0)
         TableLayoutPanel4.Controls.Add(Guna2Panel3, 0, 0)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(3, 38)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel4.Size = New Size(174, 52)
         TableLayoutPanel4.TabIndex = 1
         ' 
         ' lblPendingOrders
         ' 
         lblPendingOrders.Dock = DockStyle.Fill
-        lblPendingOrders.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
+        lblPendingOrders.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold)
         lblPendingOrders.Location = New Point(63, 0)
         lblPendingOrders.Name = "lblPendingOrders"
         lblPendingOrders.Size = New Size(108, 52)
@@ -511,37 +511,37 @@ Partial Class DashboardControl
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 1
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel9.Controls.Add(TableLayoutPanel10, 0, 1)
         TableLayoutPanel9.Controls.Add(Label5, 0, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
         TableLayoutPanel9.Location = New Point(8, 8)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 2
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 38.0F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 62.0F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 38F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 62F))
         TableLayoutPanel9.Size = New Size(183, 93)
         TableLayoutPanel9.TabIndex = 2
         ' 
         ' TableLayoutPanel10
         ' 
         TableLayoutPanel10.ColumnCount = 2
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.0F))
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
         TableLayoutPanel10.Controls.Add(lblCompleted, 1, 0)
         TableLayoutPanel10.Controls.Add(Guna2Panel9, 0, 0)
         TableLayoutPanel10.Dock = DockStyle.Fill
         TableLayoutPanel10.Location = New Point(3, 38)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel10.Size = New Size(177, 52)
         TableLayoutPanel10.TabIndex = 1
         ' 
         ' lblCompleted
         ' 
         lblCompleted.Dock = DockStyle.Fill
-        lblCompleted.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
+        lblCompleted.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold)
         lblCompleted.Location = New Point(64, 0)
         lblCompleted.Name = "lblCompleted"
         lblCompleted.Size = New Size(110, 52)
@@ -587,15 +587,15 @@ Partial Class DashboardControl
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Controls.Add(Label1, 0, 0)
         TableLayoutPanel1.Controls.Add(Panel2, 1, 0)
         TableLayoutPanel1.Dock = DockStyle.Top
         TableLayoutPanel1.Location = New Point(10, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Size = New Size(835, 53)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -603,7 +603,7 @@ Partial Class DashboardControl
         ' 
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(411, 53)
@@ -631,7 +631,7 @@ Partial Class DashboardControl
         addOrderBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         addOrderBtn.Dock = DockStyle.Right
         addOrderBtn.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
-        addOrderBtn.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        addOrderBtn.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         addOrderBtn.ForeColor = Color.Black
         addOrderBtn.Location = New Point(256, 8)
         addOrderBtn.Name = "addOrderBtn"
@@ -643,16 +643,16 @@ Partial Class DashboardControl
         ' TableLayoutPanel11
         ' 
         TableLayoutPanel11.ColumnCount = 2
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 220.0F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 220F))
         TableLayoutPanel11.Controls.Add(Panel3, 1, 0)
         TableLayoutPanel11.Controls.Add(Guna2Panel4, 0, 0)
         TableLayoutPanel11.Dock = DockStyle.Fill
         TableLayoutPanel11.Location = New Point(0, 198)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel11.Size = New Size(855, 406)
         TableLayoutPanel11.TabIndex = 1
         ' 
@@ -668,8 +668,8 @@ Partial Class DashboardControl
         ' TableLayoutPanel12
         ' 
         TableLayoutPanel12.ColumnCount = 1
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
         TableLayoutPanel12.Controls.Add(Guna2Panel2, 0, 1)
         TableLayoutPanel12.Controls.Add(machineOverviewPanel, 0, 0)
         TableLayoutPanel12.Dock = DockStyle.Fill
@@ -677,8 +677,8 @@ Partial Class DashboardControl
         TableLayoutPanel12.Margin = New Padding(0)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 2
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel12.Size = New Size(214, 400)
         TableLayoutPanel12.TabIndex = 0
         ' 
@@ -701,7 +701,7 @@ Partial Class DashboardControl
         ' TableLayoutPanel15
         ' 
         TableLayoutPanel15.ColumnCount = 1
-        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel15.Controls.Add(TableLayoutPanel16, 0, 3)
         TableLayoutPanel15.Controls.Add(TableLayoutPanel20, 0, 2)
         TableLayoutPanel15.Controls.Add(TableLayoutPanel21, 0, 0)
@@ -711,32 +711,32 @@ Partial Class DashboardControl
         TableLayoutPanel15.Margin = New Padding(0)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 4
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 31.0F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 31F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel15.Size = New Size(204, 180)
         TableLayoutPanel15.TabIndex = 1
         ' 
         ' TableLayoutPanel16
         ' 
         TableLayoutPanel16.ColumnCount = 2
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75.0F))
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel16.Controls.Add(Label6, 1, 0)
         TableLayoutPanel16.Controls.Add(Label7, 0, 0)
         TableLayoutPanel16.Dock = DockStyle.Fill
         TableLayoutPanel16.Location = New Point(3, 140)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 1
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel16.Size = New Size(198, 37)
         TableLayoutPanel16.TabIndex = 4
         ' 
         ' Label6
         ' 
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = SystemColors.ButtonShadow
         Label6.Location = New Point(151, 0)
         Label6.Name = "Label6"
@@ -748,7 +748,7 @@ Partial Class DashboardControl
         ' Label7
         ' 
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(142, 37)
@@ -759,22 +759,22 @@ Partial Class DashboardControl
         ' TableLayoutPanel20
         ' 
         TableLayoutPanel20.ColumnCount = 2
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75.0F))
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel20.Controls.Add(Label8, 1, 0)
         TableLayoutPanel20.Controls.Add(Label9, 0, 0)
         TableLayoutPanel20.Dock = DockStyle.Fill
         TableLayoutPanel20.Location = New Point(3, 99)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel20.Size = New Size(198, 35)
         TableLayoutPanel20.TabIndex = 3
         ' 
         ' Label8
         ' 
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
         Label8.Location = New Point(151, 0)
         Label8.Name = "Label8"
@@ -786,7 +786,7 @@ Partial Class DashboardControl
         ' Label9
         ' 
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(3, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(142, 35)
@@ -797,15 +797,15 @@ Partial Class DashboardControl
         ' TableLayoutPanel21
         ' 
         TableLayoutPanel21.ColumnCount = 1
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel21.Controls.Add(Label11, 0, 0)
         TableLayoutPanel21.Controls.Add(Panel4, 0, 1)
         TableLayoutPanel21.Dock = DockStyle.Fill
         TableLayoutPanel21.Location = New Point(3, 3)
         TableLayoutPanel21.Name = "TableLayoutPanel21"
         TableLayoutPanel21.RowCount = 2
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Absolute, 10.0F))
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Absolute, 10F))
         TableLayoutPanel21.Size = New Size(198, 49)
         TableLayoutPanel21.TabIndex = 1
         ' 
@@ -832,22 +832,22 @@ Partial Class DashboardControl
         ' TableLayoutPanel22
         ' 
         TableLayoutPanel22.ColumnCount = 2
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75.0F))
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel22.Controls.Add(Label12, 1, 0)
         TableLayoutPanel22.Controls.Add(Label14, 0, 0)
         TableLayoutPanel22.Dock = DockStyle.Fill
         TableLayoutPanel22.Location = New Point(3, 58)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 1
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel22.Size = New Size(198, 35)
         TableLayoutPanel22.TabIndex = 2
         ' 
         ' Label12
         ' 
         Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
         Label12.Location = New Point(151, 0)
         Label12.Name = "Label12"
@@ -859,7 +859,7 @@ Partial Class DashboardControl
         ' Label14
         ' 
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.Location = New Point(3, 0)
         Label14.Name = "Label14"
         Label14.Size = New Size(142, 35)
@@ -886,7 +886,7 @@ Partial Class DashboardControl
         ' TableLayoutPanel13
         ' 
         TableLayoutPanel13.ColumnCount = 1
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel13.Controls.Add(TableLayoutPanel19, 0, 3)
         TableLayoutPanel13.Controls.Add(TableLayoutPanel18, 0, 2)
         TableLayoutPanel13.Controls.Add(TableLayoutPanel14, 0, 0)
@@ -896,32 +896,32 @@ Partial Class DashboardControl
         TableLayoutPanel13.Margin = New Padding(0)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 4
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 31.0F))
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 31F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel13.Size = New Size(204, 173)
         TableLayoutPanel13.TabIndex = 1
         ' 
         ' TableLayoutPanel19
         ' 
         TableLayoutPanel19.ColumnCount = 2
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75.0F))
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel19.Controls.Add(lblUnavailableMachines, 1, 0)
         TableLayoutPanel19.Controls.Add(Label15, 0, 0)
         TableLayoutPanel19.Dock = DockStyle.Fill
         TableLayoutPanel19.Location = New Point(3, 134)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 1
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel19.Size = New Size(198, 36)
         TableLayoutPanel19.TabIndex = 4
         ' 
         ' lblUnavailableMachines
         ' 
         lblUnavailableMachines.Dock = DockStyle.Fill
-        lblUnavailableMachines.Font = New Font("Poppins", 12.0F, FontStyle.Bold)
+        lblUnavailableMachines.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         lblUnavailableMachines.ForeColor = SystemColors.ButtonShadow
         lblUnavailableMachines.Location = New Point(151, 0)
         lblUnavailableMachines.Name = "lblUnavailableMachines"
@@ -933,7 +933,7 @@ Partial Class DashboardControl
         ' Label15
         ' 
         Label15.Dock = DockStyle.Fill
-        Label15.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(3, 0)
         Label15.Name = "Label15"
         Label15.Size = New Size(142, 36)
@@ -944,22 +944,22 @@ Partial Class DashboardControl
         ' TableLayoutPanel18
         ' 
         TableLayoutPanel18.ColumnCount = 2
-        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75.0F))
-        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel18.Controls.Add(lblInUseMachines, 1, 0)
         TableLayoutPanel18.Controls.Add(Label13, 0, 0)
         TableLayoutPanel18.Dock = DockStyle.Fill
         TableLayoutPanel18.Location = New Point(3, 95)
         TableLayoutPanel18.Name = "TableLayoutPanel18"
         TableLayoutPanel18.RowCount = 1
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel18.Size = New Size(198, 33)
         TableLayoutPanel18.TabIndex = 3
         ' 
         ' lblInUseMachines
         ' 
         lblInUseMachines.Dock = DockStyle.Fill
-        lblInUseMachines.Font = New Font("Poppins", 12.0F, FontStyle.Bold)
+        lblInUseMachines.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         lblInUseMachines.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
         lblInUseMachines.Location = New Point(151, 0)
         lblInUseMachines.Name = "lblInUseMachines"
@@ -971,7 +971,7 @@ Partial Class DashboardControl
         ' Label13
         ' 
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
         Label13.Size = New Size(142, 33)
@@ -982,15 +982,15 @@ Partial Class DashboardControl
         ' TableLayoutPanel14
         ' 
         TableLayoutPanel14.ColumnCount = 1
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel14.Controls.Add(Label23, 0, 0)
         TableLayoutPanel14.Controls.Add(Panel5, 0, 1)
         TableLayoutPanel14.Dock = DockStyle.Fill
         TableLayoutPanel14.Location = New Point(3, 3)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 2
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 10.0F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 10F))
         TableLayoutPanel14.Size = New Size(198, 47)
         TableLayoutPanel14.TabIndex = 1
         ' 
@@ -1017,22 +1017,22 @@ Partial Class DashboardControl
         ' TableLayoutPanel17
         ' 
         TableLayoutPanel17.ColumnCount = 2
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75.0F))
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 75F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel17.Controls.Add(lblAvailableMachines, 1, 0)
         TableLayoutPanel17.Controls.Add(Label10, 0, 0)
         TableLayoutPanel17.Dock = DockStyle.Fill
         TableLayoutPanel17.Location = New Point(3, 56)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel17.Size = New Size(198, 33)
         TableLayoutPanel17.TabIndex = 2
         ' 
         ' lblAvailableMachines
         ' 
         lblAvailableMachines.Dock = DockStyle.Fill
-        lblAvailableMachines.Font = New Font("Poppins", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAvailableMachines.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblAvailableMachines.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
         lblAvailableMachines.Location = New Point(151, 0)
         lblAvailableMachines.Name = "lblAvailableMachines"
@@ -1044,7 +1044,7 @@ Partial Class DashboardControl
         ' Label10
         ' 
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(3, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(142, 33)
@@ -1071,7 +1071,7 @@ Partial Class DashboardControl
         ' TableLayoutPanel23
         ' 
         TableLayoutPanel23.ColumnCount = 1
-        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel23.Controls.Add(TableLayoutPanel26, 0, 0)
         TableLayoutPanel23.Controls.Add(dgvDashboardTransactions, 0, 1)
         TableLayoutPanel23.Dock = DockStyle.Fill
@@ -1079,23 +1079,23 @@ Partial Class DashboardControl
         TableLayoutPanel23.Margin = New Padding(0)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 2
-        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Absolute, 55.0F))
-        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Absolute, 55F))
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel23.Size = New Size(590, 366)
         TableLayoutPanel23.TabIndex = 1
         ' 
         ' TableLayoutPanel26
         ' 
         TableLayoutPanel26.ColumnCount = 1
-        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel26.Controls.Add(Label20, 0, 0)
         TableLayoutPanel26.Controls.Add(Panel6, 0, 1)
         TableLayoutPanel26.Dock = DockStyle.Fill
         TableLayoutPanel26.Location = New Point(3, 3)
         TableLayoutPanel26.Name = "TableLayoutPanel26"
         TableLayoutPanel26.RowCount = 2
-        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 80.0F))
-        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
         TableLayoutPanel26.Size = New Size(584, 49)
         TableLayoutPanel26.TabIndex = 1
         ' 
@@ -1129,7 +1129,7 @@ Partial Class DashboardControl
         dgvDashboardTransactions.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -1138,7 +1138,7 @@ Partial Class DashboardControl
         dgvDashboardTransactions.ColumnHeadersHeight = 4
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
@@ -1161,14 +1161,14 @@ Partial Class DashboardControl
         dgvDashboardTransactions.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvDashboardTransactions.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         dgvDashboardTransactions.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvDashboardTransactions.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9.0F)
+        dgvDashboardTransactions.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
         dgvDashboardTransactions.ThemeStyle.HeaderStyle.ForeColor = Color.White
         dgvDashboardTransactions.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         dgvDashboardTransactions.ThemeStyle.HeaderStyle.Height = 4
         dgvDashboardTransactions.ThemeStyle.ReadOnly = False
         dgvDashboardTransactions.ThemeStyle.RowsStyle.BackColor = Color.White
         dgvDashboardTransactions.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvDashboardTransactions.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9.0F)
+        dgvDashboardTransactions.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
         dgvDashboardTransactions.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         dgvDashboardTransactions.ThemeStyle.RowsStyle.Height = 25
         dgvDashboardTransactions.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
@@ -1176,7 +1176,7 @@ Partial Class DashboardControl
         ' 
         ' DashboardControl
         ' 
-        AutoScaleDimensions = New SizeF(96.0F, 96.0F)
+        AutoScaleDimensions = New SizeF(96F, 96F)
         AutoScaleMode = AutoScaleMode.Dpi
         BackColor = Color.FromArgb(CByte(241), CByte(241), CByte(241))
         Controls.Add(TableLayoutPanel11)

@@ -89,5 +89,29 @@
             Case "Cash"
                 MessageBox.Show("Cash payment selected. Proceed ka na sa cashier.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select
+
+        ' --- NEW: Create Receipt and pass all info ---
+        Dim receipt As New Receipt()
+        receipt.CustomerName = customerNameLbl.Text
+        receipt.ContactNumber = contactNoLbl.Text
+        receipt.Address = addressTxtBox.Text
+        receipt.Weight = weightLbl.Text
+        receipt.ServiceType = serviceTypeLbl.Text
+        receipt.PackageType = packageTypeLbl.Text
+        receipt.Rate = rateLbl.Text
+        receipt.ServiceFee = serviceFeeLbl.Text
+        receipt.DeliveryFee = deliveryFeeLbl.Text
+        receipt.TotalAmount = totalAmountLbl.Text
+        receipt.PaymentMethod = selectedPayment
+
+        ' Delivery status logic
+        If serviceTypeLbl.Text = "Self Service" Then
+            receipt.DeliveryMode = "" ' will show as "N/A" sa Receipt
+        Else
+            receipt.DeliveryMode = deliveryIndicator.Text
+        End If
+
+        receipt.Show()
+        Me.Hide()
     End Sub
 End Class

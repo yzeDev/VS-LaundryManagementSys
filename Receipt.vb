@@ -1,73 +1,41 @@
-﻿Public Class Receipt
-    Private Sub Guna2HtmlLabel2_Click(sender As Object, e As EventArgs)
+﻿Imports System.Data.SqlTypes
 
-    End Sub
+Public Class Receipt
+    ' --- Public properties to receive data ---
+    Public Property CustomerName As String
+    Public Property ContactNumber As String
+    Public Property Address As String
+    Public Property ServiceType As String
+    Public Property PackageType As String
+    Public Property Rate As String
+    Public Property Weight As String
+    Public Property ServiceFee As String
+    Public Property DeliveryFee As String
+    Public Property TotalAmount As String
+    Public Property PaymentMethod As String
+    Public Property DeliveryMode As String
 
-    Private Sub Receipt_Load(sender As Object, e As EventArgs)
+    Private Sub Receipt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' --- Populate labels with data ---
+        lblName.Text = CustomerName
+        lblContact.Text = ContactNumber
+        lblAddress.Text = Address
+        lblServiceType.Text = ServiceType
+        lblPackage.Text = PackageType
+        lblRate.Text = Rate
+        lblWeight.Text = Weight
+        lblServiceFee.Text = ServiceFee
+        lblDeliveryFee.Text = DeliveryFee
+        lblTotalAmount.Text = TotalAmount
+        lblPaymentMethod.Text = PaymentMethod
 
-    End Sub
+        ' --- Status logic ---
+        If ServiceType = "Self Service" OrElse String.IsNullOrEmpty(DeliveryMode) Then
+            lblStatus.Text = "N/A"
+        Else
+            lblStatus.Text = DeliveryMode
+        End If
 
-    Private Sub Guna2HtmlLabel11_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Receipt_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Guna2GradientPanel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel2.Paint
-
-    End Sub
-
-    Private Sub TableLayoutPanel16_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel16.Paint
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
-
-    End Sub
-
-    Private Sub TableLayoutPanel14_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel14.Paint
-
-    End Sub
-
-    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
-
-    End Sub
-
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
-
-    End Sub
-
-    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
-
-    End Sub
-
-    Private Sub TableLayoutPanel18_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel18.Paint
-
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
-
-    End Sub
-
-    Private Sub Label28_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
-
-    End Sub
-
-    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
-
-    End Sub
-
-    Private Sub Label37_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
