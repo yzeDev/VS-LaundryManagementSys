@@ -388,5 +388,9 @@ Public Class DashboardControl
         End Select
     End Sub
 
-
+    Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
+        Dim optionsForm As New TransactionOption()
+        optionsForm.StartPosition = FormStartPosition.CenterParent
+        optionsForm.ShowDialog()
+    End Sub
 End Class

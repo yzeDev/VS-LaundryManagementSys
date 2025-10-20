@@ -37,6 +37,7 @@ Partial Class SelfServiceForm
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SelfServiceForm))
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
@@ -494,6 +495,7 @@ Partial Class SelfServiceForm
         ' 
         ' TableLayoutPanel9
         ' 
+        TableLayoutPanel9.BackColor = Color.Transparent
         TableLayoutPanel9.ColumnCount = 2
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
@@ -511,7 +513,10 @@ Partial Class SelfServiceForm
         ' gbCancel
         ' 
         gbCancel.AutoRoundedCorners = True
+        gbCancel.BackColor = Color.Transparent
+        gbCancel.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.BorderThickness = 1
+        gbCancel.CustomBorderColor = Color.Transparent
         gbCancel.CustomizableEdges = CustomizableEdges9
         gbCancel.DisabledState.BorderColor = Color.DarkGray
         gbCancel.DisabledState.CustomBorderColor = Color.DarkGray
@@ -519,6 +524,7 @@ Partial Class SelfServiceForm
         gbCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbCancel.Dock = DockStyle.Top
         gbCancel.FillColor = Color.White
+        gbCancel.FocusedColor = Color.Transparent
         gbCancel.Font = New Font("Poppins", 12F)
         gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.Location = New Point(3, 3)
@@ -531,7 +537,6 @@ Partial Class SelfServiceForm
         ' gbContinue
         ' 
         gbContinue.AutoRoundedCorners = True
-        gbContinue.BorderThickness = 1
         gbContinue.CustomizableEdges = CustomizableEdges11
         gbContinue.DisabledState.BorderColor = Color.DarkGray
         gbContinue.DisabledState.CustomBorderColor = Color.DarkGray
@@ -633,9 +638,12 @@ Partial Class SelfServiceForm
         ' 
         ' Guna2CirclePictureBox1
         ' 
+        Guna2CirclePictureBox1.BackColor = Color.Transparent
         Guna2CirclePictureBox1.Dock = DockStyle.Fill
-        Guna2CirclePictureBox1.FillColor = Color.Transparent
+        Guna2CirclePictureBox1.ErrorImage = Nothing
+        Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), Image)
         Guna2CirclePictureBox1.ImageRotate = 0F
+        Guna2CirclePictureBox1.InitialImage = Nothing
         Guna2CirclePictureBox1.Location = New Point(0, 0)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
         Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
