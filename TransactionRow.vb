@@ -9,7 +9,7 @@
     Private isSelected As Boolean = False
     Private isInitialized As Boolean = False
 
-    Private defaultBackColor As Color = Color.White
+    'Private defaultBackColor As Color = Color.White
     Private hoverBackColor As Color = Color.AliceBlue
     Private selectedBackColor As Color = Color.FromArgb(220, 235, 252)
 

@@ -35,13 +35,11 @@ Partial Class MachineCard
         lblWeightText = New Label()
         lblWeightValue = New Label()
         Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
+        lblServiceTime = New Label()
         lblStatus = New Label()
         picMachine = New Guna.UI2.WinForms.Guna2PictureBox()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        btnProceedMachine = New Guna.UI2.WinForms.Guna2Button()
+        btnViewDetails = New Guna.UI2.WinForms.Guna2Button()
         lblMachineIDText = New Label()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -57,8 +55,8 @@ Partial Class MachineCard
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 1, 1)
         TableLayoutPanel1.Controls.Add(lblStatus, 1, 0)
         TableLayoutPanel1.Controls.Add(picMachine, 0, 1)
-        TableLayoutPanel1.Controls.Add(Guna2Button1, 0, 2)
-        TableLayoutPanel1.Controls.Add(Guna2Button2, 1, 2)
+        TableLayoutPanel1.Controls.Add(btnProceedMachine, 0, 2)
+        TableLayoutPanel1.Controls.Add(btnViewDetails, 1, 2)
         TableLayoutPanel1.Controls.Add(lblMachineIDText, 0, 0)
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -80,9 +78,7 @@ Partial Class MachineCard
         TableLayoutPanel2.Controls.Add(lblWeightText, 0, 2)
         TableLayoutPanel2.Controls.Add(lblWeightValue, 1, 2)
         TableLayoutPanel2.Controls.Add(Label1, 0, 3)
-        TableLayoutPanel2.Controls.Add(Label2, 1, 3)
-        TableLayoutPanel2.Controls.Add(Label3, 0, 4)
-        TableLayoutPanel2.Controls.Add(Label4, 1, 4)
+        TableLayoutPanel2.Controls.Add(lblServiceTime, 1, 3)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(203, 33)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -154,44 +150,20 @@ Partial Class MachineCard
         Label1.Name = "Label1"
         Label1.Size = New Size(91, 37)
         Label1.TabIndex = 9
-        Label1.Text = "Time Started:"
+        Label1.Text = "Service Time:"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label2
+        ' lblServiceTime
         ' 
-        Label2.AutoSize = True
-        Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 9F)
-        Label2.Location = New Point(100, 111)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(91, 37)
-        Label2.TabIndex = 10
-        Label2.Text = "00:00"
-        Label2.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 9F)
-        Label3.Location = New Point(3, 148)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(91, 37)
-        Label3.TabIndex = 11
-        Label3.Text = "Time Ends:"
-        Label3.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 9F)
-        Label4.Location = New Point(100, 148)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(91, 37)
-        Label4.TabIndex = 12
-        Label4.Text = "00:00"
-        Label4.TextAlign = ContentAlignment.MiddleCenter
+        lblServiceTime.AutoSize = True
+        lblServiceTime.Dock = DockStyle.Fill
+        lblServiceTime.Font = New Font("Poppins", 9F)
+        lblServiceTime.Location = New Point(100, 111)
+        lblServiceTime.Name = "lblServiceTime"
+        lblServiceTime.Size = New Size(91, 37)
+        lblServiceTime.TabIndex = 10
+        lblServiceTime.Text = "00:00"
+        lblServiceTime.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblStatus
         ' 
@@ -219,43 +191,43 @@ Partial Class MachineCard
         picMachine.TabStop = False
         picMachine.WaitOnLoad = True
         ' 
-        ' Guna2Button1
+        ' btnProceedMachine
         ' 
-        Guna2Button1.Anchor = AnchorStyles.None
-        Guna2Button1.AutoRoundedCorners = True
-        Guna2Button1.CustomizableEdges = CustomizableEdges3
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.FillColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
-        Guna2Button1.Font = New Font("Poppins", 8.25F)
-        Guna2Button1.ForeColor = Color.Black
-        Guna2Button1.Location = New Point(10, 263)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Button1.Size = New Size(180, 34)
-        Guna2Button1.TabIndex = 14
-        Guna2Button1.Text = "Complete"
+        btnProceedMachine.Anchor = AnchorStyles.None
+        btnProceedMachine.AutoRoundedCorners = True
+        btnProceedMachine.CustomizableEdges = CustomizableEdges3
+        btnProceedMachine.DisabledState.BorderColor = Color.DarkGray
+        btnProceedMachine.DisabledState.CustomBorderColor = Color.DarkGray
+        btnProceedMachine.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnProceedMachine.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnProceedMachine.FillColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
+        btnProceedMachine.Font = New Font("Poppins", 8.25F)
+        btnProceedMachine.ForeColor = Color.Black
+        btnProceedMachine.Location = New Point(10, 263)
+        btnProceedMachine.Name = "btnProceedMachine"
+        btnProceedMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnProceedMachine.Size = New Size(180, 34)
+        btnProceedMachine.TabIndex = 14
+        btnProceedMachine.Text = "Get Pending"
         ' 
-        ' Guna2Button2
+        ' btnViewDetails
         ' 
-        Guna2Button2.Anchor = AnchorStyles.None
-        Guna2Button2.AutoRoundedCorners = True
-        Guna2Button2.CustomizableEdges = CustomizableEdges5
-        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button2.FillColor = Color.Gainsboro
-        Guna2Button2.Font = New Font("Poppins", 8.25F)
-        Guna2Button2.ForeColor = Color.Black
-        Guna2Button2.Location = New Point(210, 263)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Button2.Size = New Size(180, 34)
-        Guna2Button2.TabIndex = 16
-        Guna2Button2.Text = "View Details"
+        btnViewDetails.Anchor = AnchorStyles.None
+        btnViewDetails.AutoRoundedCorners = True
+        btnViewDetails.CustomizableEdges = CustomizableEdges5
+        btnViewDetails.DisabledState.BorderColor = Color.DarkGray
+        btnViewDetails.DisabledState.CustomBorderColor = Color.DarkGray
+        btnViewDetails.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnViewDetails.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnViewDetails.FillColor = Color.Gainsboro
+        btnViewDetails.Font = New Font("Poppins", 8.25F)
+        btnViewDetails.ForeColor = Color.Black
+        btnViewDetails.Location = New Point(210, 263)
+        btnViewDetails.Name = "btnViewDetails"
+        btnViewDetails.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnViewDetails.Size = New Size(180, 34)
+        btnViewDetails.TabIndex = 16
+        btnViewDetails.Text = "View Details"
         ' 
         ' lblMachineIDText
         ' 
@@ -275,7 +247,7 @@ Partial Class MachineCard
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(0)
+        Margin = New Padding(5)
         Name = "MachineCard"
         Size = New Size(400, 300)
         TableLayoutPanel1.ResumeLayout(False)
@@ -295,11 +267,9 @@ Partial Class MachineCard
     Friend WithEvents lblStatus As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblServiceTime As Label
     Friend WithEvents picMachine As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnProceedMachine As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnViewDetails As Guna.UI2.WinForms.Guna2Button
 
 End Class

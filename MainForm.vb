@@ -147,7 +147,7 @@
                 content = New MachinesControl()
             Case "transactionsBtn"
                 titleBar = New transacTitleBarUser()
-                content = New TransactionControl()
+                content = New newTransactionsControl()
             Case "statisticsBtn"
                 titleBar = New statsTitleBarUser()
                 content = New StatsControl()

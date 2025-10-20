@@ -54,7 +54,7 @@ Partial Class MachinesControl
         cmbStatus.DropDownWidth = 137
         cmbStatus.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cmbStatus.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbStatus.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbStatus.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbStatus.ItemHeight = 30
         cmbStatus.Location = New Point(752, 3)
@@ -72,10 +72,11 @@ Partial Class MachinesControl
         TableLayoutPanel1.SetColumnSpan(flpMachines, 3)
         flpMachines.Dock = DockStyle.Fill
         flpMachines.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        flpMachines.Location = New Point(2, 52)
-        flpMachines.Margin = New Padding(2)
+        flpMachines.Location = New Point(20, 50)
+        flpMachines.Margin = New Padding(20, 0, 0, 0)
         flpMachines.Name = "flpMachines"
-        flpMachines.Size = New Size(851, 550)
+        flpMachines.Padding = New Padding(5)
+        flpMachines.Size = New Size(835, 554)
         flpMachines.TabIndex = 4
         ' 
         ' TableLayoutPanel1

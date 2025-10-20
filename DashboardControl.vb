@@ -1,18 +1,22 @@
 ﻿Imports System.Data.OleDb
-
+Imports System.Net.Http
+Imports System.Net.Http.Headers
+Imports System.Text
+Imports System.Threading.Tasks
 Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
+    Private Shared ReadOnly httpClient As New HttpClient()
+    Private Const EngageSparkApiUrl As String = "https://api.engagespark.com/v1/messages/sms"
+    Private Const EngageSparkApiKey As String = "a012a19db795e443280eb7809a93cfbb69de67c3" ' <-- Replace with your real API key
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        SetupDashboardTransactionTable()
         LoadDashboardCounters()
         LoadMachineCounters()
-        LoadDashboardTransactions() ' ← ADD THIS
+        LoadDashboardTransactions()
     End Sub
 
-
-    ' 🔁 Call this whenever user navigates back to the dashboard
     Public Sub RefreshDashboard()
         CheckForTransactionUpdates()
         CheckForMachineUpdates()
@@ -33,7 +37,6 @@ Public Class DashboardControl
                 End Using
             End Using
 
-            ' Only reload if number of transactions changed
             If totalCount <> lastTransactionCount Then
                 lastTransactionCount = totalCount
                 LoadDashboardCounters()
@@ -102,7 +105,6 @@ Public Class DashboardControl
                 End Using
             End Using
 
-            ' Only reload if number of machines changed
             If totalCount <> lastMachineCount Then
                 lastMachineCount = totalCount
                 LoadMachineCounters()
@@ -127,7 +129,6 @@ Public Class DashboardControl
 
                 Using cmd As New OleDbCommand(query, conn)
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
-                        ' Reset counts
                         lblAvailableMachines.Text = "0"
                         lblInUseMachines.Text = "0"
                         lblUnavailableMachines.Text = "0"
@@ -154,112 +155,240 @@ Public Class DashboardControl
     End Sub
     Private Sub LoadDashboardTransactions()
         Try
-            flpDashboardTransactions.SuspendLayout()
-            flpDashboardTransactions.Controls.Clear()
-
-            ' Add header
-            Dim header As New DashboardTransactionRowHeader()
-            flpDashboardTransactions.Controls.Add(header)
+            dgvDashboardTransactions.Rows.Clear()
 
             Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
             Using conn As New OleDbConnection(connString)
                 conn.Open()
 
-                ' Only load "For Pickup" and "For Delivery"
-                Dim query As String =
-                "SELECT TransactionID, CustomerName, ContactNumber, Status 
-                 FROM Transactions
-                 WHERE Status IN ('For Pickup', 'For Delivery')
-                 ORDER BY TransactionID DESC"
+                Dim query As String = "
+                SELECT TransactionID, CustomerName, ContactNumber, Status
+                FROM Transactions
+                WHERE Status IN ('For Pickup', 'For Delivery')
+                ORDER BY TransactionID DESC;
+            "
 
                 Using cmd As New OleDbCommand(query, conn)
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
+                        Dim notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\bell.png")
+                        Dim completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
+
                         While reader.Read()
-                            Dim row As New DashboardTransactionRow()
-                            row.SetData(
-                            CInt(reader("TransactionID")),
-                            reader("CustomerName").ToString(),
-                            reader("ContactNumber").ToString(),
-                            reader("Status").ToString()
-                        )
-
-                            ' Connect button events
-                            AddHandler row.NotifyClicked, AddressOf HandleNotifyClick
-                            AddHandler row.CheckClicked, AddressOf HandleCheckClick
-
-                            flpDashboardTransactions.Controls.Add(row)
+                            dgvDashboardTransactions.Rows.Add(
+                                reader("TransactionID").ToString(),
+                                reader("CustomerName").ToString(),
+                                reader("ContactNumber").ToString(),
+                                reader("Status").ToString(),
+                                Nothing, ' waiting time column (blank for now)
+                                notifyIcon,
+                                completeIcon
+                            )
                         End While
+
                     End Using
                 End Using
             End Using
 
         Catch ex As Exception
             MessageBox.Show("Error loading dashboard transactions: " & ex.Message)
-        Finally
-            flpDashboardTransactions.ResumeLayout()
         End Try
     End Sub
 
 
-    Private Sub HandleNotifyClick(ByVal sender As DashboardTransactionRow)
-        Dim status As String = sender.CurrentStatus
-        Dim message As String
 
+    Private Async Function HandleNotifyClick(customerName As String, contactNumber As String, status As String) As Task
+        Dim smsMessage As String
         If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
-            message = "The customer has been notified that their order is ready for pickup."
+            smsMessage = $"Hi {customerName}, your laundry is now ready for pickup. Thank you for choosing us!"
         ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
-            message = "The customer has been notified that their order is ready for delivery."
+            smsMessage = $"Hi {customerName}, your laundry is out for delivery and will arrive soon. Thank you for choosing us!"
         Else
-            message = "Notification sent."
+            smsMessage = $"Hi {customerName}, your laundry update: {status}."
         End If
 
-        MessageBox.Show(message, "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
+        Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
+                                  "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm <> DialogResult.Yes Then Exit Function
 
+        Try
+            Dim result As String = Await SendSmsViaEngageSparkAsync(contactNumber, smsMessage)
+            MessageBox.Show($"✅ SMS sent successfully!" & vbCrLf & result, "Customer Notified",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("❌ Failed to send SMS: " & ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Function
 
-    Private Sub HandleCheckClick(ByVal sender As DashboardTransactionRow)
-        Dim id As Integer = sender.TransactionID
+    Private Sub HandleCheckClick(id As Integer)
+        Dim confirm = MessageBox.Show($"Mark transaction #{id} as Completed?",
+                                  "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm <> DialogResult.Yes Then Exit Sub
 
-        Dim confirm = MessageBox.Show(
-            $"Mark transaction #{id} as Completed?",
-            "Confirm Update",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question
-        )
-
-        If confirm = DialogResult.Yes Then
-            Try
-                Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-                Using conn As New OleDbConnection(connString)
-                    conn.Open()
-                    Dim sql As String = "UPDATE Transactions SET Status = 'Completed' WHERE TransactionID = @id"
-                    Using cmd As New OleDbCommand(sql, conn)
-                        cmd.Parameters.AddWithValue("@id", id)
-                        cmd.ExecuteNonQuery()
-                    End Using
+        Try
+            Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+            Using conn As New OleDbConnection(connString)
+                conn.Open()
+                Dim sql As String = "UPDATE Transactions SET Status = 'Completed' WHERE TransactionID = @id"
+                Using cmd As New OleDbCommand(sql, conn)
+                    cmd.Parameters.AddWithValue("@id", id)
+                    cmd.ExecuteNonQuery()
                 End Using
+            End Using
 
-                MessageBox.Show("Transaction marked as Completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Transaction marked as Completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            LoadDashboardTransactions()
+            LoadDashboardCounters()
 
-                ' Refresh both dashboard transactions and counters
-                LoadDashboardTransactions()
-                UpdateDashboardCounters()
-
-            Catch ex As Exception
-                MessageBox.Show("Error updating transaction: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-        End If
+        Catch ex As Exception
+            MessageBox.Show("Error updating transaction: " & ex.Message)
+        End Try
     End Sub
+
+    ' ================================
+    ' ENGAGESPARK SMS FUNCTION
+    ' ================================
+    Private Async Function SendSmsViaEngageSparkAsync(phoneNumber As String, messageText As String) As Task(Of String)
+        Dim jsonBody As String = $"{{""mobileNumbers"": [""{phoneNumber}""], ""message"": ""{messageText}"", ""organizationId"": null}}"
+        Dim authValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(EngageSparkApiKey & ":"))
+
+        Using client As New HttpClient()
+            client.DefaultRequestHeaders.Authorization = New AuthenticationHeaderValue("Basic", authValue)
+            Dim content As New StringContent(jsonBody, Encoding.UTF8, "application/json")
+
+            Dim response As HttpResponseMessage = Await client.PostAsync(EngageSparkApiUrl, content)
+            Dim responseBody As String = Await response.Content.ReadAsStringAsync()
+
+            If response.IsSuccessStatusCode Then
+                Return responseBody
+            Else
+                Throw New Exception($"HTTP {response.StatusCode}: {responseBody}")
+            End If
+        End Using
+    End Function
+
 
     Private Sub UpdateDashboardCounters()
-        ' Refresh both transaction and machine counters + reload table
         LoadDashboardCounters()
         LoadMachineCounters()
         LoadDashboardTransactions()
     End Sub
 
-    Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
-        Dim popup As New BasicServiceForm()
-        popup.ShowDialog()
+    Private Sub SetupDashboardTransactionTable()
+        With dgvDashboardTransactions
+            ' === BASIC STYLE SETTINGS ===
+            .ReadOnly = True
+            .Font = New Font("Poppins", 10, FontStyle.Regular)
+            .ColumnHeadersHeight = 30
+            .ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            .Columns.Clear()
+            .AutoGenerateColumns = False
+            .AllowUserToAddRows = False
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .AllowUserToResizeColumns = False
+            .AllowUserToOrderColumns = False
+            .BorderStyle = BorderStyle.None
+            .BackgroundColor = Color.White
+            .EnableHeadersVisualStyles = False
+            .RowHeadersVisible = False
+            .CellBorderStyle = DataGridViewCellBorderStyle.None
+            .ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+            .GridColor = Color.White
+
+            ' === PURE WHITE HEADER DESIGN ===
+            With .ColumnHeadersDefaultCellStyle
+                .BackColor = Color.White
+                .ForeColor = Color.Black
+                .Font = New Font("Poppins", 10, FontStyle.Bold)
+                .Alignment = DataGridViewContentAlignment.MiddleCenter
+                .SelectionBackColor = Color.White
+                .SelectionForeColor = Color.Black
+            End With
+
+            ' === THIN BOTTOM BORDER UNDER HEADER ===
+            AddHandler .CellPainting, Sub(sender, e)
+                                          If e.RowIndex = -1 Then
+                                              e.PaintBackground(e.ClipBounds, True)
+                                              Using pen As New Pen(Color.LightGray, 1)
+                                                  e.Graphics.DrawLine(pen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right, e.CellBounds.Bottom - 1)
+                                              End Using
+                                              e.PaintContent(e.ClipBounds)
+                                              e.Handled = True
+                                          End If
+                                      End Sub
+
+            ' === ADD TEXT COLUMNS ===
+            .Columns.Add("TransactionID", "ID")
+            .Columns.Add("CustomerName", "Customer")
+            .Columns.Add("ContactNumber", "Contact")
+            .Columns.Add("Status", "Status")
+            .Columns.Add("WaitingTime", "Waiting")
+
+            ' === ADD IMAGE COLUMNS (ICON BUTTONS) — compact side by side ===
+            Dim notifyIconCol As New DataGridViewImageColumn() With {
+    .Name = "btnNotify",
+    .HeaderText = "Actions",
+    .ImageLayout = DataGridViewImageCellLayout.Zoom,
+    .Width = 35
+}
+
+            Dim completeIconCol As New DataGridViewImageColumn() With {
+    .Name = "btnComplete",
+    .HeaderText = "",
+    .ImageLayout = DataGridViewImageCellLayout.Zoom,
+    .Width = 35
+}
+
+            ' Keep both icons grouped visually
+            .Columns.Add(notifyIconCol)
+            .Columns.Add(completeIconCol)
+
+            ' Optional: remove extra padding so icons appear closer
+            .Columns("btnNotify").DefaultCellStyle.Padding = New Padding(0, 0, -5, 0)
+            .Columns("btnComplete").DefaultCellStyle.Padding = New Padding(-5, 0, 0, 0)
+
+
+            ' === PREVENT SORTING (EXCEPT STATUS) ===
+            For Each col As DataGridViewColumn In .Columns
+                col.SortMode = DataGridViewColumnSortMode.NotSortable
+            Next
+            If .Columns.Contains("Status") Then
+                .Columns("Status").SortMode = DataGridViewColumnSortMode.Automatic
+            End If
+
+            ' === CENTER ALIGN DATA CELLS ===
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        End With
+
+        ' === LOAD ICON IMAGES SAFELY ===
+        Dim notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\bell.png")
+        Dim completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
+
+        ' Set default icons for the ImageColumns
+        DirectCast(dgvDashboardTransactions.Columns("btnNotify"), DataGridViewImageColumn).Image = notifyIcon
+        DirectCast(dgvDashboardTransactions.Columns("btnComplete"), DataGridViewImageColumn).Image = completeIcon
     End Sub
+
+
+
+
+    Private Async Sub dgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
+        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
+
+        Dim colName As String = dgvDashboardTransactions.Columns(e.ColumnIndex).Name
+        Dim id As Integer = Convert.ToInt32(dgvDashboardTransactions.Rows(e.RowIndex).Cells("TransactionID").Value)
+        Dim customerName As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("CustomerName").Value.ToString()
+        Dim contactNumber As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("ContactNumber").Value.ToString()
+        Dim status As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("Status").Value.ToString()
+
+        Select Case colName
+            Case "btnNotify"
+                Await HandleNotifyClick(customerName, contactNumber, status)
+
+            Case "btnComplete"
+                HandleCheckClick(id)
+        End Select
+    End Sub
+
+
 End Class

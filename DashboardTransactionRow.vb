@@ -1,5 +1,8 @@
 ﻿Public Class DashboardTransactionRow
     Public Property TransactionID As Integer
+    Public Property CustomerName As String
+    Public Property ContactNumber As String
+
     Public Property CurrentStatus As String
     Public Event NotifyClicked(ByVal sender As DashboardTransactionRow)
     Public Event CheckClicked(ByVal sender As DashboardTransactionRow)

@@ -4,7 +4,7 @@ Imports System.Windows.Forms.DataVisualization.Charting
 Public Class StatsControl
 
 
-    Private dbPath As String = "D:\laundryfiles\Resources\LaundryDatabase.accdb"
+    Private dbPath As String = "C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb"
     Private conString As String
 
 
@@ -18,7 +18,7 @@ Public Class StatsControl
 
         ' Load combo box options
         cmbPeriod.Items.AddRange({"Weekly", "Monthly", "Semi-Annually", "Annually"})
-        cmbPeriod.SelectedIndex = 0
+        cmbPeriod.SelectedIndex = -1
 
         ' Setup chart
         SetupChart()
@@ -38,7 +38,7 @@ Public Class StatsControl
         End If
     End Sub
 
-    Private Sub dtpEndDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpEndDate.ValueChanged
+    Private Sub dtpEndDate_ValueChanged(sender As Object, e As EventArgs)
         If chartReady Then
             CalculateStats()
             UpdateChart()
