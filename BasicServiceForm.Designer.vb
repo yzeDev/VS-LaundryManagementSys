@@ -123,7 +123,7 @@ Partial Class BasicServiceForm
         ' 
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 12F)
+        Label14.Font = New Font("Microsoft Sans Serif", 12F)
         Label14.Location = New Point(5, 509)
         Label14.Name = "Label14"
         Label14.Size = New Size(490, 30)
@@ -135,7 +135,7 @@ Partial Class BasicServiceForm
         ' 
         Label4.AutoSize = True
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(5, 102)
         Label4.Name = "Label4"
         Label4.Size = New Size(490, 40)
@@ -163,7 +163,7 @@ Partial Class BasicServiceForm
         Label5.AutoSize = True
         Label5.BackColor = Color.Silver
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(484, 40)
@@ -176,7 +176,7 @@ Partial Class BasicServiceForm
         Label6.AutoSize = True
         Label6.BackColor = Color.Silver
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(3, 40)
         Label6.Name = "Label6"
         Label6.Padding = New Padding(40, 0, 0, 0)
@@ -205,7 +205,7 @@ Partial Class BasicServiceForm
         ' 
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 12F)
+        Label7.Font = New Font("Microsoft Sans Serif", 12F)
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(484, 36)
@@ -224,7 +224,7 @@ Partial Class BasicServiceForm
         Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.Dock = DockStyle.Fill
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.Location = New Point(4, 45)
         Guna2TextBox1.Margin = New Padding(4, 9, 4, 9)
@@ -267,7 +267,7 @@ Partial Class BasicServiceForm
         Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox4.Dock = DockStyle.Fill
         Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Font = New Font("Poppins", 12F)
+        Guna2TextBox4.Font = New Font("Microsoft Sans Serif", 12F)
         Guna2TextBox4.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox4.Location = New Point(371, 45)
         Guna2TextBox4.Margin = New Padding(4, 9, 4, 9)
@@ -282,7 +282,7 @@ Partial Class BasicServiceForm
         ' 
         Label10.AutoSize = True
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 12F)
+        Label10.Font = New Font("Microsoft Sans Serif", 12F)
         Label10.Location = New Point(370, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(117, 36)
@@ -294,7 +294,7 @@ Partial Class BasicServiceForm
         ' 
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 12F)
+        Label9.Font = New Font("Microsoft Sans Serif", 12F)
         Label9.Location = New Point(248, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(116, 36)
@@ -313,7 +313,7 @@ Partial Class BasicServiceForm
         Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.Dock = DockStyle.Fill
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Location = New Point(4, 45)
         Guna2TextBox2.Margin = New Padding(4, 9, 4, 9)
@@ -328,7 +328,7 @@ Partial Class BasicServiceForm
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 12F)
+        Label8.Font = New Font("Microsoft Sans Serif", 12F)
         Label8.Location = New Point(3, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(239, 36)
@@ -346,7 +346,7 @@ Partial Class BasicServiceForm
         Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2ComboBox1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.Font = New Font("Poppins", 12F)
+        Guna2ComboBox1.Font = New Font("Microsoft Sans Serif", 12F)
         Guna2ComboBox1.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         Guna2ComboBox1.ItemHeight = 20
         Guna2ComboBox1.Location = New Point(248, 39)
@@ -376,7 +376,7 @@ Partial Class BasicServiceForm
         ' 
         Label11.AutoSize = True
         Label11.Dock = DockStyle.Fill
-        Label11.Font = New Font("Poppins", 12F)
+        Label11.Font = New Font("Microsoft Sans Serif", 12F)
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(239, 36)
@@ -402,7 +402,7 @@ Partial Class BasicServiceForm
         ' Label12
         ' 
         Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(3, 0)
         Label12.Name = "Label12"
         Label12.Size = New Size(65, 31)
@@ -418,7 +418,7 @@ Partial Class BasicServiceForm
         Guna2CheckBox1.CheckedState.BorderThickness = 0
         Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBox1.Dock = DockStyle.Fill
-        Guna2CheckBox1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2CheckBox1.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2CheckBox1.Location = New Point(74, 3)
         Guna2CheckBox1.Name = "Guna2CheckBox1"
         Guna2CheckBox1.Size = New Size(162, 25)
@@ -452,7 +452,7 @@ Partial Class BasicServiceForm
         Guna2CheckBox2.CheckedState.BorderThickness = 0
         Guna2CheckBox2.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBox2.Dock = DockStyle.Fill
-        Guna2CheckBox2.Font = New Font("Poppins", 9.75F)
+        Guna2CheckBox2.Font = New Font("Microsoft Sans Serif", 9.75F)
         Guna2CheckBox2.Location = New Point(74, 3)
         Guna2CheckBox2.Name = "Guna2CheckBox2"
         Guna2CheckBox2.Size = New Size(162, 25)
@@ -466,7 +466,7 @@ Partial Class BasicServiceForm
         ' Label13
         ' 
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 9.75F)
+        Label13.Font = New Font("Microsoft Sans Serif", 9.75F)
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
         Label13.Size = New Size(65, 31)
@@ -477,7 +477,7 @@ Partial Class BasicServiceForm
         ' TextBox1
         ' 
         TextBox1.Dock = DockStyle.Fill
-        TextBox1.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(5, 542)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
@@ -511,7 +511,7 @@ Partial Class BasicServiceForm
         gbCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbCancel.Dock = DockStyle.Top
         gbCancel.FillColor = Color.White
-        gbCancel.Font = New Font("Poppins", 12F)
+        gbCancel.Font = New Font("Microsoft Sans Serif", 12F)
         gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.Location = New Point(3, 3)
         gbCancel.Name = "gbCancel"
@@ -530,7 +530,7 @@ Partial Class BasicServiceForm
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbContinue.Dock = DockStyle.Top
-        gbContinue.Font = New Font("Poppins", 12F)
+        gbContinue.Font = New Font("Microsoft Sans Serif", 12F)
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(248, 3)
         gbContinue.Name = "gbContinue"
@@ -579,7 +579,7 @@ Partial Class BasicServiceForm
         ' 
         lblTransactionID.AutoSize = True
         lblTransactionID.Dock = DockStyle.Fill
-        lblTransactionID.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTransactionID.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTransactionID.ForeColor = Color.White
         lblTransactionID.Location = New Point(298, 47)
         lblTransactionID.Name = "lblTransactionID"
@@ -592,7 +592,7 @@ Partial Class BasicServiceForm
         ' 
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.White
         Label3.Location = New Point(103, 47)
         Label3.Name = "Label3"
@@ -604,7 +604,7 @@ Partial Class BasicServiceForm
         ' 
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(298, 0)
         Label2.Name = "Label2"
@@ -639,7 +639,7 @@ Partial Class BasicServiceForm
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(100, 0)
         Label1.Margin = New Padding(0)
