@@ -76,11 +76,10 @@
         End If
     End Sub
 
-    ' Kapag continue, punta sa invoice form
+
     Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
         Dim invoice As New InvoiceForm()
 
-        ' para makabalik kapag nag-back
         invoice.PreviousForm = Me
 
         ' pasa data papunta sa invoice

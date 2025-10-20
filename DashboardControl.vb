@@ -259,7 +259,7 @@ Public Class DashboardControl
     End Sub
 
     Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
-        Dim popup As New SelfServiceForm()
+        Dim popup As New BasicServiceForm()
         popup.ShowDialog()
     End Sub
 End Class
