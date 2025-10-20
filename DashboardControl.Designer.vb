@@ -265,7 +265,7 @@ Partial Class DashboardControl
         ' lblDelivery
         ' 
         lblDelivery.Dock = DockStyle.Fill
-        lblDelivery.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDelivery.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
         lblDelivery.Location = New Point(63, 0)
         lblDelivery.Name = "lblDelivery"
         lblDelivery.Size = New Size(108, 52)
@@ -357,7 +357,7 @@ Partial Class DashboardControl
         ' lblinProgress
         ' 
         lblinProgress.Dock = DockStyle.Fill
-        lblinProgress.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblinProgress.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
         lblinProgress.Location = New Point(63, 0)
         lblinProgress.Name = "lblinProgress"
         lblinProgress.Size = New Size(108, 52)
@@ -449,7 +449,7 @@ Partial Class DashboardControl
         ' lblPendingOrders
         ' 
         lblPendingOrders.Dock = DockStyle.Fill
-        lblPendingOrders.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPendingOrders.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
         lblPendingOrders.Location = New Point(63, 0)
         lblPendingOrders.Name = "lblPendingOrders"
         lblPendingOrders.Size = New Size(108, 52)
@@ -541,7 +541,7 @@ Partial Class DashboardControl
         ' lblCompleted
         ' 
         lblCompleted.Dock = DockStyle.Fill
-        lblCompleted.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompleted.Font = New Font("Poppins", 15.75F, FontStyle.Bold)
         lblCompleted.Location = New Point(64, 0)
         lblCompleted.Name = "lblCompleted"
         lblCompleted.Size = New Size(110, 52)
@@ -631,7 +631,7 @@ Partial Class DashboardControl
         addOrderBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         addOrderBtn.Dock = DockStyle.Right
         addOrderBtn.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
-        addOrderBtn.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        addOrderBtn.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         addOrderBtn.ForeColor = Color.Black
         addOrderBtn.Location = New Point(256, 8)
         addOrderBtn.Name = "addOrderBtn"
@@ -921,7 +921,7 @@ Partial Class DashboardControl
         ' lblUnavailableMachines
         ' 
         lblUnavailableMachines.Dock = DockStyle.Fill
-        lblUnavailableMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUnavailableMachines.Font = New Font("Poppins", 12F, FontStyle.Bold)
         lblUnavailableMachines.ForeColor = SystemColors.ButtonShadow
         lblUnavailableMachines.Location = New Point(151, 0)
         lblUnavailableMachines.Name = "lblUnavailableMachines"
@@ -959,7 +959,7 @@ Partial Class DashboardControl
         ' lblInUseMachines
         ' 
         lblInUseMachines.Dock = DockStyle.Fill
-        lblInUseMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInUseMachines.Font = New Font("Poppins", 12F, FontStyle.Bold)
         lblInUseMachines.ForeColor = Color.FromArgb(CByte(209), CByte(165), CByte(67))
         lblInUseMachines.Location = New Point(151, 0)
         lblInUseMachines.Name = "lblInUseMachines"
@@ -1032,7 +1032,7 @@ Partial Class DashboardControl
         ' lblAvailableMachines
         ' 
         lblAvailableMachines.Dock = DockStyle.Fill
-        lblAvailableMachines.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAvailableMachines.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblAvailableMachines.ForeColor = Color.FromArgb(CByte(0), CByte(105), CByte(92))
         lblAvailableMachines.Location = New Point(151, 0)
         lblAvailableMachines.Name = "lblAvailableMachines"

@@ -20,20 +20,44 @@ Public Class newTransactionsControl
     Private Sub InitializeDataGridView()
         ' Configure Guna2DataGridView for modern look
         With dgvTransactions
+            ' Disable visual row selection highlight
+            .ClearSelection()
+            .SelectionMode = DataGridViewSelectionMode.CellSelect
+            .DefaultCellStyle.SelectionBackColor = Color.White
+            .DefaultCellStyle.SelectionForeColor = Color.FromArgb(71, 69, 94)
+
+            ' Prevent the column header from highlighting when clicked
+            .EnableHeadersVisualStyles = False
+            .ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White
+            .ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(64, 64, 64)
+            .Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default
+            .ThemeStyle.BackColor = Color.White
             ' Theme & Colors
-            .ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(250, 252, 253)
+            '.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(250, 252, 253)
             .ThemeStyle.AlternatingRowsStyle.Font = New Font("Poppins", 9)
             .ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(71, 69, 94)
             .ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(220, 235, 252)
             .ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94)
 
-            ' Header Style
-            .ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(235, 235, 235)
-            .ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single
-            .ThemeStyle.HeaderStyle.Font = New Font("Poppins", 9, FontStyle.Bold)
+            ' Header Style — clean white minimal design
+            .ThemeStyle.HeaderStyle.BackColor = Color.White
+            .ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+            .ThemeStyle.HeaderStyle.Font = New Font("Poppins", 9, FontStyle.Regular)
             .ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(64, 64, 64)
-            '.ThemeStyle.HeaderStyle.HeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
             .ThemeStyle.HeaderStyle.Height = 40
+            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .EnableHeadersVisualStyles = False
+
+            ' Remove all dividers except bottom line
+            .AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
+            .AdvancedColumnHeadersBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.Single
+
+            ' Make bottom divider soft gray
+            .GridColor = Color.FromArgb(230, 230, 230)
+            .BorderStyle = BorderStyle.None
+            .CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+            .BackgroundColor = Color.White
+
 
             ' Row Style
             .ThemeStyle.RowsStyle.BackColor = Color.White
@@ -97,7 +121,7 @@ Public Class newTransactionsControl
             Using conn As New OleDbConnection(connStr)
                 'Debug.WriteLine("DEBUG >>> Opening connection to database...")
                 conn.Open()
-                MessageBox.Show("Connected successfully to database!", "DEBUG", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'MessageBox.Show("Connected successfully to database!", "DEBUG", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 ' Verify that the table exists
                 Dim schemaTable As DataTable = conn.GetSchema("Tables")
@@ -133,6 +157,11 @@ Public Class newTransactionsControl
 
             ' Bind data to grid
             dgvTransactions.DataSource = transactionData
+
+            ' Disable sorting for all columns
+            For Each col As DataGridViewColumn In dgvTransactions.Columns
+                col.SortMode = DataGridViewColumnSortMode.NotSortable
+            Next
 
             ' Debug: show bound row count after binding
             'MessageBox.Show("DEBUG >>> Rows shown in DataGridView: " & dgvTransactions.Rows.Count, "DEBUG", MessageBoxButtons.OK, MessageBoxIcon.Information)
