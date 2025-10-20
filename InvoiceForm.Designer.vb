@@ -1255,6 +1255,7 @@ Partial Class InvoiceForm
         GCashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         GCashBtn.BorderRadius = 3
         GCashBtn.BorderThickness = 1
+        GCashBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         GCashBtn.CustomizableEdges = CustomizableEdges7
         GCashBtn.DisabledState.BorderColor = Color.DarkGray
         GCashBtn.DisabledState.CustomBorderColor = Color.DarkGray
@@ -1278,6 +1279,7 @@ Partial Class InvoiceForm
         cashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         cashBtn.BorderRadius = 3
         cashBtn.BorderThickness = 1
+        cashBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         cashBtn.CustomizableEdges = CustomizableEdges9
         cashBtn.DisabledState.BorderColor = Color.DarkGray
         cashBtn.DisabledState.CustomBorderColor = Color.DarkGray
@@ -1301,6 +1303,7 @@ Partial Class InvoiceForm
         mayaBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         mayaBtn.BorderRadius = 3
         mayaBtn.BorderThickness = 1
+        mayaBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         mayaBtn.CustomizableEdges = CustomizableEdges11
         mayaBtn.DisabledState.BorderColor = Color.DarkGray
         mayaBtn.DisabledState.CustomBorderColor = Color.DarkGray

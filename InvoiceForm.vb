@@ -56,4 +56,38 @@
     End Sub
 
 
+    ' para po sya sa payment method
+    Private selectedPayment As String = ""
+
+    Private Sub cashBtn_Click(sender As Object, e As EventArgs) Handles cashBtn.Click
+        selectedPayment = "Cash"
+    End Sub
+
+    Private Sub GCashBtn_Click(sender As Object, e As EventArgs) Handles GCashBtn.Click
+        selectedPayment = "GCash"
+    End Sub
+
+    Private Sub mayaBtn_Click(sender As Object, e As EventArgs) Handles mayaBtn.Click
+        selectedPayment = "Maya"
+    End Sub
+
+    Private Sub confirmPayBtn_Click(sender As Object, e As EventArgs) Handles confirmPayBtn.Click
+        If selectedPayment = "" Then
+            MessageBox.Show("Pumili muna ng payment method bago mag-confirm.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Select Case selectedPayment
+            Case "GCash"
+                Dim gcashForm As New gcashform()
+                gcashForm.ShowDialog()
+
+            Case "Maya"
+                Dim mayaForm As New maya()
+                mayaForm.ShowDialog()
+
+            Case "Cash"
+                MessageBox.Show("Cash payment selected. Proceed ka na sa cashier.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Select
+    End Sub
 End Class
