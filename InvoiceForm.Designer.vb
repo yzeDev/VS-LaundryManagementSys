@@ -216,11 +216,7 @@ Partial Class InvoiceForm
         ' 
         ' TableLayoutPanel5
         ' 
-        TableLayoutPanel5.ColumnCount = 1
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20.0F))
-        TableLayoutPanel5.Controls.Add(Label6, 0, 0)
-        TableLayoutPanel5.Controls.Add(TransacLbl, 0, 2)
+
         TableLayoutPanel5.Controls.Add(Label5, 0, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(308, 3)
