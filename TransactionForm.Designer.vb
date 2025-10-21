@@ -22,121 +22,111 @@ Partial Class TransactionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionForm))
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
+        tbMachineUsed = New TextBox()
+        tbCustomerName = New TextBox()
+        TableLayoutPanel12 = New TableLayoutPanel()
+        Label10 = New Label()
+        PictureBox6 = New PictureBox()
         TableLayoutPanel7 = New TableLayoutPanel()
         Label5 = New Label()
         PictureBox1 = New PictureBox()
-        TableLayoutPanel12 = New TableLayoutPanel()
-        Label10 = New Label()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Label1 = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
+        lblSubtitle = New Label()
         Label2 = New Label()
-        TableLayoutPanel5 = New TableLayoutPanel()
-        Label3 = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
-        TableLayoutPanel6 = New TableLayoutPanel()
-        Label4 = New Label()
-        Panel1 = New Panel()
-        TableLayoutPanel4 = New TableLayoutPanel()
-        TableLayoutPanel10 = New TableLayoutPanel()
-        Label8 = New Label()
-        TableLayoutPanel13 = New TableLayoutPanel()
-        Label11 = New Label()
-        Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Label15 = New Label()
+        lblDate = New Label()
         lblAddress = New TableLayoutPanel()
         Label6 = New Label()
+        PictureBox4 = New PictureBox()
         TableLayoutPanel9 = New TableLayoutPanel()
         Label7 = New Label()
+        PictureBox3 = New PictureBox()
         TableLayoutPanel11 = New TableLayoutPanel()
         Label9 = New Label()
-        TableLayoutPanel14 = New TableLayoutPanel()
-        Label12 = New Label()
+        PictureBox5 = New PictureBox()
+        cbStatus = New ComboBox()
         TableLayoutPanel15 = New TableLayoutPanel()
+        PictureBox9 = New PictureBox()
         Label13 = New Label()
         TableLayoutPanel16 = New TableLayoutPanel()
+        PictureBox10 = New PictureBox()
         Label14 = New Label()
-        Panel2 = New Panel()
         TableLayoutPanel17 = New TableLayoutPanel()
+        cbService = New ComboBox()
+        tbPaymentMethod = New TextBox()
         TableLayoutPanel21 = New TableLayoutPanel()
         PictureBox2 = New PictureBox()
         Label22 = New Label()
         TableLayoutPanel19 = New TableLayoutPanel()
         Label18 = New Label()
+        PictureBox7 = New PictureBox()
         TableLayoutPanel20 = New TableLayoutPanel()
+        tbTotal = New TextBox()
         TableLayoutPanel23 = New TableLayoutPanel()
         Label23 = New Label()
-        TableLayoutPanel22 = New TableLayoutPanel()
-        Panel3 = New Panel()
-        TableLayoutPanel24 = New TableLayoutPanel()
-        Panel4 = New Panel()
-        PictureBox3 = New PictureBox()
-        PictureBox4 = New PictureBox()
-        PictureBox5 = New PictureBox()
-        PictureBox6 = New PictureBox()
-        PictureBox7 = New PictureBox()
         PictureBox8 = New PictureBox()
-        PictureBox9 = New PictureBox()
-        PictureBox10 = New PictureBox()
-        Label29 = New Label()
-        btnCancel = New Button()
-        tbCustomer = New TextBox()
-        tbService = New TextBox()
         tbContactNum = New TextBox()
-        tbAddress = New TextBox()
-        tbStatus = New TextBox()
-        tbMachineUsed = New TextBox()
-        tbPaymentMethod = New TextBox()
-        tbTotal = New TextBox()
+        TableLayoutPanel22 = New TableLayoutPanel()
         tbAmountReceived = New TextBox()
+        tbAddress = New TextBox()
+        TableLayoutPanel24 = New TableLayoutPanel()
         tbChange = New TextBox()
-        cbService = New ComboBox()
-        cbStatus = New ComboBox()
-        saveBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Label16 = New Label()
+        btnCancel = New Button()
+        btnSave = New Guna.UI2.WinForms.Guna2GradientButton()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        TableLayoutPanel8 = New TableLayoutPanel()
+        Panel5 = New Panel()
+        Panel6 = New Panel()
+        Panel7 = New Panel()
+        Panel8 = New Panel()
+        Panel10 = New Panel()
+        Panel11 = New Panel()
+        Panel12 = New Panel()
         TableLayoutPanel1.SuspendLayout()
+        TableLayoutPanel12.SuspendLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel7.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        TableLayoutPanel12.SuspendLayout()
         Guna2GradientPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
-        TableLayoutPanel5.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
-        TableLayoutPanel6.SuspendLayout()
-        TableLayoutPanel4.SuspendLayout()
-        TableLayoutPanel10.SuspendLayout()
-        TableLayoutPanel13.SuspendLayout()
-        Guna2Panel2.SuspendLayout()
         lblAddress.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel9.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel11.SuspendLayout()
-        TableLayoutPanel14.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel15.SuspendLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel16.SuspendLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel17.SuspendLayout()
         TableLayoutPanel21.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel19.SuspendLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel20.SuspendLayout()
         TableLayoutPanel23.SuspendLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel22.SuspendLayout()
         TableLayoutPanel24.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel8.SuspendLayout()
+        Panel5.SuspendLayout()
+        Panel6.SuspendLayout()
+        Panel7.SuspendLayout()
+        Panel8.SuspendLayout()
+        Panel10.SuspendLayout()
+        Panel11.SuspendLayout()
+        Panel12.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -145,486 +135,516 @@ Partial Class TransactionForm
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Controls.Add(tbMachineUsed, 1, 1)
-        TableLayoutPanel1.Controls.Add(tbCustomer, 0, 1)
-        TableLayoutPanel1.Controls.Add(TableLayoutPanel7, 0, 0)
+        TableLayoutPanel1.Controls.Add(tbCustomerName, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel12, 1, 0)
-        TableLayoutPanel1.Location = New Point(-1, 107)
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel7, 0, 0)
+        TableLayoutPanel1.Dock = DockStyle.Fill
+        TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Size = New Size(779, 55)
+        TableLayoutPanel1.Size = New Size(794, 61)
         TableLayoutPanel1.TabIndex = 0
         ' 
-        ' TableLayoutPanel7
+        ' tbMachineUsed
         ' 
-        TableLayoutPanel7.ColumnCount = 2
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
-        TableLayoutPanel7.Controls.Add(Label5, 1, 0)
-        TableLayoutPanel7.Controls.Add(PictureBox1, 0, 0)
-        TableLayoutPanel7.Location = New Point(3, 3)
-        TableLayoutPanel7.Name = "TableLayoutPanel7"
-        TableLayoutPanel7.RowCount = 1
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.Size = New Size(383, 21)
-        TableLayoutPanel7.TabIndex = 10
+        tbMachineUsed.BackColor = Color.LightGray
+        tbMachineUsed.Dock = DockStyle.Fill
+        tbMachineUsed.Font = New Font("Poppins", 12F)
+        tbMachineUsed.Location = New Point(399, 32)
+        tbMachineUsed.Margin = New Padding(2)
+        tbMachineUsed.Name = "tbMachineUsed"
+        tbMachineUsed.Size = New Size(393, 31)
+        tbMachineUsed.TabIndex = 35
+        tbMachineUsed.TextAlign = HorizontalAlignment.Center
         ' 
-        ' Label5
+        ' tbCustomerName
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.Black
-        Label5.Location = New Point(32, 0)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(139, 21)
-        Label5.TabIndex = 6
-        Label5.Text = "Customer Name:"
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Dock = DockStyle.Right
-        PictureBox1.Image = My.Resources.Resources.name
-        PictureBox1.Location = New Point(9, 3)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(17, 15)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 32
-        PictureBox1.TabStop = False
+        tbCustomerName.BackColor = Color.LightGray
+        tbCustomerName.Dock = DockStyle.Fill
+        tbCustomerName.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        tbCustomerName.Location = New Point(2, 32)
+        tbCustomerName.Margin = New Padding(2)
+        tbCustomerName.Name = "tbCustomerName"
+        tbCustomerName.Size = New Size(393, 31)
+        tbCustomerName.TabIndex = 33
+        tbCustomerName.TextAlign = HorizontalAlignment.Center
         ' 
         ' TableLayoutPanel12
         ' 
         TableLayoutPanel12.ColumnCount = 2
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel12.Controls.Add(Label10, 1, 0)
         TableLayoutPanel12.Controls.Add(PictureBox6, 0, 0)
-        TableLayoutPanel12.Location = New Point(392, 3)
+        TableLayoutPanel12.Dock = DockStyle.Fill
+        TableLayoutPanel12.Location = New Point(399, 2)
+        TableLayoutPanel12.Margin = New Padding(2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel12.Size = New Size(383, 21)
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel12.Size = New Size(393, 26)
         TableLayoutPanel12.TabIndex = 17
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Dock = DockStyle.Fill
+        Label10.Font = New Font("Poppins", 12F)
         Label10.ForeColor = Color.Black
-        Label10.Location = New Point(32, 0)
+        Label10.Location = New Point(42, 0)
+        Label10.Margin = New Padding(2, 0, 2, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(121, 21)
+        Label10.Size = New Size(349, 26)
         Label10.TabIndex = 6
         Label10.Text = "Machine Used:"
+        Label10.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.Dock = DockStyle.Fill
+        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
+        PictureBox6.Location = New Point(2, 2)
+        PictureBox6.Margin = New Padding(2)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(36, 22)
+        PictureBox6.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox6.TabIndex = 37
+        PictureBox6.TabStop = False
+        ' 
+        ' TableLayoutPanel7
+        ' 
+        TableLayoutPanel7.ColumnCount = 2
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel7.Controls.Add(Label5, 1, 0)
+        TableLayoutPanel7.Controls.Add(PictureBox1, 0, 0)
+        TableLayoutPanel7.Dock = DockStyle.Fill
+        TableLayoutPanel7.Location = New Point(2, 2)
+        TableLayoutPanel7.Margin = New Padding(2)
+        TableLayoutPanel7.Name = "TableLayoutPanel7"
+        TableLayoutPanel7.RowCount = 1
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel7.Size = New Size(393, 26)
+        TableLayoutPanel7.TabIndex = 10
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Dock = DockStyle.Fill
+        Label5.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.Black
+        Label5.ImageAlign = ContentAlignment.BottomCenter
+        Label5.Location = New Point(42, 0)
+        Label5.Margin = New Padding(2, 0, 2, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(349, 26)
+        Label5.TabIndex = 6
+        Label5.Text = "Customer Name:"
+        Label5.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.name
+        PictureBox1.Location = New Point(2, 2)
+        PictureBox1.Margin = New Padding(2)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(36, 22)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 32
+        PictureBox1.TabStop = False
         ' 
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
+        TableLayoutPanel8.SetColumnSpan(Guna2GradientPanel1, 2)
         Guna2GradientPanel1.Controls.Add(Label1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges13
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
+        Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        Guna2GradientPanel1.Location = New Point(3, 0)
+        Guna2GradientPanel1.Location = New Point(2, 2)
+        Guna2GradientPanel1.Margin = New Padding(2)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2GradientPanel1.Size = New Size(779, 47)
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientPanel1.Size = New Size(796, 63)
         Guna2GradientPanel1.TabIndex = 1
         ' 
         ' Label1
         ' 
-        Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
+        Label1.Dock = DockStyle.Fill
         Label1.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(240, 0)
+        Label1.Location = New Point(0, 0)
+        Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(295, 53)
+        Label1.Size = New Size(796, 63)
         Label1.TabIndex = 5
         Label1.Text = "Transaction Form"
+        Label1.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 1
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.Controls.Add(lblSubtitle, 0, 1)
         TableLayoutPanel2.Controls.Add(Label2, 0, 0)
-        TableLayoutPanel2.Controls.Add(TableLayoutPanel5, 0, 1)
-        TableLayoutPanel2.Location = New Point(3, 46)
+        TableLayoutPanel2.Dock = DockStyle.Fill
+        TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(2)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Size = New Size(432, 56)
+        TableLayoutPanel2.Size = New Size(394, 61)
         TableLayoutPanel2.TabIndex = 1
+        ' 
+        ' lblSubtitle
+        ' 
+        lblSubtitle.AutoSize = True
+        lblSubtitle.Dock = DockStyle.Fill
+        lblSubtitle.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblSubtitle.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblSubtitle.Location = New Point(2, 30)
+        lblSubtitle.Margin = New Padding(2, 0, 2, 0)
+        lblSubtitle.Name = "lblSubtitle"
+        lblSubtitle.Size = New Size(390, 31)
+        lblSubtitle.TabIndex = 7
+        lblSubtitle.Text = "Transaction ID:"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label2.Location = New Point(3, 0)
+        Label2.Location = New Point(2, 0)
+        Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(116, 26)
+        Label2.Size = New Size(111, 28)
         Label2.TabIndex = 5
         Label2.Text = "VIEW MODE: "
-        ' 
-        ' TableLayoutPanel5
-        ' 
-        TableLayoutPanel5.ColumnCount = 2
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 46.101696F))
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 53.898304F))
-        TableLayoutPanel5.Controls.Add(Label29, 1, 0)
-        TableLayoutPanel5.Controls.Add(Label3, 0, 0)
-        TableLayoutPanel5.Location = New Point(3, 31)
-        TableLayoutPanel5.Name = "TableLayoutPanel5"
-        TableLayoutPanel5.RowCount = 1
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.Size = New Size(295, 22)
-        TableLayoutPanel5.TabIndex = 7
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label3.Location = New Point(3, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(124, 22)
-        Label3.TabIndex = 6
-        Label3.Text = "Transaction ID:"
         ' 
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Controls.Add(TableLayoutPanel6, 0, 1)
-        TableLayoutPanel3.Location = New Point(431, 46)
+        TableLayoutPanel3.Controls.Add(lblDate, 0, 0)
+        TableLayoutPanel3.Dock = DockStyle.Fill
+        TableLayoutPanel3.Location = New Point(0, 0)
+        TableLayoutPanel3.Margin = New Padding(2)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Size = New Size(352, 56)
+        TableLayoutPanel3.Size = New Size(394, 61)
         TableLayoutPanel3.TabIndex = 2
         ' 
-        ' TableLayoutPanel6
+        ' lblDate
         ' 
-        TableLayoutPanel6.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        TableLayoutPanel6.ColumnCount = 2
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80F))
-        TableLayoutPanel6.Controls.Add(Label16, 1, 0)
-        TableLayoutPanel6.Controls.Add(Label4, 0, 0)
-        TableLayoutPanel6.Location = New Point(54, 31)
-        TableLayoutPanel6.Name = "TableLayoutPanel6"
-        TableLayoutPanel6.RowCount = 1
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.Size = New Size(295, 22)
-        TableLayoutPanel6.TabIndex = 9
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label4.Location = New Point(3, 0)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(50, 22)
-        Label4.TabIndex = 8
-        Label4.Text = "Date:"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = SystemColors.ActiveBorder
-        Panel1.Location = New Point(2, 164)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(779, 2)
-        Panel1.TabIndex = 3
-        ' 
-        ' TableLayoutPanel4
-        ' 
-        TableLayoutPanel4.ColumnCount = 2
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Controls.Add(TableLayoutPanel10, 0, 0)
-        TableLayoutPanel4.Controls.Add(TableLayoutPanel13, 1, 0)
-        TableLayoutPanel4.Controls.Add(Guna2Panel2, 0, 1)
-        TableLayoutPanel4.Location = New Point(-1, 172)
-        TableLayoutPanel4.Name = "TableLayoutPanel4"
-        TableLayoutPanel4.RowCount = 2
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Size = New Size(779, 55)
-        TableLayoutPanel4.TabIndex = 4
-        ' 
-        ' TableLayoutPanel10
-        ' 
-        TableLayoutPanel10.ColumnCount = 2
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
-        TableLayoutPanel10.Controls.Add(Label8, 1, 0)
-        TableLayoutPanel10.Location = New Point(3, 3)
-        TableLayoutPanel10.Name = "TableLayoutPanel10"
-        TableLayoutPanel10.RowCount = 1
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel10.Size = New Size(383, 21)
-        TableLayoutPanel10.TabIndex = 13
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.Black
-        Label8.Location = New Point(32, 0)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(108, 21)
-        Label8.TabIndex = 6
-        Label8.Text = "Service Type:"
-        ' 
-        ' TableLayoutPanel13
-        ' 
-        TableLayoutPanel13.ColumnCount = 2
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
-        TableLayoutPanel13.Controls.Add(Label11, 1, 0)
-        TableLayoutPanel13.Location = New Point(392, 3)
-        TableLayoutPanel13.Name = "TableLayoutPanel13"
-        TableLayoutPanel13.RowCount = 1
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel13.Size = New Size(383, 21)
-        TableLayoutPanel13.TabIndex = 18
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.ForeColor = Color.Black
-        Label11.Location = New Point(32, 0)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(142, 21)
-        Label11.TabIndex = 6
-        Label11.Text = "Payment Method:"
-        ' 
-        ' Guna2Panel2
-        ' 
-        Guna2Panel2.BorderRadius = 6
-        Guna2Panel2.Controls.Add(Label15)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges15
-        Guna2Panel2.FillColor = Color.LightGray
-        Guna2Panel2.Location = New Point(3, 30)
-        Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2Panel2.Size = New Size(383, 22)
-        Guna2Panel2.TabIndex = 22
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.BackColor = Color.Transparent
-        Label15.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label15.ForeColor = Color.DimGray
-        Label15.Location = New Point(10, 0)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(96, 26)
-        Label15.TabIndex = 13
-        Label15.Text = "Full Service"
+        lblDate.AutoSize = True
+        lblDate.Dock = DockStyle.Fill
+        lblDate.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDate.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblDate.Location = New Point(2, 0)
+        lblDate.Margin = New Padding(2, 0, 2, 0)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(390, 30)
+        lblDate.TabIndex = 8
+        lblDate.Text = "Date:"
+        lblDate.TextAlign = ContentAlignment.TopRight
         ' 
         ' lblAddress
         ' 
         lblAddress.ColumnCount = 2
-        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         lblAddress.Controls.Add(Label6, 1, 0)
         lblAddress.Controls.Add(PictureBox4, 0, 0)
-        lblAddress.Location = New Point(3, 3)
+        lblAddress.Dock = DockStyle.Fill
+        lblAddress.Location = New Point(2, 2)
+        lblAddress.Margin = New Padding(2)
         lblAddress.Name = "lblAddress"
         lblAddress.RowCount = 1
-        lblAddress.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        lblAddress.Size = New Size(383, 21)
+        lblAddress.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        lblAddress.Size = New Size(393, 26)
         lblAddress.TabIndex = 14
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Dock = DockStyle.Fill
+        Label6.Font = New Font("Poppins", 12F)
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(32, 0)
+        Label6.Location = New Point(42, 0)
+        Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(76, 21)
+        Label6.Size = New Size(349, 26)
         Label6.TabIndex = 6
         Label6.Text = "Address:"
+        Label6.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Dock = DockStyle.Fill
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(2, 2)
+        PictureBox4.Margin = New Padding(2)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(36, 22)
+        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox4.TabIndex = 35
+        PictureBox4.TabStop = False
         ' 
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 2
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel9.Controls.Add(Label7, 1, 0)
         TableLayoutPanel9.Controls.Add(PictureBox3, 0, 0)
-        TableLayoutPanel9.Location = New Point(3, 3)
+        TableLayoutPanel9.Dock = DockStyle.Fill
+        TableLayoutPanel9.Location = New Point(2, 2)
+        TableLayoutPanel9.Margin = New Padding(2)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel9.Size = New Size(383, 21)
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.Size = New Size(393, 26)
         TableLayoutPanel9.TabIndex = 15
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Dock = DockStyle.Fill
+        Label7.Font = New Font("Poppins", 12F)
         Label7.ForeColor = Color.Black
-        Label7.Location = New Point(32, 0)
+        Label7.Location = New Point(42, 0)
+        Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(141, 21)
+        Label7.Size = New Size(349, 26)
         Label7.TabIndex = 6
         Label7.Text = "Contact Number:"
+        Label7.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Dock = DockStyle.Fill
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(2, 2)
+        PictureBox3.Margin = New Padding(2)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(36, 22)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 34
+        PictureBox3.TabStop = False
         ' 
         ' TableLayoutPanel11
         ' 
-        TableLayoutPanel11.ColumnCount = 3
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 32.0441971F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 67.9558F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 175F))
-        TableLayoutPanel11.Controls.Add(cbStatus, 2, 0)
+        TableLayoutPanel11.ColumnCount = 2
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel11.Controls.Add(Label9, 1, 0)
         TableLayoutPanel11.Controls.Add(PictureBox5, 0, 0)
-        TableLayoutPanel11.Location = New Point(3, 3)
+        TableLayoutPanel11.Dock = DockStyle.Fill
+        TableLayoutPanel11.Location = New Point(2, 2)
+        TableLayoutPanel11.Margin = New Padding(2)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel11.Size = New Size(383, 21)
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.Size = New Size(393, 26)
         TableLayoutPanel11.TabIndex = 16
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Dock = DockStyle.Fill
+        Label9.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Black
-        Label9.Location = New Point(69, 0)
+        Label9.Location = New Point(42, 0)
+        Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(59, 21)
+        Label9.Size = New Size(349, 26)
         Label9.TabIndex = 6
-        Label9.Text = "Status"
+        Label9.Text = "Status:"
+        Label9.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' TableLayoutPanel14
+        ' PictureBox5
         ' 
-        TableLayoutPanel14.ColumnCount = 2
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
-        TableLayoutPanel14.Controls.Add(Label12, 1, 0)
-        TableLayoutPanel14.Location = New Point(424, 326)
-        TableLayoutPanel14.Name = "TableLayoutPanel14"
-        TableLayoutPanel14.RowCount = 1
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel14.Size = New Size(383, 21)
-        TableLayoutPanel14.TabIndex = 19
+        PictureBox5.Dock = DockStyle.Fill
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(2, 2)
+        PictureBox5.Margin = New Padding(2)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(36, 22)
+        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox5.TabIndex = 36
+        PictureBox5.TabStop = False
         ' 
-        ' Label12
+        ' cbStatus
         ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.ForeColor = Color.Black
-        Label12.Location = New Point(32, 0)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(52, 21)
-        Label12.TabIndex = 6
-        Label12.Text = "Total:"
+        cbStatus.Dock = DockStyle.Fill
+        cbStatus.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbStatus.FormattingEnabled = True
+        cbStatus.Location = New Point(2, 32)
+        cbStatus.Margin = New Padding(2)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(393, 36)
+        cbStatus.TabIndex = 34
         ' 
         ' TableLayoutPanel15
         ' 
         TableLayoutPanel15.ColumnCount = 2
-        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel15.Controls.Add(PictureBox9, 0, 0)
         TableLayoutPanel15.Controls.Add(Label13, 1, 0)
-        TableLayoutPanel15.Location = New Point(392, 3)
+        TableLayoutPanel15.Dock = DockStyle.Fill
+        TableLayoutPanel15.Location = New Point(399, 2)
+        TableLayoutPanel15.Margin = New Padding(2)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 1
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel15.Size = New Size(383, 21)
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel15.Size = New Size(393, 26)
         TableLayoutPanel15.TabIndex = 20
+        ' 
+        ' PictureBox9
+        ' 
+        PictureBox9.Dock = DockStyle.Fill
+        PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), Image)
+        PictureBox9.Location = New Point(2, 2)
+        PictureBox9.Margin = New Padding(2)
+        PictureBox9.Name = "PictureBox9"
+        PictureBox9.Size = New Size(36, 22)
+        PictureBox9.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox9.TabIndex = 40
+        PictureBox9.TabStop = False
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.Dock = DockStyle.Fill
+        Label13.Font = New Font("Poppins", 12F)
         Label13.ForeColor = Color.Black
-        Label13.Location = New Point(32, 0)
+        Label13.Location = New Point(42, 0)
+        Label13.Margin = New Padding(2, 0, 2, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(146, 21)
+        Label13.Size = New Size(349, 26)
         Label13.TabIndex = 6
         Label13.Text = "Amount Received:"
+        Label13.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' TableLayoutPanel16
         ' 
         TableLayoutPanel16.ColumnCount = 2
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel16.Controls.Add(PictureBox10, 0, 0)
         TableLayoutPanel16.Controls.Add(Label14, 1, 0)
-        TableLayoutPanel16.Location = New Point(392, 3)
+        TableLayoutPanel16.Dock = DockStyle.Fill
+        TableLayoutPanel16.Location = New Point(399, 2)
+        TableLayoutPanel16.Margin = New Padding(2)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 1
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel16.Size = New Size(383, 21)
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel16.Size = New Size(393, 26)
         TableLayoutPanel16.TabIndex = 21
+        ' 
+        ' PictureBox10
+        ' 
+        PictureBox10.Dock = DockStyle.Fill
+        PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
+        PictureBox10.Location = New Point(2, 2)
+        PictureBox10.Margin = New Padding(2)
+        PictureBox10.Name = "PictureBox10"
+        PictureBox10.Size = New Size(36, 22)
+        PictureBox10.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox10.TabIndex = 39
+        PictureBox10.TabStop = False
         ' 
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Dock = DockStyle.Fill
+        Label14.Font = New Font("Poppins", 12F)
         Label14.ForeColor = Color.Black
-        Label14.Location = New Point(32, 0)
+        Label14.Location = New Point(42, 0)
+        Label14.Margin = New Padding(2, 0, 2, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(76, 21)
+        Label14.Size = New Size(349, 26)
         Label14.TabIndex = 6
         Label14.Text = "Change:"
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = SystemColors.ActiveBorder
-        Panel2.Location = New Point(0, 228)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(779, 2)
-        Panel2.TabIndex = 23
+        Label14.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' TableLayoutPanel17
         ' 
         TableLayoutPanel17.ColumnCount = 2
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel17.Controls.Add(cbService, 0, 1)
         TableLayoutPanel17.Controls.Add(tbPaymentMethod, 1, 1)
-        TableLayoutPanel17.Controls.Add(tbService, 0, 1)
         TableLayoutPanel17.Controls.Add(TableLayoutPanel21, 0, 0)
         TableLayoutPanel17.Controls.Add(TableLayoutPanel19, 1, 0)
-        TableLayoutPanel17.Location = New Point(2, 166)
+        TableLayoutPanel17.Dock = DockStyle.Fill
+        TableLayoutPanel17.Location = New Point(0, 0)
+        TableLayoutPanel17.Margin = New Padding(2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 2
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel17.Size = New Size(779, 55)
+        TableLayoutPanel17.Size = New Size(794, 61)
         TableLayoutPanel17.TabIndex = 25
+        ' 
+        ' cbService
+        ' 
+        cbService.Dock = DockStyle.Fill
+        cbService.DropDownStyle = ComboBoxStyle.DropDownList
+        cbService.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbService.FormattingEnabled = True
+        cbService.Location = New Point(2, 32)
+        cbService.Margin = New Padding(2)
+        cbService.Name = "cbService"
+        cbService.Size = New Size(393, 31)
+        cbService.TabIndex = 33
+        ' 
+        ' tbPaymentMethod
+        ' 
+        tbPaymentMethod.BackColor = Color.LightGray
+        tbPaymentMethod.Dock = DockStyle.Fill
+        tbPaymentMethod.Font = New Font("Poppins", 12F)
+        tbPaymentMethod.Location = New Point(399, 32)
+        tbPaymentMethod.Margin = New Padding(2)
+        tbPaymentMethod.Name = "tbPaymentMethod"
+        tbPaymentMethod.Size = New Size(393, 31)
+        tbPaymentMethod.TabIndex = 35
+        tbPaymentMethod.TextAlign = HorizontalAlignment.Center
         ' 
         ' TableLayoutPanel21
         ' 
-        TableLayoutPanel21.ColumnCount = 3
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.4319248F))
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 83.56808F))
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 174F))
-        TableLayoutPanel21.Controls.Add(cbService, 2, 0)
+        TableLayoutPanel21.ColumnCount = 2
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel21.Controls.Add(PictureBox2, 0, 0)
         TableLayoutPanel21.Controls.Add(Label22, 1, 0)
-        TableLayoutPanel21.Location = New Point(3, 3)
+        TableLayoutPanel21.Dock = DockStyle.Fill
+        TableLayoutPanel21.Location = New Point(2, 2)
+        TableLayoutPanel21.Margin = New Padding(2)
         TableLayoutPanel21.Name = "TableLayoutPanel21"
         TableLayoutPanel21.RowCount = 1
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel21.Size = New Size(383, 21)
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel21.Size = New Size(393, 26)
         TableLayoutPanel21.TabIndex = 28
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.Dock = DockStyle.Fill
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(3, 3)
+        PictureBox2.Location = New Point(2, 2)
+        PictureBox2.Margin = New Padding(2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(21, 15)
+        PictureBox2.Size = New Size(36, 22)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 33
         PictureBox2.TabStop = False
@@ -632,38 +652,58 @@ Partial Class TransactionForm
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label22.Dock = DockStyle.Fill
+        Label22.Font = New Font("Poppins", 12F)
         Label22.ForeColor = Color.Black
-        Label22.Location = New Point(37, 0)
+        Label22.Location = New Point(42, 0)
+        Label22.Margin = New Padding(2, 0, 2, 0)
         Label22.Name = "Label22"
-        Label22.Size = New Size(108, 21)
+        Label22.Size = New Size(349, 26)
         Label22.TabIndex = 6
         Label22.Text = "Service Type:"
+        Label22.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' TableLayoutPanel19
         ' 
         TableLayoutPanel19.ColumnCount = 2
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel19.Controls.Add(Label18, 1, 0)
         TableLayoutPanel19.Controls.Add(PictureBox7, 0, 0)
-        TableLayoutPanel19.Location = New Point(392, 3)
+        TableLayoutPanel19.Dock = DockStyle.Fill
+        TableLayoutPanel19.Location = New Point(399, 2)
+        TableLayoutPanel19.Margin = New Padding(2)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 1
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel19.Size = New Size(383, 21)
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel19.Size = New Size(393, 26)
         TableLayoutPanel19.TabIndex = 18
         ' 
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label18.Dock = DockStyle.Fill
+        Label18.Font = New Font("Poppins", 12F)
         Label18.ForeColor = Color.Black
-        Label18.Location = New Point(32, 0)
+        Label18.Location = New Point(42, 0)
+        Label18.Margin = New Padding(2, 0, 2, 0)
         Label18.Name = "Label18"
-        Label18.Size = New Size(142, 21)
+        Label18.Size = New Size(349, 26)
         Label18.TabIndex = 6
         Label18.Text = "Payment Method:"
+        Label18.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.Dock = DockStyle.Fill
+        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
+        PictureBox7.Location = New Point(2, 2)
+        PictureBox7.Margin = New Padding(2)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(36, 22)
+        PictureBox7.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox7.TabIndex = 38
+        PictureBox7.TabStop = False
         ' 
         ' TableLayoutPanel20
         ' 
@@ -674,38 +714,81 @@ Partial Class TransactionForm
         TableLayoutPanel20.Controls.Add(TableLayoutPanel23, 1, 0)
         TableLayoutPanel20.Controls.Add(TableLayoutPanel9, 0, 0)
         TableLayoutPanel20.Controls.Add(tbContactNum, 0, 1)
-        TableLayoutPanel20.Location = New Point(1, 236)
+        TableLayoutPanel20.Dock = DockStyle.Fill
+        TableLayoutPanel20.Location = New Point(0, 0)
+        TableLayoutPanel20.Margin = New Padding(2)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 2
         TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.Size = New Size(779, 55)
+        TableLayoutPanel20.Size = New Size(794, 61)
         TableLayoutPanel20.TabIndex = 26
+        ' 
+        ' tbTotal
+        ' 
+        tbTotal.BackColor = Color.LightGray
+        tbTotal.Dock = DockStyle.Fill
+        tbTotal.Font = New Font("Poppins", 12F)
+        tbTotal.Location = New Point(399, 32)
+        tbTotal.Margin = New Padding(2)
+        tbTotal.Name = "tbTotal"
+        tbTotal.Size = New Size(393, 31)
+        tbTotal.TabIndex = 35
+        tbTotal.TextAlign = HorizontalAlignment.Center
         ' 
         ' TableLayoutPanel23
         ' 
         TableLayoutPanel23.ColumnCount = 2
-        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 7.57180166F))
-        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 92.4282F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel23.Controls.Add(Label23, 1, 0)
         TableLayoutPanel23.Controls.Add(PictureBox8, 0, 0)
-        TableLayoutPanel23.Location = New Point(392, 3)
+        TableLayoutPanel23.Dock = DockStyle.Fill
+        TableLayoutPanel23.Location = New Point(399, 2)
+        TableLayoutPanel23.Margin = New Padding(2)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 1
-        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel23.Size = New Size(383, 21)
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel23.Size = New Size(393, 26)
         TableLayoutPanel23.TabIndex = 30
         ' 
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label23.Dock = DockStyle.Fill
+        Label23.Font = New Font("Poppins", 12F)
         Label23.ForeColor = Color.Black
-        Label23.Location = New Point(32, 0)
+        Label23.Location = New Point(42, 0)
+        Label23.Margin = New Padding(2, 0, 2, 0)
         Label23.Name = "Label23"
-        Label23.Size = New Size(49, 21)
+        Label23.Size = New Size(349, 26)
         Label23.TabIndex = 6
         Label23.Text = "Total"
+        Label23.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.Dock = DockStyle.Fill
+        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
+        PictureBox8.Location = New Point(2, 2)
+        PictureBox8.Margin = New Padding(2)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(36, 22)
+        PictureBox8.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox8.TabIndex = 39
+        PictureBox8.TabStop = False
+        ' 
+        ' tbContactNum
+        ' 
+        tbContactNum.BackColor = Color.LightGray
+        tbContactNum.Dock = DockStyle.Fill
+        tbContactNum.Font = New Font("Poppins", 12F)
+        tbContactNum.Location = New Point(2, 32)
+        tbContactNum.Margin = New Padding(2)
+        tbContactNum.Name = "tbContactNum"
+        tbContactNum.Size = New Size(393, 31)
+        tbContactNum.TabIndex = 34
+        tbContactNum.TextAlign = HorizontalAlignment.Center
         ' 
         ' TableLayoutPanel22
         ' 
@@ -716,336 +799,256 @@ Partial Class TransactionForm
         TableLayoutPanel22.Controls.Add(tbAddress, 0, 1)
         TableLayoutPanel22.Controls.Add(lblAddress, 0, 0)
         TableLayoutPanel22.Controls.Add(TableLayoutPanel15, 1, 0)
-        TableLayoutPanel22.Location = New Point(0, 297)
+        TableLayoutPanel22.Dock = DockStyle.Fill
+        TableLayoutPanel22.Location = New Point(0, 0)
+        TableLayoutPanel22.Margin = New Padding(2)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 2
         TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel22.Size = New Size(779, 55)
+        TableLayoutPanel22.Size = New Size(794, 61)
         TableLayoutPanel22.TabIndex = 28
         ' 
-        ' Panel3
+        ' tbAmountReceived
         ' 
-        Panel3.BackColor = SystemColors.ActiveBorder
-        Panel3.Location = New Point(5, 290)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(779, 2)
-        Panel3.TabIndex = 29
+        tbAmountReceived.BackColor = Color.LightGray
+        tbAmountReceived.Dock = DockStyle.Fill
+        tbAmountReceived.Font = New Font("Poppins", 12F)
+        tbAmountReceived.Location = New Point(399, 32)
+        tbAmountReceived.Margin = New Padding(2)
+        tbAmountReceived.Name = "tbAmountReceived"
+        tbAmountReceived.Size = New Size(393, 31)
+        tbAmountReceived.TabIndex = 36
+        tbAmountReceived.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' tbAddress
+        ' 
+        tbAddress.BackColor = Color.LightGray
+        tbAddress.Dock = DockStyle.Fill
+        tbAddress.Font = New Font("Poppins", 12F)
+        tbAddress.Location = New Point(2, 32)
+        tbAddress.Margin = New Padding(2)
+        tbAddress.Name = "tbAddress"
+        tbAddress.Size = New Size(393, 31)
+        tbAddress.TabIndex = 35
+        tbAddress.TextAlign = HorizontalAlignment.Center
         ' 
         ' TableLayoutPanel24
         ' 
         TableLayoutPanel24.ColumnCount = 2
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel24.Controls.Add(cbStatus, 0, 1)
         TableLayoutPanel24.Controls.Add(tbChange, 1, 1)
-        TableLayoutPanel24.Controls.Add(tbStatus, 0, 1)
         TableLayoutPanel24.Controls.Add(TableLayoutPanel16, 1, 0)
         TableLayoutPanel24.Controls.Add(TableLayoutPanel11, 0, 0)
-        TableLayoutPanel24.Location = New Point(3, 356)
+        TableLayoutPanel24.Dock = DockStyle.Fill
+        TableLayoutPanel24.Location = New Point(0, 0)
+        TableLayoutPanel24.Margin = New Padding(2)
         TableLayoutPanel24.Name = "TableLayoutPanel24"
         TableLayoutPanel24.RowCount = 2
         TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.Size = New Size(779, 55)
+        TableLayoutPanel24.Size = New Size(794, 61)
         TableLayoutPanel24.TabIndex = 30
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = SystemColors.ActiveBorder
-        Panel4.Location = New Point(4, 353)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(779, 2)
-        Panel4.TabIndex = 31
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(3, 3)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(20, 15)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 34
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(3, 3)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(20, 15)
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.TabIndex = 35
-        PictureBox4.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(3, 3)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(20, 15)
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.TabIndex = 36
-        PictureBox5.TabStop = False
-        ' 
-        ' PictureBox6
-        ' 
-        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(3, 3)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(23, 15)
-        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox6.TabIndex = 37
-        PictureBox6.TabStop = False
-        ' 
-        ' PictureBox7
-        ' 
-        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(3, 3)
-        PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(23, 15)
-        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox7.TabIndex = 38
-        PictureBox7.TabStop = False
-        ' 
-        ' PictureBox8
-        ' 
-        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(3, 3)
-        PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(23, 15)
-        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox8.TabIndex = 39
-        PictureBox8.TabStop = False
-        ' 
-        ' PictureBox9
-        ' 
-        PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), Image)
-        PictureBox9.Location = New Point(3, 3)
-        PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(23, 15)
-        PictureBox9.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox9.TabIndex = 40
-        PictureBox9.TabStop = False
-        ' 
-        ' PictureBox10
-        ' 
-        PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
-        PictureBox10.Location = New Point(3, 3)
-        PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(23, 15)
-        PictureBox10.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox10.TabIndex = 39
-        PictureBox10.TabStop = False
-        ' 
-        ' Label29
-        ' 
-        Label29.AutoSize = True
-        Label29.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label29.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label29.Location = New Point(139, 0)
-        Label29.Name = "Label29"
-        Label29.Size = New Size(67, 22)
-        Label29.TabIndex = 32
-        Label29.Text = "#100011"
-        ' 
-        ' btnCancel
-        ' 
-        btnCancel.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnCancel.Location = New Point(243, 417)
-        btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(94, 29)
-        btnCancel.TabIndex = 32
-        btnCancel.Text = "Cancel"
-        btnCancel.UseVisualStyleBackColor = True
-        ' 
-        ' tbCustomer
-        ' 
-        tbCustomer.BackColor = Color.LightGray
-        tbCustomer.Location = New Point(3, 30)
-        tbCustomer.Name = "tbCustomer"
-        tbCustomer.Size = New Size(383, 27)
-        tbCustomer.TabIndex = 33
-        ' 
-        ' tbService
-        ' 
-        tbService.BackColor = Color.LightGray
-        tbService.Location = New Point(3, 30)
-        tbService.Name = "tbService"
-        tbService.Size = New Size(383, 27)
-        tbService.TabIndex = 34
-        ' 
-        ' tbContactNum
-        ' 
-        tbContactNum.BackColor = Color.LightGray
-        tbContactNum.Location = New Point(3, 30)
-        tbContactNum.Name = "tbContactNum"
-        tbContactNum.Size = New Size(383, 27)
-        tbContactNum.TabIndex = 34
-        ' 
-        ' tbAddress
-        ' 
-        tbAddress.BackColor = Color.LightGray
-        tbAddress.Location = New Point(3, 30)
-        tbAddress.Name = "tbAddress"
-        tbAddress.Size = New Size(383, 27)
-        tbAddress.TabIndex = 35
-        ' 
-        ' tbStatus
-        ' 
-        tbStatus.BackColor = Color.LightGray
-        tbStatus.Location = New Point(3, 30)
-        tbStatus.Name = "tbStatus"
-        tbStatus.Size = New Size(383, 27)
-        tbStatus.TabIndex = 35
-        ' 
-        ' tbMachineUsed
-        ' 
-        tbMachineUsed.BackColor = Color.LightGray
-        tbMachineUsed.Location = New Point(392, 30)
-        tbMachineUsed.Name = "tbMachineUsed"
-        tbMachineUsed.Size = New Size(383, 27)
-        tbMachineUsed.TabIndex = 35
-        ' 
-        ' tbPaymentMethod
-        ' 
-        tbPaymentMethod.BackColor = Color.LightGray
-        tbPaymentMethod.Location = New Point(392, 30)
-        tbPaymentMethod.Name = "tbPaymentMethod"
-        tbPaymentMethod.Size = New Size(383, 27)
-        tbPaymentMethod.TabIndex = 35
-        ' 
-        ' tbTotal
-        ' 
-        tbTotal.BackColor = Color.LightGray
-        tbTotal.Location = New Point(392, 30)
-        tbTotal.Name = "tbTotal"
-        tbTotal.Size = New Size(383, 27)
-        tbTotal.TabIndex = 35
-        ' 
-        ' tbAmountReceived
-        ' 
-        tbAmountReceived.BackColor = Color.LightGray
-        tbAmountReceived.Location = New Point(392, 30)
-        tbAmountReceived.Name = "tbAmountReceived"
-        tbAmountReceived.Size = New Size(383, 27)
-        tbAmountReceived.TabIndex = 36
         ' 
         ' tbChange
         ' 
         tbChange.BackColor = Color.LightGray
-        tbChange.Location = New Point(392, 30)
+        tbChange.Dock = DockStyle.Fill
+        tbChange.Font = New Font("Poppins", 12F)
+        tbChange.Location = New Point(399, 32)
+        tbChange.Margin = New Padding(2)
         tbChange.Name = "tbChange"
-        tbChange.Size = New Size(383, 27)
+        tbChange.Size = New Size(393, 31)
         tbChange.TabIndex = 36
+        tbChange.TextAlign = HorizontalAlignment.Center
         ' 
-        ' cbService
+        ' btnCancel
         ' 
-        cbService.FormattingEnabled = True
-        cbService.Location = New Point(211, 3)
-        cbService.Name = "cbService"
-        cbService.Size = New Size(169, 28)
-        cbService.TabIndex = 33
+        btnCancel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
+        btnCancel.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCancel.Location = New Point(323, 471)
+        btnCancel.Margin = New Padding(2)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(75, 27)
+        btnCancel.TabIndex = 32
+        btnCancel.Text = "Cancel"
+        btnCancel.UseVisualStyleBackColor = True
         ' 
-        ' cbStatus
+        ' btnSave
         ' 
-        cbStatus.FormattingEnabled = True
-        cbStatus.Location = New Point(210, 3)
-        cbStatus.Name = "cbStatus"
-        cbStatus.Size = New Size(169, 28)
-        cbStatus.TabIndex = 34
+        btnSave.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        btnSave.BorderRadius = 5
+        btnSave.CustomizableEdges = CustomizableEdges1
+        btnSave.DisabledState.BorderColor = Color.DarkGray
+        btnSave.DisabledState.CustomBorderColor = Color.DarkGray
+        btnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSave.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        btnSave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        btnSave.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSave.ForeColor = Color.White
+        btnSave.Location = New Point(402, 471)
+        btnSave.Margin = New Padding(2)
+        btnSave.Name = "btnSave"
+        btnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnSave.Size = New Size(75, 27)
+        btnSave.TabIndex = 34
+        btnSave.Text = "SAVE"
         ' 
-        ' saveBtn
+        ' Guna2BorderlessForm1
         ' 
-        saveBtn.BorderRadius = 5
-        saveBtn.CustomizableEdges = CustomizableEdges17
-        saveBtn.DisabledState.BorderColor = Color.DarkGray
-        saveBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        saveBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        saveBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        saveBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        saveBtn.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        saveBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        saveBtn.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        saveBtn.ForeColor = Color.White
-        saveBtn.Location = New Point(476, 417)
-        saveBtn.Name = "saveBtn"
-        saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        saveBtn.Size = New Size(94, 29)
-        saveBtn.TabIndex = 34
-        saveBtn.Text = "SAVE"
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
         ' 
-        ' Label16
+        ' TableLayoutPanel8
         ' 
-        Label16.AutoSize = True
-        Label16.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label16.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label16.Location = New Point(62, 0)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(94, 22)
-        Label16.TabIndex = 9
-        Label16.Text = "10/22/2025"
+        TableLayoutPanel8.ColumnCount = 2
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel8.Controls.Add(Guna2GradientPanel1, 0, 0)
+        TableLayoutPanel8.Controls.Add(btnCancel, 0, 7)
+        TableLayoutPanel8.Controls.Add(btnSave, 1, 7)
+        TableLayoutPanel8.Controls.Add(Panel5, 0, 1)
+        TableLayoutPanel8.Controls.Add(Panel6, 1, 1)
+        TableLayoutPanel8.Controls.Add(Panel7, 0, 2)
+        TableLayoutPanel8.Controls.Add(Panel8, 0, 3)
+        TableLayoutPanel8.Controls.Add(Panel10, 0, 4)
+        TableLayoutPanel8.Controls.Add(Panel11, 0, 5)
+        TableLayoutPanel8.Controls.Add(Panel12, 0, 6)
+        TableLayoutPanel8.Dock = DockStyle.Fill
+        TableLayoutPanel8.Location = New Point(0, 0)
+        TableLayoutPanel8.Margin = New Padding(0)
+        TableLayoutPanel8.MaximumSize = New Size(800, 500)
+        TableLayoutPanel8.MinimumSize = New Size(800, 500)
+        TableLayoutPanel8.Name = "TableLayoutPanel8"
+        TableLayoutPanel8.RowCount = 8
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel8.Size = New Size(800, 500)
+        TableLayoutPanel8.TabIndex = 35
+        ' 
+        ' Panel5
+        ' 
+        Panel5.Controls.Add(TableLayoutPanel2)
+        Panel5.Dock = DockStyle.Fill
+        Panel5.Location = New Point(3, 70)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(394, 61)
+        Panel5.TabIndex = 2
+        ' 
+        ' Panel6
+        ' 
+        Panel6.Controls.Add(TableLayoutPanel3)
+        Panel6.Dock = DockStyle.Fill
+        Panel6.Location = New Point(403, 70)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(394, 61)
+        Panel6.TabIndex = 3
+        ' 
+        ' Panel7
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel7, 2)
+        Panel7.Controls.Add(TableLayoutPanel1)
+        Panel7.Dock = DockStyle.Fill
+        Panel7.Location = New Point(3, 137)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(794, 61)
+        Panel7.TabIndex = 4
+        ' 
+        ' Panel8
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel8, 2)
+        Panel8.Controls.Add(TableLayoutPanel17)
+        Panel8.Dock = DockStyle.Fill
+        Panel8.Location = New Point(3, 204)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(794, 61)
+        Panel8.TabIndex = 5
+        ' 
+        ' Panel10
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel10, 2)
+        Panel10.Controls.Add(TableLayoutPanel20)
+        Panel10.Dock = DockStyle.Fill
+        Panel10.Location = New Point(3, 271)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(794, 61)
+        Panel10.TabIndex = 7
+        ' 
+        ' Panel11
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel11, 2)
+        Panel11.Controls.Add(TableLayoutPanel22)
+        Panel11.Dock = DockStyle.Fill
+        Panel11.Location = New Point(3, 338)
+        Panel11.Name = "Panel11"
+        Panel11.Size = New Size(794, 61)
+        Panel11.TabIndex = 8
+        ' 
+        ' Panel12
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel12, 2)
+        Panel12.Controls.Add(TableLayoutPanel24)
+        Panel12.Dock = DockStyle.Fill
+        Panel12.Location = New Point(3, 405)
+        Panel12.Name = "Panel12"
+        Panel12.Size = New Size(794, 61)
+        Panel12.TabIndex = 9
         ' 
         ' TransactionForm
         ' 
-        AutoScaleDimensions = New SizeF(120F, 120F)
+        AcceptButton = btnSave
+        AutoScaleDimensions = New SizeF(96F, 96F)
         AutoScaleMode = AutoScaleMode.Dpi
-        ClientSize = New Size(781, 451)
-        Controls.Add(saveBtn)
-        Controls.Add(btnCancel)
-        Controls.Add(Panel4)
-        Controls.Add(TableLayoutPanel24)
-        Controls.Add(Panel3)
-        Controls.Add(TableLayoutPanel22)
-        Controls.Add(TableLayoutPanel20)
-        Controls.Add(TableLayoutPanel17)
-        Controls.Add(Panel2)
-        Controls.Add(TableLayoutPanel14)
-        Controls.Add(TableLayoutPanel4)
-        Controls.Add(Panel1)
-        Controls.Add(TableLayoutPanel3)
-        Controls.Add(TableLayoutPanel2)
-        Controls.Add(Guna2GradientPanel1)
-        Controls.Add(TableLayoutPanel1)
+        ClientSize = New Size(800, 500)
+        Controls.Add(TableLayoutPanel8)
+        FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(2)
-        MaximumSize = New Size(799, 498)
+        MinimumSize = New Size(800, 500)
         Name = "TransactionForm"
+        StartPosition = FormStartPosition.CenterParent
         Text = "Transaction Form"
+        TopMost = True
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
+        TableLayoutPanel12.ResumeLayout(False)
+        TableLayoutPanel12.PerformLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel7.ResumeLayout(False)
         TableLayoutPanel7.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        TableLayoutPanel12.ResumeLayout(False)
-        TableLayoutPanel12.PerformLayout()
         Guna2GradientPanel1.ResumeLayout(False)
-        Guna2GradientPanel1.PerformLayout()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
-        TableLayoutPanel5.ResumeLayout(False)
-        TableLayoutPanel5.PerformLayout()
         TableLayoutPanel3.ResumeLayout(False)
-        TableLayoutPanel6.ResumeLayout(False)
-        TableLayoutPanel6.PerformLayout()
-        TableLayoutPanel4.ResumeLayout(False)
-        TableLayoutPanel10.ResumeLayout(False)
-        TableLayoutPanel10.PerformLayout()
-        TableLayoutPanel13.ResumeLayout(False)
-        TableLayoutPanel13.PerformLayout()
-        Guna2Panel2.ResumeLayout(False)
-        Guna2Panel2.PerformLayout()
+        TableLayoutPanel3.PerformLayout()
         lblAddress.ResumeLayout(False)
         lblAddress.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel9.ResumeLayout(False)
         TableLayoutPanel9.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel11.ResumeLayout(False)
         TableLayoutPanel11.PerformLayout()
-        TableLayoutPanel14.ResumeLayout(False)
-        TableLayoutPanel14.PerformLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel15.ResumeLayout(False)
         TableLayoutPanel15.PerformLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel16.ResumeLayout(False)
         TableLayoutPanel16.PerformLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel17.ResumeLayout(False)
         TableLayoutPanel17.PerformLayout()
         TableLayoutPanel21.ResumeLayout(False)
@@ -1053,22 +1056,24 @@ Partial Class TransactionForm
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel19.ResumeLayout(False)
         TableLayoutPanel19.PerformLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel20.ResumeLayout(False)
         TableLayoutPanel20.PerformLayout()
         TableLayoutPanel23.ResumeLayout(False)
         TableLayoutPanel23.PerformLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel22.ResumeLayout(False)
         TableLayoutPanel22.PerformLayout()
         TableLayoutPanel24.ResumeLayout(False)
         TableLayoutPanel24.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel8.ResumeLayout(False)
+        Panel5.ResumeLayout(False)
+        Panel6.ResumeLayout(False)
+        Panel7.ResumeLayout(False)
+        Panel8.ResumeLayout(False)
+        Panel10.ResumeLayout(False)
+        Panel11.ResumeLayout(False)
+        Panel12.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -1076,18 +1081,10 @@ Partial Class TransactionForm
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label5 As Label
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
-    Friend WithEvents Label8 As Label
     Friend WithEvents lblAddress As TableLayoutPanel
     Friend WithEvents Label6 As Label
     Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
@@ -1096,17 +1093,10 @@ Partial Class TransactionForm
     Friend WithEvents Label9 As Label
     Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
     Friend WithEvents Label10 As Label
-    Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
-    Friend WithEvents Label12 As Label
     Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
     Friend WithEvents Label13 As Label
     Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
     Friend WithEvents Label14 As Label
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel19 As TableLayoutPanel
     Friend WithEvents Label18 As Label
@@ -1114,11 +1104,9 @@ Partial Class TransactionForm
     Friend WithEvents TableLayoutPanel21 As TableLayoutPanel
     Friend WithEvents Label22 As Label
     Friend WithEvents TableLayoutPanel22 As TableLayoutPanel
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents TableLayoutPanel23 As TableLayoutPanel
     Friend WithEvents Label23 As Label
     Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
-    Friend WithEvents Panel4 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
@@ -1129,10 +1117,8 @@ Partial Class TransactionForm
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents Label29 As Label
     Friend WithEvents btnCancel As Button
-    Friend WithEvents tbCustomer As TextBox
-    Friend WithEvents tbService As TextBox
+    Friend WithEvents tbCustomerName As TextBox
     Friend WithEvents tbContactNum As TextBox
     Friend WithEvents tbMachineUsed As TextBox
     Friend WithEvents tbPaymentMethod As TextBox
@@ -1141,8 +1127,17 @@ Partial Class TransactionForm
     Friend WithEvents tbAmountReceived As TextBox
     Friend WithEvents tbAddress As TextBox
     Friend WithEvents tbChange As TextBox
-    Friend WithEvents tbStatus As TextBox
     Friend WithEvents cbStatus As ComboBox
-    Friend WithEvents saveBtn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Label16 As Label
+    Friend WithEvents btnSave As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents lblSubtitle As Label
+    Friend WithEvents lblDate As Label
 End Class
