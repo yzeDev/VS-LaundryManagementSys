@@ -5,7 +5,7 @@ Public Class SelfServiceForm
     ' Function to get the latest price ng bawat subservice
     Private Function GetLatestPrice(serviceType As String, subService As String) As Double
         Dim price As Double = 0
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connString)
             conn.Open()
@@ -84,14 +84,6 @@ Public Class SelfServiceForm
         Guna2txtboxContact.SelectionStart = Guna2txtboxContact.Text.Length
     End Sub
 
-    Private Sub Guna2cmbService_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Guna2cmbService.SelectedIndexChanged
-
-    End Sub
-
-
-    Private Sub txtboxAddress_TextChanged(sender As Object, e As EventArgs) Handles txtboxAddress.TextChanged
-
-    End Sub
 
     ' Pickup checkbox: disable delivery and address
     Private Sub Guna2CheckBoxPickup_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2CheckBoxPickup.CheckedChanged
@@ -114,8 +106,18 @@ Public Class SelfServiceForm
 
 
     Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
-        Me.Hide()
         TransactionOption.Show()
+        Me.Dispose()
+    End Sub
+
+    Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
+
+        Me.Hide()  ' hide this form
+        Dim continueForm As New NewInvoiceForm()
+        continueForm.StartPosition = FormStartPosition.CenterScreen
+        continueForm.ShowDialog()
+        Me.Hide()  '
+
     End Sub
 
     ' Optional label click event

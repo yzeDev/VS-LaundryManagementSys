@@ -70,4 +70,9 @@ Public Class NewInvoiceForm
         Me.Close()
     End Sub
 
+    Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Me.Hide()
+        SelfServiceForm.Show(Me)
+
+    End Sub
 End Class
