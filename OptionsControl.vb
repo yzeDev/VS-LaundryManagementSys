@@ -2,7 +2,7 @@
 
     ' Create instances of your user controls
     Private changePassControl As New ChangePasswordControl()
-    'Private priceSetControl As New PriceSettingsControl()
+    Private priceSetControl As New PriceSettingsControl()
 
     Private Sub OptionsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ShowControl(changePassControl)
@@ -17,7 +17,7 @@
     End Sub
 
     Private Sub guna2BtnPriceSettings_Click(sender As Object, e As EventArgs) Handles guna2BtnPriceSettings.Click
-        'ShowControl(priceSetControl)
+        ShowControl(priceSetControl)
         HighlightButton(guna2BtnPriceSettings, True)
         HighlightButton(guna2BtnPassword, False)
     End Sub

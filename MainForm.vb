@@ -169,5 +169,4 @@
             contentUC.Dock = DockStyle.Fill
         End If
     End Sub
-
 End Class

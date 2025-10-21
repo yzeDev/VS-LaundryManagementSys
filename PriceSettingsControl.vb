@@ -155,7 +155,6 @@ Public Class PriceSettingsControl
         dryclean_currentMedium.Text = "₱0.00"
         dryclean_currentLarge.Text = "₱0.00"
     End Sub
-
     '  Allow only numeric input and one decimal point
     Private Sub OnlyNumericInput(sender As Object, e As KeyPressEventArgs)
         Dim txt As Guna2TextBox = CType(sender, Guna2TextBox)
@@ -178,5 +177,4 @@ Public Class PriceSettingsControl
         ' Block all other characters
         e.Handled = True
     End Sub
-
 End Class
