@@ -43,17 +43,17 @@ Partial Class BasicServiceForm
         Label4 = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
         Label5 = New Label()
-        Label6 = New Label()
+        lblRate = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
         Label7 = New Label()
         Guna2txtboxName = New Guna.UI2.WinForms.Guna2TextBox()
         TableLayoutPanel5 = New TableLayoutPanel()
-        Guna2txtboxKg = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2txtboxWeight = New Guna.UI2.WinForms.Guna2TextBox()
         Label10 = New Label()
         Label9 = New Label()
         Guna2txtboxContact = New Guna.UI2.WinForms.Guna2TextBox()
         Label8 = New Label()
-        Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Guna2cmbServiceType = New Guna.UI2.WinForms.Guna2ComboBox()
         TableLayoutPanel6 = New TableLayoutPanel()
         Label11 = New Label()
         TableLayoutPanel7 = New TableLayoutPanel()
@@ -92,7 +92,7 @@ Partial Class BasicServiceForm
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel1.Controls.Add(Label14, 0, 6)
         TableLayoutPanel1.Controls.Add(Label4, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 2)
@@ -107,15 +107,15 @@ Partial Class BasicServiceForm
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.Padding = New Padding(2)
         TableLayoutPanel1.RowCount = 9
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 130.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 30.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 100F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 130F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60F))
         TableLayoutPanel1.Size = New Size(500, 680)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -123,7 +123,7 @@ Partial Class BasicServiceForm
         ' 
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label14.Font = New Font("Microsoft Sans Serif", 12F)
         Label14.Location = New Point(5, 509)
         Label14.Name = "Label14"
         Label14.Size = New Size(490, 30)
@@ -146,15 +146,15 @@ Partial Class BasicServiceForm
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel3.Controls.Add(Label5, 0, 0)
-        TableLayoutPanel3.Controls.Add(Label6, 0, 1)
+        TableLayoutPanel3.Controls.Add(lblRate, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(5, 145)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel3.Size = New Size(490, 124)
         TableLayoutPanel3.TabIndex = 2
         ' 
@@ -163,7 +163,7 @@ Partial Class BasicServiceForm
         Label5.AutoSize = True
         Label5.BackColor = Color.Silver
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(484, 40)
@@ -171,33 +171,33 @@ Partial Class BasicServiceForm
         Label5.Text = "Staff Assisted Pricing:"
         Label5.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Label6
+        ' lblRate
         ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.Silver
-        Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(3, 40)
-        Label6.Name = "Label6"
-        Label6.Padding = New Padding(40, 0, 0, 0)
-        Label6.Size = New Size(484, 84)
-        Label6.TabIndex = 1
-        Label6.Text = "• Wash Only: ₱ 50/kg " & vbCrLf & "• Dry Only: ₱ 40/kg" & vbCrLf & "• Wash & Dry: ₱ 80/kg"
-        Label6.TextAlign = ContentAlignment.MiddleLeft
+        lblRate.AutoSize = True
+        lblRate.BackColor = Color.Silver
+        lblRate.Dock = DockStyle.Fill
+        lblRate.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRate.Location = New Point(3, 40)
+        lblRate.Name = "lblRate"
+        lblRate.Padding = New Padding(40, 0, 0, 0)
+        lblRate.Size = New Size(484, 84)
+        lblRate.TabIndex = 1
+        lblRate.Text = "• Wash Only: ₱ 50/kg " & vbCrLf & "• Dry Only: ₱ 40/kg" & vbCrLf & "• Wash + Dry: ₱ 80/kg"
+        lblRate.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 1
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
         TableLayoutPanel4.Controls.Add(Label7, 0, 0)
         TableLayoutPanel4.Controls.Add(Guna2txtboxName, 0, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(5, 275)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Size = New Size(490, 73)
         TableLayoutPanel4.TabIndex = 3
         ' 
@@ -205,7 +205,7 @@ Partial Class BasicServiceForm
         ' 
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label7.Font = New Font("Microsoft Sans Serif", 12F)
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(484, 36)
@@ -224,7 +224,7 @@ Partial Class BasicServiceForm
         Guna2txtboxName.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2txtboxName.Dock = DockStyle.Fill
         Guna2txtboxName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2txtboxName.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2txtboxName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2txtboxName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2txtboxName.Location = New Point(4, 45)
         Guna2txtboxName.Margin = New Padding(4, 9, 4, 9)
@@ -238,42 +238,42 @@ Partial Class BasicServiceForm
         ' TableLayoutPanel5
         ' 
         TableLayoutPanel5.ColumnCount = 3
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel5.Controls.Add(Guna2txtboxKg, 2, 1)
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
+        TableLayoutPanel5.Controls.Add(Guna2txtboxWeight, 2, 1)
         TableLayoutPanel5.Controls.Add(Label10, 2, 0)
         TableLayoutPanel5.Controls.Add(Label9, 1, 0)
         TableLayoutPanel5.Controls.Add(Guna2txtboxContact, 0, 1)
         TableLayoutPanel5.Controls.Add(Label8, 0, 0)
-        TableLayoutPanel5.Controls.Add(Guna2ComboBox1, 1, 1)
+        TableLayoutPanel5.Controls.Add(Guna2cmbServiceType, 1, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(5, 354)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 2
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.Size = New Size(490, 73)
         TableLayoutPanel5.TabIndex = 4
         ' 
-        ' Guna2txtboxKg
+        ' Guna2txtboxWeight
         ' 
-        Guna2txtboxKg.CustomizableEdges = CustomizableEdges3
-        Guna2txtboxKg.DefaultText = ""
-        Guna2txtboxKg.Font = New Font("Segoe UI", 9.0F)
-        Guna2txtboxKg.Location = New Point(370, 39)
-        Guna2txtboxKg.Name = "Guna2txtboxKg"
-        Guna2txtboxKg.PlaceholderText = ""
-        Guna2txtboxKg.SelectedText = ""
-        Guna2txtboxKg.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2txtboxKg.Size = New Size(117, 31)
-        Guna2txtboxKg.TabIndex = 0
+        Guna2txtboxWeight.CustomizableEdges = CustomizableEdges3
+        Guna2txtboxWeight.DefaultText = ""
+        Guna2txtboxWeight.Font = New Font("Segoe UI", 9F)
+        Guna2txtboxWeight.Location = New Point(370, 39)
+        Guna2txtboxWeight.Name = "Guna2txtboxWeight"
+        Guna2txtboxWeight.PlaceholderText = ""
+        Guna2txtboxWeight.SelectedText = ""
+        Guna2txtboxWeight.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2txtboxWeight.Size = New Size(117, 31)
+        Guna2txtboxWeight.TabIndex = 0
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label10.Font = New Font("Microsoft Sans Serif", 12F)
         Label10.Location = New Point(370, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(117, 36)
@@ -285,7 +285,7 @@ Partial Class BasicServiceForm
         ' 
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label9.Font = New Font("Microsoft Sans Serif", 12F)
         Label9.Location = New Point(248, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(116, 36)
@@ -297,7 +297,7 @@ Partial Class BasicServiceForm
         ' 
         Guna2txtboxContact.CustomizableEdges = CustomizableEdges5
         Guna2txtboxContact.DefaultText = ""
-        Guna2txtboxContact.Font = New Font("Segoe UI", 9.0F)
+        Guna2txtboxContact.Font = New Font("Segoe UI", 9F)
         Guna2txtboxContact.Location = New Point(3, 39)
         Guna2txtboxContact.Name = "Guna2txtboxContact"
         Guna2txtboxContact.PlaceholderText = ""
@@ -310,7 +310,7 @@ Partial Class BasicServiceForm
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label8.Font = New Font("Microsoft Sans Serif", 12F)
         Label8.Location = New Point(3, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(239, 36)
@@ -318,31 +318,31 @@ Partial Class BasicServiceForm
         Label8.Text = "Contact Number:"
         Label8.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Guna2ComboBox1
+        ' Guna2cmbServiceType
         ' 
-        Guna2ComboBox1.AutoRoundedCorners = True
-        Guna2ComboBox1.BackColor = Color.Transparent
-        Guna2ComboBox1.CustomizableEdges = CustomizableEdges7
-        Guna2ComboBox1.Dock = DockStyle.Fill
-        Guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed
-        Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
-        Guna2ComboBox1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2ComboBox1.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        Guna2ComboBox1.ItemHeight = 20
-        Guna2ComboBox1.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash & Dry"})
-        Guna2ComboBox1.Location = New Point(248, 39)
-        Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2ComboBox1.Size = New Size(116, 26)
-        Guna2ComboBox1.TabIndex = 7
+        Guna2cmbServiceType.AutoRoundedCorners = True
+        Guna2cmbServiceType.BackColor = Color.Transparent
+        Guna2cmbServiceType.CustomizableEdges = CustomizableEdges7
+        Guna2cmbServiceType.Dock = DockStyle.Fill
+        Guna2cmbServiceType.DrawMode = DrawMode.OwnerDrawFixed
+        Guna2cmbServiceType.DropDownStyle = ComboBoxStyle.DropDownList
+        Guna2cmbServiceType.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2cmbServiceType.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2cmbServiceType.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2cmbServiceType.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        Guna2cmbServiceType.ItemHeight = 20
+        Guna2cmbServiceType.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash & Dry"})
+        Guna2cmbServiceType.Location = New Point(248, 39)
+        Guna2cmbServiceType.Name = "Guna2cmbServiceType"
+        Guna2cmbServiceType.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2cmbServiceType.Size = New Size(116, 26)
+        Guna2cmbServiceType.TabIndex = 7
         ' 
         ' TableLayoutPanel6
         ' 
         TableLayoutPanel6.ColumnCount = 2
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel6.Controls.Add(Label11, 0, 0)
         TableLayoutPanel6.Controls.Add(TableLayoutPanel7, 0, 1)
         TableLayoutPanel6.Controls.Add(TableLayoutPanel8, 1, 1)
@@ -350,8 +350,8 @@ Partial Class BasicServiceForm
         TableLayoutPanel6.Location = New Point(5, 433)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 2
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel6.Size = New Size(490, 73)
         TableLayoutPanel6.TabIndex = 5
         ' 
@@ -359,7 +359,7 @@ Partial Class BasicServiceForm
         ' 
         Label11.AutoSize = True
         Label11.Dock = DockStyle.Fill
-        Label11.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label11.Font = New Font("Microsoft Sans Serif", 12F)
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(239, 36)
@@ -370,15 +370,15 @@ Partial Class BasicServiceForm
         ' TableLayoutPanel7
         ' 
         TableLayoutPanel7.ColumnCount = 2
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.0F))
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70.0F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
         TableLayoutPanel7.Controls.Add(Label12, 0, 0)
         TableLayoutPanel7.Controls.Add(Guna2CheckBoxdelivery, 1, 0)
         TableLayoutPanel7.Dock = DockStyle.Fill
         TableLayoutPanel7.Location = New Point(3, 39)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel7.Size = New Size(239, 31)
         TableLayoutPanel7.TabIndex = 3
         ' 
@@ -397,25 +397,28 @@ Partial Class BasicServiceForm
         ' 
         Guna2CheckBoxdelivery.CheckedState.BorderRadius = 0
         Guna2CheckBoxdelivery.CheckedState.BorderThickness = 0
+        Guna2CheckBoxdelivery.Dock = DockStyle.Fill
         Guna2CheckBoxdelivery.Location = New Point(74, 3)
         Guna2CheckBoxdelivery.Name = "Guna2CheckBoxdelivery"
-        Guna2CheckBoxdelivery.Size = New Size(104, 24)
+        Guna2CheckBoxdelivery.Size = New Size(162, 25)
         Guna2CheckBoxdelivery.TabIndex = 4
+        Guna2CheckBoxdelivery.Text = "+5% Delivery Fee"
+        Guna2CheckBoxdelivery.TextAlign = ContentAlignment.MiddleRight
         Guna2CheckBoxdelivery.UncheckedState.BorderRadius = 0
         Guna2CheckBoxdelivery.UncheckedState.BorderThickness = 0
         ' 
         ' TableLayoutPanel8
         ' 
         TableLayoutPanel8.ColumnCount = 2
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.0F))
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70.0F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
         TableLayoutPanel8.Controls.Add(Guna2CheckBoxPickUp, 1, 0)
         TableLayoutPanel8.Controls.Add(Label13, 0, 0)
         TableLayoutPanel8.Dock = DockStyle.Fill
         TableLayoutPanel8.Location = New Point(248, 39)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 1
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel8.Size = New Size(239, 31)
         TableLayoutPanel8.TabIndex = 4
         ' 
@@ -454,16 +457,16 @@ Partial Class BasicServiceForm
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 2
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel9.Controls.Add(gbCancel, 0, 0)
         TableLayoutPanel9.Controls.Add(gbContinue, 1, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
         TableLayoutPanel9.Location = New Point(5, 621)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel9.Size = New Size(490, 54)
         TableLayoutPanel9.TabIndex = 8
         ' 
@@ -478,7 +481,7 @@ Partial Class BasicServiceForm
         gbCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbCancel.Dock = DockStyle.Top
         gbCancel.FillColor = Color.White
-        gbCancel.Font = New Font("Microsoft Sans Serif", 12.0F)
+        gbCancel.Font = New Font("Microsoft Sans Serif", 12F)
         gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.Location = New Point(3, 3)
         gbCancel.Name = "gbCancel"
@@ -497,7 +500,7 @@ Partial Class BasicServiceForm
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbContinue.Dock = DockStyle.Top
-        gbContinue.Font = New Font("Microsoft Sans Serif", 12.0F)
+        gbContinue.Font = New Font("Microsoft Sans Serif", 12F)
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(248, 3)
         gbContinue.Name = "gbContinue"
@@ -525,9 +528,9 @@ Partial Class BasicServiceForm
         TableLayoutPanel2.BackColor = Color.Transparent
         TableLayoutPanel2.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel2.ColumnCount = 3
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.Controls.Add(lblTransactionID, 2, 1)
         TableLayoutPanel2.Controls.Add(Label3, 1, 1)
         TableLayoutPanel2.Controls.Add(Label2, 2, 0)
@@ -537,8 +540,8 @@ Partial Class BasicServiceForm
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.Size = New Size(490, 94)
         TableLayoutPanel2.TabIndex = 0
         ' 
@@ -559,7 +562,7 @@ Partial Class BasicServiceForm
         ' 
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.White
         Label3.Location = New Point(103, 47)
         Label3.Name = "Label3"
@@ -571,7 +574,7 @@ Partial Class BasicServiceForm
         ' 
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(298, 0)
         Label2.Name = "Label2"
@@ -624,7 +627,7 @@ Partial Class BasicServiceForm
         ' 
         ' BasicServiceForm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(500, 680)
@@ -662,7 +665,7 @@ Partial Class BasicServiceForm
     Friend WithEvents Label4 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblRate As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label7 As Label
     Friend WithEvents Guna2txtboxName As Guna.UI2.WinForms.Guna2TextBox
@@ -671,8 +674,8 @@ Partial Class BasicServiceForm
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2txtboxKg As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2txtboxWeight As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2cmbServiceType As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
