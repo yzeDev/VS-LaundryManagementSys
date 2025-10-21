@@ -124,7 +124,7 @@ Partial Class SelfServiceForm
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
         Label14.Enabled = False
-        Label14.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label14.Font = New Font("Poppins", 12.0F)
         Label14.Location = New Point(5, 509)
         Label14.Name = "Label14"
         Label14.Size = New Size(490, 30)
@@ -136,7 +136,7 @@ Partial Class SelfServiceForm
         ' 
         Label4.AutoSize = True
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(5, 102)
         Label4.Name = "Label4"
         Label4.Size = New Size(490, 40)
@@ -164,7 +164,7 @@ Partial Class SelfServiceForm
         Label5.AutoSize = True
         Label5.BackColor = Color.Silver
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(484, 40)
@@ -177,7 +177,7 @@ Partial Class SelfServiceForm
         Label6.AutoSize = True
         Label6.BackColor = Color.Silver
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(3, 40)
         Label6.Name = "Label6"
         Label6.Padding = New Padding(40, 0, 0, 0)
@@ -206,7 +206,7 @@ Partial Class SelfServiceForm
         ' 
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label7.Font = New Font("Poppins", 12.0F)
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(484, 36)
@@ -216,25 +216,25 @@ Partial Class SelfServiceForm
         ' 
         ' Guna2TxtboxName
         ' 
-        Guna2TxtboxName.AutoRoundedCorners = True
-        Guna2TxtboxName.CustomizableEdges = CustomizableEdges1
-        Guna2TxtboxName.DefaultText = ""
-        Guna2TxtboxName.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TxtboxName.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TxtboxName.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TxtboxName.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TxtboxName.Dock = DockStyle.Fill
-        Guna2TxtboxName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TxtboxName.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TxtboxName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TxtboxName.Location = New Point(4, 45)
-        Guna2TxtboxName.Margin = New Padding(4, 9, 4, 9)
-        Guna2TxtboxName.Name = "Guna2TxtboxName"
-        Guna2TxtboxName.PlaceholderText = ""
-        Guna2TxtboxName.SelectedText = ""
-        Guna2TxtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TxtboxName.Size = New Size(482, 19)
-        Guna2TxtboxName.TabIndex = 1
+        Guna2TextBox1.AutoRoundedCorners = True
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges1
+        Guna2TextBox1.DefaultText = ""
+        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.Dock = DockStyle.Fill
+        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Location = New Point(4, 45)
+        Guna2TextBox1.Margin = New Padding(4, 9, 4, 9)
+        Guna2TextBox1.Name = "Guna2TextBox1"
+        Guna2TextBox1.PlaceholderText = ""
+        Guna2TextBox1.SelectedText = ""
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2TextBox1.Size = New Size(482, 19)
+        Guna2TextBox1.TabIndex = 1
         ' 
         ' TableLayoutPanel5
         ' 
@@ -313,7 +313,7 @@ Partial Class SelfServiceForm
         Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.Dock = DockStyle.Fill
-        Guna2TextBox2.Enabled = False
+        Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -367,7 +367,7 @@ Partial Class SelfServiceForm
         TableLayoutPanel6.Controls.Add(Label11, 0, 0)
         TableLayoutPanel6.Controls.Add(TableLayoutPanel7, 0, 1)
         TableLayoutPanel6.Controls.Add(TableLayoutPanel8, 1, 1)
-        TableLayoutPanel6.Dock = DockStyle.Fill
+        TableLayoutPanel6.Location = New Point(5, 433)
         TableLayoutPanel6.Location = New Point(5, 433)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 2
@@ -408,7 +408,7 @@ Partial Class SelfServiceForm
         ' 
         Label12.Dock = DockStyle.Fill
         Label12.Enabled = False
-        Label12.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(3, 0)
         Label12.Name = "Label12"
         Label12.Size = New Size(65, 31)
@@ -425,7 +425,7 @@ Partial Class SelfServiceForm
         Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBox1.Dock = DockStyle.Fill
         Guna2CheckBox1.Enabled = False
-        Guna2CheckBox1.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2CheckBox1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2CheckBox1.Location = New Point(74, 3)
         Guna2CheckBox1.Name = "Guna2CheckBox1"
         Guna2CheckBox1.Size = New Size(162, 25)
@@ -460,7 +460,7 @@ Partial Class SelfServiceForm
         Guna2CheckBox2.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBox2.Dock = DockStyle.Fill
         Guna2CheckBox2.Enabled = False
-        Guna2CheckBox2.Font = New Font("Microsoft Sans Serif", 9.75F)
+        Guna2CheckBox2.Font = New Font("Poppins", 9.75F)
         Guna2CheckBox2.Location = New Point(74, 3)
         Guna2CheckBox2.Name = "Guna2CheckBox2"
         Guna2CheckBox2.Size = New Size(162, 25)
@@ -475,7 +475,7 @@ Partial Class SelfServiceForm
         ' 
         Label13.Dock = DockStyle.Fill
         Label13.Enabled = False
-        Label13.Font = New Font("Microsoft Sans Serif", 9.75F)
+        Label13.Font = New Font("Poppins", 9.75F)
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
         Label13.Size = New Size(65, 31)
@@ -487,7 +487,7 @@ Partial Class SelfServiceForm
         ' 
         TextBox1.Dock = DockStyle.Fill
         TextBox1.Enabled = False
-        TextBox1.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(5, 542)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
@@ -526,7 +526,7 @@ Partial Class SelfServiceForm
         gbCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbCancel.Dock = DockStyle.Top
         gbCancel.FillColor = Color.White
-        gbCancel.Font = New Font("Poppins", 12.0F)
+        gbCancel.Font = New Font("Microsoft Sans Serif", 12.0F)
         gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.Location = New Point(3, 3)
         gbCancel.Name = "gbCancel"
@@ -544,7 +544,7 @@ Partial Class SelfServiceForm
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbContinue.Dock = DockStyle.Top
-        gbContinue.Font = New Font("Segoe UI", 9.0F)
+        gbContinue.Dock = DockStyle.Top
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(248, 3)
         gbContinue.Name = "gbContinue"
@@ -593,7 +593,7 @@ Partial Class SelfServiceForm
         ' 
         lblTransactionID.AutoSize = True
         lblTransactionID.Dock = DockStyle.Fill
-        lblTransactionID.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTransactionID.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTransactionID.ForeColor = Color.White
         lblTransactionID.Location = New Point(298, 47)
         lblTransactionID.Name = "lblTransactionID"
@@ -655,7 +655,7 @@ Partial Class SelfServiceForm
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(100, 0)
         Label1.Margin = New Padding(0)
