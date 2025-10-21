@@ -22,17 +22,17 @@ Partial Class maya
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(maya))
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         cancelPayBtn = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -73,7 +73,7 @@ Partial Class maya
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges11
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(89), CByte(57), CByte(155))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(69), CByte(225), CByte(95))
@@ -81,7 +81,7 @@ Partial Class maya
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.Padding = New Padding(15)
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientPanel1.Size = New Size(356, 618)
         Guna2GradientPanel1.TabIndex = 1
         ' 
@@ -118,7 +118,7 @@ Partial Class maya
         cancelPayBtn.BorderColor = Color.White
         cancelPayBtn.BorderRadius = 5
         cancelPayBtn.BorderThickness = 1
-        cancelPayBtn.CustomizableEdges = CustomizableEdges13
+        cancelPayBtn.CustomizableEdges = CustomizableEdges1
         cancelPayBtn.DisabledState.BorderColor = Color.DarkGray
         cancelPayBtn.DisabledState.CustomBorderColor = Color.DarkGray
         cancelPayBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -127,12 +127,12 @@ Partial Class maya
         cancelPayBtn.Dock = DockStyle.Fill
         cancelPayBtn.FillColor = Color.DimGray
         cancelPayBtn.FillColor2 = Color.Gray
-        cancelPayBtn.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cancelPayBtn.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         cancelPayBtn.ForeColor = Color.White
         cancelPayBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         cancelPayBtn.Location = New Point(3, 547)
         cancelPayBtn.Name = "cancelPayBtn"
-        cancelPayBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        cancelPayBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         cancelPayBtn.Size = New Size(320, 38)
         cancelPayBtn.TabIndex = 7
         cancelPayBtn.Text = "CANCEL"
@@ -140,7 +140,7 @@ Partial Class maya
         ' totalPaymentLbl
         ' 
         totalPaymentLbl.Dock = DockStyle.Fill
-        totalPaymentLbl.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        totalPaymentLbl.Font = New Font("Microsoft Sans Serif", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         totalPaymentLbl.Location = New Point(3, 61)
         totalPaymentLbl.Margin = New Padding(3)
         totalPaymentLbl.Name = "totalPaymentLbl"
@@ -180,7 +180,7 @@ Partial Class maya
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(18, 4)
         Label1.Margin = New Padding(3, 0, 0, 0)
         Label1.Name = "Label1"
@@ -195,12 +195,12 @@ Partial Class maya
         Guna2Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         Guna2Panel1.BorderRadius = 10
         Guna2Panel1.Controls.Add(TableLayoutPanel3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges15
+        Guna2Panel1.CustomizableEdges = CustomizableEdges3
         Guna2Panel1.FillColor = Color.White
         Guna2Panel1.Location = New Point(38, 125)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.Padding = New Padding(40, 3, 40, 3)
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Panel1.Size = New Size(250, 229)
         Guna2Panel1.TabIndex = 3
         ' 
@@ -222,7 +222,7 @@ Partial Class maya
         ' Label3
         ' 
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
@@ -262,7 +262,7 @@ Partial Class maya
         ' Label4
         ' 
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(131, 3)
         Label4.Margin = New Padding(3)
         Label4.Name = "Label4"
@@ -304,12 +304,12 @@ Partial Class maya
         ' 
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.Controls.Add(TableLayoutPanel5)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges17
+        Guna2Panel2.CustomizableEdges = CustomizableEdges5
         Guna2Panel2.Dock = DockStyle.Fill
         Guna2Panel2.FillColor = Color.White
         Guna2Panel2.Location = New Point(3, 418)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Panel2.Size = New Size(320, 82)
         Guna2Panel2.TabIndex = 5
         ' 
@@ -331,7 +331,7 @@ Partial Class maya
         ' Label5
         ' 
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
@@ -358,7 +358,7 @@ Partial Class maya
         ' Label7
         ' 
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
@@ -370,7 +370,7 @@ Partial Class maya
         ' Label6
         ' 
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(160, 0)
         Label6.Name = "Label6"
@@ -384,7 +384,7 @@ Partial Class maya
         confirmPaymentBtn.BorderColor = Color.White
         confirmPaymentBtn.BorderRadius = 5
         confirmPaymentBtn.BorderThickness = 1
-        confirmPaymentBtn.CustomizableEdges = CustomizableEdges19
+        confirmPaymentBtn.CustomizableEdges = CustomizableEdges7
         confirmPaymentBtn.DisabledState.BorderColor = Color.DarkGray
         confirmPaymentBtn.DisabledState.CustomBorderColor = Color.DarkGray
         confirmPaymentBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -393,12 +393,12 @@ Partial Class maya
         confirmPaymentBtn.Dock = DockStyle.Fill
         confirmPaymentBtn.FillColor = Color.Green
         confirmPaymentBtn.FillColor2 = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        confirmPaymentBtn.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        confirmPaymentBtn.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         confirmPaymentBtn.ForeColor = Color.White
         confirmPaymentBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         confirmPaymentBtn.Location = New Point(3, 506)
         confirmPaymentBtn.Name = "confirmPaymentBtn"
-        confirmPaymentBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        confirmPaymentBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         confirmPaymentBtn.Size = New Size(320, 35)
         confirmPaymentBtn.TabIndex = 6
         confirmPaymentBtn.Text = "CONFIRM PAYMENT"

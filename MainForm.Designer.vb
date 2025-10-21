@@ -84,7 +84,7 @@ Partial Class MainForm
         navbarPanel.Name = "navbarPanel"
         navbarPanel.Padding = New Padding(0, 30, 0, 10)
         navbarPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        navbarPanel.Size = New Size(220, 700)
+        navbarPanel.Size = New Size(220, 800)
         navbarPanel.TabIndex = 0
         ' 
         ' navbarBtnPanel
@@ -101,14 +101,14 @@ Partial Class MainForm
         navbarBtnPanel.Location = New Point(0, 117)
         navbarBtnPanel.Name = "navbarBtnPanel"
         navbarBtnPanel.Padding = New Padding(7, 0, 7, 0)
-        navbarBtnPanel.Size = New Size(220, 573)
+        navbarBtnPanel.Size = New Size(220, 673)
         navbarBtnPanel.TabIndex = 1
         ' 
         ' navBottomDivider
         ' 
         navBottomDivider.BackColor = Color.White
         navBottomDivider.Dock = DockStyle.Bottom
-        navBottomDivider.Location = New Point(7, 518)
+        navBottomDivider.Location = New Point(7, 618)
         navBottomDivider.Name = "navBottomDivider"
         navBottomDivider.Size = New Size(206, 1)
         navBottomDivider.TabIndex = 1
@@ -146,7 +146,7 @@ Partial Class MainForm
         adminPanel.BackColor = Color.Transparent
         adminPanel.Controls.Add(adminnNavTblPanel)
         adminPanel.Dock = DockStyle.Bottom
-        adminPanel.Location = New Point(7, 519)
+        adminPanel.Location = New Point(7, 619)
         adminPanel.Name = "adminPanel"
         adminPanel.Size = New Size(206, 54)
         adminPanel.TabIndex = 1
@@ -388,7 +388,7 @@ Partial Class MainForm
         controlsPanel.Margin = New Padding(3, 0, 3, 0)
         controlsPanel.Name = "controlsPanel"
         controlsPanel.Padding = New Padding(0, 3, 0, 3)
-        controlsPanel.Size = New Size(880, 25)
+        controlsPanel.Size = New Size(980, 25)
         controlsPanel.TabIndex = 1
         ' 
         ' controlsTblPanel
@@ -401,7 +401,7 @@ Partial Class MainForm
         controlsTblPanel.Controls.Add(maximizeBtn, 1, 0)
         controlsTblPanel.Controls.Add(minimizeBtn, 0, 0)
         controlsTblPanel.Dock = DockStyle.Right
-        controlsTblPanel.Location = New Point(805, 3)
+        controlsTblPanel.Location = New Point(905, 3)
         controlsTblPanel.Name = "controlsTblPanel"
         controlsTblPanel.RowCount = 1
         controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -457,7 +457,7 @@ Partial Class MainForm
         topDivider.Dock = DockStyle.Top
         topDivider.Location = New Point(220, 25)
         topDivider.Name = "topDivider"
-        topDivider.Size = New Size(880, 1)
+        topDivider.Size = New Size(980, 1)
         topDivider.TabIndex = 2
         ' 
         ' contentSpacePanel
@@ -467,7 +467,7 @@ Partial Class MainForm
         contentSpacePanel.Location = New Point(220, 77)
         contentSpacePanel.Margin = New Padding(0)
         contentSpacePanel.Name = "contentSpacePanel"
-        contentSpacePanel.Size = New Size(880, 623)
+        contentSpacePanel.Size = New Size(980, 723)
         contentSpacePanel.TabIndex = 4
         ' 
         ' titleBarPanel
@@ -476,7 +476,7 @@ Partial Class MainForm
         titleBarPanel.Dock = DockStyle.Top
         titleBarPanel.Location = New Point(220, 26)
         titleBarPanel.Name = "titleBarPanel"
-        titleBarPanel.Size = New Size(880, 51)
+        titleBarPanel.Size = New Size(980, 51)
         titleBarPanel.TabIndex = 3
         ' 
         ' MainForm
@@ -484,7 +484,7 @@ Partial Class MainForm
         AutoScaleDimensions = New SizeF(13F, 37F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        ClientSize = New Size(1100, 700)
+        ClientSize = New Size(1200, 800)
         Controls.Add(contentSpacePanel)
         Controls.Add(titleBarPanel)
         Controls.Add(topDivider)
@@ -494,6 +494,8 @@ Partial Class MainForm
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(6, 7, 6, 7)
+        MaximumSize = New Size(1200, 800)
+        MinimumSize = New Size(1200, 800)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "BubbleFresh"
