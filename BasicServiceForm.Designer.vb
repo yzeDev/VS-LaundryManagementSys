@@ -255,7 +255,20 @@ Partial Class BasicServiceForm
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel5.Size = New Size(490, 73)
         TableLayoutPanel5.TabIndex = 4
-
+        ' 
+        ' Guna2txtboxKg
+        ' 
+        Guna2txtboxKg.CustomizableEdges = CustomizableEdges3
+        Guna2txtboxKg.DefaultText = ""
+        Guna2txtboxKg.Font = New Font("Segoe UI", 9.0F)
+        Guna2txtboxKg.Location = New Point(370, 39)
+        Guna2txtboxKg.Name = "Guna2txtboxKg"
+        Guna2txtboxKg.PlaceholderText = ""
+        Guna2txtboxKg.SelectedText = ""
+        Guna2txtboxKg.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2txtboxKg.Size = New Size(117, 31)
+        Guna2txtboxKg.TabIndex = 0
+        ' 
         ' Label10
         ' 
         Label10.AutoSize = True
@@ -279,6 +292,19 @@ Partial Class BasicServiceForm
         Label9.TabIndex = 3
         Label9.Text = "Service Type:"
         Label9.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' Guna2txtboxContact
+        ' 
+        Guna2txtboxContact.CustomizableEdges = CustomizableEdges5
+        Guna2txtboxContact.DefaultText = ""
+        Guna2txtboxContact.Font = New Font("Segoe UI", 9.0F)
+        Guna2txtboxContact.Location = New Point(3, 39)
+        Guna2txtboxContact.Name = "Guna2txtboxContact"
+        Guna2txtboxContact.PlaceholderText = ""
+        Guna2txtboxContact.SelectedText = ""
+        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2txtboxContact.Size = New Size(200, 31)
+        Guna2txtboxContact.TabIndex = 5
         ' 
         ' Label8
         ' 
@@ -369,20 +395,14 @@ Partial Class BasicServiceForm
         ' 
         ' Guna2CheckBoxdelivery
         ' 
-        Guna2CheckBox1.CheckedState.BorderRadius = 0
-        Guna2CheckBox1.CheckedState.BorderThickness = 0
-        Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.Dock = DockStyle.Fill
-        Guna2CheckBox1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2CheckBox1.Location = New Point(74, 3)
-        Guna2CheckBox1.Name = "Guna2CheckBox1"
-        Guna2CheckBox1.Size = New Size(162, 25)
-        Guna2CheckBox1.TabIndex = 6
-        Guna2CheckBox1.Text = "+ 5% delivery fee"
-        Guna2CheckBox1.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox1.UncheckedState.BorderRadius = 0
-        Guna2CheckBox1.UncheckedState.BorderThickness = 0
-        Guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2CheckBoxdelivery.CheckedState.BorderRadius = 0
+        Guna2CheckBoxdelivery.CheckedState.BorderThickness = 0
+        Guna2CheckBoxdelivery.Location = New Point(74, 3)
+        Guna2CheckBoxdelivery.Name = "Guna2CheckBoxdelivery"
+        Guna2CheckBoxdelivery.Size = New Size(104, 24)
+        Guna2CheckBoxdelivery.TabIndex = 4
+        Guna2CheckBoxdelivery.UncheckedState.BorderRadius = 0
+        Guna2CheckBoxdelivery.UncheckedState.BorderThickness = 0
         ' 
         ' TableLayoutPanel8
         ' 
@@ -398,6 +418,17 @@ Partial Class BasicServiceForm
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel8.Size = New Size(239, 31)
         TableLayoutPanel8.TabIndex = 4
+        ' 
+        ' Guna2CheckBoxPickUp
+        ' 
+        Guna2CheckBoxPickUp.CheckedState.BorderRadius = 0
+        Guna2CheckBoxPickUp.CheckedState.BorderThickness = 0
+        Guna2CheckBoxPickUp.Location = New Point(74, 3)
+        Guna2CheckBoxPickUp.Name = "Guna2CheckBoxPickUp"
+        Guna2CheckBoxPickUp.Size = New Size(104, 24)
+        Guna2CheckBoxPickUp.TabIndex = 0
+        Guna2CheckBoxPickUp.UncheckedState.BorderRadius = 0
+        Guna2CheckBoxPickUp.UncheckedState.BorderThickness = 0
         ' 
         ' Label13
         ' 
@@ -418,6 +449,7 @@ Partial Class BasicServiceForm
         txtboxAddress.Multiline = True
         txtboxAddress.Name = "txtboxAddress"
         txtboxAddress.Size = New Size(490, 73)
+        txtboxAddress.TabIndex = 7
         ' 
         ' TableLayoutPanel9
         ' 
@@ -616,9 +648,7 @@ Partial Class BasicServiceForm
         TableLayoutPanel6.ResumeLayout(False)
         TableLayoutPanel6.PerformLayout()
         TableLayoutPanel7.ResumeLayout(False)
-        TableLayoutPanel7.PerformLayout()
         TableLayoutPanel8.ResumeLayout(False)
-        TableLayoutPanel8.PerformLayout()
         TableLayoutPanel9.ResumeLayout(False)
         Guna2GradientPanel1.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
