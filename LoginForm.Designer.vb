@@ -25,48 +25,48 @@ Partial Class LoginForm
         components = New ComponentModel.Container()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        TableLayoutPanel5 = New TableLayoutPanel()
+        btnLogin = New Guna.UI2.WinForms.Guna2GradientButton()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        gtbPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        Label6 = New Label()
+        LinkLabel1 = New LinkLabel()
+        TableLayoutPanel3 = New TableLayoutPanel()
+        Label8 = New Label()
+        Label7 = New Label()
+        TableLayoutPanel4 = New TableLayoutPanel()
+        Label9 = New Label()
+        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         TableLayoutPanel2 = New TableLayoutPanel()
         Label5 = New Label()
         Label1 = New Label()
         Label3 = New Label()
         Label4 = New Label()
         Label2 = New Label()
-        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
-        TableLayoutPanel5 = New TableLayoutPanel()
-        Guna2CheckBox3 = New Guna.UI2.WinForms.Guna2CheckBox()
-        Guna2GradientButton3 = New Guna.UI2.WinForms.Guna2GradientButton()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Label6 = New Label()
-        TableLayoutPanel3 = New TableLayoutPanel()
-        Label7 = New Label()
-        Label8 = New Label()
-        TableLayoutPanel4 = New TableLayoutPanel()
-        Label9 = New Label()
-        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2GradientPanel1.SuspendLayout()
-        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        TableLayoutPanel2.SuspendLayout()
         Guna2CustomGradientPanel1.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel2.SuspendLayout()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2GradientPanel1
@@ -88,28 +88,212 @@ Partial Class LoginForm
         Guna2GradientPanel1.Size = New Size(928, 476)
         Guna2GradientPanel1.TabIndex = 0
         ' 
-        ' Guna2PictureBox2
+        ' Guna2CustomGradientPanel1
         ' 
-        Guna2PictureBox2.BackColor = Color.Transparent
-        Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges9
-        Guna2PictureBox2.FillColor = Color.Transparent
-        Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
-        Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(0, 146)
-        Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2PictureBox2.Size = New Size(557, 476)
-        Guna2PictureBox2.TabIndex = 2
-        Guna2PictureBox2.TabStop = False
-        Guna2PictureBox2.UseTransparentBackground = True
-        Guna2PictureBox2.WaitOnLoad = True
+        Guna2CustomGradientPanel1.BackColor = Color.Transparent
+        Guna2CustomGradientPanel1.BorderRadius = 30
+        Guna2CustomGradientPanel1.Controls.Add(TableLayoutPanel5)
+        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges7
+        Guna2CustomGradientPanel1.Location = New Point(595, 27)
+        Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
+        Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 20
+        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2CustomGradientPanel1.Size = New Size(300, 417)
+        Guna2CustomGradientPanel1.TabIndex = 4
         ' 
-        ' Guna2BorderlessForm1
+        ' TableLayoutPanel5
         ' 
-        Guna2BorderlessForm1.ContainerControl = Me
-        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
-        Guna2BorderlessForm1.TransparentWhileDrag = True
+        TableLayoutPanel5.BackColor = Color.Transparent
+        TableLayoutPanel5.ColumnCount = 1
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel5.Controls.Add(btnLogin, 0, 4)
+        TableLayoutPanel5.Controls.Add(TableLayoutPanel1, 0, 2)
+        TableLayoutPanel5.Controls.Add(TableLayoutPanel3, 0, 1)
+        TableLayoutPanel5.Controls.Add(TableLayoutPanel4, 0, 0)
+        TableLayoutPanel5.Dock = DockStyle.Fill
+        TableLayoutPanel5.Location = New Point(0, 0)
+        TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel5.Name = "TableLayoutPanel5"
+        TableLayoutPanel5.RowCount = 5
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 22.4377747F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 23.3353539F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 31.26788F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 22.9589844F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 49F))
+        TableLayoutPanel5.Size = New Size(300, 417)
+        TableLayoutPanel5.TabIndex = 1
+        ' 
+        ' btnLogin
+        ' 
+        btnLogin.BorderRadius = 18
+        btnLogin.CustomizableEdges = CustomizableEdges1
+        btnLogin.DisabledState.BorderColor = Color.DarkGray
+        btnLogin.DisabledState.CustomBorderColor = Color.DarkGray
+        btnLogin.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnLogin.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnLogin.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnLogin.Dock = DockStyle.Fill
+        btnLogin.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        btnLogin.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        btnLogin.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnLogin.ForeColor = Color.White
+        btnLogin.GradientMode = Drawing2D.LinearGradientMode.Vertical
+        btnLogin.Location = New Point(20, 371)
+        btnLogin.Margin = New Padding(20, 5, 25, 5)
+        btnLogin.Name = "btnLogin"
+        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnLogin.Size = New Size(255, 41)
+        btnLogin.TabIndex = 3
+        btnLogin.Text = "LOGIN"
+        ' 
+        ' TableLayoutPanel1
+        ' 
+        TableLayoutPanel1.ColumnCount = 1
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.Controls.Add(gtbPassword, 0, 1)
+        TableLayoutPanel1.Controls.Add(Label6, 0, 0)
+        TableLayoutPanel1.Controls.Add(LinkLabel1, 0, 2)
+        TableLayoutPanel1.Location = New Point(3, 170)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 3
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel1.Size = New Size(294, 109)
+        TableLayoutPanel1.TabIndex = 4
+        ' 
+        ' gtbPassword
+        ' 
+        gtbPassword.BorderColor = SystemColors.GrayText
+        gtbPassword.BorderRadius = 10
+        gtbPassword.CustomizableEdges = CustomizableEdges3
+        gtbPassword.DefaultText = ""
+        gtbPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        gtbPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        gtbPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        gtbPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        gtbPassword.Dock = DockStyle.Fill
+        gtbPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        gtbPassword.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        gtbPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        gtbPassword.IconRight = CType(resources.GetObject("gtbPassword.IconRight"), Image)
+        gtbPassword.IconRightOffset = New Point(5, 0)
+        gtbPassword.Location = New Point(3, 40)
+        gtbPassword.Margin = New Padding(3, 4, 3, 4)
+        gtbPassword.Name = "gtbPassword"
+        gtbPassword.PasswordChar = "•"c
+        gtbPassword.PlaceholderText = ""
+        gtbPassword.SelectedText = ""
+        gtbPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        gtbPassword.Size = New Size(288, 28)
+        gtbPassword.TabIndex = 4
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Dock = DockStyle.Fill
+        Label6.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(3, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(288, 36)
+        Label6.TabIndex = 5
+        Label6.Text = "Password"
+        Label6.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' LinkLabel1
+        ' 
+        LinkLabel1.Anchor = AnchorStyles.None
+        LinkLabel1.AutoSize = True
+        LinkLabel1.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LinkLabel1.LinkBehavior = LinkBehavior.NeverUnderline
+        LinkLabel1.Location = New Point(92, 79)
+        LinkLabel1.Name = "LinkLabel1"
+        LinkLabel1.Size = New Size(109, 22)
+        LinkLabel1.TabIndex = 6
+        LinkLabel1.TabStop = True
+        LinkLabel1.Text = "Forgot password"
+        ' 
+        ' TableLayoutPanel3
+        ' 
+        TableLayoutPanel3.ColumnCount = 1
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel3.Controls.Add(Label8, 0, 1)
+        TableLayoutPanel3.Controls.Add(Label7, 0, 0)
+        TableLayoutPanel3.Dock = DockStyle.Fill
+        TableLayoutPanel3.Location = New Point(3, 85)
+        TableLayoutPanel3.Name = "TableLayoutPanel3"
+        TableLayoutPanel3.RowCount = 2
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
+        TableLayoutPanel3.Size = New Size(294, 79)
+        TableLayoutPanel3.TabIndex = 5
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Dock = DockStyle.Fill
+        Label8.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(3, 47)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(288, 32)
+        Label8.TabIndex = 7
+        Label8.Text = "Please enter your password"
+        Label8.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Dock = DockStyle.Fill
+        Label7.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(3, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(288, 47)
+        Label7.TabIndex = 6
+        Label7.Text = "ADMIN LOGIN"
+        Label7.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' TableLayoutPanel4
+        ' 
+        TableLayoutPanel4.ColumnCount = 2
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 37.5F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 62.5F))
+        TableLayoutPanel4.Controls.Add(Label9, 1, 0)
+        TableLayoutPanel4.Controls.Add(Guna2PictureBox1, 0, 0)
+        TableLayoutPanel4.Dock = DockStyle.Fill
+        TableLayoutPanel4.Location = New Point(3, 3)
+        TableLayoutPanel4.Name = "TableLayoutPanel4"
+        TableLayoutPanel4.RowCount = 1
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel4.Size = New Size(294, 76)
+        TableLayoutPanel4.TabIndex = 6
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Dock = DockStyle.Fill
+        Label9.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Label9.Location = New Point(113, 0)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(178, 76)
+        Label9.TabIndex = 6
+        Label9.Text = "BubbleFresh"
+        Label9.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Guna2PictureBox1
+        ' 
+        Guna2PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
+        Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
+        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.Location = New Point(55, 3)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2PictureBox1.Size = New Size(52, 70)
+        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        Guna2PictureBox1.TabIndex = 7
+        Guna2PictureBox1.TabStop = False
         ' 
         ' TableLayoutPanel2
         ' 
@@ -200,215 +384,28 @@ Partial Class LoginForm
         Label2.TabIndex = 3
         Label2.Text = "LAUNDRY MANAGEMENT" & vbLf
         ' 
-        ' Guna2CustomGradientPanel1
+        ' Guna2PictureBox2
         ' 
-        Guna2CustomGradientPanel1.BackColor = Color.Transparent
-        Guna2CustomGradientPanel1.BorderRadius = 30
-        Guna2CustomGradientPanel1.Controls.Add(TableLayoutPanel5)
-        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges7
-        Guna2CustomGradientPanel1.Location = New Point(595, 27)
-        Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 20
-        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2CustomGradientPanel1.Size = New Size(300, 417)
-        Guna2CustomGradientPanel1.TabIndex = 4
+        Guna2PictureBox2.BackColor = Color.Transparent
+        Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges9
+        Guna2PictureBox2.FillColor = Color.Transparent
+        Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.Location = New Point(0, 146)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2PictureBox2.Size = New Size(557, 476)
+        Guna2PictureBox2.TabIndex = 2
+        Guna2PictureBox2.TabStop = False
+        Guna2PictureBox2.UseTransparentBackground = True
+        Guna2PictureBox2.WaitOnLoad = True
         ' 
-        ' TableLayoutPanel5
+        ' Guna2BorderlessForm1
         ' 
-        TableLayoutPanel5.BackColor = Color.Transparent
-        TableLayoutPanel5.ColumnCount = 1
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel5.Controls.Add(Guna2GradientButton3, 0, 4)
-        TableLayoutPanel5.Controls.Add(TableLayoutPanel1, 0, 2)
-        TableLayoutPanel5.Controls.Add(TableLayoutPanel3, 0, 1)
-        TableLayoutPanel5.Controls.Add(TableLayoutPanel4, 0, 0)
-        TableLayoutPanel5.Dock = DockStyle.Fill
-        TableLayoutPanel5.Location = New Point(0, 0)
-        TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
-        TableLayoutPanel5.Name = "TableLayoutPanel5"
-        TableLayoutPanel5.RowCount = 5
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 22.4377747F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 23.3353539F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 31.26788F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 22.9589844F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 49F))
-        TableLayoutPanel5.Size = New Size(300, 417)
-        TableLayoutPanel5.TabIndex = 1
-        ' 
-        ' Guna2CheckBox3
-        ' 
-        Guna2CheckBox3.Anchor = AnchorStyles.None
-        Guna2CheckBox3.AutoSize = True
-        Guna2CheckBox3.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox3.CheckedState.BorderRadius = 0
-        Guna2CheckBox3.CheckedState.BorderThickness = 0
-        Guna2CheckBox3.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox3.Font = New Font("Poppins ExtraLight", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2CheckBox3.Location = New Point(92, 79)
-        Guna2CheckBox3.Margin = New Padding(3, 2, 3, 2)
-        Guna2CheckBox3.Name = "Guna2CheckBox3"
-        Guna2CheckBox3.Size = New Size(110, 23)
-        Guna2CheckBox3.TabIndex = 3
-        Guna2CheckBox3.Text = "Show Password"
-        Guna2CheckBox3.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox3.UncheckedState.BorderRadius = 0
-        Guna2CheckBox3.UncheckedState.BorderThickness = 0
-        Guna2CheckBox3.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        ' 
-        ' Guna2GradientButton3
-        ' 
-        Guna2GradientButton3.BorderRadius = 18
-        Guna2GradientButton3.CustomizableEdges = CustomizableEdges1
-        Guna2GradientButton3.DisabledState.BorderColor = Color.DarkGray
-        Guna2GradientButton3.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientButton3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientButton3.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientButton3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2GradientButton3.Dock = DockStyle.Fill
-        Guna2GradientButton3.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientButton3.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        Guna2GradientButton3.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2GradientButton3.ForeColor = Color.White
-        Guna2GradientButton3.GradientMode = Drawing2D.LinearGradientMode.Vertical
-        Guna2GradientButton3.Location = New Point(20, 371)
-        Guna2GradientButton3.Margin = New Padding(20, 5, 25, 5)
-        Guna2GradientButton3.Name = "Guna2GradientButton3"
-        Guna2GradientButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2GradientButton3.Size = New Size(255, 41)
-        Guna2GradientButton3.TabIndex = 3
-        Guna2GradientButton3.Text = "LOGIN"
-        ' 
-        ' TableLayoutPanel1
-        ' 
-        TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Controls.Add(Guna2CheckBox3, 0, 2)
-        TableLayoutPanel1.Controls.Add(Guna2TextBox1, 0, 1)
-        TableLayoutPanel1.Controls.Add(Label6, 0, 0)
-        TableLayoutPanel1.Location = New Point(3, 170)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 3
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel1.Size = New Size(294, 109)
-        TableLayoutPanel1.TabIndex = 4
-        ' 
-        ' Guna2TextBox1
-        ' 
-        Guna2TextBox1.BorderColor = Color.Gray
-        Guna2TextBox1.BorderRadius = 16
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges3
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.Dock = DockStyle.Fill
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9F)
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(3, 39)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PlaceholderText = ""
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox1.Size = New Size(288, 30)
-        Guna2TextBox1.TabIndex = 4
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(3, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(288, 36)
-        Label6.TabIndex = 5
-        Label6.Text = "Password"
-        Label6.TextAlign = ContentAlignment.BottomLeft
-        ' 
-        ' TableLayoutPanel3
-        ' 
-        TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel3.Controls.Add(Label8, 0, 1)
-        TableLayoutPanel3.Controls.Add(Label7, 0, 0)
-        TableLayoutPanel3.Dock = DockStyle.Fill
-        TableLayoutPanel3.Location = New Point(3, 85)
-        TableLayoutPanel3.Name = "TableLayoutPanel3"
-        TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 60F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
-        TableLayoutPanel3.Size = New Size(294, 79)
-        TableLayoutPanel3.TabIndex = 5
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(3, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(288, 47)
-        Label7.TabIndex = 6
-        Label7.Text = "ADMIN LOGIN"
-        Label7.TextAlign = ContentAlignment.BottomCenter
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(3, 47)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(288, 32)
-        Label8.TabIndex = 7
-        Label8.Text = "Please enter your password"
-        Label8.TextAlign = ContentAlignment.TopCenter
-        ' 
-        ' TableLayoutPanel4
-        ' 
-        TableLayoutPanel4.ColumnCount = 2
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 37.5F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 62.5F))
-        TableLayoutPanel4.Controls.Add(Label9, 1, 0)
-        TableLayoutPanel4.Controls.Add(Guna2PictureBox1, 0, 0)
-        TableLayoutPanel4.Dock = DockStyle.Fill
-        TableLayoutPanel4.Location = New Point(3, 3)
-        TableLayoutPanel4.Name = "TableLayoutPanel4"
-        TableLayoutPanel4.RowCount = 1
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel4.Size = New Size(294, 76)
-        TableLayoutPanel4.TabIndex = 6
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label9.Location = New Point(113, 0)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(178, 76)
-        Label9.TabIndex = 6
-        Label9.Text = "BubbleFresh"
-        Label9.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' Guna2PictureBox1
-        ' 
-        Guna2PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
-        Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
-        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
-        Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(55, 3)
-        Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2PictureBox1.Size = New Size(52, 70)
-        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        Guna2PictureBox1.TabIndex = 7
-        Guna2PictureBox1.TabStop = False
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
         ' 
         ' LoginForm
         ' 
@@ -417,13 +414,13 @@ Partial Class LoginForm
         ClientSize = New Size(928, 476)
         Controls.Add(Guna2GradientPanel1)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        KeyPreview = True
         Margin = New Padding(3, 2, 3, 2)
         Name = "LoginForm"
-        Text = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Bubblefresh"
         Guna2GradientPanel1.ResumeLayout(False)
-        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        TableLayoutPanel2.ResumeLayout(False)
-        TableLayoutPanel2.PerformLayout()
         Guna2CustomGradientPanel1.ResumeLayout(False)
         TableLayoutPanel5.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
@@ -433,6 +430,9 @@ Partial Class LoginForm
         TableLayoutPanel4.ResumeLayout(False)
         TableLayoutPanel4.PerformLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel2.ResumeLayout(False)
+        TableLayoutPanel2.PerformLayout()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -448,10 +448,9 @@ Partial Class LoginForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents Guna2GradientButton3 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2CheckBox3 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents gtbPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label7 As Label
@@ -459,4 +458,5 @@ Partial Class LoginForm
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label9 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
