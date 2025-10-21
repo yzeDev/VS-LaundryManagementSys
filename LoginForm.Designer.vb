@@ -261,7 +261,7 @@ Partial Class LoginForm
         Label7.Name = "Label7"
         Label7.Size = New Size(288, 47)
         Label7.TabIndex = 6
-        Label7.Text = "ADMIN LOGIN"
+        Label7.Text = "USER LOGIN"
         Label7.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' TableLayoutPanel4
