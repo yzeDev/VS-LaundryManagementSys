@@ -71,8 +71,14 @@ Partial Class TransactionForm
         TableLayoutPanel1.Controls.Add(lblDate, 1, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(4)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 4
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 90.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
+        TableLayoutPanel1.Size = New Size(1167, 666)
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
@@ -85,12 +91,14 @@ Partial Class TransactionForm
         TableLayoutPanel1.SetColumnSpan(Panel2, 2)
         Panel2.Controls.Add(TableLayoutPanel2)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(3, 103)
+        Panel2.Location = New Point(4, 154)
+        Panel2.Margin = New Padding(4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(621, 231)
+        Panel2.Size = New Size(776, 309)
         Panel2.TabIndex = 1
         ' 
         ' TableLayoutPanel2
+        ' 
         ' 
         TableLayoutPanel2.ColumnCount = 2
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
@@ -117,12 +125,24 @@ Partial Class TransactionForm
         TableLayoutPanel2.Controls.Add(cbStatus, 0, 9)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(4)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 10
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel2.Size = New Size(1159, 448)
+        TableLayoutPanel2.TabIndex = 0
+        ' 
+        ' lblCustomer
+        ' 
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
@@ -137,9 +157,10 @@ Partial Class TransactionForm
         lblCustomer.AutoSize = True
         lblCustomer.Dock = DockStyle.Fill
         lblCustomer.Font = New Font("Segoe UI", 14.25F)
-        lblCustomer.Location = New Point(3, 0)
+        lblCustomer.Location = New Point(4, 0)
+        lblCustomer.Margin = New Padding(4, 0, 4, 0)
         lblCustomer.Name = "lblCustomer"
-        lblCustomer.Size = New Size(304, 23)
+        lblCustomer.Size = New Size(382, 30)
         lblCustomer.TabIndex = 0
         lblCustomer.Text = "Customer Name:"
         lblCustomer.TextAlign = ContentAlignment.BottomLeft
@@ -149,270 +170,337 @@ Partial Class TransactionForm
         lblService.AutoSize = True
         lblService.Dock = DockStyle.Fill
         lblService.Font = New Font("Segoe UI", 14.25F)
-        lblService.Location = New Point(2, 46)
-        lblService.Margin = New Padding(2, 0, 2, 0)
+        lblService.Location = New Point(3, 60)
         lblService.Name = "lblService"
-        lblService.Size = New Size(306, 23)
+        lblService.Size = New Size(382, 30)
         lblService.TabIndex = 1
-        lblService.Text = "Service Type"
+        lblService.TabIndex = 1
+        lblService.TabIndex = 1
         lblService.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' tbCustomerName
         ' 
         tbCustomerName.Dock = DockStyle.Fill
         tbCustomerName.Font = New Font("Segoe UI", 14.25F)
-        tbCustomerName.Location = New Point(2, 25)
-        tbCustomerName.Margin = New Padding(2)
+        tbCustomerName.Location = New Point(3, 33)
+        tbCustomerName.Name = "tbCustomerName"
+        tbCustomerName.Size = New Size(382, 33)
+        tbCustomerName.Name = "tbCustomerName"
+        tbCustomerName.Size = New Size(571, 45)
         tbCustomerName.Name = "tbCustomerName"
         tbCustomerName.Size = New Size(306, 33)
-        tbCustomerName.TabIndex = 9
         ' 
-        ' tbChange
+        ' 
+        ' 
         ' 
         tbChange.Dock = DockStyle.Fill
         tbChange.Enabled = False
         tbChange.Font = New Font("Segoe UI", 14.25F)
-        tbChange.Location = New Point(312, 209)
-        tbChange.Margin = New Padding(2)
+        tbChange.Location = New Point(391, 273)
         tbChange.Name = "tbChange"
+        tbChange.Size = New Size(382, 33)
+        tbChange.TabIndex = 17
+        tbChange.Size = New Size(572, 45)
+        tbChange.TabIndex = 17
         tbChange.Size = New Size(307, 33)
         tbChange.TabIndex = 17
-        ' 
         ' lblChange
-        ' 
+        ' lblChange
+        ' lblChange
         lblChange.AutoSize = True
         lblChange.Dock = DockStyle.Fill
         lblChange.Font = New Font("Segoe UI", 14.25F)
-        lblChange.Location = New Point(312, 184)
-        lblChange.Margin = New Padding(2, 0, 2, 0)
+        lblChange.Location = New Point(391, 240)
         lblChange.Name = "lblChange"
+        lblChange.Size = New Size(382, 30)
+        lblChange.TabIndex = 8
+        lblChange.Size = New Size(572, 44)
+        lblChange.TabIndex = 8
         lblChange.Size = New Size(307, 23)
         lblChange.TabIndex = 8
-        lblChange.Text = "Change:"
         lblChange.TextAlign = ContentAlignment.BottomLeft
-        ' 
+        lblChange.TextAlign = ContentAlignment.BottomLeft
+        lblChange.TextAlign = ContentAlignment.BottomLeft
         ' tbAmountReceived
         ' 
         tbAmountReceived.Dock = DockStyle.Fill
         tbAmountReceived.Enabled = False
         tbAmountReceived.Font = New Font("Segoe UI", 14.25F)
-        tbAmountReceived.Location = New Point(312, 163)
+        tbAmountReceived.Location = New Point(391, 213)
+        tbAmountReceived.Name = "tbAmountReceived"
+        tbAmountReceived.Margin = New Padding(4)
+        tbAmountReceived.Name = "tbAmountReceived"
         tbAmountReceived.Margin = New Padding(2)
         tbAmountReceived.Name = "tbAmountReceived"
-        tbAmountReceived.Size = New Size(307, 33)
         tbAmountReceived.TabIndex = 16
-        ' 
+        tbAmountReceived.TabIndex = 16
+        tbAmountReceived.TabIndex = 16
         ' lblAmountReceived
         ' 
         lblAmountReceived.AutoSize = True
         lblAmountReceived.Dock = DockStyle.Fill
         lblAmountReceived.Font = New Font("Segoe UI", 14.25F)
-        lblAmountReceived.Location = New Point(312, 138)
-        lblAmountReceived.Margin = New Padding(2, 0, 2, 0)
+        lblAmountReceived.Location = New Point(391, 180)
         lblAmountReceived.Name = "lblAmountReceived"
         lblAmountReceived.RightToLeft = RightToLeft.No
+        lblAmountReceived.Size = New Size(382, 30)
+        lblAmountReceived.RightToLeft = RightToLeft.No
+        lblAmountReceived.Size = New Size(572, 44)
+        lblAmountReceived.RightToLeft = RightToLeft.No
         lblAmountReceived.Size = New Size(307, 23)
-        lblAmountReceived.TabIndex = 7
         lblAmountReceived.Text = "Amount Received:"
-        lblAmountReceived.TextAlign = ContentAlignment.BottomLeft
+        lblAmountReceived.Text = "Amount Received:"
+        lblAmountReceived.Text = "Amount Received:"
         ' 
         ' tbTotal
         ' 
         tbTotal.Dock = DockStyle.Fill
         tbTotal.Enabled = False
         tbTotal.Font = New Font("Segoe UI", 14.25F)
+        tbTotal.Location = New Point(391, 153)
+        tbTotal.Location = New Point(583, 224)
+        tbTotal.Margin = New Padding(4)
         tbTotal.Location = New Point(312, 117)
         tbTotal.Margin = New Padding(2)
-        tbTotal.Name = "tbTotal"
-        tbTotal.Size = New Size(307, 33)
+        tbTotal.Size = New Size(382, 33)
         tbTotal.TabIndex = 15
-        ' 
+        tbTotal.TabIndex = 15
+        tbTotal.TabIndex = 15
         ' lblTotal
         ' 
         lblTotal.AutoSize = True
         lblTotal.Dock = DockStyle.Fill
         lblTotal.Font = New Font("Segoe UI", 14.25F)
-        lblTotal.Location = New Point(312, 92)
-        lblTotal.Margin = New Padding(2, 0, 2, 0)
+        lblTotal.Location = New Point(391, 120)
         lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(382, 30)
+        lblTotal.TabIndex = 6
+        lblTotal.Size = New Size(572, 44)
+        lblTotal.TabIndex = 6
         lblTotal.Size = New Size(307, 23)
         lblTotal.TabIndex = 6
-        lblTotal.Text = "Total:"
         lblTotal.TextAlign = ContentAlignment.BottomLeft
-        ' 
+        lblTotal.TextAlign = ContentAlignment.BottomLeft
+        lblTotal.TextAlign = ContentAlignment.BottomLeft
         ' tbPaymentMethod
         ' 
         tbPaymentMethod.Dock = DockStyle.Fill
         tbPaymentMethod.Enabled = False
         tbPaymentMethod.Font = New Font("Segoe UI", 14.25F)
-        tbPaymentMethod.Location = New Point(312, 71)
+        tbPaymentMethod.Location = New Point(391, 93)
+        tbPaymentMethod.Name = "tbPaymentMethod"
+        tbPaymentMethod.Margin = New Padding(4)
+        tbPaymentMethod.Name = "tbPaymentMethod"
         tbPaymentMethod.Margin = New Padding(2)
         tbPaymentMethod.Name = "tbPaymentMethod"
-        tbPaymentMethod.Size = New Size(307, 33)
         tbPaymentMethod.TabIndex = 14
-        ' 
+        tbPaymentMethod.TabIndex = 14
+        tbPaymentMethod.TabIndex = 14
         ' lblPaymentMethod
         ' 
         lblPaymentMethod.AutoSize = True
         lblPaymentMethod.Dock = DockStyle.Fill
         lblPaymentMethod.Font = New Font("Segoe UI", 14.25F)
-        lblPaymentMethod.Location = New Point(312, 46)
-        lblPaymentMethod.Margin = New Padding(2, 0, 2, 0)
+        lblPaymentMethod.Location = New Point(391, 60)
         lblPaymentMethod.Name = "lblPaymentMethod"
+        lblPaymentMethod.Size = New Size(382, 30)
+        lblPaymentMethod.TabIndex = 5
+        lblPaymentMethod.Size = New Size(572, 44)
+        lblPaymentMethod.TabIndex = 5
         lblPaymentMethod.Size = New Size(307, 23)
         lblPaymentMethod.TabIndex = 5
-        lblPaymentMethod.Text = "Payment Method:"
         lblPaymentMethod.TextAlign = ContentAlignment.BottomLeft
-        ' 
+        lblPaymentMethod.TextAlign = ContentAlignment.BottomLeft
+        lblPaymentMethod.TextAlign = ContentAlignment.BottomLeft
         ' tbMachineUsed
         ' 
         tbMachineUsed.Dock = DockStyle.Fill
         tbMachineUsed.Font = New Font("Segoe UI", 14.25F)
-        tbMachineUsed.Location = New Point(312, 25)
-        tbMachineUsed.Margin = New Padding(2)
+        tbMachineUsed.Location = New Point(391, 33)
+        tbMachineUsed.Name = "tbMachineUsed"
+        tbMachineUsed.Size = New Size(382, 33)
+        tbMachineUsed.Name = "tbMachineUsed"
+        tbMachineUsed.Size = New Size(572, 45)
         tbMachineUsed.Name = "tbMachineUsed"
         tbMachineUsed.Size = New Size(307, 33)
-        tbMachineUsed.TabIndex = 13
         ' 
-        ' lblMachineUsed
+        ' 
+        ' 
         ' 
         lblMachineUsed.AutoSize = True
         lblMachineUsed.Dock = DockStyle.Fill
         lblMachineUsed.Font = New Font("Segoe UI", 14.25F)
-        lblMachineUsed.Location = New Point(312, 0)
-        lblMachineUsed.Margin = New Padding(2, 0, 2, 0)
+        lblMachineUsed.Location = New Point(391, 0)
         lblMachineUsed.Name = "lblMachineUsed"
+        lblMachineUsed.Size = New Size(382, 30)
+        lblMachineUsed.TabIndex = 4
+        lblMachineUsed.Size = New Size(572, 44)
+        lblMachineUsed.TabIndex = 4
         lblMachineUsed.Size = New Size(307, 23)
         lblMachineUsed.TabIndex = 4
-        lblMachineUsed.Text = "Machine Used:"
         lblMachineUsed.TextAlign = ContentAlignment.BottomLeft
-        ' 
+        lblMachineUsed.TextAlign = ContentAlignment.BottomLeft
+        lblMachineUsed.TextAlign = ContentAlignment.BottomLeft
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
         lblStatus.Dock = DockStyle.Fill
         lblStatus.Font = New Font("Segoe UI", 14.25F)
-        lblStatus.Location = New Point(2, 184)
+        lblStatus.Location = New Point(3, 240)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Margin = New Padding(4, 0, 4, 0)
+        lblStatus.Name = "lblStatus"
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(306, 23)
         lblStatus.TabIndex = 3
-        lblStatus.Text = "Status:"
+        lblStatus.TabIndex = 3
+        lblStatus.TabIndex = 3
         lblStatus.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' tbAddress
         ' 
         tbAddress.Dock = DockStyle.Fill
         tbAddress.Font = New Font("Segoe UI", 14.25F)
-        tbAddress.Location = New Point(2, 163)
-        tbAddress.Margin = New Padding(2)
+        tbAddress.Location = New Point(3, 213)
+        tbAddress.Name = "tbAddress"
+        tbAddress.Size = New Size(382, 33)
+        tbAddress.Name = "tbAddress"
+        tbAddress.Size = New Size(571, 45)
         tbAddress.Name = "tbAddress"
         tbAddress.Size = New Size(306, 33)
-        tbAddress.TabIndex = 11
         ' 
-        ' lblAddress
+        ' 
+        ' 
         ' 
         lblAddress.AutoSize = True
         lblAddress.Dock = DockStyle.Fill
         lblAddress.Font = New Font("Segoe UI", 14.25F)
-        lblAddress.Location = New Point(2, 138)
-        lblAddress.Margin = New Padding(2, 0, 2, 0)
+        lblAddress.Location = New Point(3, 180)
         lblAddress.Name = "lblAddress"
+        lblAddress.Size = New Size(382, 30)
+        lblAddress.TabIndex = 2
+        lblAddress.Size = New Size(571, 44)
+        lblAddress.TabIndex = 2
         lblAddress.Size = New Size(306, 23)
         lblAddress.TabIndex = 2
-        lblAddress.Text = "Address:"
         lblAddress.TextAlign = ContentAlignment.BottomLeft
-        ' 
+        lblAddress.TextAlign = ContentAlignment.BottomLeft
+        lblAddress.TextAlign = ContentAlignment.BottomLeft
         ' lblContactNumber
         ' 
         lblContactNumber.AutoSize = True
         lblContactNumber.Dock = DockStyle.Fill
         lblContactNumber.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblContactNumber.Location = New Point(2, 92)
+        lblContactNumber.Location = New Point(3, 120)
+        lblContactNumber.Name = "lblContactNumber"
+        lblContactNumber.Margin = New Padding(4, 0, 4, 0)
+        lblContactNumber.Name = "lblContactNumber"
         lblContactNumber.Margin = New Padding(2, 0, 2, 0)
         lblContactNumber.Name = "lblContactNumber"
-        lblContactNumber.Size = New Size(306, 23)
         lblContactNumber.TabIndex = 18
-        lblContactNumber.Text = "Contact Number:"
+        lblContactNumber.TabIndex = 18
+        lblContactNumber.TabIndex = 18
         lblContactNumber.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' tbContactNum
         ' 
         tbContactNum.Dock = DockStyle.Fill
         tbContactNum.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        tbContactNum.Location = New Point(2, 117)
-        tbContactNum.Margin = New Padding(2)
+        tbContactNum.Location = New Point(3, 153)
+        tbContactNum.Name = "tbContactNum"
+        tbContactNum.Size = New Size(382, 33)
+        tbContactNum.Name = "tbContactNum"
+        tbContactNum.Size = New Size(571, 45)
         tbContactNum.Name = "tbContactNum"
         tbContactNum.Size = New Size(306, 33)
-        tbContactNum.TabIndex = 19
         ' 
-        ' cbService
+        ' 
+        ' 
         ' 
         cbService.Dock = DockStyle.Fill
         cbService.DropDownStyle = ComboBoxStyle.DropDownList
         cbService.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbService.FormattingEnabled = True
-        cbService.Location = New Point(2, 71)
-        cbService.Margin = New Padding(2)
+        cbService.Location = New Point(3, 93)
+        cbService.Name = "cbService"
+        cbService.Size = New Size(382, 33)
+        cbService.Name = "cbService"
+        cbService.Size = New Size(571, 48)
         cbService.Name = "cbService"
         cbService.Size = New Size(306, 33)
-        cbService.TabIndex = 20
         ' 
-        ' cbStatus
+        ' 
+        ' 
         ' 
         cbStatus.Dock = DockStyle.Fill
         cbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cbStatus.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbStatus.FormattingEnabled = True
-        cbStatus.Location = New Point(2, 209)
-        cbStatus.Margin = New Padding(2)
+        cbStatus.Location = New Point(3, 273)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(382, 33)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(571, 48)
         cbStatus.Name = "cbStatus"
         cbStatus.Size = New Size(306, 33)
-        cbStatus.TabIndex = 21
         ' 
-        ' btnSave
+        ' 
+        ' 
         ' 
         btnSave.Dock = DockStyle.Right
-        btnSave.Location = New Point(236, 339)
-        btnSave.Margin = New Padding(2)
+        btnSave.Location = New Point(313, 418)
         btnSave.Name = "btnSave"
-        btnSave.Size = New Size(75, 28)
+        btnSave.Size = New Size(75, 34)
         btnSave.TabIndex = 2
         btnSave.Text = "Save"
         btnSave.UseVisualStyleBackColor = True
-        ' 
+        btnSave.Text = "Save"
+        btnSave.UseVisualStyleBackColor = True
+        btnSave.Text = "Save"
+        btnSave.UseVisualStyleBackColor = True
         ' btnCancel
-        ' 
+        ' btnCancel
+        ' btnCancel
         btnCancel.Dock = DockStyle.Left
-        btnCancel.Location = New Point(315, 339)
-        btnCancel.Margin = New Padding(2)
+        btnCancel.Location = New Point(394, 418)
         btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(75, 34)
+        btnCancel.TabIndex = 3
+        btnCancel.Size = New Size(112, 52)
+        btnCancel.TabIndex = 3
         btnCancel.Size = New Size(75, 28)
         btnCancel.TabIndex = 3
-        btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = True
-        ' 
+        btnCancel.UseVisualStyleBackColor = True
+        btnCancel.UseVisualStyleBackColor = True
         ' Panel1
         ' 
         TableLayoutPanel1.SetColumnSpan(Panel1, 2)
         Panel1.Controls.Add(lblTitle)
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(3, 3)
+        Panel1.Location = New Point(4, 4)
+        Panel1.Margin = New Padding(4)
+        Panel1.Margin = New Padding(4)
+        Panel1.Name = "Panel1"
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(621, 54)
+        Panel1.Size = New Size(776, 54)
         Panel1.TabIndex = 4
+        ' 
         ' 
         ' lblTitle
         ' 
         lblTitle.Dock = DockStyle.Fill
         lblTitle.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTitle.Location = New Point(0, 0)
+        lblTitle.Margin = New Padding(4, 0, 4, 0)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(621, 54)
+        lblTitle.Size = New Size(776, 54)
         lblTitle.TabIndex = 0
         lblTitle.Text = "TRANSACTION FORM"
         lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' lblSubTitle
         ' lblSubTitle
         ' 
         lblSubTitle.AutoSize = True
@@ -420,7 +508,8 @@ Partial Class TransactionForm
         lblSubTitle.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblSubTitle.Location = New Point(3, 60)
         lblSubTitle.Name = "lblSubTitle"
-        lblSubTitle.Size = New Size(307, 40)
+        lblSubTitle.Size = New Size(385, 40)
+        lblSubTitle.TabIndex = 5
         lblSubTitle.TabIndex = 5
         lblSubTitle.Text = "Mode: (TransactionID)"
         ' 
@@ -429,37 +518,48 @@ Partial Class TransactionForm
         lblDate.AutoSize = True
         lblDate.Dock = DockStyle.Fill
         lblDate.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDate.Location = New Point(315, 60)
-        lblDate.Margin = New Padding(2, 0, 2, 0)
+        lblDate.Location = New Point(394, 60)
+        lblDate.Name = "lblDate"
+        lblDate.Margin = New Padding(4, 0, 4, 0)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(576, 60)
         lblDate.Name = "lblDate"
         lblDate.Size = New Size(310, 40)
-        lblDate.TabIndex = 6
         lblDate.Text = "Transaction Date:"
-        ' 
+        lblDate.Text = "Transaction Date:"
+        lblDate.Text = "Transaction Date:"
         ' TransactionForm
         ' 
         AutoScaleDimensions = New SizeF(96.0F, 96.0F)
         AutoScaleMode = AutoScaleMode.Dpi
-        ClientSize = New Size(627, 369)
+        ClientSize = New Size(782, 455)
         Controls.Add(TableLayoutPanel1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(4)
+        MaximumSize = New Size(1189, 722)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(2)
         MaximumSize = New Size(643, 408)
-        MinimumSize = New Size(642, 403)
         Name = "TransactionForm"
-        StartPosition = FormStartPosition.CenterParent
+        Name = "TransactionForm"
+        Name = "TransactionForm"
         Text = "Transaction Form"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         Panel2.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
-        TableLayoutPanel2.PerformLayout()
+        TableLayoutPanel2.ResumeLayout(False)
+        TableLayoutPanel2.ResumeLayout(False)
         Panel1.ResumeLayout(False)
-        ResumeLayout(False)
+        Panel1.ResumeLayout(False)
+        Panel1.ResumeLayout(False)
     End Sub
+
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Panel2 As Panel
+
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents btnSave As Button
     Friend WithEvents btnCancel As Button

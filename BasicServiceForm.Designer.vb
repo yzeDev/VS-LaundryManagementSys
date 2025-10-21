@@ -255,29 +255,7 @@ Partial Class BasicServiceForm
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel5.Size = New Size(490, 73)
         TableLayoutPanel5.TabIndex = 4
-        ' 
-        ' Guna2txtboxKg
-        ' 
-        Guna2TextBox4.AutoRoundedCorners = True
-        Guna2TextBox4.CustomizableEdges = CustomizableEdges3
-        Guna2TextBox4.DefaultText = ""
-        Guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox4.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.Dock = DockStyle.Fill
-        Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Font = New Font("Poppins", 12.0F)
-        Guna2TextBox4.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Location = New Point(371, 45)
-        Guna2TextBox4.Margin = New Padding(4, 9, 4, 9)
-        Guna2TextBox4.Name = "Guna2TextBox4"
-        Guna2TextBox4.PlaceholderText = ""
-        Guna2TextBox4.SelectedText = ""
-        Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox4.Size = New Size(115, 19)
-        Guna2txtboxKg.TabIndex = 6
-        ' 
+
         ' Label10
         ' 
         Label10.AutoSize = True
@@ -301,28 +279,6 @@ Partial Class BasicServiceForm
         Label9.TabIndex = 3
         Label9.Text = "Service Type:"
         Label9.TextAlign = ContentAlignment.BottomLeft
-        ' 
-        ' Guna2txtboxContact
-        ' 
-        Guna2TextBox2.AutoRoundedCorners = True
-        Guna2TextBox2.CustomizableEdges = CustomizableEdges5
-        Guna2TextBox2.DefaultText = ""
-        Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.Dock = DockStyle.Fill
-        Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(4, 45)
-        Guna2TextBox2.Margin = New Padding(4, 9, 4, 9)
-        Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PlaceholderText = ""
-        Guna2TextBox2.SelectedText = ""
-        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox2.Size = New Size(237, 19)
-        Guna2TextBox2.TabIndex = 2
         ' 
         ' Label8
         ' 
@@ -413,8 +369,6 @@ Partial Class BasicServiceForm
         ' 
         ' Guna2CheckBoxdelivery
         ' 
-        Guna2CheckBox1.AutoSize = True
-        Guna2CheckBox1.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBox1.CheckedState.BorderRadius = 0
         Guna2CheckBox1.CheckedState.BorderThickness = 0
         Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -445,25 +399,6 @@ Partial Class BasicServiceForm
         TableLayoutPanel8.Size = New Size(239, 31)
         TableLayoutPanel8.TabIndex = 4
         ' 
-        ' Guna2CheckBoxPickUp
-        ' 
-        Guna2CheckBox2.AutoSize = True
-        Guna2CheckBox2.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox2.CheckedState.BorderRadius = 0
-        Guna2CheckBox2.CheckedState.BorderThickness = 0
-        Guna2CheckBox2.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox2.Dock = DockStyle.Fill
-        Guna2CheckBox2.Font = New Font("Poppins", 9.75F)
-        Guna2CheckBox2.Location = New Point(74, 3)
-        Guna2CheckBox2.Name = "Guna2CheckBox2"
-        Guna2CheckBox2.Size = New Size(162, 25)
-        Guna2CheckBox2.TabIndex = 7
-        Guna2CheckBox2.Text = "on site pickup"
-        Guna2CheckBox2.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox2.UncheckedState.BorderRadius = 0
-        Guna2CheckBox2.UncheckedState.BorderThickness = 0
-        Guna2CheckBox2.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        ' 
         ' Label13
         ' 
         Label13.Dock = DockStyle.Fill
@@ -483,7 +418,6 @@ Partial Class BasicServiceForm
         txtboxAddress.Multiline = True
         txtboxAddress.Name = "txtboxAddress"
         txtboxAddress.Size = New Size(490, 73)
-        TextBox1.TabIndex = 7
         ' 
         ' TableLayoutPanel9
         ' 
@@ -731,4 +665,5 @@ Partial Class BasicServiceForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblTransactionID As Label
+    Public Property Guna2CheckBox1 As Object
 End Class
