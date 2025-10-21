@@ -1,8 +1,12 @@
 ﻿Imports System.Data.OleDb
 Imports System.Net.Http
+Imports System.Net.Http.Headers
+Imports System.Text
+Imports System.Threading.Tasks
 Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
+    Private Shared ReadOnly httpClient As New HttpClient()
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetupDashboardTransactionTable()
@@ -313,9 +317,43 @@ Public Class DashboardControl
         DirectCast(dgvDashboardTransactions.Columns("btnComplete"), DataGridViewImageColumn).Image = completeIcon
     End Sub
 
+    Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
+        Dim optionsForm As New TransactionOption()
+        optionsForm.StartPosition = FormStartPosition.CenterParent
+        optionsForm.ShowDialog()
+    End Sub
+
+    ' ====================== SMS FUNCTION ======================
+    Private Async Function SendSmsGsm(phoneNumber As String, message As String) As Task(Of Boolean)
+        Dim username As String = "yzekeil"
+        Dim password As String = "laundry"
+        Dim ip As String = "192.168.1.3"
+        Dim port As String = "8093"
+        'http://192.168.1.3:8093/SendSMS?username=yzekeil&password=laundry&phone=639918739459&message=test
+        Dim url As String = $"http://{ip}:{port}/SendSMS?username={username}&password={password}&phone={phoneNumber}&message={Uri.EscapeDataString("BubbleFresh Laundry" & vbLf & vbLf & message)}"
+
+        Using client As New HttpClient()
+            ' Add Basic Authentication header
+            Dim byteArray = System.Text.Encoding.ASCII.GetBytes($"{username}:{password}")
+            client.DefaultRequestHeaders.Authorization = New System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray))
+
+            Try
+                Dim response As HttpResponseMessage = Await client.GetAsync(url)
+                Dim result As String = Await response.Content.ReadAsStringAsync()
+
+                ' Optional: Debug
+                ' MessageBox.Show(result)
+
+                Return response.IsSuccessStatusCode
+            Catch ex As Exception
+                MessageBox.Show($"Error sending SMS: {ex.Message}", "SMS Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+        End Using
+    End Function
 
 
-
+    ' ====================== HANDLE BUTTON CLICK ======================
     Private Async Sub DgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
         If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
 
@@ -327,15 +365,31 @@ Public Class DashboardControl
 
         Select Case colName
             Case "btnNotify"
+                ' Compose SMS based on status
+                Dim smsMessage As String
+                If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
+                    smsMessage = $"Hi {customerName}, your laundry is ready for pickup. Thank you!"
+                ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
+                    smsMessage = $"Hi {customerName}, your laundry is out for delivery. It will arrive soon. Thank you!"
+                Else
+                    smsMessage = $"Hi {customerName}, your laundry update: {status}."
+                End If
+
+                ' Confirm sending
+                Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
+                                             "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If confirm = DialogResult.Yes Then
+                    Dim success As Boolean = Await SendSmsGsm(contactNumber, smsMessage)
+
+                    If success Then
+                        MessageBox.Show("SMS sent successfully!", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        MessageBox.Show("Failed to send SMS.", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+                End If
 
             Case "btnComplete"
                 HandleCheckClick(id)
         End Select
-    End Sub
-
-    Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
-        Dim optionsForm As New TransactionOption()
-        optionsForm.StartPosition = FormStartPosition.CenterParent
-        optionsForm.ShowDialog()
     End Sub
 End Class
