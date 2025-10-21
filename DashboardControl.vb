@@ -1,12 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports System.Net.Http
-Imports System.Threading.Tasks
-Imports System.Collections.Generic
-
 Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
-    Private Shared ReadOnly httpClient As New HttpClient()
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetupDashboardTransactionTable()
@@ -193,34 +189,6 @@ Public Class DashboardControl
     End Sub
 
 
-
-    Private Async Function HandleNotifyClick(customerName As String, contactNumber As String, status As String) As Task
-        Dim smsMessage As String
-
-        ' Customize message based on status
-        If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
-            smsMessage = $"Hi {customerName}, your laundry is now ready for pickup. Thank you for choosing us!"
-        ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
-            smsMessage = $"Hi {customerName}, your laundry is out for delivery and will arrive soon. Thank you for choosing us!"
-        Else
-            smsMessage = $"Hi {customerName}, your laundry update: {status}."
-        End If
-
-        Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
-                                  "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If confirm <> DialogResult.Yes Then Exit Function
-
-
-        Try
-            Dim result As String = Await SendSmsViaEngageSparkAsync(contactNumber, smsMessage)
-            MessageBox.Show($"✅ SMS sent successfully!" & vbCrLf & result, "Customer Notified",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("❌ Failed to send SMS: " & ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Function
-
     Private Sub HandleCheckClick(id As Integer)
         Dim confirm = MessageBox.Show($"Mark transaction #{id} as Completed?",
                                   "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -245,20 +213,6 @@ Public Class DashboardControl
             MessageBox.Show("Error updating transaction: " & ex.Message)
         End Try
     End Sub
-
-
-
-            Dim response As HttpResponseMessage = Await client.PostAsync(EngageSparkApiUrl, content)
-            Dim responseBody As String = Await response.Content.ReadAsStringAsync()
-
-            If response.IsSuccessStatusCode Then
-                Return responseBody
-            Else
-                Throw New Exception($"HTTP {response.StatusCode}: {responseBody}")
-            End If
-        End Using
-    End Function
-
 
     Private Sub UpdateDashboardCounters()
         LoadDashboardCounters()
@@ -362,7 +316,7 @@ Public Class DashboardControl
 
 
 
-    Private Async Sub dgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
+    Private Async Sub DgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
         If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
 
         Dim colName As String = dgvDashboardTransactions.Columns(e.ColumnIndex).Name
@@ -373,7 +327,6 @@ Public Class DashboardControl
 
         Select Case colName
             Case "btnNotify"
-                Await HandleNotifyClick(customerName, contactNumber, status)
 
             Case "btnComplete"
                 HandleCheckClick(id)

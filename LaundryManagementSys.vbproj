@@ -22,9 +22,7 @@
 
   <ItemGroup>
     <Compile Update="DashboardTransactionRowHeader.vb" />
-    <Compile Update="DryCleaningForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="DryCleaningForm.vb" />
     <Compile Update="FullServiceForm.vb" />
     <Compile Update="InvoiceForm - Copy.vb" />
     <Compile Update="SelfServiceForm.vb" />
