@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Receipt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Receipt
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -169,7 +169,7 @@ Partial Class Receipt
         TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel1.Size = New Size(424, 41)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -184,7 +184,7 @@ Partial Class Receipt
         TableLayoutPanel2.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel2.Size = New Size(248, 37)
         TableLayoutPanel2.TabIndex = 1
         ' 
@@ -198,9 +198,9 @@ Partial Class Receipt
         TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 14F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 14.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 15.0F))
         TableLayoutPanel4.Size = New Size(187, 32)
         TableLayoutPanel4.TabIndex = 2
         ' 
@@ -252,9 +252,9 @@ Partial Class Receipt
         TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 3
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 18F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 18.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel5.Size = New Size(150, 37)
         TableLayoutPanel5.TabIndex = 3
         ' 
@@ -263,7 +263,7 @@ Partial Class Receipt
         Label43.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Label43.AutoSize = True
         Label43.BackColor = Color.Transparent
-        Label43.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label43.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label43.ForeColor = Color.White
         Label43.Location = New Point(3, 17)
         Label43.Name = "Label43"
@@ -302,9 +302,9 @@ Partial Class Receipt
         TableLayoutPanel3.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 3
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 19F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 16.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 19.0F))
         TableLayoutPanel3.Size = New Size(270, 49)
         TableLayoutPanel3.TabIndex = 2
         ' 
@@ -399,8 +399,8 @@ Partial Class Receipt
         TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 2
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 24F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 24.0F))
         TableLayoutPanel6.Size = New Size(124, 43)
         TableLayoutPanel6.TabIndex = 4
         ' 
@@ -459,7 +459,7 @@ Partial Class Receipt
         TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel7.Size = New Size(422, 47)
         TableLayoutPanel7.TabIndex = 4
         ' 
@@ -473,8 +473,8 @@ Partial Class Receipt
         TableLayoutPanel8.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 1
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 23.0F))
         TableLayoutPanel8.Size = New Size(381, 26)
         TableLayoutPanel8.TabIndex = 9
         ' 
@@ -497,14 +497,14 @@ Partial Class Receipt
         TableLayoutPanel10.BackColor = Color.Transparent
         TableLayoutPanel10.ColumnCount = 2
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 288F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 288.0F))
         TableLayoutPanel10.Controls.Add(Label6, 1, 0)
         TableLayoutPanel10.Controls.Add(Label2, 0, 0)
         TableLayoutPanel10.Location = New Point(3, 30)
         TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel10.Size = New Size(343, 14)
         TableLayoutPanel10.TabIndex = 12
         ' 
@@ -536,14 +536,14 @@ Partial Class Receipt
         ' 
         TableLayoutPanel12.ColumnCount = 2
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 225F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 225.0F))
         TableLayoutPanel12.Controls.Add(Label4, 1, 0)
         TableLayoutPanel12.Controls.Add(Label3, 0, 0)
         TableLayoutPanel12.Location = New Point(3, 48)
         TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel12.Size = New Size(340, 13)
         TableLayoutPanel12.TabIndex = 14
         ' 
@@ -589,14 +589,14 @@ Partial Class Receipt
         TableLayoutPanel9.BackColor = Color.Transparent
         TableLayoutPanel9.ColumnCount = 2
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 328F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 328.0F))
         TableLayoutPanel9.Controls.Add(Guna2PictureBox5, 0, 0)
         TableLayoutPanel9.Controls.Add(Label1, 1, 0)
         TableLayoutPanel9.Location = New Point(3, 2)
         TableLayoutPanel9.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel9.Size = New Size(352, 20)
         TableLayoutPanel9.TabIndex = 15
         ' 
@@ -618,7 +618,7 @@ Partial Class Receipt
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.MediumBlue
         Label1.Location = New Point(27, 0)
         Label1.Name = "Label1"
@@ -640,10 +640,10 @@ Partial Class Receipt
         TableLayoutPanel16.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 4
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 18F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 66F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 18.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 22.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 66.0F))
         TableLayoutPanel16.Size = New Size(388, 134)
         TableLayoutPanel16.TabIndex = 13
         ' 
@@ -651,14 +651,14 @@ Partial Class Receipt
         ' 
         TableLayoutPanel13.ColumnCount = 2
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 276F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 276.0F))
         TableLayoutPanel13.Controls.Add(Label8, 1, 0)
         TableLayoutPanel13.Controls.Add(Label7, 0, 0)
         TableLayoutPanel13.Location = New Point(3, 70)
         TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 1
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel13.Size = New Size(343, 62)
         TableLayoutPanel13.TabIndex = 15
         ' 
@@ -705,15 +705,15 @@ Partial Class Receipt
         TableLayoutPanel17.BackColor = Color.Transparent
         TableLayoutPanel17.ColumnCount = 2
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 314F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 314.0F))
         TableLayoutPanel17.Controls.Add(Guna2PictureBox6, 0, 0)
         TableLayoutPanel17.Controls.Add(Label11, 1, 0)
         TableLayoutPanel17.Location = New Point(4, 1)
         TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel17.Size = New Size(342, 20)
         TableLayoutPanel17.TabIndex = 15
         ' 
@@ -734,7 +734,7 @@ Partial Class Receipt
         ' 
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.MediumBlue
         Label11.Location = New Point(30, 0)
         Label11.Name = "Label11"
@@ -758,8 +758,8 @@ Partial Class Receipt
         TableLayoutPanel11.ColumnCount = 4
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 66.51163F))
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.4883728F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 47F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 113F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 47.0F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 113.0F))
         TableLayoutPanel11.Controls.Add(Label19, 0, 1)
         TableLayoutPanel11.Controls.Add(Label18, 3, 0)
         TableLayoutPanel11.Controls.Add(Label17, 2, 0)
@@ -779,7 +779,7 @@ Partial Class Receipt
         Label19.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label19.AutoSize = True
         Label19.BackColor = Color.Transparent
-        Label19.Font = New Font("Poppins", 6F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label19.Font = New Font("Poppins", 6.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.DimGray
         Label19.Location = New Point(3, 18)
         Label19.Name = "Label19"
@@ -858,7 +858,7 @@ Partial Class Receipt
         ' 
         Label13.AutoSize = True
         Label13.BackColor = Color.Transparent
-        Label13.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Poppins", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = SystemColors.WindowFrame
         Label13.Location = New Point(0, 3)
         Label13.Name = "Label13"
@@ -906,8 +906,8 @@ Partial Class Receipt
         TableLayoutPanel18.RowCount = 3
         TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 47.5F))
         TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 52.5F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 14F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 14.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 15.0F))
         TableLayoutPanel18.Size = New Size(380, 43)
         TableLayoutPanel18.TabIndex = 30
         ' 
@@ -1040,9 +1040,9 @@ Partial Class Receipt
         TableLayoutPanel14.AutoSize = True
         TableLayoutPanel14.ColumnCount = 4
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 64F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 46F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 113F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 64.0F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 46.0F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 113.0F))
         TableLayoutPanel14.Controls.Add(Label12, 3, 0)
         TableLayoutPanel14.Controls.Add(Label5, 0, 0)
         TableLayoutPanel14.Controls.Add(Label10, 2, 0)
@@ -1051,8 +1051,8 @@ Partial Class Receipt
         TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 1
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel14.Size = New Size(387, 20)
         TableLayoutPanel14.TabIndex = 15
         ' 
@@ -1080,7 +1080,7 @@ Partial Class Receipt
         ' 
         Label20.AutoSize = True
         Label20.BackColor = Color.Transparent
-        Label20.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Poppins", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.Black
         Label20.Location = New Point(3, 0)
         Label20.Name = "Label20"
@@ -1093,7 +1093,7 @@ Partial Class Receipt
         Label22.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label22.AutoSize = True
         Label22.BackColor = Color.Transparent
-        Label22.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Poppins", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.Blue
         Label22.Location = New Point(194, 0)
         Label22.Name = "Label22"
@@ -1222,14 +1222,14 @@ Partial Class Receipt
         TableLayoutPanel15.RowCount = 3
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 57.5757561F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 42.4242439F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Absolute, 22.0F))
         TableLayoutPanel15.Size = New Size(374, 56)
         TableLayoutPanel15.TabIndex = 42
         ' 
         ' TableLayoutPanel19
         ' 
         TableLayoutPanel19.ColumnCount = 1
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel19.Controls.Add(Label39, 0, 3)
         TableLayoutPanel19.Controls.Add(Label37, 0, 2)
         TableLayoutPanel19.Controls.Add(Label36, 0, 0)
@@ -1238,10 +1238,10 @@ Partial Class Receipt
         TableLayoutPanel19.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 4
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 44F))
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 56F))
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 44.0F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 56.0F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 15.0F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 15.0F))
         TableLayoutPanel19.Size = New Size(382, 65)
         TableLayoutPanel19.TabIndex = 43
         ' 
@@ -1323,7 +1323,7 @@ Partial Class Receipt
         ' 
         ' Receipt
         ' 
-        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleDimensions = New SizeF(96.0F, 96.0F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(404, 640)
         Controls.Add(Guna2Button1)

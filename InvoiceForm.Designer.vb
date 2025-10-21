@@ -213,7 +213,11 @@ Partial Class InvoiceForm
         ' 
         ' TableLayoutPanel5
         ' 
-
+        lblLaundryText.BackColor = Color.FromArgb(CByte(57), CByte(88), CByte(134))
+        lblLaundryText.Dock = DockStyle.Fill
+        lblLaundryText.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblLaundryText.ForeColor = Color.White
+        lblLaundryText.Location = New Point(3, 0)
         TableLayoutPanel5.Controls.Add(Label5, 0, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(308, 3)
@@ -362,11 +366,44 @@ Partial Class InvoiceForm
         ' 
         ' Label5
         ' 
-        TableLayoutPanel2.ColumnCount = 2
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.0F))
-        TableLayoutPanel2.Controls.Add(PictureBox2, 0, 0)
-        TableLayoutPanel2.Controls.Add(TableLayoutPanel4, 1, 0)
+        PictureBox18.Dock = DockStyle.Fill
+        PictureBox18.Image = CType(resources.GetObject("PictureBox18.Image"), Image)
+        PictureBox18.Location = New Point(7, 3)
+        PictureBox18.Name = "PictureBox18"
+        PictureBox18.Size = New Size(23, 12)
+        PictureBox18.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox18.TabIndex = 1
+        PictureBox18.TabStop = False
+        ' 
+        ' PictureBox19
+        ' 
+        PictureBox19.Dock = DockStyle.Fill
+        PictureBox19.Image = CType(resources.GetObject("PictureBox19.Image"), Image)
+        PictureBox19.Location = New Point(7, 21)
+        PictureBox19.Name = "PictureBox19"
+        PictureBox19.Size = New Size(23, 12)
+        PictureBox19.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox19.TabIndex = 2
+        PictureBox19.TabStop = False
+        ' 
+        ' PictureBox20
+        ' 
+        PictureBox20.Dock = DockStyle.Fill
+        PictureBox20.Image = CType(resources.GetObject("PictureBox20.Image"), Image)
+        PictureBox20.Location = New Point(7, 39)
+        PictureBox20.Name = "PictureBox20"
+        PictureBox20.Size = New Size(23, 14)
+        PictureBox20.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox20.TabIndex = 3
+        PictureBox20.TabStop = False
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 3
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.5092945F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 72.49071F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 82.0F))
+        TableLayoutPanel2.Controls.Add(tbAmount, 1, 5)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(3, 3)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -1329,12 +1366,12 @@ Partial Class InvoiceForm
         ' confirmPayBtn
         ' 
         confirmPayBtn.BorderRadius = 3
-        confirmPayBtn.CustomizableEdges = CustomizableEdges35
-        confirmPayBtn.DisabledState.BorderColor = Color.DarkGray
-        confirmPayBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        confirmPayBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        confirmPayBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        confirmPayBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        confirmPayBtn.CustomizableEdges = CustomizableEdges13
+        tbAmount.Location = New Point(151, 203)
+        tbAmount.Name = "tbAmount"
+        tbAmount.Size = New Size(384, 31)
+        confirmPayBtn.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
+        confirmPayBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         confirmPayBtn.Dock = DockStyle.Fill
         confirmPayBtn.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         confirmPayBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
@@ -1352,6 +1389,9 @@ Partial Class InvoiceForm
         ' 
         Panel7.Controls.Add(TableLayoutPanel24)
         Panel7.Controls.Add(Panel8)
+        tbAddress.Font = New Font("Microsoft Sans Serif", 15.75F)
+        tbAddress.Location = New Point(151, 123)
+        tbAddress.Name = "tbAddress"
         Panel7.Padding = New Padding(4)
         Panel7.Size = New Size(434, 93)
         Panel7.TabIndex = 4
@@ -1360,9 +1400,9 @@ Partial Class InvoiceForm
         ' 
         TableLayoutPanel24.ColumnCount = 1
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel24.Controls.Add(Label37, 0, 4)
-        TableLayoutPanel24.Controls.Add(Label36, 0, 3)
-        TableLayoutPanel24.Controls.Add(Label35, 0, 2)
+        tbContactNumber.Font = New Font("Microsoft Sans Serif", 15.75F)
+        tbContactNumber.Location = New Point(151, 83)
+        tbContactNumber.Name = "tbContactNumber"
         TableLayoutPanel24.Controls.Add(Label33, 0, 1)
         TableLayoutPanel24.Controls.Add(Label32, 0, 0)
         TableLayoutPanel24.Dock = DockStyle.Fill
@@ -1380,10 +1420,10 @@ Partial Class InvoiceForm
         ' Label37
         ' 
         Label37.Dock = DockStyle.Fill
-        Label37.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label37.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label37.Location = New Point(3, 65)
-        Label37.Name = "Label37"
+        Label37.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        tbCustomerName.Font = New Font("Microsoft Sans Serif", 15.75F)
+        tbCustomerName.Location = New Point(151, 43)
+        tbCustomerName.Name = "tbCustomerName"
         Label37.Size = New Size(420, 19)
         Label37.TabIndex = 8
         Label37.Text = "4. For delivery: Be available at the address during the scheduled time."
@@ -1392,10 +1432,10 @@ Partial Class InvoiceForm
         ' Label36
         ' 
         Label36.Dock = DockStyle.Fill
-        Label36.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label36.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label36.Location = New Point(3, 50)
-        Label36.Name = "Label36"
+        Label36.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        lblAmountText.Font = New Font("Segoe UI", 11.25F)
+        lblAmountText.Location = New Point(3, 200)
+        lblAmountText.Name = "lblAmountText"
         Label36.Size = New Size(420, 15)
         Label36.TabIndex = 7
         Label36.Text = "3. For store pickup: Please present your receipt when claiming."
@@ -1404,10 +1444,10 @@ Partial Class InvoiceForm
         ' Label35
         ' 
         Label35.Dock = DockStyle.Fill
-        Label35.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label35.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label35.Location = New Point(3, 35)
-        Label35.Name = "Label35"
+        Label35.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        lblTransactionIDText.Font = New Font("Segoe UI", 11.25F)
+        lblTransactionIDText.Location = New Point(3, 0)
+        lblTransactionIDText.Name = "lblTransactionIDText"
         Label35.Size = New Size(420, 15)
         Label35.TabIndex = 6
         Label35.Text = "2. You'll be notified via SMS/Email when your order is ready."
@@ -1416,10 +1456,10 @@ Partial Class InvoiceForm
         ' Label33
         ' 
         Label33.Dock = DockStyle.Fill
-        Label33.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label33.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label33.Location = New Point(3, 20)
-        Label33.Name = "Label33"
+        Label33.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        lblPaymentText.Font = New Font("Segoe UI", 11.25F)
+        lblPaymentText.Location = New Point(3, 160)
+        lblPaymentText.Name = "lblPaymentText"
         Label33.Size = New Size(420, 15)
         Label33.TabIndex = 4
         Label33.Text = "1. Payment is due upon confirmation of service."
@@ -1428,10 +1468,10 @@ Partial Class InvoiceForm
         ' Label32
         ' 
         Label32.Dock = DockStyle.Fill
-        Label32.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label32.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label32.Location = New Point(3, 0)
-        Label32.Name = "Label32"
+        Label32.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lblAddressText.Font = New Font("Segoe UI", 11.25F)
+        lblAddressText.Location = New Point(3, 120)
+        lblAddressText.Name = "lblAddressText"
         Label32.Padding = New Padding(0, 4, 0, 0)
         Label32.Size = New Size(420, 20)
         Label32.TabIndex = 3
@@ -1442,15 +1482,18 @@ Partial Class InvoiceForm
         ' 
         Panel8.BackColor = SystemColors.ActiveBorder
         Panel8.Dock = DockStyle.Top
+        lblContactNumberText.Font = New Font("Segoe UI", 11.25F)
+        lblContactNumberText.Location = New Point(3, 80)
+        lblContactNumberText.Name = "lblContactNumberText"
         Panel8.TabIndex = 5
         ' 
         ' TableLayoutPanel25
         ' 
         TableLayoutPanel25.ColumnCount = 2
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel25.Controls.Add(backBtn, 0, 0)
-        TableLayoutPanel25.Controls.Add(cancelBtn, 1, 0)
+        lblCustomerNameText.Font = New Font("Segoe UI", 11.25F)
+        lblCustomerNameText.Location = New Point(3, 40)
+        lblCustomerNameText.Name = "lblCustomerNameText"
         TableLayoutPanel25.Dock = DockStyle.Fill
         TableLayoutPanel25.Location = New Point(3, 558)
         TableLayoutPanel25.Name = "TableLayoutPanel25"
@@ -1462,12 +1505,12 @@ Partial Class InvoiceForm
         ' backBtn
         ' 
         backBtn.BorderRadius = 3
-        backBtn.CustomizableEdges = CustomizableEdges37
-        backBtn.DisabledState.BorderColor = Color.DarkGray
-        backBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        backBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        backBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        backBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        backBtn.CustomizableEdges = CustomizableEdges17
+        tbTransactionID.Font = New Font("Microsoft Sans Serif", 15.75F)
+        tbTransactionID.Location = New Point(151, 3)
+        tbTransactionID.Name = "tbTransactionID"
+        backBtn.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
+        backBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         backBtn.Dock = DockStyle.Left
         backBtn.FillColor = Color.Empty
         backBtn.FillColor2 = Color.Empty
@@ -1487,12 +1530,12 @@ Partial Class InvoiceForm
         ' cancelBtn
         ' 
         cancelBtn.BorderRadius = 3
-        cancelBtn.CustomizableEdges = CustomizableEdges39
-        cancelBtn.DisabledState.BorderColor = Color.DarkGray
-        cancelBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        cancelBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        cancelBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        cancelBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        cancelBtn.CustomizableEdges = CustomizableEdges19
+        cmbPaymentMethod.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbPaymentMethod.FormattingEnabled = True
+        cmbPaymentMethod.Items.AddRange(New Object() {"Cash", "Card"})
+        cancelBtn.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
+        cancelBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         cancelBtn.Dock = DockStyle.Right
         cancelBtn.FillColor = Color.DimGray
         cancelBtn.FillColor2 = Color.Gray

@@ -3,9 +3,9 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
+    <StartupObject>LaundryManagementSys.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
-    <StartupObject>LaundryManagementSys.My.MyApplication</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
