@@ -23,37 +23,37 @@ Partial Class BasicServiceForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
         Label4 = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
         Label5 = New Label()
-        Label6 = New Label()
+        lblRate = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
         Label7 = New Label()
         Guna2txtboxName = New Guna.UI2.WinForms.Guna2TextBox()
         TableLayoutPanel5 = New TableLayoutPanel()
-        Guna2txtboxKg = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2txtboxWeight = New Guna.UI2.WinForms.Guna2TextBox()
         Label10 = New Label()
         Label9 = New Label()
         Guna2txtboxContact = New Guna.UI2.WinForms.Guna2TextBox()
         Label8 = New Label()
-        Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Guna2cmbServiceType = New Guna.UI2.WinForms.Guna2ComboBox()
         TableLayoutPanel6 = New TableLayoutPanel()
         Label11 = New Label()
         TableLayoutPanel7 = New TableLayoutPanel()
@@ -148,7 +148,7 @@ Partial Class BasicServiceForm
         TableLayoutPanel3.ColumnCount = 1
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel3.Controls.Add(Label5, 0, 0)
-        TableLayoutPanel3.Controls.Add(Label6, 0, 1)
+        TableLayoutPanel3.Controls.Add(lblRate, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(5, 145)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -171,19 +171,19 @@ Partial Class BasicServiceForm
         Label5.Text = "Staff Assisted Pricing:"
         Label5.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Label6
+        ' lblRate
         ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.Silver
-        Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(3, 40)
-        Label6.Name = "Label6"
-        Label6.Padding = New Padding(40, 0, 0, 0)
-        Label6.Size = New Size(484, 84)
-        Label6.TabIndex = 1
-        Label6.Text = "• Wash Only: ₱ 50/kg " & vbCrLf & "• Dry Only: ₱ 40/kg" & vbCrLf & "• Wash & Dry: ₱ 80/kg"
-        Label6.TextAlign = ContentAlignment.MiddleLeft
+        lblRate.AutoSize = True
+        lblRate.BackColor = Color.Silver
+        lblRate.Dock = DockStyle.Fill
+        lblRate.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRate.Location = New Point(3, 40)
+        lblRate.Name = "lblRate"
+        lblRate.Padding = New Padding(40, 0, 0, 0)
+        lblRate.Size = New Size(484, 84)
+        lblRate.TabIndex = 1
+        lblRate.Text = "• Wash Only: ₱ 50/kg " & vbCrLf & "• Dry Only: ₱ 40/kg" & vbCrLf & "• Wash + Dry: ₱ 80/kg"
+        lblRate.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel4
         ' 
@@ -216,7 +216,7 @@ Partial Class BasicServiceForm
         ' Guna2txtboxName
         ' 
         Guna2txtboxName.AutoRoundedCorners = True
-        Guna2txtboxName.CustomizableEdges = CustomizableEdges16
+        Guna2txtboxName.CustomizableEdges = CustomizableEdges1
         Guna2txtboxName.DefaultText = ""
         Guna2txtboxName.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxName.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -231,7 +231,7 @@ Partial Class BasicServiceForm
         Guna2txtboxName.Name = "Guna2txtboxName"
         Guna2txtboxName.PlaceholderText = ""
         Guna2txtboxName.SelectedText = ""
-        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2txtboxName.Size = New Size(482, 19)
         Guna2txtboxName.TabIndex = 1
         ' 
@@ -241,12 +241,12 @@ Partial Class BasicServiceForm
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25F))
-        TableLayoutPanel5.Controls.Add(Guna2txtboxKg, 2, 1)
+        TableLayoutPanel5.Controls.Add(Guna2txtboxWeight, 2, 1)
         TableLayoutPanel5.Controls.Add(Label10, 2, 0)
         TableLayoutPanel5.Controls.Add(Label9, 1, 0)
         TableLayoutPanel5.Controls.Add(Guna2txtboxContact, 0, 1)
         TableLayoutPanel5.Controls.Add(Label8, 0, 0)
-        TableLayoutPanel5.Controls.Add(Guna2ComboBox1, 1, 1)
+        TableLayoutPanel5.Controls.Add(Guna2cmbServiceType, 1, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(5, 354)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
@@ -256,18 +256,18 @@ Partial Class BasicServiceForm
         TableLayoutPanel5.Size = New Size(490, 73)
         TableLayoutPanel5.TabIndex = 4
         ' 
-        ' Guna2txtboxKg
+        ' Guna2txtboxWeight
         ' 
-        Guna2txtboxKg.CustomizableEdges = CustomizableEdges18
-        Guna2txtboxKg.DefaultText = ""
-        Guna2txtboxKg.Font = New Font("Segoe UI", 9F)
-        Guna2txtboxKg.Location = New Point(370, 39)
-        Guna2txtboxKg.Name = "Guna2txtboxKg"
-        Guna2txtboxKg.PlaceholderText = ""
-        Guna2txtboxKg.SelectedText = ""
-        Guna2txtboxKg.ShadowDecoration.CustomizableEdges = CustomizableEdges19
-        Guna2txtboxKg.Size = New Size(117, 31)
-        Guna2txtboxKg.TabIndex = 0
+        Guna2txtboxWeight.CustomizableEdges = CustomizableEdges3
+        Guna2txtboxWeight.DefaultText = ""
+        Guna2txtboxWeight.Font = New Font("Segoe UI", 9F)
+        Guna2txtboxWeight.Location = New Point(370, 39)
+        Guna2txtboxWeight.Name = "Guna2txtboxWeight"
+        Guna2txtboxWeight.PlaceholderText = ""
+        Guna2txtboxWeight.SelectedText = ""
+        Guna2txtboxWeight.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2txtboxWeight.Size = New Size(117, 31)
+        Guna2txtboxWeight.TabIndex = 0
         ' 
         ' Label10
         ' 
@@ -295,14 +295,14 @@ Partial Class BasicServiceForm
         ' 
         ' Guna2txtboxContact
         ' 
-        Guna2txtboxContact.CustomizableEdges = CustomizableEdges20
+        Guna2txtboxContact.CustomizableEdges = CustomizableEdges5
         Guna2txtboxContact.DefaultText = ""
         Guna2txtboxContact.Font = New Font("Segoe UI", 9F)
         Guna2txtboxContact.Location = New Point(3, 39)
         Guna2txtboxContact.Name = "Guna2txtboxContact"
         Guna2txtboxContact.PlaceholderText = ""
         Guna2txtboxContact.SelectedText = ""
-        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2txtboxContact.Size = New Size(200, 31)
         Guna2txtboxContact.TabIndex = 5
         ' 
@@ -318,25 +318,25 @@ Partial Class BasicServiceForm
         Label8.Text = "Contact Number:"
         Label8.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Guna2ComboBox1
+        ' Guna2cmbServiceType
         ' 
-        Guna2ComboBox1.AutoRoundedCorners = True
-        Guna2ComboBox1.BackColor = Color.Transparent
-        Guna2ComboBox1.CustomizableEdges = CustomizableEdges22
-        Guna2ComboBox1.Dock = DockStyle.Fill
-        Guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed
-        Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
-        Guna2ComboBox1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2ComboBox1.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        Guna2ComboBox1.ItemHeight = 20
-        Guna2ComboBox1.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash & Dry"})
-        Guna2ComboBox1.Location = New Point(248, 39)
-        Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges23
-        Guna2ComboBox1.Size = New Size(116, 26)
-        Guna2ComboBox1.TabIndex = 7
+        Guna2cmbServiceType.AutoRoundedCorners = True
+        Guna2cmbServiceType.BackColor = Color.Transparent
+        Guna2cmbServiceType.CustomizableEdges = CustomizableEdges7
+        Guna2cmbServiceType.Dock = DockStyle.Fill
+        Guna2cmbServiceType.DrawMode = DrawMode.OwnerDrawFixed
+        Guna2cmbServiceType.DropDownStyle = ComboBoxStyle.DropDownList
+        Guna2cmbServiceType.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2cmbServiceType.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2cmbServiceType.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2cmbServiceType.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        Guna2cmbServiceType.ItemHeight = 20
+        Guna2cmbServiceType.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash & Dry"})
+        Guna2cmbServiceType.Location = New Point(248, 39)
+        Guna2cmbServiceType.Name = "Guna2cmbServiceType"
+        Guna2cmbServiceType.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2cmbServiceType.Size = New Size(116, 26)
+        Guna2cmbServiceType.TabIndex = 7
         ' 
         ' TableLayoutPanel6
         ' 
@@ -397,10 +397,13 @@ Partial Class BasicServiceForm
         ' 
         Guna2CheckBoxdelivery.CheckedState.BorderRadius = 0
         Guna2CheckBoxdelivery.CheckedState.BorderThickness = 0
+        Guna2CheckBoxdelivery.Dock = DockStyle.Fill
         Guna2CheckBoxdelivery.Location = New Point(74, 3)
         Guna2CheckBoxdelivery.Name = "Guna2CheckBoxdelivery"
-        Guna2CheckBoxdelivery.Size = New Size(104, 24)
+        Guna2CheckBoxdelivery.Size = New Size(162, 25)
         Guna2CheckBoxdelivery.TabIndex = 4
+        Guna2CheckBoxdelivery.Text = "+5% Delivery Fee"
+        Guna2CheckBoxdelivery.TextAlign = ContentAlignment.MiddleRight
         Guna2CheckBoxdelivery.UncheckedState.BorderRadius = 0
         Guna2CheckBoxdelivery.UncheckedState.BorderThickness = 0
         ' 
@@ -471,7 +474,7 @@ Partial Class BasicServiceForm
         ' 
         gbCancel.AutoRoundedCorners = True
         gbCancel.BorderThickness = 1
-        gbCancel.CustomizableEdges = CustomizableEdges24
+        gbCancel.CustomizableEdges = CustomizableEdges9
         gbCancel.DisabledState.BorderColor = Color.DarkGray
         gbCancel.DisabledState.CustomBorderColor = Color.DarkGray
         gbCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -482,7 +485,7 @@ Partial Class BasicServiceForm
         gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.Location = New Point(3, 3)
         gbCancel.Name = "gbCancel"
-        gbCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges25
+        gbCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         gbCancel.Size = New Size(239, 48)
         gbCancel.TabIndex = 0
         gbCancel.Text = "Cancel"
@@ -491,7 +494,7 @@ Partial Class BasicServiceForm
         ' 
         gbContinue.AutoRoundedCorners = True
         gbContinue.BorderThickness = 1
-        gbContinue.CustomizableEdges = CustomizableEdges26
+        gbContinue.CustomizableEdges = CustomizableEdges11
         gbContinue.DisabledState.BorderColor = Color.DarkGray
         gbContinue.DisabledState.CustomBorderColor = Color.DarkGray
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -501,7 +504,7 @@ Partial Class BasicServiceForm
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(248, 3)
         gbContinue.Name = "gbContinue"
-        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges27
+        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         gbContinue.Size = New Size(239, 48)
         gbContinue.TabIndex = 1
         gbContinue.Text = "Continue"
@@ -509,14 +512,14 @@ Partial Class BasicServiceForm
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges28
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges14
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel1.Location = New Point(5, 5)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges29
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         Guna2GradientPanel1.Size = New Size(490, 94)
         Guna2GradientPanel1.TabIndex = 9
         ' 
@@ -597,7 +600,7 @@ Partial Class BasicServiceForm
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(0, 0)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(94, 88)
         Guna2CirclePictureBox1.TabIndex = 0
@@ -662,7 +665,7 @@ Partial Class BasicServiceForm
     Friend WithEvents Label4 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblRate As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label7 As Label
     Friend WithEvents Guna2txtboxName As Guna.UI2.WinForms.Guna2TextBox
@@ -671,8 +674,8 @@ Partial Class BasicServiceForm
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2txtboxKg As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2txtboxWeight As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2cmbServiceType As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
