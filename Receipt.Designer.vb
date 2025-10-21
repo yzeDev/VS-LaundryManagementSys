@@ -22,26 +22,27 @@ Partial Class Receipt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        components = New ComponentModel.Container()
+        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges55 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges57 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges58 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges59 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges60 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
         TableLayoutPanel4 = New TableLayoutPanel()
@@ -54,10 +55,10 @@ Partial Class Receipt
         TableLayoutPanel3 = New TableLayoutPanel()
         Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label46 = New Label()
         Label45 = New Label()
         Label44 = New Label()
+        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         TableLayoutPanel6 = New TableLayoutPanel()
         Label48 = New Label()
         Label47 = New Label()
@@ -124,6 +125,7 @@ Partial Class Receipt
         Label36 = New Label()
         Label38 = New Label()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
@@ -163,11 +165,12 @@ Partial Class Receipt
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 38.3886261F))
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel5, 1, 0)
-        TableLayoutPanel1.Location = New Point(0, 12)
+        TableLayoutPanel1.Location = New Point(0, 9)
+        TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Size = New Size(485, 55)
+        TableLayoutPanel1.Size = New Size(424, 41)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' TableLayoutPanel2
@@ -177,11 +180,12 @@ Partial Class Receipt
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 77.77778F))
         TableLayoutPanel2.Controls.Add(TableLayoutPanel4, 1, 0)
         TableLayoutPanel2.Controls.Add(Guna2PictureBox1, 0, 0)
-        TableLayoutPanel2.Location = New Point(3, 3)
+        TableLayoutPanel2.Location = New Point(3, 2)
+        TableLayoutPanel2.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Size = New Size(284, 49)
+        TableLayoutPanel2.Size = New Size(248, 37)
         TableLayoutPanel2.TabIndex = 1
         ' 
         ' TableLayoutPanel4
@@ -190,13 +194,14 @@ Partial Class Receipt
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 28.2926826F))
         TableLayoutPanel4.Controls.Add(Label40, 0, 0)
         TableLayoutPanel4.Controls.Add(Label41, 0, 1)
-        TableLayoutPanel4.Location = New Point(66, 3)
+        TableLayoutPanel4.Location = New Point(58, 2)
+        TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 18F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel4.Size = New Size(215, 43)
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 14F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel4.Size = New Size(187, 32)
         TableLayoutPanel4.TabIndex = 2
         ' 
         ' Label40
@@ -208,7 +213,7 @@ Partial Class Receipt
         Label40.ForeColor = Color.Transparent
         Label40.Location = New Point(3, 0)
         Label40.Name = "Label40"
-        Label40.Size = New Size(209, 25)
+        Label40.Size = New Size(181, 18)
         Label40.TabIndex = 44
         Label40.Text = "BubbleFresh"
         ' 
@@ -218,21 +223,21 @@ Partial Class Receipt
         Label41.BackColor = Color.Transparent
         Label41.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label41.ForeColor = Color.White
-        Label41.Location = New Point(3, 25)
+        Label41.Location = New Point(3, 18)
         Label41.Name = "Label41"
-        Label41.Size = New Size(193, 18)
+        Label41.Size = New Size(165, 14)
         Label41.TabIndex = 45
         Label41.Text = "Professional Laundry Service"
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
-        'Guna2PictureBox1.Image = My.Resources.Resources.logo
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges41
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(3, 3)
+        Guna2PictureBox1.Location = New Point(3, 2)
+        Guna2PictureBox1.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PictureBox1.Size = New Size(48, 43)
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        Guna2PictureBox1.Size = New Size(42, 32)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 6
         Guna2PictureBox1.TabStop = False
@@ -243,13 +248,14 @@ Partial Class Receipt
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 28.2926826F))
         TableLayoutPanel5.Controls.Add(Label43, 0, 2)
         TableLayoutPanel5.Controls.Add(Label42, 0, 1)
-        TableLayoutPanel5.Location = New Point(301, 3)
+        TableLayoutPanel5.Location = New Point(264, 2)
+        TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 3
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 24F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
-        TableLayoutPanel5.Size = New Size(171, 49)
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 18F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel5.Size = New Size(150, 37)
         TableLayoutPanel5.TabIndex = 3
         ' 
         ' Label43
@@ -259,9 +265,9 @@ Partial Class Receipt
         Label43.BackColor = Color.Transparent
         Label43.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label43.ForeColor = Color.White
-        Label43.Location = New Point(3, 22)
+        Label43.Location = New Point(3, 17)
         Label43.Name = "Label43"
-        Label43.Size = New Size(165, 26)
+        Label43.Size = New Size(144, 20)
         Label43.TabIndex = 47
         Label43.Text = "RCPT-2025-001"
         Label43.TextAlign = ContentAlignment.TopRight
@@ -273,9 +279,9 @@ Partial Class Receipt
         Label42.BackColor = Color.Transparent
         Label42.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label42.ForeColor = Color.White
-        Label42.Location = New Point(3, -2)
+        Label42.Location = New Point(3, -1)
         Label42.Name = "Label42"
-        Label42.Size = New Size(165, 23)
+        Label42.Size = New Size(144, 18)
         Label42.TabIndex = 46
         Label42.Text = "Transaction ID:"
         Label42.TextAlign = ContentAlignment.TopRight
@@ -292,53 +298,43 @@ Partial Class Receipt
         TableLayoutPanel3.Controls.Add(Label45, 1, 0)
         TableLayoutPanel3.Controls.Add(Label44, 1, 1)
         TableLayoutPanel3.Controls.Add(Guna2PictureBox2, 0, 0)
-        TableLayoutPanel3.Location = New Point(6, 67)
+        TableLayoutPanel3.Location = New Point(5, 50)
+        TableLayoutPanel3.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 3
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 25F))
-        TableLayoutPanel3.Size = New Size(309, 65)
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 19F))
+        TableLayoutPanel3.Size = New Size(270, 49)
         TableLayoutPanel3.TabIndex = 2
         ' 
         ' Guna2PictureBox4
         ' 
-        Guna2PictureBox4.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox4.CustomizableEdges = CustomizableEdges43
         Guna2PictureBox4.Image = My.Resources.Resources._17
         Guna2PictureBox4.ImageRotate = 0F
-        Guna2PictureBox4.Location = New Point(3, 43)
+        Guna2PictureBox4.Location = New Point(3, 32)
+        Guna2PictureBox4.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox4.Name = "Guna2PictureBox4"
-        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2PictureBox4.Size = New Size(21, 17)
+        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        Guna2PictureBox4.Size = New Size(18, 13)
         Guna2PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox4.TabIndex = 44
         Guna2PictureBox4.TabStop = False
         ' 
         ' Guna2PictureBox3
         ' 
-        Guna2PictureBox3.CustomizableEdges = CustomizableEdges5
+        Guna2PictureBox3.CustomizableEdges = CustomizableEdges45
         Guna2PictureBox3.Image = My.Resources.Resources._16
         Guna2PictureBox3.ImageRotate = 0F
-        Guna2PictureBox3.Location = New Point(3, 21)
+        Guna2PictureBox3.Location = New Point(3, 16)
+        Guna2PictureBox3.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2PictureBox3.Size = New Size(17, 16)
+        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        Guna2PictureBox3.Size = New Size(15, 12)
         Guna2PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox3.TabIndex = 44
         Guna2PictureBox3.TabStop = False
-        ' 
-        ' Guna2PictureBox2
-        ' 
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges7
-        Guna2PictureBox2.Image = My.Resources.Resources._15
-        Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.Location = New Point(3, 3)
-        Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2PictureBox2.Size = New Size(17, 12)
-        Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        Guna2PictureBox2.TabIndex = 44
-        Guna2PictureBox2.TabStop = False
         ' 
         ' Label46
         ' 
@@ -347,9 +343,9 @@ Partial Class Receipt
         Label46.BackColor = Color.Transparent
         Label46.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label46.ForeColor = Color.White
-        Label46.Location = New Point(30, 40)
+        Label46.Location = New Point(27, 30)
         Label46.Name = "Label46"
-        Label46.Size = New Size(276, 23)
+        Label46.Size = New Size(240, 17)
         Label46.TabIndex = 48
         Label46.Text = "bubblefresh@gmail.com"
         ' 
@@ -360,9 +356,9 @@ Partial Class Receipt
         Label45.BackColor = Color.Transparent
         Label45.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label45.ForeColor = Color.White
-        Label45.Location = New Point(30, 0)
+        Label45.Location = New Point(27, 0)
         Label45.Name = "Label45"
-        Label45.Size = New Size(276, 18)
+        Label45.Size = New Size(240, 14)
         Label45.TabIndex = 48
         Label45.Text = "1400 Camarin Rd, Caloocan City"
         ' 
@@ -373,11 +369,25 @@ Partial Class Receipt
         Label44.BackColor = Color.Transparent
         Label44.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label44.ForeColor = Color.White
-        Label44.Location = New Point(30, 18)
+        Label44.Location = New Point(27, 14)
         Label44.Name = "Label44"
-        Label44.Size = New Size(276, 22)
+        Label44.Size = New Size(240, 16)
         Label44.TabIndex = 47
         Label44.Text = "+63 912 375 6779"
+        ' 
+        ' Guna2PictureBox2
+        ' 
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges47
+        Guna2PictureBox2.Image = My.Resources.Resources._15
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.Location = New Point(3, 2)
+        Guna2PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges48
+        Guna2PictureBox2.Size = New Size(15, 9)
+        Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox2.TabIndex = 44
+        Guna2PictureBox2.TabStop = False
         ' 
         ' TableLayoutPanel6
         ' 
@@ -385,12 +395,13 @@ Partial Class Receipt
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 28.2926826F))
         TableLayoutPanel6.Controls.Add(Label48, 0, 0)
         TableLayoutPanel6.Controls.Add(Label47, 0, 1)
-        TableLayoutPanel6.Location = New Point(327, 3)
+        TableLayoutPanel6.Location = New Point(287, 2)
+        TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 2
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 32F))
-        TableLayoutPanel6.Size = New Size(142, 57)
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 24F))
+        TableLayoutPanel6.Size = New Size(124, 43)
         TableLayoutPanel6.TabIndex = 4
         ' 
         ' Label48
@@ -402,7 +413,7 @@ Partial Class Receipt
         Label48.ForeColor = Color.White
         Label48.Location = New Point(3, 0)
         Label48.Name = "Label48"
-        Label48.Size = New Size(136, 23)
+        Label48.Size = New Size(118, 17)
         Label48.TabIndex = 50
         Label48.Text = "October 19, 2025"
         Label48.TextAlign = ContentAlignment.TopRight
@@ -414,9 +425,9 @@ Partial Class Receipt
         Label47.BackColor = Color.Transparent
         Label47.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.White
-        Label47.Location = New Point(3, 25)
+        Label47.Location = New Point(3, 19)
         Label47.Name = "Label47"
-        Label47.Size = New Size(136, 23)
+        Label47.Size = New Size(118, 17)
         Label47.TabIndex = 49
         Label47.Text = "10:00 AM"
         Label47.TextAlign = ContentAlignment.TopRight
@@ -427,13 +438,14 @@ Partial Class Receipt
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel3)
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel7)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges49
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.Location = New Point(-2, 0)
+        Guna2GradientPanel1.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2GradientPanel1.Size = New Size(490, 135)
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges50
+        Guna2GradientPanel1.Size = New Size(429, 101)
         Guna2GradientPanel1.TabIndex = 5
         ' 
         ' TableLayoutPanel7
@@ -443,11 +455,12 @@ Partial Class Receipt
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 67.3031F))
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 32.6968956F))
         TableLayoutPanel7.Controls.Add(TableLayoutPanel6, 1, 0)
-        TableLayoutPanel7.Location = New Point(3, 67)
+        TableLayoutPanel7.Location = New Point(3, 50)
+        TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.Size = New Size(482, 63)
+        TableLayoutPanel7.Size = New Size(422, 47)
         TableLayoutPanel7.TabIndex = 4
         ' 
         ' TableLayoutPanel8
@@ -456,12 +469,13 @@ Partial Class Receipt
         TableLayoutPanel8.ColumnCount = 1
         TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
         TableLayoutPanel8.Controls.Add(Label14, 0, 0)
-        TableLayoutPanel8.Location = New Point(26, 140)
+        TableLayoutPanel8.Location = New Point(23, 105)
+        TableLayoutPanel8.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 1
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel8.Size = New Size(435, 31)
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
+        TableLayoutPanel8.Size = New Size(381, 26)
         TableLayoutPanel8.TabIndex = 9
         ' 
         ' Label14
@@ -473,7 +487,7 @@ Partial Class Receipt
         Label14.ForeColor = Color.Black
         Label14.Location = New Point(3, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(429, 31)
+        Label14.Size = New Size(375, 26)
         Label14.TabIndex = 26
         Label14.Text = "RECEIPT"
         Label14.TextAlign = ContentAlignment.MiddleCenter
@@ -483,14 +497,15 @@ Partial Class Receipt
         TableLayoutPanel10.BackColor = Color.Transparent
         TableLayoutPanel10.ColumnCount = 2
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 329F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 288F))
         TableLayoutPanel10.Controls.Add(Label6, 1, 0)
         TableLayoutPanel10.Controls.Add(Label2, 0, 0)
-        TableLayoutPanel10.Location = New Point(3, 40)
+        TableLayoutPanel10.Location = New Point(3, 30)
+        TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
         TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel10.Size = New Size(392, 18)
+        TableLayoutPanel10.Size = New Size(343, 14)
         TableLayoutPanel10.TabIndex = 12
         ' 
         ' Label6
@@ -499,9 +514,9 @@ Partial Class Receipt
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.DimGray
-        Label6.Location = New Point(66, 0)
+        Label6.Location = New Point(58, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(197, 18)
+        Label6.Size = New Size(167, 14)
         Label6.TabIndex = 18
         Label6.Text = "Ashley Gabrielle C. Alcantara"
         ' 
@@ -513,7 +528,7 @@ Partial Class Receipt
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(3, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(52, 18)
+        Label2.Size = New Size(44, 14)
         Label2.TabIndex = 15
         Label2.Text = "Name:"
         ' 
@@ -521,14 +536,15 @@ Partial Class Receipt
         ' 
         TableLayoutPanel12.ColumnCount = 2
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 257F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 225F))
         TableLayoutPanel12.Controls.Add(Label4, 1, 0)
         TableLayoutPanel12.Controls.Add(Label3, 0, 0)
-        TableLayoutPanel12.Location = New Point(3, 64)
+        TableLayoutPanel12.Location = New Point(3, 48)
+        TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
         TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel12.Size = New Size(389, 17)
+        TableLayoutPanel12.Size = New Size(340, 13)
         TableLayoutPanel12.TabIndex = 14
         ' 
         ' Label4
@@ -537,9 +553,9 @@ Partial Class Receipt
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.DimGray
-        Label4.Location = New Point(135, 0)
+        Label4.Location = New Point(118, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(114, 17)
+        Label4.Size = New Size(101, 13)
         Label4.TabIndex = 17
         Label4.Text = "+63 915 954 8217"
         ' 
@@ -551,20 +567,21 @@ Partial Class Receipt
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(121, 17)
+        Label3.Size = New Size(102, 13)
         Label3.TabIndex = 16
         Label3.Text = "Contact Number:"
         ' 
         ' Guna2GradientPanel2
         ' 
         Guna2GradientPanel2.Controls.Add(TableLayoutPanel9)
-        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges13
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges51
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel2.FillColor2 = Color.White
-        Guna2GradientPanel2.Location = New Point(3, 3)
+        Guna2GradientPanel2.Location = New Point(3, 2)
+        Guna2GradientPanel2.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
-        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2GradientPanel2.Size = New Size(437, 31)
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges52
+        Guna2GradientPanel2.Size = New Size(382, 23)
         Guna2GradientPanel2.TabIndex = 16
         ' 
         ' TableLayoutPanel9
@@ -572,25 +589,27 @@ Partial Class Receipt
         TableLayoutPanel9.BackColor = Color.Transparent
         TableLayoutPanel9.ColumnCount = 2
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 375F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 328F))
         TableLayoutPanel9.Controls.Add(Guna2PictureBox5, 0, 0)
         TableLayoutPanel9.Controls.Add(Label1, 1, 0)
         TableLayoutPanel9.Location = New Point(3, 2)
+        TableLayoutPanel9.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
         TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel9.Size = New Size(402, 26)
+        TableLayoutPanel9.Size = New Size(352, 20)
         TableLayoutPanel9.TabIndex = 15
         ' 
         ' Guna2PictureBox5
         ' 
-        Guna2PictureBox5.CustomizableEdges = CustomizableEdges11
+        Guna2PictureBox5.CustomizableEdges = CustomizableEdges53
         Guna2PictureBox5.Image = My.Resources.Resources._131
         Guna2PictureBox5.ImageRotate = 0F
-        Guna2PictureBox5.Location = New Point(3, 3)
+        Guna2PictureBox5.Location = New Point(3, 2)
+        Guna2PictureBox5.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox5.Name = "Guna2PictureBox5"
-        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2PictureBox5.Size = New Size(21, 20)
+        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges54
+        Guna2PictureBox5.Size = New Size(18, 15)
         Guna2PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox5.TabIndex = 44
         Guna2PictureBox5.TabStop = False
@@ -601,9 +620,9 @@ Partial Class Receipt
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.MediumBlue
-        Label1.Location = New Point(30, 0)
+        Label1.Location = New Point(27, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(199, 26)
+        Label1.Size = New Size(152, 20)
         Label1.TabIndex = 14
         Label1.Text = "CUSTOMER INFORMATION"
         ' 
@@ -617,28 +636,30 @@ Partial Class Receipt
         TableLayoutPanel16.Controls.Add(Guna2GradientPanel2, 0, 0)
         TableLayoutPanel16.Controls.Add(TableLayoutPanel10, 0, 1)
         TableLayoutPanel16.Controls.Add(TableLayoutPanel13, 0, 3)
-        TableLayoutPanel16.Location = New Point(20, 178)
+        TableLayoutPanel16.Location = New Point(18, 134)
+        TableLayoutPanel16.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 4
         TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 24F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 88F))
-        TableLayoutPanel16.Size = New Size(443, 179)
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 18F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 66F))
+        TableLayoutPanel16.Size = New Size(388, 134)
         TableLayoutPanel16.TabIndex = 13
         ' 
         ' TableLayoutPanel13
         ' 
         TableLayoutPanel13.ColumnCount = 2
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 316F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 276F))
         TableLayoutPanel13.Controls.Add(Label8, 1, 0)
         TableLayoutPanel13.Controls.Add(Label7, 0, 0)
-        TableLayoutPanel13.Location = New Point(3, 94)
+        TableLayoutPanel13.Location = New Point(3, 70)
+        TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 1
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel13.Size = New Size(392, 82)
+        TableLayoutPanel13.Size = New Size(343, 62)
         TableLayoutPanel13.TabIndex = 15
         ' 
         ' Label8
@@ -647,9 +668,9 @@ Partial Class Receipt
         Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.DimGray
-        Label8.Location = New Point(79, 0)
+        Label8.Location = New Point(70, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(296, 69)
+        Label8.Size = New Size(251, 57)
         Label8.TabIndex = 19
         Label8.Text = "Block 12, Phase 3, Saranay-Vicas Residential Compound, Barangay 173, Camarin Road, Caloocan City, 1422, Metro Manila"
         ' 
@@ -661,7 +682,7 @@ Partial Class Receipt
         Label7.ForeColor = Color.Black
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(67, 23)
+        Label7.Size = New Size(55, 19)
         Label7.TabIndex = 18
         Label7.Text = "Address:"
         ' 
@@ -669,13 +690,14 @@ Partial Class Receipt
         ' 
         Guna2GradientPanel3.AutoSize = True
         Guna2GradientPanel3.Controls.Add(TableLayoutPanel17)
-        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges17
+        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges55
         Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel3.FillColor2 = Color.White
-        Guna2GradientPanel3.Location = New Point(20, 355)
+        Guna2GradientPanel3.Location = New Point(18, 266)
+        Guna2GradientPanel3.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
-        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        Guna2GradientPanel3.Size = New Size(442, 32)
+        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges56
+        Guna2GradientPanel3.Size = New Size(387, 24)
         Guna2GradientPanel3.TabIndex = 17
         ' 
         ' TableLayoutPanel17
@@ -683,26 +705,27 @@ Partial Class Receipt
         TableLayoutPanel17.BackColor = Color.Transparent
         TableLayoutPanel17.ColumnCount = 2
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 359F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 314F))
         TableLayoutPanel17.Controls.Add(Guna2PictureBox6, 0, 0)
         TableLayoutPanel17.Controls.Add(Label11, 1, 0)
         TableLayoutPanel17.Location = New Point(4, 1)
+        TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel17.Size = New Size(391, 26)
+        TableLayoutPanel17.Size = New Size(342, 20)
         TableLayoutPanel17.TabIndex = 15
         ' 
         ' Guna2PictureBox6
         ' 
-        Guna2PictureBox6.CustomizableEdges = CustomizableEdges15
-        Guna2PictureBox6.Image = My.Resources.Resources._14
+        Guna2PictureBox6.CustomizableEdges = CustomizableEdges57
         Guna2PictureBox6.ImageRotate = 0F
-        Guna2PictureBox6.Location = New Point(3, 3)
+        Guna2PictureBox6.Location = New Point(3, 2)
+        Guna2PictureBox6.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox6.Name = "Guna2PictureBox6"
-        Guna2PictureBox6.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2PictureBox6.Size = New Size(26, 20)
+        Guna2PictureBox6.ShadowDecoration.CustomizableEdges = CustomizableEdges58
+        Guna2PictureBox6.Size = New Size(21, 15)
         Guna2PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox6.TabIndex = 44
         Guna2PictureBox6.TabStop = False
@@ -713,9 +736,9 @@ Partial Class Receipt
         Label11.BackColor = Color.Transparent
         Label11.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.MediumBlue
-        Label11.Location = New Point(35, 0)
+        Label11.Location = New Point(30, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(132, 26)
+        Label11.Size = New Size(102, 20)
         Label11.TabIndex = 14
         Label11.Text = "SERVICE DETAILS"
         ' 
@@ -723,9 +746,10 @@ Partial Class Receipt
         ' 
         Panel1.AutoSize = True
         Panel1.BackColor = SystemColors.ActiveCaption
-        Panel1.Location = New Point(20, 387)
+        Panel1.Location = New Point(18, 290)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(442, 2)
+        Panel1.Size = New Size(387, 2)
         Panel1.TabIndex = 25
         ' 
         ' TableLayoutPanel11
@@ -734,19 +758,20 @@ Partial Class Receipt
         TableLayoutPanel11.ColumnCount = 4
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 66.51163F))
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.4883728F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 54F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 128F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 47F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 113F))
         TableLayoutPanel11.Controls.Add(Label19, 0, 1)
         TableLayoutPanel11.Controls.Add(Label18, 3, 0)
         TableLayoutPanel11.Controls.Add(Label17, 2, 0)
         TableLayoutPanel11.Controls.Add(Label16, 1, 0)
         TableLayoutPanel11.Controls.Add(Label15, 0, 0)
-        TableLayoutPanel11.Location = New Point(19, 423)
+        TableLayoutPanel11.Location = New Point(17, 317)
+        TableLayoutPanel11.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 2
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 51.06383F))
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 48.93617F))
-        TableLayoutPanel11.Size = New Size(442, 45)
+        TableLayoutPanel11.Size = New Size(387, 37)
         TableLayoutPanel11.TabIndex = 26
         ' 
         ' Label19
@@ -756,9 +781,9 @@ Partial Class Receipt
         Label19.BackColor = Color.Transparent
         Label19.Font = New Font("Poppins", 6F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.DimGray
-        Label19.Location = New Point(3, 22)
+        Label19.Location = New Point(3, 18)
         Label19.Name = "Label19"
-        Label19.Size = New Size(166, 23)
+        Label19.Size = New Size(144, 19)
         Label19.TabIndex = 28
         Label19.Text = "(Wash, Dry, Fold)"
         Label19.TextAlign = ContentAlignment.TopCenter
@@ -770,9 +795,9 @@ Partial Class Receipt
         Label18.BackColor = Color.Transparent
         Label18.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.DimGray
-        Label18.Location = New Point(316, 0)
+        Label18.Location = New Point(276, 0)
         Label18.Name = "Label18"
-        Label18.Size = New Size(123, 22)
+        Label18.Size = New Size(108, 18)
         Label18.TabIndex = 27
         Label18.Text = "Delivery"
         Label18.TextAlign = ContentAlignment.TopCenter
@@ -784,9 +809,9 @@ Partial Class Receipt
         Label17.BackColor = Color.Transparent
         Label17.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.DimGray
-        Label17.Location = New Point(262, 0)
+        Label17.Location = New Point(229, 0)
         Label17.Name = "Label17"
-        Label17.Size = New Size(48, 22)
+        Label17.Size = New Size(41, 18)
         Label17.TabIndex = 26
         Label17.Text = "5kg"
         Label17.TextAlign = ContentAlignment.TopCenter
@@ -798,9 +823,9 @@ Partial Class Receipt
         Label16.BackColor = Color.Transparent
         Label16.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.DimGray
-        Label16.Location = New Point(175, 0)
+        Label16.Location = New Point(153, 0)
         Label16.Name = "Label16"
-        Label16.Size = New Size(81, 22)
+        Label16.Size = New Size(70, 18)
         Label16.TabIndex = 25
         Label16.Text = "₱100/kg"
         Label16.TextAlign = ContentAlignment.TopCenter
@@ -814,7 +839,7 @@ Partial Class Receipt
         Label15.ForeColor = Color.DimGray
         Label15.Location = New Point(3, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(166, 22)
+        Label15.Size = New Size(144, 18)
         Label15.TabIndex = 24
         Label15.Text = "Full Service"
         Label15.TextAlign = ContentAlignment.TopCenter
@@ -823,9 +848,10 @@ Partial Class Receipt
         ' 
         Panel3.BackColor = SystemColors.ControlLight
         Panel3.Controls.Add(Label13)
-        Panel3.Location = New Point(23, 467)
+        Panel3.Location = New Point(20, 350)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(436, 32)
+        Panel3.Size = New Size(382, 24)
         Panel3.TabIndex = 27
         ' 
         ' Label13
@@ -834,9 +860,9 @@ Partial Class Receipt
         Label13.BackColor = Color.Transparent
         Label13.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = SystemColors.WindowFrame
-        Label13.Location = New Point(0, 4)
+        Label13.Location = New Point(0, 3)
         Label13.Name = "Label13"
-        Label13.Size = New Size(166, 26)
+        Label13.Size = New Size(132, 22)
         Label13.TabIndex = 28
         Label13.Text = "PAYMENT SUMMARY"
         ' 
@@ -844,9 +870,10 @@ Partial Class Receipt
         ' 
         Panel4.AutoSize = True
         Panel4.BackColor = SystemColors.ActiveCaption
-        Panel4.Location = New Point(24, 209)
+        Panel4.Location = New Point(21, 157)
+        Panel4.Margin = New Padding(3, 2, 3, 2)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(436, 2)
+        Panel4.Size = New Size(382, 2)
         Panel4.TabIndex = 28
         ' 
         ' Label21
@@ -858,7 +885,7 @@ Partial Class Receipt
         Label21.ForeColor = Color.DimGray
         Label21.Location = New Point(3, 0)
         Label21.Name = "Label21"
-        Label21.Size = New Size(138, 18)
+        Label21.Size = New Size(120, 13)
         Label21.TabIndex = 29
         Label21.Text = "Service Fee"
         ' 
@@ -873,14 +900,15 @@ Partial Class Receipt
         TableLayoutPanel18.Controls.Add(Label21, 0, 0)
         TableLayoutPanel18.Controls.Add(Label23, 0, 1)
         TableLayoutPanel18.Controls.Add(Label24, 0, 2)
-        TableLayoutPanel18.Location = New Point(22, 500)
+        TableLayoutPanel18.Location = New Point(19, 375)
+        TableLayoutPanel18.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel18.Name = "TableLayoutPanel18"
         TableLayoutPanel18.RowCount = 3
         TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 47.5F))
         TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 52.5F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 19F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel18.Size = New Size(434, 57)
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 14F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel18.Size = New Size(380, 43)
         TableLayoutPanel18.TabIndex = 30
         ' 
         ' Label26
@@ -890,9 +918,9 @@ Partial Class Receipt
         Label26.BackColor = Color.Transparent
         Label26.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.DimGray
-        Label26.Location = New Point(147, 18)
+        Label26.Location = New Point(129, 13)
         Label26.Name = "Label26"
-        Label26.Size = New Size(284, 19)
+        Label26.Size = New Size(248, 15)
         Label26.TabIndex = 35
         Label26.Text = "₱25.00"
         Label26.TextAlign = ContentAlignment.TopRight
@@ -904,9 +932,9 @@ Partial Class Receipt
         Label27.BackColor = Color.Transparent
         Label27.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.DimGray
-        Label27.Location = New Point(147, 37)
+        Label27.Location = New Point(129, 28)
         Label27.Name = "Label27"
-        Label27.Size = New Size(284, 20)
+        Label27.Size = New Size(248, 15)
         Label27.TabIndex = 34
         Label27.Text = "Cash"
         Label27.TextAlign = ContentAlignment.TopRight
@@ -918,9 +946,9 @@ Partial Class Receipt
         Label25.BackColor = Color.Transparent
         Label25.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.DimGray
-        Label25.Location = New Point(147, 0)
+        Label25.Location = New Point(129, 0)
         Label25.Name = "Label25"
-        Label25.Size = New Size(284, 18)
+        Label25.Size = New Size(248, 13)
         Label25.TabIndex = 32
         Label25.Text = "₱500.00"
         Label25.TextAlign = ContentAlignment.TopRight
@@ -932,9 +960,9 @@ Partial Class Receipt
         Label23.BackColor = Color.Transparent
         Label23.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label23.ForeColor = Color.DimGray
-        Label23.Location = New Point(3, 18)
+        Label23.Location = New Point(3, 13)
         Label23.Name = "Label23"
-        Label23.Size = New Size(138, 19)
+        Label23.Size = New Size(120, 15)
         Label23.TabIndex = 30
         Label23.Text = "Delivery Fee"
         ' 
@@ -945,9 +973,9 @@ Partial Class Receipt
         Label24.BackColor = Color.Transparent
         Label24.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.DimGray
-        Label24.Location = New Point(3, 37)
+        Label24.Location = New Point(3, 28)
         Label24.Name = "Label24"
-        Label24.Size = New Size(138, 20)
+        Label24.Size = New Size(120, 15)
         Label24.TabIndex = 32
         Label24.Text = "Payment Method"
         ' 
@@ -958,9 +986,9 @@ Partial Class Receipt
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Black
-        Label9.Location = New Point(191, 0)
+        Label9.Location = New Point(167, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(67, 26)
+        Label9.Size = New Size(58, 20)
         Label9.TabIndex = 21
         Label9.Text = "RATE"
         Label9.TextAlign = ContentAlignment.TopCenter
@@ -972,9 +1000,9 @@ Partial Class Receipt
         Label10.BackColor = Color.Transparent
         Label10.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Black
-        Label10.Location = New Point(264, 0)
+        Label10.Location = New Point(231, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(46, 26)
+        Label10.Size = New Size(40, 20)
         Label10.TabIndex = 22
         Label10.Text = "KG"
         Label10.TextAlign = ContentAlignment.TopCenter
@@ -988,7 +1016,7 @@ Partial Class Receipt
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(182, 26)
+        Label5.Size = New Size(158, 20)
         Label5.TabIndex = 20
         Label5.Text = "SERVICE TYPE"
         Label5.TextAlign = ContentAlignment.TopCenter
@@ -1000,9 +1028,9 @@ Partial Class Receipt
         Label12.BackColor = Color.Transparent
         Label12.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.Black
-        Label12.Location = New Point(316, 0)
+        Label12.Location = New Point(277, 0)
         Label12.Name = "Label12"
-        Label12.Size = New Size(123, 26)
+        Label12.Size = New Size(107, 20)
         Label12.TabIndex = 23
         Label12.Text = "PICKUP/DELIVERY"
         Label12.TextAlign = ContentAlignment.TopCenter
@@ -1012,37 +1040,40 @@ Partial Class Receipt
         TableLayoutPanel14.AutoSize = True
         TableLayoutPanel14.ColumnCount = 4
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 22.2222214F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 73F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 52F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 129F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 64F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 46F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 113F))
         TableLayoutPanel14.Controls.Add(Label12, 3, 0)
         TableLayoutPanel14.Controls.Add(Label5, 0, 0)
         TableLayoutPanel14.Controls.Add(Label10, 2, 0)
         TableLayoutPanel14.Controls.Add(Label9, 1, 0)
-        TableLayoutPanel14.Location = New Point(19, 396)
+        TableLayoutPanel14.Location = New Point(17, 297)
+        TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 1
         TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel14.Size = New Size(442, 26)
+        TableLayoutPanel14.Size = New Size(387, 20)
         TableLayoutPanel14.TabIndex = 15
         ' 
         ' Panel2
         ' 
         Panel2.AutoSize = True
         Panel2.BackColor = SystemColors.ActiveCaption
-        Panel2.Location = New Point(19, 420)
+        Panel2.Location = New Point(17, 315)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(442, 2)
+        Panel2.Size = New Size(387, 2)
         Panel2.TabIndex = 26
         ' 
         ' Panel5
         ' 
         Panel5.AutoSize = True
         Panel5.BackColor = SystemColors.ControlDarkDark
-        Panel5.Location = New Point(19, 564)
+        Panel5.Location = New Point(17, 423)
+        Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(442, 2)
+        Panel5.Size = New Size(387, 2)
         Panel5.TabIndex = 31
         ' 
         ' Label20
@@ -1053,7 +1084,7 @@ Partial Class Receipt
         Label20.ForeColor = Color.Black
         Label20.Location = New Point(3, 0)
         Label20.Name = "Label20"
-        Label20.Size = New Size(174, 25)
+        Label20.Size = New Size(138, 19)
         Label20.TabIndex = 29
         Label20.Text = "TOTAL AMOUNT"
         ' 
@@ -1064,9 +1095,9 @@ Partial Class Receipt
         Label22.BackColor = Color.Transparent
         Label22.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.Blue
-        Label22.Location = New Point(222, 0)
+        Label22.Location = New Point(194, 0)
         Label22.Name = "Label22"
-        Label22.Size = New Size(202, 25)
+        Label22.Size = New Size(177, 19)
         Label22.TabIndex = 32
         Label22.Text = "₱525.00"
         Label22.TextAlign = ContentAlignment.TopRight
@@ -1078,9 +1109,9 @@ Partial Class Receipt
         Label28.BackColor = Color.Transparent
         Label28.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.DimGray
-        Label28.Location = New Point(3, 25)
+        Label28.Location = New Point(3, 19)
         Label28.Name = "Label28"
-        Label28.Size = New Size(213, 19)
+        Label28.Size = New Size(185, 14)
         Label28.TabIndex = 33
         Label28.Text = "Amount Paid"
         ' 
@@ -1091,9 +1122,9 @@ Partial Class Receipt
         Label29.BackColor = Color.Transparent
         Label29.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label29.ForeColor = Color.DimGray
-        Label29.Location = New Point(222, 25)
+        Label29.Location = New Point(194, 19)
         Label29.Name = "Label29"
-        Label29.Size = New Size(202, 19)
+        Label29.Size = New Size(177, 14)
         Label29.TabIndex = 34
         Label29.Text = "₱600.00"
         Label29.TextAlign = ContentAlignment.TopRight
@@ -1105,9 +1136,9 @@ Partial Class Receipt
         Label30.BackColor = Color.Transparent
         Label30.Font = New Font("Poppins Medium", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.DimGray
-        Label30.Location = New Point(3, 44)
+        Label30.Location = New Point(3, 33)
         Label30.Name = "Label30"
-        Label30.Size = New Size(213, 31)
+        Label30.Size = New Size(185, 23)
         Label30.TabIndex = 35
         Label30.Text = "Change"
         ' 
@@ -1118,9 +1149,9 @@ Partial Class Receipt
         Label31.BackColor = Color.Transparent
         Label31.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.DimGray
-        Label31.Location = New Point(222, 44)
+        Label31.Location = New Point(194, 33)
         Label31.Name = "Label31"
-        Label31.Size = New Size(202, 31)
+        Label31.Size = New Size(177, 23)
         Label31.TabIndex = 36
         Label31.Text = "₱75.00"
         Label31.TextAlign = ContentAlignment.TopRight
@@ -1129,9 +1160,10 @@ Partial Class Receipt
         ' 
         Panel6.AutoSize = True
         Panel6.BackColor = SystemColors.ActiveCaption
-        Panel6.Location = New Point(19, 649)
+        Panel6.Location = New Point(17, 487)
+        Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(442, 2)
+        Panel6.Size = New Size(387, 2)
         Panel6.TabIndex = 37
         ' 
         ' Label32
@@ -1140,9 +1172,9 @@ Partial Class Receipt
         Label32.BackColor = Color.Transparent
         Label32.Font = New Font("Poppins", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label32.ForeColor = Color.MediumBlue
-        Label32.Location = New Point(102, 657)
+        Label32.Location = New Point(89, 493)
         Label32.Name = "Label32"
-        Label32.Size = New Size(278, 23)
+        Label32.Size = New Size(236, 19)
         Label32.TabIndex = 38
         Label32.Text = "THANK YOU FOR CHOOSING BUBBLEFRESH!"
         ' 
@@ -1153,9 +1185,9 @@ Partial Class Receipt
         Label33.BackColor = Color.Transparent
         Label33.Font = New Font("Poppins", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.DimGray
-        Label33.Location = New Point(26, 686)
+        Label33.Location = New Point(23, 514)
         Label33.Name = "Label33"
-        Label33.Size = New Size(81, 23)
+        Label33.Size = New Size(69, 19)
         Label33.TabIndex = 39
         Label33.Text = "TAKE NOTE:"
         Label33.TextAlign = ContentAlignment.TopCenter
@@ -1167,9 +1199,9 @@ Partial Class Receipt
         Label35.BackColor = Color.Transparent
         Label35.Font = New Font("Poppins", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label35.ForeColor = Color.DimGray
-        Label35.Location = New Point(29, 709)
+        Label35.Location = New Point(25, 532)
         Label35.Name = "Label35"
-        Label35.Size = New Size(0, 23)
+        Label35.Size = New Size(0, 19)
         Label35.TabIndex = 41
         Label35.TextAlign = ContentAlignment.TopCenter
         ' 
@@ -1184,13 +1216,14 @@ Partial Class Receipt
         TableLayoutPanel15.Controls.Add(Label30, 0, 2)
         TableLayoutPanel15.Controls.Add(Label31, 1, 2)
         TableLayoutPanel15.Controls.Add(Label22, 1, 0)
-        TableLayoutPanel15.Location = New Point(26, 572)
+        TableLayoutPanel15.Location = New Point(23, 429)
+        TableLayoutPanel15.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 3
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 57.5757561F))
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 42.4242439F))
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
-        TableLayoutPanel15.Size = New Size(427, 75)
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
+        TableLayoutPanel15.Size = New Size(374, 56)
         TableLayoutPanel15.TabIndex = 42
         ' 
         ' TableLayoutPanel19
@@ -1201,14 +1234,15 @@ Partial Class Receipt
         TableLayoutPanel19.Controls.Add(Label37, 0, 2)
         TableLayoutPanel19.Controls.Add(Label36, 0, 0)
         TableLayoutPanel19.Controls.Add(Label38, 0, 1)
-        TableLayoutPanel19.Location = New Point(30, 709)
+        TableLayoutPanel19.Location = New Point(26, 532)
+        TableLayoutPanel19.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 4
         TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 44F))
         TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 56F))
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel19.Size = New Size(437, 87)
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Absolute, 15F))
+        TableLayoutPanel19.Size = New Size(382, 65)
         TableLayoutPanel19.TabIndex = 43
         ' 
         ' Label39
@@ -1218,9 +1252,9 @@ Partial Class Receipt
         Label39.BackColor = Color.Transparent
         Label39.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label39.ForeColor = Color.DimGray
-        Label39.Location = New Point(3, 66)
+        Label39.Location = New Point(3, 49)
         Label39.Name = "Label39"
-        Label39.Size = New Size(431, 21)
+        Label39.Size = New Size(376, 16)
         Label39.TabIndex = 48
         Label39.Text = "3. Please ensure someone is present at the delivery address."
         ' 
@@ -1231,9 +1265,9 @@ Partial Class Receipt
         Label37.BackColor = Color.Transparent
         Label37.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label37.ForeColor = Color.DimGray
-        Label37.Location = New Point(3, 46)
+        Label37.Location = New Point(3, 34)
         Label37.Name = "Label37"
-        Label37.Size = New Size(431, 20)
+        Label37.Size = New Size(376, 15)
         Label37.TabIndex = 47
         Label37.Text = "2. Items unclaimed after 30 days are no longer our responsibility."
         ' 
@@ -1246,7 +1280,7 @@ Partial Class Receipt
         Label36.ForeColor = Color.DimGray
         Label36.Location = New Point(3, 0)
         Label36.Name = "Label36"
-        Label36.Size = New Size(431, 20)
+        Label36.Size = New Size(376, 15)
         Label36.TabIndex = 44
         Label36.Text = "1. BubbleFresh is not liable for damage during standard washing,"
         ' 
@@ -1257,15 +1291,15 @@ Partial Class Receipt
         Label38.BackColor = Color.Transparent
         Label38.Font = New Font("Poppins", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label38.ForeColor = Color.DimGray
-        Label38.Location = New Point(3, 20)
+        Label38.Location = New Point(3, 15)
         Label38.Name = "Label38"
-        Label38.Size = New Size(431, 26)
+        Label38.Size = New Size(376, 19)
         Label38.TabIndex = 46
         Label38.Text = "drying, or folding."
         ' 
         ' Guna2Button1
         ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges19
+        Guna2Button1.CustomizableEdges = CustomizableEdges59
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1273,19 +1307,25 @@ Partial Class Receipt
         Guna2Button1.FillColor = Color.Transparent
         Guna2Button1.Font = New Font("Poppins", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Guna2Button1.ForeColor = Color.Blue
-        Guna2Button1.Location = New Point(324, 823)
+        Guna2Button1.Location = New Point(257, 608)
+        Guna2Button1.Margin = New Padding(3, 2, 3, 2)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        Guna2Button1.Size = New Size(164, 28)
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges60
+        Guna2Button1.Size = New Size(144, 21)
         Guna2Button1.TabIndex = 44
         Guna2Button1.Text = "DOWNLOAD RECEIPT"
         ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
         ' Receipt
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        AutoSize = True
-        ClientSize = New Size(462, 853)
+        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleMode = AutoScaleMode.Dpi
+        ClientSize = New Size(404, 640)
         Controls.Add(Guna2Button1)
         Controls.Add(TableLayoutPanel19)
         Controls.Add(TableLayoutPanel15)
@@ -1305,11 +1345,13 @@ Partial Class Receipt
         Controls.Add(TableLayoutPanel16)
         Controls.Add(TableLayoutPanel8)
         Controls.Add(Guna2GradientPanel1)
-        FormBorderStyle = FormBorderStyle.FixedSingle
+        FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         MinimizeBox = False
         Name = "Receipt"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "v"
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Receipt"
+        TopMost = True
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel4.ResumeLayout(False)
@@ -1441,4 +1483,5 @@ Partial Class Receipt
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox6 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
 End Class

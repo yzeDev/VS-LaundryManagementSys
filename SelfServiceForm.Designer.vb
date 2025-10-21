@@ -37,7 +37,6 @@ Partial Class SelfServiceForm
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SelfServiceForm))
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
@@ -545,7 +544,7 @@ Partial Class SelfServiceForm
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbContinue.Dock = DockStyle.Top
-        gbContinue.Dock = DockStyle.Top
+        gbContinue.Font = New Font("Segoe UI", 9.0F)
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(248, 3)
         gbContinue.Name = "gbContinue"
@@ -643,7 +642,6 @@ Partial Class SelfServiceForm
         Guna2CirclePictureBox1.BackColor = Color.Transparent
         Guna2CirclePictureBox1.Dock = DockStyle.Fill
         Guna2CirclePictureBox1.ErrorImage = Nothing
-        Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), Image)
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.InitialImage = Nothing
         Guna2CirclePictureBox1.Location = New Point(0, 0)

@@ -530,6 +530,7 @@ Partial Class FullServiceForm
         TableLayoutPanel2.Controls.Add(Label1, 1, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
