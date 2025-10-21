@@ -1,5 +1,5 @@
 # Laundry Management System  
-Authors: Ashley Alcantara, Alyssa Cruz, Owen Miranda, Yzekeil Vinas  
+Authors: Ashley Alcantara(Ashlee143), Alyssa Cruz(Alyyy3000), Owen Miranda(Myasora), Yzekeil Vinas(yzeDev)  
 
 version 1.0.0  
 
