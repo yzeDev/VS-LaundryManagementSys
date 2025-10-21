@@ -277,16 +277,16 @@ Partial Class PriceSettingsControl
         ' 
         ' dryclean_currentSmall
         ' 
-        dryclean_current1.Anchor = AnchorStyles.Left
-        dryclean_current1.AutoSize = True
-        dryclean_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_current1.Location = New Point(97, 0)
-        dryclean_current1.Name = "dryclean_current1"
-        dryclean_current1.Size = New Size(34, 18)
-        dryclean_current1.TabIndex = 14
-        dryclean_current1.Text = "₱ 40"
-        dryclean_current1.TextAlign = ContentAlignment.MiddleLeft
+        dryclean_currentSmall.Anchor = AnchorStyles.Left
+        dryclean_currentSmall.AutoSize = True
+        dryclean_currentSmall.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_currentSmall.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_currentSmall.Location = New Point(97, 0)
+        dryclean_currentSmall.Name = "dryclean_currentSmall"
+        dryclean_currentSmall.Size = New Size(34, 18)
+        dryclean_currentSmall.TabIndex = 14
+        dryclean_currentSmall.Text = "₱ 40"
+        dryclean_currentSmall.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label40
         ' 
@@ -318,16 +318,16 @@ Partial Class PriceSettingsControl
         ' 
         ' dryclean_currentMedium
         ' 
-        dryclean_current2.Anchor = AnchorStyles.Left
-        dryclean_current2.AutoSize = True
-        dryclean_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_current2.Location = New Point(97, 0)
-        dryclean_current2.Name = "dryclean_current2"
-        dryclean_current2.Size = New Size(33, 18)
-        dryclean_current2.TabIndex = 14
-        dryclean_current2.Text = "₱ 30"
-        dryclean_current2.TextAlign = ContentAlignment.MiddleLeft
+        dryclean_currentMedium.Anchor = AnchorStyles.Left
+        dryclean_currentMedium.AutoSize = True
+        dryclean_currentMedium.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_currentMedium.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_currentMedium.Location = New Point(97, 0)
+        dryclean_currentMedium.Name = "dryclean_currentMedium"
+        dryclean_currentMedium.Size = New Size(33, 18)
+        dryclean_currentMedium.TabIndex = 14
+        dryclean_currentMedium.Text = "₱ 30"
+        dryclean_currentMedium.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label42
         ' 
@@ -373,27 +373,27 @@ Partial Class PriceSettingsControl
         Label46.Text = "₱ "
         Label46.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dryclean_new3
+        ' dryclean_newLarge
         ' 
-        dryclean_new3.BorderColor = Color.Gray
-        dryclean_new3.BorderRadius = 5
-        dryclean_new3.CustomizableEdges = CustomizableEdges1
-        dryclean_new3.DefaultText = ""
-        dryclean_new3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        dryclean_new3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        dryclean_new3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_new3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new3.Location = New Point(23, 4)
-        dryclean_new3.Margin = New Padding(3, 4, 3, 4)
-        dryclean_new3.Name = "dryclean_new3"
-        dryclean_new3.PlaceholderText = ""
-        dryclean_new3.SelectedText = ""
-        dryclean_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        dryclean_new3.Size = New Size(77, 17)
-        dryclean_new3.TabIndex = 15
+        dryclean_newLarge.BorderColor = Color.Gray
+        dryclean_newLarge.BorderRadius = 5
+        dryclean_newLarge.CustomizableEdges = CustomizableEdges1
+        dryclean_newLarge.DefaultText = ""
+        dryclean_newLarge.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_newLarge.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_newLarge.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newLarge.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newLarge.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newLarge.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_newLarge.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newLarge.Location = New Point(23, 4)
+        dryclean_newLarge.Margin = New Padding(3, 4, 3, 4)
+        dryclean_newLarge.Name = "dryclean_newLarge"
+        dryclean_newLarge.PlaceholderText = ""
+        dryclean_newLarge.SelectedText = ""
+        dryclean_newLarge.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        dryclean_newLarge.Size = New Size(77, 17)
+        dryclean_newLarge.TabIndex = 15
         ' 
         ' Label47
         ' 
@@ -439,27 +439,27 @@ Partial Class PriceSettingsControl
         Label48.Text = "₱ "
         Label48.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dryclean_new2
+        ' dryclean_newMedium
         ' 
-        dryclean_new2.BorderColor = Color.Gray
-        dryclean_new2.BorderRadius = 5
-        dryclean_new2.CustomizableEdges = CustomizableEdges3
-        dryclean_new2.DefaultText = ""
-        dryclean_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        dryclean_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        dryclean_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new2.Location = New Point(23, 4)
-        dryclean_new2.Margin = New Padding(3, 4, 3, 4)
-        dryclean_new2.Name = "dryclean_new2"
-        dryclean_new2.PlaceholderText = ""
-        dryclean_new2.SelectedText = ""
-        dryclean_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        dryclean_new2.Size = New Size(77, 17)
-        dryclean_new2.TabIndex = 15
+        dryclean_newMedium.BorderColor = Color.Gray
+        dryclean_newMedium.BorderRadius = 5
+        dryclean_newMedium.CustomizableEdges = CustomizableEdges3
+        dryclean_newMedium.DefaultText = ""
+        dryclean_newMedium.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_newMedium.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_newMedium.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newMedium.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newMedium.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newMedium.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_newMedium.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newMedium.Location = New Point(23, 4)
+        dryclean_newMedium.Margin = New Padding(3, 4, 3, 4)
+        dryclean_newMedium.Name = "dryclean_newMedium"
+        dryclean_newMedium.PlaceholderText = ""
+        dryclean_newMedium.SelectedText = ""
+        dryclean_newMedium.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        dryclean_newMedium.Size = New Size(77, 17)
+        dryclean_newMedium.TabIndex = 15
         ' 
         ' Label49
         ' 
@@ -531,28 +531,28 @@ Partial Class PriceSettingsControl
         Label52.Text = "₱ "
         Label52.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dryclean_new1
+        ' dryclean_newSmall
         ' 
-        dryclean_new1.AcceptsReturn = True
-        dryclean_new1.BorderColor = Color.Gray
-        dryclean_new1.BorderRadius = 5
-        dryclean_new1.CustomizableEdges = CustomizableEdges5
-        dryclean_new1.DefaultText = ""
-        dryclean_new1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        dryclean_new1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        dryclean_new1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_new1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new1.Location = New Point(23, 4)
-        dryclean_new1.Margin = New Padding(3, 4, 3, 4)
-        dryclean_new1.Name = "dryclean_new1"
-        dryclean_new1.PlaceholderText = ""
-        dryclean_new1.SelectedText = ""
-        dryclean_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        dryclean_new1.Size = New Size(77, 18)
-        dryclean_new1.TabIndex = 15
+        dryclean_newSmall.AcceptsReturn = True
+        dryclean_newSmall.BorderColor = Color.Gray
+        dryclean_newSmall.BorderRadius = 5
+        dryclean_newSmall.CustomizableEdges = CustomizableEdges5
+        dryclean_newSmall.DefaultText = ""
+        dryclean_newSmall.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_newSmall.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_newSmall.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newSmall.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newSmall.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newSmall.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_newSmall.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newSmall.Location = New Point(23, 4)
+        dryclean_newSmall.Margin = New Padding(3, 4, 3, 4)
+        dryclean_newSmall.Name = "dryclean_newSmall"
+        dryclean_newSmall.PlaceholderText = ""
+        dryclean_newSmall.SelectedText = ""
+        dryclean_newSmall.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        dryclean_newSmall.Size = New Size(77, 18)
+        dryclean_newSmall.TabIndex = 15
         ' 
         ' Label53
         ' 
@@ -584,16 +584,16 @@ Partial Class PriceSettingsControl
         ' 
         ' dryclean_currentLarge
         ' 
-        dryclean_current3.Anchor = AnchorStyles.Left
-        dryclean_current3.AutoSize = True
-        dryclean_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_current3.Location = New Point(97, 0)
-        dryclean_current3.Name = "dryclean_current3"
-        dryclean_current3.Size = New Size(33, 18)
-        dryclean_current3.TabIndex = 14
-        dryclean_current3.Text = "₱ 30"
-        dryclean_current3.TextAlign = ContentAlignment.MiddleLeft
+        dryclean_currentLarge.Anchor = AnchorStyles.Left
+        dryclean_currentLarge.AutoSize = True
+        dryclean_currentLarge.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_currentLarge.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_currentLarge.Location = New Point(97, 0)
+        dryclean_currentLarge.Name = "dryclean_currentLarge"
+        dryclean_currentLarge.Size = New Size(33, 18)
+        dryclean_currentLarge.TabIndex = 14
+        dryclean_currentLarge.Text = "₱ 30"
+        dryclean_currentLarge.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label55
         ' 
@@ -680,16 +680,16 @@ Partial Class PriceSettingsControl
         ' 
         ' fullservice_currentWash
         ' 
-        fullservice_current2.Anchor = AnchorStyles.Left
-        fullservice_current2.AutoSize = True
-        fullservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        fullservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        fullservice_current2.Location = New Point(97, 0)
-        fullservice_current2.Name = "fullservice_current2"
-        fullservice_current2.Size = New Size(34, 18)
-        fullservice_current2.TabIndex = 14
-        fullservice_current2.Text = "₱ 40"
-        fullservice_current2.TextAlign = ContentAlignment.MiddleLeft
+        fullservice_currentWash.Anchor = AnchorStyles.Left
+        fullservice_currentWash.AutoSize = True
+        fullservice_currentWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        fullservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        fullservice_currentWash.Location = New Point(97, 0)
+        fullservice_currentWash.Name = "fullservice_currentWash"
+        fullservice_currentWash.Size = New Size(34, 18)
+        fullservice_currentWash.TabIndex = 14
+        fullservice_currentWash.Text = "₱ 40"
+        fullservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label58
         ' 
@@ -848,16 +848,16 @@ Partial Class PriceSettingsControl
         ' 
         ' basicservice_currentWash
         ' 
-        basicservice_current1.Anchor = AnchorStyles.Left
-        basicservice_current1.AutoSize = True
-        basicservice_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_current1.Location = New Point(97, 0)
-        basicservice_current1.Name = "basicservice_current1"
-        basicservice_current1.Size = New Size(34, 18)
-        basicservice_current1.TabIndex = 14
-        basicservice_current1.Text = "₱ 40"
-        basicservice_current1.TextAlign = ContentAlignment.MiddleLeft
+        basicservice_currentWash.Anchor = AnchorStyles.Left
+        basicservice_currentWash.AutoSize = True
+        basicservice_currentWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_currentWash.Location = New Point(97, 0)
+        basicservice_currentWash.Name = "basicservice_currentWash"
+        basicservice_currentWash.Size = New Size(34, 18)
+        basicservice_currentWash.TabIndex = 14
+        basicservice_currentWash.Text = "₱ 40"
+        basicservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label7
         ' 
@@ -889,16 +889,16 @@ Partial Class PriceSettingsControl
         ' 
         ' basicservice_currentDry
         ' 
-        basicservice_current2.Anchor = AnchorStyles.Left
-        basicservice_current2.AutoSize = True
-        basicservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_current2.Location = New Point(97, 0)
-        basicservice_current2.Name = "basicservice_current2"
-        basicservice_current2.Size = New Size(33, 18)
-        basicservice_current2.TabIndex = 14
-        basicservice_current2.Text = "₱ 30"
-        basicservice_current2.TextAlign = ContentAlignment.MiddleLeft
+        basicservice_currentDry.Anchor = AnchorStyles.Left
+        basicservice_currentDry.AutoSize = True
+        basicservice_currentDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_currentDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_currentDry.Location = New Point(97, 0)
+        basicservice_currentDry.Name = "basicservice_currentDry"
+        basicservice_currentDry.Size = New Size(33, 18)
+        basicservice_currentDry.TabIndex = 14
+        basicservice_currentDry.Text = "₱ 30"
+        basicservice_currentDry.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label18
         ' 
@@ -944,27 +944,27 @@ Partial Class PriceSettingsControl
         Label19.Text = "₱ "
         Label19.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' basicservice_new3
+        ' basicservice_newWashDry
         ' 
-        basicservice_new3.BorderColor = Color.Gray
-        basicservice_new3.BorderRadius = 5
-        basicservice_new3.CustomizableEdges = CustomizableEdges13
-        basicservice_new3.DefaultText = ""
-        basicservice_new3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        basicservice_new3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        basicservice_new3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_new3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new3.Location = New Point(23, 4)
-        basicservice_new3.Margin = New Padding(3, 4, 3, 4)
-        basicservice_new3.Name = "basicservice_new3"
-        basicservice_new3.PlaceholderText = ""
-        basicservice_new3.SelectedText = ""
-        basicservice_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        basicservice_new3.Size = New Size(77, 17)
-        basicservice_new3.TabIndex = 15
+        basicservice_newWashDry.BorderColor = Color.Gray
+        basicservice_newWashDry.BorderRadius = 5
+        basicservice_newWashDry.CustomizableEdges = CustomizableEdges13
+        basicservice_newWashDry.DefaultText = ""
+        basicservice_newWashDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_newWashDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_newWashDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWashDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWashDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWashDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_newWashDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWashDry.Location = New Point(23, 4)
+        basicservice_newWashDry.Margin = New Padding(3, 4, 3, 4)
+        basicservice_newWashDry.Name = "basicservice_newWashDry"
+        basicservice_newWashDry.PlaceholderText = ""
+        basicservice_newWashDry.SelectedText = ""
+        basicservice_newWashDry.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        basicservice_newWashDry.Size = New Size(77, 17)
+        basicservice_newWashDry.TabIndex = 15
         ' 
         ' Label20
         ' 
@@ -1010,27 +1010,27 @@ Partial Class PriceSettingsControl
         Label21.Text = "₱ "
         Label21.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' basicservice_new2
+        ' basicservice_newDry
         ' 
-        basicservice_new2.BorderColor = Color.Gray
-        basicservice_new2.BorderRadius = 5
-        basicservice_new2.CustomizableEdges = CustomizableEdges15
-        basicservice_new2.DefaultText = ""
-        basicservice_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        basicservice_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        basicservice_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new2.Location = New Point(23, 4)
-        basicservice_new2.Margin = New Padding(3, 4, 3, 4)
-        basicservice_new2.Name = "basicservice_new2"
-        basicservice_new2.PlaceholderText = ""
-        basicservice_new2.SelectedText = ""
-        basicservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        basicservice_new2.Size = New Size(77, 17)
-        basicservice_new2.TabIndex = 15
+        basicservice_newDry.BorderColor = Color.Gray
+        basicservice_newDry.BorderRadius = 5
+        basicservice_newDry.CustomizableEdges = CustomizableEdges15
+        basicservice_newDry.DefaultText = ""
+        basicservice_newDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_newDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_newDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_newDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newDry.Location = New Point(23, 4)
+        basicservice_newDry.Margin = New Padding(3, 4, 3, 4)
+        basicservice_newDry.Name = "basicservice_newDry"
+        basicservice_newDry.PlaceholderText = ""
+        basicservice_newDry.SelectedText = ""
+        basicservice_newDry.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        basicservice_newDry.Size = New Size(77, 17)
+        basicservice_newDry.TabIndex = 15
         ' 
         ' Label24
         ' 
@@ -1102,27 +1102,27 @@ Partial Class PriceSettingsControl
         Label27.Text = "₱ "
         Label27.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' basicservice_new1
+        ' basicservice_newWash
         ' 
-        basicservice_new1.BorderColor = Color.Gray
-        basicservice_new1.BorderRadius = 5
-        basicservice_new1.CustomizableEdges = CustomizableEdges17
-        basicservice_new1.DefaultText = ""
-        basicservice_new1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        basicservice_new1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        basicservice_new1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_new1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new1.Location = New Point(23, 4)
-        basicservice_new1.Margin = New Padding(3, 4, 3, 4)
-        basicservice_new1.Name = "basicservice_new1"
-        basicservice_new1.PlaceholderText = ""
-        basicservice_new1.SelectedText = ""
-        basicservice_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        basicservice_new1.Size = New Size(77, 18)
-        basicservice_new1.TabIndex = 15
+        basicservice_newWash.BorderColor = Color.Gray
+        basicservice_newWash.BorderRadius = 5
+        basicservice_newWash.CustomizableEdges = CustomizableEdges17
+        basicservice_newWash.DefaultText = ""
+        basicservice_newWash.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_newWash.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_newWash.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWash.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWash.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_newWash.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWash.Location = New Point(23, 4)
+        basicservice_newWash.Margin = New Padding(3, 4, 3, 4)
+        basicservice_newWash.Name = "basicservice_newWash"
+        basicservice_newWash.PlaceholderText = ""
+        basicservice_newWash.SelectedText = ""
+        basicservice_newWash.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        basicservice_newWash.Size = New Size(77, 18)
+        basicservice_newWash.TabIndex = 15
         ' 
         ' Label28
         ' 
@@ -1154,16 +1154,16 @@ Partial Class PriceSettingsControl
         ' 
         ' basicservice_currentWashDry
         ' 
-        basicservice_current3.Anchor = AnchorStyles.Left
-        basicservice_current3.AutoSize = True
-        basicservice_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_current3.Location = New Point(97, 0)
-        basicservice_current3.Name = "basicservice_current3"
-        basicservice_current3.Size = New Size(33, 18)
-        basicservice_current3.TabIndex = 14
-        basicservice_current3.Text = "₱ 30"
-        basicservice_current3.TextAlign = ContentAlignment.MiddleLeft
+        basicservice_currentWashDry.Anchor = AnchorStyles.Left
+        basicservice_currentWashDry.AutoSize = True
+        basicservice_currentWashDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_currentWashDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_currentWashDry.Location = New Point(97, 0)
+        basicservice_currentWashDry.Name = "basicservice_currentWashDry"
+        basicservice_currentWashDry.Size = New Size(33, 18)
+        basicservice_currentWashDry.TabIndex = 14
+        basicservice_currentWashDry.Text = "₱ 30"
+        basicservice_currentWashDry.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label30
         ' 
@@ -1256,16 +1256,16 @@ Partial Class PriceSettingsControl
         ' 
         ' selfservice_currentWash
         ' 
-        selfservice_current1.Anchor = AnchorStyles.Left
-        selfservice_current1.AutoSize = True
-        selfservice_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_current1.Location = New Point(97, 0)
-        selfservice_current1.Name = "selfservice_current1"
-        selfservice_current1.Size = New Size(34, 18)
-        selfservice_current1.TabIndex = 14
-        selfservice_current1.Text = "₱ 40"
-        selfservice_current1.TextAlign = ContentAlignment.MiddleLeft
+        selfservice_currentWash.Anchor = AnchorStyles.Left
+        selfservice_currentWash.AutoSize = True
+        selfservice_currentWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_currentWash.Location = New Point(97, 0)
+        selfservice_currentWash.Name = "selfservice_currentWash"
+        selfservice_currentWash.Size = New Size(34, 18)
+        selfservice_currentWash.TabIndex = 14
+        selfservice_currentWash.Text = "₱ 40"
+        selfservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label13
         ' 
@@ -1297,16 +1297,16 @@ Partial Class PriceSettingsControl
         ' 
         ' selfservice_currentDry
         ' 
-        selfservice_current2.Anchor = AnchorStyles.Left
-        selfservice_current2.AutoSize = True
-        selfservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_current2.Location = New Point(97, 0)
-        selfservice_current2.Name = "selfservice_current2"
-        selfservice_current2.Size = New Size(33, 18)
-        selfservice_current2.TabIndex = 14
-        selfservice_current2.Text = "₱ 30"
-        selfservice_current2.TextAlign = ContentAlignment.MiddleLeft
+        selfservice_currentDry.Anchor = AnchorStyles.Left
+        selfservice_currentDry.AutoSize = True
+        selfservice_currentDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_currentDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_currentDry.Location = New Point(97, 0)
+        selfservice_currentDry.Name = "selfservice_currentDry"
+        selfservice_currentDry.Size = New Size(33, 18)
+        selfservice_currentDry.TabIndex = 14
+        selfservice_currentDry.Text = "₱ 30"
+        selfservice_currentDry.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label10
         ' 
@@ -1352,27 +1352,27 @@ Partial Class PriceSettingsControl
         Label15.Text = "₱ "
         Label15.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' selfservice_new3
+        ' selfservice_newWashDry
         ' 
-        selfservice_new3.BorderColor = Color.Gray
-        selfservice_new3.BorderRadius = 5
-        selfservice_new3.CustomizableEdges = CustomizableEdges21
-        selfservice_new3.DefaultText = ""
-        selfservice_new3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        selfservice_new3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        selfservice_new3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_new3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new3.Location = New Point(23, 4)
-        selfservice_new3.Margin = New Padding(3, 4, 3, 4)
-        selfservice_new3.Name = "selfservice_new3"
-        selfservice_new3.PlaceholderText = ""
-        selfservice_new3.SelectedText = ""
-        selfservice_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        selfservice_new3.Size = New Size(77, 17)
-        selfservice_new3.TabIndex = 15
+        selfservice_newWashDry.BorderColor = Color.Gray
+        selfservice_newWashDry.BorderRadius = 5
+        selfservice_newWashDry.CustomizableEdges = CustomizableEdges21
+        selfservice_newWashDry.DefaultText = ""
+        selfservice_newWashDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_newWashDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_newWashDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWashDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWashDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWashDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_newWashDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWashDry.Location = New Point(23, 4)
+        selfservice_newWashDry.Margin = New Padding(3, 4, 3, 4)
+        selfservice_newWashDry.Name = "selfservice_newWashDry"
+        selfservice_newWashDry.PlaceholderText = ""
+        selfservice_newWashDry.SelectedText = ""
+        selfservice_newWashDry.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        selfservice_newWashDry.Size = New Size(77, 17)
+        selfservice_newWashDry.TabIndex = 15
         ' 
         ' Label16
         ' 
@@ -1418,27 +1418,27 @@ Partial Class PriceSettingsControl
         Label14.Text = "₱ "
         Label14.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' selfservice_new2
+        ' selfservice_newDry
         ' 
-        selfservice_new2.BorderColor = Color.Gray
-        selfservice_new2.BorderRadius = 5
-        selfservice_new2.CustomizableEdges = CustomizableEdges23
-        selfservice_new2.DefaultText = ""
-        selfservice_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        selfservice_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        selfservice_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new2.Location = New Point(23, 4)
-        selfservice_new2.Margin = New Padding(3, 4, 3, 4)
-        selfservice_new2.Name = "selfservice_new2"
-        selfservice_new2.PlaceholderText = ""
-        selfservice_new2.SelectedText = ""
-        selfservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        selfservice_new2.Size = New Size(77, 17)
-        selfservice_new2.TabIndex = 15
+        selfservice_newDry.BorderColor = Color.Gray
+        selfservice_newDry.BorderRadius = 5
+        selfservice_newDry.CustomizableEdges = CustomizableEdges23
+        selfservice_newDry.DefaultText = ""
+        selfservice_newDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_newDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_newDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_newDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newDry.Location = New Point(23, 4)
+        selfservice_newDry.Margin = New Padding(3, 4, 3, 4)
+        selfservice_newDry.Name = "selfservice_newDry"
+        selfservice_newDry.PlaceholderText = ""
+        selfservice_newDry.SelectedText = ""
+        selfservice_newDry.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        selfservice_newDry.Size = New Size(77, 17)
+        selfservice_newDry.TabIndex = 15
         ' 
         ' Label33
         ' 
@@ -1510,27 +1510,27 @@ Partial Class PriceSettingsControl
         Label36.Text = "₱ "
         Label36.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' selfservice_new1
+        ' selfservice_newWash
         ' 
-        selfservice_new1.BorderColor = Color.Gray
-        selfservice_new1.BorderRadius = 5
-        selfservice_new1.CustomizableEdges = CustomizableEdges25
-        selfservice_new1.DefaultText = ""
-        selfservice_new1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        selfservice_new1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        selfservice_new1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_new1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new1.Location = New Point(23, 4)
-        selfservice_new1.Margin = New Padding(3, 4, 3, 4)
-        selfservice_new1.Name = "selfservice_new1"
-        selfservice_new1.PlaceholderText = ""
-        selfservice_new1.SelectedText = ""
-        selfservice_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        selfservice_new1.Size = New Size(77, 18)
-        selfservice_new1.TabIndex = 15
+        selfservice_newWash.BorderColor = Color.Gray
+        selfservice_newWash.BorderRadius = 5
+        selfservice_newWash.CustomizableEdges = CustomizableEdges25
+        selfservice_newWash.DefaultText = ""
+        selfservice_newWash.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_newWash.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_newWash.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWash.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWash.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_newWash.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWash.Location = New Point(23, 4)
+        selfservice_newWash.Margin = New Padding(3, 4, 3, 4)
+        selfservice_newWash.Name = "selfservice_newWash"
+        selfservice_newWash.PlaceholderText = ""
+        selfservice_newWash.SelectedText = ""
+        selfservice_newWash.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        selfservice_newWash.Size = New Size(77, 18)
+        selfservice_newWash.TabIndex = 15
         ' 
         ' Label37
         ' 
@@ -1562,16 +1562,16 @@ Partial Class PriceSettingsControl
         ' 
         ' selfservice_currentWashDry
         ' 
-        selfservice_current3.Anchor = AnchorStyles.Left
-        selfservice_current3.AutoSize = True
-        selfservice_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_current3.Location = New Point(97, 0)
-        selfservice_current3.Name = "selfservice_current3"
-        selfservice_current3.Size = New Size(33, 18)
-        selfservice_current3.TabIndex = 14
-        selfservice_current3.Text = "₱ 30"
-        selfservice_current3.TextAlign = ContentAlignment.MiddleLeft
+        selfservice_currentWashDry.Anchor = AnchorStyles.Left
+        selfservice_currentWashDry.AutoSize = True
+        selfservice_currentWashDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_currentWashDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_currentWashDry.Location = New Point(97, 0)
+        selfservice_currentWashDry.Name = "selfservice_currentWashDry"
+        selfservice_currentWashDry.Size = New Size(33, 18)
+        selfservice_currentWashDry.TabIndex = 14
+        selfservice_currentWashDry.Text = "₱ 30"
+        selfservice_currentWashDry.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label23
         ' 
