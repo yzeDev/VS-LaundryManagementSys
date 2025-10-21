@@ -22,27 +22,30 @@ Partial Class TransactionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionForm))
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
+        tbMachineUsed = New TextBox()
+        tbCustomer = New TextBox()
         TableLayoutPanel7 = New TableLayoutPanel()
         Label5 = New Label()
         PictureBox1 = New PictureBox()
         TableLayoutPanel12 = New TableLayoutPanel()
         Label10 = New Label()
-        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Label1 = New Label()
+        PictureBox6 = New PictureBox()
         TableLayoutPanel2 = New TableLayoutPanel()
         Label2 = New Label()
         TableLayoutPanel5 = New TableLayoutPanel()
+        Label29 = New Label()
         Label3 = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
         TableLayoutPanel6 = New TableLayoutPanel()
+        Label16 = New Label()
         Label4 = New Label()
         Panel1 = New Panel()
         TableLayoutPanel4 = New TableLayoutPanel()
@@ -54,59 +57,56 @@ Partial Class TransactionForm
         Label15 = New Label()
         lblAddress = New TableLayoutPanel()
         Label6 = New Label()
+        PictureBox4 = New PictureBox()
         TableLayoutPanel9 = New TableLayoutPanel()
         Label7 = New Label()
+        PictureBox3 = New PictureBox()
         TableLayoutPanel11 = New TableLayoutPanel()
+        cbStatus = New ComboBox()
         Label9 = New Label()
+        PictureBox5 = New PictureBox()
         TableLayoutPanel14 = New TableLayoutPanel()
         Label12 = New Label()
         TableLayoutPanel15 = New TableLayoutPanel()
+        PictureBox9 = New PictureBox()
         Label13 = New Label()
         TableLayoutPanel16 = New TableLayoutPanel()
+        PictureBox10 = New PictureBox()
         Label14 = New Label()
         Panel2 = New Panel()
         TableLayoutPanel17 = New TableLayoutPanel()
+        tbPaymentMethod = New TextBox()
+        tbService = New TextBox()
         TableLayoutPanel21 = New TableLayoutPanel()
+        cbService = New ComboBox()
         PictureBox2 = New PictureBox()
         Label22 = New Label()
         TableLayoutPanel19 = New TableLayoutPanel()
         Label18 = New Label()
+        PictureBox7 = New PictureBox()
         TableLayoutPanel20 = New TableLayoutPanel()
+        tbTotal = New TextBox()
         TableLayoutPanel23 = New TableLayoutPanel()
         Label23 = New Label()
+        PictureBox8 = New PictureBox()
+        tbContactNum = New TextBox()
         TableLayoutPanel22 = New TableLayoutPanel()
+        tbAmountReceived = New TextBox()
+        tbAddress = New TextBox()
         Panel3 = New Panel()
         TableLayoutPanel24 = New TableLayoutPanel()
-        Panel4 = New Panel()
-        PictureBox3 = New PictureBox()
-        PictureBox4 = New PictureBox()
-        PictureBox5 = New PictureBox()
-        PictureBox6 = New PictureBox()
-        PictureBox7 = New PictureBox()
-        PictureBox8 = New PictureBox()
-        PictureBox9 = New PictureBox()
-        PictureBox10 = New PictureBox()
-        Label29 = New Label()
-        btnCancel = New Button()
-        tbCustomer = New TextBox()
-        tbService = New TextBox()
-        tbContactNum = New TextBox()
-        tbAddress = New TextBox()
-        tbStatus = New TextBox()
-        tbMachineUsed = New TextBox()
-        tbPaymentMethod = New TextBox()
-        tbTotal = New TextBox()
-        tbAmountReceived = New TextBox()
         tbChange = New TextBox()
-        cbService = New ComboBox()
-        cbStatus = New ComboBox()
+        tbStatus = New TextBox()
+        Panel4 = New Panel()
+        btnCancel = New Button()
         saveBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Label16 = New Label()
+        Label1 = New Label()
+        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel7.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel12.SuspendLayout()
-        Guna2GradientPanel1.SuspendLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
@@ -116,27 +116,27 @@ Partial Class TransactionForm
         TableLayoutPanel13.SuspendLayout()
         Guna2Panel2.SuspendLayout()
         lblAddress.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel9.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel11.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel14.SuspendLayout()
         TableLayoutPanel15.SuspendLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel16.SuspendLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel17.SuspendLayout()
         TableLayoutPanel21.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel19.SuspendLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel20.SuspendLayout()
         TableLayoutPanel23.SuspendLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel22.SuspendLayout()
         TableLayoutPanel24.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -155,6 +155,22 @@ Partial Class TransactionForm
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Size = New Size(779, 55)
         TableLayoutPanel1.TabIndex = 0
+        ' 
+        ' tbMachineUsed
+        ' 
+        tbMachineUsed.BackColor = Color.LightGray
+        tbMachineUsed.Location = New Point(392, 30)
+        tbMachineUsed.Name = "tbMachineUsed"
+        tbMachineUsed.Size = New Size(383, 27)
+        tbMachineUsed.TabIndex = 35
+        ' 
+        ' tbCustomer
+        ' 
+        tbCustomer.BackColor = Color.LightGray
+        tbCustomer.Location = New Point(3, 30)
+        tbCustomer.Name = "tbCustomer"
+        tbCustomer.Size = New Size(383, 27)
+        tbCustomer.TabIndex = 33
         ' 
         ' TableLayoutPanel7
         ' 
@@ -217,30 +233,15 @@ Partial Class TransactionForm
         Label10.TabIndex = 6
         Label10.Text = "Machine Used:"
         ' 
-        ' Guna2GradientPanel1
+        ' PictureBox6
         ' 
-        Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
-        Guna2GradientPanel1.Controls.Add(Label1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges13
-        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        Guna2GradientPanel1.Location = New Point(3, 0)
-        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2GradientPanel1.Size = New Size(779, 47)
-        Guna2GradientPanel1.TabIndex = 1
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(240, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(295, 53)
-        Label1.TabIndex = 5
-        Label1.Text = "Transaction Form"
+        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
+        PictureBox6.Location = New Point(3, 3)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(23, 15)
+        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox6.TabIndex = 37
+        PictureBox6.TabStop = False
         ' 
         ' TableLayoutPanel2
         ' 
@@ -281,6 +282,17 @@ Partial Class TransactionForm
         TableLayoutPanel5.Size = New Size(295, 22)
         TableLayoutPanel5.TabIndex = 7
         ' 
+        ' Label29
+        ' 
+        Label29.AutoSize = True
+        Label29.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label29.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Label29.Location = New Point(139, 0)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(67, 22)
+        Label29.TabIndex = 32
+        Label29.Text = "#100011"
+        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -319,6 +331,17 @@ Partial Class TransactionForm
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel6.Size = New Size(295, 22)
         TableLayoutPanel6.TabIndex = 9
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label16.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Label16.Location = New Point(62, 0)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(94, 22)
+        Label16.TabIndex = 9
+        Label16.Text = "10/22/2025"
         ' 
         ' Label4
         ' 
@@ -407,11 +430,11 @@ Partial Class TransactionForm
         ' 
         Guna2Panel2.BorderRadius = 6
         Guna2Panel2.Controls.Add(Label15)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges15
+        Guna2Panel2.CustomizableEdges = CustomizableEdges1
         Guna2Panel2.FillColor = Color.LightGray
         Guna2Panel2.Location = New Point(3, 30)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Panel2.Size = New Size(383, 22)
         Guna2Panel2.TabIndex = 22
         ' 
@@ -452,6 +475,16 @@ Partial Class TransactionForm
         Label6.TabIndex = 6
         Label6.Text = "Address:"
         ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(3, 3)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(20, 15)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 35
+        PictureBox4.TabStop = False
+        ' 
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 2
@@ -477,6 +510,16 @@ Partial Class TransactionForm
         Label7.TabIndex = 6
         Label7.Text = "Contact Number:"
         ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(3, 3)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(20, 15)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 34
+        PictureBox3.TabStop = False
+        ' 
         ' TableLayoutPanel11
         ' 
         TableLayoutPanel11.ColumnCount = 3
@@ -493,6 +536,14 @@ Partial Class TransactionForm
         TableLayoutPanel11.Size = New Size(383, 21)
         TableLayoutPanel11.TabIndex = 16
         ' 
+        ' cbStatus
+        ' 
+        cbStatus.FormattingEnabled = True
+        cbStatus.Location = New Point(210, 3)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(169, 28)
+        cbStatus.TabIndex = 34
+        ' 
         ' Label9
         ' 
         Label9.AutoSize = True
@@ -503,6 +554,16 @@ Partial Class TransactionForm
         Label9.Size = New Size(59, 21)
         Label9.TabIndex = 6
         Label9.Text = "Status"
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(3, 3)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(20, 15)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox5.TabIndex = 36
+        PictureBox5.TabStop = False
         ' 
         ' TableLayoutPanel14
         ' 
@@ -542,6 +603,16 @@ Partial Class TransactionForm
         TableLayoutPanel15.Size = New Size(383, 21)
         TableLayoutPanel15.TabIndex = 20
         ' 
+        ' PictureBox9
+        ' 
+        PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), Image)
+        PictureBox9.Location = New Point(3, 3)
+        PictureBox9.Name = "PictureBox9"
+        PictureBox9.Size = New Size(23, 15)
+        PictureBox9.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox9.TabIndex = 40
+        PictureBox9.TabStop = False
+        ' 
         ' Label13
         ' 
         Label13.AutoSize = True
@@ -566,6 +637,16 @@ Partial Class TransactionForm
         TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel16.Size = New Size(383, 21)
         TableLayoutPanel16.TabIndex = 21
+        ' 
+        ' PictureBox10
+        ' 
+        PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
+        PictureBox10.Location = New Point(3, 3)
+        PictureBox10.Name = "PictureBox10"
+        PictureBox10.Size = New Size(23, 15)
+        PictureBox10.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox10.TabIndex = 39
+        PictureBox10.TabStop = False
         ' 
         ' Label14
         ' 
@@ -603,6 +684,22 @@ Partial Class TransactionForm
         TableLayoutPanel17.Size = New Size(779, 55)
         TableLayoutPanel17.TabIndex = 25
         ' 
+        ' tbPaymentMethod
+        ' 
+        tbPaymentMethod.BackColor = Color.LightGray
+        tbPaymentMethod.Location = New Point(392, 30)
+        tbPaymentMethod.Name = "tbPaymentMethod"
+        tbPaymentMethod.Size = New Size(383, 27)
+        tbPaymentMethod.TabIndex = 35
+        ' 
+        ' tbService
+        ' 
+        tbService.BackColor = Color.LightGray
+        tbService.Location = New Point(3, 30)
+        tbService.Name = "tbService"
+        tbService.Size = New Size(383, 27)
+        tbService.TabIndex = 34
+        ' 
         ' TableLayoutPanel21
         ' 
         TableLayoutPanel21.ColumnCount = 3
@@ -618,6 +715,14 @@ Partial Class TransactionForm
         TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel21.Size = New Size(383, 21)
         TableLayoutPanel21.TabIndex = 28
+        ' 
+        ' cbService
+        ' 
+        cbService.FormattingEnabled = True
+        cbService.Location = New Point(211, 3)
+        cbService.Name = "cbService"
+        cbService.Size = New Size(169, 28)
+        cbService.TabIndex = 33
         ' 
         ' PictureBox2
         ' 
@@ -665,6 +770,16 @@ Partial Class TransactionForm
         Label18.TabIndex = 6
         Label18.Text = "Payment Method:"
         ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
+        PictureBox7.Location = New Point(3, 3)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(23, 15)
+        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox7.TabIndex = 38
+        PictureBox7.TabStop = False
+        ' 
         ' TableLayoutPanel20
         ' 
         TableLayoutPanel20.ColumnCount = 2
@@ -681,6 +796,14 @@ Partial Class TransactionForm
         TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel20.Size = New Size(779, 55)
         TableLayoutPanel20.TabIndex = 26
+        ' 
+        ' tbTotal
+        ' 
+        tbTotal.BackColor = Color.LightGray
+        tbTotal.Location = New Point(392, 30)
+        tbTotal.Name = "tbTotal"
+        tbTotal.Size = New Size(383, 27)
+        tbTotal.TabIndex = 35
         ' 
         ' TableLayoutPanel23
         ' 
@@ -707,6 +830,24 @@ Partial Class TransactionForm
         Label23.TabIndex = 6
         Label23.Text = "Total"
         ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
+        PictureBox8.Location = New Point(3, 3)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(23, 15)
+        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox8.TabIndex = 39
+        PictureBox8.TabStop = False
+        ' 
+        ' tbContactNum
+        ' 
+        tbContactNum.BackColor = Color.LightGray
+        tbContactNum.Location = New Point(3, 30)
+        tbContactNum.Name = "tbContactNum"
+        tbContactNum.Size = New Size(383, 27)
+        tbContactNum.TabIndex = 34
+        ' 
         ' TableLayoutPanel22
         ' 
         TableLayoutPanel22.ColumnCount = 2
@@ -723,6 +864,22 @@ Partial Class TransactionForm
         TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel22.Size = New Size(779, 55)
         TableLayoutPanel22.TabIndex = 28
+        ' 
+        ' tbAmountReceived
+        ' 
+        tbAmountReceived.BackColor = Color.LightGray
+        tbAmountReceived.Location = New Point(392, 30)
+        tbAmountReceived.Name = "tbAmountReceived"
+        tbAmountReceived.Size = New Size(383, 27)
+        tbAmountReceived.TabIndex = 36
+        ' 
+        ' tbAddress
+        ' 
+        tbAddress.BackColor = Color.LightGray
+        tbAddress.Location = New Point(3, 30)
+        tbAddress.Name = "tbAddress"
+        tbAddress.Size = New Size(383, 27)
+        tbAddress.TabIndex = 35
         ' 
         ' Panel3
         ' 
@@ -749,6 +906,22 @@ Partial Class TransactionForm
         TableLayoutPanel24.Size = New Size(779, 55)
         TableLayoutPanel24.TabIndex = 30
         ' 
+        ' tbChange
+        ' 
+        tbChange.BackColor = Color.LightGray
+        tbChange.Location = New Point(392, 30)
+        tbChange.Name = "tbChange"
+        tbChange.Size = New Size(383, 27)
+        tbChange.TabIndex = 36
+        ' 
+        ' tbStatus
+        ' 
+        tbStatus.BackColor = Color.LightGray
+        tbStatus.Location = New Point(3, 30)
+        tbStatus.Name = "tbStatus"
+        tbStatus.Size = New Size(383, 27)
+        tbStatus.TabIndex = 35
+        ' 
         ' Panel4
         ' 
         Panel4.BackColor = SystemColors.ActiveBorder
@@ -756,97 +929,6 @@ Partial Class TransactionForm
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(779, 2)
         Panel4.TabIndex = 31
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(3, 3)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(20, 15)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 34
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(3, 3)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(20, 15)
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.TabIndex = 35
-        PictureBox4.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(3, 3)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(20, 15)
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.TabIndex = 36
-        PictureBox5.TabStop = False
-        ' 
-        ' PictureBox6
-        ' 
-        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(3, 3)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(23, 15)
-        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox6.TabIndex = 37
-        PictureBox6.TabStop = False
-        ' 
-        ' PictureBox7
-        ' 
-        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(3, 3)
-        PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(23, 15)
-        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox7.TabIndex = 38
-        PictureBox7.TabStop = False
-        ' 
-        ' PictureBox8
-        ' 
-        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(3, 3)
-        PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(23, 15)
-        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox8.TabIndex = 39
-        PictureBox8.TabStop = False
-        ' 
-        ' PictureBox9
-        ' 
-        PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), Image)
-        PictureBox9.Location = New Point(3, 3)
-        PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(23, 15)
-        PictureBox9.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox9.TabIndex = 40
-        PictureBox9.TabStop = False
-        ' 
-        ' PictureBox10
-        ' 
-        PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
-        PictureBox10.Location = New Point(3, 3)
-        PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(23, 15)
-        PictureBox10.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox10.TabIndex = 39
-        PictureBox10.TabStop = False
-        ' 
-        ' Label29
-        ' 
-        Label29.AutoSize = True
-        Label29.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label29.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label29.Location = New Point(139, 0)
-        Label29.Name = "Label29"
-        Label29.Size = New Size(67, 22)
-        Label29.TabIndex = 32
-        Label29.Text = "#100011"
         ' 
         ' btnCancel
         ' 
@@ -858,106 +940,10 @@ Partial Class TransactionForm
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = True
         ' 
-        ' tbCustomer
-        ' 
-        tbCustomer.BackColor = Color.LightGray
-        tbCustomer.Location = New Point(3, 30)
-        tbCustomer.Name = "tbCustomer"
-        tbCustomer.Size = New Size(383, 27)
-        tbCustomer.TabIndex = 33
-        ' 
-        ' tbService
-        ' 
-        tbService.BackColor = Color.LightGray
-        tbService.Location = New Point(3, 30)
-        tbService.Name = "tbService"
-        tbService.Size = New Size(383, 27)
-        tbService.TabIndex = 34
-        ' 
-        ' tbContactNum
-        ' 
-        tbContactNum.BackColor = Color.LightGray
-        tbContactNum.Location = New Point(3, 30)
-        tbContactNum.Name = "tbContactNum"
-        tbContactNum.Size = New Size(383, 27)
-        tbContactNum.TabIndex = 34
-        ' 
-        ' tbAddress
-        ' 
-        tbAddress.BackColor = Color.LightGray
-        tbAddress.Location = New Point(3, 30)
-        tbAddress.Name = "tbAddress"
-        tbAddress.Size = New Size(383, 27)
-        tbAddress.TabIndex = 35
-        ' 
-        ' tbStatus
-        ' 
-        tbStatus.BackColor = Color.LightGray
-        tbStatus.Location = New Point(3, 30)
-        tbStatus.Name = "tbStatus"
-        tbStatus.Size = New Size(383, 27)
-        tbStatus.TabIndex = 35
-        ' 
-        ' tbMachineUsed
-        ' 
-        tbMachineUsed.BackColor = Color.LightGray
-        tbMachineUsed.Location = New Point(392, 30)
-        tbMachineUsed.Name = "tbMachineUsed"
-        tbMachineUsed.Size = New Size(383, 27)
-        tbMachineUsed.TabIndex = 35
-        ' 
-        ' tbPaymentMethod
-        ' 
-        tbPaymentMethod.BackColor = Color.LightGray
-        tbPaymentMethod.Location = New Point(392, 30)
-        tbPaymentMethod.Name = "tbPaymentMethod"
-        tbPaymentMethod.Size = New Size(383, 27)
-        tbPaymentMethod.TabIndex = 35
-        ' 
-        ' tbTotal
-        ' 
-        tbTotal.BackColor = Color.LightGray
-        tbTotal.Location = New Point(392, 30)
-        tbTotal.Name = "tbTotal"
-        tbTotal.Size = New Size(383, 27)
-        tbTotal.TabIndex = 35
-        ' 
-        ' tbAmountReceived
-        ' 
-        tbAmountReceived.BackColor = Color.LightGray
-        tbAmountReceived.Location = New Point(392, 30)
-        tbAmountReceived.Name = "tbAmountReceived"
-        tbAmountReceived.Size = New Size(383, 27)
-        tbAmountReceived.TabIndex = 36
-        ' 
-        ' tbChange
-        ' 
-        tbChange.BackColor = Color.LightGray
-        tbChange.Location = New Point(392, 30)
-        tbChange.Name = "tbChange"
-        tbChange.Size = New Size(383, 27)
-        tbChange.TabIndex = 36
-        ' 
-        ' cbService
-        ' 
-        cbService.FormattingEnabled = True
-        cbService.Location = New Point(211, 3)
-        cbService.Name = "cbService"
-        cbService.Size = New Size(169, 28)
-        cbService.TabIndex = 33
-        ' 
-        ' cbStatus
-        ' 
-        cbStatus.FormattingEnabled = True
-        cbStatus.Location = New Point(210, 3)
-        cbStatus.Name = "cbStatus"
-        cbStatus.Size = New Size(169, 28)
-        cbStatus.TabIndex = 34
-        ' 
         ' saveBtn
         ' 
         saveBtn.BorderRadius = 5
-        saveBtn.CustomizableEdges = CustomizableEdges17
+        saveBtn.CustomizableEdges = CustomizableEdges3
         saveBtn.DisabledState.BorderColor = Color.DarkGray
         saveBtn.DisabledState.CustomBorderColor = Color.DarkGray
         saveBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -969,21 +955,35 @@ Partial Class TransactionForm
         saveBtn.ForeColor = Color.White
         saveBtn.Location = New Point(476, 417)
         saveBtn.Name = "saveBtn"
-        saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         saveBtn.Size = New Size(94, 29)
         saveBtn.TabIndex = 34
         saveBtn.Text = "SAVE"
         ' 
-        ' Label16
+        ' Label1
         ' 
-        Label16.AutoSize = True
-        Label16.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label16.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label16.Location = New Point(62, 0)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(94, 22)
-        Label16.TabIndex = 9
-        Label16.Text = "10/22/2025"
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(240, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(295, 53)
+        Label1.TabIndex = 5
+        Label1.Text = "Transaction Form"
+        ' 
+        ' Guna2GradientPanel1
+        ' 
+        Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
+        Guna2GradientPanel1.Controls.Add(Label1)
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
+        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        Guna2GradientPanel1.Location = New Point(3, 0)
+        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2GradientPanel1.Size = New Size(779, 47)
+        Guna2GradientPanel1.TabIndex = 1
         ' 
         ' TransactionForm
         ' 
@@ -1018,8 +1018,7 @@ Partial Class TransactionForm
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel12.ResumeLayout(False)
         TableLayoutPanel12.PerformLayout()
-        Guna2GradientPanel1.ResumeLayout(False)
-        Guna2GradientPanel1.PerformLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
         TableLayoutPanel5.ResumeLayout(False)
@@ -1036,16 +1035,21 @@ Partial Class TransactionForm
         Guna2Panel2.PerformLayout()
         lblAddress.ResumeLayout(False)
         lblAddress.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel9.ResumeLayout(False)
         TableLayoutPanel9.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel11.ResumeLayout(False)
         TableLayoutPanel11.PerformLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel14.ResumeLayout(False)
         TableLayoutPanel14.PerformLayout()
         TableLayoutPanel15.ResumeLayout(False)
         TableLayoutPanel15.PerformLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel16.ResumeLayout(False)
         TableLayoutPanel16.PerformLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel17.ResumeLayout(False)
         TableLayoutPanel17.PerformLayout()
         TableLayoutPanel21.ResumeLayout(False)
@@ -1053,32 +1057,26 @@ Partial Class TransactionForm
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel19.ResumeLayout(False)
         TableLayoutPanel19.PerformLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel20.ResumeLayout(False)
         TableLayoutPanel20.PerformLayout()
         TableLayoutPanel23.ResumeLayout(False)
         TableLayoutPanel23.PerformLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel22.ResumeLayout(False)
         TableLayoutPanel22.PerformLayout()
         TableLayoutPanel24.ResumeLayout(False)
         TableLayoutPanel24.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
+        Guna2GradientPanel1.ResumeLayout(False)
+        Guna2GradientPanel1.PerformLayout()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
@@ -1145,4 +1143,6 @@ Partial Class TransactionForm
     Friend WithEvents cbStatus As ComboBox
     Friend WithEvents saveBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Label16 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
 End Class

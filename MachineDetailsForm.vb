@@ -158,6 +158,31 @@ Public Class MachineDetailsForm
         End Using
     End Sub
 
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs)
 
+    End Sub
 
+    Private Sub ServiceType_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub lblPaymentMethod_Click(sender As Object, e As EventArgs) Handles lblPaymentMethod.Click
+
+    End Sub
+
+    Private Sub lblTitle_Click_1(sender As Object, e As EventArgs) Handles lblTitle.Click
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+
+    End Sub
 End Class

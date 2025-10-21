@@ -265,4 +265,8 @@ Public Class TransactionForm
     Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
 
     End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+
+    End Sub
 End Class
