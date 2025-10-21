@@ -1262,7 +1262,7 @@ Partial Class InvoiceForm
         GCashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         GCashBtn.BorderRadius = 3
         GCashBtn.BorderThickness = 1
-        GCashBtn.CustomizableEdges = CustomizableEdges29
+        GCashBtn.CustomizableEdges = CustomizableEdges7
         GCashBtn.DisabledState.BorderColor = Color.DarkGray
         GCashBtn.DisabledState.CustomBorderColor = Color.DarkGray
         GCashBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1285,7 +1285,7 @@ Partial Class InvoiceForm
         cashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         cashBtn.BorderRadius = 3
         cashBtn.BorderThickness = 1
-        cashBtn.CustomizableEdges = CustomizableEdges31
+        cashBtn.CustomizableEdges = CustomizableEdges9
         cashBtn.DisabledState.BorderColor = Color.DarkGray
         cashBtn.DisabledState.CustomBorderColor = Color.DarkGray
         cashBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1308,7 +1308,7 @@ Partial Class InvoiceForm
         mayaBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         mayaBtn.BorderRadius = 3
         mayaBtn.BorderThickness = 1
-        mayaBtn.CustomizableEdges = CustomizableEdges33
+        mayaBtn.CustomizableEdges = CustomizableEdges11
         mayaBtn.DisabledState.BorderColor = Color.DarkGray
         mayaBtn.DisabledState.CustomBorderColor = Color.DarkGray
         mayaBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
