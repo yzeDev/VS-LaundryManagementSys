@@ -60,33 +60,33 @@ Partial Class PriceSettingsControl
         Guna2CustomGradientPanel4 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         TableLayoutPanel18 = New TableLayoutPanel()
         TableLayoutPanel22 = New TableLayoutPanel()
-        dryclean_current1 = New Label()
+        dryclean_currentSmall = New Label()
         Label40 = New Label()
         TableLayoutPanel23 = New TableLayoutPanel()
-        dryclean_current2 = New Label()
+        dryclean_currentMedium = New Label()
         Label42 = New Label()
         TableLayoutPanel24 = New TableLayoutPanel()
         Label46 = New Label()
-        dryclean_new3 = New Guna.UI2.WinForms.Guna2TextBox()
+        dryclean_newLarge = New Guna.UI2.WinForms.Guna2TextBox()
         Label47 = New Label()
         TableLayoutPanel25 = New TableLayoutPanel()
         Label48 = New Label()
-        dryclean_new2 = New Guna.UI2.WinForms.Guna2TextBox()
+        dryclean_newMedium = New Guna.UI2.WinForms.Guna2TextBox()
         Label49 = New Label()
         Label50 = New Label()
         Label51 = New Label()
         TableLayoutPanel26 = New TableLayoutPanel()
         Label52 = New Label()
-        dryclean_new1 = New Guna.UI2.WinForms.Guna2TextBox()
+        dryclean_newSmall = New Guna.UI2.WinForms.Guna2TextBox()
         Label53 = New Label()
         TableLayoutPanel27 = New TableLayoutPanel()
-        dryclean_current3 = New Label()
+        dryclean_currentLarge = New Label()
         Label55 = New Label()
         Label56 = New Label()
         Guna2CustomGradientPanel3 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         TableLayoutPanel28 = New TableLayoutPanel()
         TableLayoutPanel29 = New TableLayoutPanel()
-        fullservice_current2 = New Label()
+        fullservice_currentWash = New Label()
         Label58 = New Label()
         Label66 = New Label()
         TableLayoutPanel33 = New TableLayoutPanel()
@@ -96,53 +96,53 @@ Partial Class PriceSettingsControl
         Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         TableLayoutPanel3 = New TableLayoutPanel()
         TableLayoutPanel7 = New TableLayoutPanel()
-        basicservice_current1 = New Label()
+        basicservice_currentWash = New Label()
         Label7 = New Label()
         TableLayoutPanel10 = New TableLayoutPanel()
-        basicservice_current2 = New Label()
+        basicservice_currentDry = New Label()
         Label18 = New Label()
         TableLayoutPanel12 = New TableLayoutPanel()
         Label19 = New Label()
-        basicservice_new3 = New Guna.UI2.WinForms.Guna2TextBox()
+        basicservice_newWashDry = New Guna.UI2.WinForms.Guna2TextBox()
         Label20 = New Label()
         TableLayoutPanel13 = New TableLayoutPanel()
         Label21 = New Label()
-        basicservice_new2 = New Guna.UI2.WinForms.Guna2TextBox()
+        basicservice_newDry = New Guna.UI2.WinForms.Guna2TextBox()
         Label24 = New Label()
         Label25 = New Label()
         Label26 = New Label()
         TableLayoutPanel14 = New TableLayoutPanel()
         Label27 = New Label()
-        basicservice_new1 = New Guna.UI2.WinForms.Guna2TextBox()
+        basicservice_newWash = New Guna.UI2.WinForms.Guna2TextBox()
         Label28 = New Label()
         TableLayoutPanel15 = New TableLayoutPanel()
-        basicservice_current3 = New Label()
+        basicservice_currentWashDry = New Label()
         Label30 = New Label()
         Label31 = New Label()
         Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
         TableLayoutPanel5 = New TableLayoutPanel()
-        selfservice_current1 = New Label()
+        selfservice_currentWash = New Label()
         Label13 = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
-        selfservice_current2 = New Label()
+        selfservice_currentDry = New Label()
         Label10 = New Label()
         TableLayoutPanel6 = New TableLayoutPanel()
         Label15 = New Label()
-        selfservice_new3 = New Guna.UI2.WinForms.Guna2TextBox()
+        selfservice_newWashDry = New Guna.UI2.WinForms.Guna2TextBox()
         Label16 = New Label()
         TableLayoutPanel17 = New TableLayoutPanel()
         Label14 = New Label()
-        selfservice_new2 = New Guna.UI2.WinForms.Guna2TextBox()
+        selfservice_newDry = New Guna.UI2.WinForms.Guna2TextBox()
         Label33 = New Label()
         Label34 = New Label()
         Label35 = New Label()
         TableLayoutPanel20 = New TableLayoutPanel()
         Label36 = New Label()
-        selfservice_new1 = New Guna.UI2.WinForms.Guna2TextBox()
+        selfservice_newWash = New Guna.UI2.WinForms.Guna2TextBox()
         Label37 = New Label()
         TableLayoutPanel11 = New TableLayoutPanel()
-        selfservice_current3 = New Label()
+        selfservice_currentWashDry = New Label()
         Label23 = New Label()
         Label11 = New Label()
         saveBtn = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -265,7 +265,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel22.ColumnCount = 2
         TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel22.Controls.Add(dryclean_current1, 1, 0)
+        TableLayoutPanel22.Controls.Add(dryclean_currentSmall, 1, 0)
         TableLayoutPanel22.Controls.Add(Label40, 0, 0)
         TableLayoutPanel22.Location = New Point(3, 52)
         TableLayoutPanel22.Margin = New Padding(3, 2, 3, 2)
@@ -275,7 +275,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel22.Size = New Size(138, 18)
         TableLayoutPanel22.TabIndex = 12
         ' 
-        ' dryclean_current1
+        ' dryclean_currentSmall
         ' 
         dryclean_current1.Anchor = AnchorStyles.Left
         dryclean_current1.AutoSize = True
@@ -292,9 +292,9 @@ Partial Class PriceSettingsControl
         ' 
         Label40.Anchor = AnchorStyles.Left
         Label40.AutoSize = True
-        Label40.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label40.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label40.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label40.Location = New Point(3, 0)
+        Label40.Location = New Point(3, 2)
         Label40.Name = "Label40"
         Label40.Size = New Size(85, 18)
         Label40.TabIndex = 14
@@ -306,7 +306,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel23.ColumnCount = 2
         TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel23.Controls.Add(dryclean_current2, 1, 0)
+        TableLayoutPanel23.Controls.Add(dryclean_currentMedium, 1, 0)
         TableLayoutPanel23.Controls.Add(Label42, 0, 0)
         TableLayoutPanel23.Location = New Point(3, 123)
         TableLayoutPanel23.Margin = New Padding(3, 2, 3, 2)
@@ -316,7 +316,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel23.Size = New Size(138, 18)
         TableLayoutPanel23.TabIndex = 16
         ' 
-        ' dryclean_current2
+        ' dryclean_currentMedium
         ' 
         dryclean_current2.Anchor = AnchorStyles.Left
         dryclean_current2.AutoSize = True
@@ -333,9 +333,9 @@ Partial Class PriceSettingsControl
         ' 
         Label42.Anchor = AnchorStyles.Left
         Label42.AutoSize = True
-        Label42.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label42.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label42.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label42.Location = New Point(3, 0)
+        Label42.Location = New Point(3, 2)
         Label42.Name = "Label42"
         Label42.Size = New Size(85, 18)
         Label42.TabIndex = 14
@@ -349,7 +349,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel24.Controls.Add(Label46, 0, 0)
-        TableLayoutPanel24.Controls.Add(dryclean_new3, 1, 0)
+        TableLayoutPanel24.Controls.Add(dryclean_newLarge, 1, 0)
         TableLayoutPanel24.Controls.Add(Label47, 2, 0)
         TableLayoutPanel24.Location = New Point(3, 162)
         TableLayoutPanel24.Margin = New Padding(3, 2, 3, 2)
@@ -364,7 +364,7 @@ Partial Class PriceSettingsControl
         ' 
         Label46.Anchor = AnchorStyles.Left
         Label46.AutoSize = True
-        Label46.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label46.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label46.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label46.Location = New Point(3, 3)
         Label46.Name = "Label46"
@@ -399,13 +399,13 @@ Partial Class PriceSettingsControl
         ' 
         Label47.Anchor = AnchorStyles.Left
         Label47.AutoSize = True
-        Label47.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label47.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label47.Location = New Point(106, 3)
         Label47.Name = "Label47"
         Label47.Size = New Size(27, 19)
         Label47.TabIndex = 13
-        Label47.Text = "/kg"
+        Label47.Text = "/pc"
         Label47.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel25
@@ -415,7 +415,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel25.Controls.Add(Label48, 0, 0)
-        TableLayoutPanel25.Controls.Add(dryclean_new2, 1, 0)
+        TableLayoutPanel25.Controls.Add(dryclean_newMedium, 1, 0)
         TableLayoutPanel25.Controls.Add(Label49, 2, 0)
         TableLayoutPanel25.Location = New Point(3, 93)
         TableLayoutPanel25.Margin = New Padding(3, 2, 3, 2)
@@ -430,7 +430,7 @@ Partial Class PriceSettingsControl
         ' 
         Label48.Anchor = AnchorStyles.Left
         Label48.AutoSize = True
-        Label48.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label48.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label48.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label48.Location = New Point(3, 3)
         Label48.Name = "Label48"
@@ -465,39 +465,39 @@ Partial Class PriceSettingsControl
         ' 
         Label49.Anchor = AnchorStyles.Left
         Label49.AutoSize = True
-        Label49.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label49.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label49.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label49.Location = New Point(106, 3)
         Label49.Name = "Label49"
         Label49.Size = New Size(27, 19)
         Label49.TabIndex = 13
-        Label49.Text = "/kg"
+        Label49.Text = "/pc"
         Label49.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label50
         ' 
         Label50.Anchor = AnchorStyles.Left
         Label50.AutoSize = True
-        Label50.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label50.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label50.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label50.Location = New Point(3, 72)
         Label50.Name = "Label50"
         Label50.Size = New Size(61, 19)
         Label50.TabIndex = 13
-        Label50.Text = "DRY ONLY"
+        Label50.Text = "MEDIUM ITEM"
         Label50.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label51
         ' 
         Label51.Anchor = AnchorStyles.Left
         Label51.AutoSize = True
-        Label51.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label51.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label51.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label51.Location = New Point(3, 0)
         Label51.Name = "Label51"
         Label51.Size = New Size(72, 19)
         Label51.TabIndex = 11
-        Label51.Text = "WASH ONLY"
+        Label51.Text = "SMALL ITEM"
         Label51.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel26
@@ -507,7 +507,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel26.Controls.Add(Label52, 0, 0)
-        TableLayoutPanel26.Controls.Add(dryclean_new1, 1, 0)
+        TableLayoutPanel26.Controls.Add(dryclean_newSmall, 1, 0)
         TableLayoutPanel26.Controls.Add(Label53, 2, 0)
         TableLayoutPanel26.Location = New Point(3, 21)
         TableLayoutPanel26.Margin = New Padding(3, 2, 3, 2)
@@ -522,7 +522,7 @@ Partial Class PriceSettingsControl
         ' 
         Label52.Anchor = AnchorStyles.Left
         Label52.AutoSize = True
-        Label52.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label52.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label52.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label52.Location = New Point(3, 4)
         Label52.Name = "Label52"
@@ -558,13 +558,13 @@ Partial Class PriceSettingsControl
         ' 
         Label53.Anchor = AnchorStyles.Left
         Label53.AutoSize = True
-        Label53.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label53.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label53.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label53.Location = New Point(106, 4)
         Label53.Name = "Label53"
         Label53.Size = New Size(27, 19)
         Label53.TabIndex = 13
-        Label53.Text = "/kg"
+        Label53.Text = "/pc"
         Label53.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel27
@@ -572,7 +572,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel27.ColumnCount = 2
         TableLayoutPanel27.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel27.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel27.Controls.Add(dryclean_current3, 1, 0)
+        TableLayoutPanel27.Controls.Add(dryclean_currentLarge, 1, 0)
         TableLayoutPanel27.Controls.Add(Label55, 0, 0)
         TableLayoutPanel27.Location = New Point(3, 195)
         TableLayoutPanel27.Margin = New Padding(3, 2, 3, 2)
@@ -582,7 +582,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel27.Size = New Size(138, 18)
         TableLayoutPanel27.TabIndex = 16
         ' 
-        ' dryclean_current3
+        ' dryclean_currentLarge
         ' 
         dryclean_current3.Anchor = AnchorStyles.Left
         dryclean_current3.AutoSize = True
@@ -599,9 +599,9 @@ Partial Class PriceSettingsControl
         ' 
         Label55.Anchor = AnchorStyles.Left
         Label55.AutoSize = True
-        Label55.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label55.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label55.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label55.Location = New Point(3, 0)
+        Label55.Location = New Point(3, 2)
         Label55.Name = "Label55"
         Label55.Size = New Size(85, 18)
         Label55.TabIndex = 14
@@ -612,13 +612,13 @@ Partial Class PriceSettingsControl
         ' 
         Label56.Anchor = AnchorStyles.Left
         Label56.AutoSize = True
-        Label56.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label56.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label56.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label56.Location = New Point(3, 144)
         Label56.Name = "Label56"
         Label56.Size = New Size(76, 16)
         Label56.TabIndex = 15
-        Label56.Text = "WASH + DRY"
+        Label56.Text = "LARGE ITEM"
         Label56.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2CustomGradientPanel3
@@ -668,7 +668,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel29.ColumnCount = 2
         TableLayoutPanel29.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel29.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel29.Controls.Add(fullservice_current2, 1, 0)
+        TableLayoutPanel29.Controls.Add(fullservice_currentWash, 1, 0)
         TableLayoutPanel29.Controls.Add(Label58, 0, 0)
         TableLayoutPanel29.Location = New Point(3, 52)
         TableLayoutPanel29.Margin = New Padding(3, 2, 3, 2)
@@ -678,7 +678,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel29.Size = New Size(138, 18)
         TableLayoutPanel29.TabIndex = 12
         ' 
-        ' fullservice_current2
+        ' fullservice_currentWash
         ' 
         fullservice_current2.Anchor = AnchorStyles.Left
         fullservice_current2.AutoSize = True
@@ -695,9 +695,9 @@ Partial Class PriceSettingsControl
         ' 
         Label58.Anchor = AnchorStyles.Left
         Label58.AutoSize = True
-        Label58.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label58.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label58.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label58.Location = New Point(3, 0)
+        Label58.Location = New Point(3, 2)
         Label58.Name = "Label58"
         Label58.Size = New Size(85, 18)
         Label58.TabIndex = 14
@@ -708,7 +708,7 @@ Partial Class PriceSettingsControl
         ' 
         Label66.Anchor = AnchorStyles.Left
         Label66.AutoSize = True
-        Label66.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label66.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label66.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label66.Location = New Point(3, 0)
         Label66.Name = "Label66"
@@ -739,7 +739,7 @@ Partial Class PriceSettingsControl
         ' 
         Label67.Anchor = AnchorStyles.Left
         Label67.AutoSize = True
-        Label67.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label67.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label67.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label67.Location = New Point(3, 4)
         Label67.Name = "Label67"
@@ -759,7 +759,7 @@ Partial Class PriceSettingsControl
         fullservice_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         fullservice_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         fullservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        fullservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        fullservice_new2.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         fullservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         fullservice_new2.Location = New Point(23, 4)
         fullservice_new2.Margin = New Padding(3, 4, 3, 4)
@@ -774,7 +774,7 @@ Partial Class PriceSettingsControl
         ' 
         Label68.Anchor = AnchorStyles.Left
         Label68.AutoSize = True
-        Label68.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label68.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label68.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label68.Location = New Point(106, 4)
         Label68.Name = "Label68"
@@ -836,7 +836,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel7.ColumnCount = 2
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel7.Controls.Add(basicservice_current1, 1, 0)
+        TableLayoutPanel7.Controls.Add(basicservice_currentWash, 1, 0)
         TableLayoutPanel7.Controls.Add(Label7, 0, 0)
         TableLayoutPanel7.Location = New Point(3, 52)
         TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
@@ -846,7 +846,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel7.Size = New Size(138, 18)
         TableLayoutPanel7.TabIndex = 12
         ' 
-        ' basicservice_current1
+        ' basicservice_currentWash
         ' 
         basicservice_current1.Anchor = AnchorStyles.Left
         basicservice_current1.AutoSize = True
@@ -863,9 +863,9 @@ Partial Class PriceSettingsControl
         ' 
         Label7.Anchor = AnchorStyles.Left
         Label7.AutoSize = True
-        Label7.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label7.Location = New Point(3, 0)
+        Label7.Location = New Point(3, 2)
         Label7.Name = "Label7"
         Label7.Size = New Size(85, 18)
         Label7.TabIndex = 14
@@ -877,7 +877,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel10.ColumnCount = 2
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel10.Controls.Add(basicservice_current2, 1, 0)
+        TableLayoutPanel10.Controls.Add(basicservice_currentDry, 1, 0)
         TableLayoutPanel10.Controls.Add(Label18, 0, 0)
         TableLayoutPanel10.Location = New Point(3, 123)
         TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
@@ -887,7 +887,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel10.Size = New Size(138, 18)
         TableLayoutPanel10.TabIndex = 16
         ' 
-        ' basicservice_current2
+        ' basicservice_currentDry
         ' 
         basicservice_current2.Anchor = AnchorStyles.Left
         basicservice_current2.AutoSize = True
@@ -904,9 +904,9 @@ Partial Class PriceSettingsControl
         ' 
         Label18.Anchor = AnchorStyles.Left
         Label18.AutoSize = True
-        Label18.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label18.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label18.Location = New Point(3, 0)
+        Label18.Location = New Point(3, 2)
         Label18.Name = "Label18"
         Label18.Size = New Size(85, 18)
         Label18.TabIndex = 14
@@ -920,7 +920,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel12.Controls.Add(Label19, 0, 0)
-        TableLayoutPanel12.Controls.Add(basicservice_new3, 1, 0)
+        TableLayoutPanel12.Controls.Add(basicservice_newWashDry, 1, 0)
         TableLayoutPanel12.Controls.Add(Label20, 2, 0)
         TableLayoutPanel12.Location = New Point(3, 162)
         TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
@@ -935,7 +935,7 @@ Partial Class PriceSettingsControl
         ' 
         Label19.Anchor = AnchorStyles.Left
         Label19.AutoSize = True
-        Label19.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label19.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label19.Location = New Point(3, 3)
         Label19.Name = "Label19"
@@ -970,7 +970,7 @@ Partial Class PriceSettingsControl
         ' 
         Label20.Anchor = AnchorStyles.Left
         Label20.AutoSize = True
-        Label20.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label20.Location = New Point(106, 3)
         Label20.Name = "Label20"
@@ -986,7 +986,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel13.Controls.Add(Label21, 0, 0)
-        TableLayoutPanel13.Controls.Add(basicservice_new2, 1, 0)
+        TableLayoutPanel13.Controls.Add(basicservice_newDry, 1, 0)
         TableLayoutPanel13.Controls.Add(Label24, 2, 0)
         TableLayoutPanel13.Location = New Point(3, 93)
         TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
@@ -1001,7 +1001,7 @@ Partial Class PriceSettingsControl
         ' 
         Label21.Anchor = AnchorStyles.Left
         Label21.AutoSize = True
-        Label21.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label21.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label21.Location = New Point(3, 3)
         Label21.Name = "Label21"
@@ -1036,7 +1036,7 @@ Partial Class PriceSettingsControl
         ' 
         Label24.Anchor = AnchorStyles.Left
         Label24.AutoSize = True
-        Label24.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label24.Location = New Point(106, 3)
         Label24.Name = "Label24"
@@ -1049,7 +1049,7 @@ Partial Class PriceSettingsControl
         ' 
         Label25.Anchor = AnchorStyles.Left
         Label25.AutoSize = True
-        Label25.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label25.Location = New Point(3, 72)
         Label25.Name = "Label25"
@@ -1062,7 +1062,7 @@ Partial Class PriceSettingsControl
         ' 
         Label26.Anchor = AnchorStyles.Left
         Label26.AutoSize = True
-        Label26.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label26.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label26.Location = New Point(3, 0)
         Label26.Name = "Label26"
@@ -1078,7 +1078,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel14.Controls.Add(Label27, 0, 0)
-        TableLayoutPanel14.Controls.Add(basicservice_new1, 1, 0)
+        TableLayoutPanel14.Controls.Add(basicservice_newWash, 1, 0)
         TableLayoutPanel14.Controls.Add(Label28, 2, 0)
         TableLayoutPanel14.Location = New Point(3, 21)
         TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
@@ -1093,7 +1093,7 @@ Partial Class PriceSettingsControl
         ' 
         Label27.Anchor = AnchorStyles.Left
         Label27.AutoSize = True
-        Label27.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label27.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label27.Location = New Point(3, 4)
         Label27.Name = "Label27"
@@ -1128,7 +1128,7 @@ Partial Class PriceSettingsControl
         ' 
         Label28.Anchor = AnchorStyles.Left
         Label28.AutoSize = True
-        Label28.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label28.Location = New Point(106, 4)
         Label28.Name = "Label28"
@@ -1142,7 +1142,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel15.ColumnCount = 2
         TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel15.Controls.Add(basicservice_current3, 1, 0)
+        TableLayoutPanel15.Controls.Add(basicservice_currentWashDry, 1, 0)
         TableLayoutPanel15.Controls.Add(Label30, 0, 0)
         TableLayoutPanel15.Location = New Point(3, 195)
         TableLayoutPanel15.Margin = New Padding(3, 2, 3, 2)
@@ -1152,7 +1152,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel15.Size = New Size(138, 18)
         TableLayoutPanel15.TabIndex = 16
         ' 
-        ' basicservice_current3
+        ' basicservice_currentWashDry
         ' 
         basicservice_current3.Anchor = AnchorStyles.Left
         basicservice_current3.AutoSize = True
@@ -1169,9 +1169,9 @@ Partial Class PriceSettingsControl
         ' 
         Label30.Anchor = AnchorStyles.Left
         Label30.AutoSize = True
-        Label30.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label30.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label30.Location = New Point(3, 0)
+        Label30.Location = New Point(3, 2)
         Label30.Name = "Label30"
         Label30.Size = New Size(85, 18)
         Label30.TabIndex = 14
@@ -1182,7 +1182,7 @@ Partial Class PriceSettingsControl
         ' 
         Label31.Anchor = AnchorStyles.Left
         Label31.AutoSize = True
-        Label31.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label31.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label31.Location = New Point(3, 144)
         Label31.Name = "Label31"
@@ -1244,7 +1244,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel5.ColumnCount = 2
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel5.Controls.Add(selfservice_current1, 1, 0)
+        TableLayoutPanel5.Controls.Add(selfservice_currentWash, 1, 0)
         TableLayoutPanel5.Controls.Add(Label13, 0, 0)
         TableLayoutPanel5.Location = New Point(3, 52)
         TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
@@ -1254,7 +1254,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel5.Size = New Size(138, 18)
         TableLayoutPanel5.TabIndex = 12
         ' 
-        ' selfservice_current1
+        ' selfservice_currentWash
         ' 
         selfservice_current1.Anchor = AnchorStyles.Left
         selfservice_current1.AutoSize = True
@@ -1271,9 +1271,9 @@ Partial Class PriceSettingsControl
         ' 
         Label13.Anchor = AnchorStyles.Left
         Label13.AutoSize = True
-        Label13.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label13.Location = New Point(3, 0)
+        Label13.Location = New Point(3, 2)
         Label13.Name = "Label13"
         Label13.Size = New Size(85, 18)
         Label13.TabIndex = 14
@@ -1285,7 +1285,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel4.ColumnCount = 2
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel4.Controls.Add(selfservice_current2, 1, 0)
+        TableLayoutPanel4.Controls.Add(selfservice_currentDry, 1, 0)
         TableLayoutPanel4.Controls.Add(Label10, 0, 0)
         TableLayoutPanel4.Location = New Point(3, 123)
         TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
@@ -1295,7 +1295,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel4.Size = New Size(138, 18)
         TableLayoutPanel4.TabIndex = 16
         ' 
-        ' selfservice_current2
+        ' selfservice_currentDry
         ' 
         selfservice_current2.Anchor = AnchorStyles.Left
         selfservice_current2.AutoSize = True
@@ -1312,9 +1312,9 @@ Partial Class PriceSettingsControl
         ' 
         Label10.Anchor = AnchorStyles.Left
         Label10.AutoSize = True
-        Label10.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label10.Location = New Point(3, 0)
+        Label10.Location = New Point(3, 2)
         Label10.Name = "Label10"
         Label10.Size = New Size(85, 18)
         Label10.TabIndex = 14
@@ -1328,7 +1328,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel6.Controls.Add(Label15, 0, 0)
-        TableLayoutPanel6.Controls.Add(selfservice_new3, 1, 0)
+        TableLayoutPanel6.Controls.Add(selfservice_newWashDry, 1, 0)
         TableLayoutPanel6.Controls.Add(Label16, 2, 0)
         TableLayoutPanel6.Location = New Point(3, 162)
         TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
@@ -1343,7 +1343,7 @@ Partial Class PriceSettingsControl
         ' 
         Label15.Anchor = AnchorStyles.Left
         Label15.AutoSize = True
-        Label15.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label15.Location = New Point(3, 3)
         Label15.Name = "Label15"
@@ -1378,7 +1378,7 @@ Partial Class PriceSettingsControl
         ' 
         Label16.Anchor = AnchorStyles.Left
         Label16.AutoSize = True
-        Label16.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label16.Location = New Point(106, 3)
         Label16.Name = "Label16"
@@ -1394,7 +1394,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel17.Controls.Add(Label14, 0, 0)
-        TableLayoutPanel17.Controls.Add(selfservice_new2, 1, 0)
+        TableLayoutPanel17.Controls.Add(selfservice_newDry, 1, 0)
         TableLayoutPanel17.Controls.Add(Label33, 2, 0)
         TableLayoutPanel17.Location = New Point(3, 93)
         TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
@@ -1409,7 +1409,7 @@ Partial Class PriceSettingsControl
         ' 
         Label14.Anchor = AnchorStyles.Left
         Label14.AutoSize = True
-        Label14.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label14.Location = New Point(3, 3)
         Label14.Name = "Label14"
@@ -1444,7 +1444,7 @@ Partial Class PriceSettingsControl
         ' 
         Label33.Anchor = AnchorStyles.Left
         Label33.AutoSize = True
-        Label33.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label33.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label33.Location = New Point(106, 3)
         Label33.Name = "Label33"
@@ -1457,7 +1457,7 @@ Partial Class PriceSettingsControl
         ' 
         Label34.Anchor = AnchorStyles.Left
         Label34.AutoSize = True
-        Label34.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label34.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label34.Location = New Point(3, 72)
         Label34.Name = "Label34"
@@ -1470,7 +1470,7 @@ Partial Class PriceSettingsControl
         ' 
         Label35.Anchor = AnchorStyles.Left
         Label35.AutoSize = True
-        Label35.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label35.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label35.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label35.Location = New Point(3, 0)
         Label35.Name = "Label35"
@@ -1486,7 +1486,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel20.Controls.Add(Label36, 0, 0)
-        TableLayoutPanel20.Controls.Add(selfservice_new1, 1, 0)
+        TableLayoutPanel20.Controls.Add(selfservice_newWash, 1, 0)
         TableLayoutPanel20.Controls.Add(Label37, 2, 0)
         TableLayoutPanel20.Location = New Point(3, 21)
         TableLayoutPanel20.Margin = New Padding(3, 2, 3, 2)
@@ -1501,7 +1501,7 @@ Partial Class PriceSettingsControl
         ' 
         Label36.Anchor = AnchorStyles.Left
         Label36.AutoSize = True
-        Label36.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label36.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label36.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label36.Location = New Point(3, 4)
         Label36.Name = "Label36"
@@ -1536,7 +1536,7 @@ Partial Class PriceSettingsControl
         ' 
         Label37.Anchor = AnchorStyles.Left
         Label37.AutoSize = True
-        Label37.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label37.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label37.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label37.Location = New Point(106, 4)
         Label37.Name = "Label37"
@@ -1550,7 +1550,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel11.ColumnCount = 2
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
-        TableLayoutPanel11.Controls.Add(selfservice_current3, 1, 0)
+        TableLayoutPanel11.Controls.Add(selfservice_currentWashDry, 1, 0)
         TableLayoutPanel11.Controls.Add(Label23, 0, 0)
         TableLayoutPanel11.Location = New Point(3, 195)
         TableLayoutPanel11.Margin = New Padding(3, 2, 3, 2)
@@ -1560,7 +1560,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel11.Size = New Size(138, 18)
         TableLayoutPanel11.TabIndex = 16
         ' 
-        ' selfservice_current3
+        ' selfservice_currentWashDry
         ' 
         selfservice_current3.Anchor = AnchorStyles.Left
         selfservice_current3.AutoSize = True
@@ -1577,9 +1577,9 @@ Partial Class PriceSettingsControl
         ' 
         Label23.Anchor = AnchorStyles.Left
         Label23.AutoSize = True
-        Label23.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label23.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label23.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label23.Location = New Point(3, 0)
+        Label23.Location = New Point(3, 2)
         Label23.Name = "Label23"
         Label23.Size = New Size(85, 18)
         Label23.TabIndex = 14
@@ -1590,7 +1590,7 @@ Partial Class PriceSettingsControl
         ' 
         Label11.Anchor = AnchorStyles.Left
         Label11.AutoSize = True
-        Label11.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label11.Location = New Point(3, 144)
         Label11.Name = "Label11"
@@ -1610,7 +1610,7 @@ Partial Class PriceSettingsControl
         saveBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         saveBtn.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         saveBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        saveBtn.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        saveBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         saveBtn.ForeColor = Color.White
         saveBtn.Location = New Point(517, 375)
         saveBtn.Margin = New Padding(3, 2, 3, 2)
@@ -1729,7 +1729,7 @@ Partial Class PriceSettingsControl
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label8.Location = New Point(3, 0)
         Label8.Name = "Label8"
@@ -1772,7 +1772,7 @@ Partial Class PriceSettingsControl
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.SteelBlue
         Label1.Location = New Point(3, 0)
         Label1.Name = "Label1"
@@ -1867,34 +1867,34 @@ Partial Class PriceSettingsControl
     Friend WithEvents Label5 As Label
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label15 As Label
-    Friend WithEvents selfservice_new3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents selfservice_newWashDry As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
-    Friend WithEvents selfservice_current3 As Label
+    Friend WithEvents selfservice_currentWashDry As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents selfservice_current1 As Label
+    Friend WithEvents selfservice_currentWash As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
     Friend WithEvents Label14 As Label
-    Friend WithEvents selfservice_new2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents selfservice_newDry As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents TableLayoutPanel20 As TableLayoutPanel
     Friend WithEvents Label36 As Label
-    Friend WithEvents selfservice_new1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents selfservice_newWash As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label37 As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents selfservice_current2 As Label
+    Friend WithEvents selfservice_currentDry As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents Guna2CustomGradientPanel3 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents TableLayoutPanel28 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel29 As TableLayoutPanel
-    Friend WithEvents fullservice_current2 As Label
+    Friend WithEvents fullservice_currentWash As Label
     Friend WithEvents Label58 As Label
     Friend WithEvents Label66 As Label
     Friend WithEvents TableLayoutPanel33 As TableLayoutPanel
@@ -1904,53 +1904,53 @@ Partial Class PriceSettingsControl
     Friend WithEvents Guna2CustomGradientPanel2 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
-    Friend WithEvents basicservice_current1 As Label
+    Friend WithEvents basicservice_currentWash As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
-    Friend WithEvents basicservice_current2 As Label
+    Friend WithEvents basicservice_currentDry As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
     Friend WithEvents Label19 As Label
-    Friend WithEvents basicservice_new3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents basicservice_newWashDry As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
     Friend WithEvents Label21 As Label
-    Friend WithEvents basicservice_new2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents basicservice_newDry As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
     Friend WithEvents Label27 As Label
-    Friend WithEvents basicservice_new1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents basicservice_newWash As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label28 As Label
     Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
-    Friend WithEvents basicservice_current3 As Label
+    Friend WithEvents basicservice_currentWashDry As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
     Friend WithEvents Guna2CustomGradientPanel4 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents TableLayoutPanel18 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel22 As TableLayoutPanel
-    Friend WithEvents dryclean_current1 As Label
+    Friend WithEvents dryclean_currentSmall As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents TableLayoutPanel23 As TableLayoutPanel
-    Friend WithEvents dryclean_current2 As Label
+    Friend WithEvents dryclean_currentMedium As Label
     Friend WithEvents Label42 As Label
     Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
     Friend WithEvents Label46 As Label
-    Friend WithEvents dryclean_new3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents dryclean_newLarge As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label47 As Label
     Friend WithEvents TableLayoutPanel25 As TableLayoutPanel
     Friend WithEvents Label48 As Label
-    Friend WithEvents dryclean_new2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents dryclean_newMedium As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents TableLayoutPanel26 As TableLayoutPanel
     Friend WithEvents Label52 As Label
-    Friend WithEvents dryclean_new1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents dryclean_newSmall As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label53 As Label
     Friend WithEvents TableLayoutPanel27 As TableLayoutPanel
-    Friend WithEvents dryclean_current3 As Label
+    Friend WithEvents dryclean_currentLarge As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
 
