@@ -26,6 +26,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FullServiceForm.vb" />
+    <Compile Update="InvoiceForm - Copy.vb" />
     <Compile Update="SelfServiceForm.vb" />
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
@@ -37,7 +38,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="BasicServiceForm.vb" />
     <Compile Update="MachinesControl.vb" />
     <Compile Update="MachineDetailsForm.vb" />
     <Compile Update="newTransactionsControl.vb" />
