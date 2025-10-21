@@ -62,7 +62,7 @@ Partial Class MachinesControl
         cmbStatus.Name = "cmbStatus"
         cmbStatus.RightToLeft = RightToLeft.Yes
         cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        cmbStatus.Size = New Size(117, 36)
+        cmbStatus.Size = New Size(94, 36)
         cmbStatus.TabIndex = 7
         cmbStatus.Tag = ""
         ' 
@@ -157,7 +157,7 @@ Partial Class MachinesControl
         btnConfigure.Margin = New Padding(12, 4, 4, 4)
         btnConfigure.Name = "btnConfigure"
         btnConfigure.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnConfigure.Size = New Size(166, 30)
+        btnConfigure.Size = New Size(133, 24)
         btnConfigure.TabIndex = 13
         btnConfigure.Text = "Configure"
         ' 

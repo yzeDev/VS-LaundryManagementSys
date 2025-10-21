@@ -84,7 +84,7 @@ Partial Class MainForm
         navbarPanel.Name = "navbarPanel"
         navbarPanel.Padding = New Padding(0, 30, 0, 10)
         navbarPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        navbarPanel.Size = New Size(220, 800)
+        navbarPanel.Size = New Size(214, 800)
         navbarPanel.TabIndex = 0
         ' 
         ' navbarBtnPanel
@@ -101,7 +101,7 @@ Partial Class MainForm
         navbarBtnPanel.Location = New Point(0, 117)
         navbarBtnPanel.Name = "navbarBtnPanel"
         navbarBtnPanel.Padding = New Padding(7, 0, 7, 0)
-        navbarBtnPanel.Size = New Size(220, 673)
+        navbarBtnPanel.Size = New Size(214, 673)
         navbarBtnPanel.TabIndex = 1
         ' 
         ' navBottomDivider
@@ -110,7 +110,7 @@ Partial Class MainForm
         navBottomDivider.Dock = DockStyle.Bottom
         navBottomDivider.Location = New Point(7, 618)
         navBottomDivider.Name = "navBottomDivider"
-        navBottomDivider.Size = New Size(206, 1)
+        navBottomDivider.Size = New Size(200, 1)
         navBottomDivider.TabIndex = 1
         ' 
         ' settingsBtnPanel
@@ -120,7 +120,7 @@ Partial Class MainForm
         settingsBtnPanel.Dock = DockStyle.Top
         settingsBtnPanel.Location = New Point(7, 176)
         settingsBtnPanel.Name = "settingsBtnPanel"
-        settingsBtnPanel.Size = New Size(206, 44)
+        settingsBtnPanel.Size = New Size(200, 44)
         settingsBtnPanel.TabIndex = 3
         ' 
         ' settingsBtn
@@ -135,7 +135,7 @@ Partial Class MainForm
         settingsBtn.Location = New Point(0, 0)
         settingsBtn.Name = "settingsBtn"
         settingsBtn.Padding = New Padding(15, 4, 0, 4)
-        settingsBtn.Size = New Size(206, 44)
+        settingsBtn.Size = New Size(200, 44)
         settingsBtn.TabIndex = 2
         settingsBtn.Text = "         Settings"
         settingsBtn.TextAlign = ContentAlignment.BottomLeft
@@ -148,7 +148,7 @@ Partial Class MainForm
         adminPanel.Dock = DockStyle.Bottom
         adminPanel.Location = New Point(7, 619)
         adminPanel.Name = "adminPanel"
-        adminPanel.Size = New Size(206, 54)
+        adminPanel.Size = New Size(200, 54)
         adminPanel.TabIndex = 1
         ' 
         ' adminnNavTblPanel
@@ -168,7 +168,7 @@ Partial Class MainForm
         adminnNavTblPanel.RowCount = 2
         adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         adminnNavTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        adminnNavTblPanel.Size = New Size(206, 40)
+        adminnNavTblPanel.Size = New Size(200, 40)
         adminnNavTblPanel.TabIndex = 2
         ' 
         ' logoutBtn
@@ -178,11 +178,11 @@ Partial Class MainForm
         logoutBtn.FlatAppearance.BorderSize = 0
         logoutBtn.FlatStyle = FlatStyle.Flat
         logoutBtn.Image = CType(resources.GetObject("logoutBtn.Image"), Image)
-        logoutBtn.Location = New Point(167, 3)
+        logoutBtn.Location = New Point(163, 3)
         logoutBtn.Name = "logoutBtn"
         logoutBtn.Padding = New Padding(0, 0, 5, 0)
         adminnNavTblPanel.SetRowSpan(logoutBtn, 2)
-        logoutBtn.Size = New Size(36, 34)
+        logoutBtn.Size = New Size(34, 34)
         logoutBtn.TabIndex = 6
         logoutBtn.UseVisualStyleBackColor = False
         ' 
@@ -192,10 +192,10 @@ Partial Class MainForm
         administratorLbl.Dock = DockStyle.Fill
         administratorLbl.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         administratorLbl.ForeColor = Color.White
-        administratorLbl.Location = New Point(62, 20)
+        administratorLbl.Location = New Point(61, 20)
         administratorLbl.Name = "administratorLbl"
         administratorLbl.Padding = New Padding(4, 0, 0, 0)
-        administratorLbl.Size = New Size(99, 20)
+        administratorLbl.Size = New Size(96, 20)
         administratorLbl.TabIndex = 5
         administratorLbl.Text = "Administrator"
         administratorLbl.TextAlign = ContentAlignment.MiddleLeft
@@ -204,7 +204,7 @@ Partial Class MainForm
         ' 
         adminPicBox.Dock = DockStyle.Right
         adminPicBox.Image = CType(resources.GetObject("adminPicBox.Image"), Image)
-        adminPicBox.Location = New Point(17, 3)
+        adminPicBox.Location = New Point(16, 3)
         adminPicBox.Name = "adminPicBox"
         adminnNavTblPanel.SetRowSpan(adminPicBox, 2)
         adminPicBox.Size = New Size(39, 34)
@@ -216,14 +216,14 @@ Partial Class MainForm
         ' 
         adminNameLbl.AutoSize = True
         adminNameLbl.Dock = DockStyle.Fill
-        adminNameLbl.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        adminNameLbl.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         adminNameLbl.ForeColor = Color.White
-        adminNameLbl.Location = New Point(62, 0)
+        adminNameLbl.Location = New Point(61, 0)
         adminNameLbl.Name = "adminNameLbl"
         adminNameLbl.Padding = New Padding(4, 0, 0, 0)
-        adminNameLbl.Size = New Size(99, 20)
+        adminNameLbl.Size = New Size(96, 20)
         adminNameLbl.TabIndex = 4
-        adminNameLbl.Text = "Admin Name"
+        adminNameLbl.Text = "OWNER"
         adminNameLbl.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' statsBtnPanel
@@ -233,7 +233,7 @@ Partial Class MainForm
         statsBtnPanel.Dock = DockStyle.Top
         statsBtnPanel.Location = New Point(7, 132)
         statsBtnPanel.Name = "statsBtnPanel"
-        statsBtnPanel.Size = New Size(206, 44)
+        statsBtnPanel.Size = New Size(200, 44)
         statsBtnPanel.TabIndex = 2
         ' 
         ' statisticsBtn
@@ -248,7 +248,7 @@ Partial Class MainForm
         statisticsBtn.Location = New Point(0, 0)
         statisticsBtn.Name = "statisticsBtn"
         statisticsBtn.Padding = New Padding(15, 4, 0, 4)
-        statisticsBtn.Size = New Size(206, 44)
+        statisticsBtn.Size = New Size(200, 44)
         statisticsBtn.TabIndex = 2
         statisticsBtn.Text = "         Statistics"
         statisticsBtn.TextAlign = ContentAlignment.BottomLeft
@@ -261,7 +261,7 @@ Partial Class MainForm
         transacBtnPanel.Dock = DockStyle.Top
         transacBtnPanel.Location = New Point(7, 88)
         transacBtnPanel.Name = "transacBtnPanel"
-        transacBtnPanel.Size = New Size(206, 44)
+        transacBtnPanel.Size = New Size(200, 44)
         transacBtnPanel.TabIndex = 2
         ' 
         ' transactionsBtn
@@ -276,7 +276,7 @@ Partial Class MainForm
         transactionsBtn.Location = New Point(0, 0)
         transactionsBtn.Name = "transactionsBtn"
         transactionsBtn.Padding = New Padding(15, 4, 0, 4)
-        transactionsBtn.Size = New Size(206, 44)
+        transactionsBtn.Size = New Size(200, 44)
         transactionsBtn.TabIndex = 2
         transactionsBtn.Text = "         Transactions"
         transactionsBtn.TextAlign = ContentAlignment.BottomLeft
@@ -289,7 +289,7 @@ Partial Class MainForm
         machineBtnPanel.Dock = DockStyle.Top
         machineBtnPanel.Location = New Point(7, 44)
         machineBtnPanel.Name = "machineBtnPanel"
-        machineBtnPanel.Size = New Size(206, 44)
+        machineBtnPanel.Size = New Size(200, 44)
         machineBtnPanel.TabIndex = 3
         ' 
         ' machinesBtn
@@ -304,7 +304,7 @@ Partial Class MainForm
         machinesBtn.Location = New Point(0, 0)
         machinesBtn.Name = "machinesBtn"
         machinesBtn.Padding = New Padding(15, 4, 0, 4)
-        machinesBtn.Size = New Size(206, 44)
+        machinesBtn.Size = New Size(200, 44)
         machinesBtn.TabIndex = 2
         machinesBtn.Text = "         Machines"
         machinesBtn.TextAlign = ContentAlignment.BottomLeft
@@ -317,7 +317,7 @@ Partial Class MainForm
         dashBtnPanel.Dock = DockStyle.Top
         dashBtnPanel.Location = New Point(7, 0)
         dashBtnPanel.Name = "dashBtnPanel"
-        dashBtnPanel.Size = New Size(206, 44)
+        dashBtnPanel.Size = New Size(200, 44)
         dashBtnPanel.TabIndex = 3
         ' 
         ' dashboardBtn
@@ -332,7 +332,7 @@ Partial Class MainForm
         dashboardBtn.Location = New Point(0, 0)
         dashboardBtn.Name = "dashboardBtn"
         dashboardBtn.Padding = New Padding(15, 4, 0, 4)
-        dashboardBtn.Size = New Size(206, 44)
+        dashboardBtn.Size = New Size(200, 44)
         dashboardBtn.TabIndex = 2
         dashboardBtn.Text = "         Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.BottomLeft
@@ -353,7 +353,7 @@ Partial Class MainForm
         logoTblPanel.Padding = New Padding(13, 0, 0, 40)
         logoTblPanel.RowCount = 1
         logoTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        logoTblPanel.Size = New Size(220, 87)
+        logoTblPanel.Size = New Size(214, 87)
         logoTblPanel.TabIndex = 1
         ' 
         ' shopLabel
@@ -361,9 +361,9 @@ Partial Class MainForm
         shopLabel.AutoSize = True
         shopLabel.Dock = DockStyle.Fill
         shopLabel.ForeColor = Color.White
-        shopLabel.Location = New Point(61, 0)
+        shopLabel.Location = New Point(60, 0)
         shopLabel.Name = "shopLabel"
-        shopLabel.Size = New Size(156, 47)
+        shopLabel.Size = New Size(151, 47)
         shopLabel.TabIndex = 2
         shopLabel.Text = "BubbleFresh"
         shopLabel.TextAlign = ContentAlignment.MiddleLeft
@@ -374,7 +374,7 @@ Partial Class MainForm
         logoIcon.Image = CType(resources.GetObject("logoIcon.Image"), Image)
         logoIcon.Location = New Point(16, 3)
         logoIcon.Name = "logoIcon"
-        logoIcon.Size = New Size(39, 41)
+        logoIcon.Size = New Size(38, 41)
         logoIcon.SizeMode = PictureBoxSizeMode.Zoom
         logoIcon.TabIndex = 2
         logoIcon.TabStop = False
@@ -384,11 +384,11 @@ Partial Class MainForm
         controlsPanel.BackColor = Color.White
         controlsPanel.Controls.Add(controlsTblPanel)
         controlsPanel.Dock = DockStyle.Top
-        controlsPanel.Location = New Point(220, 0)
+        controlsPanel.Location = New Point(214, 0)
         controlsPanel.Margin = New Padding(3, 0, 3, 0)
         controlsPanel.Name = "controlsPanel"
         controlsPanel.Padding = New Padding(0, 3, 0, 3)
-        controlsPanel.Size = New Size(980, 25)
+        controlsPanel.Size = New Size(986, 25)
         controlsPanel.TabIndex = 1
         ' 
         ' controlsTblPanel
@@ -401,7 +401,7 @@ Partial Class MainForm
         controlsTblPanel.Controls.Add(maximizeBtn, 1, 0)
         controlsTblPanel.Controls.Add(minimizeBtn, 0, 0)
         controlsTblPanel.Dock = DockStyle.Right
-        controlsTblPanel.Location = New Point(905, 3)
+        controlsTblPanel.Location = New Point(911, 3)
         controlsTblPanel.Name = "controlsTblPanel"
         controlsTblPanel.RowCount = 1
         controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
@@ -455,28 +455,28 @@ Partial Class MainForm
         ' 
         topDivider.BackColor = SystemColors.ActiveBorder
         topDivider.Dock = DockStyle.Top
-        topDivider.Location = New Point(220, 25)
+        topDivider.Location = New Point(214, 25)
         topDivider.Name = "topDivider"
-        topDivider.Size = New Size(980, 1)
+        topDivider.Size = New Size(986, 1)
         topDivider.TabIndex = 2
         ' 
         ' contentSpacePanel
         ' 
         contentSpacePanel.BackColor = Color.FromArgb(CByte(241), CByte(241), CByte(241))
         contentSpacePanel.Dock = DockStyle.Fill
-        contentSpacePanel.Location = New Point(220, 77)
+        contentSpacePanel.Location = New Point(214, 77)
         contentSpacePanel.Margin = New Padding(0)
         contentSpacePanel.Name = "contentSpacePanel"
-        contentSpacePanel.Size = New Size(980, 723)
+        contentSpacePanel.Size = New Size(986, 723)
         contentSpacePanel.TabIndex = 4
         ' 
         ' titleBarPanel
         ' 
         titleBarPanel.BackColor = Color.White
         titleBarPanel.Dock = DockStyle.Top
-        titleBarPanel.Location = New Point(220, 26)
+        titleBarPanel.Location = New Point(214, 26)
         titleBarPanel.Name = "titleBarPanel"
-        titleBarPanel.Size = New Size(980, 51)
+        titleBarPanel.Size = New Size(986, 51)
         titleBarPanel.TabIndex = 3
         ' 
         ' MainForm

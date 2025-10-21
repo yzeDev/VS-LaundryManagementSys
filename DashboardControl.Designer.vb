@@ -271,7 +271,7 @@ Partial Class DashboardControl
         lblDelivery.Size = New Size(108, 52)
         lblDelivery.TabIndex = 2
         lblDelivery.Text = "000"
-        lblDelivery.TextAlign = ContentAlignment.MiddleLeft
+        lblDelivery.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Guna2Panel7
         ' 
@@ -363,7 +363,7 @@ Partial Class DashboardControl
         lblinProgress.Size = New Size(108, 52)
         lblinProgress.TabIndex = 2
         lblinProgress.Text = "000"
-        lblinProgress.TextAlign = ContentAlignment.MiddleLeft
+        lblinProgress.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Guna2Panel5
         ' 
@@ -455,7 +455,7 @@ Partial Class DashboardControl
         lblPendingOrders.Size = New Size(108, 52)
         lblPendingOrders.TabIndex = 1
         lblPendingOrders.Text = "000"
-        lblPendingOrders.TextAlign = ContentAlignment.MiddleLeft
+        lblPendingOrders.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Guna2Panel3
         ' 
@@ -547,7 +547,7 @@ Partial Class DashboardControl
         lblCompleted.Size = New Size(110, 52)
         lblCompleted.TabIndex = 2
         lblCompleted.Text = "000"
-        lblCompleted.TextAlign = ContentAlignment.MiddleLeft
+        lblCompleted.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Guna2Panel9
         ' 
