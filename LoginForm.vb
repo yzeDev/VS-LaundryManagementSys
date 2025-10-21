@@ -2,11 +2,8 @@
 
 Public Class LoginForm
 
-
-
-    ' Connection to your Access database
     Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-    Private passwordVisible As Boolean = False  ' Tracks password visibility state
+    Private passwordVisible As Boolean = False
 
     ' --- LOGIN BUTTON CLICK ---
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -45,12 +42,10 @@ Public Class LoginForm
     ' --- TOGGLE PASSWORD VISIBILITY ---
     Private Sub picEye_Click(sender As Object, e As EventArgs) Handles picEye.Click
         If passwordVisible Then
-            ' Hide password
             gtbPassword.PasswordChar = "●"c
             picEye.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\open-eye.png")
             passwordVisible = False
         Else
-            ' Show password
             gtbPassword.PasswordChar = ChrW(0)
             picEye.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\closed-eye.png")
             passwordVisible = True
@@ -60,7 +55,6 @@ Public Class LoginForm
 
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Initialize password box and eye icon
         gtbPassword.PasswordChar = "●"c
         picEye.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\closed-eye.png")
 
@@ -69,22 +63,20 @@ Public Class LoginForm
         picEye.BackColor = Color.Transparent
         picEye.SizeMode = PictureBoxSizeMode.Zoom
 
-        ' Scale it down slightly (e.g., 20x20 pixels)
         picEye.Width = 20
         picEye.Height = 20
 
-        ' Position at the far right, vertically centered
+
         picEye.Location = New Point(gtbPassword.Width - picEye.Width - 8, (gtbPassword.Height - picEye.Height) \ 2)
 
-        ' Make sure it’s visible above the textbox
         picEye.BringToFront()
     End Sub
 
     ' --- LOGIN WHEN ENTER IS PRESSED ---
     Private Sub gtbPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles gtbPassword.KeyDown
         If e.KeyCode = Keys.Enter Then
-            e.SuppressKeyPress = True  ' Prevent the ding sound
-            btnLogin.PerformClick()    ' Trigger the login button click
+            e.SuppressKeyPress = True
+            btnLogin.PerformClick()
         End If
     End Sub
 
