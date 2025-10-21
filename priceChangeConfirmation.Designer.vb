@@ -22,13 +22,13 @@ Partial Class priceChangeConfirmation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(priceChangeConfirmation))
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -83,14 +83,14 @@ Partial Class priceChangeConfirmation
         Guna2GradientPanel1.BorderRadius = 5
         Guna2GradientPanel1.BorderThickness = 1
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges1
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(255), CByte(240), CByte(163))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(255), CByte(254), CByte(184))
         Guna2GradientPanel1.Location = New Point(15, 268)
         Guna2GradientPanel1.Margin = New Padding(15)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2GradientPanel1.Size = New Size(370, 46)
         Guna2GradientPanel1.TabIndex = 8
         ' 
@@ -114,7 +114,7 @@ Partial Class priceChangeConfirmation
         ' Label3
         ' 
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(184), CByte(153), CByte(28))
         Label3.Location = New Point(37, 0)
         Label3.Margin = New Padding(0, 0, 3, 0)
@@ -138,7 +138,7 @@ Partial Class priceChangeConfirmation
         ' Label2
         ' 
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(76), CByte(76), CByte(76))
         Label2.Location = New Point(15, 78)
         Label2.Margin = New Padding(15)
@@ -161,7 +161,7 @@ Partial Class priceChangeConfirmation
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(15, 15)
         Label1.Margin = New Padding(15)
         Label1.Name = "Label1"
@@ -200,7 +200,7 @@ Partial Class priceChangeConfirmation
         ' Label4
         ' 
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(76), CByte(76), CByte(76))
         Label4.Location = New Point(5, 5)
         Label4.Margin = New Padding(5)
@@ -238,7 +238,7 @@ Partial Class priceChangeConfirmation
         ' Guna2GradientButton2
         ' 
         Guna2GradientButton2.BorderRadius = 5
-        Guna2GradientButton2.CustomizableEdges = CustomizableEdges9
+        Guna2GradientButton2.CustomizableEdges = CustomizableEdges3
         Guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -247,7 +247,7 @@ Partial Class priceChangeConfirmation
         Guna2GradientButton2.Dock = DockStyle.Left
         Guna2GradientButton2.FillColor = Color.DimGray
         Guna2GradientButton2.FillColor2 = Color.Gray
-        Guna2GradientButton2.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2GradientButton2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2GradientButton2.ForeColor = Color.White
         Guna2GradientButton2.Image = CType(resources.GetObject("Guna2GradientButton2.Image"), Image)
         Guna2GradientButton2.ImageAlign = HorizontalAlignment.Left
@@ -255,7 +255,7 @@ Partial Class priceChangeConfirmation
         Guna2GradientButton2.Location = New Point(3, 3)
         Guna2GradientButton2.Margin = New Padding(3, 3, 7, 3)
         Guna2GradientButton2.Name = "Guna2GradientButton2"
-        Guna2GradientButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2GradientButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2GradientButton2.Size = New Size(153, 30)
         Guna2GradientButton2.TabIndex = 1
         Guna2GradientButton2.Text = "     Cancel "
@@ -263,7 +263,7 @@ Partial Class priceChangeConfirmation
         ' Guna2GradientButton1
         ' 
         Guna2GradientButton1.BorderRadius = 5
-        Guna2GradientButton1.CustomizableEdges = CustomizableEdges11
+        Guna2GradientButton1.CustomizableEdges = CustomizableEdges5
         Guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -272,7 +272,7 @@ Partial Class priceChangeConfirmation
         Guna2GradientButton1.Dock = DockStyle.Right
         Guna2GradientButton1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientButton1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        Guna2GradientButton1.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2GradientButton1.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2GradientButton1.ForeColor = Color.White
         Guna2GradientButton1.Image = CType(resources.GetObject("Guna2GradientButton1.Image"), Image)
         Guna2GradientButton1.ImageAlign = HorizontalAlignment.Left
@@ -280,7 +280,7 @@ Partial Class priceChangeConfirmation
         Guna2GradientButton1.Location = New Point(214, 3)
         Guna2GradientButton1.Margin = New Padding(7, 3, 3, 3)
         Guna2GradientButton1.Name = "Guna2GradientButton1"
-        Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientButton1.Size = New Size(153, 30)
         Guna2GradientButton1.TabIndex = 0
         Guna2GradientButton1.Text = "     Save"
