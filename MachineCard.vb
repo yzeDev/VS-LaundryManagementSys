@@ -201,6 +201,9 @@ Public Class MachineCard
                             "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
+    Public Sub New()
+        InitializeComponent()
+        picMachine.SizeMode = PictureBoxSizeMode.Zoom
+    End Sub
 
 End Class

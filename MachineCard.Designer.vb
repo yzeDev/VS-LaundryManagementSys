@@ -48,7 +48,7 @@ Partial Class MachineCard
         ' 
         ' TableLayoutPanel1
         ' 
-        TableLayoutPanel1.Anchor = AnchorStyles.None
+        TableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         TableLayoutPanel1.ColumnCount = 2
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
@@ -58,6 +58,7 @@ Partial Class MachineCard
         TableLayoutPanel1.Controls.Add(btnProceedMachine, 0, 2)
         TableLayoutPanel1.Controls.Add(btnViewDetails, 1, 2)
         TableLayoutPanel1.Controls.Add(lblMachineIDText, 0, 0)
+        TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 3
@@ -195,18 +196,19 @@ Partial Class MachineCard
         ' 
         btnProceedMachine.Anchor = AnchorStyles.None
         btnProceedMachine.AutoRoundedCorners = True
+        btnProceedMachine.BackColor = Color.Transparent
         btnProceedMachine.CustomizableEdges = CustomizableEdges3
         btnProceedMachine.DisabledState.BorderColor = Color.DarkGray
         btnProceedMachine.DisabledState.CustomBorderColor = Color.DarkGray
         btnProceedMachine.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnProceedMachine.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnProceedMachine.FillColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
-        btnProceedMachine.Font = New Font("Poppins", 8.25F)
+        btnProceedMachine.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnProceedMachine.ForeColor = Color.Black
-        btnProceedMachine.Location = New Point(10, 263)
+        btnProceedMachine.Location = New Point(15, 263)
         btnProceedMachine.Name = "btnProceedMachine"
         btnProceedMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnProceedMachine.Size = New Size(180, 34)
+        btnProceedMachine.Size = New Size(169, 34)
         btnProceedMachine.TabIndex = 14
         btnProceedMachine.Text = "Get Pending"
         ' 
@@ -214,18 +216,18 @@ Partial Class MachineCard
         ' 
         btnViewDetails.Anchor = AnchorStyles.None
         btnViewDetails.AutoRoundedCorners = True
+        btnViewDetails.BackColor = Color.Transparent
         btnViewDetails.CustomizableEdges = CustomizableEdges5
         btnViewDetails.DisabledState.BorderColor = Color.DarkGray
         btnViewDetails.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewDetails.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewDetails.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnViewDetails.FillColor = Color.Gainsboro
-        btnViewDetails.Font = New Font("Poppins", 8.25F)
+        btnViewDetails.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewDetails.ForeColor = Color.Black
-        btnViewDetails.Location = New Point(210, 263)
+        btnViewDetails.Location = New Point(215, 263)
         btnViewDetails.Name = "btnViewDetails"
         btnViewDetails.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnViewDetails.Size = New Size(180, 34)
+        btnViewDetails.Size = New Size(169, 34)
         btnViewDetails.TabIndex = 16
         btnViewDetails.Text = "View Details"
         ' 
@@ -245,6 +247,7 @@ Partial Class MachineCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
         BackColor = Color.White
         Controls.Add(TableLayoutPanel1)
         Margin = New Padding(5)

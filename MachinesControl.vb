@@ -5,6 +5,7 @@ Module DatabaseHelper
 End Module
 
 Public Class MachinesControl
+    Private machineCardsCache As New Dictionary(Of Integer, MachineCard)()
     Private selectedMachine As MachineCard = Nothing
 
     Private Sub MachinesControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -62,159 +63,271 @@ Public Class MachinesControl
 
         Using conn As New OleDbConnection(ConnectionString)
             conn.Open()
-            Dim query As String = "SELECT ID, UnitNumber, Capacity, Status, Reason" &
-                                  ", IIF(EXISTS(SELECT TransactionID FROM UnitData WHERE 1=0), NULL, NULL) " &
-                                  "FROM UnitData ORDER BY IIF(Status='Unavailable',1,0), UnitNumber"
-            ' The above dummy IIF keeps compatibility if DB doesn't have TransactionID. We'll attempt to read TransactionID defensively below.
-
-            Using cmd As New OleDbCommand("SELECT ID, UnitNumber, Capacity, Status, Reason" &
-                                          ", IIF(Fields!Exists, Null, Null) FROM UnitData ORDER BY IIF(Status='Unavailable',1,0), UnitNumber", conn)
-                ' The command text above is not actually used: instead we'll use simpler query and read columns defensively:
-            End Using
-
-            ' Simpler actual query:
             Using cmd As New OleDbCommand("SELECT * FROM UnitData ORDER BY IIF(Status='Unavailable',1,0), UnitNumber", conn)
                 Using reader As OleDbDataReader = cmd.ExecuteReader()
                     Dim ordTransactionID As Integer = -1
                     Dim ordReason As Integer = -1
 
-                    ' Attempt to get ordinals if present
                     Try
                         ordTransactionID = reader.GetOrdinal("TransactionID")
-                    Catch
-                        ordTransactionID = -1
-                    End Try
+                    Catch : End Try
                     Try
                         ordReason = reader.GetOrdinal("Reason")
-                    Catch
-                        ordReason = -1
-                    End Try
+                    Catch : End Try
 
                     While reader.Read()
-                        Dim card As New MachineCard()
+                        Dim machineID As Integer = If(IsDBNull(reader("ID")), 0, CInt(reader("ID")))
 
-                        ' ID and numeric unit number
-                        card.MachineID = If(IsDBNull(reader("ID")), 0, CInt(reader("ID")))
-                        Dim unitNum As Integer = If(IsDBNull(reader("UnitNumber")), 0, CInt(reader("UnitNumber")))
-                        card.UnitNumber = unitNum
+                        ' Get or create the card
+                        Dim card As MachineCard
+                        If machineCardsCache.ContainsKey(machineID) Then
+                            card = machineCardsCache(machineID)
+                        Else
+                            card = New MachineCard()
+                            machineCardsCache(machineID) = card
 
-                        ' Capacity & Status
+                            ' Attach handlers once
+                            AddHandler card.ProceedButton.Click, AddressOf HandleMachineProceed
+                            AddHandler card.ViewDetailsButton.Click, AddressOf HandleViewDetails
+                            AttachClickHandlers(card, AddressOf Machine_Click)
+                        End If
+
+                        ' --- RESET LAYOUT & SIZE TO FIX ENLARGEMENT ---
+                        card.AutoSize = False
+                        card.Size = New Size(400, 300)
+                        card.Margin = New Padding(5)
+                        card.Padding = New Padding(0)
+                        card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
+                        card.lblTransactionID.AutoSize = False
+                        card.lblServiceTime.AutoSize = False
+                        card.lblTransactionID.MaximumSize = New Size(card.Width - 10, 20)
+                        card.lblServiceTime.MaximumSize = New Size(card.Width - 10, 20)
+
+                        ' --- UPDATE CARD DATA FROM DB ---
+                        card.MachineID = machineID
+                        card.UnitNumber = If(IsDBNull(reader("UnitNumber")), 0, CInt(reader("UnitNumber")))
                         card.Capacity = If(IsDBNull(reader("Capacity")), "0", reader("Capacity").ToString())
                         card.Status = If(IsDBNull(reader("Status")), "Available", reader("Status").ToString())
+                        card.Reason = If(ordReason >= 0 AndAlso Not IsDBNull(reader(ordReason)), reader(ordReason).ToString(), "")
+                        card.TransactionID = If(ordTransactionID >= 0 AndAlso Not IsDBNull(reader(ordTransactionID)), Convert.ToInt32(reader(ordTransactionID)), 0)
 
-                        ' Reason (may be empty)
-                        If ordReason >= 0 Then
-                            Dim reason As String = If(IsDBNull(reader(ordReason)), "", reader(ordReason).ToString())
-                            card.Reason = reason
-                        End If
-
-                        ' Try to read TransactionID from UnitData if present
-                        If ordTransactionID >= 0 Then
-                            If Not IsDBNull(reader(ordTransactionID)) Then
-                                Dim loadedTransId As Integer = Convert.ToInt32(reader(ordTransactionID))
-                                card.TransactionID = loadedTransId
-                            Else
-                                card.TransactionID = 0
-                            End If
-                        Else
-                            card.TransactionID = 0
-                        End If
-
-                        ' If card.Status is In-Use and we have TransactionID, fetch a little info to display transaction number or time
-                        If card.Status = "In-Use" AndAlso card.TransactionID > 0 Then
-                            card.lblTransactionID.Text = "Transaction #" & card.TransactionID.ToString()
-                            ' Optionally load service time or deliver method:
+                        ' --- RESTORE UI ---
+                        If card.TransactionID > 0 Then
+                            ' Machine is in-use: fetch transaction details
                             Try
-                                Using qcmd As New OleDbCommand("SELECT DeliverMethod, ServiceDuration FROM Transactions WHERE TransactionID=@t", conn)
-                                    qcmd.Parameters.AddWithValue("@t", card.TransactionID)
+                                Using qcmd As New OleDbCommand("SELECT ServiceDuration, DeliverMethod FROM Transactions WHERE TransactionID=@tid", conn)
+                                    qcmd.Parameters.AddWithValue("@tid", card.TransactionID)
                                     Using r2 As OleDbDataReader = qcmd.ExecuteReader()
                                         If r2.Read() Then
-                                            Dim sd = If(IsDBNull(r2("ServiceDuration")), "", r2("ServiceDuration").ToString())
-                                            card.lblServiceTime.Text = If(String.IsNullOrEmpty(sd), DateTime.Now.ToShortTimeString(), sd)
+                                            card.lblServiceTime.Text = If(IsDBNull(r2("ServiceDuration")), DateTime.Now.ToShortTimeString(), r2("ServiceDuration").ToString())
                                             card.DeliverMethod = If(IsDBNull(r2("DeliverMethod")), "", r2("DeliverMethod").ToString())
                                         End If
                                     End Using
                                 End Using
-                            Catch ex As Exception
-                                ' swallow - optional to log
-                            End Try
-                        End If
+                            Catch : End Try
 
-                        ' Picture
-                        Try
-                            Select Case card.Status
-                                Case "Damaged"
-                                    card.MachineImage = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\damaged.png")
-                                Case "Unavailable"
-                                    card.MachineImage = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\unavailable.png")
-                                Case Else
-                                    card.MachineImage = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\available.png")
-                            End Select
-                        Catch
-                            card.MachineImage = Nothing
-                        End Try
-                        card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
+                            card.lblTransactionID.Text = "Transaction #" & card.TransactionID
+                            card.lblTransactionID.Visible = True
+                            card.lblServiceTime.Visible = True
 
-                        ' Buttons & click handlers
-                        Dim proceedBtn = card.ProceedButton
-                        Dim viewBtn = card.ViewDetailsButton
+                            card.ProceedButton.Text = "Complete"
+                            card.ProceedButton.FillColor = Color.LightGreen
+                            card.ProceedButton.Enabled = True
 
-                        If proceedBtn IsNot Nothing Then
-                            ' Remove previous handlers (defensive) then add
+                            ' Set in-use GIF
                             Try
-                                RemoveHandler proceedBtn.Click, AddressOf HandleMachineProceed
-                            Catch
-                            End Try
-                            AddHandler proceedBtn.Click, AddressOf HandleMachineProceed
+                                Dim imagePath As String = "C:\Users\Eisen\OneDrive\Documents\Assets\in-use.gif"
+                                If System.IO.File.Exists(imagePath) Then
+                                    card.MachineImage = Image.FromFile(imagePath)
+                                    card.picMachine.Image = card.MachineImage
+                                End If
+                            Catch : End Try
 
-                            ' store original appearances if not already
-                            If card.originalProceedColor = Nothing Then card.originalProceedColor = proceedBtn.FillColor
-                            If String.IsNullOrEmpty(card.originalProceedText) Then card.originalProceedText = proceedBtn.Text
-
-                            ' if the card was loaded as In-Use, ensure button reflects that
-                            If card.Status = "In-Use" Then
-                                proceedBtn.Text = "Complete"
-                                proceedBtn.FillColor = Color.LightGreen
-                            End If
-                        End If
-
-                        If viewBtn IsNot Nothing Then
-                            Try
-                                RemoveHandler viewBtn.Click, AddressOf HandleViewDetails
-                            Catch
-                            End Try
-                            AddHandler viewBtn.Click, AddressOf HandleViewDetails
-                        End If
-
-                        ' Disable interactions for Unavailable / Damaged
-                        If String.Equals(card.Status, "Unavailable", StringComparison.OrdinalIgnoreCase) OrElse
-                           String.Equals(card.Status, "Damaged", StringComparison.OrdinalIgnoreCase) Then
-
-                            card.Enabled = False
-                            If proceedBtn IsNot Nothing Then
-                                proceedBtn.Enabled = False
-                                proceedBtn.FillColor = Color.Gray
-                            End If
                         Else
-                            card.Enabled = True
-                            If proceedBtn IsNot Nothing Then proceedBtn.Enabled = True
+                            ' Available / other status
+                            card.lblTransactionID.Visible = False
+                            card.lblServiceTime.Visible = False
+                            card.ProceedButton.Text = If(String.IsNullOrEmpty(card.originalProceedText), "Get Pending", card.originalProceedText)
+                            card.ProceedButton.FillColor = If(card.originalProceedColor = Color.Empty, Color.FromArgb(94, 148, 255), card.originalProceedColor)
+                            card.ProceedButton.Enabled = (card.Status = "Available")
+
+                            ' Set default icon
+                            If card.MachineImage Is Nothing Then
+                                Try
+                                    Dim imagePath As String = ""
+                                    Select Case card.Status
+                                        Case "Damaged"
+                                            imagePath = "C:\Users\Eisen\OneDrive\Documents\Assets\damaged.png"
+                                        Case "Unavailable"
+                                            imagePath = "C:\Users\Eisen\OneDrive\Documents\Assets\unavailable.png"
+                                        Case "Available"
+                                            imagePath = "C:\Users\Eisen\OneDrive\Documents\Assets\available.png"
+                                        Case Else
+                                            imagePath = "C:\Users\Eisen\OneDrive\Documents\Assets\available.png"
+                                    End Select
+                                    If System.IO.File.Exists(imagePath) Then
+                                        card.MachineImage = Image.FromFile(imagePath)
+                                        card.picMachine.Image = card.MachineImage
+                                    End If
+                                Catch : End Try
+                            End If
                         End If
 
-                        ' Attach machine click handlers for selecting machine
-                        Try
-                            RemoveHandler card.Click, AddressOf Machine_Click
-                        Catch
-                        End Try
-                        AddHandler card.Click, AddressOf Machine_Click
-                        ' Also attach recursively to children
-                        AttachClickHandlers(card, AddressOf Machine_Click)
+                        ' Disable interaction for Damaged / Unavailable
+                        card.Enabled = (card.Status <> "Damaged" AndAlso card.Status <> "Unavailable")
 
+                        ' --- ADD CARD TO PANEL ---
                         flpMachines.Controls.Add(card)
                     End While
                 End Using
             End Using
         End Using
+
+        FilterMachinesByStatus()
     End Sub
+
+
+    ' Handles the Get Pending / Complete flow (robust, with TransactionID column)
+    Private Sub HandleMachineProceed(sender As Object, e As EventArgs)
+        Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
+        If btn Is Nothing Then Return
+
+        ' Find parent MachineCard
+        Dim parentCtrl As Control = btn
+        While parentCtrl IsNot Nothing AndAlso Not TypeOf parentCtrl Is MachineCard
+            parentCtrl = parentCtrl.Parent
+        End While
+        If parentCtrl Is Nothing Then Return
+        Dim card As MachineCard = DirectCast(parentCtrl, MachineCard)
+
+        ' --- ASSIGN PENDING TRANSACTION ---
+        If card.TransactionID = 0 Then
+            Dim transID As Integer = 0
+            Dim deliverMethod As String = ""
+            Dim serviceDuration As String = ""
+
+            ' Get pending transaction
+            Using conn As New OleDbConnection(ConnectionString)
+                conn.Open()
+                Using cmd As New OleDbCommand("SELECT TOP 1 TransactionID, DeliverMethod, ServiceDuration FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate", conn)
+                    Using reader As OleDbDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            transID = Convert.ToInt32(reader("TransactionID"))
+                            deliverMethod = If(IsDBNull(reader("DeliverMethod")), "", reader("DeliverMethod").ToString())
+                            serviceDuration = If(IsDBNull(reader("ServiceDuration")), DateTime.Now.ToShortTimeString(), reader("ServiceDuration").ToString())
+                        Else
+                            MessageBox.Show("No pending transactions available.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Return
+                        End If
+                    End Using
+                End Using
+
+                ' Assign transaction to machine (update UnitData)
+                Using ucmd As New OleDbCommand("UPDATE UnitData SET Status='In-Use', TransactionID=@tid WHERE ID=@mid", conn)
+                    ucmd.Parameters.AddWithValue("@tid", transID)
+                    ucmd.Parameters.AddWithValue("@mid", card.MachineID)
+                    ucmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            ' Update UI
+            card.TransactionID = transID
+            card.DeliverMethod = deliverMethod
+            card.Status = "In-Use"
+            card.lblTransactionID.Text = "Transaction #" & transID
+            card.lblTransactionID.Visible = True
+            card.lblServiceTime.Text = serviceDuration
+            card.lblServiceTime.Visible = True
+
+            btn.Text = "Complete"
+            btn.FillColor = Color.LightGreen
+            btn.Enabled = True
+
+            ' Set in-use icon
+            Try
+                Dim imagePath As String = "C:\Users\Eisen\OneDrive\Documents\Assets\in-use.gif"
+                If System.IO.File.Exists(imagePath) Then
+                    card.MachineImage = Image.FromFile(imagePath)
+                    card.picMachine.Image = card.MachineImage
+                    card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
+                End If
+            Catch ex As Exception
+                Debug.WriteLine("Error loading in-use image: " & ex.Message)
+            End Try
+
+            ' Optional: call AssignPendingTransaction
+            Try
+                card.AssignPendingTransaction(transID)
+            Catch ex As Exception
+                Debug.WriteLine("AssignPendingTransaction error: " & ex.Message)
+            End Try
+
+            card.Refresh()
+
+        Else
+            ' --- COMPLETE ASSIGNED TRANSACTION ---
+            Dim transID As Integer = card.TransactionID
+            If transID > 0 Then
+                Dim deliverMethod As String = ""
+
+                ' Get delivery method from Transactions
+                Using conn As New OleDbConnection(ConnectionString)
+                    conn.Open()
+                    Using qcmd As New OleDbCommand("SELECT DeliverMethod FROM Transactions WHERE TransactionID=@id", conn)
+                        qcmd.Parameters.AddWithValue("@id", transID)
+                        Dim res = qcmd.ExecuteScalar()
+                        If res IsNot Nothing AndAlso res IsNot DBNull.Value Then deliverMethod = res.ToString()
+                    End Using
+
+                    Dim newStatus As String = If(deliverMethod.Equals("Delivery", StringComparison.OrdinalIgnoreCase),
+                                             "For Delivery", "For Pickup")
+
+                    ' Update transaction status
+                    Using ucmd As New OleDbCommand("UPDATE Transactions SET Status=@status WHERE TransactionID=@id", conn)
+                        ucmd.Parameters.AddWithValue("@status", newStatus)
+                        ucmd.Parameters.AddWithValue("@id", transID)
+                        ucmd.ExecuteNonQuery()
+                    End Using
+
+                    ' Reset machine: Available, clear TransactionID
+                    Using umc As New OleDbCommand("UPDATE UnitData SET Status='Available', TransactionID=NULL WHERE ID=@mid", conn)
+                        umc.Parameters.AddWithValue("@mid", card.MachineID)
+                        umc.ExecuteNonQuery()
+                    End Using
+                End Using
+
+                ' Update UI
+                card.TransactionID = 0
+                card.DeliverMethod = ""
+                card.Status = "Available"
+                card.lblTransactionID.Text = ""
+                card.lblTransactionID.Visible = False
+                card.lblServiceTime.Text = ""
+                card.lblServiceTime.Visible = False
+
+                btn.Text = If(String.IsNullOrEmpty(card.originalProceedText), "Get Pending", card.originalProceedText)
+                btn.FillColor = If(card.originalProceedColor = Color.Empty, Color.FromArgb(94, 148, 255), card.originalProceedColor)
+                btn.Enabled = True
+
+                ' Reset image
+                Try
+                    Dim imagePath As String = "C:\Users\Eisen\OneDrive\Documents\Assets\available.png"
+                    If System.IO.File.Exists(imagePath) Then
+                        card.MachineImage = Image.FromFile(imagePath)
+                        card.picMachine.Image = card.MachineImage
+                        card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
+                    End If
+                Catch ex As Exception
+                    Debug.WriteLine("Error loading available image: " & ex.Message)
+                End Try
+
+                card.Refresh()
+            End If
+        End If
+    End Sub
+
+
+
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
         ' --- Ask the user for capacity ---
@@ -231,8 +344,6 @@ Public Class MachinesControl
             Exit Sub
         End If
 
-
-
         ' --- Find the next available UnitNumber ---
         Dim nextUnitNumber = GetNextAvailableUnitNumber()
 
@@ -243,7 +354,7 @@ Public Class MachinesControl
         newMachine.Status = "Available"
 
         Try
-            newMachine.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\laundry-unscreen.gif")
+            newMachine.MachineImage = Image.FromFile("C:\Users\Eisen\Downloads\available.png")
         Catch
             newMachine.MachineImage = Nothing
         End Try
@@ -394,8 +505,6 @@ Public Class MachinesControl
         End Using
     End Sub
 
-
-
     Private Function SaveMachineToDB(machine As MachineCard) As Integer
         Dim newID As Integer = -1
         Using conn As New OleDbConnection(ConnectionString)
@@ -488,98 +597,6 @@ Public Class MachinesControl
 
 
 
-    ' Handles the Get Pending / Complete flow (robust)
-    Private Sub HandleMachineProceed(sender As Object, e As EventArgs)
-        Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
-        If btn Is Nothing Then Return
-
-        ' Find parent MachineCard
-        Dim parentCtrl As Control = btn
-        While parentCtrl IsNot Nothing AndAlso Not TypeOf parentCtrl Is MachineCard
-            parentCtrl = parentCtrl.Parent
-        End While
-        If parentCtrl Is Nothing Then Return
-        Dim card As MachineCard = DirectCast(parentCtrl, MachineCard)
-
-        Using conn As New OleDbConnection(ConnectionString)
-            conn.Open()
-
-            ' If no transaction currently assigned -> GET a pending one
-            If card.TransactionID = 0 Then
-                Dim query As String = "SELECT TOP 1 * FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate"
-                Using cmd As New OleDbCommand(query, conn)
-                    Using reader As OleDbDataReader = cmd.ExecuteReader()
-                        If reader.Read() Then
-                            Dim transID As Integer = Convert.ToInt32(reader("TransactionID"))
-                            Dim deliverMethod As String = If(IsDBNull(reader("DeliverMethod")), "", reader("DeliverMethod").ToString())
-                            Dim serviceDuration As String = If(IsDBNull(reader("ServiceDuration")), "", reader("ServiceDuration").ToString())
-
-                            ' Assign to this machine (update UI)
-                            card.TransactionID = transID
-                            card.DeliverMethod = deliverMethod
-                            card.Status = "In-Use"
-                            card.lblTransactionID.Text = "Transaction #" & transID.ToString()
-                            card.lblServiceTime.Text = If(String.IsNullOrEmpty(serviceDuration), DateTime.Now.ToShortTimeString(), serviceDuration)
-
-                            card.AssignPendingTransaction(transID)
-
-                            ' UI: change button only
-                            btn.Text = "Complete"
-                            btn.FillColor = Color.LightGreen
-                        Else
-                            MessageBox.Show("No pending transactions available.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        End If
-                    End Using
-                End Using
-
-            Else
-                ' COMPLETE the assigned transaction
-                Dim transID As Integer = card.TransactionID
-                If transID > 0 Then
-                    Dim deliverMethod As String = ""
-                    Using qcmd As New OleDbCommand("SELECT DeliverMethod FROM Transactions WHERE TransactionID=@id", conn)
-                        qcmd.Parameters.AddWithValue("@id", transID)
-                        Dim res = qcmd.ExecuteScalar()
-                        If res IsNot Nothing AndAlso res IsNot DBNull.Value Then deliverMethod = res.ToString()
-                    End Using
-
-                    Dim newStatus As String = If(deliverMethod.Equals("Delivery", StringComparison.OrdinalIgnoreCase),
-                                                 "For Delivery", "For Pickup")
-
-                    ' Update transaction status
-                    Using ucmd As New OleDbCommand("UPDATE Transactions SET Status=@status WHERE TransactionID=@id", conn)
-                        ucmd.Parameters.AddWithValue("@status", newStatus)
-                        ucmd.Parameters.AddWithValue("@id", transID)
-                        ucmd.ExecuteNonQuery()
-                    End Using
-
-                    ' Reset machine to Available and clear TransactionID field in DB
-                    Using umc As New OleDbCommand("UPDATE UnitData SET Status='Available', TransactionID=NULL WHERE ID=@mid", conn)
-                        umc.Parameters.AddWithValue("@mid", card.MachineID)
-                        Try
-                            umc.ExecuteNonQuery()
-                        Catch ex As OleDbException
-                            ' If TransactionID column doesn't exist, just set Status
-                            Using umc2 As New OleDbCommand("UPDATE UnitData SET Status='Available' WHERE ID=@mid", conn)
-                                umc2.Parameters.AddWithValue("@mid", card.MachineID)
-                                umc2.ExecuteNonQuery()
-                            End Using
-                        End Try
-                    End Using
-
-                    ' Clear card state (only after DB updates succeeded)
-                    card.TransactionID = 0
-                    card.DeliverMethod = ""
-                    card.Status = "Available"
-                    card.lblTransactionID.Text = ""
-                    card.lblServiceTime.Text = ""
-                    btn.Text = card.originalProceedText
-                    btn.FillColor = card.originalProceedColor
-                End If
-            End If
-        End Using
-    End Sub
-
     Private Sub HandleViewDetails(sender As Object, e As EventArgs)
         Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
         If btn Is Nothing Then Return
@@ -633,7 +650,7 @@ Public Class MachinesControl
     End Sub
 
     Private Sub FilterMachinesByStatus()
-        Dim selectedStatus As String = cmbStatus.SelectedItem.ToString()
+        Dim selectedStatus As String = If(cmbStatus.SelectedItem IsNot Nothing, cmbStatus.SelectedItem.ToString(), "All")
 
         ' Show all machines if "All" is selected
         If selectedStatus = "All" Then
