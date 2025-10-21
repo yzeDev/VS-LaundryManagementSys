@@ -1,5 +1,6 @@
 ﻿Public Class InvoiceForm
-
+    ' Property to remember the previous form (the one that opened this Invoice)
+    Public Property PreviousForm As Form
 
     ' Customer details
     Public Property CustomerName As String
