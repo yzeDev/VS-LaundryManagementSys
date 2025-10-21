@@ -23,42 +23,42 @@ Partial Class FullServiceForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
         Label4 = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
         Label5 = New Label()
-        Label6 = New Label()
+        lblRate = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
         Label7 = New Label()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2txtboxName = New Guna.UI2.WinForms.Guna2TextBox()
         TableLayoutPanel5 = New TableLayoutPanel()
-        Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2txtboxWeight = New Guna.UI2.WinForms.Guna2TextBox()
         Label10 = New Label()
-        Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2txtboxContact = New Guna.UI2.WinForms.Guna2TextBox()
         Label8 = New Label()
         TableLayoutPanel6 = New TableLayoutPanel()
         Label11 = New Label()
         TableLayoutPanel7 = New TableLayoutPanel()
         Label12 = New Label()
-        Guna2CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Guna2CheckBoxDelivery = New Guna.UI2.WinForms.Guna2CheckBox()
         TableLayoutPanel8 = New TableLayoutPanel()
-        Guna2CheckBox2 = New Guna.UI2.WinForms.Guna2CheckBox()
+        Guna2CheckBoxPickup = New Guna.UI2.WinForms.Guna2CheckBox()
         Label13 = New Label()
-        TextBox1 = New TextBox()
+        txtboxAddress = New TextBox()
         TableLayoutPanel9 = New TableLayoutPanel()
         gbCancel = New Guna.UI2.WinForms.Guna2Button()
         gbContinue = New Guna.UI2.WinForms.Guna2Button()
@@ -88,14 +88,14 @@ Partial Class FullServiceForm
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel1.Controls.Add(Label14, 0, 6)
         TableLayoutPanel1.Controls.Add(Label4, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 2)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel4, 0, 3)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel5, 0, 4)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel6, 0, 5)
-        TableLayoutPanel1.Controls.Add(TextBox1, 0, 7)
+        TableLayoutPanel1.Controls.Add(txtboxAddress, 0, 7)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel9, 0, 8)
         TableLayoutPanel1.Controls.Add(Guna2GradientPanel1, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
@@ -103,15 +103,15 @@ Partial Class FullServiceForm
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.Padding = New Padding(2)
         TableLayoutPanel1.RowCount = 9
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 130.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 30.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 100F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 130F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60F))
         TableLayoutPanel1.Size = New Size(500, 680)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -119,7 +119,7 @@ Partial Class FullServiceForm
         ' 
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 12.0F)
+        Label14.Font = New Font("Microsoft Sans Serif", 12F)
         Label14.Location = New Point(5, 509)
         Label14.Name = "Label14"
         Label14.Size = New Size(490, 30)
@@ -131,7 +131,7 @@ Partial Class FullServiceForm
         ' 
         Label4.AutoSize = True
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(5, 102)
         Label4.Name = "Label4"
         Label4.Size = New Size(490, 40)
@@ -142,15 +142,15 @@ Partial Class FullServiceForm
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel3.Controls.Add(Label5, 0, 0)
-        TableLayoutPanel3.Controls.Add(Label6, 0, 1)
+        TableLayoutPanel3.Controls.Add(lblRate, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(5, 145)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel3.Size = New Size(490, 124)
         TableLayoutPanel3.TabIndex = 2
         ' 
@@ -159,7 +159,7 @@ Partial Class FullServiceForm
         Label5.AutoSize = True
         Label5.BackColor = Color.Silver
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(484, 40)
@@ -167,33 +167,33 @@ Partial Class FullServiceForm
         Label5.Text = "Package Includes:"
         Label5.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Label6
+        ' lblRate
         ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.Silver
-        Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(3, 40)
-        Label6.Name = "Label6"
-        Label6.Padding = New Padding(40, 0, 0, 0)
-        Label6.Size = New Size(484, 84)
-        Label6.TabIndex = 1
-        Label6.Text = "• Wash, Dry, and Fold" & vbCrLf & "Rate: ₱100/kg" & vbCrLf
-        Label6.TextAlign = ContentAlignment.MiddleLeft
+        lblRate.AutoSize = True
+        lblRate.BackColor = Color.Silver
+        lblRate.Dock = DockStyle.Fill
+        lblRate.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRate.Location = New Point(3, 40)
+        lblRate.Name = "lblRate"
+        lblRate.Padding = New Padding(40, 0, 0, 0)
+        lblRate.Size = New Size(484, 84)
+        lblRate.TabIndex = 1
+        lblRate.Text = "• Wash, Dry, and Fold" & vbCrLf & "Rate: ₱100/kg" & vbCrLf
+        lblRate.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 1
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
         TableLayoutPanel4.Controls.Add(Label7, 0, 0)
-        TableLayoutPanel4.Controls.Add(Guna2TextBox1, 0, 1)
+        TableLayoutPanel4.Controls.Add(Guna2txtboxName, 0, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(5, 275)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Size = New Size(490, 73)
         TableLayoutPanel4.TabIndex = 3
         ' 
@@ -201,7 +201,7 @@ Partial Class FullServiceForm
         ' 
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 12.0F)
+        Label7.Font = New Font("Microsoft Sans Serif", 12F)
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(484, 36)
@@ -209,73 +209,73 @@ Partial Class FullServiceForm
         Label7.Text = "Customer Name:"
         Label7.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Guna2TextBox1
+        ' Guna2txtboxName
         ' 
-        Guna2TextBox1.AutoRoundedCorners = True
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges1
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.Dock = DockStyle.Fill
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(4, 45)
-        Guna2TextBox1.Margin = New Padding(4, 9, 4, 9)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PlaceholderText = ""
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TextBox1.Size = New Size(482, 19)
-        Guna2TextBox1.TabIndex = 1
+        Guna2txtboxName.AutoRoundedCorners = True
+        Guna2txtboxName.CustomizableEdges = CustomizableEdges14
+        Guna2txtboxName.DefaultText = ""
+        Guna2txtboxName.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2txtboxName.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2txtboxName.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2txtboxName.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2txtboxName.Dock = DockStyle.Fill
+        Guna2txtboxName.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2txtboxName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2txtboxName.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2txtboxName.Location = New Point(4, 45)
+        Guna2txtboxName.Margin = New Padding(4, 9, 4, 9)
+        Guna2txtboxName.Name = "Guna2txtboxName"
+        Guna2txtboxName.PlaceholderText = ""
+        Guna2txtboxName.SelectedText = ""
+        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        Guna2txtboxName.Size = New Size(482, 19)
+        Guna2txtboxName.TabIndex = 1
         ' 
         ' TableLayoutPanel5
         ' 
         TableLayoutPanel5.ColumnCount = 2
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 54.5454559F))
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 45.4545441F))
-        TableLayoutPanel5.Controls.Add(Guna2TextBox4, 1, 1)
+        TableLayoutPanel5.Controls.Add(Guna2txtboxWeight, 1, 1)
         TableLayoutPanel5.Controls.Add(Label10, 1, 0)
-        TableLayoutPanel5.Controls.Add(Guna2TextBox2, 0, 1)
+        TableLayoutPanel5.Controls.Add(Guna2txtboxContact, 0, 1)
         TableLayoutPanel5.Controls.Add(Label8, 0, 0)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(5, 354)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 2
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel5.Size = New Size(490, 73)
         TableLayoutPanel5.TabIndex = 4
         ' 
-        ' Guna2TextBox4
+        ' Guna2txtboxWeight
         ' 
-        Guna2TextBox4.AutoRoundedCorners = True
-        Guna2TextBox4.CustomizableEdges = CustomizableEdges3
-        Guna2TextBox4.DefaultText = ""
-        Guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox4.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.Dock = DockStyle.Fill
-        Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Font = New Font("Poppins", 12.0F)
-        Guna2TextBox4.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Location = New Point(271, 45)
-        Guna2TextBox4.Margin = New Padding(4, 9, 4, 9)
-        Guna2TextBox4.Name = "Guna2TextBox4"
-        Guna2TextBox4.PlaceholderText = ""
-        Guna2TextBox4.SelectedText = ""
-        Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox4.Size = New Size(215, 19)
-        Guna2TextBox4.TabIndex = 6
+        Guna2txtboxWeight.AutoRoundedCorners = True
+        Guna2txtboxWeight.CustomizableEdges = CustomizableEdges16
+        Guna2txtboxWeight.DefaultText = ""
+        Guna2txtboxWeight.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2txtboxWeight.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2txtboxWeight.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2txtboxWeight.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2txtboxWeight.Dock = DockStyle.Fill
+        Guna2txtboxWeight.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2txtboxWeight.Font = New Font("Microsoft Sans Serif", 12F)
+        Guna2txtboxWeight.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2txtboxWeight.Location = New Point(271, 45)
+        Guna2txtboxWeight.Margin = New Padding(4, 9, 4, 9)
+        Guna2txtboxWeight.Name = "Guna2txtboxWeight"
+        Guna2txtboxWeight.PlaceholderText = ""
+        Guna2txtboxWeight.SelectedText = ""
+        Guna2txtboxWeight.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2txtboxWeight.Size = New Size(215, 19)
+        Guna2txtboxWeight.TabIndex = 6
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 12.0F)
+        Label10.Font = New Font("Microsoft Sans Serif", 12F)
         Label10.Location = New Point(270, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(217, 36)
@@ -283,33 +283,33 @@ Partial Class FullServiceForm
         Label10.Text = "Clothes (kg)"
         Label10.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Guna2TextBox2
+        ' Guna2txtboxContact
         ' 
-        Guna2TextBox2.AutoRoundedCorners = True
-        Guna2TextBox2.CustomizableEdges = CustomizableEdges5
-        Guna2TextBox2.DefaultText = ""
-        Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.Dock = DockStyle.Fill
-        Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(4, 45)
-        Guna2TextBox2.Margin = New Padding(4, 9, 4, 9)
-        Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PlaceholderText = ""
-        Guna2TextBox2.SelectedText = ""
-        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox2.Size = New Size(259, 19)
-        Guna2TextBox2.TabIndex = 2
+        Guna2txtboxContact.AutoRoundedCorners = True
+        Guna2txtboxContact.CustomizableEdges = CustomizableEdges18
+        Guna2txtboxContact.DefaultText = ""
+        Guna2txtboxContact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2txtboxContact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2txtboxContact.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2txtboxContact.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2txtboxContact.Dock = DockStyle.Fill
+        Guna2txtboxContact.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2txtboxContact.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2txtboxContact.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2txtboxContact.Location = New Point(4, 45)
+        Guna2txtboxContact.Margin = New Padding(4, 9, 4, 9)
+        Guna2txtboxContact.Name = "Guna2txtboxContact"
+        Guna2txtboxContact.PlaceholderText = ""
+        Guna2txtboxContact.SelectedText = ""
+        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        Guna2txtboxContact.Size = New Size(259, 19)
+        Guna2txtboxContact.TabIndex = 2
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 12.0F)
+        Label8.Font = New Font("Microsoft Sans Serif", 12F)
         Label8.Location = New Point(3, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(261, 36)
@@ -320,8 +320,8 @@ Partial Class FullServiceForm
         ' TableLayoutPanel6
         ' 
         TableLayoutPanel6.ColumnCount = 2
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel6.Controls.Add(Label11, 0, 0)
         TableLayoutPanel6.Controls.Add(TableLayoutPanel7, 0, 1)
         TableLayoutPanel6.Controls.Add(TableLayoutPanel8, 1, 1)
@@ -329,8 +329,8 @@ Partial Class FullServiceForm
         TableLayoutPanel6.Location = New Point(5, 433)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 2
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel6.Size = New Size(490, 73)
         TableLayoutPanel6.TabIndex = 5
         ' 
@@ -338,7 +338,7 @@ Partial Class FullServiceForm
         ' 
         Label11.AutoSize = True
         Label11.Dock = DockStyle.Fill
-        Label11.Font = New Font("Poppins", 12.0F)
+        Label11.Font = New Font("Microsoft Sans Serif", 12F)
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(239, 36)
@@ -349,22 +349,22 @@ Partial Class FullServiceForm
         ' TableLayoutPanel7
         ' 
         TableLayoutPanel7.ColumnCount = 2
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.0F))
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70.0F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
         TableLayoutPanel7.Controls.Add(Label12, 0, 0)
-        TableLayoutPanel7.Controls.Add(Guna2CheckBox1, 1, 0)
+        TableLayoutPanel7.Controls.Add(Guna2CheckBoxDelivery, 1, 0)
         TableLayoutPanel7.Dock = DockStyle.Fill
         TableLayoutPanel7.Location = New Point(3, 39)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel7.Size = New Size(239, 31)
         TableLayoutPanel7.TabIndex = 3
         ' 
         ' Label12
         ' 
         Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(3, 0)
         Label12.Name = "Label12"
         Label12.Size = New Size(65, 31)
@@ -372,63 +372,63 @@ Partial Class FullServiceForm
         Label12.Text = "Deliver"
         Label12.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Guna2CheckBox1
+        ' Guna2CheckBoxDelivery
         ' 
-        Guna2CheckBox1.AutoSize = True
-        Guna2CheckBox1.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.CheckedState.BorderRadius = 0
-        Guna2CheckBox1.CheckedState.BorderThickness = 0
-        Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.Dock = DockStyle.Fill
-        Guna2CheckBox1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2CheckBox1.Location = New Point(74, 3)
-        Guna2CheckBox1.Name = "Guna2CheckBox1"
-        Guna2CheckBox1.Size = New Size(162, 25)
-        Guna2CheckBox1.TabIndex = 6
-        Guna2CheckBox1.Text = "+ 5% delivery fee"
-        Guna2CheckBox1.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox1.UncheckedState.BorderRadius = 0
-        Guna2CheckBox1.UncheckedState.BorderThickness = 0
-        Guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2CheckBoxDelivery.AutoSize = True
+        Guna2CheckBoxDelivery.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2CheckBoxDelivery.CheckedState.BorderRadius = 0
+        Guna2CheckBoxDelivery.CheckedState.BorderThickness = 0
+        Guna2CheckBoxDelivery.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2CheckBoxDelivery.Dock = DockStyle.Fill
+        Guna2CheckBoxDelivery.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2CheckBoxDelivery.Location = New Point(74, 3)
+        Guna2CheckBoxDelivery.Name = "Guna2CheckBoxDelivery"
+        Guna2CheckBoxDelivery.Size = New Size(162, 25)
+        Guna2CheckBoxDelivery.TabIndex = 6
+        Guna2CheckBoxDelivery.Text = "+ 5% delivery fee"
+        Guna2CheckBoxDelivery.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2CheckBoxDelivery.UncheckedState.BorderRadius = 0
+        Guna2CheckBoxDelivery.UncheckedState.BorderThickness = 0
+        Guna2CheckBoxDelivery.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ' 
         ' TableLayoutPanel8
         ' 
         TableLayoutPanel8.ColumnCount = 2
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.0F))
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70.0F))
-        TableLayoutPanel8.Controls.Add(Guna2CheckBox2, 1, 0)
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 70F))
+        TableLayoutPanel8.Controls.Add(Guna2CheckBoxPickup, 1, 0)
         TableLayoutPanel8.Controls.Add(Label13, 0, 0)
         TableLayoutPanel8.Dock = DockStyle.Fill
         TableLayoutPanel8.Location = New Point(248, 39)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 1
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel8.Size = New Size(239, 31)
         TableLayoutPanel8.TabIndex = 4
         ' 
-        ' Guna2CheckBox2
+        ' Guna2CheckBoxPickup
         ' 
-        Guna2CheckBox2.AutoSize = True
-        Guna2CheckBox2.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox2.CheckedState.BorderRadius = 0
-        Guna2CheckBox2.CheckedState.BorderThickness = 0
-        Guna2CheckBox2.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox2.Dock = DockStyle.Fill
-        Guna2CheckBox2.Font = New Font("Poppins", 9.75F)
-        Guna2CheckBox2.Location = New Point(74, 3)
-        Guna2CheckBox2.Name = "Guna2CheckBox2"
-        Guna2CheckBox2.Size = New Size(162, 25)
-        Guna2CheckBox2.TabIndex = 7
-        Guna2CheckBox2.Text = "on site pickup"
-        Guna2CheckBox2.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox2.UncheckedState.BorderRadius = 0
-        Guna2CheckBox2.UncheckedState.BorderThickness = 0
-        Guna2CheckBox2.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2CheckBoxPickup.AutoSize = True
+        Guna2CheckBoxPickup.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2CheckBoxPickup.CheckedState.BorderRadius = 0
+        Guna2CheckBoxPickup.CheckedState.BorderThickness = 0
+        Guna2CheckBoxPickup.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2CheckBoxPickup.Dock = DockStyle.Fill
+        Guna2CheckBoxPickup.Font = New Font("Microsoft Sans Serif", 9.75F)
+        Guna2CheckBoxPickup.Location = New Point(74, 3)
+        Guna2CheckBoxPickup.Name = "Guna2CheckBoxPickup"
+        Guna2CheckBoxPickup.Size = New Size(162, 25)
+        Guna2CheckBoxPickup.TabIndex = 7
+        Guna2CheckBoxPickup.Text = "on site pickup"
+        Guna2CheckBoxPickup.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2CheckBoxPickup.UncheckedState.BorderRadius = 0
+        Guna2CheckBoxPickup.UncheckedState.BorderThickness = 0
+        Guna2CheckBoxPickup.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ' 
         ' Label13
         ' 
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 9.75F)
+        Label13.Font = New Font("Microsoft Sans Serif", 9.75F)
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
         Label13.Size = New Size(65, 31)
@@ -436,29 +436,29 @@ Partial Class FullServiceForm
         Label13.Text = "Pickup"
         Label13.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox1
+        ' txtboxAddress
         ' 
-        TextBox1.Dock = DockStyle.Fill
-        TextBox1.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(5, 542)
-        TextBox1.Multiline = True
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(490, 73)
-        TextBox1.TabIndex = 7
+        txtboxAddress.Dock = DockStyle.Fill
+        txtboxAddress.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtboxAddress.Location = New Point(5, 542)
+        txtboxAddress.Multiline = True
+        txtboxAddress.Name = "txtboxAddress"
+        txtboxAddress.Size = New Size(490, 73)
+        txtboxAddress.TabIndex = 7
         ' 
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 2
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel9.Controls.Add(gbCancel, 0, 0)
         TableLayoutPanel9.Controls.Add(gbContinue, 1, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
         TableLayoutPanel9.Location = New Point(5, 621)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel9.Size = New Size(490, 54)
         TableLayoutPanel9.TabIndex = 8
         ' 
@@ -466,18 +466,18 @@ Partial Class FullServiceForm
         ' 
         gbCancel.AutoRoundedCorners = True
         gbCancel.BorderThickness = 1
-        gbCancel.CustomizableEdges = CustomizableEdges7
+        gbCancel.CustomizableEdges = CustomizableEdges20
         gbCancel.DisabledState.BorderColor = Color.DarkGray
         gbCancel.DisabledState.CustomBorderColor = Color.DarkGray
         gbCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         gbCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbCancel.Dock = DockStyle.Top
         gbCancel.FillColor = Color.White
-        gbCancel.Font = New Font("Poppins", 12.0F)
+        gbCancel.Font = New Font("Microsoft Sans Serif", 12F)
         gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gbCancel.Location = New Point(3, 3)
         gbCancel.Name = "gbCancel"
-        gbCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        gbCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges21
         gbCancel.Size = New Size(239, 48)
         gbCancel.TabIndex = 0
         gbCancel.Text = "Cancel"
@@ -486,17 +486,17 @@ Partial Class FullServiceForm
         ' 
         gbContinue.AutoRoundedCorners = True
         gbContinue.BorderThickness = 1
-        gbContinue.CustomizableEdges = CustomizableEdges9
+        gbContinue.CustomizableEdges = CustomizableEdges22
         gbContinue.DisabledState.BorderColor = Color.DarkGray
         gbContinue.DisabledState.CustomBorderColor = Color.DarkGray
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         gbContinue.Dock = DockStyle.Top
-        gbContinue.Font = New Font("Poppins", 12.0F)
+        gbContinue.Font = New Font("Microsoft Sans Serif", 12F)
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(248, 3)
         gbContinue.Name = "gbContinue"
-        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges23
         gbContinue.Size = New Size(239, 48)
         gbContinue.TabIndex = 1
         gbContinue.Text = "Continue"
@@ -504,14 +504,14 @@ Partial Class FullServiceForm
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges12
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges24
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel1.Location = New Point(5, 5)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges25
         Guna2GradientPanel1.Size = New Size(490, 94)
         Guna2GradientPanel1.TabIndex = 9
         ' 
@@ -520,9 +520,9 @@ Partial Class FullServiceForm
         TableLayoutPanel2.BackColor = Color.Transparent
         TableLayoutPanel2.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel2.ColumnCount = 3
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.Controls.Add(lblTransactionID, 2, 1)
         TableLayoutPanel2.Controls.Add(Label3, 1, 1)
         TableLayoutPanel2.Controls.Add(Label2, 2, 0)
@@ -533,8 +533,8 @@ Partial Class FullServiceForm
         TableLayoutPanel2.Margin = New Padding(0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.Size = New Size(490, 94)
         TableLayoutPanel2.TabIndex = 0
         ' 
@@ -542,7 +542,7 @@ Partial Class FullServiceForm
         ' 
         lblTransactionID.AutoSize = True
         lblTransactionID.Dock = DockStyle.Fill
-        lblTransactionID.Font = New Font("Poppins SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTransactionID.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTransactionID.ForeColor = Color.White
         lblTransactionID.Location = New Point(298, 47)
         lblTransactionID.Name = "lblTransactionID"
@@ -555,7 +555,7 @@ Partial Class FullServiceForm
         ' 
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins SemiBold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.White
         Label3.Location = New Point(103, 47)
         Label3.Name = "Label3"
@@ -567,7 +567,7 @@ Partial Class FullServiceForm
         ' 
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(298, 0)
         Label2.Name = "Label2"
@@ -593,7 +593,7 @@ Partial Class FullServiceForm
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(0, 0)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(94, 88)
         Guna2CirclePictureBox1.TabIndex = 0
@@ -602,7 +602,7 @@ Partial Class FullServiceForm
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(100, 0)
         Label1.Margin = New Padding(0)
@@ -620,7 +620,7 @@ Partial Class FullServiceForm
         ' 
         ' FullServiceForm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(500, 680)
@@ -660,25 +660,25 @@ Partial Class FullServiceForm
     Friend WithEvents Label4 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblRate As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label7 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2txtboxName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2txtboxContact As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2txtboxWeight As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Label12 As Label
-    Friend WithEvents Guna2CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents Guna2CheckBoxDelivery As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
-    Friend WithEvents Guna2CheckBox2 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents Guna2CheckBoxPickup As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtboxAddress As TextBox
     Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
     Friend WithEvents gbCancel As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents gbContinue As Guna.UI2.WinForms.Guna2Button
