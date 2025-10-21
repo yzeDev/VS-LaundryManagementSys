@@ -206,9 +206,10 @@ Partial Class PriceSettingsControl
         RightPanel.CustomizableEdges = CustomizableEdges33
         RightPanel.Dock = DockStyle.Fill
         RightPanel.Location = New Point(0, 0)
+        RightPanel.Margin = New Padding(3, 2, 3, 2)
         RightPanel.Name = "RightPanel"
         RightPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges34
-        RightPanel.Size = New Size(775, 553)
+        RightPanel.Size = New Size(678, 415)
         RightPanel.TabIndex = 9
         ' 
         ' Guna2CustomGradientPanel4
@@ -219,10 +220,11 @@ Partial Class PriceSettingsControl
         Guna2CustomGradientPanel4.BorderThickness = 2
         Guna2CustomGradientPanel4.Controls.Add(TableLayoutPanel18)
         Guna2CustomGradientPanel4.CustomizableEdges = CustomizableEdges7
-        Guna2CustomGradientPanel4.Location = New Point(584, 169)
+        Guna2CustomGradientPanel4.Location = New Point(511, 127)
+        Guna2CustomGradientPanel4.Margin = New Padding(3, 2, 3, 2)
         Guna2CustomGradientPanel4.Name = "Guna2CustomGradientPanel4"
         Guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2CustomGradientPanel4.Size = New Size(185, 305)
+        Guna2CustomGradientPanel4.Size = New Size(162, 229)
         Guna2CustomGradientPanel4.TabIndex = 24
         ' 
         ' TableLayoutPanel18
@@ -239,7 +241,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel18.Controls.Add(TableLayoutPanel26, 0, 1)
         TableLayoutPanel18.Controls.Add(TableLayoutPanel27, 0, 11)
         TableLayoutPanel18.Controls.Add(Label56, 0, 9)
-        TableLayoutPanel18.Location = New Point(7, 14)
+        TableLayoutPanel18.Location = New Point(6, 10)
+        TableLayoutPanel18.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel18.Name = "TableLayoutPanel18"
         TableLayoutPanel18.RowCount = 12
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
@@ -250,11 +253,11 @@ Partial Class PriceSettingsControl
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 31F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 44F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 8F))
-        TableLayoutPanel18.Size = New Size(164, 294)
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel18.Size = New Size(144, 220)
         TableLayoutPanel18.TabIndex = 18
         ' 
         ' TableLayoutPanel22
@@ -264,11 +267,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel22.Controls.Add(dryclean_current1, 1, 0)
         TableLayoutPanel22.Controls.Add(Label40, 0, 0)
-        TableLayoutPanel22.Location = New Point(3, 68)
+        TableLayoutPanel22.Location = New Point(3, 52)
+        TableLayoutPanel22.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 1
         TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel22.Size = New Size(158, 24)
+        TableLayoutPanel22.Size = New Size(138, 18)
         TableLayoutPanel22.TabIndex = 12
         ' 
         ' dryclean_current1
@@ -277,9 +281,9 @@ Partial Class PriceSettingsControl
         dryclean_current1.AutoSize = True
         dryclean_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dryclean_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_current1.Location = New Point(111, 0)
+        dryclean_current1.Location = New Point(97, 0)
         dryclean_current1.Name = "dryclean_current1"
-        dryclean_current1.Size = New Size(39, 23)
+        dryclean_current1.Size = New Size(34, 18)
         dryclean_current1.TabIndex = 14
         dryclean_current1.Text = "₱ 40"
         dryclean_current1.TextAlign = ContentAlignment.MiddleLeft
@@ -292,7 +296,7 @@ Partial Class PriceSettingsControl
         Label40.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label40.Location = New Point(3, 0)
         Label40.Name = "Label40"
-        Label40.Size = New Size(100, 24)
+        Label40.Size = New Size(85, 18)
         Label40.TabIndex = 14
         Label40.Text = "Current Price: ₱ "
         Label40.TextAlign = ContentAlignment.MiddleLeft
@@ -304,11 +308,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel23.Controls.Add(dryclean_current2, 1, 0)
         TableLayoutPanel23.Controls.Add(Label42, 0, 0)
-        TableLayoutPanel23.Location = New Point(3, 162)
+        TableLayoutPanel23.Location = New Point(3, 123)
+        TableLayoutPanel23.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 1
         TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel23.Size = New Size(158, 24)
+        TableLayoutPanel23.Size = New Size(138, 18)
         TableLayoutPanel23.TabIndex = 16
         ' 
         ' dryclean_current2
@@ -317,9 +322,9 @@ Partial Class PriceSettingsControl
         dryclean_current2.AutoSize = True
         dryclean_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dryclean_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_current2.Location = New Point(111, 0)
+        dryclean_current2.Location = New Point(97, 0)
         dryclean_current2.Name = "dryclean_current2"
-        dryclean_current2.Size = New Size(39, 23)
+        dryclean_current2.Size = New Size(33, 18)
         dryclean_current2.TabIndex = 14
         dryclean_current2.Text = "₱ 30"
         dryclean_current2.TextAlign = ContentAlignment.MiddleLeft
@@ -332,7 +337,7 @@ Partial Class PriceSettingsControl
         Label42.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label42.Location = New Point(3, 0)
         Label42.Name = "Label42"
-        Label42.Size = New Size(100, 24)
+        Label42.Size = New Size(85, 18)
         Label42.TabIndex = 14
         Label42.Text = "Current Price: ₱ "
         Label42.TextAlign = ContentAlignment.MiddleLeft
@@ -342,16 +347,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel24.ColumnCount = 3
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel24.Controls.Add(Label46, 0, 0)
         TableLayoutPanel24.Controls.Add(dryclean_new3, 1, 0)
         TableLayoutPanel24.Controls.Add(Label47, 2, 0)
-        TableLayoutPanel24.Location = New Point(3, 215)
+        TableLayoutPanel24.Location = New Point(3, 162)
+        TableLayoutPanel24.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel24.Name = "TableLayoutPanel24"
         TableLayoutPanel24.RowCount = 1
         TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel24.Size = New Size(158, 35)
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel24.Size = New Size(138, 26)
         TableLayoutPanel24.TabIndex = 14
         ' 
         ' Label46
@@ -360,9 +366,9 @@ Partial Class PriceSettingsControl
         Label46.AutoSize = True
         Label46.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label46.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label46.Location = New Point(3, 6)
+        Label46.Location = New Point(3, 3)
         Label46.Name = "Label46"
-        Label46.Size = New Size(17, 23)
+        Label46.Size = New Size(14, 19)
         Label46.TabIndex = 14
         Label46.Text = "₱ "
         Label46.TextAlign = ContentAlignment.MiddleLeft
@@ -380,13 +386,13 @@ Partial Class PriceSettingsControl
         dryclean_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         dryclean_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dryclean_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new3.Location = New Point(26, 6)
-        dryclean_new3.Margin = New Padding(3, 6, 3, 6)
+        dryclean_new3.Location = New Point(23, 4)
+        dryclean_new3.Margin = New Padding(3, 4, 3, 4)
         dryclean_new3.Name = "dryclean_new3"
         dryclean_new3.PlaceholderText = ""
         dryclean_new3.SelectedText = ""
         dryclean_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        dryclean_new3.Size = New Size(90, 23)
+        dryclean_new3.Size = New Size(77, 17)
         dryclean_new3.TabIndex = 15
         ' 
         ' Label47
@@ -395,9 +401,9 @@ Partial Class PriceSettingsControl
         Label47.AutoSize = True
         Label47.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label47.Location = New Point(122, 6)
+        Label47.Location = New Point(106, 3)
         Label47.Name = "Label47"
-        Label47.Size = New Size(32, 23)
+        Label47.Size = New Size(27, 19)
         Label47.TabIndex = 13
         Label47.Text = "/kg"
         Label47.TextAlign = ContentAlignment.MiddleLeft
@@ -407,16 +413,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel25.ColumnCount = 3
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel25.Controls.Add(Label48, 0, 0)
         TableLayoutPanel25.Controls.Add(dryclean_new2, 1, 0)
         TableLayoutPanel25.Controls.Add(Label49, 2, 0)
-        TableLayoutPanel25.Location = New Point(3, 121)
+        TableLayoutPanel25.Location = New Point(3, 93)
+        TableLayoutPanel25.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel25.Name = "TableLayoutPanel25"
         TableLayoutPanel25.RowCount = 1
         TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel25.Size = New Size(158, 35)
+        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel25.Size = New Size(138, 26)
         TableLayoutPanel25.TabIndex = 13
         ' 
         ' Label48
@@ -425,9 +432,9 @@ Partial Class PriceSettingsControl
         Label48.AutoSize = True
         Label48.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label48.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label48.Location = New Point(3, 6)
+        Label48.Location = New Point(3, 3)
         Label48.Name = "Label48"
-        Label48.Size = New Size(17, 23)
+        Label48.Size = New Size(14, 19)
         Label48.TabIndex = 14
         Label48.Text = "₱ "
         Label48.TextAlign = ContentAlignment.MiddleLeft
@@ -445,13 +452,13 @@ Partial Class PriceSettingsControl
         dryclean_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         dryclean_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dryclean_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new2.Location = New Point(26, 6)
-        dryclean_new2.Margin = New Padding(3, 6, 3, 6)
+        dryclean_new2.Location = New Point(23, 4)
+        dryclean_new2.Margin = New Padding(3, 4, 3, 4)
         dryclean_new2.Name = "dryclean_new2"
         dryclean_new2.PlaceholderText = ""
         dryclean_new2.SelectedText = ""
         dryclean_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        dryclean_new2.Size = New Size(90, 23)
+        dryclean_new2.Size = New Size(77, 17)
         dryclean_new2.TabIndex = 15
         ' 
         ' Label49
@@ -460,9 +467,9 @@ Partial Class PriceSettingsControl
         Label49.AutoSize = True
         Label49.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label49.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label49.Location = New Point(122, 6)
+        Label49.Location = New Point(106, 3)
         Label49.Name = "Label49"
-        Label49.Size = New Size(32, 23)
+        Label49.Size = New Size(27, 19)
         Label49.TabIndex = 13
         Label49.Text = "/kg"
         Label49.TextAlign = ContentAlignment.MiddleLeft
@@ -473,9 +480,9 @@ Partial Class PriceSettingsControl
         Label50.AutoSize = True
         Label50.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label50.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label50.Location = New Point(3, 95)
+        Label50.Location = New Point(3, 72)
         Label50.Name = "Label50"
-        Label50.Size = New Size(71, 23)
+        Label50.Size = New Size(61, 19)
         Label50.TabIndex = 13
         Label50.Text = "DRY ONLY"
         Label50.TextAlign = ContentAlignment.MiddleLeft
@@ -488,7 +495,7 @@ Partial Class PriceSettingsControl
         Label51.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label51.Location = New Point(3, 0)
         Label51.Name = "Label51"
-        Label51.Size = New Size(85, 23)
+        Label51.Size = New Size(72, 19)
         Label51.TabIndex = 11
         Label51.Text = "WASH ONLY"
         Label51.TextAlign = ContentAlignment.MiddleLeft
@@ -498,16 +505,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel26.ColumnCount = 3
         TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel26.Controls.Add(Label52, 0, 0)
         TableLayoutPanel26.Controls.Add(dryclean_new1, 1, 0)
         TableLayoutPanel26.Controls.Add(Label53, 2, 0)
-        TableLayoutPanel26.Location = New Point(3, 26)
+        TableLayoutPanel26.Location = New Point(3, 21)
+        TableLayoutPanel26.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel26.Name = "TableLayoutPanel26"
         TableLayoutPanel26.RowCount = 1
         TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel26.Size = New Size(158, 36)
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel26.Size = New Size(138, 27)
         TableLayoutPanel26.TabIndex = 11
         ' 
         ' Label52
@@ -516,9 +524,9 @@ Partial Class PriceSettingsControl
         Label52.AutoSize = True
         Label52.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label52.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label52.Location = New Point(3, 6)
+        Label52.Location = New Point(3, 4)
         Label52.Name = "Label52"
-        Label52.Size = New Size(17, 23)
+        Label52.Size = New Size(14, 19)
         Label52.TabIndex = 14
         Label52.Text = "₱ "
         Label52.TextAlign = ContentAlignment.MiddleLeft
@@ -537,13 +545,13 @@ Partial Class PriceSettingsControl
         dryclean_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         dryclean_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dryclean_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_new1.Location = New Point(26, 6)
-        dryclean_new1.Margin = New Padding(3, 6, 3, 6)
+        dryclean_new1.Location = New Point(23, 4)
+        dryclean_new1.Margin = New Padding(3, 4, 3, 4)
         dryclean_new1.Name = "dryclean_new1"
         dryclean_new1.PlaceholderText = ""
         dryclean_new1.SelectedText = ""
         dryclean_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        dryclean_new1.Size = New Size(90, 24)
+        dryclean_new1.Size = New Size(77, 18)
         dryclean_new1.TabIndex = 15
         ' 
         ' Label53
@@ -552,9 +560,9 @@ Partial Class PriceSettingsControl
         Label53.AutoSize = True
         Label53.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label53.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label53.Location = New Point(122, 6)
+        Label53.Location = New Point(106, 4)
         Label53.Name = "Label53"
-        Label53.Size = New Size(32, 23)
+        Label53.Size = New Size(27, 19)
         Label53.TabIndex = 13
         Label53.Text = "/kg"
         Label53.TextAlign = ContentAlignment.MiddleLeft
@@ -566,11 +574,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel27.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel27.Controls.Add(dryclean_current3, 1, 0)
         TableLayoutPanel27.Controls.Add(Label55, 0, 0)
-        TableLayoutPanel27.Location = New Point(3, 259)
+        TableLayoutPanel27.Location = New Point(3, 195)
+        TableLayoutPanel27.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel27.Name = "TableLayoutPanel27"
         TableLayoutPanel27.RowCount = 1
         TableLayoutPanel27.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel27.Size = New Size(158, 24)
+        TableLayoutPanel27.Size = New Size(138, 18)
         TableLayoutPanel27.TabIndex = 16
         ' 
         ' dryclean_current3
@@ -579,9 +588,9 @@ Partial Class PriceSettingsControl
         dryclean_current3.AutoSize = True
         dryclean_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dryclean_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_current3.Location = New Point(111, 0)
+        dryclean_current3.Location = New Point(97, 0)
         dryclean_current3.Name = "dryclean_current3"
-        dryclean_current3.Size = New Size(39, 23)
+        dryclean_current3.Size = New Size(33, 18)
         dryclean_current3.TabIndex = 14
         dryclean_current3.Text = "₱ 30"
         dryclean_current3.TextAlign = ContentAlignment.MiddleLeft
@@ -594,7 +603,7 @@ Partial Class PriceSettingsControl
         Label55.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label55.Location = New Point(3, 0)
         Label55.Name = "Label55"
-        Label55.Size = New Size(100, 24)
+        Label55.Size = New Size(85, 18)
         Label55.TabIndex = 14
         Label55.Text = "Current Price: ₱ "
         Label55.TextAlign = ContentAlignment.MiddleLeft
@@ -605,9 +614,9 @@ Partial Class PriceSettingsControl
         Label56.AutoSize = True
         Label56.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label56.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label56.Location = New Point(3, 190)
+        Label56.Location = New Point(3, 144)
         Label56.Name = "Label56"
-        Label56.Size = New Size(89, 22)
+        Label56.Size = New Size(76, 16)
         Label56.TabIndex = 15
         Label56.Text = "WASH + DRY"
         Label56.TextAlign = ContentAlignment.MiddleLeft
@@ -620,10 +629,11 @@ Partial Class PriceSettingsControl
         Guna2CustomGradientPanel3.BorderThickness = 2
         Guna2CustomGradientPanel3.Controls.Add(TableLayoutPanel28)
         Guna2CustomGradientPanel3.CustomizableEdges = CustomizableEdges11
-        Guna2CustomGradientPanel3.Location = New Point(393, 169)
+        Guna2CustomGradientPanel3.Location = New Point(344, 127)
+        Guna2CustomGradientPanel3.Margin = New Padding(3, 2, 3, 2)
         Guna2CustomGradientPanel3.Name = "Guna2CustomGradientPanel3"
         Guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2CustomGradientPanel3.Size = New Size(185, 305)
+        Guna2CustomGradientPanel3.Size = New Size(162, 229)
         Guna2CustomGradientPanel3.TabIndex = 23
         ' 
         ' TableLayoutPanel28
@@ -634,7 +644,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel28.Controls.Add(TableLayoutPanel29, 0, 2)
         TableLayoutPanel28.Controls.Add(Label66, 0, 0)
         TableLayoutPanel28.Controls.Add(TableLayoutPanel33, 0, 1)
-        TableLayoutPanel28.Location = New Point(7, 14)
+        TableLayoutPanel28.Location = New Point(6, 10)
+        TableLayoutPanel28.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel28.Name = "TableLayoutPanel28"
         TableLayoutPanel28.RowCount = 12
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
@@ -645,11 +656,11 @@ Partial Class PriceSettingsControl
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 31F))
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 44F))
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 8F))
-        TableLayoutPanel28.Size = New Size(164, 294)
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel28.Size = New Size(144, 220)
         TableLayoutPanel28.TabIndex = 18
         ' 
         ' TableLayoutPanel29
@@ -659,11 +670,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel29.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel29.Controls.Add(fullservice_current2, 1, 0)
         TableLayoutPanel29.Controls.Add(Label58, 0, 0)
-        TableLayoutPanel29.Location = New Point(3, 68)
+        TableLayoutPanel29.Location = New Point(3, 52)
+        TableLayoutPanel29.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel29.Name = "TableLayoutPanel29"
         TableLayoutPanel29.RowCount = 1
         TableLayoutPanel29.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel29.Size = New Size(158, 24)
+        TableLayoutPanel29.Size = New Size(138, 18)
         TableLayoutPanel29.TabIndex = 12
         ' 
         ' fullservice_current2
@@ -672,9 +684,9 @@ Partial Class PriceSettingsControl
         fullservice_current2.AutoSize = True
         fullservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         fullservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        fullservice_current2.Location = New Point(111, 0)
+        fullservice_current2.Location = New Point(97, 0)
         fullservice_current2.Name = "fullservice_current2"
-        fullservice_current2.Size = New Size(39, 23)
+        fullservice_current2.Size = New Size(34, 18)
         fullservice_current2.TabIndex = 14
         fullservice_current2.Text = "₱ 40"
         fullservice_current2.TextAlign = ContentAlignment.MiddleLeft
@@ -687,7 +699,7 @@ Partial Class PriceSettingsControl
         Label58.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label58.Location = New Point(3, 0)
         Label58.Name = "Label58"
-        Label58.Size = New Size(100, 24)
+        Label58.Size = New Size(85, 18)
         Label58.TabIndex = 14
         Label58.Text = "Current Price: ₱ "
         Label58.TextAlign = ContentAlignment.MiddleLeft
@@ -700,9 +712,9 @@ Partial Class PriceSettingsControl
         Label66.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label66.Location = New Point(3, 0)
         Label66.Name = "Label66"
-        Label66.Size = New Size(85, 23)
+        Label66.Size = New Size(85, 19)
         Label66.TabIndex = 11
-        Label66.Text = "WASH ONLY"
+        Label66.Text = "FULL PACKAGE"
         Label66.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel33
@@ -710,16 +722,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel33.ColumnCount = 3
         TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel33.Controls.Add(Label67, 0, 0)
         TableLayoutPanel33.Controls.Add(fullservice_new2, 1, 0)
         TableLayoutPanel33.Controls.Add(Label68, 2, 0)
-        TableLayoutPanel33.Location = New Point(3, 26)
+        TableLayoutPanel33.Location = New Point(3, 21)
+        TableLayoutPanel33.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel33.Name = "TableLayoutPanel33"
         TableLayoutPanel33.RowCount = 1
         TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel33.Size = New Size(158, 36)
+        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel33.Size = New Size(138, 27)
         TableLayoutPanel33.TabIndex = 11
         ' 
         ' Label67
@@ -728,9 +741,9 @@ Partial Class PriceSettingsControl
         Label67.AutoSize = True
         Label67.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label67.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label67.Location = New Point(3, 6)
+        Label67.Location = New Point(3, 4)
         Label67.Name = "Label67"
-        Label67.Size = New Size(17, 23)
+        Label67.Size = New Size(14, 19)
         Label67.TabIndex = 14
         Label67.Text = "₱ "
         Label67.TextAlign = ContentAlignment.MiddleLeft
@@ -748,13 +761,13 @@ Partial Class PriceSettingsControl
         fullservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         fullservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         fullservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        fullservice_new2.Location = New Point(26, 6)
-        fullservice_new2.Margin = New Padding(3, 6, 3, 6)
+        fullservice_new2.Location = New Point(23, 4)
+        fullservice_new2.Margin = New Padding(3, 4, 3, 4)
         fullservice_new2.Name = "fullservice_new2"
         fullservice_new2.PlaceholderText = ""
         fullservice_new2.SelectedText = ""
         fullservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        fullservice_new2.Size = New Size(90, 24)
+        fullservice_new2.Size = New Size(77, 18)
         fullservice_new2.TabIndex = 15
         ' 
         ' Label68
@@ -763,9 +776,9 @@ Partial Class PriceSettingsControl
         Label68.AutoSize = True
         Label68.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label68.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label68.Location = New Point(122, 6)
+        Label68.Location = New Point(106, 4)
         Label68.Name = "Label68"
-        Label68.Size = New Size(32, 23)
+        Label68.Size = New Size(27, 19)
         Label68.TabIndex = 13
         Label68.Text = "/kg"
         Label68.TextAlign = ContentAlignment.MiddleLeft
@@ -778,10 +791,11 @@ Partial Class PriceSettingsControl
         Guna2CustomGradientPanel2.BorderThickness = 2
         Guna2CustomGradientPanel2.Controls.Add(TableLayoutPanel3)
         Guna2CustomGradientPanel2.CustomizableEdges = CustomizableEdges19
-        Guna2CustomGradientPanel2.Location = New Point(200, 169)
+        Guna2CustomGradientPanel2.Location = New Point(175, 127)
+        Guna2CustomGradientPanel2.Margin = New Padding(3, 2, 3, 2)
         Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
         Guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        Guna2CustomGradientPanel2.Size = New Size(185, 305)
+        Guna2CustomGradientPanel2.Size = New Size(162, 229)
         Guna2CustomGradientPanel2.TabIndex = 22
         ' 
         ' TableLayoutPanel3
@@ -798,7 +812,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel3.Controls.Add(TableLayoutPanel14, 0, 1)
         TableLayoutPanel3.Controls.Add(TableLayoutPanel15, 0, 11)
         TableLayoutPanel3.Controls.Add(Label31, 0, 9)
-        TableLayoutPanel3.Location = New Point(7, 14)
+        TableLayoutPanel3.Location = New Point(6, 10)
+        TableLayoutPanel3.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 12
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
@@ -809,11 +824,11 @@ Partial Class PriceSettingsControl
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 31F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 44F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 8F))
-        TableLayoutPanel3.Size = New Size(164, 294)
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel3.Size = New Size(144, 220)
         TableLayoutPanel3.TabIndex = 18
         ' 
         ' TableLayoutPanel7
@@ -823,11 +838,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel7.Controls.Add(basicservice_current1, 1, 0)
         TableLayoutPanel7.Controls.Add(Label7, 0, 0)
-        TableLayoutPanel7.Location = New Point(3, 68)
+        TableLayoutPanel7.Location = New Point(3, 52)
+        TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel7.Size = New Size(158, 24)
+        TableLayoutPanel7.Size = New Size(138, 18)
         TableLayoutPanel7.TabIndex = 12
         ' 
         ' basicservice_current1
@@ -836,9 +852,9 @@ Partial Class PriceSettingsControl
         basicservice_current1.AutoSize = True
         basicservice_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         basicservice_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_current1.Location = New Point(111, 0)
+        basicservice_current1.Location = New Point(97, 0)
         basicservice_current1.Name = "basicservice_current1"
-        basicservice_current1.Size = New Size(39, 23)
+        basicservice_current1.Size = New Size(34, 18)
         basicservice_current1.TabIndex = 14
         basicservice_current1.Text = "₱ 40"
         basicservice_current1.TextAlign = ContentAlignment.MiddleLeft
@@ -851,7 +867,7 @@ Partial Class PriceSettingsControl
         Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(100, 24)
+        Label7.Size = New Size(85, 18)
         Label7.TabIndex = 14
         Label7.Text = "Current Price: ₱ "
         Label7.TextAlign = ContentAlignment.MiddleLeft
@@ -863,11 +879,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel10.Controls.Add(basicservice_current2, 1, 0)
         TableLayoutPanel10.Controls.Add(Label18, 0, 0)
-        TableLayoutPanel10.Location = New Point(3, 162)
+        TableLayoutPanel10.Location = New Point(3, 123)
+        TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
         TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel10.Size = New Size(158, 24)
+        TableLayoutPanel10.Size = New Size(138, 18)
         TableLayoutPanel10.TabIndex = 16
         ' 
         ' basicservice_current2
@@ -876,9 +893,9 @@ Partial Class PriceSettingsControl
         basicservice_current2.AutoSize = True
         basicservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         basicservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_current2.Location = New Point(111, 0)
+        basicservice_current2.Location = New Point(97, 0)
         basicservice_current2.Name = "basicservice_current2"
-        basicservice_current2.Size = New Size(39, 23)
+        basicservice_current2.Size = New Size(33, 18)
         basicservice_current2.TabIndex = 14
         basicservice_current2.Text = "₱ 30"
         basicservice_current2.TextAlign = ContentAlignment.MiddleLeft
@@ -891,7 +908,7 @@ Partial Class PriceSettingsControl
         Label18.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label18.Location = New Point(3, 0)
         Label18.Name = "Label18"
-        Label18.Size = New Size(100, 24)
+        Label18.Size = New Size(85, 18)
         Label18.TabIndex = 14
         Label18.Text = "Current Price: ₱ "
         Label18.TextAlign = ContentAlignment.MiddleLeft
@@ -901,16 +918,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel12.ColumnCount = 3
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel12.Controls.Add(Label19, 0, 0)
         TableLayoutPanel12.Controls.Add(basicservice_new3, 1, 0)
         TableLayoutPanel12.Controls.Add(Label20, 2, 0)
-        TableLayoutPanel12.Location = New Point(3, 215)
+        TableLayoutPanel12.Location = New Point(3, 162)
+        TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
         TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel12.Size = New Size(158, 35)
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel12.Size = New Size(138, 26)
         TableLayoutPanel12.TabIndex = 14
         ' 
         ' Label19
@@ -919,9 +937,9 @@ Partial Class PriceSettingsControl
         Label19.AutoSize = True
         Label19.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label19.Location = New Point(3, 6)
+        Label19.Location = New Point(3, 3)
         Label19.Name = "Label19"
-        Label19.Size = New Size(17, 23)
+        Label19.Size = New Size(14, 19)
         Label19.TabIndex = 14
         Label19.Text = "₱ "
         Label19.TextAlign = ContentAlignment.MiddleLeft
@@ -939,13 +957,13 @@ Partial Class PriceSettingsControl
         basicservice_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         basicservice_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         basicservice_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new3.Location = New Point(26, 6)
-        basicservice_new3.Margin = New Padding(3, 6, 3, 6)
+        basicservice_new3.Location = New Point(23, 4)
+        basicservice_new3.Margin = New Padding(3, 4, 3, 4)
         basicservice_new3.Name = "basicservice_new3"
         basicservice_new3.PlaceholderText = ""
         basicservice_new3.SelectedText = ""
         basicservice_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        basicservice_new3.Size = New Size(90, 23)
+        basicservice_new3.Size = New Size(77, 17)
         basicservice_new3.TabIndex = 15
         ' 
         ' Label20
@@ -954,9 +972,9 @@ Partial Class PriceSettingsControl
         Label20.AutoSize = True
         Label20.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label20.Location = New Point(122, 6)
+        Label20.Location = New Point(106, 3)
         Label20.Name = "Label20"
-        Label20.Size = New Size(32, 23)
+        Label20.Size = New Size(27, 19)
         Label20.TabIndex = 13
         Label20.Text = "/kg"
         Label20.TextAlign = ContentAlignment.MiddleLeft
@@ -966,16 +984,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel13.ColumnCount = 3
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel13.Controls.Add(Label21, 0, 0)
         TableLayoutPanel13.Controls.Add(basicservice_new2, 1, 0)
         TableLayoutPanel13.Controls.Add(Label24, 2, 0)
-        TableLayoutPanel13.Location = New Point(3, 121)
+        TableLayoutPanel13.Location = New Point(3, 93)
+        TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 1
         TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel13.Size = New Size(158, 35)
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel13.Size = New Size(138, 26)
         TableLayoutPanel13.TabIndex = 13
         ' 
         ' Label21
@@ -984,9 +1003,9 @@ Partial Class PriceSettingsControl
         Label21.AutoSize = True
         Label21.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label21.Location = New Point(3, 6)
+        Label21.Location = New Point(3, 3)
         Label21.Name = "Label21"
-        Label21.Size = New Size(17, 23)
+        Label21.Size = New Size(14, 19)
         Label21.TabIndex = 14
         Label21.Text = "₱ "
         Label21.TextAlign = ContentAlignment.MiddleLeft
@@ -1004,13 +1023,13 @@ Partial Class PriceSettingsControl
         basicservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         basicservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         basicservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new2.Location = New Point(26, 6)
-        basicservice_new2.Margin = New Padding(3, 6, 3, 6)
+        basicservice_new2.Location = New Point(23, 4)
+        basicservice_new2.Margin = New Padding(3, 4, 3, 4)
         basicservice_new2.Name = "basicservice_new2"
         basicservice_new2.PlaceholderText = ""
         basicservice_new2.SelectedText = ""
         basicservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        basicservice_new2.Size = New Size(90, 23)
+        basicservice_new2.Size = New Size(77, 17)
         basicservice_new2.TabIndex = 15
         ' 
         ' Label24
@@ -1019,9 +1038,9 @@ Partial Class PriceSettingsControl
         Label24.AutoSize = True
         Label24.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label24.Location = New Point(122, 6)
+        Label24.Location = New Point(106, 3)
         Label24.Name = "Label24"
-        Label24.Size = New Size(32, 23)
+        Label24.Size = New Size(27, 19)
         Label24.TabIndex = 13
         Label24.Text = "/kg"
         Label24.TextAlign = ContentAlignment.MiddleLeft
@@ -1032,9 +1051,9 @@ Partial Class PriceSettingsControl
         Label25.AutoSize = True
         Label25.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label25.Location = New Point(3, 95)
+        Label25.Location = New Point(3, 72)
         Label25.Name = "Label25"
-        Label25.Size = New Size(71, 23)
+        Label25.Size = New Size(61, 19)
         Label25.TabIndex = 13
         Label25.Text = "DRY ONLY"
         Label25.TextAlign = ContentAlignment.MiddleLeft
@@ -1047,7 +1066,7 @@ Partial Class PriceSettingsControl
         Label26.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label26.Location = New Point(3, 0)
         Label26.Name = "Label26"
-        Label26.Size = New Size(85, 23)
+        Label26.Size = New Size(72, 19)
         Label26.TabIndex = 11
         Label26.Text = "WASH ONLY"
         Label26.TextAlign = ContentAlignment.MiddleLeft
@@ -1057,16 +1076,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel14.ColumnCount = 3
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel14.Controls.Add(Label27, 0, 0)
         TableLayoutPanel14.Controls.Add(basicservice_new1, 1, 0)
         TableLayoutPanel14.Controls.Add(Label28, 2, 0)
-        TableLayoutPanel14.Location = New Point(3, 26)
+        TableLayoutPanel14.Location = New Point(3, 21)
+        TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 1
         TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel14.Size = New Size(158, 36)
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel14.Size = New Size(138, 27)
         TableLayoutPanel14.TabIndex = 11
         ' 
         ' Label27
@@ -1075,9 +1095,9 @@ Partial Class PriceSettingsControl
         Label27.AutoSize = True
         Label27.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label27.Location = New Point(3, 6)
+        Label27.Location = New Point(3, 4)
         Label27.Name = "Label27"
-        Label27.Size = New Size(17, 23)
+        Label27.Size = New Size(14, 19)
         Label27.TabIndex = 14
         Label27.Text = "₱ "
         Label27.TextAlign = ContentAlignment.MiddleLeft
@@ -1095,13 +1115,13 @@ Partial Class PriceSettingsControl
         basicservice_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         basicservice_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         basicservice_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_new1.Location = New Point(26, 6)
-        basicservice_new1.Margin = New Padding(3, 6, 3, 6)
+        basicservice_new1.Location = New Point(23, 4)
+        basicservice_new1.Margin = New Padding(3, 4, 3, 4)
         basicservice_new1.Name = "basicservice_new1"
         basicservice_new1.PlaceholderText = ""
         basicservice_new1.SelectedText = ""
         basicservice_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        basicservice_new1.Size = New Size(90, 24)
+        basicservice_new1.Size = New Size(77, 18)
         basicservice_new1.TabIndex = 15
         ' 
         ' Label28
@@ -1110,9 +1130,9 @@ Partial Class PriceSettingsControl
         Label28.AutoSize = True
         Label28.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label28.Location = New Point(122, 6)
+        Label28.Location = New Point(106, 4)
         Label28.Name = "Label28"
-        Label28.Size = New Size(32, 23)
+        Label28.Size = New Size(27, 19)
         Label28.TabIndex = 13
         Label28.Text = "/kg"
         Label28.TextAlign = ContentAlignment.MiddleLeft
@@ -1124,11 +1144,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel15.Controls.Add(basicservice_current3, 1, 0)
         TableLayoutPanel15.Controls.Add(Label30, 0, 0)
-        TableLayoutPanel15.Location = New Point(3, 259)
+        TableLayoutPanel15.Location = New Point(3, 195)
+        TableLayoutPanel15.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 1
         TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel15.Size = New Size(158, 24)
+        TableLayoutPanel15.Size = New Size(138, 18)
         TableLayoutPanel15.TabIndex = 16
         ' 
         ' basicservice_current3
@@ -1137,9 +1158,9 @@ Partial Class PriceSettingsControl
         basicservice_current3.AutoSize = True
         basicservice_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         basicservice_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_current3.Location = New Point(111, 0)
+        basicservice_current3.Location = New Point(97, 0)
         basicservice_current3.Name = "basicservice_current3"
-        basicservice_current3.Size = New Size(39, 23)
+        basicservice_current3.Size = New Size(33, 18)
         basicservice_current3.TabIndex = 14
         basicservice_current3.Text = "₱ 30"
         basicservice_current3.TextAlign = ContentAlignment.MiddleLeft
@@ -1152,7 +1173,7 @@ Partial Class PriceSettingsControl
         Label30.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label30.Location = New Point(3, 0)
         Label30.Name = "Label30"
-        Label30.Size = New Size(100, 24)
+        Label30.Size = New Size(85, 18)
         Label30.TabIndex = 14
         Label30.Text = "Current Price: ₱ "
         Label30.TextAlign = ContentAlignment.MiddleLeft
@@ -1163,9 +1184,9 @@ Partial Class PriceSettingsControl
         Label31.AutoSize = True
         Label31.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label31.Location = New Point(3, 190)
+        Label31.Location = New Point(3, 144)
         Label31.Name = "Label31"
-        Label31.Size = New Size(89, 22)
+        Label31.Size = New Size(76, 16)
         Label31.TabIndex = 15
         Label31.Text = "WASH + DRY"
         Label31.TextAlign = ContentAlignment.MiddleLeft
@@ -1178,10 +1199,11 @@ Partial Class PriceSettingsControl
         Guna2CustomGradientPanel1.BorderThickness = 2
         Guna2CustomGradientPanel1.Controls.Add(TableLayoutPanel2)
         Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges27
-        Guna2CustomGradientPanel1.Location = New Point(9, 169)
+        Guna2CustomGradientPanel1.Location = New Point(8, 127)
+        Guna2CustomGradientPanel1.Margin = New Padding(3, 2, 3, 2)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges28
-        Guna2CustomGradientPanel1.Size = New Size(185, 305)
+        Guna2CustomGradientPanel1.Size = New Size(162, 229)
         Guna2CustomGradientPanel1.TabIndex = 21
         ' 
         ' TableLayoutPanel2
@@ -1198,7 +1220,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel2.Controls.Add(TableLayoutPanel20, 0, 1)
         TableLayoutPanel2.Controls.Add(TableLayoutPanel11, 0, 11)
         TableLayoutPanel2.Controls.Add(Label11, 0, 9)
-        TableLayoutPanel2.Location = New Point(7, 14)
+        TableLayoutPanel2.Location = New Point(6, 10)
+        TableLayoutPanel2.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 12
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
@@ -1209,11 +1232,11 @@ Partial Class PriceSettingsControl
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 31F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 22F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 44F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 8F))
-        TableLayoutPanel2.Size = New Size(164, 294)
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel2.Size = New Size(144, 220)
         TableLayoutPanel2.TabIndex = 18
         ' 
         ' TableLayoutPanel5
@@ -1223,11 +1246,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel5.Controls.Add(selfservice_current1, 1, 0)
         TableLayoutPanel5.Controls.Add(Label13, 0, 0)
-        TableLayoutPanel5.Location = New Point(3, 68)
+        TableLayoutPanel5.Location = New Point(3, 52)
+        TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 1
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.Size = New Size(158, 24)
+        TableLayoutPanel5.Size = New Size(138, 18)
         TableLayoutPanel5.TabIndex = 12
         ' 
         ' selfservice_current1
@@ -1236,9 +1260,9 @@ Partial Class PriceSettingsControl
         selfservice_current1.AutoSize = True
         selfservice_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         selfservice_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_current1.Location = New Point(111, 0)
+        selfservice_current1.Location = New Point(97, 0)
         selfservice_current1.Name = "selfservice_current1"
-        selfservice_current1.Size = New Size(39, 23)
+        selfservice_current1.Size = New Size(34, 18)
         selfservice_current1.TabIndex = 14
         selfservice_current1.Text = "₱ 40"
         selfservice_current1.TextAlign = ContentAlignment.MiddleLeft
@@ -1251,7 +1275,7 @@ Partial Class PriceSettingsControl
         Label13.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label13.Location = New Point(3, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(100, 24)
+        Label13.Size = New Size(85, 18)
         Label13.TabIndex = 14
         Label13.Text = "Current Price: ₱ "
         Label13.TextAlign = ContentAlignment.MiddleLeft
@@ -1263,11 +1287,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel4.Controls.Add(selfservice_current2, 1, 0)
         TableLayoutPanel4.Controls.Add(Label10, 0, 0)
-        TableLayoutPanel4.Location = New Point(3, 162)
+        TableLayoutPanel4.Location = New Point(3, 123)
+        TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Size = New Size(158, 24)
+        TableLayoutPanel4.Size = New Size(138, 18)
         TableLayoutPanel4.TabIndex = 16
         ' 
         ' selfservice_current2
@@ -1276,9 +1301,9 @@ Partial Class PriceSettingsControl
         selfservice_current2.AutoSize = True
         selfservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         selfservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_current2.Location = New Point(111, 0)
+        selfservice_current2.Location = New Point(97, 0)
         selfservice_current2.Name = "selfservice_current2"
-        selfservice_current2.Size = New Size(39, 23)
+        selfservice_current2.Size = New Size(33, 18)
         selfservice_current2.TabIndex = 14
         selfservice_current2.Text = "₱ 30"
         selfservice_current2.TextAlign = ContentAlignment.MiddleLeft
@@ -1291,7 +1316,7 @@ Partial Class PriceSettingsControl
         Label10.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label10.Location = New Point(3, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(100, 24)
+        Label10.Size = New Size(85, 18)
         Label10.TabIndex = 14
         Label10.Text = "Current Price: ₱ "
         Label10.TextAlign = ContentAlignment.MiddleLeft
@@ -1301,16 +1326,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel6.ColumnCount = 3
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel6.Controls.Add(Label15, 0, 0)
         TableLayoutPanel6.Controls.Add(selfservice_new3, 1, 0)
         TableLayoutPanel6.Controls.Add(Label16, 2, 0)
-        TableLayoutPanel6.Location = New Point(3, 215)
+        TableLayoutPanel6.Location = New Point(3, 162)
+        TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 1
         TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel6.Size = New Size(158, 35)
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel6.Size = New Size(138, 26)
         TableLayoutPanel6.TabIndex = 14
         ' 
         ' Label15
@@ -1319,9 +1345,9 @@ Partial Class PriceSettingsControl
         Label15.AutoSize = True
         Label15.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label15.Location = New Point(3, 6)
+        Label15.Location = New Point(3, 3)
         Label15.Name = "Label15"
-        Label15.Size = New Size(17, 23)
+        Label15.Size = New Size(14, 19)
         Label15.TabIndex = 14
         Label15.Text = "₱ "
         Label15.TextAlign = ContentAlignment.MiddleLeft
@@ -1339,13 +1365,13 @@ Partial Class PriceSettingsControl
         selfservice_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         selfservice_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         selfservice_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new3.Location = New Point(26, 6)
-        selfservice_new3.Margin = New Padding(3, 6, 3, 6)
+        selfservice_new3.Location = New Point(23, 4)
+        selfservice_new3.Margin = New Padding(3, 4, 3, 4)
         selfservice_new3.Name = "selfservice_new3"
         selfservice_new3.PlaceholderText = ""
         selfservice_new3.SelectedText = ""
         selfservice_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        selfservice_new3.Size = New Size(90, 23)
+        selfservice_new3.Size = New Size(77, 17)
         selfservice_new3.TabIndex = 15
         ' 
         ' Label16
@@ -1354,9 +1380,9 @@ Partial Class PriceSettingsControl
         Label16.AutoSize = True
         Label16.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label16.Location = New Point(122, 6)
+        Label16.Location = New Point(106, 3)
         Label16.Name = "Label16"
-        Label16.Size = New Size(32, 23)
+        Label16.Size = New Size(27, 19)
         Label16.TabIndex = 13
         Label16.Text = "/kg"
         Label16.TextAlign = ContentAlignment.MiddleLeft
@@ -1366,16 +1392,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel17.ColumnCount = 3
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel17.Controls.Add(Label14, 0, 0)
         TableLayoutPanel17.Controls.Add(selfservice_new2, 1, 0)
         TableLayoutPanel17.Controls.Add(Label33, 2, 0)
-        TableLayoutPanel17.Location = New Point(3, 121)
+        TableLayoutPanel17.Location = New Point(3, 93)
+        TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
         TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel17.Size = New Size(158, 35)
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel17.Size = New Size(138, 26)
         TableLayoutPanel17.TabIndex = 13
         ' 
         ' Label14
@@ -1384,9 +1411,9 @@ Partial Class PriceSettingsControl
         Label14.AutoSize = True
         Label14.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label14.Location = New Point(3, 6)
+        Label14.Location = New Point(3, 3)
         Label14.Name = "Label14"
-        Label14.Size = New Size(17, 23)
+        Label14.Size = New Size(14, 19)
         Label14.TabIndex = 14
         Label14.Text = "₱ "
         Label14.TextAlign = ContentAlignment.MiddleLeft
@@ -1404,13 +1431,13 @@ Partial Class PriceSettingsControl
         selfservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         selfservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         selfservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new2.Location = New Point(26, 6)
-        selfservice_new2.Margin = New Padding(3, 6, 3, 6)
+        selfservice_new2.Location = New Point(23, 4)
+        selfservice_new2.Margin = New Padding(3, 4, 3, 4)
         selfservice_new2.Name = "selfservice_new2"
         selfservice_new2.PlaceholderText = ""
         selfservice_new2.SelectedText = ""
         selfservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        selfservice_new2.Size = New Size(90, 23)
+        selfservice_new2.Size = New Size(77, 17)
         selfservice_new2.TabIndex = 15
         ' 
         ' Label33
@@ -1419,9 +1446,9 @@ Partial Class PriceSettingsControl
         Label33.AutoSize = True
         Label33.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label33.Location = New Point(122, 6)
+        Label33.Location = New Point(106, 3)
         Label33.Name = "Label33"
-        Label33.Size = New Size(32, 23)
+        Label33.Size = New Size(27, 19)
         Label33.TabIndex = 13
         Label33.Text = "/kg"
         Label33.TextAlign = ContentAlignment.MiddleLeft
@@ -1432,9 +1459,9 @@ Partial Class PriceSettingsControl
         Label34.AutoSize = True
         Label34.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label34.Location = New Point(3, 95)
+        Label34.Location = New Point(3, 72)
         Label34.Name = "Label34"
-        Label34.Size = New Size(71, 23)
+        Label34.Size = New Size(61, 19)
         Label34.TabIndex = 13
         Label34.Text = "DRY ONLY"
         Label34.TextAlign = ContentAlignment.MiddleLeft
@@ -1447,7 +1474,7 @@ Partial Class PriceSettingsControl
         Label35.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label35.Location = New Point(3, 0)
         Label35.Name = "Label35"
-        Label35.Size = New Size(85, 23)
+        Label35.Size = New Size(72, 19)
         Label35.TabIndex = 11
         Label35.Text = "WASH ONLY"
         Label35.TextAlign = ContentAlignment.MiddleLeft
@@ -1457,16 +1484,17 @@ Partial Class PriceSettingsControl
         TableLayoutPanel20.ColumnCount = 3
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 38F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
         TableLayoutPanel20.Controls.Add(Label36, 0, 0)
         TableLayoutPanel20.Controls.Add(selfservice_new1, 1, 0)
         TableLayoutPanel20.Controls.Add(Label37, 2, 0)
-        TableLayoutPanel20.Location = New Point(3, 26)
+        TableLayoutPanel20.Location = New Point(3, 21)
+        TableLayoutPanel20.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
         TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel20.Size = New Size(158, 36)
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel20.Size = New Size(138, 27)
         TableLayoutPanel20.TabIndex = 11
         ' 
         ' Label36
@@ -1475,9 +1503,9 @@ Partial Class PriceSettingsControl
         Label36.AutoSize = True
         Label36.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label36.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label36.Location = New Point(3, 6)
+        Label36.Location = New Point(3, 4)
         Label36.Name = "Label36"
-        Label36.Size = New Size(17, 23)
+        Label36.Size = New Size(14, 19)
         Label36.TabIndex = 14
         Label36.Text = "₱ "
         Label36.TextAlign = ContentAlignment.MiddleLeft
@@ -1495,13 +1523,13 @@ Partial Class PriceSettingsControl
         selfservice_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         selfservice_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         selfservice_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_new1.Location = New Point(26, 6)
-        selfservice_new1.Margin = New Padding(3, 6, 3, 6)
+        selfservice_new1.Location = New Point(23, 4)
+        selfservice_new1.Margin = New Padding(3, 4, 3, 4)
         selfservice_new1.Name = "selfservice_new1"
         selfservice_new1.PlaceholderText = ""
         selfservice_new1.SelectedText = ""
         selfservice_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        selfservice_new1.Size = New Size(90, 24)
+        selfservice_new1.Size = New Size(77, 18)
         selfservice_new1.TabIndex = 15
         ' 
         ' Label37
@@ -1510,9 +1538,9 @@ Partial Class PriceSettingsControl
         Label37.AutoSize = True
         Label37.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label37.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label37.Location = New Point(122, 6)
+        Label37.Location = New Point(106, 4)
         Label37.Name = "Label37"
-        Label37.Size = New Size(32, 23)
+        Label37.Size = New Size(27, 19)
         Label37.TabIndex = 13
         Label37.Text = "/kg"
         Label37.TextAlign = ContentAlignment.MiddleLeft
@@ -1524,11 +1552,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel11.Controls.Add(selfservice_current3, 1, 0)
         TableLayoutPanel11.Controls.Add(Label23, 0, 0)
-        TableLayoutPanel11.Location = New Point(3, 259)
+        TableLayoutPanel11.Location = New Point(3, 195)
+        TableLayoutPanel11.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel11.Size = New Size(158, 24)
+        TableLayoutPanel11.Size = New Size(138, 18)
         TableLayoutPanel11.TabIndex = 16
         ' 
         ' selfservice_current3
@@ -1537,9 +1566,9 @@ Partial Class PriceSettingsControl
         selfservice_current3.AutoSize = True
         selfservice_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         selfservice_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_current3.Location = New Point(111, 0)
+        selfservice_current3.Location = New Point(97, 0)
         selfservice_current3.Name = "selfservice_current3"
-        selfservice_current3.Size = New Size(39, 23)
+        selfservice_current3.Size = New Size(33, 18)
         selfservice_current3.TabIndex = 14
         selfservice_current3.Text = "₱ 30"
         selfservice_current3.TextAlign = ContentAlignment.MiddleLeft
@@ -1552,7 +1581,7 @@ Partial Class PriceSettingsControl
         Label23.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label23.Location = New Point(3, 0)
         Label23.Name = "Label23"
-        Label23.Size = New Size(100, 24)
+        Label23.Size = New Size(85, 18)
         Label23.TabIndex = 14
         Label23.Text = "Current Price: ₱ "
         Label23.TextAlign = ContentAlignment.MiddleLeft
@@ -1563,9 +1592,9 @@ Partial Class PriceSettingsControl
         Label11.AutoSize = True
         Label11.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label11.Location = New Point(3, 190)
+        Label11.Location = New Point(3, 144)
         Label11.Name = "Label11"
-        Label11.Size = New Size(89, 22)
+        Label11.Size = New Size(76, 16)
         Label11.TabIndex = 15
         Label11.Text = "WASH + DRY"
         Label11.TextAlign = ContentAlignment.MiddleLeft
@@ -1583,10 +1612,11 @@ Partial Class PriceSettingsControl
         saveBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         saveBtn.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         saveBtn.ForeColor = Color.White
-        saveBtn.Location = New Point(591, 500)
+        saveBtn.Location = New Point(517, 375)
+        saveBtn.Margin = New Padding(3, 2, 3, 2)
         saveBtn.Name = "saveBtn"
         saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges30
-        saveBtn.Size = New Size(161, 35)
+        saveBtn.Size = New Size(141, 26)
         saveBtn.TabIndex = 8
         saveBtn.Text = "SAVE CHANGES"
         ' 
@@ -1596,32 +1626,33 @@ Partial Class PriceSettingsControl
         TableLayoutPanel1.ColumnCount = 8
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.6122446F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 89.38776F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 30F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 159F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 23F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 175F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 33F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 150F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 139F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 153F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 29F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 132F))
         TableLayoutPanel1.Controls.Add(Label4, 5, 0)
         TableLayoutPanel1.Controls.Add(Label3, 3, 0)
         TableLayoutPanel1.Controls.Add(Label2, 1, 0)
         TableLayoutPanel1.Controls.Add(Label5, 7, 0)
-        TableLayoutPanel1.Location = New Point(6, 127)
+        TableLayoutPanel1.Location = New Point(5, 95)
+        TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(763, 36)
+        TableLayoutPanel1.Size = New Size(668, 27)
         TableLayoutPanel1.TabIndex = 9
         ' 
         ' Label4
         ' 
         Label4.Anchor = AnchorStyles.None
         Label4.AutoSize = True
-        Label4.Font = New Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label4.Location = New Point(431, 5)
+        Label4.Location = New Point(378, 6)
         Label4.Name = "Label4"
-        Label4.Size = New Size(120, 26)
+        Label4.Size = New Size(103, 15)
         Label4.TabIndex = 12
         Label4.Text = "FULL SERVICE"
         Label4.TextAlign = ContentAlignment.MiddleLeft
@@ -1630,11 +1661,11 @@ Partial Class PriceSettingsControl
         ' 
         Label3.Anchor = AnchorStyles.None
         Label3.AutoSize = True
-        Label3.Font = New Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label3.Location = New Point(230, 5)
+        Label3.Location = New Point(205, 6)
         Label3.Name = "Label3"
-        Label3.Size = New Size(143, 26)
+        Label3.Size = New Size(117, 15)
         Label3.TabIndex = 11
         Label3.Text = "BASIC SERVICES"
         Label3.TextAlign = ContentAlignment.MiddleLeft
@@ -1643,11 +1674,11 @@ Partial Class PriceSettingsControl
         ' 
         Label2.Anchor = AnchorStyles.None
         Label2.AutoSize = True
-        Label2.Font = New Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label2.Location = New Point(43, 5)
+        Label2.Location = New Point(40, 6)
         Label2.Name = "Label2"
-        Label2.Size = New Size(125, 26)
+        Label2.Size = New Size(104, 15)
         Label2.TabIndex = 10
         Label2.Text = "SELF-SERVICE"
         Label2.TextAlign = ContentAlignment.MiddleLeft
@@ -1656,11 +1687,11 @@ Partial Class PriceSettingsControl
         ' 
         Label5.Anchor = AnchorStyles.None
         Label5.AutoSize = True
-        Label5.Font = New Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label5.Location = New Point(621, 5)
+        Label5.Location = New Point(548, 6)
         Label5.Name = "Label5"
-        Label5.Size = New Size(132, 26)
+        Label5.Size = New Size(107, 15)
         Label5.TabIndex = 13
         Label5.Text = "DRY CLEANING"
         Label5.TextAlign = ContentAlignment.MiddleLeft
@@ -1673,23 +1704,25 @@ Partial Class PriceSettingsControl
         TableLayoutPanel8.Controls.Add(Panel1, 0, 1)
         TableLayoutPanel8.Controls.Add(Label8, 0, 0)
         TableLayoutPanel8.Controls.Add(Guna2GradientPanel2, 0, 3)
-        TableLayoutPanel8.Location = New Point(3, 3)
+        TableLayoutPanel8.Location = New Point(3, 2)
+        TableLayoutPanel8.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel8.Name = "TableLayoutPanel8"
         TableLayoutPanel8.RowCount = 4
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 89.87342F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 10.1265821F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 17F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 46F))
-        TableLayoutPanel8.Size = New Size(766, 121)
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 13F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel8.Size = New Size(670, 91)
         TableLayoutPanel8.TabIndex = 3
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.DarkGray
         Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(3, 55)
+        Panel1.Location = New Point(3, 41)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(760, 1)
+        Panel1.Size = New Size(664, 1)
         Panel1.TabIndex = 6
         ' 
         ' Label8
@@ -1700,7 +1733,7 @@ Partial Class PriceSettingsControl
         Label8.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label8.Location = New Point(3, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(760, 52)
+        Label8.Size = New Size(664, 39)
         Label8.TabIndex = 3
         Label8.Text = "Change Prices"
         Label8.TextAlign = ContentAlignment.MiddleLeft
@@ -1713,10 +1746,11 @@ Partial Class PriceSettingsControl
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(184), CByte(215), CByte(255))
         Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(221), CByte(239), CByte(255))
         Guna2GradientPanel2.GradientMode = Drawing2D.LinearGradientMode.Vertical
-        Guna2GradientPanel2.Location = New Point(3, 77)
+        Guna2GradientPanel2.Location = New Point(3, 58)
+        Guna2GradientPanel2.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
         Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges32
-        Guna2GradientPanel2.Size = New Size(760, 41)
+        Guna2GradientPanel2.Size = New Size(664, 31)
         Guna2GradientPanel2.TabIndex = 9
         ' 
         ' TableLayoutPanel9
@@ -1725,11 +1759,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel9.ColumnCount = 1
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel9.Controls.Add(Label1, 0, 0)
-        TableLayoutPanel9.Location = New Point(0, 3)
+        TableLayoutPanel9.Location = New Point(0, 2)
+        TableLayoutPanel9.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
         TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel9.Size = New Size(655, 38)
+        TableLayoutPanel9.Size = New Size(573, 28)
         TableLayoutPanel9.TabIndex = 4
         ' 
         ' Label1
@@ -1741,18 +1776,19 @@ Partial Class PriceSettingsControl
         Label1.ForeColor = Color.SteelBlue
         Label1.Location = New Point(3, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(649, 38)
+        Label1.Size = New Size(567, 28)
         Label1.TabIndex = 10
         Label1.Text = "Update service prices. Changes apply immediately."
         Label1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' PriceSettingsControl
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(RightPanel)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "PriceSettingsControl"
-        Size = New Size(775, 553)
+        Size = New Size(678, 415)
         RightPanel.ResumeLayout(False)
         Guna2CustomGradientPanel4.ResumeLayout(False)
         TableLayoutPanel18.ResumeLayout(False)
