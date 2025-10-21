@@ -205,12 +205,12 @@ Public Class TransactionForm
 
 
     ' ✅ Save changes to database
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub btnSave_Click(sender As Object, e As EventArgs)
         If Mode = "Edit" Then
             Try
                 Using conn As New OleDbConnection(connStr)
-                    conn.Open()
-                    Dim sql As String = "UPDATE Transactions SET CustomerName=@name, ServiceType=@service, ContactNumber=@contact, Address=@address, Status=@status, AmountReceived=@received WHERE TransactionID=@id"
+                    conn.Open
+                    Dim sql = "UPDATE Transactions SET CustomerName=@name, ServiceType=@service, ContactNumber=@contact, Address=@address, Status=@status, AmountReceived=@received WHERE TransactionID=@id"
                     Using cmd As New OleDbCommand(sql, conn)
                         cmd.Parameters.AddWithValue("@name", tbCustomerName.Text)
                         cmd.Parameters.AddWithValue("@service", cbService.Text)
@@ -219,13 +219,13 @@ Public Class TransactionForm
                         cmd.Parameters.AddWithValue("@status", cbStatus.Text)
                         cmd.Parameters.AddWithValue("@received", tbAmountReceived.Text)
                         cmd.Parameters.AddWithValue("@id", TransactionId)
-                        cmd.ExecuteNonQuery()
+                        cmd.ExecuteNonQuery
                     End Using
                 End Using
 
                 MessageBox.Show("Transaction updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Me.DialogResult = DialogResult.OK
-                Me.Close()
+                DialogResult = DialogResult.OK
+                Close
 
             Catch ex As Exception
                 MessageBox.Show("Error updating transaction: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -234,8 +234,23 @@ Public Class TransactionForm
     End Sub
 
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
+        Close
     End Sub
 
+    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub customer_name_Click(sender As Object, e As EventArgs) Handles customer_name.Click
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
