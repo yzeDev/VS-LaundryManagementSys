@@ -157,16 +157,12 @@ Public Class MachineCard
         End Select
     End Sub
 
-    Public Sub LoadMachineDetails(machineID As Integer)
-        Dim detailsForm As New MachineDetailsForm()
-        detailsForm.TransactionId = Me.TransactionID
+    ' MachineCard.vb
+    Public Function GetActiveTransactionID() As Integer
+        ' Returns the active transaction ID or 0 if none
+        Return Me.TransactionID
+    End Function
 
-        If detailsForm.TransactionId > 0 Then
-            detailsForm.ShowDialog()
-        Else
-            MessageBox.Show("No active transaction for this machine.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-    End Sub
 
     ' 🔹 New: Assigns a pending transaction and updates DB to "In-Progress"
     Public Sub AssignPendingTransaction(transactionID As Integer)

@@ -66,7 +66,7 @@ Partial Class MachineCard
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel1.Size = New Size(400, 300)
+        TableLayoutPanel1.Size = New Size(420, 300)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' TableLayoutPanel2
@@ -81,7 +81,7 @@ Partial Class MachineCard
         TableLayoutPanel2.Controls.Add(Label1, 0, 3)
         TableLayoutPanel2.Controls.Add(lblServiceTime, 1, 3)
         TableLayoutPanel2.Dock = DockStyle.Fill
-        TableLayoutPanel2.Location = New Point(203, 33)
+        TableLayoutPanel2.Location = New Point(213, 33)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 6
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
@@ -90,17 +90,17 @@ Partial Class MachineCard
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
-        TableLayoutPanel2.Size = New Size(194, 224)
+        TableLayoutPanel2.Size = New Size(204, 224)
         TableLayoutPanel2.TabIndex = 10
         ' 
         ' lblUnit
         ' 
         TableLayoutPanel2.SetColumnSpan(lblUnit, 2)
         lblUnit.Dock = DockStyle.Fill
-        lblUnit.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUnit.Font = New Font("Poppins SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUnit.Location = New Point(3, 0)
         lblUnit.Name = "lblUnit"
-        lblUnit.Size = New Size(188, 37)
+        lblUnit.Size = New Size(198, 37)
         lblUnit.TabIndex = 0
         lblUnit.Text = "Unit"
         lblUnit.TextAlign = ContentAlignment.MiddleLeft
@@ -113,7 +113,7 @@ Partial Class MachineCard
         lblTransactionID.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTransactionID.Location = New Point(3, 37)
         lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(188, 37)
+        lblTransactionID.Size = New Size(198, 37)
         lblTransactionID.TabIndex = 8
         lblTransactionID.Text = "Transaction ID:"
         lblTransactionID.TextAlign = ContentAlignment.MiddleLeft
@@ -122,10 +122,10 @@ Partial Class MachineCard
         ' 
         lblWeightText.AutoSize = True
         lblWeightText.Dock = DockStyle.Fill
-        lblWeightText.Font = New Font("Poppins", 9F)
+        lblWeightText.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblWeightText.Location = New Point(3, 74)
         lblWeightText.Name = "lblWeightText"
-        lblWeightText.Size = New Size(91, 37)
+        lblWeightText.Size = New Size(96, 37)
         lblWeightText.TabIndex = 2
         lblWeightText.Text = "Max Weight:"
         lblWeightText.TextAlign = ContentAlignment.MiddleCenter
@@ -134,10 +134,10 @@ Partial Class MachineCard
         ' 
         lblWeightValue.AutoSize = True
         lblWeightValue.Dock = DockStyle.Fill
-        lblWeightValue.Font = New Font("Poppins", 9F)
-        lblWeightValue.Location = New Point(100, 74)
+        lblWeightValue.Font = New Font("Poppins", 11.25F)
+        lblWeightValue.Location = New Point(105, 74)
         lblWeightValue.Name = "lblWeightValue"
-        lblWeightValue.Size = New Size(91, 37)
+        lblWeightValue.Size = New Size(96, 37)
         lblWeightValue.TabIndex = 6
         lblWeightValue.Text = "Weight:"
         lblWeightValue.TextAlign = ContentAlignment.MiddleCenter
@@ -146,10 +146,10 @@ Partial Class MachineCard
         ' 
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 9F)
+        Label1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 111)
         Label1.Name = "Label1"
-        Label1.Size = New Size(91, 37)
+        Label1.Size = New Size(96, 37)
         Label1.TabIndex = 9
         Label1.Text = "Service Time:"
         Label1.TextAlign = ContentAlignment.MiddleCenter
@@ -158,10 +158,10 @@ Partial Class MachineCard
         ' 
         lblServiceTime.AutoSize = True
         lblServiceTime.Dock = DockStyle.Fill
-        lblServiceTime.Font = New Font("Poppins", 9F)
-        lblServiceTime.Location = New Point(100, 111)
+        lblServiceTime.Font = New Font("Poppins", 11.25F)
+        lblServiceTime.Location = New Point(105, 111)
         lblServiceTime.Name = "lblServiceTime"
-        lblServiceTime.Size = New Size(91, 37)
+        lblServiceTime.Size = New Size(96, 37)
         lblServiceTime.TabIndex = 10
         lblServiceTime.Text = "00:00"
         lblServiceTime.TextAlign = ContentAlignment.MiddleCenter
@@ -171,9 +171,9 @@ Partial Class MachineCard
         lblStatus.AutoSize = True
         lblStatus.Dock = DockStyle.Fill
         lblStatus.Font = New Font("Poppins", 12F)
-        lblStatus.Location = New Point(203, 0)
+        lblStatus.Location = New Point(213, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(194, 30)
+        lblStatus.Size = New Size(204, 30)
         lblStatus.TabIndex = 9
         lblStatus.Text = "Status"
         lblStatus.TextAlign = ContentAlignment.MiddleRight
@@ -186,7 +186,7 @@ Partial Class MachineCard
         picMachine.Location = New Point(3, 33)
         picMachine.Name = "picMachine"
         picMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        picMachine.Size = New Size(194, 224)
+        picMachine.Size = New Size(204, 224)
         picMachine.SizeMode = PictureBoxSizeMode.AutoSize
         picMachine.TabIndex = 13
         picMachine.TabStop = False
@@ -203,9 +203,9 @@ Partial Class MachineCard
         btnProceedMachine.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnProceedMachine.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnProceedMachine.FillColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
-        btnProceedMachine.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnProceedMachine.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnProceedMachine.ForeColor = Color.Black
-        btnProceedMachine.Location = New Point(15, 263)
+        btnProceedMachine.Location = New Point(20, 263)
         btnProceedMachine.Name = "btnProceedMachine"
         btnProceedMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnProceedMachine.Size = New Size(169, 34)
@@ -222,9 +222,9 @@ Partial Class MachineCard
         btnViewDetails.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewDetails.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewDetails.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnViewDetails.Font = New Font("Poppins SemiBold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnViewDetails.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnViewDetails.ForeColor = Color.Black
-        btnViewDetails.Location = New Point(215, 263)
+        btnViewDetails.Location = New Point(230, 263)
         btnViewDetails.Name = "btnViewDetails"
         btnViewDetails.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnViewDetails.Size = New Size(169, 34)
@@ -238,7 +238,7 @@ Partial Class MachineCard
         lblMachineIDText.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblMachineIDText.Location = New Point(3, 4)
         lblMachineIDText.Name = "lblMachineIDText"
-        lblMachineIDText.Size = New Size(194, 26)
+        lblMachineIDText.Size = New Size(204, 26)
         lblMachineIDText.TabIndex = 5
         lblMachineIDText.Text = "Machine ID:"
         lblMachineIDText.TextAlign = ContentAlignment.BottomLeft
@@ -252,7 +252,7 @@ Partial Class MachineCard
         Controls.Add(TableLayoutPanel1)
         Margin = New Padding(5)
         Name = "MachineCard"
-        Size = New Size(400, 300)
+        Size = New Size(420, 300)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         TableLayoutPanel2.ResumeLayout(False)

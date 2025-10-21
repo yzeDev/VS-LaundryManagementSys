@@ -105,5 +105,59 @@ Public Class MachineDetailsForm
         End Using
     End Sub
 
+    Public Sub LoadMachineDetailsByMachineID(machineID As Integer)
+        Using conn As New OleDbConnection(connStr)
+            conn.Open()
+
+            ' Convert MachineID to UnitNumber string (as stored in MachineUsed)
+            Dim unitNumber As String = ""
+            Using cmd As New OleDbCommand("SELECT UnitNumber FROM UnitData WHERE ID=@mid", conn)
+                cmd.Parameters.AddWithValue("@mid", machineID)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot Nothing AndAlso result IsNot DBNull.Value Then
+                    unitNumber = "Unit " & Convert.ToInt32(result).ToString()
+                End If
+            End Using
+
+            If String.IsNullOrEmpty(unitNumber) Then
+                MessageBox.Show("Machine not found in database.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Return
+            End If
+
+            ' Get most recent active transaction for this machine
+            Dim sql As String = "
+            SELECT TOP 1 * 
+            FROM Transactions 
+            WHERE MachineUsed=@unitNumber 
+              AND (Status='Pending' OR Status='In-Progress')
+            ORDER BY TransactionDate DESC"
+
+            Using cmd As New OleDbCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@unitNumber", unitNumber)
+                Using reader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        ' Fill labels
+                        lblMachineNum.Text = reader("MachineUsed").ToString()
+                        lblServiceType.Text = reader("ServiceType").ToString()
+                        lblCustomerName.Text = reader("CustomerName").ToString()
+                        lblDeliverMethod.Text = reader("DeliverMethod").ToString()
+                        lblContactNum.Text = reader("ContactNumber").ToString()
+                        lblAddress.Text = reader("Address").ToString()
+                        lblTransactionWeight.Text = reader("Weight").ToString() & " kg"
+                        lblPaymentMethod.Text = reader("PaymentMethod").ToString()
+                        lblDate.Text = If(reader("TransactionDate") IsNot DBNull.Value,
+                                      "Date: " & Convert.ToDateTime(reader("TransactionDate")).ToString("MMMM dd, yyyy - hh:mm tt"),
+                                      "Date: N/A")
+                        Me.TransactionId = Convert.ToInt32(reader("TransactionID"))
+                    Else
+                        MessageBox.Show("No active transaction found for this machine.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Me.Close()
+                    End If
+                End Using
+            End Using
+        End Using
+    End Sub
+
+
 
 End Class
