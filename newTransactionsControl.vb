@@ -309,4 +309,9 @@ Public Class newTransactionsControl
         End Try
     End Sub
 
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim optionsForm As New TransactionOption()
+        optionsForm.StartPosition = FormStartPosition.CenterParent
+        optionsForm.ShowDialog()
+    End Sub
 End Class

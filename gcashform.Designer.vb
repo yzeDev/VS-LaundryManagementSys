@@ -22,17 +22,17 @@ Partial Class gcashform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gcashform))
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         cancelPayBtn = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -73,7 +73,7 @@ Partial Class gcashform
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges11
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
@@ -81,7 +81,7 @@ Partial Class gcashform
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.Padding = New Padding(15)
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientPanel1.Size = New Size(356, 618)
         Guna2GradientPanel1.TabIndex = 0
         ' 
@@ -90,7 +90,7 @@ Partial Class gcashform
         TableLayoutPanel1.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         TableLayoutPanel1.BackColor = Color.Transparent
         TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel1.Controls.Add(cancelPayBtn, 0, 6)
         TableLayoutPanel1.Controls.Add(totalPaymentLbl, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
@@ -103,13 +103,13 @@ Partial Class gcashform
         TableLayoutPanel1.Margin = New Padding(0, 3, 0, 3)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 7
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 11F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 40F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 15F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 11.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 40.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 15.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7.0F))
         TableLayoutPanel1.Size = New Size(326, 588)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -118,7 +118,7 @@ Partial Class gcashform
         cancelPayBtn.BorderColor = Color.White
         cancelPayBtn.BorderRadius = 5
         cancelPayBtn.BorderThickness = 1
-        cancelPayBtn.CustomizableEdges = CustomizableEdges13
+        cancelPayBtn.CustomizableEdges = CustomizableEdges1
         cancelPayBtn.DisabledState.BorderColor = Color.DarkGray
         cancelPayBtn.DisabledState.CustomBorderColor = Color.DarkGray
         cancelPayBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -127,12 +127,12 @@ Partial Class gcashform
         cancelPayBtn.Dock = DockStyle.Fill
         cancelPayBtn.FillColor = Color.DimGray
         cancelPayBtn.FillColor2 = Color.Gray
-        cancelPayBtn.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cancelPayBtn.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         cancelPayBtn.ForeColor = Color.White
         cancelPayBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         cancelPayBtn.Location = New Point(3, 547)
         cancelPayBtn.Name = "cancelPayBtn"
-        cancelPayBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        cancelPayBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         cancelPayBtn.Size = New Size(320, 38)
         cancelPayBtn.TabIndex = 7
         cancelPayBtn.Text = "CANCEL"
@@ -140,7 +140,7 @@ Partial Class gcashform
         ' totalPaymentLbl
         ' 
         totalPaymentLbl.Dock = DockStyle.Fill
-        totalPaymentLbl.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        totalPaymentLbl.Font = New Font("Microsoft Sans Serif", 21.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         totalPaymentLbl.Location = New Point(3, 61)
         totalPaymentLbl.Margin = New Padding(3)
         totalPaymentLbl.Name = "totalPaymentLbl"
@@ -152,8 +152,8 @@ Partial Class gcashform
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 2
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel2.Controls.Add(PictureBox1, 1, 0)
         TableLayoutPanel2.Controls.Add(Label1, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
@@ -161,7 +161,7 @@ Partial Class gcashform
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.Padding = New Padding(0, 4, 15, 4)
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel2.Size = New Size(320, 52)
         TableLayoutPanel2.TabIndex = 0
         ' 
@@ -180,7 +180,7 @@ Partial Class gcashform
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 21.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 4)
         Label1.Margin = New Padding(3, 0, 0, 0)
         Label1.Name = "Label1"
@@ -195,34 +195,34 @@ Partial Class gcashform
         Guna2Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         Guna2Panel1.BorderRadius = 10
         Guna2Panel1.Controls.Add(TableLayoutPanel3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges15
+        Guna2Panel1.CustomizableEdges = CustomizableEdges3
         Guna2Panel1.FillColor = Color.White
         Guna2Panel1.Location = New Point(38, 125)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.Padding = New Padding(40, 3, 40, 3)
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Panel1.Size = New Size(250, 229)
         Guna2Panel1.TabIndex = 3
         ' 
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel3.Controls.Add(Label3, 0, 0)
         TableLayoutPanel3.Controls.Add(PictureBox2, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(40, 3)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 80.0F))
         TableLayoutPanel3.Size = New Size(170, 223)
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' Label3
         ' 
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
@@ -245,9 +245,9 @@ Partial Class gcashform
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 3
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.0F))
         TableLayoutPanel4.Controls.Add(Label4, 1, 0)
         TableLayoutPanel4.Controls.Add(Panel1, 2, 0)
         TableLayoutPanel4.Controls.Add(Panel3, 0, 0)
@@ -255,14 +255,14 @@ Partial Class gcashform
         TableLayoutPanel4.Location = New Point(3, 360)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel4.Size = New Size(320, 52)
         TableLayoutPanel4.TabIndex = 4
         ' 
         ' Label4
         ' 
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(131, 3)
         Label4.Margin = New Padding(3)
         Label4.Name = "Label4"
@@ -304,34 +304,34 @@ Partial Class gcashform
         ' 
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.Controls.Add(TableLayoutPanel5)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges17
+        Guna2Panel2.CustomizableEdges = CustomizableEdges5
         Guna2Panel2.Dock = DockStyle.Fill
         Guna2Panel2.FillColor = Color.White
         Guna2Panel2.Location = New Point(3, 418)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Panel2.Size = New Size(320, 82)
         Guna2Panel2.TabIndex = 5
         ' 
         ' TableLayoutPanel5
         ' 
         TableLayoutPanel5.ColumnCount = 1
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel5.Controls.Add(Label5, 0, 0)
         TableLayoutPanel5.Controls.Add(TableLayoutPanel6, 0, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(0, 0)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 2
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel5.Size = New Size(320, 82)
         TableLayoutPanel5.TabIndex = 0
         ' 
         ' Label5
         ' 
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
@@ -343,22 +343,22 @@ Partial Class gcashform
         ' TableLayoutPanel6
         ' 
         TableLayoutPanel6.ColumnCount = 2
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel6.Controls.Add(Label7, 0, 0)
         TableLayoutPanel6.Controls.Add(Label6, 1, 0)
         TableLayoutPanel6.Dock = DockStyle.Fill
         TableLayoutPanel6.Location = New Point(3, 44)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 1
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel6.Size = New Size(314, 35)
         TableLayoutPanel6.TabIndex = 1
         ' 
         ' Label7
         ' 
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
@@ -370,7 +370,7 @@ Partial Class gcashform
         ' Label6
         ' 
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(160, 0)
         Label6.Name = "Label6"
@@ -384,7 +384,7 @@ Partial Class gcashform
         confirmPaymentBtn.BorderColor = Color.White
         confirmPaymentBtn.BorderRadius = 5
         confirmPaymentBtn.BorderThickness = 1
-        confirmPaymentBtn.CustomizableEdges = CustomizableEdges19
+        confirmPaymentBtn.CustomizableEdges = CustomizableEdges7
         confirmPaymentBtn.DisabledState.BorderColor = Color.DarkGray
         confirmPaymentBtn.DisabledState.CustomBorderColor = Color.DarkGray
         confirmPaymentBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -393,12 +393,12 @@ Partial Class gcashform
         confirmPaymentBtn.Dock = DockStyle.Fill
         confirmPaymentBtn.FillColor = Color.Green
         confirmPaymentBtn.FillColor2 = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        confirmPaymentBtn.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        confirmPaymentBtn.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         confirmPaymentBtn.ForeColor = Color.White
         confirmPaymentBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         confirmPaymentBtn.Location = New Point(3, 506)
         confirmPaymentBtn.Name = "confirmPaymentBtn"
-        confirmPaymentBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        confirmPaymentBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         confirmPaymentBtn.Size = New Size(320, 35)
         confirmPaymentBtn.TabIndex = 6
         confirmPaymentBtn.Text = "CONFIRM PAYMENT"

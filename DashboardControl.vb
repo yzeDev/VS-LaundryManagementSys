@@ -1,14 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports System.Net.Http
-Imports System.Net.Http.Headers
-Imports System.Text
-Imports System.Threading.Tasks
 Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
-    Private Shared ReadOnly httpClient As New HttpClient()
-    Private Const EngageSparkApiUrl As String = "https://api.engagespark.com/v1/messages/sms"
-    Private Const EngageSparkApiKey As String = "a012a19db795e443280eb7809a93cfbb69de67c3" ' <-- Replace with your real API key
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetupDashboardTransactionTable()
@@ -195,31 +189,6 @@ Public Class DashboardControl
     End Sub
 
 
-
-    Private Async Function HandleNotifyClick(customerName As String, contactNumber As String, status As String) As Task
-        Dim smsMessage As String
-        If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
-            smsMessage = $"Hi {customerName}, your laundry is now ready for pickup. Thank you for choosing us!"
-        ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
-            smsMessage = $"Hi {customerName}, your laundry is out for delivery and will arrive soon. Thank you for choosing us!"
-        Else
-            smsMessage = $"Hi {customerName}, your laundry update: {status}."
-        End If
-
-        Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
-                                  "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If confirm <> DialogResult.Yes Then Exit Function
-
-        Try
-            Dim result As String = Await SendSmsViaEngageSparkAsync(contactNumber, smsMessage)
-            MessageBox.Show($"✅ SMS sent successfully!" & vbCrLf & result, "Customer Notified",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("❌ Failed to send SMS: " & ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Function
-
     Private Sub HandleCheckClick(id As Integer)
         Dim confirm = MessageBox.Show($"Mark transaction #{id} as Completed?",
                                   "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -245,29 +214,6 @@ Public Class DashboardControl
         End Try
     End Sub
 
-    ' ================================
-    ' ENGAGESPARK SMS FUNCTION
-    ' ================================
-    Private Async Function SendSmsViaEngageSparkAsync(phoneNumber As String, messageText As String) As Task(Of String)
-        Dim jsonBody As String = $"{{""mobileNumbers"": [""{phoneNumber}""], ""message"": ""{messageText}"", ""organizationId"": null}}"
-        Dim authValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(EngageSparkApiKey & ":"))
-
-        Using client As New HttpClient()
-            client.DefaultRequestHeaders.Authorization = New AuthenticationHeaderValue("Basic", authValue)
-            Dim content As New StringContent(jsonBody, Encoding.UTF8, "application/json")
-
-            Dim response As HttpResponseMessage = Await client.PostAsync(EngageSparkApiUrl, content)
-            Dim responseBody As String = Await response.Content.ReadAsStringAsync()
-
-            If response.IsSuccessStatusCode Then
-                Return responseBody
-            Else
-                Throw New Exception($"HTTP {response.StatusCode}: {responseBody}")
-            End If
-        End Using
-    End Function
-
-
     Private Sub UpdateDashboardCounters()
         LoadDashboardCounters()
         LoadMachineCounters()
@@ -278,8 +224,8 @@ Public Class DashboardControl
         With dgvDashboardTransactions
             ' === BASIC STYLE SETTINGS ===
             .ReadOnly = True
-            .Font = New Font("Poppins", 10, FontStyle.Regular)
-            .ColumnHeadersHeight = 30
+            .Font = New Font("Poppins", 11, FontStyle.Regular)
+            .ColumnHeadersHeight = 35
             .ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
             .Columns.Clear()
             .AutoGenerateColumns = False
@@ -299,7 +245,7 @@ Public Class DashboardControl
             With .ColumnHeadersDefaultCellStyle
                 .BackColor = Color.White
                 .ForeColor = Color.Black
-                .Font = New Font("Poppins", 10, FontStyle.Bold)
+                .Font = New Font("Poppins", 12, FontStyle.Regular)
                 .Alignment = DataGridViewContentAlignment.MiddleCenter
                 .SelectionBackColor = Color.White
                 .SelectionForeColor = Color.Black
@@ -329,21 +275,19 @@ Public Class DashboardControl
     .Name = "btnNotify",
     .HeaderText = "Actions",
     .ImageLayout = DataGridViewImageCellLayout.Zoom,
-    .Width = 35
+    .Width = 20
 }
 
             Dim completeIconCol As New DataGridViewImageColumn() With {
     .Name = "btnComplete",
     .HeaderText = "",
     .ImageLayout = DataGridViewImageCellLayout.Zoom,
-    .Width = 35
+    .Width = 20
 }
 
-            ' Keep both icons grouped visually
             .Columns.Add(notifyIconCol)
             .Columns.Add(completeIconCol)
 
-            ' Optional: remove extra padding so icons appear closer
             .Columns("btnNotify").DefaultCellStyle.Padding = New Padding(0, 0, -5, 0)
             .Columns("btnComplete").DefaultCellStyle.Padding = New Padding(-5, 0, 0, 0)
 
@@ -372,7 +316,7 @@ Public Class DashboardControl
 
 
 
-    Private Async Sub dgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
+    Private Async Sub DgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
         If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
 
         Dim colName As String = dgvDashboardTransactions.Columns(e.ColumnIndex).Name
@@ -383,12 +327,15 @@ Public Class DashboardControl
 
         Select Case colName
             Case "btnNotify"
-                Await HandleNotifyClick(customerName, contactNumber, status)
 
             Case "btnComplete"
                 HandleCheckClick(id)
         End Select
     End Sub
 
-
+    Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
+        Dim optionsForm As New TransactionOption()
+        optionsForm.StartPosition = FormStartPosition.CenterParent
+        optionsForm.ShowDialog()
+    End Sub
 End Class

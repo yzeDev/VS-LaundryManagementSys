@@ -151,7 +151,7 @@ Partial Class StatsControl
         ' Label4
         ' 
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(0, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(894, 42)
@@ -242,7 +242,7 @@ Partial Class StatsControl
         ' 
         Label16.AutoSize = True
         Label16.Dock = DockStyle.Fill
-        Label16.Font = New Font("Poppins", 8.25F)
+        Label16.Font = New Font("Microsoft Sans Serif", 8.25F)
         Label16.ForeColor = SystemColors.ControlDarkDark
         Label16.Location = New Point(3, 106)
         Label16.Name = "Label16"
@@ -254,7 +254,7 @@ Partial Class StatsControl
         ' 
         lblOrderValue.AutoSize = True
         lblOrderValue.Dock = DockStyle.Fill
-        lblOrderValue.Font = New Font("Poppins", 20.25F, FontStyle.Bold)
+        lblOrderValue.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold)
         lblOrderValue.Location = New Point(3, 53)
         lblOrderValue.Name = "lblOrderValue"
         lblOrderValue.Size = New Size(184, 53)
@@ -270,13 +270,13 @@ Partial Class StatsControl
         Label9.Name = "Label9"
         Label9.Size = New Size(184, 33)
         Label9.TabIndex = 0
-        Label9.Text = "AVERAGE ORDER VALUE"
+        Label9.Text = "avg Value"
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 8.25F)
+        Label10.Font = New Font("Microsoft Sans Serif", 8.25F)
         Label10.ForeColor = SystemColors.ControlDarkDark
         Label10.Location = New Point(3, 33)
         Label10.Name = "Label10"
@@ -321,7 +321,7 @@ Partial Class StatsControl
         ' 
         Label12.AutoSize = True
         Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Poppins", 8.25F)
+        Label12.Font = New Font("Microsoft Sans Serif", 8.25F)
         Label12.ForeColor = SystemColors.ControlDarkDark
         Label12.Location = New Point(3, 106)
         Label12.Name = "Label12"
@@ -333,7 +333,7 @@ Partial Class StatsControl
         ' 
         lblTotalRev.AutoSize = True
         lblTotalRev.Dock = DockStyle.Fill
-        lblTotalRev.Font = New Font("Poppins", 20.25F, FontStyle.Bold)
+        lblTotalRev.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold)
         lblTotalRev.Location = New Point(3, 53)
         lblTotalRev.Name = "lblTotalRev"
         lblTotalRev.Size = New Size(176, 53)
@@ -345,7 +345,7 @@ Partial Class StatsControl
         ' 
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(176, 33)
@@ -356,7 +356,7 @@ Partial Class StatsControl
         ' 
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 8.25F)
+        Label6.Font = New Font("Microsoft Sans Serif", 8.25F)
         Label6.ForeColor = SystemColors.ControlDarkDark
         Label6.Location = New Point(3, 33)
         Label6.Name = "Label6"
@@ -439,7 +439,7 @@ Partial Class StatsControl
         ' 
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 8.25F)
+        Label14.Font = New Font("Microsoft Sans Serif", 8.25F)
         Label14.ForeColor = SystemColors.ControlDarkDark
         Label14.Location = New Point(3, 106)
         Label14.Name = "Label14"
@@ -451,7 +451,7 @@ Partial Class StatsControl
         ' 
         lblTotalOrder.AutoSize = True
         lblTotalOrder.Dock = DockStyle.Fill
-        lblTotalOrder.Font = New Font("Poppins", 20.25F, FontStyle.Bold)
+        lblTotalOrder.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold)
         lblTotalOrder.Location = New Point(3, 53)
         lblTotalOrder.Name = "lblTotalOrder"
         lblTotalOrder.Size = New Size(180, 53)
@@ -473,7 +473,7 @@ Partial Class StatsControl
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 8.25F)
+        Label8.Font = New Font("Microsoft Sans Serif", 8.25F)
         Label8.ForeColor = SystemColors.ControlDarkDark
         Label8.Location = New Point(3, 33)
         Label8.Name = "Label8"
@@ -620,7 +620,7 @@ Partial Class StatsControl
         ' 
         Label11.AutoSize = True
         Label11.Dock = DockStyle.Fill
-        Label11.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(281, 36)
@@ -665,7 +665,7 @@ Partial Class StatsControl
         Label13.AutoSize = True
         Label13.BackColor = Color.Transparent
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.White
         Label13.Location = New Point(64, 0)
         Label13.Name = "Label13"
@@ -743,17 +743,17 @@ Partial Class StatsControl
         ' 
         cmbPeriod.Dock = DockStyle.Fill
         cmbPeriod.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbPeriod.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbPeriod.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbPeriod.FormattingEnabled = True
         cmbPeriod.Location = New Point(103, 3)
         cmbPeriod.Name = "cmbPeriod"
-        cmbPeriod.Size = New Size(338, 36)
+        cmbPeriod.Size = New Size(338, 28)
         cmbPeriod.TabIndex = 1
         ' 
         ' Label2
         ' 
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(3, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(94, 40)
@@ -788,7 +788,7 @@ Partial Class StatsControl
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(94, 40)
@@ -798,12 +798,12 @@ Partial Class StatsControl
         ' 
         ' dtpEndDate
         ' 
-        dtpEndDate.CalendarFont = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpEndDate.CalendarFont = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpEndDate.Dock = DockStyle.Fill
-        dtpEndDate.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpEndDate.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpEndDate.Location = New Point(103, 3)
         dtpEndDate.Name = "dtpEndDate"
-        dtpEndDate.Size = New Size(338, 31)
+        dtpEndDate.Size = New Size(338, 26)
         dtpEndDate.TabIndex = 1
         ' 
         ' StatsControl
