@@ -369,7 +369,6 @@ Partial Class BasicServiceForm
         ' 
         ' Guna2CheckBoxdelivery
         ' 
-        Guna2CheckBox1.AutoSize = True
         Guna2CheckBox1.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBox1.CheckedState.BorderRadius = 0
         Guna2CheckBox1.CheckedState.BorderThickness = 0
