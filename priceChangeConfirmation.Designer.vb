@@ -22,13 +22,13 @@ Partial Class priceChangeConfirmation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(priceChangeConfirmation))
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -40,7 +40,7 @@ Partial Class priceChangeConfirmation
         Panel2 = New Panel()
         TableLayoutPanel4 = New TableLayoutPanel()
         Label4 = New Label()
-        Panel3 = New Panel()
+        priceSummary = New Panel()
         TableLayoutPanel3 = New TableLayoutPanel()
         Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -83,14 +83,14 @@ Partial Class priceChangeConfirmation
         Guna2GradientPanel1.BorderRadius = 5
         Guna2GradientPanel1.BorderThickness = 1
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges1
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(255), CByte(240), CByte(163))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(255), CByte(254), CByte(184))
         Guna2GradientPanel1.Location = New Point(15, 268)
         Guna2GradientPanel1.Margin = New Padding(15)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2GradientPanel1.Size = New Size(370, 46)
         Guna2GradientPanel1.TabIndex = 8
         ' 
@@ -187,7 +187,7 @@ Partial Class priceChangeConfirmation
         TableLayoutPanel4.ColumnCount = 1
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel4.Controls.Add(Label4, 0, 0)
-        TableLayoutPanel4.Controls.Add(Panel3, 0, 1)
+        TableLayoutPanel4.Controls.Add(priceSummary, 0, 1)
         TableLayoutPanel4.Dock = DockStyle.Fill
         TableLayoutPanel4.Location = New Point(0, 0)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
@@ -210,14 +210,14 @@ Partial Class priceChangeConfirmation
         Label4.Text = "Changes Summary:"
         Label4.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Panel3
+        ' priceSummary
         ' 
-        Panel3.Dock = DockStyle.Fill
-        Panel3.Location = New Point(0, 26)
-        Panel3.Margin = New Padding(0)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(370, 107)
-        Panel3.TabIndex = 1
+        priceSummary.Dock = DockStyle.Fill
+        priceSummary.Location = New Point(0, 26)
+        priceSummary.Margin = New Padding(0)
+        priceSummary.Name = "priceSummary"
+        priceSummary.Size = New Size(370, 107)
+        priceSummary.TabIndex = 1
         ' 
         ' TableLayoutPanel3
         ' 
@@ -238,7 +238,7 @@ Partial Class priceChangeConfirmation
         ' Guna2GradientButton2
         ' 
         Guna2GradientButton2.BorderRadius = 5
-        Guna2GradientButton2.CustomizableEdges = CustomizableEdges3
+        Guna2GradientButton2.CustomizableEdges = CustomizableEdges9
         Guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -255,7 +255,7 @@ Partial Class priceChangeConfirmation
         Guna2GradientButton2.Location = New Point(3, 3)
         Guna2GradientButton2.Margin = New Padding(3, 3, 7, 3)
         Guna2GradientButton2.Name = "Guna2GradientButton2"
-        Guna2GradientButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientButton2.Size = New Size(153, 30)
         Guna2GradientButton2.TabIndex = 1
         Guna2GradientButton2.Text = "     Cancel "
@@ -263,7 +263,7 @@ Partial Class priceChangeConfirmation
         ' Guna2GradientButton1
         ' 
         Guna2GradientButton1.BorderRadius = 5
-        Guna2GradientButton1.CustomizableEdges = CustomizableEdges5
+        Guna2GradientButton1.CustomizableEdges = CustomizableEdges11
         Guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -280,7 +280,7 @@ Partial Class priceChangeConfirmation
         Guna2GradientButton1.Location = New Point(214, 3)
         Guna2GradientButton1.Margin = New Padding(7, 3, 3, 3)
         Guna2GradientButton1.Name = "Guna2GradientButton1"
-        Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2GradientButton1.Size = New Size(153, 30)
         Guna2GradientButton1.TabIndex = 0
         Guna2GradientButton1.Text = "     Save"
@@ -319,6 +319,6 @@ Partial Class priceChangeConfirmation
     Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents priceSummary As Panel
     Friend WithEvents Label4 As Label
 End Class

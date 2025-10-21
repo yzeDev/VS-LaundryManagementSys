@@ -267,7 +267,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel22.Controls.Add(dryclean_currentSmall, 1, 0)
         TableLayoutPanel22.Controls.Add(Label40, 0, 0)
-        TableLayoutPanel22.Location = New Point(3, 46)
+        TableLayoutPanel22.Location = New Point(3, 52)
         TableLayoutPanel22.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 1
@@ -277,16 +277,16 @@ Partial Class PriceSettingsControl
         ' 
         ' dryclean_currentSmall
         ' 
-        dryclean_currentSmall.Anchor = AnchorStyles.Left
-        dryclean_currentSmall.AutoSize = True
-        dryclean_currentSmall.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_currentSmall.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_currentSmall.Location = New Point(97, 2)
-        dryclean_currentSmall.Name = "dryclean_currentSmall"
-        dryclean_currentSmall.Size = New Size(29, 13)
-        dryclean_currentSmall.TabIndex = 14
-        dryclean_currentSmall.Text = "₱ 40"
-        dryclean_currentSmall.TextAlign = ContentAlignment.MiddleLeft
+        dryclean_current1.Anchor = AnchorStyles.Left
+        dryclean_current1.AutoSize = True
+        dryclean_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_current1.Location = New Point(97, 0)
+        dryclean_current1.Name = "dryclean_current1"
+        dryclean_current1.Size = New Size(34, 18)
+        dryclean_current1.TabIndex = 14
+        dryclean_current1.Text = "₱ 40"
+        dryclean_current1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label40
         ' 
@@ -296,7 +296,7 @@ Partial Class PriceSettingsControl
         Label40.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label40.Location = New Point(3, 2)
         Label40.Name = "Label40"
-        Label40.Size = New Size(84, 13)
+        Label40.Size = New Size(85, 18)
         Label40.TabIndex = 14
         Label40.Text = "Current Price: ₱ "
         Label40.TextAlign = ContentAlignment.MiddleLeft
@@ -308,7 +308,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel23.Controls.Add(dryclean_currentMedium, 1, 0)
         TableLayoutPanel23.Controls.Add(Label42, 0, 0)
-        TableLayoutPanel23.Location = New Point(3, 111)
+        TableLayoutPanel23.Location = New Point(3, 123)
         TableLayoutPanel23.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 1
@@ -318,16 +318,16 @@ Partial Class PriceSettingsControl
         ' 
         ' dryclean_currentMedium
         ' 
-        dryclean_currentMedium.Anchor = AnchorStyles.Left
-        dryclean_currentMedium.AutoSize = True
-        dryclean_currentMedium.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_currentMedium.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_currentMedium.Location = New Point(97, 2)
-        dryclean_currentMedium.Name = "dryclean_currentMedium"
-        dryclean_currentMedium.Size = New Size(29, 13)
-        dryclean_currentMedium.TabIndex = 14
-        dryclean_currentMedium.Text = "₱ 30"
-        dryclean_currentMedium.TextAlign = ContentAlignment.MiddleLeft
+        dryclean_current2.Anchor = AnchorStyles.Left
+        dryclean_current2.AutoSize = True
+        dryclean_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_current2.Location = New Point(97, 0)
+        dryclean_current2.Name = "dryclean_current2"
+        dryclean_current2.Size = New Size(33, 18)
+        dryclean_current2.TabIndex = 14
+        dryclean_current2.Text = "₱ 30"
+        dryclean_current2.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label42
         ' 
@@ -337,7 +337,7 @@ Partial Class PriceSettingsControl
         Label42.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label42.Location = New Point(3, 2)
         Label42.Name = "Label42"
-        Label42.Size = New Size(84, 13)
+        Label42.Size = New Size(85, 18)
         Label42.TabIndex = 14
         Label42.Text = "Current Price: ₱ "
         Label42.TextAlign = ContentAlignment.MiddleLeft
@@ -351,7 +351,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel24.Controls.Add(Label46, 0, 0)
         TableLayoutPanel24.Controls.Add(dryclean_newLarge, 1, 0)
         TableLayoutPanel24.Controls.Add(Label47, 2, 0)
-        TableLayoutPanel24.Location = New Point(3, 150)
+        TableLayoutPanel24.Location = New Point(3, 162)
         TableLayoutPanel24.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel24.Name = "TableLayoutPanel24"
         TableLayoutPanel24.RowCount = 1
@@ -366,34 +366,34 @@ Partial Class PriceSettingsControl
         Label46.AutoSize = True
         Label46.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label46.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label46.Location = New Point(3, 6)
+        Label46.Location = New Point(3, 3)
         Label46.Name = "Label46"
-        Label46.Size = New Size(14, 13)
+        Label46.Size = New Size(14, 19)
         Label46.TabIndex = 14
         Label46.Text = "₱ "
         Label46.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dryclean_newLarge
+        ' dryclean_new3
         ' 
-        dryclean_newLarge.BorderColor = Color.Gray
-        dryclean_newLarge.BorderRadius = 5
-        dryclean_newLarge.CustomizableEdges = CustomizableEdges1
-        dryclean_newLarge.DefaultText = ""
-        dryclean_newLarge.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        dryclean_newLarge.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        dryclean_newLarge.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_newLarge.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_newLarge.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_newLarge.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_newLarge.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_newLarge.Location = New Point(23, 4)
-        dryclean_newLarge.Margin = New Padding(3, 4, 3, 4)
-        dryclean_newLarge.Name = "dryclean_newLarge"
-        dryclean_newLarge.PlaceholderText = ""
-        dryclean_newLarge.SelectedText = ""
-        dryclean_newLarge.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        dryclean_newLarge.Size = New Size(77, 17)
-        dryclean_newLarge.TabIndex = 15
+        dryclean_new3.BorderColor = Color.Gray
+        dryclean_new3.BorderRadius = 5
+        dryclean_new3.CustomizableEdges = CustomizableEdges1
+        dryclean_new3.DefaultText = ""
+        dryclean_new3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_new3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_new3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_new3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_new3.Location = New Point(23, 4)
+        dryclean_new3.Margin = New Padding(3, 4, 3, 4)
+        dryclean_new3.Name = "dryclean_new3"
+        dryclean_new3.PlaceholderText = ""
+        dryclean_new3.SelectedText = ""
+        dryclean_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        dryclean_new3.Size = New Size(77, 17)
+        dryclean_new3.TabIndex = 15
         ' 
         ' Label47
         ' 
@@ -401,9 +401,9 @@ Partial Class PriceSettingsControl
         Label47.AutoSize = True
         Label47.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label47.Location = New Point(106, 6)
+        Label47.Location = New Point(106, 3)
         Label47.Name = "Label47"
-        Label47.Size = New Size(24, 13)
+        Label47.Size = New Size(27, 19)
         Label47.TabIndex = 13
         Label47.Text = "/pc"
         Label47.TextAlign = ContentAlignment.MiddleLeft
@@ -417,7 +417,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel25.Controls.Add(Label48, 0, 0)
         TableLayoutPanel25.Controls.Add(dryclean_newMedium, 1, 0)
         TableLayoutPanel25.Controls.Add(Label49, 2, 0)
-        TableLayoutPanel25.Location = New Point(3, 81)
+        TableLayoutPanel25.Location = New Point(3, 93)
         TableLayoutPanel25.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel25.Name = "TableLayoutPanel25"
         TableLayoutPanel25.RowCount = 1
@@ -432,34 +432,34 @@ Partial Class PriceSettingsControl
         Label48.AutoSize = True
         Label48.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label48.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label48.Location = New Point(3, 6)
+        Label48.Location = New Point(3, 3)
         Label48.Name = "Label48"
-        Label48.Size = New Size(14, 13)
+        Label48.Size = New Size(14, 19)
         Label48.TabIndex = 14
         Label48.Text = "₱ "
         Label48.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dryclean_newMedium
+        ' dryclean_new2
         ' 
-        dryclean_newMedium.BorderColor = Color.Gray
-        dryclean_newMedium.BorderRadius = 5
-        dryclean_newMedium.CustomizableEdges = CustomizableEdges3
-        dryclean_newMedium.DefaultText = ""
-        dryclean_newMedium.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        dryclean_newMedium.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        dryclean_newMedium.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_newMedium.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_newMedium.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_newMedium.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_newMedium.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_newMedium.Location = New Point(23, 4)
-        dryclean_newMedium.Margin = New Padding(3, 4, 3, 4)
-        dryclean_newMedium.Name = "dryclean_newMedium"
-        dryclean_newMedium.PlaceholderText = ""
-        dryclean_newMedium.SelectedText = ""
-        dryclean_newMedium.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        dryclean_newMedium.Size = New Size(77, 17)
-        dryclean_newMedium.TabIndex = 15
+        dryclean_new2.BorderColor = Color.Gray
+        dryclean_new2.BorderRadius = 5
+        dryclean_new2.CustomizableEdges = CustomizableEdges3
+        dryclean_new2.DefaultText = ""
+        dryclean_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_new2.Location = New Point(23, 4)
+        dryclean_new2.Margin = New Padding(3, 4, 3, 4)
+        dryclean_new2.Name = "dryclean_new2"
+        dryclean_new2.PlaceholderText = ""
+        dryclean_new2.SelectedText = ""
+        dryclean_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        dryclean_new2.Size = New Size(77, 17)
+        dryclean_new2.TabIndex = 15
         ' 
         ' Label49
         ' 
@@ -467,9 +467,9 @@ Partial Class PriceSettingsControl
         Label49.AutoSize = True
         Label49.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label49.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label49.Location = New Point(106, 6)
+        Label49.Location = New Point(106, 3)
         Label49.Name = "Label49"
-        Label49.Size = New Size(24, 13)
+        Label49.Size = New Size(27, 19)
         Label49.TabIndex = 13
         Label49.Text = "/pc"
         Label49.TextAlign = ContentAlignment.MiddleLeft
@@ -480,9 +480,9 @@ Partial Class PriceSettingsControl
         Label50.AutoSize = True
         Label50.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label50.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label50.Location = New Point(3, 66)
+        Label50.Location = New Point(3, 72)
         Label50.Name = "Label50"
-        Label50.Size = New Size(80, 13)
+        Label50.Size = New Size(61, 19)
         Label50.TabIndex = 13
         Label50.Text = "MEDIUM ITEM"
         Label50.TextAlign = ContentAlignment.MiddleLeft
@@ -495,7 +495,7 @@ Partial Class PriceSettingsControl
         Label51.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label51.Location = New Point(3, 0)
         Label51.Name = "Label51"
-        Label51.Size = New Size(71, 13)
+        Label51.Size = New Size(72, 19)
         Label51.TabIndex = 11
         Label51.Text = "SMALL ITEM"
         Label51.TextAlign = ContentAlignment.MiddleLeft
@@ -509,7 +509,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel26.Controls.Add(Label52, 0, 0)
         TableLayoutPanel26.Controls.Add(dryclean_newSmall, 1, 0)
         TableLayoutPanel26.Controls.Add(Label53, 2, 0)
-        TableLayoutPanel26.Location = New Point(3, 15)
+        TableLayoutPanel26.Location = New Point(3, 21)
         TableLayoutPanel26.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel26.Name = "TableLayoutPanel26"
         TableLayoutPanel26.RowCount = 1
@@ -524,35 +524,35 @@ Partial Class PriceSettingsControl
         Label52.AutoSize = True
         Label52.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label52.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label52.Location = New Point(3, 7)
+        Label52.Location = New Point(3, 4)
         Label52.Name = "Label52"
-        Label52.Size = New Size(14, 13)
+        Label52.Size = New Size(14, 19)
         Label52.TabIndex = 14
         Label52.Text = "₱ "
         Label52.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' dryclean_newSmall
+        ' dryclean_new1
         ' 
-        dryclean_newSmall.AcceptsReturn = True
-        dryclean_newSmall.BorderColor = Color.Gray
-        dryclean_newSmall.BorderRadius = 5
-        dryclean_newSmall.CustomizableEdges = CustomizableEdges5
-        dryclean_newSmall.DefaultText = ""
-        dryclean_newSmall.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        dryclean_newSmall.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        dryclean_newSmall.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_newSmall.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        dryclean_newSmall.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_newSmall.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_newSmall.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        dryclean_newSmall.Location = New Point(23, 4)
-        dryclean_newSmall.Margin = New Padding(3, 4, 3, 4)
-        dryclean_newSmall.Name = "dryclean_newSmall"
-        dryclean_newSmall.PlaceholderText = ""
-        dryclean_newSmall.SelectedText = ""
-        dryclean_newSmall.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        dryclean_newSmall.Size = New Size(77, 18)
-        dryclean_newSmall.TabIndex = 15
+        dryclean_new1.AcceptsReturn = True
+        dryclean_new1.BorderColor = Color.Gray
+        dryclean_new1.BorderRadius = 5
+        dryclean_new1.CustomizableEdges = CustomizableEdges5
+        dryclean_new1.DefaultText = ""
+        dryclean_new1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_new1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_new1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_new1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_new1.Location = New Point(23, 4)
+        dryclean_new1.Margin = New Padding(3, 4, 3, 4)
+        dryclean_new1.Name = "dryclean_new1"
+        dryclean_new1.PlaceholderText = ""
+        dryclean_new1.SelectedText = ""
+        dryclean_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        dryclean_new1.Size = New Size(77, 18)
+        dryclean_new1.TabIndex = 15
         ' 
         ' Label53
         ' 
@@ -560,9 +560,9 @@ Partial Class PriceSettingsControl
         Label53.AutoSize = True
         Label53.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label53.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label53.Location = New Point(106, 7)
+        Label53.Location = New Point(106, 4)
         Label53.Name = "Label53"
-        Label53.Size = New Size(24, 13)
+        Label53.Size = New Size(27, 19)
         Label53.TabIndex = 13
         Label53.Text = "/pc"
         Label53.TextAlign = ContentAlignment.MiddleLeft
@@ -574,7 +574,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel27.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel27.Controls.Add(dryclean_currentLarge, 1, 0)
         TableLayoutPanel27.Controls.Add(Label55, 0, 0)
-        TableLayoutPanel27.Location = New Point(3, 183)
+        TableLayoutPanel27.Location = New Point(3, 195)
         TableLayoutPanel27.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel27.Name = "TableLayoutPanel27"
         TableLayoutPanel27.RowCount = 1
@@ -584,16 +584,16 @@ Partial Class PriceSettingsControl
         ' 
         ' dryclean_currentLarge
         ' 
-        dryclean_currentLarge.Anchor = AnchorStyles.Left
-        dryclean_currentLarge.AutoSize = True
-        dryclean_currentLarge.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dryclean_currentLarge.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        dryclean_currentLarge.Location = New Point(97, 2)
-        dryclean_currentLarge.Name = "dryclean_currentLarge"
-        dryclean_currentLarge.Size = New Size(29, 13)
-        dryclean_currentLarge.TabIndex = 14
-        dryclean_currentLarge.Text = "₱ 30"
-        dryclean_currentLarge.TextAlign = ContentAlignment.MiddleLeft
+        dryclean_current3.Anchor = AnchorStyles.Left
+        dryclean_current3.AutoSize = True
+        dryclean_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_current3.Location = New Point(97, 0)
+        dryclean_current3.Name = "dryclean_current3"
+        dryclean_current3.Size = New Size(33, 18)
+        dryclean_current3.TabIndex = 14
+        dryclean_current3.Text = "₱ 30"
+        dryclean_current3.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label55
         ' 
@@ -603,7 +603,7 @@ Partial Class PriceSettingsControl
         Label55.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label55.Location = New Point(3, 2)
         Label55.Name = "Label55"
-        Label55.Size = New Size(84, 13)
+        Label55.Size = New Size(85, 18)
         Label55.TabIndex = 14
         Label55.Text = "Current Price: ₱ "
         Label55.TextAlign = ContentAlignment.MiddleLeft
@@ -614,9 +614,9 @@ Partial Class PriceSettingsControl
         Label56.AutoSize = True
         Label56.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label56.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label56.Location = New Point(3, 133)
+        Label56.Location = New Point(3, 144)
         Label56.Name = "Label56"
-        Label56.Size = New Size(72, 13)
+        Label56.Size = New Size(76, 16)
         Label56.TabIndex = 15
         Label56.Text = "LARGE ITEM"
         Label56.TextAlign = ContentAlignment.MiddleLeft
@@ -670,7 +670,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel29.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel29.Controls.Add(fullservice_currentWash, 1, 0)
         TableLayoutPanel29.Controls.Add(Label58, 0, 0)
-        TableLayoutPanel29.Location = New Point(3, 46)
+        TableLayoutPanel29.Location = New Point(3, 52)
         TableLayoutPanel29.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel29.Name = "TableLayoutPanel29"
         TableLayoutPanel29.RowCount = 1
@@ -680,16 +680,16 @@ Partial Class PriceSettingsControl
         ' 
         ' fullservice_currentWash
         ' 
-        fullservice_currentWash.Anchor = AnchorStyles.Left
-        fullservice_currentWash.AutoSize = True
-        fullservice_currentWash.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        fullservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        fullservice_currentWash.Location = New Point(97, 2)
-        fullservice_currentWash.Name = "fullservice_currentWash"
-        fullservice_currentWash.Size = New Size(29, 13)
-        fullservice_currentWash.TabIndex = 14
-        fullservice_currentWash.Text = "₱ 40"
-        fullservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
+        fullservice_current2.Anchor = AnchorStyles.Left
+        fullservice_current2.AutoSize = True
+        fullservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        fullservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        fullservice_current2.Location = New Point(97, 0)
+        fullservice_current2.Name = "fullservice_current2"
+        fullservice_current2.Size = New Size(34, 18)
+        fullservice_current2.TabIndex = 14
+        fullservice_current2.Text = "₱ 40"
+        fullservice_current2.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label58
         ' 
@@ -699,7 +699,7 @@ Partial Class PriceSettingsControl
         Label58.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label58.Location = New Point(3, 2)
         Label58.Name = "Label58"
-        Label58.Size = New Size(84, 13)
+        Label58.Size = New Size(85, 18)
         Label58.TabIndex = 14
         Label58.Text = "Current Price: ₱ "
         Label58.TextAlign = ContentAlignment.MiddleLeft
@@ -712,9 +712,9 @@ Partial Class PriceSettingsControl
         Label66.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label66.Location = New Point(3, 0)
         Label66.Name = "Label66"
-        Label66.Size = New Size(129, 13)
+        Label66.Size = New Size(85, 19)
         Label66.TabIndex = 11
-        Label66.Text = "WASH, DRY, AND FOLD"
+        Label66.Text = "FULL PACKAGE"
         Label66.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel33
@@ -726,7 +726,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel33.Controls.Add(Label67, 0, 0)
         TableLayoutPanel33.Controls.Add(fullservice_new2, 1, 0)
         TableLayoutPanel33.Controls.Add(Label68, 2, 0)
-        TableLayoutPanel33.Location = New Point(3, 15)
+        TableLayoutPanel33.Location = New Point(3, 21)
         TableLayoutPanel33.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel33.Name = "TableLayoutPanel33"
         TableLayoutPanel33.RowCount = 1
@@ -741,9 +741,9 @@ Partial Class PriceSettingsControl
         Label67.AutoSize = True
         Label67.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label67.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label67.Location = New Point(3, 7)
+        Label67.Location = New Point(3, 4)
         Label67.Name = "Label67"
-        Label67.Size = New Size(14, 13)
+        Label67.Size = New Size(14, 19)
         Label67.TabIndex = 14
         Label67.Text = "₱ "
         Label67.TextAlign = ContentAlignment.MiddleLeft
@@ -776,9 +776,9 @@ Partial Class PriceSettingsControl
         Label68.AutoSize = True
         Label68.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label68.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label68.Location = New Point(106, 7)
+        Label68.Location = New Point(106, 4)
         Label68.Name = "Label68"
-        Label68.Size = New Size(24, 13)
+        Label68.Size = New Size(27, 19)
         Label68.TabIndex = 13
         Label68.Text = "/kg"
         Label68.TextAlign = ContentAlignment.MiddleLeft
@@ -838,7 +838,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel7.Controls.Add(basicservice_currentWash, 1, 0)
         TableLayoutPanel7.Controls.Add(Label7, 0, 0)
-        TableLayoutPanel7.Location = New Point(3, 46)
+        TableLayoutPanel7.Location = New Point(3, 52)
         TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
@@ -848,16 +848,16 @@ Partial Class PriceSettingsControl
         ' 
         ' basicservice_currentWash
         ' 
-        basicservice_currentWash.Anchor = AnchorStyles.Left
-        basicservice_currentWash.AutoSize = True
-        basicservice_currentWash.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_currentWash.Location = New Point(97, 2)
-        basicservice_currentWash.Name = "basicservice_currentWash"
-        basicservice_currentWash.Size = New Size(29, 13)
-        basicservice_currentWash.TabIndex = 14
-        basicservice_currentWash.Text = "₱ 40"
-        basicservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
+        basicservice_current1.Anchor = AnchorStyles.Left
+        basicservice_current1.AutoSize = True
+        basicservice_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_current1.Location = New Point(97, 0)
+        basicservice_current1.Name = "basicservice_current1"
+        basicservice_current1.Size = New Size(34, 18)
+        basicservice_current1.TabIndex = 14
+        basicservice_current1.Text = "₱ 40"
+        basicservice_current1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label7
         ' 
@@ -867,7 +867,7 @@ Partial Class PriceSettingsControl
         Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label7.Location = New Point(3, 2)
         Label7.Name = "Label7"
-        Label7.Size = New Size(84, 13)
+        Label7.Size = New Size(85, 18)
         Label7.TabIndex = 14
         Label7.Text = "Current Price: ₱ "
         Label7.TextAlign = ContentAlignment.MiddleLeft
@@ -879,7 +879,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel10.Controls.Add(basicservice_currentDry, 1, 0)
         TableLayoutPanel10.Controls.Add(Label18, 0, 0)
-        TableLayoutPanel10.Location = New Point(3, 111)
+        TableLayoutPanel10.Location = New Point(3, 123)
         TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
@@ -889,16 +889,16 @@ Partial Class PriceSettingsControl
         ' 
         ' basicservice_currentDry
         ' 
-        basicservice_currentDry.Anchor = AnchorStyles.Left
-        basicservice_currentDry.AutoSize = True
-        basicservice_currentDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_currentDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_currentDry.Location = New Point(97, 2)
-        basicservice_currentDry.Name = "basicservice_currentDry"
-        basicservice_currentDry.Size = New Size(29, 13)
-        basicservice_currentDry.TabIndex = 14
-        basicservice_currentDry.Text = "₱ 30"
-        basicservice_currentDry.TextAlign = ContentAlignment.MiddleLeft
+        basicservice_current2.Anchor = AnchorStyles.Left
+        basicservice_current2.AutoSize = True
+        basicservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_current2.Location = New Point(97, 0)
+        basicservice_current2.Name = "basicservice_current2"
+        basicservice_current2.Size = New Size(33, 18)
+        basicservice_current2.TabIndex = 14
+        basicservice_current2.Text = "₱ 30"
+        basicservice_current2.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label18
         ' 
@@ -908,7 +908,7 @@ Partial Class PriceSettingsControl
         Label18.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label18.Location = New Point(3, 2)
         Label18.Name = "Label18"
-        Label18.Size = New Size(84, 13)
+        Label18.Size = New Size(85, 18)
         Label18.TabIndex = 14
         Label18.Text = "Current Price: ₱ "
         Label18.TextAlign = ContentAlignment.MiddleLeft
@@ -922,7 +922,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel12.Controls.Add(Label19, 0, 0)
         TableLayoutPanel12.Controls.Add(basicservice_newWashDry, 1, 0)
         TableLayoutPanel12.Controls.Add(Label20, 2, 0)
-        TableLayoutPanel12.Location = New Point(3, 150)
+        TableLayoutPanel12.Location = New Point(3, 162)
         TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
@@ -937,34 +937,34 @@ Partial Class PriceSettingsControl
         Label19.AutoSize = True
         Label19.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label19.Location = New Point(3, 6)
+        Label19.Location = New Point(3, 3)
         Label19.Name = "Label19"
-        Label19.Size = New Size(14, 13)
+        Label19.Size = New Size(14, 19)
         Label19.TabIndex = 14
         Label19.Text = "₱ "
         Label19.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' basicservice_newWashDry
+        ' basicservice_new3
         ' 
-        basicservice_newWashDry.BorderColor = Color.Gray
-        basicservice_newWashDry.BorderRadius = 5
-        basicservice_newWashDry.CustomizableEdges = CustomizableEdges13
-        basicservice_newWashDry.DefaultText = ""
-        basicservice_newWashDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        basicservice_newWashDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        basicservice_newWashDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_newWashDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_newWashDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_newWashDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_newWashDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_newWashDry.Location = New Point(23, 4)
-        basicservice_newWashDry.Margin = New Padding(3, 4, 3, 4)
-        basicservice_newWashDry.Name = "basicservice_newWashDry"
-        basicservice_newWashDry.PlaceholderText = ""
-        basicservice_newWashDry.SelectedText = ""
-        basicservice_newWashDry.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        basicservice_newWashDry.Size = New Size(77, 17)
-        basicservice_newWashDry.TabIndex = 15
+        basicservice_new3.BorderColor = Color.Gray
+        basicservice_new3.BorderRadius = 5
+        basicservice_new3.CustomizableEdges = CustomizableEdges13
+        basicservice_new3.DefaultText = ""
+        basicservice_new3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_new3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_new3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_new3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_new3.Location = New Point(23, 4)
+        basicservice_new3.Margin = New Padding(3, 4, 3, 4)
+        basicservice_new3.Name = "basicservice_new3"
+        basicservice_new3.PlaceholderText = ""
+        basicservice_new3.SelectedText = ""
+        basicservice_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        basicservice_new3.Size = New Size(77, 17)
+        basicservice_new3.TabIndex = 15
         ' 
         ' Label20
         ' 
@@ -972,9 +972,9 @@ Partial Class PriceSettingsControl
         Label20.AutoSize = True
         Label20.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label20.Location = New Point(106, 6)
+        Label20.Location = New Point(106, 3)
         Label20.Name = "Label20"
-        Label20.Size = New Size(24, 13)
+        Label20.Size = New Size(27, 19)
         Label20.TabIndex = 13
         Label20.Text = "/kg"
         Label20.TextAlign = ContentAlignment.MiddleLeft
@@ -988,7 +988,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel13.Controls.Add(Label21, 0, 0)
         TableLayoutPanel13.Controls.Add(basicservice_newDry, 1, 0)
         TableLayoutPanel13.Controls.Add(Label24, 2, 0)
-        TableLayoutPanel13.Location = New Point(3, 81)
+        TableLayoutPanel13.Location = New Point(3, 93)
         TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 1
@@ -1003,34 +1003,34 @@ Partial Class PriceSettingsControl
         Label21.AutoSize = True
         Label21.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label21.Location = New Point(3, 6)
+        Label21.Location = New Point(3, 3)
         Label21.Name = "Label21"
-        Label21.Size = New Size(14, 13)
+        Label21.Size = New Size(14, 19)
         Label21.TabIndex = 14
         Label21.Text = "₱ "
         Label21.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' basicservice_newDry
+        ' basicservice_new2
         ' 
-        basicservice_newDry.BorderColor = Color.Gray
-        basicservice_newDry.BorderRadius = 5
-        basicservice_newDry.CustomizableEdges = CustomizableEdges15
-        basicservice_newDry.DefaultText = ""
-        basicservice_newDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        basicservice_newDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        basicservice_newDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_newDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_newDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_newDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_newDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_newDry.Location = New Point(23, 4)
-        basicservice_newDry.Margin = New Padding(3, 4, 3, 4)
-        basicservice_newDry.Name = "basicservice_newDry"
-        basicservice_newDry.PlaceholderText = ""
-        basicservice_newDry.SelectedText = ""
-        basicservice_newDry.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        basicservice_newDry.Size = New Size(77, 17)
-        basicservice_newDry.TabIndex = 15
+        basicservice_new2.BorderColor = Color.Gray
+        basicservice_new2.BorderRadius = 5
+        basicservice_new2.CustomizableEdges = CustomizableEdges15
+        basicservice_new2.DefaultText = ""
+        basicservice_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_new2.Location = New Point(23, 4)
+        basicservice_new2.Margin = New Padding(3, 4, 3, 4)
+        basicservice_new2.Name = "basicservice_new2"
+        basicservice_new2.PlaceholderText = ""
+        basicservice_new2.SelectedText = ""
+        basicservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        basicservice_new2.Size = New Size(77, 17)
+        basicservice_new2.TabIndex = 15
         ' 
         ' Label24
         ' 
@@ -1038,9 +1038,9 @@ Partial Class PriceSettingsControl
         Label24.AutoSize = True
         Label24.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label24.Location = New Point(106, 6)
+        Label24.Location = New Point(106, 3)
         Label24.Name = "Label24"
-        Label24.Size = New Size(24, 13)
+        Label24.Size = New Size(27, 19)
         Label24.TabIndex = 13
         Label24.Text = "/kg"
         Label24.TextAlign = ContentAlignment.MiddleLeft
@@ -1051,9 +1051,9 @@ Partial Class PriceSettingsControl
         Label25.AutoSize = True
         Label25.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label25.Location = New Point(3, 66)
+        Label25.Location = New Point(3, 72)
         Label25.Name = "Label25"
-        Label25.Size = New Size(62, 13)
+        Label25.Size = New Size(61, 19)
         Label25.TabIndex = 13
         Label25.Text = "DRY ONLY"
         Label25.TextAlign = ContentAlignment.MiddleLeft
@@ -1066,7 +1066,7 @@ Partial Class PriceSettingsControl
         Label26.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label26.Location = New Point(3, 0)
         Label26.Name = "Label26"
-        Label26.Size = New Size(72, 13)
+        Label26.Size = New Size(72, 19)
         Label26.TabIndex = 11
         Label26.Text = "WASH ONLY"
         Label26.TextAlign = ContentAlignment.MiddleLeft
@@ -1080,7 +1080,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel14.Controls.Add(Label27, 0, 0)
         TableLayoutPanel14.Controls.Add(basicservice_newWash, 1, 0)
         TableLayoutPanel14.Controls.Add(Label28, 2, 0)
-        TableLayoutPanel14.Location = New Point(3, 15)
+        TableLayoutPanel14.Location = New Point(3, 21)
         TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 1
@@ -1095,34 +1095,34 @@ Partial Class PriceSettingsControl
         Label27.AutoSize = True
         Label27.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label27.Location = New Point(3, 7)
+        Label27.Location = New Point(3, 4)
         Label27.Name = "Label27"
-        Label27.Size = New Size(14, 13)
+        Label27.Size = New Size(14, 19)
         Label27.TabIndex = 14
         Label27.Text = "₱ "
         Label27.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' basicservice_newWash
+        ' basicservice_new1
         ' 
-        basicservice_newWash.BorderColor = Color.Gray
-        basicservice_newWash.BorderRadius = 5
-        basicservice_newWash.CustomizableEdges = CustomizableEdges17
-        basicservice_newWash.DefaultText = ""
-        basicservice_newWash.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        basicservice_newWash.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        basicservice_newWash.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_newWash.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        basicservice_newWash.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_newWash.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_newWash.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        basicservice_newWash.Location = New Point(23, 4)
-        basicservice_newWash.Margin = New Padding(3, 4, 3, 4)
-        basicservice_newWash.Name = "basicservice_newWash"
-        basicservice_newWash.PlaceholderText = ""
-        basicservice_newWash.SelectedText = ""
-        basicservice_newWash.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        basicservice_newWash.Size = New Size(77, 18)
-        basicservice_newWash.TabIndex = 15
+        basicservice_new1.BorderColor = Color.Gray
+        basicservice_new1.BorderRadius = 5
+        basicservice_new1.CustomizableEdges = CustomizableEdges17
+        basicservice_new1.DefaultText = ""
+        basicservice_new1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_new1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_new1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_new1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_new1.Location = New Point(23, 4)
+        basicservice_new1.Margin = New Padding(3, 4, 3, 4)
+        basicservice_new1.Name = "basicservice_new1"
+        basicservice_new1.PlaceholderText = ""
+        basicservice_new1.SelectedText = ""
+        basicservice_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        basicservice_new1.Size = New Size(77, 18)
+        basicservice_new1.TabIndex = 15
         ' 
         ' Label28
         ' 
@@ -1130,9 +1130,9 @@ Partial Class PriceSettingsControl
         Label28.AutoSize = True
         Label28.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label28.Location = New Point(106, 7)
+        Label28.Location = New Point(106, 4)
         Label28.Name = "Label28"
-        Label28.Size = New Size(24, 13)
+        Label28.Size = New Size(27, 19)
         Label28.TabIndex = 13
         Label28.Text = "/kg"
         Label28.TextAlign = ContentAlignment.MiddleLeft
@@ -1144,7 +1144,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel15.Controls.Add(basicservice_currentWashDry, 1, 0)
         TableLayoutPanel15.Controls.Add(Label30, 0, 0)
-        TableLayoutPanel15.Location = New Point(3, 183)
+        TableLayoutPanel15.Location = New Point(3, 195)
         TableLayoutPanel15.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 1
@@ -1154,16 +1154,16 @@ Partial Class PriceSettingsControl
         ' 
         ' basicservice_currentWashDry
         ' 
-        basicservice_currentWashDry.Anchor = AnchorStyles.Left
-        basicservice_currentWashDry.AutoSize = True
-        basicservice_currentWashDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        basicservice_currentWashDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        basicservice_currentWashDry.Location = New Point(97, 2)
-        basicservice_currentWashDry.Name = "basicservice_currentWashDry"
-        basicservice_currentWashDry.Size = New Size(29, 13)
-        basicservice_currentWashDry.TabIndex = 14
-        basicservice_currentWashDry.Text = "₱ 30"
-        basicservice_currentWashDry.TextAlign = ContentAlignment.MiddleLeft
+        basicservice_current3.Anchor = AnchorStyles.Left
+        basicservice_current3.AutoSize = True
+        basicservice_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_current3.Location = New Point(97, 0)
+        basicservice_current3.Name = "basicservice_current3"
+        basicservice_current3.Size = New Size(33, 18)
+        basicservice_current3.TabIndex = 14
+        basicservice_current3.Text = "₱ 30"
+        basicservice_current3.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label30
         ' 
@@ -1173,7 +1173,7 @@ Partial Class PriceSettingsControl
         Label30.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label30.Location = New Point(3, 2)
         Label30.Name = "Label30"
-        Label30.Size = New Size(84, 13)
+        Label30.Size = New Size(85, 18)
         Label30.TabIndex = 14
         Label30.Text = "Current Price: ₱ "
         Label30.TextAlign = ContentAlignment.MiddleLeft
@@ -1184,9 +1184,9 @@ Partial Class PriceSettingsControl
         Label31.AutoSize = True
         Label31.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label31.Location = New Point(3, 133)
+        Label31.Location = New Point(3, 144)
         Label31.Name = "Label31"
-        Label31.Size = New Size(75, 13)
+        Label31.Size = New Size(76, 16)
         Label31.TabIndex = 15
         Label31.Text = "WASH + DRY"
         Label31.TextAlign = ContentAlignment.MiddleLeft
@@ -1246,7 +1246,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel5.Controls.Add(selfservice_currentWash, 1, 0)
         TableLayoutPanel5.Controls.Add(Label13, 0, 0)
-        TableLayoutPanel5.Location = New Point(3, 46)
+        TableLayoutPanel5.Location = New Point(3, 52)
         TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 1
@@ -1256,16 +1256,16 @@ Partial Class PriceSettingsControl
         ' 
         ' selfservice_currentWash
         ' 
-        selfservice_currentWash.Anchor = AnchorStyles.Left
-        selfservice_currentWash.AutoSize = True
-        selfservice_currentWash.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_currentWash.Location = New Point(97, 2)
-        selfservice_currentWash.Name = "selfservice_currentWash"
-        selfservice_currentWash.Size = New Size(29, 13)
-        selfservice_currentWash.TabIndex = 14
-        selfservice_currentWash.Text = "₱ 40"
-        selfservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
+        selfservice_current1.Anchor = AnchorStyles.Left
+        selfservice_current1.AutoSize = True
+        selfservice_current1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_current1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_current1.Location = New Point(97, 0)
+        selfservice_current1.Name = "selfservice_current1"
+        selfservice_current1.Size = New Size(34, 18)
+        selfservice_current1.TabIndex = 14
+        selfservice_current1.Text = "₱ 40"
+        selfservice_current1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label13
         ' 
@@ -1275,7 +1275,7 @@ Partial Class PriceSettingsControl
         Label13.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label13.Location = New Point(3, 2)
         Label13.Name = "Label13"
-        Label13.Size = New Size(84, 13)
+        Label13.Size = New Size(85, 18)
         Label13.TabIndex = 14
         Label13.Text = "Current Price: ₱ "
         Label13.TextAlign = ContentAlignment.MiddleLeft
@@ -1287,7 +1287,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel4.Controls.Add(selfservice_currentDry, 1, 0)
         TableLayoutPanel4.Controls.Add(Label10, 0, 0)
-        TableLayoutPanel4.Location = New Point(3, 111)
+        TableLayoutPanel4.Location = New Point(3, 123)
         TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
@@ -1297,16 +1297,16 @@ Partial Class PriceSettingsControl
         ' 
         ' selfservice_currentDry
         ' 
-        selfservice_currentDry.Anchor = AnchorStyles.Left
-        selfservice_currentDry.AutoSize = True
-        selfservice_currentDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_currentDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_currentDry.Location = New Point(97, 2)
-        selfservice_currentDry.Name = "selfservice_currentDry"
-        selfservice_currentDry.Size = New Size(29, 13)
-        selfservice_currentDry.TabIndex = 14
-        selfservice_currentDry.Text = "₱ 30"
-        selfservice_currentDry.TextAlign = ContentAlignment.MiddleLeft
+        selfservice_current2.Anchor = AnchorStyles.Left
+        selfservice_current2.AutoSize = True
+        selfservice_current2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_current2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_current2.Location = New Point(97, 0)
+        selfservice_current2.Name = "selfservice_current2"
+        selfservice_current2.Size = New Size(33, 18)
+        selfservice_current2.TabIndex = 14
+        selfservice_current2.Text = "₱ 30"
+        selfservice_current2.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label10
         ' 
@@ -1316,7 +1316,7 @@ Partial Class PriceSettingsControl
         Label10.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label10.Location = New Point(3, 2)
         Label10.Name = "Label10"
-        Label10.Size = New Size(84, 13)
+        Label10.Size = New Size(85, 18)
         Label10.TabIndex = 14
         Label10.Text = "Current Price: ₱ "
         Label10.TextAlign = ContentAlignment.MiddleLeft
@@ -1330,7 +1330,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel6.Controls.Add(Label15, 0, 0)
         TableLayoutPanel6.Controls.Add(selfservice_newWashDry, 1, 0)
         TableLayoutPanel6.Controls.Add(Label16, 2, 0)
-        TableLayoutPanel6.Location = New Point(3, 150)
+        TableLayoutPanel6.Location = New Point(3, 162)
         TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 1
@@ -1345,34 +1345,34 @@ Partial Class PriceSettingsControl
         Label15.AutoSize = True
         Label15.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label15.Location = New Point(3, 6)
+        Label15.Location = New Point(3, 3)
         Label15.Name = "Label15"
-        Label15.Size = New Size(14, 13)
+        Label15.Size = New Size(14, 19)
         Label15.TabIndex = 14
         Label15.Text = "₱ "
         Label15.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' selfservice_newWashDry
+        ' selfservice_new3
         ' 
-        selfservice_newWashDry.BorderColor = Color.Gray
-        selfservice_newWashDry.BorderRadius = 5
-        selfservice_newWashDry.CustomizableEdges = CustomizableEdges21
-        selfservice_newWashDry.DefaultText = ""
-        selfservice_newWashDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        selfservice_newWashDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        selfservice_newWashDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_newWashDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_newWashDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_newWashDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_newWashDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_newWashDry.Location = New Point(23, 4)
-        selfservice_newWashDry.Margin = New Padding(3, 4, 3, 4)
-        selfservice_newWashDry.Name = "selfservice_newWashDry"
-        selfservice_newWashDry.PlaceholderText = ""
-        selfservice_newWashDry.SelectedText = ""
-        selfservice_newWashDry.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        selfservice_newWashDry.Size = New Size(77, 17)
-        selfservice_newWashDry.TabIndex = 15
+        selfservice_new3.BorderColor = Color.Gray
+        selfservice_new3.BorderRadius = 5
+        selfservice_new3.CustomizableEdges = CustomizableEdges21
+        selfservice_new3.DefaultText = ""
+        selfservice_new3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_new3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_new3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_new3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_new3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_new3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_new3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_new3.Location = New Point(23, 4)
+        selfservice_new3.Margin = New Padding(3, 4, 3, 4)
+        selfservice_new3.Name = "selfservice_new3"
+        selfservice_new3.PlaceholderText = ""
+        selfservice_new3.SelectedText = ""
+        selfservice_new3.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        selfservice_new3.Size = New Size(77, 17)
+        selfservice_new3.TabIndex = 15
         ' 
         ' Label16
         ' 
@@ -1380,9 +1380,9 @@ Partial Class PriceSettingsControl
         Label16.AutoSize = True
         Label16.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label16.Location = New Point(106, 6)
+        Label16.Location = New Point(106, 3)
         Label16.Name = "Label16"
-        Label16.Size = New Size(24, 13)
+        Label16.Size = New Size(27, 19)
         Label16.TabIndex = 13
         Label16.Text = "/kg"
         Label16.TextAlign = ContentAlignment.MiddleLeft
@@ -1396,7 +1396,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel17.Controls.Add(Label14, 0, 0)
         TableLayoutPanel17.Controls.Add(selfservice_newDry, 1, 0)
         TableLayoutPanel17.Controls.Add(Label33, 2, 0)
-        TableLayoutPanel17.Location = New Point(3, 81)
+        TableLayoutPanel17.Location = New Point(3, 93)
         TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
@@ -1411,34 +1411,34 @@ Partial Class PriceSettingsControl
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label14.Location = New Point(3, 6)
+        Label14.Location = New Point(3, 3)
         Label14.Name = "Label14"
-        Label14.Size = New Size(14, 13)
+        Label14.Size = New Size(14, 19)
         Label14.TabIndex = 14
         Label14.Text = "₱ "
         Label14.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' selfservice_newDry
+        ' selfservice_new2
         ' 
-        selfservice_newDry.BorderColor = Color.Gray
-        selfservice_newDry.BorderRadius = 5
-        selfservice_newDry.CustomizableEdges = CustomizableEdges23
-        selfservice_newDry.DefaultText = ""
-        selfservice_newDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        selfservice_newDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        selfservice_newDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_newDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_newDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_newDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_newDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_newDry.Location = New Point(23, 4)
-        selfservice_newDry.Margin = New Padding(3, 4, 3, 4)
-        selfservice_newDry.Name = "selfservice_newDry"
-        selfservice_newDry.PlaceholderText = ""
-        selfservice_newDry.SelectedText = ""
-        selfservice_newDry.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        selfservice_newDry.Size = New Size(77, 17)
-        selfservice_newDry.TabIndex = 15
+        selfservice_new2.BorderColor = Color.Gray
+        selfservice_new2.BorderRadius = 5
+        selfservice_new2.CustomizableEdges = CustomizableEdges23
+        selfservice_new2.DefaultText = ""
+        selfservice_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_new2.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_new2.Location = New Point(23, 4)
+        selfservice_new2.Margin = New Padding(3, 4, 3, 4)
+        selfservice_new2.Name = "selfservice_new2"
+        selfservice_new2.PlaceholderText = ""
+        selfservice_new2.SelectedText = ""
+        selfservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        selfservice_new2.Size = New Size(77, 17)
+        selfservice_new2.TabIndex = 15
         ' 
         ' Label33
         ' 
@@ -1446,9 +1446,9 @@ Partial Class PriceSettingsControl
         Label33.AutoSize = True
         Label33.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label33.Location = New Point(106, 6)
+        Label33.Location = New Point(106, 3)
         Label33.Name = "Label33"
-        Label33.Size = New Size(24, 13)
+        Label33.Size = New Size(27, 19)
         Label33.TabIndex = 13
         Label33.Text = "/kg"
         Label33.TextAlign = ContentAlignment.MiddleLeft
@@ -1459,9 +1459,9 @@ Partial Class PriceSettingsControl
         Label34.AutoSize = True
         Label34.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label34.Location = New Point(3, 66)
+        Label34.Location = New Point(3, 72)
         Label34.Name = "Label34"
-        Label34.Size = New Size(62, 13)
+        Label34.Size = New Size(61, 19)
         Label34.TabIndex = 13
         Label34.Text = "DRY ONLY"
         Label34.TextAlign = ContentAlignment.MiddleLeft
@@ -1474,7 +1474,7 @@ Partial Class PriceSettingsControl
         Label35.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label35.Location = New Point(3, 0)
         Label35.Name = "Label35"
-        Label35.Size = New Size(72, 13)
+        Label35.Size = New Size(72, 19)
         Label35.TabIndex = 11
         Label35.Text = "WASH ONLY"
         Label35.TextAlign = ContentAlignment.MiddleLeft
@@ -1488,7 +1488,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel20.Controls.Add(Label36, 0, 0)
         TableLayoutPanel20.Controls.Add(selfservice_newWash, 1, 0)
         TableLayoutPanel20.Controls.Add(Label37, 2, 0)
-        TableLayoutPanel20.Location = New Point(3, 15)
+        TableLayoutPanel20.Location = New Point(3, 21)
         TableLayoutPanel20.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
@@ -1503,34 +1503,34 @@ Partial Class PriceSettingsControl
         Label36.AutoSize = True
         Label36.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label36.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label36.Location = New Point(3, 7)
+        Label36.Location = New Point(3, 4)
         Label36.Name = "Label36"
-        Label36.Size = New Size(14, 13)
+        Label36.Size = New Size(14, 19)
         Label36.TabIndex = 14
         Label36.Text = "₱ "
         Label36.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' selfservice_newWash
+        ' selfservice_new1
         ' 
-        selfservice_newWash.BorderColor = Color.Gray
-        selfservice_newWash.BorderRadius = 5
-        selfservice_newWash.CustomizableEdges = CustomizableEdges25
-        selfservice_newWash.DefaultText = ""
-        selfservice_newWash.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        selfservice_newWash.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        selfservice_newWash.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_newWash.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        selfservice_newWash.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_newWash.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_newWash.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        selfservice_newWash.Location = New Point(23, 4)
-        selfservice_newWash.Margin = New Padding(3, 4, 3, 4)
-        selfservice_newWash.Name = "selfservice_newWash"
-        selfservice_newWash.PlaceholderText = ""
-        selfservice_newWash.SelectedText = ""
-        selfservice_newWash.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        selfservice_newWash.Size = New Size(77, 18)
-        selfservice_newWash.TabIndex = 15
+        selfservice_new1.BorderColor = Color.Gray
+        selfservice_new1.BorderRadius = 5
+        selfservice_new1.CustomizableEdges = CustomizableEdges25
+        selfservice_new1.DefaultText = ""
+        selfservice_new1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_new1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_new1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_new1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_new1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_new1.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_new1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_new1.Location = New Point(23, 4)
+        selfservice_new1.Margin = New Padding(3, 4, 3, 4)
+        selfservice_new1.Name = "selfservice_new1"
+        selfservice_new1.PlaceholderText = ""
+        selfservice_new1.SelectedText = ""
+        selfservice_new1.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        selfservice_new1.Size = New Size(77, 18)
+        selfservice_new1.TabIndex = 15
         ' 
         ' Label37
         ' 
@@ -1538,9 +1538,9 @@ Partial Class PriceSettingsControl
         Label37.AutoSize = True
         Label37.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label37.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label37.Location = New Point(106, 7)
+        Label37.Location = New Point(106, 4)
         Label37.Name = "Label37"
-        Label37.Size = New Size(24, 13)
+        Label37.Size = New Size(27, 19)
         Label37.TabIndex = 13
         Label37.Text = "/kg"
         Label37.TextAlign = ContentAlignment.MiddleLeft
@@ -1552,7 +1552,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
         TableLayoutPanel11.Controls.Add(selfservice_currentWashDry, 1, 0)
         TableLayoutPanel11.Controls.Add(Label23, 0, 0)
-        TableLayoutPanel11.Location = New Point(3, 183)
+        TableLayoutPanel11.Location = New Point(3, 195)
         TableLayoutPanel11.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
@@ -1562,16 +1562,16 @@ Partial Class PriceSettingsControl
         ' 
         ' selfservice_currentWashDry
         ' 
-        selfservice_currentWashDry.Anchor = AnchorStyles.Left
-        selfservice_currentWashDry.AutoSize = True
-        selfservice_currentWashDry.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selfservice_currentWashDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        selfservice_currentWashDry.Location = New Point(97, 2)
-        selfservice_currentWashDry.Name = "selfservice_currentWashDry"
-        selfservice_currentWashDry.Size = New Size(29, 13)
-        selfservice_currentWashDry.TabIndex = 14
-        selfservice_currentWashDry.Text = "₱ 30"
-        selfservice_currentWashDry.TextAlign = ContentAlignment.MiddleLeft
+        selfservice_current3.Anchor = AnchorStyles.Left
+        selfservice_current3.AutoSize = True
+        selfservice_current3.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_current3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_current3.Location = New Point(97, 0)
+        selfservice_current3.Name = "selfservice_current3"
+        selfservice_current3.Size = New Size(33, 18)
+        selfservice_current3.TabIndex = 14
+        selfservice_current3.Text = "₱ 30"
+        selfservice_current3.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label23
         ' 
@@ -1581,7 +1581,7 @@ Partial Class PriceSettingsControl
         Label23.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label23.Location = New Point(3, 2)
         Label23.Name = "Label23"
-        Label23.Size = New Size(84, 13)
+        Label23.Size = New Size(85, 18)
         Label23.TabIndex = 14
         Label23.Text = "Current Price: ₱ "
         Label23.TextAlign = ContentAlignment.MiddleLeft
@@ -1592,9 +1592,9 @@ Partial Class PriceSettingsControl
         Label11.AutoSize = True
         Label11.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label11.Location = New Point(3, 133)
+        Label11.Location = New Point(3, 144)
         Label11.Name = "Label11"
-        Label11.Size = New Size(75, 13)
+        Label11.Size = New Size(76, 16)
         Label11.TabIndex = 15
         Label11.Text = "WASH + DRY"
         Label11.TextAlign = ContentAlignment.MiddleLeft

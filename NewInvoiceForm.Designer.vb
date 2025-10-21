@@ -22,27 +22,27 @@ Partial Class NewInvoiceForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewInvoiceForm))
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -123,7 +123,7 @@ Partial Class NewInvoiceForm
         Label33 = New Label()
         Label32 = New Label()
         TableLayoutPanel24 = New TableLayoutPanel()
-        Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
+        btnBack = New Guna.UI2.WinForms.Guna2GradientButton()
         CloseBtn = New Guna.UI2.WinForms.Guna2GradientButton()
         TableLayoutPanel1.SuspendLayout()
         Guna2GradientPanel1.SuspendLayout()
@@ -191,7 +191,7 @@ Partial Class NewInvoiceForm
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges1
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges21
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
@@ -199,7 +199,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Margin = New Padding(0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2GradientPanel1.Size = New Size(440, 143)
         Guna2GradientPanel1.TabIndex = 0
         ' 
@@ -497,7 +497,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel3.BorderRadius = 6
         Guna2GradientPanel3.BorderThickness = 1
         Guna2GradientPanel3.Controls.Add(TableLayoutPanel12)
-        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges3
+        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges23
         Guna2GradientPanel3.Dock = DockStyle.Fill
         Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel3.FillColor2 = Color.White
@@ -506,7 +506,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel3.Margin = New Padding(10)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
         Guna2GradientPanel3.Padding = New Padding(5)
-        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2GradientPanel3.Size = New Size(197, 124)
         Guna2GradientPanel3.TabIndex = 1
         ' 
@@ -629,7 +629,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel2.BorderRadius = 6
         Guna2GradientPanel2.BorderThickness = 1
         Guna2GradientPanel2.Controls.Add(TableLayoutPanel9)
-        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges5
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges25
         Guna2GradientPanel2.Dock = DockStyle.Fill
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel2.FillColor2 = Color.White
@@ -638,7 +638,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel2.Margin = New Padding(10)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
         Guna2GradientPanel2.Padding = New Padding(5)
-        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2GradientPanel2.Size = New Size(197, 124)
         Guna2GradientPanel2.TabIndex = 0
         ' 
@@ -1102,7 +1102,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel4.BorderRadius = 6
         Guna2GradientPanel4.BorderThickness = 1
         Guna2GradientPanel4.Controls.Add(TableLayoutPanel21)
-        Guna2GradientPanel4.CustomizableEdges = CustomizableEdges15
+        Guna2GradientPanel4.CustomizableEdges = CustomizableEdges27
         Guna2GradientPanel4.Dock = DockStyle.Fill
         Guna2GradientPanel4.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel4.FillColor2 = Color.White
@@ -1110,7 +1110,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel4.Location = New Point(10, 467)
         Guna2GradientPanel4.Margin = New Padding(10, 3, 10, 3)
         Guna2GradientPanel4.Name = "Guna2GradientPanel4"
-        Guna2GradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2GradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2GradientPanel4.Size = New Size(420, 108)
         Guna2GradientPanel4.TabIndex = 4
         ' 
@@ -1167,7 +1167,7 @@ Partial Class NewInvoiceForm
         GCashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         GCashBtn.BorderRadius = 3
         GCashBtn.BorderThickness = 1
-        GCashBtn.CustomizableEdges = CustomizableEdges7
+        GCashBtn.CustomizableEdges = CustomizableEdges29
         GCashBtn.DisabledState.BorderColor = Color.DarkGray
         GCashBtn.DisabledState.CustomBorderColor = Color.DarkGray
         GCashBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1182,7 +1182,7 @@ Partial Class NewInvoiceForm
         GCashBtn.Location = New Point(141, 4)
         GCashBtn.Margin = New Padding(4)
         GCashBtn.Name = "GCashBtn"
-        GCashBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        GCashBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         GCashBtn.Size = New Size(129, 37)
         GCashBtn.TabIndex = 2
         GCashBtn.Text = "     G-Cash"
@@ -1192,7 +1192,7 @@ Partial Class NewInvoiceForm
         cashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         cashBtn.BorderRadius = 3
         cashBtn.BorderThickness = 1
-        cashBtn.CustomizableEdges = CustomizableEdges9
+        cashBtn.CustomizableEdges = CustomizableEdges31
         cashBtn.DisabledState.BorderColor = Color.DarkGray
         cashBtn.DisabledState.CustomBorderColor = Color.DarkGray
         cashBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1207,7 +1207,7 @@ Partial Class NewInvoiceForm
         cashBtn.Location = New Point(4, 4)
         cashBtn.Margin = New Padding(4)
         cashBtn.Name = "cashBtn"
-        cashBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        cashBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         cashBtn.Size = New Size(129, 37)
         cashBtn.TabIndex = 1
         cashBtn.Text = "     Cash"
@@ -1217,7 +1217,7 @@ Partial Class NewInvoiceForm
         mayaBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         mayaBtn.BorderRadius = 3
         mayaBtn.BorderThickness = 1
-        mayaBtn.CustomizableEdges = CustomizableEdges11
+        mayaBtn.CustomizableEdges = CustomizableEdges33
         mayaBtn.DisabledState.BorderColor = Color.DarkGray
         mayaBtn.DisabledState.CustomBorderColor = Color.DarkGray
         mayaBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1232,7 +1232,7 @@ Partial Class NewInvoiceForm
         mayaBtn.Location = New Point(279, 4)
         mayaBtn.Margin = New Padding(5, 4, 4, 4)
         mayaBtn.Name = "mayaBtn"
-        mayaBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        mayaBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         mayaBtn.Size = New Size(131, 37)
         mayaBtn.TabIndex = 0
         mayaBtn.Text = "     Maya"
@@ -1240,7 +1240,7 @@ Partial Class NewInvoiceForm
         ' selectBtn
         ' 
         selectBtn.BorderRadius = 3
-        selectBtn.CustomizableEdges = CustomizableEdges13
+        selectBtn.CustomizableEdges = CustomizableEdges35
         selectBtn.DisabledState.BorderColor = Color.DarkGray
         selectBtn.DisabledState.CustomBorderColor = Color.DarkGray
         selectBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1254,7 +1254,7 @@ Partial Class NewInvoiceForm
         selectBtn.Location = New Point(307, 81)
         selectBtn.Margin = New Padding(4, 5, 4, 5)
         selectBtn.Name = "selectBtn"
-        selectBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        selectBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         selectBtn.Size = New Size(109, 22)
         selectBtn.TabIndex = 10
         selectBtn.Text = "SELECT"
@@ -1351,8 +1351,8 @@ Partial Class NewInvoiceForm
         TableLayoutPanel24.ColumnCount = 2
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.Controls.Add(Guna2GradientButton2, 0, 0)
         TableLayoutPanel24.Controls.Add(CloseBtn, 1, 0)
+        TableLayoutPanel24.Controls.Add(btnBack, 0, 0)
         TableLayoutPanel24.Dock = DockStyle.Fill
         TableLayoutPanel24.Location = New Point(7, 689)
         TableLayoutPanel24.Margin = New Padding(7, 4, 7, 4)
@@ -1362,35 +1362,34 @@ Partial Class NewInvoiceForm
         TableLayoutPanel24.Size = New Size(426, 22)
         TableLayoutPanel24.TabIndex = 6
         ' 
-        ' Guna2GradientButton2
+        ' btnBack
         ' 
-        Guna2GradientButton2.BorderRadius = 3
-        Guna2GradientButton2.CustomizableEdges = CustomizableEdges17
-        Guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray
-        Guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientButton2.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2GradientButton2.Dock = DockStyle.Fill
-        Guna2GradientButton2.FillColor = Color.Empty
-        Guna2GradientButton2.FillColor2 = Color.Empty
-        Guna2GradientButton2.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2GradientButton2.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientButton2.Image = CType(resources.GetObject("Guna2GradientButton2.Image"), Image)
-        Guna2GradientButton2.ImageAlign = HorizontalAlignment.Left
-        Guna2GradientButton2.Location = New Point(0, 0)
-        Guna2GradientButton2.Margin = New Padding(0)
-        Guna2GradientButton2.Name = "Guna2GradientButton2"
-        Guna2GradientButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        Guna2GradientButton2.Size = New Size(213, 22)
-        Guna2GradientButton2.TabIndex = 13
-        Guna2GradientButton2.Text = "Back"
-        Guna2GradientButton2.TextAlign = HorizontalAlignment.Left
+        btnBack.BorderRadius = 3
+        btnBack.CustomizableEdges = CustomizableEdges37
+        btnBack.DisabledState.BorderColor = Color.DarkGray
+        btnBack.DisabledState.CustomBorderColor = Color.DarkGray
+        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnBack.FillColor = Color.Empty
+        btnBack.FillColor2 = Color.Empty
+        btnBack.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnBack.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        btnBack.Image = CType(resources.GetObject("btnBack.Image"), Image)
+        btnBack.ImageAlign = HorizontalAlignment.Left
+        btnBack.Location = New Point(0, 0)
+        btnBack.Margin = New Padding(0)
+        btnBack.Name = "btnBack"
+        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        btnBack.Size = New Size(84, 22)
+        btnBack.TabIndex = 13
+        btnBack.Text = "Back"
+        btnBack.TextAlign = HorizontalAlignment.Left
         ' 
         ' CloseBtn
         ' 
         CloseBtn.BorderRadius = 3
-        CloseBtn.CustomizableEdges = CustomizableEdges19
+        CloseBtn.CustomizableEdges = CustomizableEdges39
         CloseBtn.DisabledState.BorderColor = Color.DarkGray
         CloseBtn.DisabledState.CustomBorderColor = Color.DarkGray
         CloseBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1404,7 +1403,7 @@ Partial Class NewInvoiceForm
         CloseBtn.Location = New Point(310, 0)
         CloseBtn.Margin = New Padding(0)
         CloseBtn.Name = "CloseBtn"
-        CloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        CloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         CloseBtn.Size = New Size(116, 22)
         CloseBtn.TabIndex = 12
         CloseBtn.Text = "Close"
@@ -1414,6 +1413,7 @@ Partial Class NewInvoiceForm
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        CancelButton = CloseBtn
         ClientSize = New Size(440, 715)
         Controls.Add(TableLayoutPanel1)
         FormBorderStyle = FormBorderStyle.None
@@ -1542,5 +1542,5 @@ Partial Class NewInvoiceForm
     Friend WithEvents Label32 As Label
     Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
     Friend WithEvents CloseBtn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2GradientButton
 End Class
