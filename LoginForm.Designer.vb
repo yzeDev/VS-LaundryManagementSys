@@ -30,13 +30,14 @@ Partial Class LoginForm
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        picEye = New PictureBox()
         Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         TableLayoutPanel5 = New TableLayoutPanel()
         btnLogin = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -59,6 +60,7 @@ Partial Class LoginForm
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2GradientPanel1.SuspendLayout()
+        CType(picEye, ComponentModel.ISupportInitialize).BeginInit()
         Guna2CustomGradientPanel1.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
@@ -73,6 +75,7 @@ Partial Class LoginForm
         ' 
         Guna2GradientPanel1.AutoSize = True
         Guna2GradientPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Guna2GradientPanel1.Controls.Add(picEye)
         Guna2GradientPanel1.Controls.Add(Guna2CustomGradientPanel1)
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
         Guna2GradientPanel1.Controls.Add(Guna2PictureBox2)
@@ -88,6 +91,15 @@ Partial Class LoginForm
         Guna2GradientPanel1.Size = New Size(928, 476)
         Guna2GradientPanel1.TabIndex = 0
         ' 
+        ' picEye
+        ' 
+        picEye.BackColor = Color.Transparent
+        picEye.Location = New Point(492, 423)
+        picEye.Name = "picEye"
+        picEye.Size = New Size(100, 50)
+        picEye.TabIndex = 5
+        picEye.TabStop = False
+        ' 
         ' Guna2CustomGradientPanel1
         ' 
         Guna2CustomGradientPanel1.BackColor = Color.Transparent
@@ -96,7 +108,8 @@ Partial Class LoginForm
         Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges7
         Guna2CustomGradientPanel1.Location = New Point(595, 27)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 20
+        Guna2CustomGradientPanel1.Quality = 20
+        Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 50
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2CustomGradientPanel1.Size = New Size(300, 417)
         Guna2CustomGradientPanel1.TabIndex = 4
@@ -174,18 +187,17 @@ Partial Class LoginForm
         gtbPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         gtbPassword.Dock = DockStyle.Fill
         gtbPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gtbPassword.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        gtbPassword.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         gtbPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gtbPassword.IconRight = CType(resources.GetObject("gtbPassword.IconRight"), Image)
         gtbPassword.IconRightOffset = New Point(5, 0)
-        gtbPassword.Location = New Point(3, 40)
-        gtbPassword.Margin = New Padding(3, 4, 3, 4)
+        gtbPassword.Location = New Point(4, 43)
+        gtbPassword.Margin = New Padding(4, 7, 4, 7)
         gtbPassword.Name = "gtbPassword"
         gtbPassword.PasswordChar = "•"c
         gtbPassword.PlaceholderText = ""
         gtbPassword.SelectedText = ""
         gtbPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        gtbPassword.Size = New Size(288, 28)
+        gtbPassword.Size = New Size(286, 22)
         gtbPassword.TabIndex = 4
         ' 
         ' Label6
@@ -421,6 +433,7 @@ Partial Class LoginForm
         StartPosition = FormStartPosition.CenterScreen
         Text = "Bubblefresh"
         Guna2GradientPanel1.ResumeLayout(False)
+        CType(picEye, ComponentModel.ISupportInitialize).EndInit()
         Guna2CustomGradientPanel1.ResumeLayout(False)
         TableLayoutPanel5.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
@@ -459,4 +472,5 @@ Partial Class LoginForm
     Friend WithEvents Label9 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents picEye As PictureBox
 End Class
