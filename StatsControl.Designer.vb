@@ -29,11 +29,20 @@ Partial Class StatsControl
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
+        Panel1 = New Panel()
+        Label1 = New Label()
+        lblStatistics = New Label()
+        Panel2 = New Panel()
+        cmbPeriod = New ComboBox()
+        Label2 = New Label()
+        Panel3 = New Panel()
+        dtpEndDate = New DateTimePicker()
+        Label3 = New Label()
         Panel4 = New Panel()
         Label4 = New Label()
         Panel5 = New Panel()
@@ -62,31 +71,17 @@ Partial Class StatsControl
         Panel9 = New Panel()
         TableLayoutPanel3 = New TableLayoutPanel()
         TableLayoutPanel4 = New TableLayoutPanel()
-        Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
-        TableLayoutPanel11 = New TableLayoutPanel()
-        Label15 = New Label()
-        PictureBox2 = New PictureBox()
-        Panel12 = New Panel()
-        TextBox2 = New TextBox()
         TableLayoutPanel5 = New TableLayoutPanel()
         Label11 = New Label()
-        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
-        TableLayoutPanel10 = New TableLayoutPanel()
-        Label13 = New Label()
-        PictureBox1 = New PictureBox()
-        Panel11 = New Panel()
-        TextBox1 = New TextBox()
         statspanel = New Panel()
-        Panel2 = New Panel()
-        TableLayoutPanel9 = New TableLayoutPanel()
-        cmbPeriod = New ComboBox()
-        Label2 = New Label()
-        Panel3 = New Panel()
-        TableLayoutPanel12 = New TableLayoutPanel()
-        Panel1 = New Panel()
-        Label1 = New Label()
-        lblStatistics = New Label()
+        Label13 = New Label()
+        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Label15 = New Label()
         TableLayoutPanel1.SuspendLayout()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -102,19 +97,9 @@ Partial Class StatsControl
         Panel9.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
-        Guna2CustomGradientPanel2.SuspendLayout()
-        TableLayoutPanel11.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        Panel12.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         Guna2CustomGradientPanel1.SuspendLayout()
-        TableLayoutPanel10.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel11.SuspendLayout()
-        Panel2.SuspendLayout()
-        TableLayoutPanel9.SuspendLayout()
-        Panel3.SuspendLayout()
-        Panel1.SuspendLayout()
+        Guna2CustomGradientPanel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -122,31 +107,119 @@ Partial Class StatsControl
         TableLayoutPanel1.ColumnCount = 2
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.Controls.Add(Panel1, 0, 0)
+        TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
+        TableLayoutPanel1.Controls.Add(Panel3, 1, 1)
         TableLayoutPanel1.Controls.Add(Panel4, 0, 2)
         TableLayoutPanel1.Controls.Add(Panel5, 0, 3)
         TableLayoutPanel1.Controls.Add(Panel9, 0, 4)
-        TableLayoutPanel1.Controls.Add(Panel2, 0, 1)
-        TableLayoutPanel1.Controls.Add(Panel3, 1, 1)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 4
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7.78267241F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7.195301F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 22.6138039F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 62.26138F))
+        TableLayoutPanel1.RowCount = 5
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 17.9148312F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 5.28634357F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 6.46108675F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 17.9148312F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 52.42291F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel1.Size = New Size(900, 681)
         TableLayoutPanel1.TabIndex = 0
+        ' 
+        ' Panel1
+        ' 
+        TableLayoutPanel1.SetColumnSpan(Panel1, 2)
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(lblStatistics)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(3, 3)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(894, 116)
+        Panel1.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(3, 42)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(590, 21)
+        Label1.TabIndex = 2
+        Label1.Text = "View sales trends, order volumes, and revenue breakdowns across different periods."
+        ' 
+        ' lblStatistics
+        ' 
+        lblStatistics.AutoSize = True
+        lblStatistics.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblStatistics.Location = New Point(-3, -3)
+        lblStatistics.Name = "lblStatistics"
+        lblStatistics.Size = New Size(151, 45)
+        lblStatistics.TabIndex = 1
+        lblStatistics.Text = "Statistics"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(cmbPeriod)
+        Panel2.Controls.Add(Label2)
+        Panel2.Location = New Point(3, 125)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(444, 29)
+        Panel2.TabIndex = 1
+        ' 
+        ' cmbPeriod
+        ' 
+        cmbPeriod.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        cmbPeriod.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbPeriod.FormattingEnabled = True
+        cmbPeriod.Location = New Point(196, 2)
+        cmbPeriod.Name = "cmbPeriod"
+        cmbPeriod.Size = New Size(121, 21)
+        cmbPeriod.TabIndex = 1
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.None
+        Label2.AutoSize = True
+        Label2.Location = New Point(146, 7)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(44, 15)
+        Label2.TabIndex = 0
+        Label2.Text = "Period:"
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(dtpEndDate)
+        Panel3.Controls.Add(Label3)
+        Panel3.Dock = DockStyle.Fill
+        Panel3.Location = New Point(453, 125)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(444, 30)
+        Panel3.TabIndex = 2
+        ' 
+        ' dtpEndDate
+        ' 
+        dtpEndDate.Location = New Point(223, 0)
+        dtpEndDate.Name = "dtpEndDate"
+        dtpEndDate.Size = New Size(218, 23)
+        dtpEndDate.TabIndex = 1
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(157, 5)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(60, 15)
+        Label3.TabIndex = 0
+        Label3.Text = "End Date: "
         ' 
         ' Panel4
         ' 
         TableLayoutPanel1.SetColumnSpan(Panel4, 2)
         Panel4.Controls.Add(Label4)
         Panel4.Dock = DockStyle.Fill
-        Panel4.Location = New Point(3, 101)
+        Panel4.Location = New Point(3, 161)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(894, 143)
+        Panel4.Size = New Size(894, 38)
         Panel4.TabIndex = 3
         ' 
         ' Label4
@@ -165,7 +238,7 @@ Partial Class StatsControl
         TableLayoutPanel1.SetColumnSpan(Panel5, 2)
         Panel5.Controls.Add(TableLayoutPanel2)
         Panel5.Dock = DockStyle.Fill
-        Panel5.Location = New Point(3, 250)
+        Panel5.Location = New Point(3, 205)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(894, 406)
         Panel5.TabIndex = 4
@@ -243,9 +316,8 @@ Partial Class StatsControl
         ' 
         Label16.AutoSize = True
         Label16.Dock = DockStyle.Fill
-        Label16.Font = New Font("Poppins", 8.25F)
-        Label16.ForeColor = SystemColors.ControlDarkDark
-        Label16.Location = New Point(3, 317)
+        Label16.Font = New Font("Segoe UI", 8.25F)
+        Label16.Location = New Point(3, 85)
         Label16.Name = "Label16"
         Label16.Size = New Size(184, 81)
         Label16.TabIndex = 6
@@ -273,9 +345,8 @@ Partial Class StatsControl
         ' 
         Label10.AutoSize = True
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 8.25F)
-        Label10.ForeColor = SystemColors.ControlDarkDark
-        Label10.Location = New Point(3, 98)
+        Label10.Font = New Font("Segoe UI", 8.25F)
+        Label10.Location = New Point(3, 26)
         Label10.Name = "Label10"
         Label10.Size = New Size(184, 61)
         Label10.TabIndex = 1
@@ -318,9 +389,8 @@ Partial Class StatsControl
         ' 
         Label12.AutoSize = True
         Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Poppins", 8.25F)
-        Label12.ForeColor = SystemColors.ControlDarkDark
-        Label12.Location = New Point(3, 317)
+        Label12.Font = New Font("Segoe UI", 8.25F)
+        Label12.Location = New Point(3, 85)
         Label12.Name = "Label12"
         Label12.Size = New Size(176, 81)
         Label12.TabIndex = 4
@@ -353,9 +423,8 @@ Partial Class StatsControl
         ' 
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 8.25F)
-        Label6.ForeColor = SystemColors.ControlDarkDark
-        Label6.Location = New Point(3, 98)
+        Label6.Font = New Font("Segoe UI", 8.25F)
+        Label6.Location = New Point(3, 26)
         Label6.Name = "Label6"
         Label6.Size = New Size(176, 61)
         Label6.TabIndex = 1
@@ -436,9 +505,8 @@ Partial Class StatsControl
         ' 
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 8.25F)
-        Label14.ForeColor = SystemColors.ControlDarkDark
-        Label14.Location = New Point(3, 315)
+        Label14.Font = New Font("Segoe UI", 8.25F)
+        Label14.Location = New Point(3, 84)
         Label14.Name = "Label14"
         Label14.Size = New Size(180, 83)
         Label14.TabIndex = 5
@@ -470,9 +538,8 @@ Partial Class StatsControl
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 8.25F)
-        Label8.ForeColor = SystemColors.ControlDarkDark
-        Label8.Location = New Point(3, 98)
+        Label8.Font = New Font("Segoe UI", 8.25F)
+        Label8.Location = New Point(3, 26)
         Label8.Name = "Label8"
         Label8.Size = New Size(180, 60)
         Label8.TabIndex = 1
@@ -483,9 +550,9 @@ Partial Class StatsControl
         TableLayoutPanel1.SetColumnSpan(Panel9, 2)
         Panel9.Controls.Add(TableLayoutPanel3)
         Panel9.Dock = DockStyle.Fill
-        Panel9.Location = New Point(3, 662)
+        Panel9.Location = New Point(3, 327)
         Panel9.Name = "Panel9"
-        Panel9.Size = New Size(894, 16)
+        Panel9.Size = New Size(894, 351)
         Panel9.TabIndex = 5
         ' 
         ' TableLayoutPanel3
@@ -500,7 +567,7 @@ Partial Class StatsControl
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 1
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel3.Size = New Size(894, 16)
+        TableLayoutPanel3.Size = New Size(894, 351)
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' TableLayoutPanel4
@@ -516,87 +583,8 @@ Partial Class StatsControl
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 56.2308235F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 43.76918F))
-        TableLayoutPanel4.Size = New Size(293, 10)
+        TableLayoutPanel4.Size = New Size(293, 345)
         TableLayoutPanel4.TabIndex = 0
-        ' 
-        ' Guna2CustomGradientPanel2
-        ' 
-        Guna2CustomGradientPanel2.Controls.Add(TableLayoutPanel11)
-        Guna2CustomGradientPanel2.CustomizableEdges = CustomizableEdges7
-        Guna2CustomGradientPanel2.Dock = DockStyle.Fill
-        Guna2CustomGradientPanel2.FillColor = Color.FromArgb(CByte(235), CByte(125), CByte(56))
-        Guna2CustomGradientPanel2.FillColor2 = Color.FromArgb(CByte(235), CByte(125), CByte(56))
-        Guna2CustomGradientPanel2.FillColor3 = Color.FromArgb(CByte(152), CByte(0), CByte(46))
-        Guna2CustomGradientPanel2.FillColor4 = Color.FromArgb(CByte(152), CByte(0), CByte(46))
-        Guna2CustomGradientPanel2.Location = New Point(3, 18)
-        Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
-        Guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2CustomGradientPanel2.Size = New Size(287, 1)
-        Guna2CustomGradientPanel2.TabIndex = 3
-        ' 
-        ' TableLayoutPanel11
-        ' 
-        TableLayoutPanel11.BackColor = Color.Transparent
-        TableLayoutPanel11.ColumnCount = 2
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 21.9155865F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78.08441F))
-        TableLayoutPanel11.Controls.Add(Label15, 1, 0)
-        TableLayoutPanel11.Controls.Add(PictureBox2, 0, 0)
-        TableLayoutPanel11.Controls.Add(Panel12, 0, 1)
-        TableLayoutPanel11.Dock = DockStyle.Fill
-        TableLayoutPanel11.Location = New Point(0, 0)
-        TableLayoutPanel11.Name = "TableLayoutPanel11"
-        TableLayoutPanel11.RowCount = 2
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 71.73913F))
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 28.26087F))
-        TableLayoutPanel11.Size = New Size(287, 1)
-        TableLayoutPanel11.TabIndex = 0
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.BackColor = Color.Transparent
-        Label15.Dock = DockStyle.Fill
-        Label15.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
-        Label15.ForeColor = Color.White
-        Label15.Location = New Point(65, 0)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(219, 1)
-        Label15.TabIndex = 4
-        Label15.Text = "Delivery Fees"
-        Label15.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Dock = DockStyle.Fill
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(3, 3)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(56, 1)
-        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox2.TabIndex = 0
-        PictureBox2.TabStop = False
-        ' 
-        ' Panel12
-        ' 
-        TableLayoutPanel11.SetColumnSpan(Panel12, 2)
-        Panel12.Controls.Add(TextBox2)
-        Panel12.Dock = DockStyle.Fill
-        Panel12.Location = New Point(3, 3)
-        Panel12.Name = "Panel12"
-        Panel12.Size = New Size(281, 1)
-        Panel12.TabIndex = 5
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Dock = DockStyle.Bottom
-        TextBox2.Enabled = False
-        TextBox2.Location = New Point(0, -22)
-        TextBox2.Name = "TextBox2"
-        TextBox2.ReadOnly = True
-        TextBox2.Size = New Size(281, 23)
-        TextBox2.TabIndex = 7
-        TextBox2.TabStop = False
         ' 
         ' TableLayoutPanel5
         ' 
@@ -610,7 +598,7 @@ Partial Class StatsControl
         TableLayoutPanel5.RowCount = 2
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 83.3333359F))
-        TableLayoutPanel5.Size = New Size(287, 1)
+        TableLayoutPanel5.Size = New Size(287, 176)
         TableLayoutPanel5.TabIndex = 0
         ' 
         ' Label11
@@ -624,9 +612,31 @@ Partial Class StatsControl
         Label11.TabIndex = 0
         Label11.Text = "REVENUE BREAKDOWN"
         ' 
+        ' statspanel
+        ' 
+        statspanel.Dock = DockStyle.Fill
+        statspanel.Location = New Point(3, 3)
+        statspanel.Name = "statspanel"
+        statspanel.Size = New Size(589, 345)
+        statspanel.TabIndex = 1
+        ' 
+        ' Label13
+        ' 
+        Label13.Anchor = AnchorStyles.Right
+        Label13.AutoSize = True
+        Label13.BackColor = Color.Transparent
+        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.White
+        Label13.Location = New Point(187, 59)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(91, 17)
+        Label13.TabIndex = 4
+        Label13.Text = "Delivery Fees"
+        ' 
         ' Guna2CustomGradientPanel1
         ' 
-        Guna2CustomGradientPanel1.Controls.Add(TableLayoutPanel10)
+        Guna2CustomGradientPanel1.AutoRoundedCorners = True
+        Guna2CustomGradientPanel1.Controls.Add(Label13)
         Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges9
         Guna2CustomGradientPanel1.Dock = DockStyle.Fill
         Guna2CustomGradientPanel1.FillColor = Color.FromArgb(CByte(102), CByte(204), CByte(153))
@@ -636,180 +646,37 @@ Partial Class StatsControl
         Guna2CustomGradientPanel1.Location = New Point(3, 3)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2CustomGradientPanel1.Size = New Size(281, 1)
+        Guna2CustomGradientPanel1.Size = New Size(281, 141)
         Guna2CustomGradientPanel1.TabIndex = 0
         ' 
-        ' TableLayoutPanel10
+        ' Guna2CustomGradientPanel2
         ' 
-        TableLayoutPanel10.BackColor = Color.Transparent
-        TableLayoutPanel10.ColumnCount = 2
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 21.7081852F))
-        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 78.29182F))
-        TableLayoutPanel10.Controls.Add(Label13, 1, 0)
-        TableLayoutPanel10.Controls.Add(PictureBox1, 0, 0)
-        TableLayoutPanel10.Controls.Add(Panel11, 0, 1)
-        TableLayoutPanel10.Dock = DockStyle.Fill
-        TableLayoutPanel10.Location = New Point(0, 0)
-        TableLayoutPanel10.Name = "TableLayoutPanel10"
-        TableLayoutPanel10.RowCount = 2
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 71.12676F))
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 28.87324F))
-        TableLayoutPanel10.Size = New Size(281, 1)
-        TableLayoutPanel10.TabIndex = 0
+        Guna2CustomGradientPanel2.AutoRoundedCorners = True
+        Guna2CustomGradientPanel2.Controls.Add(Label15)
+        Guna2CustomGradientPanel2.CustomizableEdges = CustomizableEdges7
+        Guna2CustomGradientPanel2.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel2.FillColor = Color.FromArgb(CByte(235), CByte(125), CByte(56))
+        Guna2CustomGradientPanel2.FillColor2 = Color.FromArgb(CByte(235), CByte(125), CByte(56))
+        Guna2CustomGradientPanel2.FillColor3 = Color.FromArgb(CByte(152), CByte(0), CByte(46))
+        Guna2CustomGradientPanel2.FillColor4 = Color.FromArgb(CByte(152), CByte(0), CByte(46))
+        Guna2CustomGradientPanel2.Location = New Point(3, 205)
+        Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
+        Guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2CustomGradientPanel2.Size = New Size(287, 137)
+        Guna2CustomGradientPanel2.TabIndex = 3
         ' 
-        ' Label13
+        ' Label15
         ' 
-        Label13.AutoSize = True
-        Label13.BackColor = Color.Transparent
-        Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.ForeColor = Color.White
-        Label13.Location = New Point(64, 0)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(214, 1)
-        Label13.TabIndex = 4
-        Label13.Text = "Service Revenue"
-        Label13.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = Color.Transparent
-        PictureBox1.Dock = DockStyle.Fill
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(3, 3)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(55, 1)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 5
-        PictureBox1.TabStop = False
-        ' 
-        ' Panel11
-        ' 
-        TableLayoutPanel10.SetColumnSpan(Panel11, 2)
-        Panel11.Controls.Add(TextBox1)
-        Panel11.Dock = DockStyle.Fill
-        Panel11.Location = New Point(3, 3)
-        Panel11.Name = "Panel11"
-        Panel11.Size = New Size(275, 1)
-        Panel11.TabIndex = 6
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Dock = DockStyle.Bottom
-        TextBox1.Enabled = False
-        TextBox1.Location = New Point(0, -22)
-        TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(275, 23)
-        TextBox1.TabIndex = 6
-        TextBox1.TabStop = False
-        ' 
-        ' statspanel
-        ' 
-        statspanel.Dock = DockStyle.Fill
-        statspanel.Location = New Point(3, 3)
-        statspanel.Name = "statspanel"
-        statspanel.Size = New Size(589, 10)
-        statspanel.TabIndex = 1
-        ' 
-        ' Panel2
-        ' 
-        Panel2.Controls.Add(TableLayoutPanel9)
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(3, 54)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(444, 41)
-        Panel2.TabIndex = 6
-        ' 
-        ' TableLayoutPanel9
-        ' 
-        TableLayoutPanel9.ColumnCount = 2
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 139.0F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel9.Controls.Add(cmbPeriod, 1, 0)
-        TableLayoutPanel9.Controls.Add(Label2, 0, 0)
-        TableLayoutPanel9.Dock = DockStyle.Fill
-        TableLayoutPanel9.Location = New Point(0, 0)
-        TableLayoutPanel9.Name = "TableLayoutPanel9"
-        TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel9.Size = New Size(444, 41)
-        TableLayoutPanel9.TabIndex = 0
-        ' 
-        ' cmbPeriod
-        ' 
-        cmbPeriod.Dock = DockStyle.Fill
-        cmbPeriod.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbPeriod.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        cmbPeriod.FormattingEnabled = True
-        cmbPeriod.Location = New Point(142, 3)
-        cmbPeriod.Name = "cmbPeriod"
-        cmbPeriod.Size = New Size(299, 36)
-        cmbPeriod.TabIndex = 1
-        ' 
-        ' Label2
-        ' 
-        Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(3, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(133, 41)
-        Label2.TabIndex = 0
-        Label2.Text = "Period:"
-        Label2.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' Panel3
-        ' 
-        Panel3.Controls.Add(TableLayoutPanel12)
-        Panel3.Controls.Add(Panel1)
-        Panel3.Dock = DockStyle.Fill
-        Panel3.Location = New Point(453, 54)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(444, 41)
-        Panel3.TabIndex = 7
-        ' 
-        ' TableLayoutPanel12
-        ' 
-        TableLayoutPanel12.ColumnCount = 2
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.783783F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 66.21622F))
-        TableLayoutPanel12.Dock = DockStyle.Fill
-        TableLayoutPanel12.Location = New Point(0, 0)
-        TableLayoutPanel12.Name = "TableLayoutPanel12"
-        TableLayoutPanel12.RowCount = 1
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel12.Size = New Size(444, 41)
-        TableLayoutPanel12.TabIndex = 2
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(lblStatistics)
-        Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(444, 41)
-        Panel1.TabIndex = 1
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(3, 42)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(590, 21)
-        Label1.TabIndex = 2
-        Label1.Text = "View sales trends, order volumes, and revenue breakdowns across different periods."
-        ' 
-        ' lblStatistics
-        ' 
-        lblStatistics.AutoSize = True
-        lblStatistics.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblStatistics.Location = New Point(-3, -3)
-        lblStatistics.Name = "lblStatistics"
-        lblStatistics.Size = New Size(151, 45)
-        lblStatistics.TabIndex = 1
-        lblStatistics.Text = "Statistics"
+        Label15.Anchor = AnchorStyles.Right
+        Label15.AutoSize = True
+        Label15.BackColor = Color.Transparent
+        Label15.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.ForeColor = Color.White
+        Label15.Location = New Point(190, 60)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(91, 17)
+        Label15.TabIndex = 4
+        Label15.Text = "Delivery Fees"
         ' 
         ' StatsControl
         ' 
@@ -820,6 +687,12 @@ Partial Class StatsControl
         Name = "StatsControl"
         Size = New Size(900, 681)
         TableLayoutPanel1.ResumeLayout(False)
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
         Panel4.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
@@ -838,25 +711,12 @@ Partial Class StatsControl
         Panel9.ResumeLayout(False)
         TableLayoutPanel3.ResumeLayout(False)
         TableLayoutPanel4.ResumeLayout(False)
-        Guna2CustomGradientPanel2.ResumeLayout(False)
-        TableLayoutPanel11.ResumeLayout(False)
-        TableLayoutPanel11.PerformLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        Panel12.ResumeLayout(False)
-        Panel12.PerformLayout()
         TableLayoutPanel5.ResumeLayout(False)
         TableLayoutPanel5.PerformLayout()
         Guna2CustomGradientPanel1.ResumeLayout(False)
-        TableLayoutPanel10.ResumeLayout(False)
-        TableLayoutPanel10.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        Panel11.ResumeLayout(False)
-        Panel11.PerformLayout()
-        Panel2.ResumeLayout(False)
-        TableLayoutPanel9.ResumeLayout(False)
-        Panel3.ResumeLayout(False)
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
+        Guna2CustomGradientPanel1.PerformLayout()
+        Guna2CustomGradientPanel2.ResumeLayout(False)
+        Guna2CustomGradientPanel2.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -864,6 +724,7 @@ Partial Class StatsControl
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblStatistics As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents cmbPeriod As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel4 As Panel
@@ -885,6 +746,9 @@ Partial Class StatsControl
     Friend WithEvents lblOrderValue As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents dtpEndDate As DateTimePicker
+    Friend WithEvents Label3 As Label
     Friend WithEvents Panel9 As Panel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
@@ -901,17 +765,5 @@ Partial Class StatsControl
     Friend WithEvents Label13 As Label
     Friend WithEvents Guna2CustomGradientPanel2 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents Label15 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
 
 End Class
