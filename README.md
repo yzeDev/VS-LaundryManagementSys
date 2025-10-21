@@ -1,4 +1,4 @@
-# LaundryManagementSys  
+# Laundry Management System  
 Authors: Ashley Alcantara, Alyssa Cruz, Owen Miranda, Yzekeil Vinas  
 
 version 1.0.0  
