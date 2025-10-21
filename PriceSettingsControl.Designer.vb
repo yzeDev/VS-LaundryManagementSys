@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PriceSettingsControl
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class PriceSettingsControl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -231,7 +231,7 @@ Partial Class PriceSettingsControl
         ' 
         TableLayoutPanel18.BackColor = Color.Transparent
         TableLayoutPanel18.ColumnCount = 1
-        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel18.Controls.Add(TableLayoutPanel22, 0, 2)
         TableLayoutPanel18.Controls.Add(TableLayoutPanel23, 0, 8)
         TableLayoutPanel18.Controls.Add(TableLayoutPanel24, 0, 10)
@@ -253,10 +253,10 @@ Partial Class PriceSettingsControl
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
         TableLayoutPanel18.RowStyles.Add(New RowStyle())
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
-        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 23.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 16.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 33.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 6.0F))
         TableLayoutPanel18.Size = New Size(144, 220)
         TableLayoutPanel18.TabIndex = 18
         ' 
@@ -271,7 +271,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel22.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 1
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel22.Size = New Size(138, 18)
         TableLayoutPanel22.TabIndex = 12
         ' 
@@ -312,7 +312,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel23.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 1
-        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel23.Size = New Size(138, 18)
         TableLayoutPanel23.TabIndex = 16
         ' 
@@ -347,7 +347,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel24.ColumnCount = 3
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel24.Controls.Add(Label46, 0, 0)
         TableLayoutPanel24.Controls.Add(dryclean_newLarge, 1, 0)
         TableLayoutPanel24.Controls.Add(Label47, 2, 0)
@@ -355,8 +355,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel24.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel24.Name = "TableLayoutPanel24"
         TableLayoutPanel24.RowCount = 1
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
         TableLayoutPanel24.Size = New Size(138, 26)
         TableLayoutPanel24.TabIndex = 14
         ' 
@@ -413,7 +413,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel25.ColumnCount = 3
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel25.Controls.Add(Label48, 0, 0)
         TableLayoutPanel25.Controls.Add(dryclean_newMedium, 1, 0)
         TableLayoutPanel25.Controls.Add(Label49, 2, 0)
@@ -421,8 +421,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel25.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel25.Name = "TableLayoutPanel25"
         TableLayoutPanel25.RowCount = 1
-        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
         TableLayoutPanel25.Size = New Size(138, 26)
         TableLayoutPanel25.TabIndex = 13
         ' 
@@ -505,7 +505,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel26.ColumnCount = 3
         TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel26.Controls.Add(Label52, 0, 0)
         TableLayoutPanel26.Controls.Add(dryclean_newSmall, 1, 0)
         TableLayoutPanel26.Controls.Add(Label53, 2, 0)
@@ -513,8 +513,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel26.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel26.Name = "TableLayoutPanel26"
         TableLayoutPanel26.RowCount = 1
-        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
         TableLayoutPanel26.Size = New Size(138, 27)
         TableLayoutPanel26.TabIndex = 11
         ' 
@@ -578,7 +578,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel27.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel27.Name = "TableLayoutPanel27"
         TableLayoutPanel27.RowCount = 1
-        TableLayoutPanel27.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel27.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel27.Size = New Size(138, 18)
         TableLayoutPanel27.TabIndex = 16
         ' 
@@ -640,7 +640,7 @@ Partial Class PriceSettingsControl
         ' 
         TableLayoutPanel28.BackColor = Color.Transparent
         TableLayoutPanel28.ColumnCount = 1
-        TableLayoutPanel28.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel28.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel28.Controls.Add(TableLayoutPanel29, 0, 2)
         TableLayoutPanel28.Controls.Add(Label66, 0, 0)
         TableLayoutPanel28.Controls.Add(TableLayoutPanel33, 0, 1)
@@ -656,10 +656,10 @@ Partial Class PriceSettingsControl
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
         TableLayoutPanel28.RowStyles.Add(New RowStyle())
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
-        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 23.0F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 16.0F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 33.0F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 6.0F))
         TableLayoutPanel28.Size = New Size(144, 220)
         TableLayoutPanel28.TabIndex = 18
         ' 
@@ -674,7 +674,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel29.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel29.Name = "TableLayoutPanel29"
         TableLayoutPanel29.RowCount = 1
-        TableLayoutPanel29.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel29.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel29.Size = New Size(138, 18)
         TableLayoutPanel29.TabIndex = 12
         ' 
@@ -722,7 +722,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel33.ColumnCount = 3
         TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel33.Controls.Add(Label67, 0, 0)
         TableLayoutPanel33.Controls.Add(fullservice_new2, 1, 0)
         TableLayoutPanel33.Controls.Add(Label68, 2, 0)
@@ -730,8 +730,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel33.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel33.Name = "TableLayoutPanel33"
         TableLayoutPanel33.RowCount = 1
-        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
         TableLayoutPanel33.Size = New Size(138, 27)
         TableLayoutPanel33.TabIndex = 11
         ' 
@@ -802,7 +802,7 @@ Partial Class PriceSettingsControl
         ' 
         TableLayoutPanel3.BackColor = Color.Transparent
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel3.Controls.Add(TableLayoutPanel7, 0, 2)
         TableLayoutPanel3.Controls.Add(TableLayoutPanel10, 0, 8)
         TableLayoutPanel3.Controls.Add(TableLayoutPanel12, 0, 10)
@@ -824,10 +824,10 @@ Partial Class PriceSettingsControl
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
         TableLayoutPanel3.RowStyles.Add(New RowStyle())
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 23.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 16.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 33.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 6.0F))
         TableLayoutPanel3.Size = New Size(144, 220)
         TableLayoutPanel3.TabIndex = 18
         ' 
@@ -842,7 +842,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel7.Size = New Size(138, 18)
         TableLayoutPanel7.TabIndex = 12
         ' 
@@ -883,7 +883,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel10.Name = "TableLayoutPanel10"
         TableLayoutPanel10.RowCount = 1
-        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel10.Size = New Size(138, 18)
         TableLayoutPanel10.TabIndex = 16
         ' 
@@ -918,7 +918,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel12.ColumnCount = 3
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel12.Controls.Add(Label19, 0, 0)
         TableLayoutPanel12.Controls.Add(basicservice_newWashDry, 1, 0)
         TableLayoutPanel12.Controls.Add(Label20, 2, 0)
@@ -926,8 +926,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
         TableLayoutPanel12.Size = New Size(138, 26)
         TableLayoutPanel12.TabIndex = 14
         ' 
@@ -984,7 +984,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel13.ColumnCount = 3
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel13.Controls.Add(Label21, 0, 0)
         TableLayoutPanel13.Controls.Add(basicservice_newDry, 1, 0)
         TableLayoutPanel13.Controls.Add(Label24, 2, 0)
@@ -992,8 +992,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel13.Name = "TableLayoutPanel13"
         TableLayoutPanel13.RowCount = 1
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
         TableLayoutPanel13.Size = New Size(138, 26)
         TableLayoutPanel13.TabIndex = 13
         ' 
@@ -1076,7 +1076,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel14.ColumnCount = 3
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel14.Controls.Add(Label27, 0, 0)
         TableLayoutPanel14.Controls.Add(basicservice_newWash, 1, 0)
         TableLayoutPanel14.Controls.Add(Label28, 2, 0)
@@ -1084,8 +1084,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel14.Name = "TableLayoutPanel14"
         TableLayoutPanel14.RowCount = 1
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
         TableLayoutPanel14.Size = New Size(138, 27)
         TableLayoutPanel14.TabIndex = 11
         ' 
@@ -1148,7 +1148,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel15.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 1
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel15.Size = New Size(138, 18)
         TableLayoutPanel15.TabIndex = 16
         ' 
@@ -1210,7 +1210,7 @@ Partial Class PriceSettingsControl
         ' 
         TableLayoutPanel2.BackColor = Color.Transparent
         TableLayoutPanel2.ColumnCount = 1
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel2.Controls.Add(TableLayoutPanel5, 0, 2)
         TableLayoutPanel2.Controls.Add(TableLayoutPanel4, 0, 8)
         TableLayoutPanel2.Controls.Add(TableLayoutPanel6, 0, 10)
@@ -1232,10 +1232,10 @@ Partial Class PriceSettingsControl
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 23F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 16F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 33F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 6F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 23.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 16.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 33.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 6.0F))
         TableLayoutPanel2.Size = New Size(144, 220)
         TableLayoutPanel2.TabIndex = 18
         ' 
@@ -1250,7 +1250,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 1
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel5.Size = New Size(138, 18)
         TableLayoutPanel5.TabIndex = 12
         ' 
@@ -1291,7 +1291,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel4.Size = New Size(138, 18)
         TableLayoutPanel4.TabIndex = 16
         ' 
@@ -1326,7 +1326,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel6.ColumnCount = 3
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel6.Controls.Add(Label15, 0, 0)
         TableLayoutPanel6.Controls.Add(selfservice_newWashDry, 1, 0)
         TableLayoutPanel6.Controls.Add(Label16, 2, 0)
@@ -1334,8 +1334,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 1
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
         TableLayoutPanel6.Size = New Size(138, 26)
         TableLayoutPanel6.TabIndex = 14
         ' 
@@ -1392,7 +1392,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel17.ColumnCount = 3
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel17.Controls.Add(Label14, 0, 0)
         TableLayoutPanel17.Controls.Add(selfservice_newDry, 1, 0)
         TableLayoutPanel17.Controls.Add(Label33, 2, 0)
@@ -1400,8 +1400,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 1
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 26F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
         TableLayoutPanel17.Size = New Size(138, 26)
         TableLayoutPanel17.TabIndex = 13
         ' 
@@ -1484,7 +1484,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel20.ColumnCount = 3
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel20.Controls.Add(Label36, 0, 0)
         TableLayoutPanel20.Controls.Add(selfservice_newWash, 1, 0)
         TableLayoutPanel20.Controls.Add(Label37, 2, 0)
@@ -1492,8 +1492,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel20.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 1
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
         TableLayoutPanel20.Size = New Size(138, 27)
         TableLayoutPanel20.TabIndex = 11
         ' 
@@ -1556,7 +1556,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel11.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel11.Size = New Size(138, 18)
         TableLayoutPanel11.TabIndex = 16
         ' 
@@ -1610,7 +1610,7 @@ Partial Class PriceSettingsControl
         saveBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         saveBtn.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         saveBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        saveBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        saveBtn.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         saveBtn.ForeColor = Color.White
         saveBtn.Location = New Point(517, 375)
         saveBtn.Margin = New Padding(3, 2, 3, 2)
@@ -1626,12 +1626,12 @@ Partial Class PriceSettingsControl
         TableLayoutPanel1.ColumnCount = 8
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.6122446F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 89.38776F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 26F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 139F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 153F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 29F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 132F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 139.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 153.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 29.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 132.0F))
         TableLayoutPanel1.Controls.Add(Label4, 5, 0)
         TableLayoutPanel1.Controls.Add(Label3, 3, 0)
         TableLayoutPanel1.Controls.Add(Label2, 1, 0)
@@ -1640,7 +1640,7 @@ Partial Class PriceSettingsControl
         TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel1.Size = New Size(668, 27)
         TableLayoutPanel1.TabIndex = 9
         ' 
@@ -1648,7 +1648,7 @@ Partial Class PriceSettingsControl
         ' 
         Label4.Anchor = AnchorStyles.None
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label4.Location = New Point(378, 6)
         Label4.Name = "Label4"
@@ -1661,7 +1661,7 @@ Partial Class PriceSettingsControl
         ' 
         Label3.Anchor = AnchorStyles.None
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label3.Location = New Point(205, 6)
         Label3.Name = "Label3"
@@ -1674,7 +1674,7 @@ Partial Class PriceSettingsControl
         ' 
         Label2.Anchor = AnchorStyles.None
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label2.Location = New Point(40, 6)
         Label2.Name = "Label2"
@@ -1687,7 +1687,7 @@ Partial Class PriceSettingsControl
         ' 
         Label5.Anchor = AnchorStyles.None
         Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label5.Location = New Point(548, 6)
         Label5.Name = "Label5"
@@ -1700,7 +1700,7 @@ Partial Class PriceSettingsControl
         ' 
         TableLayoutPanel8.BackColor = Color.Transparent
         TableLayoutPanel8.ColumnCount = 1
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel8.Controls.Add(Panel1, 0, 1)
         TableLayoutPanel8.Controls.Add(Label8, 0, 0)
         TableLayoutPanel8.Controls.Add(Guna2GradientPanel2, 0, 3)
@@ -1710,8 +1710,8 @@ Partial Class PriceSettingsControl
         TableLayoutPanel8.RowCount = 4
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 89.87342F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 10.1265821F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 13F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 34F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 13.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 34.0F))
         TableLayoutPanel8.Size = New Size(670, 91)
         TableLayoutPanel8.TabIndex = 3
         ' 
@@ -1757,13 +1757,13 @@ Partial Class PriceSettingsControl
         ' 
         TableLayoutPanel9.BackColor = Color.Transparent
         TableLayoutPanel9.ColumnCount = 1
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel9.Controls.Add(Label1, 0, 0)
         TableLayoutPanel9.Location = New Point(0, 2)
         TableLayoutPanel9.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel9.Size = New Size(573, 28)
         TableLayoutPanel9.TabIndex = 4
         ' 
@@ -1772,7 +1772,7 @@ Partial Class PriceSettingsControl
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.SteelBlue
         Label1.Location = New Point(3, 0)
         Label1.Name = "Label1"
@@ -1783,7 +1783,7 @@ Partial Class PriceSettingsControl
         ' 
         ' PriceSettingsControl
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(RightPanel)
         Margin = New Padding(3, 2, 3, 2)
