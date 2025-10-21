@@ -41,7 +41,7 @@ Partial Class TransactionForm
         Label1 = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
         lblSubtitle = New Label()
-        Label2 = New Label()
+        lblMode = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
         lblDate = New Label()
         lblAddress = New TableLayoutPanel()
@@ -292,7 +292,7 @@ Partial Class TransactionForm
         TableLayoutPanel2.ColumnCount = 1
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.Controls.Add(lblSubtitle, 0, 1)
-        TableLayoutPanel2.Controls.Add(Label2, 0, 0)
+        TableLayoutPanel2.Controls.Add(lblMode, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Margin = New Padding(2)
@@ -316,17 +316,17 @@ Partial Class TransactionForm
         lblSubtitle.TabIndex = 7
         lblSubtitle.Text = "Transaction ID:"
         ' 
-        ' Label2
+        ' lblMode
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label2.Location = New Point(2, 0)
-        Label2.Margin = New Padding(2, 0, 2, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(111, 28)
-        Label2.TabIndex = 5
-        Label2.Text = "VIEW MODE: "
+        lblMode.AutoSize = True
+        lblMode.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMode.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblMode.Location = New Point(2, 0)
+        lblMode.Margin = New Padding(2, 0, 2, 0)
+        lblMode.Name = "lblMode"
+        lblMode.Size = New Size(111, 28)
+        lblMode.TabIndex = 5
+        lblMode.Text = "VIEW MODE: "
         ' 
         ' TableLayoutPanel3
         ' 
@@ -1082,7 +1082,7 @@ Partial Class TransactionForm
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblMode As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents lblAddress As TableLayoutPanel

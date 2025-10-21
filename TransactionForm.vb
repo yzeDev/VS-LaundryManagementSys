@@ -20,7 +20,8 @@ Public Class TransactionForm
         cbStatus.Items.AddRange({"Completed", "Pending", "Refunded", "For Pickup", "For Delivery"})
 
         ' ✅ Show mode + transaction ID in subtitle
-        lblSubTitle.Text = $"{Mode} Mode: Transaction #{TransactionId}"
+        lblMode.Text = $"{Mode} Mode"
+        lblSubtitle.Text = $"Transaction #{TransactionId}"
 
         ' ✅ Load transaction data if available
         If TransactionId > 0 Then
