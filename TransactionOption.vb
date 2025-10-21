@@ -28,10 +28,10 @@
         End Select
 
         ' Close this form
-        Me.Close()
-
-        ' Open the selected form
-        selectedForm?.Show()
+        selectedForm.StartPosition = FormStartPosition.CenterParent
+        Me.Hide()  ' Hide the current form
+        selectedForm.ShowDialog(Me)  ' Pass 'Me' as the owner
+        Me.Close()  ' Close after the dialog ends
     End Sub
 
 End Class
