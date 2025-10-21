@@ -85,23 +85,28 @@ Public Class MachinesControl
                         Else
                             card = New MachineCard()
                             machineCardsCache(machineID) = card
-
-                            ' Attach handlers once
-                            AddHandler card.ProceedButton.Click, AddressOf HandleMachineProceed
-                            AddHandler card.ViewDetailsButton.Click, AddressOf HandleViewDetails
-                            AttachClickHandlers(card, AddressOf Machine_Click)
                         End If
+
+                        ' Ensure handlers are attached exactly once
+                        RemoveHandler card.ProceedButton.Click, AddressOf HandleMachineProceed
+                        AddHandler card.ProceedButton.Click, AddressOf HandleMachineProceed
+
+                        RemoveHandler card.ViewDetailsButton.Click, AddressOf HandleViewDetails
+                        AddHandler card.ViewDetailsButton.Click, AddressOf HandleViewDetails
+
+                        AttachClickHandlers(card, AddressOf Machine_Click)
+
 
                         ' --- RESET LAYOUT & SIZE TO FIX ENLARGEMENT ---
                         card.AutoSize = False
-                        card.Size = New Size(400, 300)
+                        card.Size = New Size(420, 300)
                         card.Margin = New Padding(5)
                         card.Padding = New Padding(0)
                         card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
                         card.lblTransactionID.AutoSize = False
                         card.lblServiceTime.AutoSize = False
-                        card.lblTransactionID.MaximumSize = New Size(card.Width - 10, 20)
-                        card.lblServiceTime.MaximumSize = New Size(card.Width - 10, 20)
+                        'card.lblTransactionID.MaximumSize = New Size(card.Width - 10, 20)
+                        'card.lblServiceTime.MaximumSize = New Size(card.Width - 10, 20)
 
                         ' --- UPDATE CARD DATA FROM DB ---
                         card.MachineID = machineID
@@ -601,6 +606,7 @@ Public Class MachinesControl
         Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
         If btn Is Nothing Then Return
 
+        ' Find parent MachineCard
         Dim parentCtrl As Control = btn
         While parentCtrl IsNot Nothing AndAlso Not TypeOf parentCtrl Is MachineCard
             parentCtrl = parentCtrl.Parent
@@ -608,10 +614,20 @@ Public Class MachinesControl
         If parentCtrl Is Nothing Then Return
         Dim card As MachineCard = DirectCast(parentCtrl, MachineCard)
 
+        ' Check if machine has an active transaction
+        If card.TransactionID <= 0 Then
+            MessageBox.Show("No active transaction for this machine.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        ' Open details form
         Dim frm As New MachineDetailsForm()
-        frm.LoadMachineDetails(card.MachineID)
+        frm.TransactionId = card.TransactionID
         frm.ShowDialog()
     End Sub
+
+
+
 
     ' New method to renumber only available machines sequentially
     Private Sub RenumberAvailableMachines()
