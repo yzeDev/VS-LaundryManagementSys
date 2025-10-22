@@ -3,7 +3,7 @@ Imports Guna.UI2.WinForms
 
 Public Class PriceSettingsControl
 
-    Private connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+    Private connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
     Private Sub PriceSettingsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadCurrentPrices()
