@@ -4,7 +4,7 @@ Imports System.Windows.Forms.DataVisualization.Charting
 Public Class StatsControl
 
 
-    Private dbPath As String = "D:\laundryfiles\Resources\LaundryDatabase.accdb"
+    Private dbPath As String = "C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
     Private conString As String
 
 

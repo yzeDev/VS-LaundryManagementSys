@@ -323,7 +323,7 @@ Public Class DashboardControl
     Private Async Function SendSmsGsm(phoneNumber As String, message As String) As Task(Of Boolean)
         Dim username As String = "yzekeil"
         Dim password As String = "laundry"
-        Dim ip As String = "192.168.1.3"
+        Dim ip As String = "192.168.213.167"
         Dim port As String = "8093"
         'http://192.168.1.3:8093/SendSMS?username=yzekeil&password=laundry&phone=639918739459&message=test
         Dim url As String = $"http://{ip}:{port}/SendSMS?username={username}&password={password}&phone={phoneNumber}&message={Uri.EscapeDataString("BubbleFresh Laundry" & vbLf & vbLf & message)}"
