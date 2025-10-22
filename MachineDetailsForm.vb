@@ -35,6 +35,7 @@ Public Class MachineDetailsForm
                             lblAddress.Text = reader("Address").ToString()
                             lblTransactionWeight.Text = reader("Weight").ToString() & " kg"
                             lblPaymentMethod.Text = reader("PaymentMethod").ToString()
+                            lblTotal.Text = "₱" & Convert.ToDecimal(reader("TotalAmount")).ToString("F2")
 
                             ' ✅ Transaction Date (formatted)
                             If Not IsDBNull(reader("TransactionDate")) Then
