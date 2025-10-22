@@ -124,7 +124,6 @@ Public Class BasicServiceForm
 
     '  Continue button (Computation + Pass to Invoice)
     Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
-
         If Guna2txtboxName.Text = "" OrElse packageType = "" OrElse Guna2txtboxWeight.Text = "" Then
             MessageBox.Show("Please fill out all fields properly.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub

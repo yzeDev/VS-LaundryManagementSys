@@ -2,7 +2,7 @@
 
 Public Class priceChangeConfirmation
     Private priceChanges As List(Of PriceChange)
-    Private connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+    Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
     ' Constructor
     Public Sub New(changes As List(Of PriceChange))
