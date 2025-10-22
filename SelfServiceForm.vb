@@ -2,10 +2,12 @@
 
 Public Class SelfServiceForm
 
+    Dim packageType As String = Guna2cmbService.Text
+
     ' Function to get the latest price ng bawat subservice
     Private Function GetLatestPrice(serviceType As String, subService As String) As Double
         Dim price As Double = 0
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connString)
             conn.Open()
@@ -40,7 +42,7 @@ Public Class SelfServiceForm
 
     ' Contact textbox: numeric lang after "+63 "
     Private Sub Guna2txtboxContact_KeyPress(sender As Object, e As KeyPressEventArgs)
-        ' Prevent typing non-numeric after "+63 "
+
         If Guna2txtboxContact.SelectionStart >= 4 Then
             If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
                 e.Handled = True
@@ -118,36 +120,37 @@ Public Class SelfServiceForm
         Dim continueForm As New NewInvoiceForm
         continueForm.StartPosition = FormStartPosition.CenterScreen
         continueForm.ShowDialog()
-        Hide()  '
+        Hide()
 
         ' Compute service fee
-        'Dim rate As Double = GetLatestPrice("Self-Service",) packageType)
-        'Dim weightVal As Double = Convert.ToDouble(weight)
-        'Dim serviceFee As Double = rate * weightVal
+        Dim rate As Double = GetLatestPrice("Self Service", packageType)
+        Dim weightVal As Double = Convert.ToDouble(Guna2txtboxWeight)
+        Dim serviceFee As Double = rate * weightVal
         Dim deliveryFee As Double = 0
 
         Dim deliveryMode As String = "Pickup"
         If Guna2CheckBoxDelivery.Checked Then
-            deliveryFee = 'serviceFee * 0.05
-            deliveryMode = "Delivery"
+            deliveryFee = serviceFee * 0.05
+            deliveryMode = "Yes"
         End If
+        Dim total As Double = serviceFee + deliveryFee
 
-        'Dim total As Double = serviceFee + deliveryFee
+
 
         ' Create and show invoice
-        'Dim invoice As New NewInvoiceForm()
-        'invoice.PreviousForm = Me
-        'invoice.CustomerName = customerName
-        'invoice.ContactNumber = contactNumber
-        'invoice.Address = address
-        'invoice.Weight = weightVal.ToString("F2") & " kg"
-        'invoice.ServiceType = serviceType
-        'invoice.PackageType = 'packageType
-        'invoice.Rate = "₱" & 'rate.ToString("F2") & "/kg"
-        'invoice.ServiceFee = "₱" & 'serviceFee.ToString("F2")
-        'invoice.DeliveryFee = "₱" & deliveryFee.ToString("F2")
-        'invoice.TotalAmount = "₱" & 'total.ToString("F2")
-        'invoice.DeliveryMode = deliveryMode
+        Dim invoice As New NewInvoiceForm()
+        invoice.PreviousForm = Me
+        invoice.CustomerName = Guna2TxtboxName.Text
+        invoice.ContactNumber = Guna2txtboxContact.Text
+        invoice.Address = txtboxAddress.Text
+        invoice.Weight = weightVal.ToString("F2") & " kg"
+        invoice.ServiceType = "Self-Service"
+        invoice.PackageType = Guna2cmbService.Text
+        invoice.Rate = "₱" & rate.ToString("F2") & "/kg"
+        invoice.ServiceFee = "₱" & serviceFee.ToString("F2")
+        invoice.DeliveryFee = "₱" & deliveryFee.ToString("F2")
+        invoice.TotalAmount = "₱" & total.ToString("F2")
+        invoice.DeliveryMode = deliveryMode
 
         'invoice.Show()
         Me.Hide()
