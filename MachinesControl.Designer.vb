@@ -152,7 +152,7 @@ Partial Class MachinesControl
         btnConfigure.Location = New Point(312, 5)
         btnConfigure.Margin = New Padding(10, 3, 3, 3)
         btnConfigure.Name = "btnConfigure"
-        btnConfigure.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        'btnConfigure.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnConfigure.Size = New Size(172, 42)
         btnConfigure.TabIndex = 13
         btnConfigure.Text = "Configure"
@@ -173,7 +173,7 @@ Partial Class MachinesControl
         btnRemoveMachine.Location = New Point(162, 5)
         btnRemoveMachine.Margin = New Padding(10, 3, 3, 3)
         btnRemoveMachine.Name = "btnRemoveMachine"
-        btnRemoveMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        'btnRemoveMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnRemoveMachine.Size = New Size(172, 42)
         btnRemoveMachine.TabIndex = 12
         btnRemoveMachine.Text = "Unavailable"
@@ -193,7 +193,7 @@ Partial Class MachinesControl
         btnAddMachine.Location = New Point(12, 5)
         btnAddMachine.Margin = New Padding(10, 3, 3, 3)
         btnAddMachine.Name = "btnAddMachine"
-        btnAddMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        'btnAddMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnAddMachine.Size = New Size(172, 42)
         btnAddMachine.TabIndex = 10
         btnAddMachine.Text = "+ Add Unit"
