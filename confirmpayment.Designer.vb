@@ -33,8 +33,8 @@ Partial Class confirmpayment
         TableLayoutPanel1 = New TableLayoutPanel()
         Label4 = New Label()
         btnsave = New Guna.UI2.WinForms.Guna2GradientButton()
-        referencetb = New Guna.UI2.WinForms.Guna2TextBox()
         Label3 = New Label()
+        referencetb = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Label2 = New Label()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
@@ -64,9 +64,9 @@ Partial Class confirmpayment
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.Controls.Add(Label4, 0, 2)
         TableLayoutPanel1.Controls.Add(btnsave, 0, 4)
-        TableLayoutPanel1.Controls.Add(referencetb, 0, 3)
         TableLayoutPanel1.Controls.Add(Label3, 0, 0)
-        TableLayoutPanel1.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TableLayoutPanel1.Controls.Add(referencetb, 0, 3)
+        TableLayoutPanel1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TableLayoutPanel1.Location = New Point(3, 35)
         TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -83,7 +83,7 @@ Partial Class confirmpayment
         ' 
         Label4.AutoSize = True
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 13.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(3, 60)
         Label4.Name = "Label4"
         Label4.Size = New Size(438, 31)
@@ -103,7 +103,7 @@ Partial Class confirmpayment
         btnsave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnsave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         btnsave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        btnsave.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnsave.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnsave.ForeColor = Color.White
         btnsave.Location = New Point(169, 197)
         btnsave.Margin = New Padding(3, 2, 3, 2)
@@ -112,6 +112,18 @@ Partial Class confirmpayment
         btnsave.Size = New Size(105, 22)
         btnsave.TabIndex = 37
         btnsave.Text = "SAVE"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 9F)
+        Label3.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Label3.Location = New Point(3, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(423, 30)
+        Label3.TabIndex = 9
+        Label3.Text = "Enter the reference number provided by the customer to verify their GCash or PayMaya transaction."
+        Label3.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' referencetb
         ' 
@@ -123,7 +135,7 @@ Partial Class confirmpayment
         referencetb.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         referencetb.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         referencetb.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        referencetb.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        referencetb.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         referencetb.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         referencetb.Location = New Point(9, 95)
         referencetb.Margin = New Padding(9, 4, 9, 4)
@@ -133,18 +145,6 @@ Partial Class confirmpayment
         referencetb.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         referencetb.Size = New Size(423, 26)
         referencetb.TabIndex = 10
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Poppins", 9F)
-        Label3.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label3.Location = New Point(3, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(406, 44)
-        Label3.TabIndex = 9
-        Label3.Text = "Enter the reference number provided by the customer to verify their GCash or PayMaya transaction."
-        Label3.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2GradientPanel1
         ' 
@@ -166,11 +166,11 @@ Partial Class confirmpayment
         Label2.Anchor = AnchorStyles.None
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(144, 2)
         Label2.Name = "Label2"
-        Label2.Size = New Size(152, 28)
+        Label2.Size = New Size(147, 20)
         Label2.TabIndex = 5
         Label2.Text = "Proof of Payment"
         Label2.TextAlign = ContentAlignment.TopCenter

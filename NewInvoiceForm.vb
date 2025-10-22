@@ -1,12 +1,83 @@
-﻿Imports System.Runtime.InteropServices
-Imports System.Drawing
+﻿Imports System.Drawing
+Imports System.Runtime.InteropServices
+Imports System.Security.Policy
 Imports Guna.UI2.WinForms
 
 Public Class NewInvoiceForm
 
 
 
+    Public ReadOnly Property InvoiceCustomerName As String
+        Get
+            Return lblName.Text
+        End Get
+    End Property
 
+    Public ReadOnly Property InvoiceContactNumber As String
+        Get
+            Return lblContact.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceAddress As String
+        Get
+            Return addressBox.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceWeight As String
+        Get
+            Return lblWeight.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceServiceType As String
+        Get
+            Return lblServiceType.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoicePackageType As String
+        Get
+            Return lblPackage.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceRate As String
+        Get
+            Return lblRate.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceServiceFee As String
+        Get
+            Return lblServiceFee.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceDeliveryFee As String
+        Get
+            Return lblDeliveryFee.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceTotalAmount As String
+        Get
+            Return lblTotal.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoiceDeliveryMode As String
+        Get
+            Return lblDelivery.Text
+        End Get
+    End Property
+
+    Public ReadOnly Property InvoicePaymentMethod As String
+        Get
+            Return selectedPayment
+        End Get
+    End Property
 
 
 
@@ -37,6 +108,8 @@ Public Class NewInvoiceForm
     Public Property DeliveryFee As String
     Public Property TotalAmount As String
     Public Property DeliveryMode As String
+
+
 
     ' === HIDE CARET EVENTS ===
     Private Sub addressBox_GotFocus(sender As Object, e As EventArgs) Handles addressBox.GotFocus
@@ -135,12 +208,14 @@ Public Class NewInvoiceForm
             Exit Sub
         End If
 
+        ' === Handle Payment Method Forms ===
         Select Case selectedPayment
-            Case "GCash"
+            Case GCashBtn.Text
                 Dim gcashForm As New gcashform()
+                gcashForm.TotalAmount = lblTotal.Text
                 gcashForm.ShowDialog()
 
-            Case "Maya"
+            Case mayaBtn.Text
                 Dim mayaForm As New maya()
                 mayaForm.ShowDialog()
 
@@ -148,29 +223,31 @@ Public Class NewInvoiceForm
                 MessageBox.Show("Cash payment selected. Proceed to cashier.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Select
 
-        ' === PASS DATA TO RECEIPT ===
-        'Dim receipt As New Receipt()
-        'Receipt.CustomerName = lblName.Text
-        'receipt.ContactNumber = lblContact.Text
-        'receipt.Address = addressBox.Text
-        'receipt.Weight = lblWeight.Text
-        'receipt.ServiceType = lblServiceType.Text
-        'receipt.PackageType = lblPackage.Text
-        'receipt.Rate = lblRate.Text
-        'receipt.ServiceFee = lblServiceFee.Text
-        'receipt.DeliveryFee = lblDeliveryFee.Text
-        'receipt.TotalAmount = lblTotal.Text
-        'receipt.PaymentMethod = selectedPayment
 
-        '' delivery logic
-        'If lblServiceType.Text = "Self Service" Then
-        '    receipt.DeliveryMode = "N/A"
-        'Else
-        '    receipt.DeliveryMode = lblDelivery.Text
-        'End If
+        ' === CREATE RECEIPT AND PASS VALUES FROM THIS FORM ===
+        Dim receipt As New Receipt()
+        receipt.CustomerName = lblName.Text
+        receipt.ContactNumber = Convert.ToInt64(lblContact.Text) ' Number type in DB
+        receipt.Address = addressBox.Text
+        receipt.Weight = Convert.ToDecimal(lblWeight.Text.Replace(" kg", "")) ' Number
+        receipt.ServiceType = lblServiceType.Text
+        receipt.PackageType = lblPackage.Text
+        receipt.Rate = Convert.ToDecimal(lblRate.Text.Replace("₱", "").Replace("/kg", ""))
+        receipt.ServiceFee = Convert.ToDecimal(lblServiceFee.Text.Replace("₱", ""))
+        receipt.DeliveryFee = Convert.ToDecimal(lblDeliveryFee.Text.Replace("₱", ""))
+        receipt.TotalAmount = Convert.ToDecimal(lblTotal.Text.Replace("₱", ""))
+        receipt.PaymentMethod = selectedPayment
+        receipt.DeliveryMode = lblDelivery.Text
+        receipt.AmountReceived = 0D ' Set when actual payment is received
+        receipt.Change = 0D
 
-        Receipt.Show()
+        ' === SAVE TO DATABASE ===
+        receipt.SaveToDatabase()
+
+        ' === SHOW RECEIPT FORM ===
+        receipt.Show()
         Me.Hide()
     End Sub
+
 
 End Class
