@@ -210,7 +210,7 @@ Public Class TransactionForm
         If Mode = "Edit" Then
             Try
                 Using conn As New OleDbConnection(connStr)
-                    conn.Open
+                    conn.Open()
                     Dim sql = "UPDATE Transactions SET CustomerName=@name, ServiceType=@service, ContactNumber=@contact, Address=@address, Status=@status, AmountReceived=@received WHERE TransactionID=@id"
                     Using cmd As New OleDbCommand(sql, conn)
                         cmd.Parameters.AddWithValue("@name", tbCustomerName.Text)
@@ -220,13 +220,13 @@ Public Class TransactionForm
                         cmd.Parameters.AddWithValue("@status", cbStatus.Text)
                         cmd.Parameters.AddWithValue("@received", tbAmountReceived.Text)
                         cmd.Parameters.AddWithValue("@id", TransactionId)
-                        cmd.ExecuteNonQuery
+                        cmd.ExecuteNonQuery()
                     End Using
                 End Using
 
                 MessageBox.Show("Transaction updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 DialogResult = DialogResult.OK
-                Close
+                Close()
 
             Catch ex As Exception
                 MessageBox.Show("Error updating transaction: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

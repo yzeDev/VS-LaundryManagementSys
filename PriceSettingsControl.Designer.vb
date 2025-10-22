@@ -1,0 +1,2012 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class PriceSettingsControl
+    Inherits System.Windows.Forms.UserControl
+
+    'UserControl overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        RightPanel = New Guna.UI2.WinForms.Guna2Panel()
+        TableLayoutPanel16 = New TableLayoutPanel()
+        Label6 = New Label()
+        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        TableLayoutPanel2 = New TableLayoutPanel()
+        TableLayoutPanel5 = New TableLayoutPanel()
+        selfservice_currentWash = New Label()
+        Label13 = New Label()
+        TableLayoutPanel4 = New TableLayoutPanel()
+        selfservice_currentDry = New Label()
+        Label10 = New Label()
+        TableLayoutPanel6 = New TableLayoutPanel()
+        Label15 = New Label()
+        selfservice_newWashDry = New Guna.UI2.WinForms.Guna2TextBox()
+        Label16 = New Label()
+        TableLayoutPanel17 = New TableLayoutPanel()
+        Label14 = New Label()
+        selfservice_newDry = New Guna.UI2.WinForms.Guna2TextBox()
+        Label33 = New Label()
+        Label34 = New Label()
+        Label35 = New Label()
+        TableLayoutPanel20 = New TableLayoutPanel()
+        Label36 = New Label()
+        selfservice_newWash = New Guna.UI2.WinForms.Guna2TextBox()
+        Label37 = New Label()
+        Label11 = New Label()
+        TableLayoutPanel11 = New TableLayoutPanel()
+        selfservice_currentWashDry = New Label()
+        Label23 = New Label()
+        saveBtn = New Guna.UI2.WinForms.Guna2GradientButton()
+        Guna2CustomGradientPanel4 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        TableLayoutPanel18 = New TableLayoutPanel()
+        TableLayoutPanel22 = New TableLayoutPanel()
+        dryclean_currentSmall = New Label()
+        Label40 = New Label()
+        TableLayoutPanel23 = New TableLayoutPanel()
+        dryclean_currentMedium = New Label()
+        Label42 = New Label()
+        TableLayoutPanel24 = New TableLayoutPanel()
+        Label46 = New Label()
+        dryclean_newLarge = New Guna.UI2.WinForms.Guna2TextBox()
+        Label47 = New Label()
+        TableLayoutPanel25 = New TableLayoutPanel()
+        Label48 = New Label()
+        dryclean_newMedium = New Guna.UI2.WinForms.Guna2TextBox()
+        Label49 = New Label()
+        Label50 = New Label()
+        Label51 = New Label()
+        TableLayoutPanel26 = New TableLayoutPanel()
+        Label52 = New Label()
+        dryclean_newSmall = New Guna.UI2.WinForms.Guna2TextBox()
+        Label53 = New Label()
+        TableLayoutPanel27 = New TableLayoutPanel()
+        dryclean_currentLarge = New Label()
+        Label55 = New Label()
+        Label56 = New Label()
+        Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        TableLayoutPanel3 = New TableLayoutPanel()
+        TableLayoutPanel7 = New TableLayoutPanel()
+        basicservice_currentWash = New Label()
+        Label7 = New Label()
+        TableLayoutPanel10 = New TableLayoutPanel()
+        basicservice_currentDry = New Label()
+        Label18 = New Label()
+        TableLayoutPanel12 = New TableLayoutPanel()
+        Label19 = New Label()
+        basicservice_newWashDry = New Guna.UI2.WinForms.Guna2TextBox()
+        Label20 = New Label()
+        TableLayoutPanel13 = New TableLayoutPanel()
+        Label21 = New Label()
+        basicservice_newDry = New Guna.UI2.WinForms.Guna2TextBox()
+        Label24 = New Label()
+        Label25 = New Label()
+        Label26 = New Label()
+        TableLayoutPanel14 = New TableLayoutPanel()
+        Label27 = New Label()
+        basicservice_newWash = New Guna.UI2.WinForms.Guna2TextBox()
+        Label28 = New Label()
+        TableLayoutPanel15 = New TableLayoutPanel()
+        basicservice_currentWashDry = New Label()
+        Label30 = New Label()
+        Label31 = New Label()
+        Guna2CustomGradientPanel3 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        TableLayoutPanel28 = New TableLayoutPanel()
+        TableLayoutPanel29 = New TableLayoutPanel()
+        fullservice_currentWash = New Label()
+        Label58 = New Label()
+        Label66 = New Label()
+        TableLayoutPanel33 = New TableLayoutPanel()
+        Label67 = New Label()
+        fullservice_new2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Label68 = New Label()
+        Panel2 = New Panel()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        Label2 = New Label()
+        Label3 = New Label()
+        Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        TableLayoutPanel9 = New TableLayoutPanel()
+        Label1 = New Label()
+        Label4 = New Label()
+        Label5 = New Label()
+        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        RightPanel.SuspendLayout()
+        TableLayoutPanel16.SuspendLayout()
+        Guna2CustomGradientPanel1.SuspendLayout()
+        TableLayoutPanel2.SuspendLayout()
+        TableLayoutPanel5.SuspendLayout()
+        TableLayoutPanel4.SuspendLayout()
+        TableLayoutPanel6.SuspendLayout()
+        TableLayoutPanel17.SuspendLayout()
+        TableLayoutPanel20.SuspendLayout()
+        TableLayoutPanel11.SuspendLayout()
+        Guna2CustomGradientPanel4.SuspendLayout()
+        TableLayoutPanel18.SuspendLayout()
+        TableLayoutPanel22.SuspendLayout()
+        TableLayoutPanel23.SuspendLayout()
+        TableLayoutPanel24.SuspendLayout()
+        TableLayoutPanel25.SuspendLayout()
+        TableLayoutPanel26.SuspendLayout()
+        TableLayoutPanel27.SuspendLayout()
+        Guna2CustomGradientPanel2.SuspendLayout()
+        TableLayoutPanel3.SuspendLayout()
+        TableLayoutPanel7.SuspendLayout()
+        TableLayoutPanel10.SuspendLayout()
+        TableLayoutPanel12.SuspendLayout()
+        TableLayoutPanel13.SuspendLayout()
+        TableLayoutPanel14.SuspendLayout()
+        TableLayoutPanel15.SuspendLayout()
+        Guna2CustomGradientPanel3.SuspendLayout()
+        TableLayoutPanel28.SuspendLayout()
+        TableLayoutPanel29.SuspendLayout()
+        TableLayoutPanel33.SuspendLayout()
+        Panel2.SuspendLayout()
+        TableLayoutPanel1.SuspendLayout()
+        Guna2GradientPanel2.SuspendLayout()
+        TableLayoutPanel9.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' RightPanel
+        ' 
+        RightPanel.BackColor = Color.White
+        RightPanel.BorderRadius = 20
+        RightPanel.Controls.Add(TableLayoutPanel16)
+        RightPanel.CustomizableEdges = CustomizableEdges35
+        RightPanel.Dock = DockStyle.Fill
+        RightPanel.Location = New Point(0, 0)
+        RightPanel.Margin = New Padding(3, 2, 3, 2)
+        RightPanel.Name = "RightPanel"
+        RightPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        RightPanel.Size = New Size(650, 450)
+        RightPanel.TabIndex = 9
+        ' 
+        ' TableLayoutPanel16
+        ' 
+        TableLayoutPanel16.ColumnCount = 4
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel16.Controls.Add(Label6, 0, 0)
+        TableLayoutPanel16.Controls.Add(Guna2CustomGradientPanel1, 0, 3)
+        TableLayoutPanel16.Controls.Add(saveBtn, 3, 4)
+        TableLayoutPanel16.Controls.Add(Guna2CustomGradientPanel4, 3, 3)
+        TableLayoutPanel16.Controls.Add(Guna2CustomGradientPanel2, 1, 3)
+        TableLayoutPanel16.Controls.Add(Guna2CustomGradientPanel3, 2, 3)
+        TableLayoutPanel16.Controls.Add(Panel2, 0, 2)
+        TableLayoutPanel16.Controls.Add(Guna2GradientPanel1, 0, 1)
+        TableLayoutPanel16.Dock = DockStyle.Fill
+        TableLayoutPanel16.Location = New Point(0, 0)
+        TableLayoutPanel16.Name = "TableLayoutPanel16"
+        TableLayoutPanel16.RowCount = 5
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 50.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel16.Size = New Size(650, 450)
+        TableLayoutPanel16.TabIndex = 25
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        TableLayoutPanel16.SetColumnSpan(Label6, 4)
+        Label6.Dock = DockStyle.Fill
+        Label6.Font = New Font("Poppins", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label6.ImageAlign = ContentAlignment.BottomLeft
+        Label6.Location = New Point(3, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(644, 50)
+        Label6.TabIndex = 26
+        Label6.Text = "Change Prices"
+        Label6.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' Guna2CustomGradientPanel1
+        ' 
+        Guna2CustomGradientPanel1.BackColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        Guna2CustomGradientPanel1.BorderColor = SystemColors.ActiveBorder
+        Guna2CustomGradientPanel1.BorderRadius = 5
+        Guna2CustomGradientPanel1.BorderThickness = 2
+        Guna2CustomGradientPanel1.Controls.Add(TableLayoutPanel2)
+        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges7
+        Guna2CustomGradientPanel1.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel1.Location = New Point(3, 132)
+        Guna2CustomGradientPanel1.Margin = New Padding(3, 2, 3, 2)
+        Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
+        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2CustomGradientPanel1.Size = New Size(156, 276)
+        Guna2CustomGradientPanel1.TabIndex = 21
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.BackColor = Color.Transparent
+        TableLayoutPanel2.ColumnCount = 1
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel5, 0, 2)
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel4, 0, 5)
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel6, 0, 7)
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel17, 0, 4)
+        TableLayoutPanel2.Controls.Add(Label34, 0, 3)
+        TableLayoutPanel2.Controls.Add(Label35, 0, 0)
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel20, 0, 1)
+        TableLayoutPanel2.Controls.Add(Label11, 0, 6)
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel11, 0, 8)
+        TableLayoutPanel2.Dock = DockStyle.Fill
+        TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 9
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel2.Size = New Size(156, 276)
+        TableLayoutPanel2.TabIndex = 18
+        ' 
+        ' TableLayoutPanel5
+        ' 
+        TableLayoutPanel5.ColumnCount = 2
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel5.Controls.Add(selfservice_currentWash, 1, 0)
+        TableLayoutPanel5.Controls.Add(Label13, 0, 0)
+        TableLayoutPanel5.Dock = DockStyle.Fill
+        TableLayoutPanel5.Location = New Point(3, 62)
+        TableLayoutPanel5.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel5.Name = "TableLayoutPanel5"
+        TableLayoutPanel5.RowCount = 1
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel5.Size = New Size(150, 26)
+        TableLayoutPanel5.TabIndex = 12
+        ' 
+        ' selfservice_currentWash
+        ' 
+        selfservice_currentWash.AutoSize = True
+        selfservice_currentWash.Dock = DockStyle.Fill
+        selfservice_currentWash.Font = New Font("Poppins", 9.0F)
+        selfservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_currentWash.Location = New Point(105, 0)
+        selfservice_currentWash.Name = "selfservice_currentWash"
+        selfservice_currentWash.Size = New Size(42, 26)
+        selfservice_currentWash.TabIndex = 14
+        selfservice_currentWash.Text = "₱ 40"
+        selfservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Dock = DockStyle.Fill
+        Label13.Font = New Font("Poppins", 8.25F)
+        Label13.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label13.Location = New Point(3, 0)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(96, 26)
+        Label13.TabIndex = 14
+        Label13.Text = "Current Price: ₱ "
+        Label13.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel4
+        ' 
+        TableLayoutPanel4.ColumnCount = 2
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel4.Controls.Add(selfservice_currentDry, 1, 0)
+        TableLayoutPanel4.Controls.Add(Label10, 0, 0)
+        TableLayoutPanel4.Dock = DockStyle.Fill
+        TableLayoutPanel4.Location = New Point(3, 152)
+        TableLayoutPanel4.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel4.Name = "TableLayoutPanel4"
+        TableLayoutPanel4.RowCount = 1
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel4.Size = New Size(150, 26)
+        TableLayoutPanel4.TabIndex = 16
+        ' 
+        ' selfservice_currentDry
+        ' 
+        selfservice_currentDry.AutoSize = True
+        selfservice_currentDry.Dock = DockStyle.Fill
+        selfservice_currentDry.Font = New Font("Poppins", 9.0F)
+        selfservice_currentDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_currentDry.Location = New Point(105, 0)
+        selfservice_currentDry.Name = "selfservice_currentDry"
+        selfservice_currentDry.Size = New Size(42, 26)
+        selfservice_currentDry.TabIndex = 14
+        selfservice_currentDry.Text = "₱ 30"
+        selfservice_currentDry.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Dock = DockStyle.Fill
+        Label10.Font = New Font("Poppins", 8.25F)
+        Label10.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label10.Location = New Point(3, 0)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(96, 26)
+        Label10.TabIndex = 14
+        Label10.Text = "Current Price: ₱ "
+        Label10.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel6
+        ' 
+        TableLayoutPanel6.ColumnCount = 3
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel6.Controls.Add(Label15, 0, 0)
+        TableLayoutPanel6.Controls.Add(selfservice_newWashDry, 1, 0)
+        TableLayoutPanel6.Controls.Add(Label16, 2, 0)
+        TableLayoutPanel6.Dock = DockStyle.Fill
+        TableLayoutPanel6.Location = New Point(3, 212)
+        TableLayoutPanel6.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel6.Name = "TableLayoutPanel6"
+        TableLayoutPanel6.RowCount = 1
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel6.Size = New Size(150, 26)
+        TableLayoutPanel6.TabIndex = 14
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Dock = DockStyle.Fill
+        Label15.Font = New Font("Poppins", 9.0F)
+        Label15.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label15.Location = New Point(3, 0)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(16, 26)
+        Label15.TabIndex = 14
+        Label15.Text = "₱ "
+        Label15.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' selfservice_newWashDry
+        ' 
+        selfservice_newWashDry.BorderColor = Color.Gray
+        selfservice_newWashDry.BorderRadius = 5
+        selfservice_newWashDry.CustomizableEdges = CustomizableEdges1
+        selfservice_newWashDry.DefaultText = ""
+        selfservice_newWashDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_newWashDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_newWashDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWashDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWashDry.Dock = DockStyle.Fill
+        selfservice_newWashDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWashDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_newWashDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWashDry.Location = New Point(25, 4)
+        selfservice_newWashDry.Margin = New Padding(3, 4, 3, 4)
+        selfservice_newWashDry.Name = "selfservice_newWashDry"
+        selfservice_newWashDry.PlaceholderText = ""
+        selfservice_newWashDry.SelectedText = ""
+        selfservice_newWashDry.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        selfservice_newWashDry.Size = New Size(87, 18)
+        selfservice_newWashDry.TabIndex = 15
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Dock = DockStyle.Fill
+        Label16.Font = New Font("Poppins", 9.0F)
+        Label16.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label16.Location = New Point(118, 0)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(29, 26)
+        Label16.TabIndex = 13
+        Label16.Text = "/kg"
+        Label16.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel17
+        ' 
+        TableLayoutPanel17.ColumnCount = 3
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel17.Controls.Add(Label14, 0, 0)
+        TableLayoutPanel17.Controls.Add(selfservice_newDry, 1, 0)
+        TableLayoutPanel17.Controls.Add(Label33, 2, 0)
+        TableLayoutPanel17.Dock = DockStyle.Fill
+        TableLayoutPanel17.Location = New Point(3, 122)
+        TableLayoutPanel17.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel17.Name = "TableLayoutPanel17"
+        TableLayoutPanel17.RowCount = 1
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel17.Size = New Size(150, 26)
+        TableLayoutPanel17.TabIndex = 13
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Dock = DockStyle.Fill
+        Label14.Font = New Font("Poppins", 9.0F)
+        Label14.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label14.Location = New Point(3, 0)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(16, 26)
+        Label14.TabIndex = 14
+        Label14.Text = "₱ "
+        Label14.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' selfservice_newDry
+        ' 
+        selfservice_newDry.BorderColor = Color.Gray
+        selfservice_newDry.BorderRadius = 5
+        selfservice_newDry.CustomizableEdges = CustomizableEdges3
+        selfservice_newDry.DefaultText = ""
+        selfservice_newDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_newDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_newDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newDry.Dock = DockStyle.Fill
+        selfservice_newDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_newDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newDry.Location = New Point(25, 4)
+        selfservice_newDry.Margin = New Padding(3, 4, 3, 4)
+        selfservice_newDry.Name = "selfservice_newDry"
+        selfservice_newDry.PlaceholderText = ""
+        selfservice_newDry.SelectedText = ""
+        selfservice_newDry.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        selfservice_newDry.Size = New Size(87, 18)
+        selfservice_newDry.TabIndex = 15
+        ' 
+        ' Label33
+        ' 
+        Label33.AutoSize = True
+        Label33.Dock = DockStyle.Fill
+        Label33.Font = New Font("Poppins", 9.0F)
+        Label33.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label33.Location = New Point(118, 0)
+        Label33.Name = "Label33"
+        Label33.Size = New Size(29, 26)
+        Label33.TabIndex = 13
+        Label33.Text = "/kg"
+        Label33.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label34
+        ' 
+        Label34.AutoSize = True
+        Label34.Dock = DockStyle.Fill
+        Label34.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label34.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label34.Location = New Point(3, 90)
+        Label34.Name = "Label34"
+        Label34.Size = New Size(150, 30)
+        Label34.TabIndex = 13
+        Label34.Text = "DRY ONLY"
+        Label34.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label35
+        ' 
+        Label35.AutoSize = True
+        Label35.Dock = DockStyle.Fill
+        Label35.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label35.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label35.Location = New Point(3, 0)
+        Label35.Name = "Label35"
+        Label35.Size = New Size(150, 30)
+        Label35.TabIndex = 11
+        Label35.Text = "WASH ONLY"
+        Label35.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel20
+        ' 
+        TableLayoutPanel20.ColumnCount = 3
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel20.Controls.Add(Label36, 0, 0)
+        TableLayoutPanel20.Controls.Add(selfservice_newWash, 1, 0)
+        TableLayoutPanel20.Controls.Add(Label37, 2, 0)
+        TableLayoutPanel20.Dock = DockStyle.Fill
+        TableLayoutPanel20.Location = New Point(3, 32)
+        TableLayoutPanel20.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel20.Name = "TableLayoutPanel20"
+        TableLayoutPanel20.RowCount = 1
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
+        TableLayoutPanel20.Size = New Size(150, 26)
+        TableLayoutPanel20.TabIndex = 11
+        ' 
+        ' Label36
+        ' 
+        Label36.AutoSize = True
+        Label36.Dock = DockStyle.Fill
+        Label36.Font = New Font("Poppins", 9.0F)
+        Label36.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label36.Location = New Point(3, 0)
+        Label36.Name = "Label36"
+        Label36.Size = New Size(16, 26)
+        Label36.TabIndex = 14
+        Label36.Text = "₱ "
+        Label36.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' selfservice_newWash
+        ' 
+        selfservice_newWash.BorderColor = Color.Gray
+        selfservice_newWash.BorderRadius = 5
+        selfservice_newWash.CustomizableEdges = CustomizableEdges5
+        selfservice_newWash.DefaultText = ""
+        selfservice_newWash.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        selfservice_newWash.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        selfservice_newWash.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWash.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        selfservice_newWash.Dock = DockStyle.Fill
+        selfservice_newWash.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selfservice_newWash.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        selfservice_newWash.Location = New Point(25, 4)
+        selfservice_newWash.Margin = New Padding(3, 4, 3, 4)
+        selfservice_newWash.Name = "selfservice_newWash"
+        selfservice_newWash.PlaceholderText = ""
+        selfservice_newWash.SelectedText = ""
+        selfservice_newWash.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        selfservice_newWash.Size = New Size(87, 18)
+        selfservice_newWash.TabIndex = 15
+        ' 
+        ' Label37
+        ' 
+        Label37.Anchor = AnchorStyles.Left
+        Label37.AutoSize = True
+        Label37.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label37.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label37.Location = New Point(118, 6)
+        Label37.Name = "Label37"
+        Label37.Size = New Size(24, 13)
+        Label37.TabIndex = 13
+        Label37.Text = "/kg"
+        Label37.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Dock = DockStyle.Fill
+        Label11.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label11.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label11.Location = New Point(3, 180)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(150, 30)
+        Label11.TabIndex = 15
+        Label11.Text = "WASH + DRY"
+        Label11.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel11
+        ' 
+        TableLayoutPanel11.ColumnCount = 2
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel11.Controls.Add(selfservice_currentWashDry, 1, 0)
+        TableLayoutPanel11.Controls.Add(Label23, 0, 0)
+        TableLayoutPanel11.Dock = DockStyle.Fill
+        TableLayoutPanel11.Location = New Point(3, 242)
+        TableLayoutPanel11.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel11.Name = "TableLayoutPanel11"
+        TableLayoutPanel11.RowCount = 1
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel11.Size = New Size(150, 32)
+        TableLayoutPanel11.TabIndex = 16
+        ' 
+        ' selfservice_currentWashDry
+        ' 
+        selfservice_currentWashDry.AutoSize = True
+        selfservice_currentWashDry.Dock = DockStyle.Fill
+        selfservice_currentWashDry.Font = New Font("Poppins", 9.0F)
+        selfservice_currentWashDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        selfservice_currentWashDry.Location = New Point(105, 0)
+        selfservice_currentWashDry.Name = "selfservice_currentWashDry"
+        selfservice_currentWashDry.Size = New Size(42, 32)
+        selfservice_currentWashDry.TabIndex = 14
+        selfservice_currentWashDry.Text = "₱ 30"
+        selfservice_currentWashDry.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Dock = DockStyle.Fill
+        Label23.Font = New Font("Poppins", 8.25F)
+        Label23.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label23.Location = New Point(3, 0)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(96, 32)
+        Label23.TabIndex = 14
+        Label23.Text = "Current Price: ₱ "
+        Label23.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' saveBtn
+        ' 
+        saveBtn.BorderRadius = 5
+        saveBtn.CustomizableEdges = CustomizableEdges9
+        saveBtn.DisabledState.BorderColor = Color.DarkGray
+        saveBtn.DisabledState.CustomBorderColor = Color.DarkGray
+        saveBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        saveBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        saveBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        saveBtn.Dock = DockStyle.Fill
+        saveBtn.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        saveBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        saveBtn.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        saveBtn.ForeColor = Color.White
+        saveBtn.Location = New Point(493, 417)
+        saveBtn.Margin = New Padding(7)
+        saveBtn.Name = "saveBtn"
+        saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        saveBtn.Size = New Size(150, 26)
+        saveBtn.TabIndex = 8
+        saveBtn.Text = "SAVE CHANGES"
+        ' 
+        ' Guna2CustomGradientPanel4
+        ' 
+        Guna2CustomGradientPanel4.BackColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        Guna2CustomGradientPanel4.BorderColor = SystemColors.ActiveBorder
+        Guna2CustomGradientPanel4.BorderRadius = 5
+        Guna2CustomGradientPanel4.BorderThickness = 2
+        Guna2CustomGradientPanel4.Controls.Add(TableLayoutPanel18)
+        Guna2CustomGradientPanel4.CustomizableEdges = CustomizableEdges17
+        Guna2CustomGradientPanel4.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel4.Location = New Point(489, 132)
+        Guna2CustomGradientPanel4.Margin = New Padding(3, 2, 3, 2)
+        Guna2CustomGradientPanel4.Name = "Guna2CustomGradientPanel4"
+        Guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2CustomGradientPanel4.Size = New Size(158, 276)
+        Guna2CustomGradientPanel4.TabIndex = 24
+        ' 
+        ' TableLayoutPanel18
+        ' 
+        TableLayoutPanel18.BackColor = Color.Transparent
+        TableLayoutPanel18.ColumnCount = 1
+        TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel18.Controls.Add(TableLayoutPanel22, 0, 2)
+        TableLayoutPanel18.Controls.Add(TableLayoutPanel23, 0, 5)
+        TableLayoutPanel18.Controls.Add(TableLayoutPanel24, 0, 7)
+        TableLayoutPanel18.Controls.Add(TableLayoutPanel25, 0, 4)
+        TableLayoutPanel18.Controls.Add(Label50, 0, 3)
+        TableLayoutPanel18.Controls.Add(Label51, 0, 0)
+        TableLayoutPanel18.Controls.Add(TableLayoutPanel26, 0, 1)
+        TableLayoutPanel18.Controls.Add(TableLayoutPanel27, 0, 8)
+        TableLayoutPanel18.Controls.Add(Label56, 0, 6)
+        TableLayoutPanel18.Dock = DockStyle.Fill
+        TableLayoutPanel18.Location = New Point(0, 0)
+        TableLayoutPanel18.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel18.Name = "TableLayoutPanel18"
+        TableLayoutPanel18.RowCount = 9
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel18.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel18.Size = New Size(158, 276)
+        TableLayoutPanel18.TabIndex = 18
+        ' 
+        ' TableLayoutPanel22
+        ' 
+        TableLayoutPanel22.ColumnCount = 2
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel22.Controls.Add(dryclean_currentSmall, 1, 0)
+        TableLayoutPanel22.Controls.Add(Label40, 0, 0)
+        TableLayoutPanel22.Dock = DockStyle.Fill
+        TableLayoutPanel22.Location = New Point(3, 62)
+        TableLayoutPanel22.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel22.Name = "TableLayoutPanel22"
+        TableLayoutPanel22.RowCount = 1
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.Size = New Size(152, 26)
+        TableLayoutPanel22.TabIndex = 12
+        ' 
+        ' dryclean_currentSmall
+        ' 
+        dryclean_currentSmall.Anchor = AnchorStyles.Left
+        dryclean_currentSmall.AutoSize = True
+        dryclean_currentSmall.Font = New Font("Poppins", 9.75F)
+        dryclean_currentSmall.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_currentSmall.Location = New Point(107, 1)
+        dryclean_currentSmall.Name = "dryclean_currentSmall"
+        dryclean_currentSmall.Size = New Size(39, 23)
+        dryclean_currentSmall.TabIndex = 14
+        dryclean_currentSmall.Text = "₱ 40"
+        dryclean_currentSmall.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label40
+        ' 
+        Label40.Anchor = AnchorStyles.Left
+        Label40.AutoSize = True
+        Label40.Font = New Font("Poppins", 8.25F)
+        Label40.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label40.Location = New Point(3, 3)
+        Label40.Name = "Label40"
+        Label40.Size = New Size(96, 19)
+        Label40.TabIndex = 14
+        Label40.Text = "Current Price: ₱ "
+        Label40.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel23
+        ' 
+        TableLayoutPanel23.ColumnCount = 2
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel23.Controls.Add(dryclean_currentMedium, 1, 0)
+        TableLayoutPanel23.Controls.Add(Label42, 0, 0)
+        TableLayoutPanel23.Dock = DockStyle.Fill
+        TableLayoutPanel23.Location = New Point(3, 152)
+        TableLayoutPanel23.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel23.Name = "TableLayoutPanel23"
+        TableLayoutPanel23.RowCount = 1
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel23.Size = New Size(152, 26)
+        TableLayoutPanel23.TabIndex = 16
+        ' 
+        ' dryclean_currentMedium
+        ' 
+        dryclean_currentMedium.Anchor = AnchorStyles.Left
+        dryclean_currentMedium.AutoSize = True
+        dryclean_currentMedium.Font = New Font("Poppins", 9.75F)
+        dryclean_currentMedium.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_currentMedium.Location = New Point(107, 1)
+        dryclean_currentMedium.Name = "dryclean_currentMedium"
+        dryclean_currentMedium.Size = New Size(39, 23)
+        dryclean_currentMedium.TabIndex = 14
+        dryclean_currentMedium.Text = "₱ 30"
+        dryclean_currentMedium.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label42
+        ' 
+        Label42.Anchor = AnchorStyles.Left
+        Label42.AutoSize = True
+        Label42.Font = New Font("Poppins", 8.25F)
+        Label42.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label42.Location = New Point(3, 3)
+        Label42.Name = "Label42"
+        Label42.Size = New Size(96, 19)
+        Label42.TabIndex = 14
+        Label42.Text = "Current Price: ₱ "
+        Label42.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel24
+        ' 
+        TableLayoutPanel24.ColumnCount = 3
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel24.Controls.Add(Label46, 0, 0)
+        TableLayoutPanel24.Controls.Add(dryclean_newLarge, 1, 0)
+        TableLayoutPanel24.Controls.Add(Label47, 2, 0)
+        TableLayoutPanel24.Dock = DockStyle.Fill
+        TableLayoutPanel24.Location = New Point(3, 212)
+        TableLayoutPanel24.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel24.Name = "TableLayoutPanel24"
+        TableLayoutPanel24.RowCount = 1
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel24.Size = New Size(152, 26)
+        TableLayoutPanel24.TabIndex = 14
+        ' 
+        ' Label46
+        ' 
+        Label46.Anchor = AnchorStyles.Left
+        Label46.AutoSize = True
+        Label46.Font = New Font("Poppins", 9.75F)
+        Label46.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label46.Location = New Point(3, 1)
+        Label46.Name = "Label46"
+        Label46.Size = New Size(17, 23)
+        Label46.TabIndex = 14
+        Label46.Text = "₱ "
+        Label46.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' dryclean_newLarge
+        ' 
+        dryclean_newLarge.BorderColor = Color.Gray
+        dryclean_newLarge.BorderRadius = 5
+        dryclean_newLarge.CustomizableEdges = CustomizableEdges11
+        dryclean_newLarge.DefaultText = ""
+        dryclean_newLarge.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_newLarge.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_newLarge.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newLarge.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newLarge.Dock = DockStyle.Fill
+        dryclean_newLarge.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newLarge.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_newLarge.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newLarge.Location = New Point(26, 4)
+        dryclean_newLarge.Margin = New Padding(3, 4, 3, 4)
+        dryclean_newLarge.Name = "dryclean_newLarge"
+        dryclean_newLarge.PlaceholderText = ""
+        dryclean_newLarge.SelectedText = ""
+        dryclean_newLarge.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        dryclean_newLarge.Size = New Size(88, 18)
+        dryclean_newLarge.TabIndex = 15
+        ' 
+        ' Label47
+        ' 
+        Label47.Anchor = AnchorStyles.Left
+        Label47.AutoSize = True
+        Label47.Font = New Font("Poppins", 9.75F)
+        Label47.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label47.Location = New Point(120, 0)
+        Label47.Name = "Label47"
+        Label47.Size = New Size(25, 26)
+        Label47.TabIndex = 13
+        Label47.Text = "/pc"
+        Label47.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel25
+        ' 
+        TableLayoutPanel25.ColumnCount = 3
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel25.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel25.Controls.Add(Label48, 0, 0)
+        TableLayoutPanel25.Controls.Add(dryclean_newMedium, 1, 0)
+        TableLayoutPanel25.Controls.Add(Label49, 2, 0)
+        TableLayoutPanel25.Dock = DockStyle.Fill
+        TableLayoutPanel25.Location = New Point(3, 122)
+        TableLayoutPanel25.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel25.Name = "TableLayoutPanel25"
+        TableLayoutPanel25.RowCount = 1
+        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel25.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel25.Size = New Size(152, 26)
+        TableLayoutPanel25.TabIndex = 13
+        ' 
+        ' Label48
+        ' 
+        Label48.Anchor = AnchorStyles.Left
+        Label48.AutoSize = True
+        Label48.Font = New Font("Poppins", 9.75F)
+        Label48.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label48.Location = New Point(3, 1)
+        Label48.Name = "Label48"
+        Label48.Size = New Size(17, 23)
+        Label48.TabIndex = 14
+        Label48.Text = "₱ "
+        Label48.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' dryclean_newMedium
+        ' 
+        dryclean_newMedium.BorderColor = Color.Gray
+        dryclean_newMedium.BorderRadius = 5
+        dryclean_newMedium.CustomizableEdges = CustomizableEdges13
+        dryclean_newMedium.DefaultText = ""
+        dryclean_newMedium.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_newMedium.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_newMedium.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newMedium.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newMedium.Dock = DockStyle.Fill
+        dryclean_newMedium.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newMedium.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_newMedium.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newMedium.Location = New Point(26, 4)
+        dryclean_newMedium.Margin = New Padding(3, 4, 3, 4)
+        dryclean_newMedium.Name = "dryclean_newMedium"
+        dryclean_newMedium.PlaceholderText = ""
+        dryclean_newMedium.SelectedText = ""
+        dryclean_newMedium.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        dryclean_newMedium.Size = New Size(88, 18)
+        dryclean_newMedium.TabIndex = 15
+        ' 
+        ' Label49
+        ' 
+        Label49.Anchor = AnchorStyles.Left
+        Label49.AutoSize = True
+        Label49.Font = New Font("Poppins", 9.75F)
+        Label49.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label49.Location = New Point(120, 0)
+        Label49.Name = "Label49"
+        Label49.Size = New Size(25, 26)
+        Label49.TabIndex = 13
+        Label49.Text = "/pc"
+        Label49.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label50
+        ' 
+        Label50.AutoSize = True
+        Label50.Dock = DockStyle.Fill
+        Label50.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label50.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label50.Location = New Point(3, 90)
+        Label50.Name = "Label50"
+        Label50.Size = New Size(152, 30)
+        Label50.TabIndex = 13
+        Label50.Text = "MEDIUM ITEM"
+        Label50.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label51
+        ' 
+        Label51.AutoSize = True
+        Label51.Dock = DockStyle.Fill
+        Label51.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label51.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label51.Location = New Point(3, 0)
+        Label51.Name = "Label51"
+        Label51.Size = New Size(152, 30)
+        Label51.TabIndex = 11
+        Label51.Text = "SMALL ITEM"
+        Label51.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel26
+        ' 
+        TableLayoutPanel26.ColumnCount = 3
+        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel26.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel26.Controls.Add(Label52, 0, 0)
+        TableLayoutPanel26.Controls.Add(dryclean_newSmall, 1, 0)
+        TableLayoutPanel26.Controls.Add(Label53, 2, 0)
+        TableLayoutPanel26.Dock = DockStyle.Fill
+        TableLayoutPanel26.Location = New Point(3, 32)
+        TableLayoutPanel26.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel26.Name = "TableLayoutPanel26"
+        TableLayoutPanel26.RowCount = 1
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel26.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
+        TableLayoutPanel26.Size = New Size(152, 26)
+        TableLayoutPanel26.TabIndex = 11
+        ' 
+        ' Label52
+        ' 
+        Label52.Anchor = AnchorStyles.Left
+        Label52.AutoSize = True
+        Label52.Font = New Font("Poppins", 9.75F)
+        Label52.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label52.Location = New Point(3, 1)
+        Label52.Name = "Label52"
+        Label52.Size = New Size(17, 23)
+        Label52.TabIndex = 14
+        Label52.Text = "₱ "
+        Label52.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' dryclean_newSmall
+        ' 
+        dryclean_newSmall.AcceptsReturn = True
+        dryclean_newSmall.BorderColor = Color.Gray
+        dryclean_newSmall.BorderRadius = 5
+        dryclean_newSmall.CustomizableEdges = CustomizableEdges15
+        dryclean_newSmall.DefaultText = ""
+        dryclean_newSmall.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        dryclean_newSmall.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        dryclean_newSmall.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newSmall.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        dryclean_newSmall.Dock = DockStyle.Fill
+        dryclean_newSmall.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newSmall.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dryclean_newSmall.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        dryclean_newSmall.Location = New Point(26, 4)
+        dryclean_newSmall.Margin = New Padding(3, 4, 3, 4)
+        dryclean_newSmall.Name = "dryclean_newSmall"
+        dryclean_newSmall.PlaceholderText = ""
+        dryclean_newSmall.SelectedText = ""
+        dryclean_newSmall.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        dryclean_newSmall.Size = New Size(88, 18)
+        dryclean_newSmall.TabIndex = 15
+        ' 
+        ' Label53
+        ' 
+        Label53.Anchor = AnchorStyles.Left
+        Label53.AutoSize = True
+        Label53.Font = New Font("Poppins", 9.75F)
+        Label53.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label53.Location = New Point(120, 0)
+        Label53.Name = "Label53"
+        Label53.Size = New Size(25, 26)
+        Label53.TabIndex = 13
+        Label53.Text = "/pc"
+        Label53.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel27
+        ' 
+        TableLayoutPanel27.ColumnCount = 2
+        TableLayoutPanel27.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel27.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel27.Controls.Add(dryclean_currentLarge, 1, 0)
+        TableLayoutPanel27.Controls.Add(Label55, 0, 0)
+        TableLayoutPanel27.Dock = DockStyle.Fill
+        TableLayoutPanel27.Location = New Point(3, 242)
+        TableLayoutPanel27.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel27.Name = "TableLayoutPanel27"
+        TableLayoutPanel27.RowCount = 1
+        TableLayoutPanel27.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel27.Size = New Size(152, 32)
+        TableLayoutPanel27.TabIndex = 16
+        ' 
+        ' dryclean_currentLarge
+        ' 
+        dryclean_currentLarge.Anchor = AnchorStyles.Left
+        dryclean_currentLarge.AutoSize = True
+        dryclean_currentLarge.Font = New Font("Poppins", 9.75F)
+        dryclean_currentLarge.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        dryclean_currentLarge.Location = New Point(107, 4)
+        dryclean_currentLarge.Name = "dryclean_currentLarge"
+        dryclean_currentLarge.Size = New Size(39, 23)
+        dryclean_currentLarge.TabIndex = 14
+        dryclean_currentLarge.Text = "₱ 30"
+        dryclean_currentLarge.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label55
+        ' 
+        Label55.Anchor = AnchorStyles.Left
+        Label55.AutoSize = True
+        Label55.Font = New Font("Poppins", 8.25F)
+        Label55.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label55.Location = New Point(3, 6)
+        Label55.Name = "Label55"
+        Label55.Size = New Size(96, 19)
+        Label55.TabIndex = 14
+        Label55.Text = "Current Price: ₱ "
+        Label55.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label56
+        ' 
+        Label56.AutoSize = True
+        Label56.Dock = DockStyle.Fill
+        Label56.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label56.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label56.Location = New Point(3, 180)
+        Label56.Name = "Label56"
+        Label56.Size = New Size(152, 30)
+        Label56.TabIndex = 15
+        Label56.Text = "LARGE ITEM"
+        Label56.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Guna2CustomGradientPanel2
+        ' 
+        Guna2CustomGradientPanel2.BackColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        Guna2CustomGradientPanel2.BorderColor = SystemColors.ActiveBorder
+        Guna2CustomGradientPanel2.BorderRadius = 5
+        Guna2CustomGradientPanel2.BorderThickness = 2
+        Guna2CustomGradientPanel2.Controls.Add(TableLayoutPanel3)
+        Guna2CustomGradientPanel2.CustomizableEdges = CustomizableEdges25
+        Guna2CustomGradientPanel2.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel2.Location = New Point(165, 132)
+        Guna2CustomGradientPanel2.Margin = New Padding(3, 2, 3, 2)
+        Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
+        Guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        Guna2CustomGradientPanel2.Size = New Size(156, 276)
+        Guna2CustomGradientPanel2.TabIndex = 22
+        ' 
+        ' TableLayoutPanel3
+        ' 
+        TableLayoutPanel3.BackColor = Color.Transparent
+        TableLayoutPanel3.ColumnCount = 1
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel3.Controls.Add(TableLayoutPanel7, 0, 2)
+        TableLayoutPanel3.Controls.Add(TableLayoutPanel10, 0, 5)
+        TableLayoutPanel3.Controls.Add(TableLayoutPanel12, 0, 7)
+        TableLayoutPanel3.Controls.Add(TableLayoutPanel13, 0, 4)
+        TableLayoutPanel3.Controls.Add(Label25, 0, 3)
+        TableLayoutPanel3.Controls.Add(Label26, 0, 0)
+        TableLayoutPanel3.Controls.Add(TableLayoutPanel14, 0, 1)
+        TableLayoutPanel3.Controls.Add(TableLayoutPanel15, 0, 8)
+        TableLayoutPanel3.Controls.Add(Label31, 0, 6)
+        TableLayoutPanel3.Dock = DockStyle.Fill
+        TableLayoutPanel3.Location = New Point(0, 0)
+        TableLayoutPanel3.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel3.Name = "TableLayoutPanel3"
+        TableLayoutPanel3.RowCount = 9
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel3.Size = New Size(156, 276)
+        TableLayoutPanel3.TabIndex = 18
+        ' 
+        ' TableLayoutPanel7
+        ' 
+        TableLayoutPanel7.ColumnCount = 2
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel7.Controls.Add(basicservice_currentWash, 1, 0)
+        TableLayoutPanel7.Controls.Add(Label7, 0, 0)
+        TableLayoutPanel7.Dock = DockStyle.Fill
+        TableLayoutPanel7.Location = New Point(3, 62)
+        TableLayoutPanel7.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel7.Name = "TableLayoutPanel7"
+        TableLayoutPanel7.RowCount = 1
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel7.Size = New Size(150, 26)
+        TableLayoutPanel7.TabIndex = 12
+        ' 
+        ' basicservice_currentWash
+        ' 
+        basicservice_currentWash.AutoSize = True
+        basicservice_currentWash.Dock = DockStyle.Fill
+        basicservice_currentWash.Font = New Font("Poppins", 9.0F)
+        basicservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_currentWash.Location = New Point(105, 0)
+        basicservice_currentWash.Name = "basicservice_currentWash"
+        basicservice_currentWash.Size = New Size(42, 26)
+        basicservice_currentWash.TabIndex = 14
+        basicservice_currentWash.Text = "₱ 40"
+        basicservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Dock = DockStyle.Fill
+        Label7.Font = New Font("Poppins", 8.25F)
+        Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label7.Location = New Point(3, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(96, 26)
+        Label7.TabIndex = 14
+        Label7.Text = "Current Price: ₱ "
+        Label7.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel10
+        ' 
+        TableLayoutPanel10.ColumnCount = 2
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel10.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel10.Controls.Add(basicservice_currentDry, 1, 0)
+        TableLayoutPanel10.Controls.Add(Label18, 0, 0)
+        TableLayoutPanel10.Dock = DockStyle.Fill
+        TableLayoutPanel10.Location = New Point(3, 152)
+        TableLayoutPanel10.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel10.Name = "TableLayoutPanel10"
+        TableLayoutPanel10.RowCount = 1
+        TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel10.Size = New Size(150, 26)
+        TableLayoutPanel10.TabIndex = 16
+        ' 
+        ' basicservice_currentDry
+        ' 
+        basicservice_currentDry.AutoSize = True
+        basicservice_currentDry.Dock = DockStyle.Fill
+        basicservice_currentDry.Font = New Font("Poppins", 9.0F)
+        basicservice_currentDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_currentDry.Location = New Point(105, 0)
+        basicservice_currentDry.Name = "basicservice_currentDry"
+        basicservice_currentDry.Size = New Size(42, 26)
+        basicservice_currentDry.TabIndex = 14
+        basicservice_currentDry.Text = "₱ 30"
+        basicservice_currentDry.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Dock = DockStyle.Fill
+        Label18.Font = New Font("Poppins", 8.25F)
+        Label18.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label18.Location = New Point(3, 0)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(96, 26)
+        Label18.TabIndex = 14
+        Label18.Text = "Current Price: ₱ "
+        Label18.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel12
+        ' 
+        TableLayoutPanel12.ColumnCount = 3
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel12.Controls.Add(Label19, 0, 0)
+        TableLayoutPanel12.Controls.Add(basicservice_newWashDry, 1, 0)
+        TableLayoutPanel12.Controls.Add(Label20, 2, 0)
+        TableLayoutPanel12.Dock = DockStyle.Fill
+        TableLayoutPanel12.Location = New Point(3, 212)
+        TableLayoutPanel12.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel12.Name = "TableLayoutPanel12"
+        TableLayoutPanel12.RowCount = 1
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel12.Size = New Size(150, 26)
+        TableLayoutPanel12.TabIndex = 14
+        ' 
+        ' Label19
+        ' 
+        Label19.Anchor = AnchorStyles.Left
+        Label19.AutoSize = True
+        Label19.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label19.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label19.Location = New Point(3, 6)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(14, 13)
+        Label19.TabIndex = 14
+        Label19.Text = "₱ "
+        Label19.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' basicservice_newWashDry
+        ' 
+        basicservice_newWashDry.BorderColor = Color.Gray
+        basicservice_newWashDry.BorderRadius = 5
+        basicservice_newWashDry.CustomizableEdges = CustomizableEdges19
+        basicservice_newWashDry.DefaultText = ""
+        basicservice_newWashDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_newWashDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_newWashDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWashDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWashDry.Dock = DockStyle.Fill
+        basicservice_newWashDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWashDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_newWashDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWashDry.Location = New Point(25, 4)
+        basicservice_newWashDry.Margin = New Padding(3, 4, 3, 4)
+        basicservice_newWashDry.Name = "basicservice_newWashDry"
+        basicservice_newWashDry.PlaceholderText = ""
+        basicservice_newWashDry.SelectedText = ""
+        basicservice_newWashDry.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        basicservice_newWashDry.Size = New Size(87, 18)
+        basicservice_newWashDry.TabIndex = 15
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Dock = DockStyle.Fill
+        Label20.Font = New Font("Poppins", 9.0F)
+        Label20.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label20.Location = New Point(118, 0)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(29, 26)
+        Label20.TabIndex = 13
+        Label20.Text = "/kg"
+        Label20.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel13
+        ' 
+        TableLayoutPanel13.ColumnCount = 3
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel13.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel13.Controls.Add(Label21, 0, 0)
+        TableLayoutPanel13.Controls.Add(basicservice_newDry, 1, 0)
+        TableLayoutPanel13.Controls.Add(Label24, 2, 0)
+        TableLayoutPanel13.Dock = DockStyle.Fill
+        TableLayoutPanel13.Location = New Point(3, 122)
+        TableLayoutPanel13.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel13.Name = "TableLayoutPanel13"
+        TableLayoutPanel13.RowCount = 1
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel13.RowStyles.Add(New RowStyle(SizeType.Absolute, 26.0F))
+        TableLayoutPanel13.Size = New Size(150, 26)
+        TableLayoutPanel13.TabIndex = 13
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Dock = DockStyle.Fill
+        Label21.Font = New Font("Poppins", 9.0F)
+        Label21.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label21.Location = New Point(3, 0)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(16, 26)
+        Label21.TabIndex = 14
+        Label21.Text = "₱ "
+        Label21.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' basicservice_newDry
+        ' 
+        basicservice_newDry.BorderColor = Color.Gray
+        basicservice_newDry.BorderRadius = 5
+        basicservice_newDry.CustomizableEdges = CustomizableEdges21
+        basicservice_newDry.DefaultText = ""
+        basicservice_newDry.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_newDry.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_newDry.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newDry.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newDry.Dock = DockStyle.Fill
+        basicservice_newDry.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newDry.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_newDry.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newDry.Location = New Point(25, 4)
+        basicservice_newDry.Margin = New Padding(3, 4, 3, 4)
+        basicservice_newDry.Name = "basicservice_newDry"
+        basicservice_newDry.PlaceholderText = ""
+        basicservice_newDry.SelectedText = ""
+        basicservice_newDry.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        basicservice_newDry.Size = New Size(87, 18)
+        basicservice_newDry.TabIndex = 15
+        ' 
+        ' Label24
+        ' 
+        Label24.AutoSize = True
+        Label24.Dock = DockStyle.Fill
+        Label24.Font = New Font("Poppins", 9.0F)
+        Label24.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label24.Location = New Point(118, 0)
+        Label24.Name = "Label24"
+        Label24.Size = New Size(29, 26)
+        Label24.TabIndex = 13
+        Label24.Text = "/kg"
+        Label24.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label25
+        ' 
+        Label25.AutoSize = True
+        Label25.Dock = DockStyle.Fill
+        Label25.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label25.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label25.Location = New Point(3, 90)
+        Label25.Name = "Label25"
+        Label25.Size = New Size(150, 30)
+        Label25.TabIndex = 13
+        Label25.Text = "DRY ONLY"
+        Label25.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label26
+        ' 
+        Label26.AutoSize = True
+        Label26.Dock = DockStyle.Fill
+        Label26.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label26.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label26.Location = New Point(3, 0)
+        Label26.Name = "Label26"
+        Label26.Size = New Size(150, 30)
+        Label26.TabIndex = 11
+        Label26.Text = "WASH ONLY"
+        Label26.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel14
+        ' 
+        TableLayoutPanel14.ColumnCount = 3
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel14.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel14.Controls.Add(Label27, 0, 0)
+        TableLayoutPanel14.Controls.Add(basicservice_newWash, 1, 0)
+        TableLayoutPanel14.Controls.Add(Label28, 2, 0)
+        TableLayoutPanel14.Dock = DockStyle.Fill
+        TableLayoutPanel14.Location = New Point(3, 32)
+        TableLayoutPanel14.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel14.Name = "TableLayoutPanel14"
+        TableLayoutPanel14.RowCount = 1
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel14.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
+        TableLayoutPanel14.Size = New Size(150, 26)
+        TableLayoutPanel14.TabIndex = 11
+        ' 
+        ' Label27
+        ' 
+        Label27.AutoSize = True
+        Label27.Dock = DockStyle.Fill
+        Label27.Font = New Font("Poppins", 9.0F)
+        Label27.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label27.Location = New Point(3, 0)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(16, 26)
+        Label27.TabIndex = 14
+        Label27.Text = "₱ "
+        Label27.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' basicservice_newWash
+        ' 
+        basicservice_newWash.BorderColor = Color.Gray
+        basicservice_newWash.BorderRadius = 5
+        basicservice_newWash.CustomizableEdges = CustomizableEdges23
+        basicservice_newWash.DefaultText = ""
+        basicservice_newWash.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        basicservice_newWash.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        basicservice_newWash.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWash.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        basicservice_newWash.Dock = DockStyle.Fill
+        basicservice_newWash.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWash.Font = New Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        basicservice_newWash.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        basicservice_newWash.Location = New Point(25, 4)
+        basicservice_newWash.Margin = New Padding(3, 4, 3, 4)
+        basicservice_newWash.Name = "basicservice_newWash"
+        basicservice_newWash.PlaceholderText = ""
+        basicservice_newWash.SelectedText = ""
+        basicservice_newWash.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        basicservice_newWash.Size = New Size(87, 18)
+        basicservice_newWash.TabIndex = 15
+        ' 
+        ' Label28
+        ' 
+        Label28.AutoSize = True
+        Label28.Dock = DockStyle.Fill
+        Label28.Font = New Font("Poppins", 9.0F)
+        Label28.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label28.Location = New Point(118, 0)
+        Label28.Name = "Label28"
+        Label28.Size = New Size(29, 26)
+        Label28.TabIndex = 13
+        Label28.Text = "/kg"
+        Label28.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel15
+        ' 
+        TableLayoutPanel15.ColumnCount = 2
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel15.Controls.Add(basicservice_currentWashDry, 1, 0)
+        TableLayoutPanel15.Controls.Add(Label30, 0, 0)
+        TableLayoutPanel15.Dock = DockStyle.Fill
+        TableLayoutPanel15.Location = New Point(3, 242)
+        TableLayoutPanel15.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel15.Name = "TableLayoutPanel15"
+        TableLayoutPanel15.RowCount = 1
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel15.Size = New Size(150, 32)
+        TableLayoutPanel15.TabIndex = 16
+        ' 
+        ' basicservice_currentWashDry
+        ' 
+        basicservice_currentWashDry.AutoSize = True
+        basicservice_currentWashDry.Dock = DockStyle.Fill
+        basicservice_currentWashDry.Font = New Font("Poppins", 9.0F)
+        basicservice_currentWashDry.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        basicservice_currentWashDry.Location = New Point(105, 0)
+        basicservice_currentWashDry.Name = "basicservice_currentWashDry"
+        basicservice_currentWashDry.Size = New Size(42, 32)
+        basicservice_currentWashDry.TabIndex = 14
+        basicservice_currentWashDry.Text = "₱ 30"
+        basicservice_currentWashDry.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label30
+        ' 
+        Label30.AutoSize = True
+        Label30.Dock = DockStyle.Fill
+        Label30.Font = New Font("Poppins", 8.25F)
+        Label30.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label30.Location = New Point(3, 0)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(96, 32)
+        Label30.TabIndex = 14
+        Label30.Text = "Current Price: ₱ "
+        Label30.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label31
+        ' 
+        Label31.AutoSize = True
+        Label31.Dock = DockStyle.Fill
+        Label31.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label31.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label31.Location = New Point(3, 180)
+        Label31.Name = "Label31"
+        Label31.Size = New Size(150, 30)
+        Label31.TabIndex = 15
+        Label31.Text = "WASH + DRY"
+        Label31.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Guna2CustomGradientPanel3
+        ' 
+        Guna2CustomGradientPanel3.BackColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        Guna2CustomGradientPanel3.BorderColor = SystemColors.ActiveBorder
+        Guna2CustomGradientPanel3.BorderRadius = 5
+        Guna2CustomGradientPanel3.BorderThickness = 2
+        Guna2CustomGradientPanel3.Controls.Add(TableLayoutPanel28)
+        Guna2CustomGradientPanel3.CustomizableEdges = CustomizableEdges29
+        Guna2CustomGradientPanel3.Dock = DockStyle.Fill
+        Guna2CustomGradientPanel3.Location = New Point(327, 132)
+        Guna2CustomGradientPanel3.Margin = New Padding(3, 2, 3, 2)
+        Guna2CustomGradientPanel3.Name = "Guna2CustomGradientPanel3"
+        Guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        Guna2CustomGradientPanel3.Size = New Size(156, 276)
+        Guna2CustomGradientPanel3.TabIndex = 23
+        ' 
+        ' TableLayoutPanel28
+        ' 
+        TableLayoutPanel28.BackColor = Color.Transparent
+        TableLayoutPanel28.ColumnCount = 1
+        TableLayoutPanel28.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel28.Controls.Add(TableLayoutPanel29, 0, 2)
+        TableLayoutPanel28.Controls.Add(Label66, 0, 0)
+        TableLayoutPanel28.Controls.Add(TableLayoutPanel33, 0, 1)
+        TableLayoutPanel28.Dock = DockStyle.Fill
+        TableLayoutPanel28.Location = New Point(0, 0)
+        TableLayoutPanel28.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel28.Name = "TableLayoutPanel28"
+        TableLayoutPanel28.RowCount = 9
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Percent, 11.1111107F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel28.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel28.Size = New Size(156, 276)
+        TableLayoutPanel28.TabIndex = 18
+        ' 
+        ' TableLayoutPanel29
+        ' 
+        TableLayoutPanel29.ColumnCount = 2
+        TableLayoutPanel29.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 68.49315F))
+        TableLayoutPanel29.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.50685F))
+        TableLayoutPanel29.Controls.Add(fullservice_currentWash, 1, 0)
+        TableLayoutPanel29.Controls.Add(Label58, 0, 0)
+        TableLayoutPanel29.Dock = DockStyle.Fill
+        TableLayoutPanel29.Location = New Point(3, 62)
+        TableLayoutPanel29.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel29.Name = "TableLayoutPanel29"
+        TableLayoutPanel29.RowCount = 1
+        TableLayoutPanel29.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel29.Size = New Size(150, 26)
+        TableLayoutPanel29.TabIndex = 12
+        ' 
+        ' fullservice_currentWash
+        ' 
+        fullservice_currentWash.AutoSize = True
+        fullservice_currentWash.Dock = DockStyle.Fill
+        fullservice_currentWash.Font = New Font("Poppins", 9.0F)
+        fullservice_currentWash.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        fullservice_currentWash.Location = New Point(105, 0)
+        fullservice_currentWash.Name = "fullservice_currentWash"
+        fullservice_currentWash.Size = New Size(42, 26)
+        fullservice_currentWash.TabIndex = 14
+        fullservice_currentWash.Text = "₱ 40"
+        fullservice_currentWash.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label58
+        ' 
+        Label58.AutoSize = True
+        Label58.Dock = DockStyle.Fill
+        Label58.Font = New Font("Poppins", 8.25F)
+        Label58.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label58.Location = New Point(3, 0)
+        Label58.Name = "Label58"
+        Label58.Size = New Size(96, 26)
+        Label58.TabIndex = 14
+        Label58.Text = "Current Price: ₱ "
+        Label58.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label66
+        ' 
+        Label66.AutoSize = True
+        Label66.Dock = DockStyle.Fill
+        Label66.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label66.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label66.Location = New Point(3, 0)
+        Label66.Name = "Label66"
+        Label66.Size = New Size(150, 30)
+        Label66.TabIndex = 11
+        Label66.Text = "FULL PACKAGE"
+        Label66.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' TableLayoutPanel33
+        ' 
+        TableLayoutPanel33.ColumnCount = 3
+        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 19.6261673F))
+        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.37383F))
+        TableLayoutPanel33.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 34.0F))
+        TableLayoutPanel33.Controls.Add(Label67, 0, 0)
+        TableLayoutPanel33.Controls.Add(fullservice_new2, 1, 0)
+        TableLayoutPanel33.Controls.Add(Label68, 2, 0)
+        TableLayoutPanel33.Dock = DockStyle.Fill
+        TableLayoutPanel33.Location = New Point(3, 32)
+        TableLayoutPanel33.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel33.Name = "TableLayoutPanel33"
+        TableLayoutPanel33.RowCount = 1
+        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel33.RowStyles.Add(New RowStyle(SizeType.Absolute, 27.0F))
+        TableLayoutPanel33.Size = New Size(150, 26)
+        TableLayoutPanel33.TabIndex = 11
+        ' 
+        ' Label67
+        ' 
+        Label67.AutoSize = True
+        Label67.Dock = DockStyle.Fill
+        Label67.Font = New Font("Poppins", 9.0F)
+        Label67.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label67.Location = New Point(3, 0)
+        Label67.Name = "Label67"
+        Label67.Size = New Size(16, 26)
+        Label67.TabIndex = 14
+        Label67.Text = "₱ "
+        Label67.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' fullservice_new2
+        ' 
+        fullservice_new2.BorderColor = Color.Gray
+        fullservice_new2.BorderRadius = 5
+        fullservice_new2.CustomizableEdges = CustomizableEdges27
+        fullservice_new2.DefaultText = ""
+        fullservice_new2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        fullservice_new2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        fullservice_new2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        fullservice_new2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        fullservice_new2.Dock = DockStyle.Fill
+        fullservice_new2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        fullservice_new2.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        fullservice_new2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        fullservice_new2.Location = New Point(25, 4)
+        fullservice_new2.Margin = New Padding(3, 4, 3, 4)
+        fullservice_new2.Name = "fullservice_new2"
+        fullservice_new2.PlaceholderText = ""
+        fullservice_new2.SelectedText = ""
+        fullservice_new2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        fullservice_new2.Size = New Size(87, 18)
+        fullservice_new2.TabIndex = 15
+        ' 
+        ' Label68
+        ' 
+        Label68.AutoSize = True
+        Label68.Dock = DockStyle.Fill
+        Label68.Font = New Font("Poppins", 9.0F)
+        Label68.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label68.Location = New Point(118, 0)
+        Label68.Name = "Label68"
+        Label68.Size = New Size(29, 26)
+        Label68.TabIndex = 13
+        Label68.Text = "/kg"
+        Label68.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Panel2
+        ' 
+        TableLayoutPanel16.SetColumnSpan(Panel2, 4)
+        Panel2.Controls.Add(TableLayoutPanel1)
+        Panel2.Dock = DockStyle.Fill
+        Panel2.Location = New Point(3, 73)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(644, 54)
+        Panel2.TabIndex = 25
+        ' 
+        ' TableLayoutPanel1
+        ' 
+        TableLayoutPanel1.ColumnCount = 4
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.Controls.Add(Label2, 0, 1)
+        TableLayoutPanel1.Controls.Add(Label3, 1, 1)
+        TableLayoutPanel1.Controls.Add(Guna2GradientPanel2, 0, 0)
+        TableLayoutPanel1.Controls.Add(Label4, 2, 1)
+        TableLayoutPanel1.Controls.Add(Label5, 3, 1)
+        TableLayoutPanel1.Dock = DockStyle.Fill
+        TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 52.6315727F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 47.3684235F))
+        TableLayoutPanel1.Size = New Size(644, 54)
+        TableLayoutPanel1.TabIndex = 0
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Dock = DockStyle.Fill
+        Label2.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label2.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label2.Location = New Point(3, 28)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(155, 26)
+        Label2.TabIndex = 10
+        Label2.Text = "SELF-SERVICE"
+        Label2.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Dock = DockStyle.Fill
+        Label3.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label3.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label3.Location = New Point(164, 28)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(155, 26)
+        Label3.TabIndex = 11
+        Label3.Text = "BASIC SERVICES"
+        Label3.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' Guna2GradientPanel2
+        ' 
+        TableLayoutPanel1.SetColumnSpan(Guna2GradientPanel2, 4)
+        Guna2GradientPanel2.Controls.Add(TableLayoutPanel9)
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges31
+        Guna2GradientPanel2.Dock = DockStyle.Fill
+        Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(184), CByte(215), CByte(255))
+        Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(221), CByte(239), CByte(255))
+        Guna2GradientPanel2.GradientMode = Drawing2D.LinearGradientMode.Vertical
+        Guna2GradientPanel2.Location = New Point(3, 2)
+        Guna2GradientPanel2.Margin = New Padding(3, 2, 3, 2)
+        Guna2GradientPanel2.Name = "Guna2GradientPanel2"
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        Guna2GradientPanel2.Size = New Size(638, 24)
+        Guna2GradientPanel2.TabIndex = 9
+        ' 
+        ' TableLayoutPanel9
+        ' 
+        TableLayoutPanel9.BackColor = Color.Transparent
+        TableLayoutPanel9.ColumnCount = 1
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel9.Controls.Add(Label1, 0, 0)
+        TableLayoutPanel9.Location = New Point(0, 2)
+        TableLayoutPanel9.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel9.Name = "TableLayoutPanel9"
+        TableLayoutPanel9.RowCount = 1
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel9.Size = New Size(573, 28)
+        TableLayoutPanel9.TabIndex = 4
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Dock = DockStyle.Fill
+        Label1.Font = New Font("Poppins Medium", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.SteelBlue
+        Label1.Location = New Point(3, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(567, 28)
+        Label1.TabIndex = 10
+        Label1.Text = "Update service prices. Changes apply immediately."
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Dock = DockStyle.Fill
+        Label4.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label4.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label4.Location = New Point(325, 28)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(155, 26)
+        Label4.TabIndex = 12
+        Label4.Text = "FULL SERVICE"
+        Label4.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Dock = DockStyle.Fill
+        Label5.Font = New Font("Poppins SemiBold", 9.75F, FontStyle.Bold)
+        Label5.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label5.Location = New Point(486, 28)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(155, 26)
+        Label5.TabIndex = 13
+        Label5.Text = "DRY CLEANING"
+        Label5.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' Guna2GradientPanel1
+        ' 
+        TableLayoutPanel16.SetColumnSpan(Guna2GradientPanel1, 4)
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges33
+        Guna2GradientPanel1.FillColor = Color.Black
+        Guna2GradientPanel1.Location = New Point(3, 53)
+        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        Guna2GradientPanel1.Size = New Size(644, 1)
+        Guna2GradientPanel1.TabIndex = 27
+        ' 
+        ' PriceSettingsControl
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(RightPanel)
+        Margin = New Padding(3, 2, 3, 2)
+        MinimumSize = New Size(650, 450)
+        Name = "PriceSettingsControl"
+        Size = New Size(650, 450)
+        RightPanel.ResumeLayout(False)
+        TableLayoutPanel16.ResumeLayout(False)
+        TableLayoutPanel16.PerformLayout()
+        Guna2CustomGradientPanel1.ResumeLayout(False)
+        TableLayoutPanel2.ResumeLayout(False)
+        TableLayoutPanel2.PerformLayout()
+        TableLayoutPanel5.ResumeLayout(False)
+        TableLayoutPanel5.PerformLayout()
+        TableLayoutPanel4.ResumeLayout(False)
+        TableLayoutPanel4.PerformLayout()
+        TableLayoutPanel6.ResumeLayout(False)
+        TableLayoutPanel6.PerformLayout()
+        TableLayoutPanel17.ResumeLayout(False)
+        TableLayoutPanel17.PerformLayout()
+        TableLayoutPanel20.ResumeLayout(False)
+        TableLayoutPanel20.PerformLayout()
+        TableLayoutPanel11.ResumeLayout(False)
+        TableLayoutPanel11.PerformLayout()
+        Guna2CustomGradientPanel4.ResumeLayout(False)
+        TableLayoutPanel18.ResumeLayout(False)
+        TableLayoutPanel18.PerformLayout()
+        TableLayoutPanel22.ResumeLayout(False)
+        TableLayoutPanel22.PerformLayout()
+        TableLayoutPanel23.ResumeLayout(False)
+        TableLayoutPanel23.PerformLayout()
+        TableLayoutPanel24.ResumeLayout(False)
+        TableLayoutPanel24.PerformLayout()
+        TableLayoutPanel25.ResumeLayout(False)
+        TableLayoutPanel25.PerformLayout()
+        TableLayoutPanel26.ResumeLayout(False)
+        TableLayoutPanel26.PerformLayout()
+        TableLayoutPanel27.ResumeLayout(False)
+        TableLayoutPanel27.PerformLayout()
+        Guna2CustomGradientPanel2.ResumeLayout(False)
+        TableLayoutPanel3.ResumeLayout(False)
+        TableLayoutPanel3.PerformLayout()
+        TableLayoutPanel7.ResumeLayout(False)
+        TableLayoutPanel7.PerformLayout()
+        TableLayoutPanel10.ResumeLayout(False)
+        TableLayoutPanel10.PerformLayout()
+        TableLayoutPanel12.ResumeLayout(False)
+        TableLayoutPanel12.PerformLayout()
+        TableLayoutPanel13.ResumeLayout(False)
+        TableLayoutPanel13.PerformLayout()
+        TableLayoutPanel14.ResumeLayout(False)
+        TableLayoutPanel14.PerformLayout()
+        TableLayoutPanel15.ResumeLayout(False)
+        TableLayoutPanel15.PerformLayout()
+        Guna2CustomGradientPanel3.ResumeLayout(False)
+        TableLayoutPanel28.ResumeLayout(False)
+        TableLayoutPanel28.PerformLayout()
+        TableLayoutPanel29.ResumeLayout(False)
+        TableLayoutPanel29.PerformLayout()
+        TableLayoutPanel33.ResumeLayout(False)
+        TableLayoutPanel33.PerformLayout()
+        Panel2.ResumeLayout(False)
+        TableLayoutPanel1.ResumeLayout(False)
+        TableLayoutPanel1.PerformLayout()
+        Guna2GradientPanel2.ResumeLayout(False)
+        TableLayoutPanel9.ResumeLayout(False)
+        TableLayoutPanel9.PerformLayout()
+        ResumeLayout(False)
+    End Sub
+
+    Friend WithEvents RightPanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents saveBtn As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2GradientPanel2 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents selfservice_newWashDry As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
+    Friend WithEvents selfservice_currentWashDry As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents selfservice_currentWash As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
+    Friend WithEvents Label14 As Label
+    Friend WithEvents selfservice_newDry As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents TableLayoutPanel20 As TableLayoutPanel
+    Friend WithEvents Label36 As Label
+    Friend WithEvents selfservice_newWash As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents selfservice_currentDry As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents Guna2CustomGradientPanel3 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents TableLayoutPanel28 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel29 As TableLayoutPanel
+    Friend WithEvents fullservice_currentWash As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label66 As Label
+    Friend WithEvents TableLayoutPanel33 As TableLayoutPanel
+    Friend WithEvents Label67 As Label
+    Friend WithEvents fullservice_new2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label68 As Label
+    Friend WithEvents Guna2CustomGradientPanel2 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents basicservice_currentWash As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
+    Friend WithEvents basicservice_currentDry As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
+    Friend WithEvents Label19 As Label
+    Friend WithEvents basicservice_newWashDry As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
+    Friend WithEvents Label21 As Label
+    Friend WithEvents basicservice_newDry As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents basicservice_newWash As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
+    Friend WithEvents basicservice_currentWashDry As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Guna2CustomGradientPanel4 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents TableLayoutPanel18 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel22 As TableLayoutPanel
+    Friend WithEvents dryclean_currentSmall As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents TableLayoutPanel23 As TableLayoutPanel
+    Friend WithEvents dryclean_currentMedium As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
+    Friend WithEvents Label46 As Label
+    Friend WithEvents dryclean_newLarge As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents TableLayoutPanel25 As TableLayoutPanel
+    Friend WithEvents Label48 As Label
+    Friend WithEvents dryclean_newMedium As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents TableLayoutPanel26 As TableLayoutPanel
+    Friend WithEvents Label52 As Label
+    Friend WithEvents dryclean_newSmall As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label53 As Label
+    Friend WithEvents TableLayoutPanel27 As TableLayoutPanel
+    Friend WithEvents dryclean_currentLarge As Label
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
+
+End Class

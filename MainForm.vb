@@ -170,4 +170,19 @@
         End If
     End Sub
 
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ' Optional: confirm logout
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            ' Show the login form centered
+            Dim loginForm As New LoginForm()
+            loginForm.StartPosition = FormStartPosition.CenterScreen
+            loginForm.Show()
+
+            ' Close the current main form
+            Me.Close()
+        End If
+    End Sub
+
 End Class

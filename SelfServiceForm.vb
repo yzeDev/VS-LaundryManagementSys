@@ -38,9 +38,9 @@ Public Class SelfServiceForm
                        "• Wash + Dry: ₱" & washAndDryPrice.ToString("F0") & "/kg"
     End Sub
 
-
-    ' 📱 Contact textbox: numeric lang after "+63 "
-    Private Sub Guna2txtboxContact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2txtboxContact.KeyPress
+    ' Contact textbox: numeric lang after "+63 "
+    Private Sub Guna2txtboxContact_KeyPress(sender As Object, e As KeyPressEventArgs)
+        ' Prevent typing non-numeric after "+63 "
         If Guna2txtboxContact.SelectionStart >= 4 Then
             If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
                 e.Handled = True
@@ -50,8 +50,9 @@ Public Class SelfServiceForm
         End If
     End Sub
 
-    Private Sub Guna2txtboxContact_TextChanged(sender As Object, e As EventArgs) Handles Guna2txtboxContact.TextChanged
-        Dim contact As String = Guna2txtboxContact.Text.Trim()
+    ' Contact textbox formatting & validation
+    Private Sub Guna2txtboxContact_TextChanged(sender As Object, e As EventArgs)
+        Dim contact = Guna2txtboxContact.Text.Trim
 
         If Not contact.StartsWith("+63 ") Then
             Guna2txtboxContact.Text = "+63 "
@@ -59,7 +60,10 @@ Public Class SelfServiceForm
             Exit Sub
         End If
 
-        Dim numberPart As String = contact.Substring(4).Replace(" ", "")
+
+        Dim numberPart = contact.Substring(4).Replace(" ", "")
+
+
         If numberPart.StartsWith("0") Then
             MessageBox.Show("Contact number should not start with 0 after +63.", "Invalid Number", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Guna2txtboxContact.Text = "+63 "
@@ -108,22 +112,13 @@ Public Class SelfServiceForm
         End If
     End Sub
 
+    Private Sub gbContinue_Click(sender As Object, e As EventArgs)
 
-
-    Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
-
-        Dim customerName As String = Guna2TxtboxName.Text.Trim()
-        Dim contactNumber As String = Guna2txtboxContact.Text.Trim()
-        Dim address As String = txtboxAddress.Text.Trim()
-        'Dim weight As String = Guna2txtboxWeight.Text.Trim()
-        'Dim packageType As String = Guna2cmbService.Text.Trim()
-        Dim serviceType As String = "Self Service"
-
-        'Validate required fields
-        If customerName = "" Or contactNumber.Length < 7 Or 'weight = "" Or packageType = "" Then
-            MessageBox.Show("Please fill up all required fields correctly.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning) Then
-            Return
-        End If
+        Hide  ' hide this form
+        Dim continueForm As New NewInvoiceForm
+        continueForm.StartPosition = FormStartPosition.CenterScreen
+        continueForm.ShowDialog
+        Hide  '
 
         ' Compute service fee
         'Dim rate As Double = GetLatestPrice("Self-Service",) packageType)

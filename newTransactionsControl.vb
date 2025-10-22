@@ -3,6 +3,8 @@ Imports Guna.UI2.WinForms
 
 Public Class newTransactionsControl
     Private transactionData As New DataTable()
+    Private lastOpenTime As DateTime = DateTime.MinValue
+    Private isOpening As Boolean = False
 
     Private Sub TransactionsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitializeDataGridView()
@@ -285,15 +287,35 @@ Public Class newTransactionsControl
 
 
     Private Sub dgvTransactions_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactions.CellDoubleClick
-        If e.RowIndex >= 0 AndAlso dgvTransactions.Columns(e.ColumnIndex).Name <> "btnView" Then
-            OpenTransactionView(e.RowIndex)
-        End If
+        If e.RowIndex < 0 OrElse dgvTransactions.Columns(e.ColumnIndex).Name = "btnView" Then Return
+        OpenTransactionOnce(e.RowIndex)
     End Sub
 
     Private Sub dgvTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactions.CellContentClick
-        If e.RowIndex >= 0 AndAlso dgvTransactions.Columns(e.ColumnIndex).Name = "btnView" Then
-            OpenTransactionView(e.RowIndex)
+        If e.RowIndex < 0 Then Return
+
+        ' Only respond if user clicked the View button
+        If dgvTransactions.Columns(e.ColumnIndex).Name = "btnView" Then
+            OpenTransactionOnce(e.RowIndex)
         End If
+    End Sub
+
+    Private Sub OpenTransactionOnce(rowIndex As Integer)
+        If isOpening Then Return
+        isOpening = True
+
+        Try
+            OpenTransactionView(rowIndex)
+        Finally
+            ' Reset flag after short delay to avoid rapid reopens
+            Dim t As New Timer()
+            AddHandler t.Tick, Sub()
+                                   isOpening = False
+                                   t.Stop()
+                               End Sub
+            t.Interval = 300
+            t.Start()
+        End Try
     End Sub
 
     Private Sub OpenTransactionView(rowIndex As Integer)

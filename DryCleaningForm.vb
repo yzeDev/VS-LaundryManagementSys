@@ -10,6 +10,7 @@ Public Class DryCleaningForm
 
         Using conn As New OleDbConnection(connString)
             conn.Open()
+            ' ServiceType hardcoded as "Dry Cleaning"
             Dim query As String = "SELECT TOP 1 Price FROM PricingUpd WHERE ServiceType='Dry Cleaning' AND SubService=? ORDER BY LastUpdated DESC"
 
             Using cmd As New OleDbCommand(query, conn)
