@@ -494,7 +494,6 @@ Partial Class MainForm
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(6, 7, 6, 7)
-        MaximumSize = New Size(1200, 800)
         MinimumSize = New Size(1200, 800)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
