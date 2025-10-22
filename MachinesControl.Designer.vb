@@ -22,14 +22,14 @@ Partial Class MachinesControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         cmbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         TableLayoutPanel1 = New TableLayoutPanel()
         flpMachines = New FlowLayoutPanel()
@@ -47,7 +47,7 @@ Partial Class MachinesControl
         ' cmbStatus
         ' 
         cmbStatus.BackColor = Color.Transparent
-        cmbStatus.CustomizableEdges = CustomizableEdges9
+        cmbStatus.CustomizableEdges = CustomizableEdges1
         cmbStatus.Dock = DockStyle.Fill
         cmbStatus.DrawMode = DrawMode.OwnerDrawFixed
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
@@ -60,7 +60,7 @@ Partial Class MachinesControl
         cmbStatus.Location = New Point(750, 5)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.RightToLeft = RightToLeft.Yes
-        cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         cmbStatus.Size = New Size(94, 36)
         cmbStatus.TabIndex = 7
         cmbStatus.Tag = ""
@@ -139,7 +139,7 @@ Partial Class MachinesControl
         ' btnConfigure
         ' 
         btnConfigure.BorderRadius = 16
-        btnConfigure.CustomizableEdges = CustomizableEdges11
+        btnConfigure.CustomizableEdges = CustomizableEdges3
         btnConfigure.DisabledState.BorderColor = Color.DarkGray
         btnConfigure.DisabledState.CustomBorderColor = Color.DarkGray
         btnConfigure.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -152,15 +152,15 @@ Partial Class MachinesControl
         btnConfigure.Location = New Point(312, 5)
         btnConfigure.Margin = New Padding(10, 3, 3, 3)
         btnConfigure.Name = "btnConfigure"
-        'btnConfigure.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnConfigure.Size = New Size(172, 42)
+        btnConfigure.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnConfigure.Size = New Size(137, 34)
         btnConfigure.TabIndex = 13
         btnConfigure.Text = "Configure"
         ' 
         ' btnRemoveMachine
         ' 
         btnRemoveMachine.BorderRadius = 16
-        btnRemoveMachine.CustomizableEdges = CustomizableEdges13
+        btnRemoveMachine.CustomizableEdges = CustomizableEdges5
         btnRemoveMachine.DisabledState.BorderColor = Color.DarkGray
         btnRemoveMachine.DisabledState.CustomBorderColor = Color.DarkGray
         btnRemoveMachine.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -173,15 +173,15 @@ Partial Class MachinesControl
         btnRemoveMachine.Location = New Point(162, 5)
         btnRemoveMachine.Margin = New Padding(10, 3, 3, 3)
         btnRemoveMachine.Name = "btnRemoveMachine"
-        'btnRemoveMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnRemoveMachine.Size = New Size(172, 42)
+        btnRemoveMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnRemoveMachine.Size = New Size(137, 34)
         btnRemoveMachine.TabIndex = 12
         btnRemoveMachine.Text = "Unavailable"
         ' 
         ' btnAddMachine
         ' 
         btnAddMachine.BorderRadius = 16
-        btnAddMachine.CustomizableEdges = CustomizableEdges15
+        btnAddMachine.CustomizableEdges = CustomizableEdges7
         btnAddMachine.DisabledState.BorderColor = Color.DarkGray
         btnAddMachine.DisabledState.CustomBorderColor = Color.DarkGray
         btnAddMachine.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -193,8 +193,8 @@ Partial Class MachinesControl
         btnAddMachine.Location = New Point(12, 5)
         btnAddMachine.Margin = New Padding(10, 3, 3, 3)
         btnAddMachine.Name = "btnAddMachine"
-        'btnAddMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        btnAddMachine.Size = New Size(172, 42)
+        btnAddMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnAddMachine.Size = New Size(137, 34)
         btnAddMachine.TabIndex = 10
         btnAddMachine.Text = "+ Add Unit"
         ' 

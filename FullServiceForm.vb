@@ -7,7 +7,7 @@ Public Class FullServiceForm
     ' Function para kunin ang latest price ng isang service
     Private Function GetLatestPrice(serviceType As String, subService As String) As Double
         Dim price As Double = 0
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connString)
             conn.Open()

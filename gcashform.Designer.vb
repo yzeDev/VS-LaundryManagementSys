@@ -111,11 +111,11 @@ Partial Class gcashform
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 15F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 7F))
-<<<<<<< HEAD
+
         TableLayoutPanel1.Size = New Size(373, 784)
-=======
+
         TableLayoutPanel1.Size = New Size(326, 588)
->>>>>>> origin/POS
+
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' cancelPayBtn
@@ -132,11 +132,11 @@ Partial Class gcashform
         cancelPayBtn.Dock = DockStyle.Fill
         cancelPayBtn.FillColor = Color.DimGray
         cancelPayBtn.FillColor2 = Color.Gray
-<<<<<<< HEAD
-        cancelPayBtn.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-=======
-        cancelPayBtn.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
->>>>>>> origin/POS
+
+        cancelPayBtn.Font = New Font("Poppins", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+
+        cancelPayBtn.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+
         cancelPayBtn.ForeColor = Color.White
         cancelPayBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         cancelPayBtn.Location = New Point(3, 730)
@@ -150,14 +150,14 @@ Partial Class gcashform
         ' totalPaymentLbl
         ' 
         totalPaymentLbl.Dock = DockStyle.Fill
-        totalPaymentLbl.Font = New Font("Microsoft Sans Serif", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-<<<<<<< HEAD
+        totalPaymentLbl.Font = New Font("Microsoft Sans Serif", 21.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+
         totalPaymentLbl.Location = New Point(3, 82)
         totalPaymentLbl.Margin = New Padding(3, 4, 3, 4)
-=======
+
         totalPaymentLbl.Location = New Point(3, 61)
         totalPaymentLbl.Margin = New Padding(3)
->>>>>>> origin/POS
+
         totalPaymentLbl.Name = "totalPaymentLbl"
         totalPaymentLbl.Size = New Size(367, 78)
         totalPaymentLbl.TabIndex = 2
@@ -167,8 +167,8 @@ Partial Class gcashform
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 2
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel2.Controls.Add(PictureBox1, 1, 0)
         TableLayoutPanel2.Controls.Add(Label1, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
@@ -177,12 +177,12 @@ Partial Class gcashform
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.Padding = New Padding(0, 5, 17, 5)
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-<<<<<<< HEAD
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+
         TableLayoutPanel2.Size = New Size(367, 70)
-=======
+
         TableLayoutPanel2.Size = New Size(320, 52)
->>>>>>> origin/POS
+
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' PictureBox1
@@ -200,13 +200,13 @@ Partial Class gcashform
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-<<<<<<< HEAD
-        Label1.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+
+        Label1.Font = New Font("Poppins", 21.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 5)
-=======
-        Label1.Font = New Font("Microsoft Sans Serif", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+
+        Label1.Font = New Font("Microsoft Sans Serif", 21.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(3, 4)
->>>>>>> origin/POS
+
         Label1.Margin = New Padding(3, 0, 0, 0)
         Label1.Name = "Label1"
         Label1.Padding = New Padding(2, 0, 0, 0)
@@ -233,7 +233,7 @@ Partial Class gcashform
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel3.Controls.Add(Label3, 0, 0)
         TableLayoutPanel3.Controls.Add(PictureBox2, 0, 1)
         TableLayoutPanel3.Dock = DockStyle.Fill
@@ -241,13 +241,13 @@ Partial Class gcashform
         TableLayoutPanel3.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 20F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 80F))
-<<<<<<< HEAD
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 80.0F))
+
         TableLayoutPanel3.Size = New Size(194, 297)
-=======
+
         TableLayoutPanel3.Size = New Size(170, 223)
->>>>>>> origin/POS
+
         TableLayoutPanel3.TabIndex = 0
         ' 
         ' Label3
@@ -277,9 +277,9 @@ Partial Class gcashform
         ' TableLayoutPanel4
         ' 
         TableLayoutPanel4.ColumnCount = 3
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20.0F))
+        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.0F))
         TableLayoutPanel4.Controls.Add(Label4, 1, 0)
         TableLayoutPanel4.Controls.Add(Panel1, 2, 0)
         TableLayoutPanel4.Controls.Add(Panel3, 0, 0)
@@ -288,12 +288,12 @@ Partial Class gcashform
         TableLayoutPanel4.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-<<<<<<< HEAD
+        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+
         TableLayoutPanel4.Size = New Size(367, 70)
-=======
+
         TableLayoutPanel4.Size = New Size(320, 52)
->>>>>>> origin/POS
+
         TableLayoutPanel4.TabIndex = 4
         ' 
         ' Label4
@@ -355,7 +355,7 @@ Partial Class gcashform
         ' TableLayoutPanel5
         ' 
         TableLayoutPanel5.ColumnCount = 1
-        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel5.Controls.Add(Label5, 0, 0)
         TableLayoutPanel5.Controls.Add(TableLayoutPanel6, 0, 1)
         TableLayoutPanel5.Dock = DockStyle.Fill
@@ -363,13 +363,13 @@ Partial Class gcashform
         TableLayoutPanel5.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel5.Name = "TableLayoutPanel5"
         TableLayoutPanel5.RowCount = 2
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-<<<<<<< HEAD
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel5.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+
         TableLayoutPanel5.Size = New Size(367, 109)
-=======
+
         TableLayoutPanel5.Size = New Size(320, 82)
->>>>>>> origin/POS
+
         TableLayoutPanel5.TabIndex = 0
         ' 
         ' Label5
@@ -387,8 +387,8 @@ Partial Class gcashform
         ' TableLayoutPanel6
         ' 
         TableLayoutPanel6.ColumnCount = 2
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel6.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel6.Controls.Add(Label7, 0, 0)
         TableLayoutPanel6.Controls.Add(GCashNum, 1, 0)
         TableLayoutPanel6.Dock = DockStyle.Fill
@@ -396,12 +396,12 @@ Partial Class gcashform
         TableLayoutPanel6.Margin = New Padding(3, 4, 3, 4)
         TableLayoutPanel6.Name = "TableLayoutPanel6"
         TableLayoutPanel6.RowCount = 1
-        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-<<<<<<< HEAD
+        TableLayoutPanel6.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+
         TableLayoutPanel6.Size = New Size(361, 47)
-=======
+
         TableLayoutPanel6.Size = New Size(314, 35)
->>>>>>> origin/POS
+
         TableLayoutPanel6.TabIndex = 1
         ' 
         ' Label7
@@ -442,11 +442,11 @@ Partial Class gcashform
         confirmPaymentBtn.Dock = DockStyle.Fill
         confirmPaymentBtn.FillColor = Color.Green
         confirmPaymentBtn.FillColor2 = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-<<<<<<< HEAD
-        confirmPaymentBtn.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-=======
+
+        confirmPaymentBtn.Font = New Font("Poppins", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+
         confirmPaymentBtn.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
->>>>>>> origin/POS
+ 
         confirmPaymentBtn.ForeColor = Color.White
         confirmPaymentBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         confirmPaymentBtn.Location = New Point(3, 676)

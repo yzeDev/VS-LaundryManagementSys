@@ -29,14 +29,14 @@ Partial Class confirmpayment
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel2 = New TableLayoutPanel()
-<<<<<<< HEAD
-=======
+
+
         TableLayoutPanel1 = New TableLayoutPanel()
         Label4 = New Label()
         btnsave = New Guna.UI2.WinForms.Guna2GradientButton()
         Label3 = New Label()
         referencetb = New Guna.UI2.WinForms.Guna2TextBox()
->>>>>>> origin/POS
+
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Label2 = New Label()
         TableLayoutPanel1 = New TableLayoutPanel()
@@ -98,12 +98,11 @@ Partial Class confirmpayment
         TableLayoutPanel1.Controls.Add(Label4, 0, 2)
         TableLayoutPanel1.Controls.Add(btnsave, 0, 4)
         TableLayoutPanel1.Controls.Add(Label3, 0, 0)
-<<<<<<< HEAD
+
         TableLayoutPanel1.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-=======
+
         TableLayoutPanel1.Controls.Add(referencetb, 0, 3)
-        TableLayoutPanel1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
->>>>>>> origin/POS
+        TableLayoutPanel1.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TableLayoutPanel1.Location = New Point(3, 35)
         TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -120,13 +119,11 @@ Partial Class confirmpayment
         ' 
         Label4.AutoSize = True
         Label4.Dock = DockStyle.Fill
-<<<<<<< HEAD
+
         Label4.Font = New Font("Poppins", 13.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(3, 80)
-=======
         Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(3, 60)
->>>>>>> origin/POS
         Label4.Name = "Label4"
         Label4.Size = New Size(502, 41)
         Label4.TabIndex = 2
@@ -145,11 +142,9 @@ Partial Class confirmpayment
         btnsave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnsave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         btnsave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-<<<<<<< HEAD
         btnsave.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-=======
-        btnsave.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
->>>>>>> origin/POS
+        btnsave.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+
         btnsave.ForeColor = Color.White
         btnsave.Location = New Point(169, 197)
         btnsave.Margin = New Padding(3, 2, 3, 2)
@@ -162,7 +157,7 @@ Partial Class confirmpayment
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 9F)
+        Label3.Font = New Font("Microsoft Sans Serif", 9.0F)
         Label3.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
@@ -181,11 +176,11 @@ Partial Class confirmpayment
         referencetb.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         referencetb.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         referencetb.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-<<<<<<< HEAD
+
         referencetb.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-=======
-        referencetb.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
->>>>>>> origin/POS
+
+        referencetb.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+
         referencetb.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         referencetb.Location = New Point(10, 127)
         referencetb.Margin = New Padding(10, 6, 10, 6)
@@ -196,21 +191,21 @@ Partial Class confirmpayment
         referencetb.Size = New Size(483, 34)
         referencetb.TabIndex = 10
         ' 
-<<<<<<< HEAD
+
         ' btnsave
-=======
+
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2GradientPanel1.Controls.Add(Label2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
+        'Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.Location = New Point(3, 2)
         Guna2GradientPanel1.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        'Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.Size = New Size(444, 29)
         Guna2GradientPanel1.TabIndex = 2
         ' 
@@ -219,7 +214,7 @@ Partial Class confirmpayment
         Label2.Anchor = AnchorStyles.None
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(144, 2)
         Label2.Name = "Label2"
@@ -229,7 +224,7 @@ Partial Class confirmpayment
         Label2.TextAlign = ContentAlignment.TopCenter
         ' 
         ' Guna2BorderlessForm1
->>>>>>> origin/POS
+
         ' 
         Guna2BorderlessForm1.ContainerControl = Me
         Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
