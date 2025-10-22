@@ -22,12 +22,12 @@ Partial Class confirmpayment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel2 = New TableLayoutPanel()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Label2 = New Label()
@@ -59,13 +59,13 @@ Partial Class confirmpayment
         ' 
         Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2GradientPanel1.Controls.Add(Label2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.Location = New Point(3, 3)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.Size = New Size(508, 38)
         Guna2GradientPanel1.TabIndex = 2
         ' 
@@ -130,7 +130,7 @@ Partial Class confirmpayment
         ' referencetb
         ' 
         referencetb.BorderRadius = 5
-        referencetb.CustomizableEdges = CustomizableEdges9
+        referencetb.CustomizableEdges = CustomizableEdges3
         referencetb.DefaultText = ""
         referencetb.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         referencetb.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -144,7 +144,7 @@ Partial Class confirmpayment
         referencetb.Name = "referencetb"
         referencetb.PlaceholderText = ""
         referencetb.SelectedText = ""
-        referencetb.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        referencetb.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         referencetb.Size = New Size(483, 34)
         referencetb.TabIndex = 10
         ' 
@@ -152,7 +152,7 @@ Partial Class confirmpayment
         ' 
         btnsave.Anchor = AnchorStyles.None
         btnsave.BorderRadius = 5
-        btnsave.CustomizableEdges = CustomizableEdges11
+        btnsave.CustomizableEdges = CustomizableEdges1
         btnsave.DisabledState.BorderColor = Color.DarkGray
         btnsave.DisabledState.CustomBorderColor = Color.DarkGray
         btnsave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -164,7 +164,7 @@ Partial Class confirmpayment
         btnsave.ForeColor = Color.White
         btnsave.Location = New Point(194, 262)
         btnsave.Name = "btnsave"
-        btnsave.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnsave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnsave.Size = New Size(120, 29)
         btnsave.TabIndex = 37
         btnsave.Text = "SAVE"
