@@ -38,7 +38,7 @@ Partial Class SelfServiceForm
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
-        Label4 = New Label()
+        lblpackageType = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
         Label5 = New Label()
         lblRate = New Label()
@@ -91,7 +91,7 @@ Partial Class SelfServiceForm
         TableLayoutPanel1.ColumnCount = 1
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel1.Controls.Add(Label14, 0, 6)
-        TableLayoutPanel1.Controls.Add(Label4, 0, 1)
+        TableLayoutPanel1.Controls.Add(lblpackageType, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 2)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel4, 0, 3)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel5, 0, 4)
@@ -121,7 +121,7 @@ Partial Class SelfServiceForm
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
         Label14.Enabled = False
-        Label14.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.Location = New Point(5, 509)
         Label14.Name = "Label14"
         Label14.Size = New Size(490, 30)
@@ -129,17 +129,17 @@ Partial Class SelfServiceForm
         Label14.Text = "Address:"
         Label14.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Label4
+        ' lblpackageType
         ' 
-        Label4.AutoSize = True
-        Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(5, 102)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(490, 40)
-        Label4.TabIndex = 1
-        Label4.Text = "Self-Service Transaction"
-        Label4.TextAlign = ContentAlignment.BottomLeft
+        lblpackageType.AutoSize = True
+        lblpackageType.Dock = DockStyle.Fill
+        lblpackageType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblpackageType.Location = New Point(5, 102)
+        lblpackageType.Name = "lblpackageType"
+        lblpackageType.Size = New Size(490, 40)
+        lblpackageType.TabIndex = 1
+        lblpackageType.Text = "Self-Service Transaction"
+        lblpackageType.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' TableLayoutPanel3
         ' 
@@ -161,7 +161,7 @@ Partial Class SelfServiceForm
         Label5.AutoSize = True
         Label5.BackColor = Color.Silver
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(484, 40)
@@ -174,7 +174,7 @@ Partial Class SelfServiceForm
         lblRate.AutoSize = True
         lblRate.BackColor = Color.Silver
         lblRate.Dock = DockStyle.Fill
-        lblRate.Font = New Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRate.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblRate.Location = New Point(3, 40)
         lblRate.Name = "lblRate"
         lblRate.Padding = New Padding(40, 0, 0, 0)
@@ -203,7 +203,7 @@ Partial Class SelfServiceForm
         ' 
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(484, 36)
@@ -216,7 +216,7 @@ Partial Class SelfServiceForm
         Guna2TxtboxName.CustomizableEdges = CustomizableEdges14
         Guna2TxtboxName.DefaultText = ""
         Guna2TxtboxName.Dock = DockStyle.Fill
-        Guna2TxtboxName.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2TxtboxName.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TxtboxName.Location = New Point(3, 40)
         Guna2TxtboxName.Margin = New Padding(3, 4, 3, 4)
         Guna2TxtboxName.Name = "Guna2TxtboxName"
@@ -259,7 +259,7 @@ Partial Class SelfServiceForm
         Guna2txtboxContact.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2txtboxContact.Dock = DockStyle.Fill
         Guna2txtboxContact.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2txtboxContact.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2txtboxContact.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2txtboxContact.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2txtboxContact.Location = New Point(9, 40)
         Guna2txtboxContact.Margin = New Padding(9, 4, 9, 4)
@@ -276,7 +276,7 @@ Partial Class SelfServiceForm
         Guna2txtboxWeight.CustomizableEdges = CustomizableEdges18
         Guna2txtboxWeight.DefaultText = ""
         Guna2txtboxWeight.Dock = DockStyle.Fill
-        Guna2txtboxWeight.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2txtboxWeight.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2txtboxWeight.Location = New Point(335, 40)
         Guna2txtboxWeight.Margin = New Padding(9, 4, 9, 4)
         Guna2txtboxWeight.Name = "Guna2txtboxWeight"
@@ -290,7 +290,7 @@ Partial Class SelfServiceForm
         ' 
         Label3.AutoSize = True
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(329, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(158, 36)
@@ -302,7 +302,7 @@ Partial Class SelfServiceForm
         ' 
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(194, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(129, 36)
@@ -315,7 +315,7 @@ Partial Class SelfServiceForm
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
         Label8.Enabled = False
-        Label8.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.Location = New Point(3, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(185, 36)
@@ -333,7 +333,7 @@ Partial Class SelfServiceForm
         Guna2cmbService.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2cmbService.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2cmbService.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2cmbService.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2cmbService.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2cmbService.ForeColor = Color.Black
         Guna2cmbService.ItemHeight = 20
         Guna2cmbService.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash & Dry"})
@@ -365,7 +365,7 @@ Partial Class SelfServiceForm
         Label11.AutoSize = True
         Label11.Dock = DockStyle.Fill
         Label11.Enabled = False
-        Label11.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(3, 0)
         Label11.Name = "Label11"
         Label11.Size = New Size(239, 36)
@@ -392,7 +392,7 @@ Partial Class SelfServiceForm
         ' 
         Label12.Dock = DockStyle.Fill
         Label12.Enabled = False
-        Label12.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(3, 0)
         Label12.Name = "Label12"
         Label12.Size = New Size(65, 31)
@@ -408,7 +408,7 @@ Partial Class SelfServiceForm
         Guna2CheckBoxDelivery.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBoxDelivery.Dock = DockStyle.Fill
         Guna2CheckBoxDelivery.Enabled = False
-        Guna2CheckBoxDelivery.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2CheckBoxDelivery.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2CheckBoxDelivery.Location = New Point(74, 3)
         Guna2CheckBoxDelivery.Name = "Guna2CheckBoxDelivery"
         Guna2CheckBoxDelivery.Size = New Size(162, 25)
@@ -441,7 +441,7 @@ Partial Class SelfServiceForm
         Guna2CheckBoxPickup.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2CheckBoxPickup.Dock = DockStyle.Fill
         Guna2CheckBoxPickup.Enabled = False
-        Guna2CheckBoxPickup.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2CheckBoxPickup.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2CheckBoxPickup.Location = New Point(15, 3)
         Guna2CheckBoxPickup.Name = "Guna2CheckBoxPickup"
         Guna2CheckBoxPickup.Size = New Size(221, 25)
@@ -456,7 +456,7 @@ Partial Class SelfServiceForm
         ' 
         txtboxAddress.Dock = DockStyle.Fill
         txtboxAddress.Enabled = False
-        txtboxAddress.Font = New Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtboxAddress.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtboxAddress.Location = New Point(5, 542)
         txtboxAddress.Multiline = True
         txtboxAddress.Name = "txtboxAddress"
@@ -483,7 +483,7 @@ Partial Class SelfServiceForm
         ' gbCancel
         ' 
         gbCancel.Dock = DockStyle.Fill
-        gbCancel.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        gbCancel.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         gbCancel.Location = New Point(61, 2)
         gbCancel.Margin = New Padding(61, 2, 61, 2)
         gbCancel.Name = "gbCancel"
@@ -504,7 +504,7 @@ Partial Class SelfServiceForm
         gbContinue.Dock = DockStyle.Fill
         gbContinue.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         gbContinue.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        gbContinue.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        gbContinue.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         gbContinue.ForeColor = Color.White
         gbContinue.Location = New Point(315, 2)
         gbContinue.Margin = New Padding(61, 2, 61, 2)
@@ -603,7 +603,7 @@ Partial Class SelfServiceForm
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        Label1.Font = New Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(100, 21)
         Label1.Margin = New Padding(0)
@@ -617,11 +617,11 @@ Partial Class SelfServiceForm
         ' 
         Label6.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label6.AutoSize = True
-        Label6.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.White
-        Label6.Location = New Point(103, 61)
+        Label6.Location = New Point(103, 68)
         Label6.Name = "Label6"
-        Label6.Size = New Size(178, 22)
+        Label6.Size = New Size(165, 15)
         Label6.TabIndex = 5
         Label6.Text = "Professional Laundry Service"
         ' 
@@ -668,7 +668,7 @@ Partial Class SelfServiceForm
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblpackageType As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label5 As Label
     Friend WithEvents lblRate As Label
