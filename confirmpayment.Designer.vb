@@ -120,7 +120,7 @@ Partial Class confirmpayment
         ' 
         btnsave.Anchor = AnchorStyles.None
         btnsave.BorderRadius = 5
-        btnsave.CustomizableEdges = CustomizableEdges1
+        'btnsave.CustomizableEdges = CustomizableEdges1
         btnsave.DisabledState.BorderColor = Color.DarkGray
         btnsave.DisabledState.CustomBorderColor = Color.DarkGray
         btnsave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -133,7 +133,7 @@ Partial Class confirmpayment
         btnsave.Location = New Point(169, 197)
         btnsave.Margin = New Padding(3, 2, 3, 2)
         btnsave.Name = "btnsave"
-        btnsave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        'btnsave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnsave.Size = New Size(105, 22)
         btnsave.TabIndex = 37
         btnsave.Text = "SAVE"
