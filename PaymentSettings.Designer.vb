@@ -22,27 +22,27 @@ Partial Class PaymentSettings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PaymentSettings))
-        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         btnMayaQR = New Guna.UI2.WinForms.Guna2Panel()
         saveBtn = New Guna.UI2.WinForms.Guna2GradientButton()
         TableLayoutPanel7 = New TableLayoutPanel()
@@ -96,18 +96,18 @@ Partial Class PaymentSettings
         btnMayaQR.Controls.Add(saveBtn)
         btnMayaQR.Controls.Add(TableLayoutPanel8)
         btnMayaQR.Controls.Add(Guna2GradientPanel3)
-        btnMayaQR.CustomizableEdges = CustomizableEdges29
+        btnMayaQR.CustomizableEdges = CustomizableEdges19
         btnMayaQR.Dock = DockStyle.Fill
         btnMayaQR.Location = New Point(0, 0)
         btnMayaQR.Name = "btnMayaQR"
-        btnMayaQR.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        btnMayaQR.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btnMayaQR.Size = New Size(778, 550)
         btnMayaQR.TabIndex = 9
         ' 
         ' saveBtn
         ' 
         saveBtn.BorderRadius = 5
-        saveBtn.CustomizableEdges = CustomizableEdges25
+        saveBtn.CustomizableEdges = CustomizableEdges9
         saveBtn.DisabledState.BorderColor = Color.DarkGray
         saveBtn.DisabledState.CustomBorderColor = Color.DarkGray
         saveBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -119,7 +119,7 @@ Partial Class PaymentSettings
         saveBtn.ForeColor = Color.White
         saveBtn.Location = New Point(592, 462)
         saveBtn.Name = "saveBtn"
-        saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        saveBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         saveBtn.Size = New Size(152, 31)
         saveBtn.TabIndex = 8
         saveBtn.Text = "SAVE CHANGES"
@@ -156,7 +156,7 @@ Partial Class PaymentSettings
         ' 
         tbNewContact.BorderColor = Color.Gray
         tbNewContact.BorderRadius = 5
-        tbNewContact.CustomizableEdges = CustomizableEdges31
+        tbNewContact.CustomizableEdges = CustomizableEdges15
         tbNewContact.DefaultText = ""
         tbNewContact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         tbNewContact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -170,7 +170,7 @@ Partial Class PaymentSettings
         tbNewContact.Name = "tbNewContact"
         tbNewContact.PlaceholderText = ""
         tbNewContact.SelectedText = ""
-        tbNewContact.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        tbNewContact.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         tbNewContact.Size = New Size(294, 27)
         tbNewContact.TabIndex = 9
         ' 
@@ -217,14 +217,14 @@ Partial Class PaymentSettings
         ' Guna2GradientPanel2
         ' 
         Guna2GradientPanel2.Controls.Add(TableLayoutPanel9)
-        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges33
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges13
         Guna2GradientPanel2.Dock = DockStyle.Fill
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(184), CByte(215), CByte(255))
         Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(221), CByte(239), CByte(255))
         Guna2GradientPanel2.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel2.Location = New Point(3, 93)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
-        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2GradientPanel2.Size = New Size(768, 41)
         Guna2GradientPanel2.TabIndex = 9
         ' 
@@ -245,13 +245,13 @@ Partial Class PaymentSettings
         ' 
         ' Guna2PictureBox2
         ' 
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges35
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges11
         Guna2PictureBox2.Dock = DockStyle.Right
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.Location = New Point(13, 3)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2PictureBox2.Size = New Size(32, 27)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox2.TabIndex = 8
@@ -290,13 +290,13 @@ Partial Class PaymentSettings
         Guna2GradientPanel3.BorderRadius = 10
         Guna2GradientPanel3.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2GradientPanel3.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges27
+        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges17
         Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(184), CByte(215), CByte(255))
         Guna2GradientPanel3.FillColor2 = Color.FromArgb(CByte(221), CByte(239), CByte(255))
         Guna2GradientPanel3.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel3.Location = New Point(441, 160)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
-        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2GradientPanel3.Size = New Size(312, 235)
         Guna2GradientPanel3.TabIndex = 10
         ' 
@@ -355,12 +355,12 @@ Partial Class PaymentSettings
         ' 
         PicMaya.Anchor = AnchorStyles.None
         PicMaya.BorderRadius = 10
-        PicMaya.CustomizableEdges = CustomizableEdges37
+        PicMaya.CustomizableEdges = CustomizableEdges1
         PicMaya.Image = My.Resources.Resources.logos__3_
         PicMaya.ImageRotate = 0F
         PicMaya.Location = New Point(26, 18)
         PicMaya.Name = "PicMaya"
-        PicMaya.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        PicMaya.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         PicMaya.Size = New Size(148, 147)
         PicMaya.SizeMode = PictureBoxSizeMode.StretchImage
         PicMaya.TabIndex = 0
@@ -371,13 +371,13 @@ Partial Class PaymentSettings
         Guna2GradientPanel1.BorderRadius = 10
         Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel3)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges23
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(184), CByte(215), CByte(255))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(221), CByte(239), CByte(255))
         Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel1.Location = New Point(12, 160)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2GradientPanel1.Size = New Size(201, 184)
         Guna2GradientPanel1.TabIndex = 3
         ' 
@@ -386,13 +386,13 @@ Partial Class PaymentSettings
         Guna2GradientPanel4.BorderRadius = 10
         Guna2GradientPanel4.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2GradientPanel4.Controls.Add(TableLayoutPanel1)
-        Guna2GradientPanel4.CustomizableEdges = CustomizableEdges21
+        Guna2GradientPanel4.CustomizableEdges = CustomizableEdges3
         Guna2GradientPanel4.FillColor = Color.FromArgb(CByte(184), CByte(215), CByte(255))
         Guna2GradientPanel4.FillColor2 = Color.FromArgb(CByte(221), CByte(239), CByte(255))
         Guna2GradientPanel4.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel4.Location = New Point(224, 160)
         Guna2GradientPanel4.Name = "Guna2GradientPanel4"
-        Guna2GradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2GradientPanel4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2GradientPanel4.Size = New Size(201, 184)
         Guna2GradientPanel4.TabIndex = 4
         ' 
@@ -413,12 +413,12 @@ Partial Class PaymentSettings
         ' 
         picGCash.Anchor = AnchorStyles.None
         picGCash.BorderRadius = 10
-        picGCash.CustomizableEdges = CustomizableEdges39
+        picGCash.CustomizableEdges = CustomizableEdges5
         picGCash.Image = My.Resources.Resources.logos__3_
         picGCash.ImageRotate = 0F
         picGCash.Location = New Point(26, 18)
         picGCash.Name = "picGCash"
-        picGCash.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        picGCash.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         picGCash.Size = New Size(148, 147)
         picGCash.SizeMode = PictureBoxSizeMode.StretchImage
         picGCash.TabIndex = 0
