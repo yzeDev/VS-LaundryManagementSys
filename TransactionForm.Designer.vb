@@ -24,10 +24,10 @@ Partial Class TransactionForm
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionForm))
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         tbMachineUsed = New TextBox()
         tbCustomerName = New TextBox()
@@ -37,8 +37,6 @@ Partial Class TransactionForm
         TableLayoutPanel7 = New TableLayoutPanel()
         Label5 = New Label()
         PictureBox1 = New PictureBox()
-        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Label1 = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
         lblSubtitle = New Label()
         lblMode = New Label()
@@ -51,7 +49,6 @@ Partial Class TransactionForm
         Label7 = New Label()
         PictureBox3 = New PictureBox()
         TableLayoutPanel11 = New TableLayoutPanel()
-        cbStatus = New ComboBox()
         Label9 = New Label()
         PictureBox5 = New PictureBox()
         cbStatus = New ComboBox()
@@ -65,7 +62,6 @@ Partial Class TransactionForm
         cbService = New ComboBox()
         tbPaymentMethod = New TextBox()
         TableLayoutPanel21 = New TableLayoutPanel()
-        cbService = New ComboBox()
         PictureBox2 = New PictureBox()
         Label22 = New Label()
         TableLayoutPanel19 = New TableLayoutPanel()
@@ -86,6 +82,8 @@ Partial Class TransactionForm
         btnSave = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         TableLayoutPanel8 = New TableLayoutPanel()
+        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Label2 = New Label()
         Panel5 = New Panel()
         Panel6 = New Panel()
         Panel7 = New Panel()
@@ -98,7 +96,6 @@ Partial Class TransactionForm
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel7.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        Guna2GradientPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         lblAddress.SuspendLayout()
@@ -122,6 +119,7 @@ Partial Class TransactionForm
         TableLayoutPanel22.SuspendLayout()
         TableLayoutPanel24.SuspendLayout()
         TableLayoutPanel8.SuspendLayout()
+        Guna2GradientPanel1.SuspendLayout()
         Panel5.SuspendLayout()
         Panel6.SuspendLayout()
         Panel7.SuspendLayout()
@@ -134,8 +132,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel1.Controls.Add(tbMachineUsed, 1, 1)
         TableLayoutPanel1.Controls.Add(tbCustomerName, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel12, 1, 0)
@@ -145,8 +143,8 @@ Partial Class TransactionForm
         TableLayoutPanel1.Margin = New Padding(2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel1.Size = New Size(794, 61)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -154,7 +152,7 @@ Partial Class TransactionForm
         ' 
         tbMachineUsed.BackColor = Color.LightGray
         tbMachineUsed.Dock = DockStyle.Fill
-        tbMachineUsed.Font = New Font("Poppins", 12F)
+        tbMachineUsed.Font = New Font("Poppins", 12.0F)
         tbMachineUsed.Location = New Point(399, 32)
         tbMachineUsed.Margin = New Padding(2)
         tbMachineUsed.Name = "tbMachineUsed"
@@ -166,7 +164,7 @@ Partial Class TransactionForm
         ' 
         tbCustomerName.BackColor = Color.LightGray
         tbCustomerName.Dock = DockStyle.Fill
-        tbCustomerName.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        tbCustomerName.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         tbCustomerName.Location = New Point(2, 32)
         tbCustomerName.Margin = New Padding(2)
         tbCustomerName.Name = "tbCustomerName"
@@ -177,8 +175,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel12
         ' 
         TableLayoutPanel12.ColumnCount = 2
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel12.Controls.Add(Label10, 1, 0)
         TableLayoutPanel12.Controls.Add(PictureBox6, 0, 0)
         TableLayoutPanel12.Dock = DockStyle.Fill
@@ -186,7 +184,7 @@ Partial Class TransactionForm
         TableLayoutPanel12.Margin = New Padding(2)
         TableLayoutPanel12.Name = "TableLayoutPanel12"
         TableLayoutPanel12.RowCount = 1
-        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel12.Size = New Size(393, 26)
         TableLayoutPanel12.TabIndex = 17
         ' 
@@ -194,7 +192,7 @@ Partial Class TransactionForm
         ' 
         Label10.AutoSize = True
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 12F)
+        Label10.Font = New Font("Poppins", 12.0F)
         Label10.ForeColor = Color.Black
         Label10.Location = New Point(42, 0)
         Label10.Margin = New Padding(2, 0, 2, 0)
@@ -219,8 +217,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel7
         ' 
         TableLayoutPanel7.ColumnCount = 2
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel7.Controls.Add(Label5, 1, 0)
         TableLayoutPanel7.Controls.Add(PictureBox1, 0, 0)
         TableLayoutPanel7.Dock = DockStyle.Fill
@@ -228,7 +226,7 @@ Partial Class TransactionForm
         TableLayoutPanel7.Margin = New Padding(2)
         TableLayoutPanel7.Name = "TableLayoutPanel7"
         TableLayoutPanel7.RowCount = 1
-        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel7.Size = New Size(393, 26)
         TableLayoutPanel7.TabIndex = 10
         ' 
@@ -236,7 +234,7 @@ Partial Class TransactionForm
         ' 
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Black
         Label5.ImageAlign = ContentAlignment.BottomCenter
         Label5.Location = New Point(42, 0)
@@ -259,40 +257,10 @@ Partial Class TransactionForm
         PictureBox1.TabIndex = 32
         PictureBox1.TabStop = False
         ' 
-        ' Guna2GradientPanel1
-        ' 
-        Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
-        TableLayoutPanel8.SetColumnSpan(Guna2GradientPanel1, 2)
-        Guna2GradientPanel1.Controls.Add(Label1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
-        Guna2GradientPanel1.Dock = DockStyle.Fill
-        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        Guna2GradientPanel1.Location = New Point(2, 2)
-        Guna2GradientPanel1.Margin = New Padding(2)
-        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2GradientPanel1.Size = New Size(796, 63)
-        Guna2GradientPanel1.TabIndex = 1
-        ' 
-        ' Label1
-        ' 
-        Label1.BackColor = Color.Transparent
-        Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(0, 0)
-        Label1.Margin = New Padding(2, 0, 2, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(796, 63)
-        Label1.TabIndex = 5
-        Label1.Text = "Transaction Form"
-        Label1.TextAlign = ContentAlignment.BottomCenter
-        ' 
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 1
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel2.Controls.Add(lblSubtitle, 0, 1)
         TableLayoutPanel2.Controls.Add(lblMode, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
@@ -300,8 +268,8 @@ Partial Class TransactionForm
         TableLayoutPanel2.Margin = New Padding(2)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel2.Size = New Size(394, 61)
         TableLayoutPanel2.TabIndex = 1
         ' 
@@ -309,7 +277,7 @@ Partial Class TransactionForm
         ' 
         lblSubtitle.AutoSize = True
         lblSubtitle.Dock = DockStyle.Fill
-        lblSubtitle.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblSubtitle.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblSubtitle.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         lblSubtitle.Location = New Point(2, 30)
         lblSubtitle.Margin = New Padding(2, 0, 2, 0)
@@ -321,7 +289,7 @@ Partial Class TransactionForm
         ' lblMode
         ' 
         lblMode.AutoSize = True
-        lblMode.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMode.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblMode.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         lblMode.Location = New Point(2, 0)
         lblMode.Margin = New Padding(2, 0, 2, 0)
@@ -333,15 +301,15 @@ Partial Class TransactionForm
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 1
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel3.Controls.Add(lblDate, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(0, 0)
         TableLayoutPanel3.Margin = New Padding(2)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 2
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel3.Size = New Size(394, 61)
         TableLayoutPanel3.TabIndex = 2
         ' 
@@ -349,7 +317,7 @@ Partial Class TransactionForm
         ' 
         lblDate.AutoSize = True
         lblDate.Dock = DockStyle.Fill
-        lblDate.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDate.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDate.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         lblDate.Location = New Point(2, 0)
         lblDate.Margin = New Padding(2, 0, 2, 0)
@@ -362,8 +330,8 @@ Partial Class TransactionForm
         ' lblAddress
         ' 
         lblAddress.ColumnCount = 2
-        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         lblAddress.Controls.Add(Label6, 1, 0)
         lblAddress.Controls.Add(PictureBox4, 0, 0)
         lblAddress.Dock = DockStyle.Fill
@@ -371,7 +339,7 @@ Partial Class TransactionForm
         lblAddress.Margin = New Padding(2)
         lblAddress.Name = "lblAddress"
         lblAddress.RowCount = 1
-        lblAddress.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        lblAddress.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         lblAddress.Size = New Size(393, 26)
         lblAddress.TabIndex = 14
         ' 
@@ -379,7 +347,7 @@ Partial Class TransactionForm
         ' 
         Label6.AutoSize = True
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 12F)
+        Label6.Font = New Font("Poppins", 12.0F)
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(42, 0)
         Label6.Margin = New Padding(2, 0, 2, 0)
@@ -397,16 +365,6 @@ Partial Class TransactionForm
         PictureBox4.Margin = New Padding(2)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(36, 22)
-        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox4.TabIndex = 35
-        PictureBox4.TabStop = False
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(3, 3)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(20, 15)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox4.TabIndex = 35
         PictureBox4.TabStop = False
@@ -414,8 +372,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 2
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel9.Controls.Add(Label7, 1, 0)
         TableLayoutPanel9.Controls.Add(PictureBox3, 0, 0)
         TableLayoutPanel9.Dock = DockStyle.Fill
@@ -423,7 +381,7 @@ Partial Class TransactionForm
         TableLayoutPanel9.Margin = New Padding(2)
         TableLayoutPanel9.Name = "TableLayoutPanel9"
         TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel9.Size = New Size(393, 26)
         TableLayoutPanel9.TabIndex = 15
         ' 
@@ -431,7 +389,7 @@ Partial Class TransactionForm
         ' 
         Label7.AutoSize = True
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 12F)
+        Label7.Font = New Font("Poppins", 12.0F)
         Label7.ForeColor = Color.Black
         Label7.Location = New Point(42, 0)
         Label7.Margin = New Padding(2, 0, 2, 0)
@@ -449,16 +407,6 @@ Partial Class TransactionForm
         PictureBox3.Margin = New Padding(2)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(36, 22)
-        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox3.TabIndex = 34
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(3, 3)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(20, 15)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 34
         PictureBox3.TabStop = False
@@ -466,8 +414,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel11
         ' 
         TableLayoutPanel11.ColumnCount = 2
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel11.Controls.Add(Label9, 1, 0)
         TableLayoutPanel11.Controls.Add(PictureBox5, 0, 0)
         TableLayoutPanel11.Dock = DockStyle.Fill
@@ -475,23 +423,15 @@ Partial Class TransactionForm
         TableLayoutPanel11.Margin = New Padding(2)
         TableLayoutPanel11.Name = "TableLayoutPanel11"
         TableLayoutPanel11.RowCount = 1
-        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel11.Size = New Size(393, 26)
         TableLayoutPanel11.TabIndex = 16
-        ' 
-        ' cbStatus
-        ' 
-        cbStatus.FormattingEnabled = True
-        cbStatus.Location = New Point(210, 3)
-        cbStatus.Name = "cbStatus"
-        cbStatus.Size = New Size(169, 28)
-        cbStatus.TabIndex = 34
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Black
         Label9.Location = New Point(42, 0)
         Label9.Margin = New Padding(2, 0, 2, 0)
@@ -516,7 +456,7 @@ Partial Class TransactionForm
         ' cbStatus
         ' 
         cbStatus.Dock = DockStyle.Fill
-        cbStatus.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbStatus.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbStatus.FormattingEnabled = True
         cbStatus.Location = New Point(2, 32)
         cbStatus.Margin = New Padding(2)
@@ -527,8 +467,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel15
         ' 
         TableLayoutPanel15.ColumnCount = 2
-        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel15.Controls.Add(PictureBox9, 0, 0)
         TableLayoutPanel15.Controls.Add(Label13, 1, 0)
         TableLayoutPanel15.Dock = DockStyle.Fill
@@ -536,7 +476,7 @@ Partial Class TransactionForm
         TableLayoutPanel15.Margin = New Padding(2)
         TableLayoutPanel15.Name = "TableLayoutPanel15"
         TableLayoutPanel15.RowCount = 1
-        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel15.Size = New Size(393, 26)
         TableLayoutPanel15.TabIndex = 20
         ' 
@@ -556,7 +496,7 @@ Partial Class TransactionForm
         ' 
         Label13.AutoSize = True
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 12F)
+        Label13.Font = New Font("Poppins", 12.0F)
         Label13.ForeColor = Color.Black
         Label13.Location = New Point(42, 0)
         Label13.Margin = New Padding(2, 0, 2, 0)
@@ -569,8 +509,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel16
         ' 
         TableLayoutPanel16.ColumnCount = 2
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel16.Controls.Add(PictureBox10, 0, 0)
         TableLayoutPanel16.Controls.Add(Label14, 1, 0)
         TableLayoutPanel16.Dock = DockStyle.Fill
@@ -578,14 +518,13 @@ Partial Class TransactionForm
         TableLayoutPanel16.Margin = New Padding(2)
         TableLayoutPanel16.Name = "TableLayoutPanel16"
         TableLayoutPanel16.RowCount = 1
-        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel16.Size = New Size(393, 26)
         TableLayoutPanel16.TabIndex = 21
         ' 
         ' PictureBox10
         ' 
         PictureBox10.Dock = DockStyle.Fill
-        PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
         PictureBox10.Location = New Point(2, 2)
         PictureBox10.Margin = New Padding(2)
         PictureBox10.Name = "PictureBox10"
@@ -598,7 +537,7 @@ Partial Class TransactionForm
         ' 
         Label14.AutoSize = True
         Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 12F)
+        Label14.Font = New Font("Poppins", 12.0F)
         Label14.ForeColor = Color.Black
         Label14.Location = New Point(42, 0)
         Label14.Margin = New Padding(2, 0, 2, 0)
@@ -611,8 +550,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel17
         ' 
         TableLayoutPanel17.ColumnCount = 2
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel17.Controls.Add(cbService, 0, 1)
         TableLayoutPanel17.Controls.Add(tbPaymentMethod, 1, 1)
         TableLayoutPanel17.Controls.Add(TableLayoutPanel21, 0, 0)
@@ -622,8 +561,8 @@ Partial Class TransactionForm
         TableLayoutPanel17.Margin = New Padding(2)
         TableLayoutPanel17.Name = "TableLayoutPanel17"
         TableLayoutPanel17.RowCount = 2
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel17.Size = New Size(794, 61)
         TableLayoutPanel17.TabIndex = 25
         ' 
@@ -643,7 +582,7 @@ Partial Class TransactionForm
         ' 
         tbPaymentMethod.BackColor = Color.LightGray
         tbPaymentMethod.Dock = DockStyle.Fill
-        tbPaymentMethod.Font = New Font("Poppins", 12F)
+        tbPaymentMethod.Font = New Font("Poppins", 12.0F)
         tbPaymentMethod.Location = New Point(399, 32)
         tbPaymentMethod.Margin = New Padding(2)
         tbPaymentMethod.Name = "tbPaymentMethod"
@@ -654,8 +593,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel21
         ' 
         TableLayoutPanel21.ColumnCount = 2
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel21.Controls.Add(PictureBox2, 0, 0)
         TableLayoutPanel21.Controls.Add(Label22, 1, 0)
         TableLayoutPanel21.Dock = DockStyle.Fill
@@ -663,17 +602,9 @@ Partial Class TransactionForm
         TableLayoutPanel21.Margin = New Padding(2)
         TableLayoutPanel21.Name = "TableLayoutPanel21"
         TableLayoutPanel21.RowCount = 1
-        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel21.Size = New Size(393, 26)
         TableLayoutPanel21.TabIndex = 28
-        ' 
-        ' cbService
-        ' 
-        cbService.FormattingEnabled = True
-        cbService.Location = New Point(211, 3)
-        cbService.Name = "cbService"
-        cbService.Size = New Size(169, 28)
-        cbService.TabIndex = 33
         ' 
         ' PictureBox2
         ' 
@@ -691,7 +622,7 @@ Partial Class TransactionForm
         ' 
         Label22.AutoSize = True
         Label22.Dock = DockStyle.Fill
-        Label22.Font = New Font("Poppins", 12F)
+        Label22.Font = New Font("Poppins", 12.0F)
         Label22.ForeColor = Color.Black
         Label22.Location = New Point(42, 0)
         Label22.Margin = New Padding(2, 0, 2, 0)
@@ -704,8 +635,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel19
         ' 
         TableLayoutPanel19.ColumnCount = 2
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel19.Controls.Add(Label18, 1, 0)
         TableLayoutPanel19.Controls.Add(PictureBox7, 0, 0)
         TableLayoutPanel19.Dock = DockStyle.Fill
@@ -713,7 +644,7 @@ Partial Class TransactionForm
         TableLayoutPanel19.Margin = New Padding(2)
         TableLayoutPanel19.Name = "TableLayoutPanel19"
         TableLayoutPanel19.RowCount = 1
-        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel19.Size = New Size(393, 26)
         TableLayoutPanel19.TabIndex = 18
         ' 
@@ -721,7 +652,7 @@ Partial Class TransactionForm
         ' 
         Label18.AutoSize = True
         Label18.Dock = DockStyle.Fill
-        Label18.Font = New Font("Poppins", 12F)
+        Label18.Font = New Font("Poppins", 12.0F)
         Label18.ForeColor = Color.Black
         Label18.Location = New Point(42, 0)
         Label18.Margin = New Padding(2, 0, 2, 0)
@@ -739,16 +670,6 @@ Partial Class TransactionForm
         PictureBox7.Margin = New Padding(2)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(36, 22)
-        PictureBox7.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox7.TabIndex = 38
-        PictureBox7.TabStop = False
-        ' 
-        ' PictureBox7
-        ' 
-        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(3, 3)
-        PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(23, 15)
         PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox7.TabIndex = 38
         PictureBox7.TabStop = False
@@ -756,8 +677,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel20
         ' 
         TableLayoutPanel20.ColumnCount = 2
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel20.Controls.Add(tbTotal, 1, 1)
         TableLayoutPanel20.Controls.Add(TableLayoutPanel23, 1, 0)
         TableLayoutPanel20.Controls.Add(TableLayoutPanel9, 0, 0)
@@ -767,8 +688,8 @@ Partial Class TransactionForm
         TableLayoutPanel20.Margin = New Padding(2)
         TableLayoutPanel20.Name = "TableLayoutPanel20"
         TableLayoutPanel20.RowCount = 2
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel20.Size = New Size(794, 61)
         TableLayoutPanel20.TabIndex = 26
         ' 
@@ -776,7 +697,7 @@ Partial Class TransactionForm
         ' 
         tbTotal.BackColor = Color.LightGray
         tbTotal.Dock = DockStyle.Fill
-        tbTotal.Font = New Font("Poppins", 12F)
+        tbTotal.Font = New Font("Poppins", 12.0F)
         tbTotal.Location = New Point(399, 32)
         tbTotal.Margin = New Padding(2)
         tbTotal.Name = "tbTotal"
@@ -787,8 +708,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel23
         ' 
         TableLayoutPanel23.ColumnCount = 2
-        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40F))
-        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel23.Controls.Add(Label23, 1, 0)
         TableLayoutPanel23.Controls.Add(PictureBox8, 0, 0)
         TableLayoutPanel23.Dock = DockStyle.Fill
@@ -796,7 +717,7 @@ Partial Class TransactionForm
         TableLayoutPanel23.Margin = New Padding(2)
         TableLayoutPanel23.Name = "TableLayoutPanel23"
         TableLayoutPanel23.RowCount = 1
-        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
         TableLayoutPanel23.Size = New Size(393, 26)
         TableLayoutPanel23.TabIndex = 30
         ' 
@@ -804,7 +725,7 @@ Partial Class TransactionForm
         ' 
         Label23.AutoSize = True
         Label23.Dock = DockStyle.Fill
-        Label23.Font = New Font("Poppins", 12F)
+        Label23.Font = New Font("Poppins", 12.0F)
         Label23.ForeColor = Color.Black
         Label23.Location = New Point(42, 0)
         Label23.Margin = New Padding(2, 0, 2, 0)
@@ -822,28 +743,6 @@ Partial Class TransactionForm
         PictureBox8.Margin = New Padding(2)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(36, 22)
-        PictureBox8.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox8.TabIndex = 39
-        PictureBox8.TabStop = False
-        ' 
-        ' tbContactNum
-        ' 
-        tbContactNum.BackColor = Color.LightGray
-        tbContactNum.Dock = DockStyle.Fill
-        tbContactNum.Font = New Font("Poppins", 12F)
-        tbContactNum.Location = New Point(2, 32)
-        tbContactNum.Margin = New Padding(2)
-        tbContactNum.Name = "tbContactNum"
-        tbContactNum.Size = New Size(393, 31)
-        tbContactNum.TabIndex = 34
-        tbContactNum.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' PictureBox8
-        ' 
-        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(3, 3)
-        PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(23, 15)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox8.TabIndex = 39
         PictureBox8.TabStop = False
@@ -851,16 +750,20 @@ Partial Class TransactionForm
         ' tbContactNum
         ' 
         tbContactNum.BackColor = Color.LightGray
-        tbContactNum.Location = New Point(3, 30)
+        tbContactNum.Dock = DockStyle.Fill
+        tbContactNum.Font = New Font("Poppins", 12.0F)
+        tbContactNum.Location = New Point(2, 32)
+        tbContactNum.Margin = New Padding(2)
         tbContactNum.Name = "tbContactNum"
-        tbContactNum.Size = New Size(383, 27)
+        tbContactNum.Size = New Size(393, 31)
         tbContactNum.TabIndex = 34
+        tbContactNum.TextAlign = HorizontalAlignment.Center
         ' 
         ' TableLayoutPanel22
         ' 
         TableLayoutPanel22.ColumnCount = 2
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel22.Controls.Add(tbAmountReceived, 1, 1)
         TableLayoutPanel22.Controls.Add(tbAddress, 0, 1)
         TableLayoutPanel22.Controls.Add(lblAddress, 0, 0)
@@ -870,8 +773,8 @@ Partial Class TransactionForm
         TableLayoutPanel22.Margin = New Padding(2)
         TableLayoutPanel22.Name = "TableLayoutPanel22"
         TableLayoutPanel22.RowCount = 2
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel22.Size = New Size(794, 61)
         TableLayoutPanel22.TabIndex = 28
         ' 
@@ -879,7 +782,7 @@ Partial Class TransactionForm
         ' 
         tbAmountReceived.BackColor = Color.LightGray
         tbAmountReceived.Dock = DockStyle.Fill
-        tbAmountReceived.Font = New Font("Poppins", 12F)
+        tbAmountReceived.Font = New Font("Poppins", 12.0F)
         tbAmountReceived.Location = New Point(399, 32)
         tbAmountReceived.Margin = New Padding(2)
         tbAmountReceived.Name = "tbAmountReceived"
@@ -891,7 +794,7 @@ Partial Class TransactionForm
         ' 
         tbAddress.BackColor = Color.LightGray
         tbAddress.Dock = DockStyle.Fill
-        tbAddress.Font = New Font("Poppins", 12F)
+        tbAddress.Font = New Font("Poppins", 12.0F)
         tbAddress.Location = New Point(2, 32)
         tbAddress.Margin = New Padding(2)
         tbAddress.Name = "tbAddress"
@@ -902,8 +805,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel24
         ' 
         TableLayoutPanel24.ColumnCount = 2
-        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel24.Controls.Add(cbStatus, 0, 1)
         TableLayoutPanel24.Controls.Add(tbChange, 1, 1)
         TableLayoutPanel24.Controls.Add(TableLayoutPanel16, 1, 0)
@@ -913,8 +816,8 @@ Partial Class TransactionForm
         TableLayoutPanel24.Margin = New Padding(2)
         TableLayoutPanel24.Name = "TableLayoutPanel24"
         TableLayoutPanel24.RowCount = 2
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel24.Size = New Size(794, 61)
         TableLayoutPanel24.TabIndex = 30
         ' 
@@ -922,7 +825,7 @@ Partial Class TransactionForm
         ' 
         tbChange.BackColor = Color.LightGray
         tbChange.Dock = DockStyle.Fill
-        tbChange.Font = New Font("Poppins", 12F)
+        tbChange.Font = New Font("Poppins", 12.0F)
         tbChange.Location = New Point(399, 32)
         tbChange.Margin = New Padding(2)
         tbChange.Name = "tbChange"
@@ -933,7 +836,7 @@ Partial Class TransactionForm
         ' btnCancel
         ' 
         btnCancel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
-        btnCancel.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCancel.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnCancel.Location = New Point(323, 471)
         btnCancel.Margin = New Padding(2)
         btnCancel.Name = "btnCancel"
@@ -954,7 +857,7 @@ Partial Class TransactionForm
         btnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnSave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         btnSave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        btnSave.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSave.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSave.ForeColor = Color.White
         btnSave.Location = New Point(402, 471)
         btnSave.Margin = New Padding(2)
@@ -973,8 +876,8 @@ Partial Class TransactionForm
         ' TableLayoutPanel8
         ' 
         TableLayoutPanel8.ColumnCount = 2
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel8.Controls.Add(Guna2GradientPanel1, 0, 0)
         TableLayoutPanel8.Controls.Add(btnCancel, 0, 7)
         TableLayoutPanel8.Controls.Add(btnSave, 1, 7)
@@ -999,10 +902,39 @@ Partial Class TransactionForm
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
         TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 30F))
-        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 30.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel8.Size = New Size(800, 500)
         TableLayoutPanel8.TabIndex = 35
+        ' 
+        ' Guna2GradientPanel1
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Guna2GradientPanel1, 2)
+        Guna2GradientPanel1.Controls.Add(Label2)
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
+        Guna2GradientPanel1.Dock = DockStyle.Fill
+        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
+        Guna2GradientPanel1.Location = New Point(3, 3)
+        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientPanel1.Size = New Size(794, 61)
+        Guna2GradientPanel1.TabIndex = 35
+        ' 
+        ' Label2
+        ' 
+        Label2.BackColor = Color.Transparent
+        Label2.Dock = DockStyle.Fill
+        Label2.Font = New Font("Poppins", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.White
+        Label2.Location = New Point(0, 0)
+        Label2.Margin = New Padding(2, 0, 2, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(794, 61)
+        Label2.TabIndex = 6
+        Label2.Text = "TRANSACTION FORM"
+        Label2.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' Panel5
         ' 
@@ -1075,7 +1007,7 @@ Partial Class TransactionForm
         ' TransactionForm
         ' 
         AcceptButton = btnSave
-        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleDimensions = New SizeF(96.0F, 96.0F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(800, 500)
         Controls.Add(TableLayoutPanel8)
@@ -1095,7 +1027,6 @@ Partial Class TransactionForm
         TableLayoutPanel7.ResumeLayout(False)
         TableLayoutPanel7.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        Guna2GradientPanel1.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
         TableLayoutPanel3.ResumeLayout(False)
@@ -1133,6 +1064,7 @@ Partial Class TransactionForm
         TableLayoutPanel24.ResumeLayout(False)
         TableLayoutPanel24.PerformLayout()
         TableLayoutPanel8.ResumeLayout(False)
+        Guna2GradientPanel1.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         Panel6.ResumeLayout(False)
         Panel7.ResumeLayout(False)
@@ -1205,4 +1137,6 @@ Partial Class TransactionForm
     Friend WithEvents Panel12 As Panel
     Friend WithEvents lblSubtitle As Label
     Friend WithEvents lblDate As Label
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents Label2 As Label
 End Class

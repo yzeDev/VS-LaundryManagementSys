@@ -5,7 +5,7 @@ Public Class SelfServiceForm
     ' Function to get the latest price ng bawat subservice
     Private Function GetLatestPrice(serviceType As String, subService As String) As Double
         Dim price As Double = 0
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connString)
             conn.Open()
@@ -114,11 +114,11 @@ Public Class SelfServiceForm
 
     Private Sub gbContinue_Click(sender As Object, e As EventArgs)
 
-        Hide  ' hide this form
+        Hide()  ' hide this form
         Dim continueForm As New NewInvoiceForm
         continueForm.StartPosition = FormStartPosition.CenterScreen
-        continueForm.ShowDialog
-        Hide  '
+        continueForm.ShowDialog()
+        Hide()  '
 
         ' Compute service fee
         'Dim rate As Double = GetLatestPrice("Self-Service",) packageType)
@@ -135,21 +135,21 @@ Public Class SelfServiceForm
         'Dim total As Double = serviceFee + deliveryFee
 
         ' Create and show invoice
-        Dim invoice As New NewInvoiceForm()
-        invoice.PreviousForm = Me
-        invoice.CustomerName = customerName
-        invoice.ContactNumber = contactNumber
-        invoice.Address = address
+        'Dim invoice As New NewInvoiceForm()
+        'invoice.PreviousForm = Me
+        'invoice.CustomerName = customerName
+        'invoice.ContactNumber = contactNumber
+        'invoice.Address = address
         'invoice.Weight = weightVal.ToString("F2") & " kg"
-        invoice.ServiceType = serviceType
-        invoice.PackageType = 'packageType
-        invoice.Rate = "₱" & 'rate.ToString("F2") & "/kg"
-        invoice.ServiceFee = "₱" & 'serviceFee.ToString("F2")
-        invoice.DeliveryFee = "₱" & deliveryFee.ToString("F2")
-        invoice.TotalAmount = "₱" & 'total.ToString("F2")
-        invoice.DeliveryMode = deliveryMode
+        'invoice.ServiceType = serviceType
+        'invoice.PackageType = 'packageType
+        'invoice.Rate = "₱" & 'rate.ToString("F2") & "/kg"
+        'invoice.ServiceFee = "₱" & 'serviceFee.ToString("F2")
+        'invoice.DeliveryFee = "₱" & deliveryFee.ToString("F2")
+        'invoice.TotalAmount = "₱" & 'total.ToString("F2")
+        'invoice.DeliveryMode = deliveryMode
 
-        invoice.Show()
+        'invoice.Show()
         Me.Hide()
     End Sub
 

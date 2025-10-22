@@ -102,7 +102,7 @@ Partial Class SelfServiceForm
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.Padding = New Padding(2, 2, 2, 2)
+        TableLayoutPanel1.Padding = New Padding(2)
         TableLayoutPanel1.RowCount = 9
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 100F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))

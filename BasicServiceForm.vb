@@ -7,7 +7,7 @@ Public Class BasicServiceForm
     ' Function to get latest price dynamically from DB
     Private Function GetLatestPrice_Basic(subService As String) As Double
         Dim price As Double = 0
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\laundryfiles\Resources\LaundryDatabase.accdb;"
+        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
         Using conn As New OleDbConnection(connString)
             conn.Open()
