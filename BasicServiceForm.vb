@@ -9,7 +9,7 @@ Public Class BasicServiceForm
         Using conn As New OleDbConnection(connString)
             conn.Open()
             ' ServiceType hardcoded as "Basic Services"
-            Dim query As String = "SELECT TOP 1 Price FROM Pricing WHERE ServiceType='Basic Services' AND SubService=? ORDER BY LastUpdated DESC"
+            Dim query As String = "SELECT TOP 1 Price FROM PricingUpd WHERE ServiceType='Basic Services' AND SubService=? ORDER BY LastUpdated DESC"
 
             Using cmd As New OleDbCommand(query, conn)
                 cmd.Parameters.AddWithValue("?", subService)

@@ -10,7 +10,7 @@ Public Class FullServiceForm
         Using conn As New OleDbConnection(connString)
             conn.Open()
             ' Kunin yung pinaka-latest price base sa LastUpdated column
-            Dim query As String = "SELECT TOP 1 Price FROM Pricing WHERE ServiceType=? AND SubService=? ORDER BY LastUpdated DESC"
+            Dim query As String = "SELECT TOP 1 Price FROM PricingUpd WHERE ServiceType=? AND SubService=? ORDER BY LastUpdated DESC"
 
             Using cmd As New OleDbCommand(query, conn)
                 cmd.Parameters.AddWithValue("?", serviceType)
@@ -60,7 +60,7 @@ Public Class FullServiceForm
     End Sub
 
     ' Checkbox logic: pickup disables delivery and address
-    Private Sub Guna2CheckBoxPickup_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2CheckBoxPickup.CheckedChanged
+    Private Sub Guna2CheckBoxPickup_CheckedChanged(sender As Object, e As EventArgs)
         If Guna2CheckBoxPickup.Checked Then
             Guna2CheckBoxDelivery.Checked = False ' Uncheck delivery if pickup is checked
             txtboxAddress.Clear()

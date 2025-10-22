@@ -23,20 +23,18 @@ Partial Class DryCleaningForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
@@ -63,18 +61,18 @@ Partial Class DryCleaningForm
         Guna2CheckBoxPickup = New Guna.UI2.WinForms.Guna2CheckBox()
         Label13 = New Label()
         txtboxAddress = New TextBox()
-        TableLayoutPanel9 = New TableLayoutPanel()
-        gbCancel = New Guna.UI2.WinForms.Guna2Button()
-        gbContinue = New Guna.UI2.WinForms.Guna2Button()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         TableLayoutPanel2 = New TableLayoutPanel()
         lblTransactionID = New Label()
-        Label3 = New Label()
         Label2 = New Label()
         Panel1 = New Panel()
         Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Label1 = New Label()
-        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        Label6 = New Label()
+        TableLayoutPanel9 = New TableLayoutPanel()
+        gbCancel = New Button()
+        gbContinue = New Guna.UI2.WinForms.Guna2GradientButton()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
@@ -82,17 +80,18 @@ Partial Class DryCleaningForm
         TableLayoutPanel6.SuspendLayout()
         TableLayoutPanel7.SuspendLayout()
         TableLayoutPanel8.SuspendLayout()
-        TableLayoutPanel9.SuspendLayout()
         Guna2GradientPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         Panel1.SuspendLayout()
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel9.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 1
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel9, 0, 8)
         TableLayoutPanel1.Controls.Add(Label14, 0, 6)
         TableLayoutPanel1.Controls.Add(Label4, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 2)
@@ -100,7 +99,6 @@ Partial Class DryCleaningForm
         TableLayoutPanel1.Controls.Add(TableLayoutPanel5, 0, 4)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel6, 0, 5)
         TableLayoutPanel1.Controls.Add(txtboxAddress, 0, 7)
-        TableLayoutPanel1.Controls.Add(TableLayoutPanel9, 0, 8)
         TableLayoutPanel1.Controls.Add(Guna2GradientPanel1, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
@@ -486,61 +484,6 @@ Partial Class DryCleaningForm
         txtboxAddress.Size = New Size(490, 73)
         txtboxAddress.TabIndex = 7
         ' 
-        ' TableLayoutPanel9
-        ' 
-        TableLayoutPanel9.ColumnCount = 2
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel9.Controls.Add(gbCancel, 0, 0)
-        TableLayoutPanel9.Controls.Add(gbContinue, 1, 0)
-        TableLayoutPanel9.Dock = DockStyle.Fill
-        TableLayoutPanel9.Location = New Point(5, 621)
-        TableLayoutPanel9.Name = "TableLayoutPanel9"
-        TableLayoutPanel9.RowCount = 1
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel9.Size = New Size(490, 54)
-        TableLayoutPanel9.TabIndex = 8
-        ' 
-        ' gbCancel
-        ' 
-        gbCancel.AutoRoundedCorners = True
-        gbCancel.BorderThickness = 1
-        gbCancel.CustomizableEdges = CustomizableEdges9
-        gbCancel.DisabledState.BorderColor = Color.DarkGray
-        gbCancel.DisabledState.CustomBorderColor = Color.DarkGray
-        gbCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        gbCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        gbCancel.Dock = DockStyle.Top
-        gbCancel.FillColor = Color.White
-        gbCancel.Font = New Font("Microsoft Sans Serif", 12F)
-        gbCancel.ForeColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gbCancel.Location = New Point(3, 3)
-        gbCancel.Name = "gbCancel"
-        gbCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        gbCancel.Size = New Size(239, 48)
-        gbCancel.TabIndex = 0
-        gbCancel.Text = "Cancel"
-        ' 
-        ' gbContinue
-        ' 
-        gbContinue.AutoRoundedCorners = True
-        gbContinue.BorderThickness = 1
-        gbContinue.CustomizableEdges = CustomizableEdges11
-        gbContinue.DisabledState.BorderColor = Color.DarkGray
-        gbContinue.DisabledState.CustomBorderColor = Color.DarkGray
-        gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        gbContinue.Dock = DockStyle.Top
-        gbContinue.Font = New Font("Microsoft Sans Serif", 12F)
-        gbContinue.ForeColor = Color.White
-        gbContinue.Location = New Point(248, 3)
-        gbContinue.Name = "gbContinue"
-        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        gbContinue.Size = New Size(239, 48)
-        gbContinue.TabIndex = 1
-        gbContinue.Text = "Continue"
-        ' 
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
@@ -555,27 +498,33 @@ Partial Class DryCleaningForm
         Guna2GradientPanel1.Size = New Size(490, 94)
         Guna2GradientPanel1.TabIndex = 9
         ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.BackColor = Color.Transparent
         TableLayoutPanel2.BackgroundImageLayout = ImageLayout.None
         TableLayoutPanel2.ColumnCount = 3
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 59.0604019F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.9395981F))
         TableLayoutPanel2.Controls.Add(lblTransactionID, 2, 1)
-        TableLayoutPanel2.Controls.Add(Label3, 1, 1)
         TableLayoutPanel2.Controls.Add(Label2, 2, 0)
         TableLayoutPanel2.Controls.Add(Panel1, 0, 0)
         TableLayoutPanel2.Controls.Add(Label1, 1, 0)
-        TableLayoutPanel2.Dock = DockStyle.Fill
+        TableLayoutPanel2.Controls.Add(Label6, 1, 1)
         TableLayoutPanel2.Location = New Point(0, 0)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 2
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Size = New Size(490, 94)
-        TableLayoutPanel2.TabIndex = 0
+        TableLayoutPanel2.RowCount = 3
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 60.5769234F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 39.4230766F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 10F))
+        TableLayoutPanel2.Size = New Size(491, 94)
+        TableLayoutPanel2.TabIndex = 2
         ' 
         ' lblTransactionID
         ' 
@@ -583,24 +532,12 @@ Partial Class DryCleaningForm
         lblTransactionID.Dock = DockStyle.Fill
         lblTransactionID.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTransactionID.ForeColor = Color.White
-        lblTransactionID.Location = New Point(298, 47)
+        lblTransactionID.Location = New Point(333, 50)
         lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(189, 47)
+        lblTransactionID.Size = New Size(155, 33)
         lblTransactionID.TabIndex = 4
         lblTransactionID.Text = "#001"
         lblTransactionID.TextAlign = ContentAlignment.TopRight
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.White
-        Label3.Location = New Point(103, 47)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(189, 47)
-        Label3.TabIndex = 3
-        Label3.Text = "Professional Laundry Service"
         ' 
         ' Label2
         ' 
@@ -608,9 +545,9 @@ Partial Class DryCleaningForm
         Label2.Dock = DockStyle.Fill
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(298, 0)
+        Label2.Location = New Point(333, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(189, 47)
+        Label2.Size = New Size(155, 50)
         Label2.TabIndex = 2
         Label2.Text = "Transaction ID"
         Label2.TextAlign = ContentAlignment.BottomRight
@@ -622,40 +559,97 @@ Partial Class DryCleaningForm
         Panel1.Location = New Point(3, 3)
         Panel1.Name = "Panel1"
         TableLayoutPanel2.SetRowSpan(Panel1, 2)
-        Panel1.Size = New Size(94, 88)
+        Panel1.Size = New Size(94, 77)
         Panel1.TabIndex = 0
         ' 
         ' Guna2CirclePictureBox1
         ' 
-        Guna2CirclePictureBox1.Dock = DockStyle.Fill
         Guna2CirclePictureBox1.FillColor = Color.Transparent
+        Guna2CirclePictureBox1.Image = My.Resources.Resources.logo1
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(0, 0)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Guna2CirclePictureBox1.Size = New Size(94, 88)
+        Guna2CirclePictureBox1.Size = New Size(94, 76)
+        Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2CirclePictureBox1.TabIndex = 0
         Guna2CirclePictureBox1.TabStop = False
         ' 
         ' Label1
         ' 
-        Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label1.Font = New Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(100, 0)
+        Label1.Location = New Point(100, 21)
         Label1.Margin = New Padding(0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(195, 47)
+        Label1.Size = New Size(195, 29)
         Label1.TabIndex = 1
         Label1.Text = "BubbleFresh"
         Label1.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' Guna2BorderlessForm1
+        ' Label6
         ' 
-        Guna2BorderlessForm1.ContainerControl = Me
-        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
-        Guna2BorderlessForm1.TransparentWhileDrag = True
+        Label6.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label6.AutoSize = True
+        Label6.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.White
+        Label6.Location = New Point(103, 61)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(178, 22)
+        Label6.TabIndex = 5
+        Label6.Text = "Professional Laundry Service"
+        ' 
+        ' TableLayoutPanel9
+        ' 
+        TableLayoutPanel9.BackColor = Color.Transparent
+        TableLayoutPanel9.ColumnCount = 3
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.17857F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 1.96428573F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 47.8571434F))
+        TableLayoutPanel9.Controls.Add(gbCancel, 0, 0)
+        TableLayoutPanel9.Controls.Add(gbContinue, 2, 0)
+        TableLayoutPanel9.Location = New Point(5, 621)
+        TableLayoutPanel9.Name = "TableLayoutPanel9"
+        TableLayoutPanel9.RowCount = 1
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel9.Size = New Size(490, 40)
+        TableLayoutPanel9.TabIndex = 10
+        ' 
+        ' gbCancel
+        ' 
+        gbCancel.Dock = DockStyle.Fill
+        gbCancel.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        gbCancel.Location = New Point(61, 2)
+        gbCancel.Margin = New Padding(61, 2, 61, 2)
+        gbCancel.Name = "gbCancel"
+        gbCancel.Size = New Size(123, 36)
+        gbCancel.TabIndex = 34
+        gbCancel.Text = "Cancel"
+        gbCancel.UseVisualStyleBackColor = True
+        ' 
+        ' gbContinue
+        ' 
+        gbContinue.BorderRadius = 5
+        gbContinue.CustomizableEdges = CustomizableEdges12
+        gbContinue.DisabledState.BorderColor = Color.DarkGray
+        gbContinue.DisabledState.CustomBorderColor = Color.DarkGray
+        gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        gbContinue.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        gbContinue.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        gbContinue.Dock = DockStyle.Fill
+        gbContinue.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        gbContinue.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        gbContinue.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        gbContinue.ForeColor = Color.White
+        gbContinue.Location = New Point(315, 2)
+        gbContinue.Margin = New Padding(61, 2, 61, 2)
+        gbContinue.Name = "gbContinue"
+        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        gbContinue.Size = New Size(114, 36)
+        gbContinue.TabIndex = 36
+        gbContinue.Text = "CONTINUE"
         ' 
         ' DryCleaningForm
         ' 
@@ -686,12 +680,12 @@ Partial Class DryCleaningForm
         TableLayoutPanel7.PerformLayout()
         TableLayoutPanel8.ResumeLayout(False)
         TableLayoutPanel8.PerformLayout()
-        TableLayoutPanel9.ResumeLayout(False)
         Guna2GradientPanel1.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
         Panel1.ResumeLayout(False)
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel9.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -720,16 +714,16 @@ Partial Class DryCleaningForm
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents txtboxAddress As TextBox
-    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
-    Friend WithEvents gbCancel As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents gbContinue As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents lblTransactionID As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents lblTransactionID As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
+    Friend WithEvents gbCancel As Button
+    Friend WithEvents gbContinue As Guna.UI2.WinForms.Guna2GradientButton
 End Class

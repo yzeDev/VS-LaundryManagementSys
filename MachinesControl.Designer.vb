@@ -57,11 +57,12 @@ Partial Class MachinesControl
         cmbStatus.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbStatus.ItemHeight = 30
-        cmbStatus.Location = New Point(750, 5)
+        cmbStatus.Location = New Point(938, 6)
+        cmbStatus.Margin = New Padding(4, 4, 4, 4)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.RightToLeft = RightToLeft.Yes
         cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        cmbStatus.Size = New Size(94, 36)
+        cmbStatus.Size = New Size(117, 36)
         cmbStatus.TabIndex = 7
         cmbStatus.Tag = ""
         ' 
@@ -75,12 +76,13 @@ Partial Class MachinesControl
         TableLayoutPanel1.Controls.Add(Guna2ShadowPanel1, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(4, 4, 4, 4)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 62F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel1.Size = New Size(855, 604)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 25F))
+        TableLayoutPanel1.Size = New Size(1069, 755)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' flpMachines
@@ -90,11 +92,11 @@ Partial Class MachinesControl
         TableLayoutPanel1.SetColumnSpan(flpMachines, 3)
         flpMachines.Dock = DockStyle.Fill
         flpMachines.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        flpMachines.Location = New Point(40, 50)
-        flpMachines.Margin = New Padding(40, 0, 0, 0)
+        flpMachines.Location = New Point(50, 62)
+        flpMachines.Margin = New Padding(50, 0, 0, 0)
         flpMachines.Name = "flpMachines"
-        flpMachines.Padding = New Padding(4, 4, 4, 4)
-        flpMachines.Size = New Size(815, 554)
+        flpMachines.Padding = New Padding(5, 5, 5, 5)
+        flpMachines.Size = New Size(1019, 693)
         flpMachines.TabIndex = 4
         ' 
         ' Guna2ShadowPanel1
@@ -104,24 +106,25 @@ Partial Class MachinesControl
         Guna2ShadowPanel1.Controls.Add(TableLayoutPanel2)
         Guna2ShadowPanel1.Dock = DockStyle.Fill
         Guna2ShadowPanel1.FillColor = Color.White
-        Guna2ShadowPanel1.Location = New Point(3, 3)
+        Guna2ShadowPanel1.Location = New Point(4, 4)
+        Guna2ShadowPanel1.Margin = New Padding(4, 4, 4, 4)
         Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Guna2ShadowPanel1.ShadowColor = Color.Black
         Guna2ShadowPanel1.ShadowDepth = 50
         Guna2ShadowPanel1.ShadowShift = 3
         Guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal
-        Guna2ShadowPanel1.Size = New Size(849, 44)
+        Guna2ShadowPanel1.Size = New Size(1061, 54)
         Guna2ShadowPanel1.TabIndex = 8
         ' 
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 6
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 150F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 150F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 150F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 188F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 188F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 188F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 125F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 125F))
         TableLayoutPanel2.Controls.Add(btnConfigure, 2, 0)
         TableLayoutPanel2.Controls.Add(btnRemoveMachine, 1, 0)
         TableLayoutPanel2.Controls.Add(cmbStatus, 5, 0)
@@ -129,11 +132,12 @@ Partial Class MachinesControl
         TableLayoutPanel2.Controls.Add(Label1, 4, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
         TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(4, 4, 4, 4)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.Padding = New Padding(2)
         TableLayoutPanel2.RowCount = 1
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel2.Size = New Size(849, 44)
+        TableLayoutPanel2.Size = New Size(1061, 54)
         TableLayoutPanel2.TabIndex = 0
         ' 
         ' btnConfigure
@@ -149,11 +153,11 @@ Partial Class MachinesControl
         btnConfigure.FillColor = Color.Gainsboro
         btnConfigure.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnConfigure.ForeColor = Color.Black
-        btnConfigure.Location = New Point(312, 5)
-        btnConfigure.Margin = New Padding(10, 3, 3, 3)
+        btnConfigure.Location = New Point(390, 6)
+        btnConfigure.Margin = New Padding(12, 4, 4, 4)
         btnConfigure.Name = "btnConfigure"
         btnConfigure.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnConfigure.Size = New Size(137, 34)
+        btnConfigure.Size = New Size(172, 42)
         btnConfigure.TabIndex = 13
         btnConfigure.Text = "Configure"
         ' 
@@ -170,11 +174,11 @@ Partial Class MachinesControl
         btnRemoveMachine.FillColor = Color.LightCoral
         btnRemoveMachine.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnRemoveMachine.ForeColor = Color.Black
-        btnRemoveMachine.Location = New Point(162, 5)
-        btnRemoveMachine.Margin = New Padding(10, 3, 3, 3)
+        btnRemoveMachine.Location = New Point(202, 6)
+        btnRemoveMachine.Margin = New Padding(12, 4, 4, 4)
         btnRemoveMachine.Name = "btnRemoveMachine"
         btnRemoveMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnRemoveMachine.Size = New Size(137, 34)
+        btnRemoveMachine.Size = New Size(172, 42)
         btnRemoveMachine.TabIndex = 12
         btnRemoveMachine.Text = "Unavailable"
         ' 
@@ -190,11 +194,11 @@ Partial Class MachinesControl
         btnAddMachine.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
         btnAddMachine.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddMachine.ForeColor = Color.Black
-        btnAddMachine.Location = New Point(12, 5)
-        btnAddMachine.Margin = New Padding(10, 3, 3, 3)
+        btnAddMachine.Location = New Point(14, 6)
+        btnAddMachine.Margin = New Padding(12, 4, 4, 4)
         btnAddMachine.Name = "btnAddMachine"
         btnAddMachine.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        btnAddMachine.Size = New Size(137, 34)
+        btnAddMachine.Size = New Size(172, 42)
         btnAddMachine.TabIndex = 10
         btnAddMachine.Text = "+ Add Unit"
         ' 
@@ -203,22 +207,23 @@ Partial Class MachinesControl
         Label1.AutoSize = True
         Label1.Dock = DockStyle.Fill
         Label1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(650, 2)
+        Label1.Location = New Point(813, 2)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(94, 40)
+        Label1.Size = New Size(117, 50)
         Label1.TabIndex = 11
         Label1.Text = "Sort by:"
         Label1.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' MachinesControl
         ' 
-        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleDimensions = New SizeF(120F, 120F)
         AutoScaleMode = AutoScaleMode.Dpi
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(10, 10, 10, 10)
+        Margin = New Padding(12, 12, 12, 12)
         Name = "MachinesControl"
-        Size = New Size(855, 604)
+        Size = New Size(1069, 755)
         TableLayoutPanel1.ResumeLayout(False)
         Guna2ShadowPanel1.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)

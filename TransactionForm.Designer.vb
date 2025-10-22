@@ -51,6 +51,7 @@ Partial Class TransactionForm
         Label7 = New Label()
         PictureBox3 = New PictureBox()
         TableLayoutPanel11 = New TableLayoutPanel()
+        cbStatus = New ComboBox()
         Label9 = New Label()
         PictureBox5 = New PictureBox()
         cbStatus = New ComboBox()
@@ -64,6 +65,7 @@ Partial Class TransactionForm
         cbService = New ComboBox()
         tbPaymentMethod = New TextBox()
         TableLayoutPanel21 = New TableLayoutPanel()
+        cbService = New ComboBox()
         PictureBox2 = New PictureBox()
         Label22 = New Label()
         TableLayoutPanel19 = New TableLayoutPanel()
@@ -399,6 +401,16 @@ Partial Class TransactionForm
         PictureBox4.TabIndex = 35
         PictureBox4.TabStop = False
         ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(3, 3)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(20, 15)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 35
+        PictureBox4.TabStop = False
+        ' 
         ' TableLayoutPanel9
         ' 
         TableLayoutPanel9.ColumnCount = 2
@@ -441,6 +453,16 @@ Partial Class TransactionForm
         PictureBox3.TabIndex = 34
         PictureBox3.TabStop = False
         ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(3, 3)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(20, 15)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 34
+        PictureBox3.TabStop = False
+        ' 
         ' TableLayoutPanel11
         ' 
         TableLayoutPanel11.ColumnCount = 2
@@ -456,6 +478,14 @@ Partial Class TransactionForm
         TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel11.Size = New Size(393, 26)
         TableLayoutPanel11.TabIndex = 16
+        ' 
+        ' cbStatus
+        ' 
+        cbStatus.FormattingEnabled = True
+        cbStatus.Location = New Point(210, 3)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(169, 28)
+        cbStatus.TabIndex = 34
         ' 
         ' Label9
         ' 
@@ -637,6 +667,14 @@ Partial Class TransactionForm
         TableLayoutPanel21.Size = New Size(393, 26)
         TableLayoutPanel21.TabIndex = 28
         ' 
+        ' cbService
+        ' 
+        cbService.FormattingEnabled = True
+        cbService.Location = New Point(211, 3)
+        cbService.Name = "cbService"
+        cbService.Size = New Size(169, 28)
+        cbService.TabIndex = 33
+        ' 
         ' PictureBox2
         ' 
         PictureBox2.Dock = DockStyle.Fill
@@ -702,6 +740,16 @@ Partial Class TransactionForm
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(36, 22)
         PictureBox7.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox7.TabIndex = 38
+        PictureBox7.TabStop = False
+        ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
+        PictureBox7.Location = New Point(3, 3)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(23, 15)
+        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox7.TabIndex = 38
         PictureBox7.TabStop = False
         ' 
@@ -789,6 +837,24 @@ Partial Class TransactionForm
         tbContactNum.Size = New Size(393, 31)
         tbContactNum.TabIndex = 34
         tbContactNum.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
+        PictureBox8.Location = New Point(3, 3)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(23, 15)
+        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox8.TabIndex = 39
+        PictureBox8.TabStop = False
+        ' 
+        ' tbContactNum
+        ' 
+        tbContactNum.BackColor = Color.LightGray
+        tbContactNum.Location = New Point(3, 30)
+        tbContactNum.Name = "tbContactNum"
+        tbContactNum.Size = New Size(383, 27)
+        tbContactNum.TabIndex = 34
         ' 
         ' TableLayoutPanel22
         ' 
@@ -1078,7 +1144,6 @@ Partial Class TransactionForm
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
