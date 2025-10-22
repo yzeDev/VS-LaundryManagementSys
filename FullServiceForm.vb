@@ -60,7 +60,7 @@ Public Class FullServiceForm
     End Sub
 
     ' Checkbox logic: pickup disables delivery and address
-    Private Sub Guna2CheckBoxPickup_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2CheckBoxPickup.CheckedChanged
+    Private Sub Guna2CheckBoxPickup_CheckedChanged(sender As Object, e As EventArgs)
         If Guna2CheckBoxPickup.Checked Then
             Guna2CheckBoxDelivery.Checked = False ' Uncheck delivery if pickup is checked
             txtboxAddress.Clear()
@@ -123,11 +123,12 @@ Public Class FullServiceForm
     End Sub
 
 
-    Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
-        Me.Hide()
+    Private Sub gbCancel_Click(sender As Object, e As EventArgs)
+        Hide()
         TransactionOption.Show()
     End Sub
 
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
 
-
+    End Sub
 End Class

@@ -22,12 +22,13 @@ Partial Class ConfigureMachineForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConfigureMachineForm))
         TableLayoutPanel1 = New TableLayoutPanel()
+        btnsave = New Guna.UI2.WinForms.Guna2GradientButton()
         Panel1 = New Panel()
         SplitContainer1 = New SplitContainer()
         lblUnitNumberText = New Label()
@@ -41,7 +42,6 @@ Partial Class ConfigureMachineForm
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Label2 = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
-        btnsave = New Guna.UI2.WinForms.Guna2GradientButton()
         TableLayoutPanel1.SuspendLayout()
         Panel1.SuspendLayout()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
@@ -82,6 +82,27 @@ Partial Class ConfigureMachineForm
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.Size = New Size(319, 363)
         TableLayoutPanel1.TabIndex = 0
+        ' 
+        ' btnsave
+        ' 
+        btnsave.Anchor = AnchorStyles.None
+        btnsave.BorderRadius = 5
+        btnsave.CustomizableEdges = CustomizableEdges1
+        btnsave.DisabledState.BorderColor = Color.DarkGray
+        btnsave.DisabledState.CustomBorderColor = Color.DarkGray
+        btnsave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnsave.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnsave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnsave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        btnsave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        btnsave.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnsave.ForeColor = Color.White
+        btnsave.Location = New Point(99, 316)
+        btnsave.Name = "btnsave"
+        btnsave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnsave.Size = New Size(120, 29)
+        btnsave.TabIndex = 36
+        btnsave.Text = "SAVE"
         ' 
         ' Panel1
         ' 
@@ -175,12 +196,12 @@ Partial Class ConfigureMachineForm
         ' 
         ' nudCapacity
         ' 
-        nudCapacity.Anchor = AnchorStyles.None
+        nudCapacity.Dock = DockStyle.Fill
         nudCapacity.Font = New Font("Poppins", 9F)
-        nudCapacity.Location = New Point(113, 8)
-        nudCapacity.Margin = New Padding(3, 4, 3, 4)
+        nudCapacity.Location = New Point(0, 0)
+        nudCapacity.Margin = New Padding(10, 4, 3, 4)
         nudCapacity.Name = "nudCapacity"
-        nudCapacity.Size = New Size(96, 30)
+        nudCapacity.Size = New Size(313, 30)
         nudCapacity.TabIndex = 0
         ' 
         ' SplitContainer3
@@ -220,12 +241,13 @@ Partial Class ConfigureMachineForm
         ' 
         ' cboStatus
         ' 
+        cboStatus.Dock = DockStyle.Fill
         cboStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cboStatus.FormattingEnabled = True
-        cboStatus.Location = New Point(63, 4)
+        cboStatus.Location = New Point(0, 0)
         cboStatus.Margin = New Padding(3, 4, 3, 4)
         cboStatus.Name = "cboStatus"
-        cboStatus.Size = New Size(192, 28)
+        cboStatus.Size = New Size(313, 28)
         cboStatus.TabIndex = 0
         ' 
         ' Guna2GradientPanel1
@@ -267,27 +289,6 @@ Partial Class ConfigureMachineForm
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 89.39759F))
         TableLayoutPanel2.Size = New Size(325, 415)
         TableLayoutPanel2.TabIndex = 6
-        ' 
-        ' btnsave
-        ' 
-        btnsave.Anchor = AnchorStyles.None
-        btnsave.BorderRadius = 5
-        btnsave.CustomizableEdges = CustomizableEdges1
-        btnsave.DisabledState.BorderColor = Color.DarkGray
-        btnsave.DisabledState.CustomBorderColor = Color.DarkGray
-        btnsave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnsave.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnsave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnsave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        btnsave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        btnsave.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnsave.ForeColor = Color.White
-        btnsave.Location = New Point(112, 315)
-        btnsave.Name = "btnsave"
-        btnsave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        btnsave.Size = New Size(94, 32)
-        btnsave.TabIndex = 36
-        btnsave.Text = "SAVE"
         ' 
         ' ConfigureMachineForm
         ' 

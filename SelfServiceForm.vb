@@ -39,7 +39,7 @@ Public Class SelfServiceForm
     End Sub
 
     ' Contact textbox: numeric lang after "+63 "
-    Private Sub Guna2txtboxContact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2txtboxContact.KeyPress
+    Private Sub Guna2txtboxContact_KeyPress(sender As Object, e As KeyPressEventArgs)
         ' Prevent typing non-numeric after "+63 "
         If Guna2txtboxContact.SelectionStart >= 4 Then
             If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
@@ -52,8 +52,8 @@ Public Class SelfServiceForm
     End Sub
 
     ' Contact textbox formatting & validation
-    Private Sub Guna2txtboxContact_TextChanged(sender As Object, e As EventArgs) Handles Guna2txtboxContact.TextChanged
-        Dim contact As String = Guna2txtboxContact.Text.Trim()
+    Private Sub Guna2txtboxContact_TextChanged(sender As Object, e As EventArgs)
+        Dim contact = Guna2txtboxContact.Text.Trim
 
 
         If Not contact.StartsWith("+63 ") Then
@@ -63,7 +63,7 @@ Public Class SelfServiceForm
         End If
 
 
-        Dim numberPart As String = contact.Substring(4).Replace(" ", "")
+        Dim numberPart = contact.Substring(4).Replace(" ", "")
 
 
         If numberPart.StartsWith("0") Then
@@ -105,18 +105,18 @@ Public Class SelfServiceForm
     End Sub
 
 
-    Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
-        TransactionOption.Show()
-        Me.Dispose()
+    Private Sub gbCancel_Click(sender As Object, e As EventArgs)
+        TransactionOption.Show
+        Dispose
     End Sub
 
-    Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
+    Private Sub gbContinue_Click(sender As Object, e As EventArgs)
 
-        Me.Hide()  ' hide this form
-        Dim continueForm As New NewInvoiceForm()
+        Hide  ' hide this form
+        Dim continueForm As New NewInvoiceForm
         continueForm.StartPosition = FormStartPosition.CenterScreen
-        continueForm.ShowDialog()
-        Me.Hide()  '
+        continueForm.ShowDialog
+        Hide  '
 
     End Sub
 

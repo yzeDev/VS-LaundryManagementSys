@@ -67,4 +67,8 @@ Public Class ConfigureMachineForm
     Private Sub SplitContainer2_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer2.Panel1.Paint
 
     End Sub
+
+    Private Sub nudCapacity_ValueChanged_1(sender As Object, e As EventArgs) Handles nudCapacity.ValueChanged
+
+    End Sub
 End Class

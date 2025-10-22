@@ -117,4 +117,8 @@ Public Class BasicServiceForm
     Private Sub lblRate_Click(sender As Object, e As EventArgs) Handles lblRate.Click
 
     End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
