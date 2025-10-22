@@ -159,48 +159,7 @@ Partial Class confirmpayment
         referencetb.Size = New Size(483, 34)
         referencetb.TabIndex = 10
         ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Poppins", 9.0F)
-        Label3.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label3.Location = New Point(3, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(406, 44)
-        Label3.TabIndex = 9
-        Label3.Text = "Enter the reference number provided by the customer to verify their GCash or PayMaya transaction."
-        Label3.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' Guna2GradientPanel1
-        ' 
-        Guna2GradientPanel1.BorderStyle = Drawing2D.DashStyle.Dash
-        Guna2GradientPanel1.Controls.Add(Label2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
-        Guna2GradientPanel1.Dock = DockStyle.Fill
-        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        Guna2GradientPanel1.Location = New Point(3, 2)
-        Guna2GradientPanel1.Margin = New Padding(3, 2, 3, 2)
-        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2GradientPanel1.Size = New Size(444, 29)
-        Guna2GradientPanel1.TabIndex = 2
-        ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.None
-        Label2.AutoSize = True
-        Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Poppins", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(144, 2)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(152, 28)
-        Label2.TabIndex = 5
-        Label2.Text = "Proof of Payment"
-        Label2.TextAlign = ContentAlignment.TopCenter
-        ' 
-        ' Guna2BorderlessForm1
+        ' btnsave
         ' 
         Guna2BorderlessForm1.ContainerControl = Me
         Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R

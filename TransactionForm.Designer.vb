@@ -164,7 +164,7 @@ Partial Class TransactionForm
         ' 
         tbCustomerName.BackColor = Color.LightGray
         tbCustomerName.Dock = DockStyle.Fill
-        tbCustomerName.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        tbCustomerName.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
         tbCustomerName.Location = New Point(2, 32)
         tbCustomerName.Margin = New Padding(2)
         tbCustomerName.Name = "tbCustomerName"
@@ -234,7 +234,7 @@ Partial Class TransactionForm
         ' 
         Label5.AutoSize = True
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label5.ForeColor = Color.Black
         Label5.ImageAlign = ContentAlignment.BottomCenter
         Label5.Location = New Point(42, 0)
@@ -277,8 +277,8 @@ Partial Class TransactionForm
         ' 
         lblSubtitle.AutoSize = True
         lblSubtitle.Dock = DockStyle.Fill
-        lblSubtitle.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblSubtitle.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblSubtitle.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        lblSubtitle.ForeColor = Color.FromArgb(13, 67, 188)
         lblSubtitle.Location = New Point(2, 30)
         lblSubtitle.Margin = New Padding(2, 0, 2, 0)
         lblSubtitle.Name = "lblSubtitle"
@@ -289,8 +289,8 @@ Partial Class TransactionForm
         ' lblMode
         ' 
         lblMode.AutoSize = True
-        lblMode.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblMode.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblMode.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lblMode.ForeColor = Color.FromArgb(13, 67, 188)
         lblMode.Location = New Point(2, 0)
         lblMode.Margin = New Padding(2, 0, 2, 0)
         lblMode.Name = "lblMode"
@@ -317,8 +317,8 @@ Partial Class TransactionForm
         ' 
         lblDate.AutoSize = True
         lblDate.Dock = DockStyle.Fill
-        lblDate.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDate.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblDate.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        lblDate.ForeColor = Color.FromArgb(13, 67, 188)
         lblDate.Location = New Point(2, 0)
         lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
@@ -431,7 +431,7 @@ Partial Class TransactionForm
         ' 
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label9.ForeColor = Color.Black
         Label9.Location = New Point(42, 0)
         Label9.Margin = New Padding(2, 0, 2, 0)
@@ -456,7 +456,7 @@ Partial Class TransactionForm
         ' cbStatus
         ' 
         cbStatus.Dock = DockStyle.Fill
-        cbStatus.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbStatus.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
         cbStatus.FormattingEnabled = True
         cbStatus.Location = New Point(2, 32)
         cbStatus.Margin = New Padding(2)
@@ -570,7 +570,7 @@ Partial Class TransactionForm
         ' 
         cbService.Dock = DockStyle.Fill
         cbService.DropDownStyle = ComboBoxStyle.DropDownList
-        cbService.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbService.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
         cbService.FormattingEnabled = True
         cbService.Location = New Point(2, 32)
         cbService.Margin = New Padding(2)
@@ -836,7 +836,7 @@ Partial Class TransactionForm
         ' btnCancel
         ' 
         btnCancel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
-        btnCancel.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCancel.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
         btnCancel.Location = New Point(323, 471)
         btnCancel.Margin = New Padding(2)
         btnCancel.Name = "btnCancel"
@@ -852,12 +852,12 @@ Partial Class TransactionForm
         btnSave.CustomizableEdges = CustomizableEdges1
         btnSave.DisabledState.BorderColor = Color.DarkGray
         btnSave.DisabledState.CustomBorderColor = Color.DarkGray
-        btnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnSave.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnSave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        btnSave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        btnSave.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btnSave.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169)
+        btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btnSave.FillColor = Color.FromArgb(13, 67, 188)
+        btnSave.FillColor2 = Color.FromArgb(76, 102, 232)
+        btnSave.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
         btnSave.ForeColor = Color.White
         btnSave.Location = New Point(402, 471)
         btnSave.Margin = New Padding(2)
@@ -913,8 +913,8 @@ Partial Class TransactionForm
         Guna2GradientPanel1.Controls.Add(Label2)
         Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
         Guna2GradientPanel1.Dock = DockStyle.Fill
-        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        Guna2GradientPanel1.FillColor = Color.FromArgb(13, 67, 188)
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(76, 102, 232)
         Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel1.Location = New Point(3, 3)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
@@ -926,7 +926,7 @@ Partial Class TransactionForm
         ' 
         Label2.BackColor = Color.Transparent
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Poppins", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(0, 0)
         Label2.Margin = New Padding(2, 0, 2, 0)
