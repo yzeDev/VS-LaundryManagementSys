@@ -106,8 +106,16 @@ Public Class SelfServiceForm
 
 
     Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
-        TransactionOption.Show()
-        Me.Dispose()
+        Dim confirmForm As New transacCancelConfirm()
+        confirmForm.TopMost = True
+        confirmForm.ShowDialog(Me)
+
+        ' Check if user confirmed cancellation 
+        If confirmForm.UserConfirmed Then
+            TransactionOption.Show()
+            Me.Dispose()
+        End If
+        ' If user clicked No, do nothing
     End Sub
 
     Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
