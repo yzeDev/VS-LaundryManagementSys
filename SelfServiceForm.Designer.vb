@@ -643,7 +643,7 @@ Partial Class SelfServiceForm
         MaximumSize = New Size(500, 680)
         MinimumSize = New Size(500, 680)
         Name = "SelfServiceForm"
-        StartPosition = FormStartPosition.CenterParent
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Service Form"
         TopMost = True
         TableLayoutPanel1.ResumeLayout(False)

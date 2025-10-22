@@ -214,7 +214,7 @@ Partial Class DryCleaningForm
         ' Guna2txtboxName
         ' 
         Guna2txtboxName.AutoRoundedCorners = True
-        Guna2txtboxName.CustomizableEdges = CustomizableEdges16
+        Guna2txtboxName.CustomizableEdges = CustomizableEdges1
         Guna2txtboxName.DefaultText = ""
         Guna2txtboxName.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxName.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -229,7 +229,7 @@ Partial Class DryCleaningForm
         Guna2txtboxName.Name = "Guna2txtboxName"
         Guna2txtboxName.PlaceholderText = ""
         Guna2txtboxName.SelectedText = ""
-        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2txtboxName.Size = New Size(482, 19)
         Guna2txtboxName.TabIndex = 1
         ' 
@@ -257,7 +257,7 @@ Partial Class DryCleaningForm
         ' Guna2txtboxQuantity
         ' 
         Guna2txtboxQuantity.AutoRoundedCorners = True
-        Guna2txtboxQuantity.CustomizableEdges = CustomizableEdges18
+        Guna2txtboxQuantity.CustomizableEdges = CustomizableEdges3
         Guna2txtboxQuantity.DefaultText = ""
         Guna2txtboxQuantity.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxQuantity.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -272,7 +272,7 @@ Partial Class DryCleaningForm
         Guna2txtboxQuantity.Name = "Guna2txtboxQuantity"
         Guna2txtboxQuantity.PlaceholderText = ""
         Guna2txtboxQuantity.SelectedText = ""
-        Guna2txtboxQuantity.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        Guna2txtboxQuantity.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2txtboxQuantity.Size = New Size(115, 19)
         Guna2txtboxQuantity.TabIndex = 6
         ' 
@@ -303,7 +303,7 @@ Partial Class DryCleaningForm
         ' Guna2txtboxContact
         ' 
         Guna2txtboxContact.AutoRoundedCorners = True
-        Guna2txtboxContact.CustomizableEdges = CustomizableEdges20
+        Guna2txtboxContact.CustomizableEdges = CustomizableEdges5
         Guna2txtboxContact.DefaultText = ""
         Guna2txtboxContact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxContact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -318,7 +318,7 @@ Partial Class DryCleaningForm
         Guna2txtboxContact.Name = "Guna2txtboxContact"
         Guna2txtboxContact.PlaceholderText = ""
         Guna2txtboxContact.SelectedText = ""
-        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2txtboxContact.Size = New Size(237, 19)
         Guna2txtboxContact.TabIndex = 2
         ' 
@@ -339,7 +339,7 @@ Partial Class DryCleaningForm
         gcbClotheSize.Anchor = AnchorStyles.None
         gcbClotheSize.AutoRoundedCorners = True
         gcbClotheSize.BackColor = Color.Transparent
-        gcbClotheSize.CustomizableEdges = CustomizableEdges22
+        gcbClotheSize.CustomizableEdges = CustomizableEdges7
         gcbClotheSize.DrawMode = DrawMode.OwnerDrawFixed
         gcbClotheSize.DropDownStyle = ComboBoxStyle.DropDownList
         gcbClotheSize.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -350,7 +350,7 @@ Partial Class DryCleaningForm
         gcbClotheSize.Items.AddRange(New Object() {"Large", "Medium", "Small"})
         gcbClotheSize.Location = New Point(248, 39)
         gcbClotheSize.Name = "gcbClotheSize"
-        gcbClotheSize.ShadowDecoration.CustomizableEdges = CustomizableEdges23
+        gcbClotheSize.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         gcbClotheSize.Size = New Size(116, 31)
         gcbClotheSize.Sorted = True
         gcbClotheSize.TabIndex = 7
@@ -663,7 +663,7 @@ Partial Class DryCleaningForm
         MaximumSize = New Size(500, 680)
         MinimumSize = New Size(500, 680)
         Name = "DryCleaningForm"
-        StartPosition = FormStartPosition.CenterParent
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Service Form"
         TopMost = True
         TableLayoutPanel1.ResumeLayout(False)

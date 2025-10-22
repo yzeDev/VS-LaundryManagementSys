@@ -109,16 +109,28 @@ Public Class BasicServiceForm
         Guna2txtboxContact.SelectionStart = Guna2txtboxContact.Text.Length
     End Sub
 
-    Private Sub gbCancel_Click(sender As Object, e As EventArgs)
-        Hide
-        TransactionOption.Show
+    Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
+        Dim confirmForm As New transacCancelConfirm()
+        confirmForm.TopMost = True
+        confirmForm.ShowDialog(Me)
+
+        ' Check if user confirmed cancellation 
+        If confirmForm.UserConfirmed Then
+            TransactionOption.Show()
+            Me.Dispose()
+        End If
+        ' If user clicked No, do nothing
     End Sub
 
     Private Sub lblRate_Click(sender As Object, e As EventArgs) Handles lblRate.Click
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
+    Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
+        Me.Hide()  ' hide this form
+        Dim continueForm As New NewInvoiceForm()
+        continueForm.StartPosition = FormStartPosition.CenterScreen
+        continueForm.ShowDialog()
+        Me.Hide()  '
     End Sub
 End Class

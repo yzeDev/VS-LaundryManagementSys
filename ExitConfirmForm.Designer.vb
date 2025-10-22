@@ -22,13 +22,14 @@ Partial Class ExitConfirmForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        components = New ComponentModel.Container()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ExitConfirmForm))
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         PictureBox1 = New PictureBox()
@@ -40,6 +41,7 @@ Partial Class ExitConfirmForm
         TableLayoutPanel3 = New TableLayoutPanel()
         exitFormCnclBtn = New Guna.UI2.WinForms.Guna2GradientButton()
         exitFormCloseBtn = New Guna.UI2.WinForms.Guna2GradientButton()
+        Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         Guna2GradientPanel1.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -50,13 +52,13 @@ Partial Class ExitConfirmForm
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges1
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2GradientPanel1.Size = New Size(400, 100)
         Guna2GradientPanel1.TabIndex = 0
         ' 
@@ -173,7 +175,7 @@ Partial Class ExitConfirmForm
         ' exitFormCnclBtn
         ' 
         exitFormCnclBtn.BorderRadius = 5
-        exitFormCnclBtn.CustomizableEdges = CustomizableEdges9
+        exitFormCnclBtn.CustomizableEdges = CustomizableEdges3
         exitFormCnclBtn.DisabledState.BorderColor = Color.DarkGray
         exitFormCnclBtn.DisabledState.CustomBorderColor = Color.DarkGray
         exitFormCnclBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -186,7 +188,7 @@ Partial Class ExitConfirmForm
         exitFormCnclBtn.Location = New Point(33, 18)
         exitFormCnclBtn.Name = "exitFormCnclBtn"
         exitFormCnclBtn.PressedColor = Color.Transparent
-        exitFormCnclBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        exitFormCnclBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         exitFormCnclBtn.Size = New Size(164, 31)
         exitFormCnclBtn.TabIndex = 2
         exitFormCnclBtn.Text = "Cancel"
@@ -194,7 +196,7 @@ Partial Class ExitConfirmForm
         ' exitFormCloseBtn
         ' 
         exitFormCloseBtn.BorderRadius = 5
-        exitFormCloseBtn.CustomizableEdges = CustomizableEdges11
+        exitFormCloseBtn.CustomizableEdges = CustomizableEdges5
         exitFormCloseBtn.DisabledState.BorderColor = Color.DarkGray
         exitFormCloseBtn.DisabledState.CustomBorderColor = Color.DarkGray
         exitFormCloseBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -206,10 +208,14 @@ Partial Class ExitConfirmForm
         exitFormCloseBtn.ForeColor = Color.White
         exitFormCloseBtn.Location = New Point(203, 18)
         exitFormCloseBtn.Name = "exitFormCloseBtn"
-        exitFormCloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        exitFormCloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         exitFormCloseBtn.Size = New Size(164, 31)
         exitFormCloseBtn.TabIndex = 3
         exitFormCloseBtn.Text = "Exit"
+        ' 
+        ' Guna2ShadowForm1
+        ' 
+        Guna2ShadowForm1.BorderRadius = 15
         ' 
         ' ExitConfirmForm
         ' 
@@ -240,5 +246,6 @@ Partial Class ExitConfirmForm
     Friend WithEvents Label4 As Label
     Friend WithEvents exitFormCnclBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents exitFormCloseBtn As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 
 End Class

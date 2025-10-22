@@ -612,7 +612,7 @@ Partial Class FullServiceForm
         MaximumSize = New Size(500, 680)
         MinimumSize = New Size(500, 680)
         Name = "FullServiceForm"
-        StartPosition = FormStartPosition.CenterParent
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Service Form"
         TopMost = True
         TableLayoutPanel1.ResumeLayout(False)
