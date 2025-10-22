@@ -9,7 +9,7 @@ Public Class BasicServiceForm
         Using conn As New OleDbConnection(connString)
             conn.Open()
             ' ServiceType hardcoded as "Basic Services"
-            Dim query As String = "SELECT TOP 1 Price FROM Pricing WHERE ServiceType='Basic Services' AND SubService=? ORDER BY LastUpdated DESC"
+            Dim query As String = "SELECT TOP 1 Price FROM PricingUpd WHERE ServiceType='Basic Services' AND SubService=? ORDER BY LastUpdated DESC"
 
             Using cmd As New OleDbCommand(query, conn)
                 cmd.Parameters.AddWithValue("?", subService)
@@ -109,9 +109,9 @@ Public Class BasicServiceForm
         Guna2txtboxContact.SelectionStart = Guna2txtboxContact.Text.Length
     End Sub
 
-    Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
-        Me.Hide()
-        TransactionOption.Show()
+    Private Sub gbCancel_Click(sender As Object, e As EventArgs)
+        Hide
+        TransactionOption.Show
     End Sub
 
     Private Sub lblRate_Click(sender As Object, e As EventArgs) Handles lblRate.Click
