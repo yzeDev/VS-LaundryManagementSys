@@ -73,8 +73,8 @@ Partial Class ChangePasswordControl
         Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Label6 = New Label()
         TableLayoutPanel7 = New TableLayoutPanel()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Label7 = New Label()
+        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         TableLayoutPanel8 = New TableLayoutPanel()
         Panel1 = New Panel()
         Label8 = New Label()
@@ -83,8 +83,8 @@ Partial Class ChangePasswordControl
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label9 = New Label()
         TableLayoutPanel10 = New TableLayoutPanel()
-        Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
         Label10 = New Label()
+        Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
         TableLayoutPanel6.SuspendLayout()
         TableLayoutPanel5.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -186,7 +186,7 @@ Partial Class ChangePasswordControl
         Label5.ForeColor = Color.DimGray
         Label5.Location = New Point(3, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(216, 30)
+        Label5.Size = New Size(181, 25)
         Label5.TabIndex = 9
         Label5.Text = "Confirm New Password"
         Label5.TextAlign = ContentAlignment.MiddleLeft
@@ -234,7 +234,7 @@ Partial Class ChangePasswordControl
         Label4.ForeColor = Color.DimGray
         Label4.Location = New Point(3, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(141, 30)
+        Label4.Size = New Size(119, 25)
         Label4.TabIndex = 9
         Label4.Text = "New Password"
         Label4.TextAlign = ContentAlignment.MiddleLeft
@@ -331,7 +331,7 @@ Partial Class ChangePasswordControl
         Label2.ForeColor = Color.SteelBlue
         Label2.Location = New Point(44, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(169, 33)
+        Label2.Size = New Size(135, 33)
         Label2.TabIndex = 4
         Label2.Text = "Secure your account"
         Label2.TextAlign = ContentAlignment.MiddleLeft
@@ -380,7 +380,7 @@ Partial Class ChangePasswordControl
         Label3.ForeColor = Color.DimGray
         Label3.Location = New Point(3, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(169, 30)
+        Label3.Size = New Size(143, 25)
         Label3.TabIndex = 9
         Label3.Text = "Current Password"
         Label3.TextAlign = ContentAlignment.MiddleLeft
@@ -435,7 +435,7 @@ Partial Class ChangePasswordControl
         Guna2CheckBox1.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Guna2CheckBox1.Location = New Point(616, 361)
         Guna2CheckBox1.Name = "Guna2CheckBox1"
-        Guna2CheckBox1.Size = New Size(141, 27)
+        Guna2CheckBox1.Size = New Size(118, 23)
         Guna2CheckBox1.TabIndex = 11
         Guna2CheckBox1.Text = "Show Passwords"
         Guna2CheckBox1.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
@@ -487,7 +487,7 @@ Partial Class ChangePasswordControl
         Label6.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label6.Location = New Point(3, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(216, 30)
+        Label6.Size = New Size(181, 25)
         Label6.TabIndex = 9
         Label6.Text = "Confirm New Password"
         Label6.TextAlign = ContentAlignment.MiddleLeft
@@ -505,6 +505,18 @@ Partial Class ChangePasswordControl
         TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 59.7560959F))
         TableLayoutPanel7.Size = New Size(371, 82)
         TableLayoutPanel7.TabIndex = 9
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label7.Location = New Point(3, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(119, 25)
+        Label7.TabIndex = 9
+        Label7.Text = "New Password"
+        Label7.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2TextBox1
         ' 
@@ -527,18 +539,6 @@ Partial Class ChangePasswordControl
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2TextBox1.Size = New Size(365, 27)
         Guna2TextBox1.TabIndex = 9
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label7.Location = New Point(3, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(141, 30)
-        Label7.TabIndex = 9
-        Label7.Text = "New Password"
-        Label7.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel8
         ' 
@@ -632,7 +632,7 @@ Partial Class ChangePasswordControl
         Label9.ForeColor = Color.SteelBlue
         Label9.Location = New Point(42, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(169, 33)
+        Label9.Size = New Size(135, 33)
         Label9.TabIndex = 4
         Label9.Text = "Secure your account"
         Label9.TextAlign = ContentAlignment.MiddleLeft
@@ -651,6 +651,18 @@ Partial Class ChangePasswordControl
         TableLayoutPanel10.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel10.Size = New Size(371, 82)
         TableLayoutPanel10.TabIndex = 3
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        Label10.Location = New Point(3, 0)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(143, 25)
+        Label10.TabIndex = 9
+        Label10.Text = "Current Password"
+        Label10.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Guna2TextBox3
         ' 
@@ -673,18 +685,6 @@ Partial Class ChangePasswordControl
         Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2TextBox3.Size = New Size(365, 27)
         Guna2TextBox3.TabIndex = 9
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label10.Location = New Point(3, 0)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(169, 30)
-        Label10.TabIndex = 9
-        Label10.Text = "Current Password"
-        Label10.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' ChangePasswordControl
         ' 

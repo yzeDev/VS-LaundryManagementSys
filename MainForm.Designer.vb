@@ -22,9 +22,11 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         navbarPanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         navbarBtnPanel = New Panel()
         navBottomDivider = New Panel()
@@ -32,7 +34,7 @@ Partial Class MainForm
         settingsBtn = New Button()
         adminPanel = New Panel()
         adminnNavTblPanel = New TableLayoutPanel()
-        logoutBtn = New Button()
+        btnLogout = New Button()
         administratorLbl = New Label()
         adminPicBox = New PictureBox()
         adminNameLbl = New Label()
@@ -55,6 +57,7 @@ Partial Class MainForm
         topDivider = New Panel()
         contentSpacePanel = New Panel()
         titleBarPanel = New Panel()
+        Guna2ShapesTool1 = New Guna.UI2.WinForms.Guna2ShapesTool(components)
         navbarPanel.SuspendLayout()
         navbarBtnPanel.SuspendLayout()
         settingsBtnPanel.SuspendLayout()
@@ -158,7 +161,7 @@ Partial Class MainForm
         adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29F))
         adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51F))
         adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
-        adminnNavTblPanel.Controls.Add(logoutBtn, 2, 0)
+        adminnNavTblPanel.Controls.Add(btnLogout, 2, 0)
         adminnNavTblPanel.Controls.Add(administratorLbl, 1, 1)
         adminnNavTblPanel.Controls.Add(adminPicBox, 0, 0)
         adminnNavTblPanel.Controls.Add(adminNameLbl, 1, 0)
@@ -171,20 +174,20 @@ Partial Class MainForm
         adminnNavTblPanel.Size = New Size(200, 40)
         adminnNavTblPanel.TabIndex = 2
         ' 
-        ' logoutBtn
+        ' btnLogout
         ' 
-        logoutBtn.BackColor = Color.Transparent
-        logoutBtn.Dock = DockStyle.Left
-        logoutBtn.FlatAppearance.BorderSize = 0
-        logoutBtn.FlatStyle = FlatStyle.Flat
-        logoutBtn.Image = CType(resources.GetObject("logoutBtn.Image"), Image)
-        logoutBtn.Location = New Point(163, 3)
-        logoutBtn.Name = "logoutBtn"
-        logoutBtn.Padding = New Padding(0, 0, 5, 0)
-        adminnNavTblPanel.SetRowSpan(logoutBtn, 2)
-        logoutBtn.Size = New Size(34, 34)
-        logoutBtn.TabIndex = 6
-        logoutBtn.UseVisualStyleBackColor = False
+        btnLogout.BackColor = Color.Transparent
+        btnLogout.Dock = DockStyle.Left
+        btnLogout.FlatAppearance.BorderSize = 0
+        btnLogout.FlatStyle = FlatStyle.Flat
+        btnLogout.Image = CType(resources.GetObject("btnLogout.Image"), Image)
+        btnLogout.Location = New Point(163, 3)
+        btnLogout.Name = "btnLogout"
+        btnLogout.Padding = New Padding(0, 0, 5, 0)
+        adminnNavTblPanel.SetRowSpan(btnLogout, 2)
+        btnLogout.Size = New Size(34, 34)
+        btnLogout.TabIndex = 6
+        btnLogout.UseVisualStyleBackColor = False
         ' 
         ' administratorLbl
         ' 
@@ -479,6 +482,16 @@ Partial Class MainForm
         titleBarPanel.Size = New Size(986, 51)
         titleBarPanel.TabIndex = 3
         ' 
+        ' Guna2ShapesTool1
+        ' 
+        Guna2ShapesTool1.Location = New Point(0, 0)
+        Guna2ShapesTool1.PolygonSkip = 1
+        Guna2ShapesTool1.Rotate = 0F
+        Guna2ShapesTool1.RoundedEdges = CustomizableEdges3
+        Guna2ShapesTool1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded
+        Guna2ShapesTool1.Size = New Size(200, 200)
+        Guna2ShapesTool1.TargetControl = Me
+        ' 
         ' MainForm
         ' 
         AutoScaleDimensions = New SizeF(13F, 37F)
@@ -494,7 +507,6 @@ Partial Class MainForm
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(6, 7, 6, 7)
-        MaximumSize = New Size(1200, 800)
         MinimumSize = New Size(1200, 800)
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
@@ -536,7 +548,7 @@ Partial Class MainForm
     Friend WithEvents adminNameLbl As Label
     Friend WithEvents adminPicBox As PictureBox
     Friend WithEvents adminnNavTblPanel As TableLayoutPanel
-    Friend WithEvents logoutBtn As Button
+    Friend WithEvents btnLogout As Button
     Friend WithEvents administratorLbl As Label
     Friend WithEvents adminPanel As Panel
     Friend WithEvents navBottomDivider As Panel
@@ -548,4 +560,5 @@ Partial Class MainForm
     Friend WithEvents xBtn As Button
     Friend WithEvents maximizeBtn As Button
     Friend WithEvents minimizeBtn As Button
+    Friend WithEvents Guna2ShapesTool1 As Guna.UI2.WinForms.Guna2ShapesTool
 End Class

@@ -7,6 +7,9 @@ Public Class DashboardControl
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
     Private Shared ReadOnly httpClient As New HttpClient()
+    ' Store the clickable icon areas per row
+    Private notifyIconRects As New Dictionary(Of Integer, Rectangle)
+    Private completeIconRects As New Dictionary(Of Integer, Rectangle)
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Setup main dashboard transaction table
@@ -197,7 +200,9 @@ Public Class DashboardControl
 
         Catch ex As Exception
             MessageBox.Show("Error loading dashboard transactions: " & ex.Message)
-        End Try
+        End Try '
+        dgvDashboardTransactions.ClearSelection()
+        dgvDashboardTransactions.CurrentCell = Nothing
     End Sub
 
 
@@ -347,68 +352,76 @@ Public Class DashboardControl
     ' ====================== HANDLE BUTTON CLICK ======================
     Private Async Sub dgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
         If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
+        If e.ColumnIndex <> dgvDashboardTransactions.Columns("btnActions").Index Then Exit Sub
 
-        Dim colName As String = dgvDashboardTransactions.Columns(e.ColumnIndex).Name
+        ' Identify which transaction row was clicked
         Dim id As Integer = Convert.ToInt32(dgvDashboardTransactions.Rows(e.RowIndex).Cells("TransactionID").Value)
         Dim customerName As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("CustomerName").Value.ToString()
         Dim contactNumber As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("ContactNumber").Value.ToString()
         Dim status As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("Status").Value.ToString()
 
-        If colName = "btnActions" Then
-            Dim cellRect As Rectangle = dgvDashboardTransactions.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, False)
-            Dim clickX As Integer = dgvDashboardTransactions.PointToClient(Cursor.Position).X - cellRect.Left
+        ' Get current mouse position relative to DataGridView
+        Dim clickPos As Point = dgvDashboardTransactions.PointToClient(Cursor.Position)
 
-            If clickX < 25 Then
-                ' Notify icon clicked
-                Dim smsMessage As String
-                If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
-                    smsMessage = $"Hi {customerName}, your laundry is ready for pickup. Thank you!"
-                ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
-                    smsMessage = $"Hi {customerName}, your laundry is out for delivery. It will arrive soon. Thank you!"
-                Else
-                    smsMessage = $"Hi {customerName}, your laundry update: {status}."
-                End If
+        ' Make sure rectangles exist for this row (created in CellPainting)
+        If Not notifyIconRects.ContainsKey(e.RowIndex) OrElse Not completeIconRects.ContainsKey(e.RowIndex) Then Exit Sub
 
-                Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
-                                         "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If confirm = DialogResult.Yes Then
-                    Dim success As Boolean = Await SendSmsGsm(contactNumber, smsMessage)
-                    If success Then
-                        MessageBox.Show("SMS sent successfully!", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Else
-                        MessageBox.Show("Failed to send SMS.", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    End If
-                End If
+        ' Check which icon was clicked
+        If notifyIconRects(e.RowIndex).Contains(clickPos) Then
+            ' 🔔 Notify icon clicked
+            Dim smsMessage As String
+            If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
+                smsMessage = $"Hi {customerName}, your laundry is ready for pickup. Thank you!"
+            ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
+                smsMessage = $"Hi {customerName}, your laundry is out for delivery. It will arrive soon. Thank you!"
             Else
-                ' Complete icon clicked
-                HandleCheckClick(id)
+                smsMessage = $"Hi {customerName}, your laundry update: {status}."
             End If
+
+            Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
+                                      "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If confirm = DialogResult.Yes Then
+                Dim success As Boolean = Await SendSmsGsm(contactNumber, smsMessage)
+                If success Then
+                    MessageBox.Show("SMS sent successfully!", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Failed to send SMS.", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            End If
+
+        ElseIf completeIconRects(e.RowIndex).Contains(clickPos) Then
+            ' ✅ Complete icon clicked
+            HandleCheckClick(id)
         End If
     End Sub
+
 
 
     Private Sub dgvDashboardTransactions_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgvDashboardTransactions.CellPainting
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvDashboardTransactions.Columns("btnActions").Index Then
             e.PaintBackground(e.CellBounds, True)
 
-            Dim notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\bell.png")
-            Dim completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
+            ' (💡 Load icons only once to improve performance)
+            Static notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\bell.png")
+            Static completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
 
             Dim iconSize As Integer = 20
-            Dim spacing As Integer = 5 ' gap between icons
+            Dim spacing As Integer = 2
             Dim totalWidth As Integer = iconSize * 2 + spacing
 
-            ' Center X inside the cell
             Dim startX As Integer = e.CellBounds.Left + (e.CellBounds.Width - totalWidth) \ 2
             Dim startY As Integer = e.CellBounds.Top + (e.CellBounds.Height - iconSize) \ 2
 
-            ' Draw notify icon on left
-            Dim notifyRect As New Rectangle(startX, startY, iconSize, iconSize)
-            e.Graphics.DrawImage(notifyIcon, notifyRect)
-
-            ' Draw complete icon on right
+            Dim notifyRect As New Rectangle(startX - 5, startY, iconSize, iconSize)
             Dim completeRect As New Rectangle(startX + iconSize + spacing, startY, iconSize, iconSize)
+
+            ' Draw the icons
+            e.Graphics.DrawImage(notifyIcon, notifyRect)
             e.Graphics.DrawImage(completeIcon, completeRect)
+
+            ' Save the clickable areas for this row
+            notifyIconRects(e.RowIndex) = notifyRect
+            completeIconRects(e.RowIndex) = completeRect
 
             e.Handled = True
         End If
@@ -468,10 +481,15 @@ Public Class DashboardControl
             .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
 
-            ' ===== DISABLE SORTING =====
-            For Each col As DataGridViewColumn In .Columns
-                col.SortMode = DataGridViewColumnSortMode.NotSortable
-            Next
+
+            ' ===== PREVENT HEADER CLICKS FROM DOING ANYTHING =====
+            ' ColumnHeaderMouseClick uses DataGridViewCellMouseEventArgs (no Handled property),
+            ' so just clear selection or reset focus when a header is clicked.
+            AddHandler .ColumnHeaderMouseClick, Sub(sender, ev)
+                                                    ' Do nothing useful here so header clicks have no effect.
+                                                    ' Optionally clear any selection or reselect nothing:
+                                                    .ClearSelection()
+                                                End Sub
 
             ' ===== DRAW ONLY BOTTOM LINE FOR HEADERS =====
             AddHandler .CellPainting, Sub(sender, e)
@@ -488,10 +506,10 @@ Public Class DashboardControl
 
                                               ' Draw header text
                                               TextRenderer.DrawText(e.Graphics, e.FormattedValue.ToString(),
-                                                                e.CellStyle.Font,
-                                                                e.CellBounds,
-                                                                e.CellStyle.ForeColor,
-                                                                TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
+                                                            e.CellStyle.Font,
+                                                            e.CellBounds,
+                                                            e.CellStyle.ForeColor,
+                                                            TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
 
                                               e.Handled = True
                                           End If
@@ -503,10 +521,17 @@ Public Class DashboardControl
                                                .ClearSelection()
                                            End If
                                        End Sub
+            ' ===== DISABLE SORTING =====
+            For Each col As DataGridViewColumn In .Columns
+                col.SortMode = DataGridViewColumnSortMode.NotSortable
+            Next
+
+            AddHandler dgvDashboardTransactions.SelectionChanged, Sub(sender, e)
+                                                                      dgvDashboardTransactions.ClearSelection()
+                                                                  End Sub
+
         End With
     End Sub
-
-
 
 
     Private Sub MakeGuna2PanelClickable(panel As Guna.UI2.WinForms.Guna2Panel, clickAction As Action)
@@ -527,8 +552,6 @@ Public Class DashboardControl
             End If
         Next
     End Sub
-
-
 
 
     Private Sub ShowPendingOrders(sender As Object, e As EventArgs)
@@ -606,5 +629,33 @@ Public Class DashboardControl
         End Using
     End Sub
 
+    ' Disable selection and highlighting for any Guna2DataGridView
+    Private Sub DisableGuna2Selection(dgv As Guna.UI2.WinForms.Guna2DataGridView)
+        ' Clear selection whenever it changes
+        AddHandler dgv.SelectionChanged, Sub(sender, e)
+                                             dgv.ClearSelection()
+                                         End Sub
+
+        ' Prevent highlight when clicking cells
+        AddHandler dgv.CellMouseDown, Sub(sender, e)
+                                          dgv.ClearSelection()
+                                      End Sub
+
+        ' Prevent arrow-key or keyboard focus selection
+        AddHandler dgv.KeyDown, Sub(sender, e)
+                                    dgv.ClearSelection()
+                                    e.Handled = True
+                                End Sub
+
+        ' Apply visual settings so no highlight shows
+        dgv.DefaultCellStyle.SelectionBackColor = dgv.DefaultCellStyle.BackColor
+        dgv.DefaultCellStyle.SelectionForeColor = dgv.DefaultCellStyle.ForeColor
+        dgv.AlternatingRowsDefaultCellStyle.SelectionBackColor = dgv.AlternatingRowsDefaultCellStyle.BackColor
+        dgv.AlternatingRowsDefaultCellStyle.SelectionForeColor = dgv.AlternatingRowsDefaultCellStyle.ForeColor
+
+        ' Optional: disable the blue focus outline when clicked
+        dgv.EnableHeadersVisualStyles = False
+        dgv.CurrentCell = Nothing
+    End Sub
 
 End Class

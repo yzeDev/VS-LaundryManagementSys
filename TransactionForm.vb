@@ -20,7 +20,8 @@ Public Class TransactionForm
         cbStatus.Items.AddRange({"Completed", "Pending", "Refunded", "For Pickup", "For Delivery"})
 
         ' ✅ Show mode + transaction ID in subtitle
-        lblSubTitle.Text = $"{Mode} Mode: Transaction #{TransactionId}"
+        lblMode.Text = $"{Mode} Mode"
+        lblSubtitle.Text = $"Transaction #{TransactionId}"
 
         ' ✅ Load transaction data if available
         If TransactionId > 0 Then
@@ -205,12 +206,12 @@ Public Class TransactionForm
 
 
     ' ✅ Save changes to database
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub btnSave_Click(sender As Object, e As EventArgs)
         If Mode = "Edit" Then
             Try
                 Using conn As New OleDbConnection(connStr)
                     conn.Open()
-                    Dim sql As String = "UPDATE Transactions SET CustomerName=@name, ServiceType=@service, ContactNumber=@contact, Address=@address, Status=@status, AmountReceived=@received WHERE TransactionID=@id"
+                    Dim sql = "UPDATE Transactions SET CustomerName=@name, ServiceType=@service, ContactNumber=@contact, Address=@address, Status=@status, AmountReceived=@received WHERE TransactionID=@id"
                     Using cmd As New OleDbCommand(sql, conn)
                         cmd.Parameters.AddWithValue("@name", tbCustomerName.Text)
                         cmd.Parameters.AddWithValue("@service", cbService.Text)
@@ -224,8 +225,8 @@ Public Class TransactionForm
                 End Using
 
                 MessageBox.Show("Transaction updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Me.DialogResult = DialogResult.OK
-                Me.Close()
+                DialogResult = DialogResult.OK
+                Close()
 
             Catch ex As Exception
                 MessageBox.Show("Error updating transaction: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

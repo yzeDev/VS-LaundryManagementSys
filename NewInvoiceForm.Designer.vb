@@ -69,24 +69,24 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel3 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel12 = New TableLayoutPanel()
         TableLayoutPanel16 = New TableLayoutPanel()
-        Label21 = New Label()
+        lblContact = New Label()
         PictureBox10 = New PictureBox()
-        Label22 = New Label()
+        lblName = New Label()
         TableLayoutPanel15 = New TableLayoutPanel()
         Label23 = New Label()
         PictureBox6 = New PictureBox()
         Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel9 = New TableLayoutPanel()
-        Label14 = New Label()
-        Label12 = New Label()
+        lblPackage = New Label()
+        lblServiceType = New Label()
         Panel1 = New Panel()
         TableLayoutPanel10 = New TableLayoutPanel()
         Label11 = New Label()
         PictureBox4 = New PictureBox()
         TableLayoutPanel11 = New TableLayoutPanel()
-        Label20 = New Label()
-        Label18 = New Label()
-        Label16 = New Label()
+        lblDelivery = New Label()
+        lblRate = New Label()
+        lblWeight = New Label()
         Label19 = New Label()
         Label17 = New Label()
         Label15 = New Label()
@@ -98,15 +98,15 @@ Partial Class NewInvoiceForm
         addressBox = New TextBox()
         TableLayoutPanel17 = New TableLayoutPanel()
         TableLayoutPanel20 = New TableLayoutPanel()
-        Label30 = New Label()
+        lblTotal = New Label()
         Label29 = New Label()
         TableLayoutPanel19 = New TableLayoutPanel()
-        Label28 = New Label()
+        lblDeliveryFee = New Label()
         Label26 = New Label()
         Label24 = New Label()
         Panel3 = New Panel()
         TableLayoutPanel18 = New TableLayoutPanel()
-        Label27 = New Label()
+        lblServiceFee = New Label()
         Label25 = New Label()
         Guna2GradientPanel4 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel21 = New TableLayoutPanel()
@@ -123,8 +123,8 @@ Partial Class NewInvoiceForm
         Label33 = New Label()
         Label32 = New Label()
         TableLayoutPanel24 = New TableLayoutPanel()
-        Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
         CloseBtn = New Guna.UI2.WinForms.Guna2GradientButton()
+        btnBack = New Guna.UI2.WinForms.Guna2GradientButton()
         TableLayoutPanel1.SuspendLayout()
         Guna2GradientPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -243,7 +243,7 @@ Partial Class NewInvoiceForm
         ' 
         Label9.AutoSize = True
         Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.White
         Label9.Location = New Point(3, 43)
         Label9.Name = "Label9"
@@ -255,7 +255,7 @@ Partial Class NewInvoiceForm
         ' Label10
         ' 
         Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.White
         Label10.Location = New Point(3, 0)
         Label10.Name = "Label10"
@@ -268,7 +268,7 @@ Partial Class NewInvoiceForm
         ' 
         Label8.AutoSize = True
         Label8.Dock = DockStyle.Fill
-        Label8.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.White
         Label8.Location = New Point(3, 28)
         Label8.Name = "Label8"
@@ -297,7 +297,7 @@ Partial Class NewInvoiceForm
         ' Label3
         ' 
         Label3.Dock = DockStyle.Fill
-        Label3.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.White
         Label3.Location = New Point(3, 44)
         Label3.Name = "Label3"
@@ -309,7 +309,7 @@ Partial Class NewInvoiceForm
         ' Label7
         ' 
         Label7.Dock = DockStyle.Fill
-        Label7.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.White
         Label7.Location = New Point(3, 22)
         Label7.Name = "Label7"
@@ -363,7 +363,7 @@ Partial Class NewInvoiceForm
         ' Label6
         ' 
         Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.White
         Label6.Location = New Point(0, 38)
         Label6.Margin = New Padding(0, 0, 3, 0)
@@ -376,7 +376,7 @@ Partial Class NewInvoiceForm
         ' Label5
         ' 
         Label5.Dock = DockStyle.Fill
-        Label5.Font = New Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.White
         Label5.Location = New Point(0, 0)
         Label5.Margin = New Padding(0, 0, 3, 0)
@@ -410,7 +410,7 @@ Partial Class NewInvoiceForm
         ' Label4
         ' 
         Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.White
         Label4.Location = New Point(31, 44)
         Label4.Name = "Label4"
@@ -422,7 +422,7 @@ Partial Class NewInvoiceForm
         ' Label2
         ' 
         Label2.Dock = DockStyle.Fill
-        Label2.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(31, 22)
         Label2.Name = "Label2"
@@ -445,7 +445,7 @@ Partial Class NewInvoiceForm
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(31, 0)
         Label1.Name = "Label1"
@@ -516,7 +516,7 @@ Partial Class NewInvoiceForm
         TableLayoutPanel12.ColumnCount = 1
         TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel12.Controls.Add(TableLayoutPanel16, 0, 2)
-        TableLayoutPanel12.Controls.Add(Label22, 0, 1)
+        TableLayoutPanel12.Controls.Add(lblName, 0, 1)
         TableLayoutPanel12.Controls.Add(TableLayoutPanel15, 0, 0)
         TableLayoutPanel12.Dock = DockStyle.Fill
         TableLayoutPanel12.Location = New Point(5, 5)
@@ -535,7 +535,7 @@ Partial Class NewInvoiceForm
         TableLayoutPanel16.ColumnCount = 2
         TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
         TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 90F))
-        TableLayoutPanel16.Controls.Add(Label21, 1, 0)
+        TableLayoutPanel16.Controls.Add(lblContact, 1, 0)
         TableLayoutPanel16.Controls.Add(PictureBox10, 0, 0)
         TableLayoutPanel16.Dock = DockStyle.Fill
         TableLayoutPanel16.Location = New Point(0, 47)
@@ -546,18 +546,18 @@ Partial Class NewInvoiceForm
         TableLayoutPanel16.Size = New Size(187, 19)
         TableLayoutPanel16.TabIndex = 9
         ' 
-        ' Label21
+        ' lblContact
         ' 
-        Label21.Dock = DockStyle.Fill
-        Label21.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label21.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label21.Location = New Point(18, 0)
-        Label21.Margin = New Padding(0, 0, 3, 0)
-        Label21.Name = "Label21"
-        Label21.Size = New Size(166, 19)
-        Label21.TabIndex = 12
-        Label21.Text = "+63 952 475 6879"
-        Label21.TextAlign = ContentAlignment.MiddleLeft
+        lblContact.Dock = DockStyle.Fill
+        lblContact.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblContact.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        lblContact.Location = New Point(18, 0)
+        lblContact.Margin = New Padding(0, 0, 3, 0)
+        lblContact.Name = "lblContact"
+        lblContact.Size = New Size(166, 19)
+        lblContact.TabIndex = 12
+        lblContact.Text = "+63 952 475 6879"
+        lblContact.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' PictureBox10
         ' 
@@ -570,18 +570,18 @@ Partial Class NewInvoiceForm
         PictureBox10.TabIndex = 1
         PictureBox10.TabStop = False
         ' 
-        ' Label22
+        ' lblName
         ' 
-        Label22.Dock = DockStyle.Fill
-        Label22.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label22.ForeColor = Color.Black
-        Label22.Location = New Point(0, 24)
-        Label22.Margin = New Padding(0, 0, 3, 0)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(184, 23)
-        Label22.TabIndex = 8
-        Label22.Text = "Alyssa Cruz"
-        Label22.TextAlign = ContentAlignment.MiddleLeft
+        lblName.Dock = DockStyle.Fill
+        lblName.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblName.ForeColor = Color.Black
+        lblName.Location = New Point(0, 24)
+        lblName.Margin = New Padding(0, 0, 3, 0)
+        lblName.Name = "lblName"
+        lblName.Size = New Size(184, 23)
+        lblName.TabIndex = 8
+        lblName.Text = "Alyssa Cruz"
+        lblName.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel15
         ' 
@@ -601,7 +601,7 @@ Partial Class NewInvoiceForm
         ' Label23
         ' 
         Label23.Dock = DockStyle.Fill
-        Label23.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label23.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label23.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Label23.Location = New Point(22, 0)
         Label23.Margin = New Padding(0, 0, 3, 0)
@@ -647,8 +647,8 @@ Partial Class NewInvoiceForm
         TableLayoutPanel9.BackColor = Color.Transparent
         TableLayoutPanel9.ColumnCount = 1
         TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel9.Controls.Add(Label14, 0, 2)
-        TableLayoutPanel9.Controls.Add(Label12, 0, 1)
+        TableLayoutPanel9.Controls.Add(lblPackage, 0, 2)
+        TableLayoutPanel9.Controls.Add(lblServiceType, 0, 1)
         TableLayoutPanel9.Controls.Add(Panel1, 0, 3)
         TableLayoutPanel9.Controls.Add(TableLayoutPanel10, 0, 0)
         TableLayoutPanel9.Controls.Add(TableLayoutPanel11, 0, 4)
@@ -664,31 +664,31 @@ Partial Class NewInvoiceForm
         TableLayoutPanel9.Size = New Size(187, 114)
         TableLayoutPanel9.TabIndex = 2
         ' 
-        ' Label14
+        ' lblPackage
         ' 
-        Label14.Dock = DockStyle.Fill
-        Label14.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label14.Location = New Point(0, 43)
-        Label14.Margin = New Padding(0, 0, 3, 0)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(184, 18)
-        Label14.TabIndex = 11
-        Label14.Text = "Wash, Dry, Fold"
-        Label14.TextAlign = ContentAlignment.MiddleLeft
+        lblPackage.Dock = DockStyle.Fill
+        lblPackage.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblPackage.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        lblPackage.Location = New Point(0, 43)
+        lblPackage.Margin = New Padding(0, 0, 3, 0)
+        lblPackage.Name = "lblPackage"
+        lblPackage.Size = New Size(184, 18)
+        lblPackage.TabIndex = 11
+        lblPackage.Text = "Wash, Dry, Fold"
+        lblPackage.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label12
+        ' lblServiceType
         ' 
-        Label12.Dock = DockStyle.Fill
-        Label12.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.ForeColor = Color.Black
-        Label12.Location = New Point(0, 22)
-        Label12.Margin = New Padding(0, 0, 3, 0)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(184, 21)
-        Label12.TabIndex = 8
-        Label12.Text = "Full Service"
-        Label12.TextAlign = ContentAlignment.MiddleLeft
+        lblServiceType.Dock = DockStyle.Fill
+        lblServiceType.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblServiceType.ForeColor = Color.Black
+        lblServiceType.Location = New Point(0, 22)
+        lblServiceType.Margin = New Padding(0, 0, 3, 0)
+        lblServiceType.Name = "lblServiceType"
+        lblServiceType.Size = New Size(184, 21)
+        lblServiceType.TabIndex = 8
+        lblServiceType.Text = "Full Service"
+        lblServiceType.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Panel1
         ' 
@@ -717,7 +717,7 @@ Partial Class NewInvoiceForm
         ' Label11
         ' 
         Label11.Dock = DockStyle.Fill
-        Label11.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Label11.Location = New Point(22, 0)
         Label11.Margin = New Padding(0, 0, 3, 0)
@@ -744,9 +744,9 @@ Partial Class NewInvoiceForm
         TableLayoutPanel11.ColumnCount = 2
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel11.Controls.Add(Label20, 1, 2)
-        TableLayoutPanel11.Controls.Add(Label18, 1, 1)
-        TableLayoutPanel11.Controls.Add(Label16, 1, 0)
+        TableLayoutPanel11.Controls.Add(lblDelivery, 1, 2)
+        TableLayoutPanel11.Controls.Add(lblRate, 1, 1)
+        TableLayoutPanel11.Controls.Add(lblWeight, 1, 0)
         TableLayoutPanel11.Controls.Add(Label19, 0, 2)
         TableLayoutPanel11.Controls.Add(Label17, 0, 1)
         TableLayoutPanel11.Controls.Add(Label15, 0, 0)
@@ -761,49 +761,49 @@ Partial Class NewInvoiceForm
         TableLayoutPanel11.Size = New Size(187, 48)
         TableLayoutPanel11.TabIndex = 10
         ' 
-        ' Label20
+        ' lblDelivery
         ' 
-        Label20.Dock = DockStyle.Fill
-        Label20.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label20.ForeColor = Color.Black
-        Label20.Location = New Point(93, 32)
-        Label20.Margin = New Padding(0)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(94, 16)
-        Label20.TabIndex = 17
-        Label20.Text = "Yes"
-        Label20.TextAlign = ContentAlignment.MiddleRight
+        lblDelivery.Dock = DockStyle.Fill
+        lblDelivery.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDelivery.ForeColor = Color.Black
+        lblDelivery.Location = New Point(93, 32)
+        lblDelivery.Margin = New Padding(0)
+        lblDelivery.Name = "lblDelivery"
+        lblDelivery.Size = New Size(94, 16)
+        lblDelivery.TabIndex = 17
+        lblDelivery.Text = "Yes"
+        lblDelivery.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label18
+        ' lblRate
         ' 
-        Label18.Dock = DockStyle.Fill
-        Label18.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label18.ForeColor = Color.Black
-        Label18.Location = New Point(93, 16)
-        Label18.Margin = New Padding(0)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(94, 16)
-        Label18.TabIndex = 16
-        Label18.Text = "₱100/kg"
-        Label18.TextAlign = ContentAlignment.MiddleRight
+        lblRate.Dock = DockStyle.Fill
+        lblRate.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblRate.ForeColor = Color.Black
+        lblRate.Location = New Point(93, 16)
+        lblRate.Margin = New Padding(0)
+        lblRate.Name = "lblRate"
+        lblRate.Size = New Size(94, 16)
+        lblRate.TabIndex = 16
+        lblRate.Text = "₱100/kg"
+        lblRate.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label16
+        ' lblWeight
         ' 
-        Label16.Dock = DockStyle.Fill
-        Label16.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label16.ForeColor = Color.Black
-        Label16.Location = New Point(93, 0)
-        Label16.Margin = New Padding(0)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(94, 16)
-        Label16.TabIndex = 15
-        Label16.Text = "5kg"
-        Label16.TextAlign = ContentAlignment.MiddleRight
+        lblWeight.Dock = DockStyle.Fill
+        lblWeight.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblWeight.ForeColor = Color.Black
+        lblWeight.Location = New Point(93, 0)
+        lblWeight.Margin = New Padding(0)
+        lblWeight.Name = "lblWeight"
+        lblWeight.Size = New Size(94, 16)
+        lblWeight.TabIndex = 15
+        lblWeight.Text = "5kg"
+        lblWeight.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label19
         ' 
         Label19.Dock = DockStyle.Fill
-        Label19.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label19.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label19.Location = New Point(0, 32)
         Label19.Margin = New Padding(0, 0, 3, 0)
@@ -816,7 +816,7 @@ Partial Class NewInvoiceForm
         ' Label17
         ' 
         Label17.Dock = DockStyle.Fill
-        Label17.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label17.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label17.Location = New Point(0, 16)
         Label17.Margin = New Padding(0, 0, 3, 0)
@@ -829,7 +829,7 @@ Partial Class NewInvoiceForm
         ' Label15
         ' 
         Label15.Dock = DockStyle.Fill
-        Label15.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label15.Location = New Point(0, 0)
         Label15.Margin = New Padding(0, 0, 3, 0)
@@ -886,7 +886,7 @@ Partial Class NewInvoiceForm
         ' Label13
         ' 
         Label13.Dock = DockStyle.Fill
-        Label13.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label13.Location = New Point(20, 0)
         Label13.Margin = New Padding(0, 0, 3, 0)
@@ -913,7 +913,7 @@ Partial Class NewInvoiceForm
         addressBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         addressBox.BackColor = Color.White
         addressBox.BorderStyle = BorderStyle.None
-        addressBox.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        addressBox.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         addressBox.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         addressBox.Location = New Point(10, 24)
         addressBox.Margin = New Padding(10, 3, 10, 3)
@@ -952,7 +952,7 @@ Partial Class NewInvoiceForm
         TableLayoutPanel20.ColumnCount = 2
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel20.Controls.Add(Label30, 1, 0)
+        TableLayoutPanel20.Controls.Add(lblTotal, 1, 0)
         TableLayoutPanel20.Controls.Add(Label29, 0, 0)
         TableLayoutPanel20.Dock = DockStyle.Fill
         TableLayoutPanel20.Location = New Point(0, 67)
@@ -963,23 +963,23 @@ Partial Class NewInvoiceForm
         TableLayoutPanel20.Size = New Size(420, 27)
         TableLayoutPanel20.TabIndex = 16
         ' 
-        ' Label30
+        ' lblTotal
         ' 
-        Label30.Dock = DockStyle.Fill
-        Label30.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label30.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Label30.Location = New Point(210, 0)
-        Label30.Margin = New Padding(0)
-        Label30.Name = "Label30"
-        Label30.Size = New Size(210, 27)
-        Label30.TabIndex = 13
-        Label30.Text = "₱525.00"
-        Label30.TextAlign = ContentAlignment.BottomRight
+        lblTotal.Dock = DockStyle.Fill
+        lblTotal.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTotal.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblTotal.Location = New Point(210, 0)
+        lblTotal.Margin = New Padding(0)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(210, 27)
+        lblTotal.TabIndex = 13
+        lblTotal.Text = "₱525.00"
+        lblTotal.TextAlign = ContentAlignment.BottomRight
         ' 
         ' Label29
         ' 
         Label29.Dock = DockStyle.Fill
-        Label29.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label29.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label29.ForeColor = Color.Black
         Label29.Location = New Point(0, 0)
         Label29.Margin = New Padding(0, 0, 3, 0)
@@ -994,7 +994,7 @@ Partial Class NewInvoiceForm
         TableLayoutPanel19.ColumnCount = 2
         TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel19.Controls.Add(Label28, 1, 0)
+        TableLayoutPanel19.Controls.Add(lblDeliveryFee, 1, 0)
         TableLayoutPanel19.Controls.Add(Label26, 0, 0)
         TableLayoutPanel19.Dock = DockStyle.Fill
         TableLayoutPanel19.Location = New Point(0, 46)
@@ -1005,23 +1005,23 @@ Partial Class NewInvoiceForm
         TableLayoutPanel19.Size = New Size(420, 21)
         TableLayoutPanel19.TabIndex = 15
         ' 
-        ' Label28
+        ' lblDeliveryFee
         ' 
-        Label28.Dock = DockStyle.Fill
-        Label28.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label28.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label28.Location = New Point(210, 0)
-        Label28.Margin = New Padding(0)
-        Label28.Name = "Label28"
-        Label28.Size = New Size(210, 21)
-        Label28.TabIndex = 12
-        Label28.Text = "₱25.00"
-        Label28.TextAlign = ContentAlignment.MiddleRight
+        lblDeliveryFee.Dock = DockStyle.Fill
+        lblDeliveryFee.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDeliveryFee.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        lblDeliveryFee.Location = New Point(210, 0)
+        lblDeliveryFee.Margin = New Padding(0)
+        lblDeliveryFee.Name = "lblDeliveryFee"
+        lblDeliveryFee.Size = New Size(210, 21)
+        lblDeliveryFee.TabIndex = 12
+        lblDeliveryFee.Text = "₱25.00"
+        lblDeliveryFee.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label26
         ' 
         Label26.Dock = DockStyle.Fill
-        Label26.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label26.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label26.Location = New Point(0, 0)
         Label26.Margin = New Padding(0, 0, 3, 0)
@@ -1034,7 +1034,7 @@ Partial Class NewInvoiceForm
         ' Label24
         ' 
         Label24.Dock = DockStyle.Fill
-        Label24.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label24.Location = New Point(0, 0)
         Label24.Margin = New Padding(0, 0, 3, 0)
@@ -1059,7 +1059,7 @@ Partial Class NewInvoiceForm
         TableLayoutPanel18.ColumnCount = 2
         TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel18.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel18.Controls.Add(Label27, 1, 0)
+        TableLayoutPanel18.Controls.Add(lblServiceFee, 1, 0)
         TableLayoutPanel18.Controls.Add(Label25, 0, 0)
         TableLayoutPanel18.Dock = DockStyle.Fill
         TableLayoutPanel18.Location = New Point(0, 25)
@@ -1070,23 +1070,23 @@ Partial Class NewInvoiceForm
         TableLayoutPanel18.Size = New Size(420, 21)
         TableLayoutPanel18.TabIndex = 14
         ' 
-        ' Label27
+        ' lblServiceFee
         ' 
-        Label27.Dock = DockStyle.Fill
-        Label27.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label27.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
-        Label27.Location = New Point(210, 0)
-        Label27.Margin = New Padding(0)
-        Label27.Name = "Label27"
-        Label27.Size = New Size(210, 21)
-        Label27.TabIndex = 12
-        Label27.Text = "₱500.00"
-        Label27.TextAlign = ContentAlignment.MiddleRight
+        lblServiceFee.Dock = DockStyle.Fill
+        lblServiceFee.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblServiceFee.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
+        lblServiceFee.Location = New Point(210, 0)
+        lblServiceFee.Margin = New Padding(0)
+        lblServiceFee.Name = "lblServiceFee"
+        lblServiceFee.Size = New Size(210, 21)
+        lblServiceFee.TabIndex = 12
+        lblServiceFee.Text = "₱500.00"
+        lblServiceFee.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label25
         ' 
         Label25.Dock = DockStyle.Fill
-        Label25.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label25.Location = New Point(0, 0)
         Label25.Margin = New Padding(0, 0, 3, 0)
@@ -1135,7 +1135,7 @@ Partial Class NewInvoiceForm
         ' Label31
         ' 
         Label31.Dock = DockStyle.Fill
-        Label31.Font = New Font("Poppins SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label31.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Label31.Location = New Point(3, 3)
         Label31.Margin = New Padding(3)
@@ -1167,6 +1167,7 @@ Partial Class NewInvoiceForm
         GCashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         GCashBtn.BorderRadius = 3
         GCashBtn.BorderThickness = 1
+        GCashBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         GCashBtn.CustomizableEdges = CustomizableEdges7
         GCashBtn.DisabledState.BorderColor = Color.DarkGray
         GCashBtn.DisabledState.CustomBorderColor = Color.DarkGray
@@ -1174,7 +1175,7 @@ Partial Class NewInvoiceForm
         GCashBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         GCashBtn.Dock = DockStyle.Fill
         GCashBtn.FillColor = Color.White
-        GCashBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GCashBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GCashBtn.ForeColor = Color.Black
         GCashBtn.Image = CType(resources.GetObject("GCashBtn.Image"), Image)
         GCashBtn.ImageAlign = HorizontalAlignment.Left
@@ -1192,6 +1193,7 @@ Partial Class NewInvoiceForm
         cashBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         cashBtn.BorderRadius = 3
         cashBtn.BorderThickness = 1
+        cashBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         cashBtn.CustomizableEdges = CustomizableEdges9
         cashBtn.DisabledState.BorderColor = Color.DarkGray
         cashBtn.DisabledState.CustomBorderColor = Color.DarkGray
@@ -1199,7 +1201,7 @@ Partial Class NewInvoiceForm
         cashBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         cashBtn.Dock = DockStyle.Fill
         cashBtn.FillColor = Color.White
-        cashBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cashBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         cashBtn.ForeColor = Color.Black
         cashBtn.Image = CType(resources.GetObject("cashBtn.Image"), Image)
         cashBtn.ImageAlign = HorizontalAlignment.Left
@@ -1217,6 +1219,7 @@ Partial Class NewInvoiceForm
         mayaBtn.BorderColor = Color.FromArgb(CByte(195), CByte(217), CByte(240))
         mayaBtn.BorderRadius = 3
         mayaBtn.BorderThickness = 1
+        mayaBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         mayaBtn.CustomizableEdges = CustomizableEdges11
         mayaBtn.DisabledState.BorderColor = Color.DarkGray
         mayaBtn.DisabledState.CustomBorderColor = Color.DarkGray
@@ -1224,7 +1227,7 @@ Partial Class NewInvoiceForm
         mayaBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         mayaBtn.Dock = DockStyle.Fill
         mayaBtn.FillColor = Color.White
-        mayaBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        mayaBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         mayaBtn.ForeColor = Color.Black
         mayaBtn.Image = CType(resources.GetObject("mayaBtn.Image"), Image)
         mayaBtn.ImageAlign = HorizontalAlignment.Left
@@ -1249,7 +1252,7 @@ Partial Class NewInvoiceForm
         selectBtn.Dock = DockStyle.Right
         selectBtn.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         selectBtn.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
-        selectBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        selectBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         selectBtn.ForeColor = Color.White
         selectBtn.Location = New Point(307, 81)
         selectBtn.Margin = New Padding(4, 5, 4, 5)
@@ -1284,7 +1287,7 @@ Partial Class NewInvoiceForm
         ' Label36
         ' 
         Label36.Dock = DockStyle.Fill
-        Label36.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label36.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label36.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label36.Location = New Point(0, 80)
         Label36.Margin = New Padding(0)
@@ -1297,7 +1300,7 @@ Partial Class NewInvoiceForm
         ' Label35
         ' 
         Label35.Dock = DockStyle.Fill
-        Label35.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label35.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label35.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label35.Location = New Point(0, 60)
         Label35.Margin = New Padding(0)
@@ -1310,7 +1313,7 @@ Partial Class NewInvoiceForm
         ' Label34
         ' 
         Label34.Dock = DockStyle.Fill
-        Label34.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label34.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label34.Location = New Point(0, 40)
         Label34.Margin = New Padding(0)
@@ -1323,7 +1326,7 @@ Partial Class NewInvoiceForm
         ' Label33
         ' 
         Label33.Dock = DockStyle.Fill
-        Label33.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label33.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label33.Location = New Point(0, 20)
         Label33.Margin = New Padding(0)
@@ -1336,7 +1339,7 @@ Partial Class NewInvoiceForm
         ' Label32
         ' 
         Label32.Dock = DockStyle.Fill
-        Label32.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label32.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label32.ForeColor = Color.FromArgb(CByte(84), CByte(84), CByte(84))
         Label32.Location = New Point(0, 0)
         Label32.Margin = New Padding(0)
@@ -1351,8 +1354,8 @@ Partial Class NewInvoiceForm
         TableLayoutPanel24.ColumnCount = 2
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel24.Controls.Add(Guna2GradientButton2, 0, 0)
         TableLayoutPanel24.Controls.Add(CloseBtn, 1, 0)
+        TableLayoutPanel24.Controls.Add(btnBack, 0, 0)
         TableLayoutPanel24.Dock = DockStyle.Fill
         TableLayoutPanel24.Location = New Point(7, 689)
         TableLayoutPanel24.Margin = New Padding(7, 4, 7, 4)
@@ -1362,35 +1365,10 @@ Partial Class NewInvoiceForm
         TableLayoutPanel24.Size = New Size(426, 22)
         TableLayoutPanel24.TabIndex = 6
         ' 
-        ' Guna2GradientButton2
-        ' 
-        Guna2GradientButton2.BorderRadius = 3
-        Guna2GradientButton2.CustomizableEdges = CustomizableEdges17
-        Guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray
-        Guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientButton2.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2GradientButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2GradientButton2.Dock = DockStyle.Fill
-        Guna2GradientButton2.FillColor = Color.Empty
-        Guna2GradientButton2.FillColor2 = Color.Empty
-        Guna2GradientButton2.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2GradientButton2.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
-        Guna2GradientButton2.Image = CType(resources.GetObject("Guna2GradientButton2.Image"), Image)
-        Guna2GradientButton2.ImageAlign = HorizontalAlignment.Left
-        Guna2GradientButton2.Location = New Point(0, 0)
-        Guna2GradientButton2.Margin = New Padding(0)
-        Guna2GradientButton2.Name = "Guna2GradientButton2"
-        Guna2GradientButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        Guna2GradientButton2.Size = New Size(213, 22)
-        Guna2GradientButton2.TabIndex = 13
-        Guna2GradientButton2.Text = "Back"
-        Guna2GradientButton2.TextAlign = HorizontalAlignment.Left
-        ' 
         ' CloseBtn
         ' 
         CloseBtn.BorderRadius = 3
-        CloseBtn.CustomizableEdges = CustomizableEdges19
+        CloseBtn.CustomizableEdges = CustomizableEdges17
         CloseBtn.DisabledState.BorderColor = Color.DarkGray
         CloseBtn.DisabledState.CustomBorderColor = Color.DarkGray
         CloseBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1399,21 +1377,46 @@ Partial Class NewInvoiceForm
         CloseBtn.Dock = DockStyle.Right
         CloseBtn.FillColor = Color.DimGray
         CloseBtn.FillColor2 = Color.Gray
-        CloseBtn.Font = New Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CloseBtn.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CloseBtn.ForeColor = Color.White
         CloseBtn.Location = New Point(310, 0)
         CloseBtn.Margin = New Padding(0)
         CloseBtn.Name = "CloseBtn"
-        CloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        CloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         CloseBtn.Size = New Size(116, 22)
         CloseBtn.TabIndex = 12
         CloseBtn.Text = "Close"
+        ' 
+        ' btnBack
+        ' 
+        btnBack.BorderRadius = 3
+        btnBack.CustomizableEdges = CustomizableEdges19
+        btnBack.DisabledState.BorderColor = Color.DarkGray
+        btnBack.DisabledState.CustomBorderColor = Color.DarkGray
+        btnBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnBack.FillColor = Color.Empty
+        btnBack.FillColor2 = Color.Empty
+        btnBack.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnBack.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        btnBack.Image = CType(resources.GetObject("btnBack.Image"), Image)
+        btnBack.ImageAlign = HorizontalAlignment.Left
+        btnBack.Location = New Point(0, 0)
+        btnBack.Margin = New Padding(0)
+        btnBack.Name = "btnBack"
+        btnBack.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        btnBack.Size = New Size(84, 22)
+        btnBack.TabIndex = 13
+        btnBack.Text = "Back"
+        btnBack.TextAlign = HorizontalAlignment.Left
         ' 
         ' NewInvoiceForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        CancelButton = CloseBtn
         ClientSize = New Size(440, 715)
         Controls.Add(TableLayoutPanel1)
         FormBorderStyle = FormBorderStyle.None
@@ -1487,7 +1490,7 @@ Partial Class NewInvoiceForm
     Friend WithEvents Guna2GradientPanel2 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label12 As Label
+    Friend WithEvents lblServiceType As Label
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox4 As PictureBox
@@ -1495,19 +1498,19 @@ Partial Class NewInvoiceForm
     Friend WithEvents Label15 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents lblPackage As Label
+    Friend WithEvents lblDelivery As Label
+    Friend WithEvents lblRate As Label
+    Friend WithEvents lblWeight As Label
     Friend WithEvents Guna2GradientPanel3 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
     Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents Label22 As Label
+    Friend WithEvents lblName As Label
     Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
     Friend WithEvents Label23 As Label
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Label21 As Label
+    Friend WithEvents lblContact As Label
     Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
@@ -1519,12 +1522,12 @@ Partial Class NewInvoiceForm
     Friend WithEvents Label24 As Label
     Friend WithEvents TableLayoutPanel18 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel20 As TableLayoutPanel
-    Friend WithEvents Label30 As Label
+    Friend WithEvents lblTotal As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents TableLayoutPanel19 As TableLayoutPanel
-    Friend WithEvents Label28 As Label
+    Friend WithEvents lblDeliveryFee As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents Label27 As Label
+    Friend WithEvents lblServiceFee As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents Guna2GradientPanel4 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel21 As TableLayoutPanel
@@ -1542,5 +1545,5 @@ Partial Class NewInvoiceForm
     Friend WithEvents Label32 As Label
     Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
     Friend WithEvents CloseBtn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2GradientButton
 End Class

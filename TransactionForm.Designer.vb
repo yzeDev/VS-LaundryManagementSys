@@ -22,40 +22,111 @@ Partial Class TransactionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionForm))
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
-        Panel2 = New Panel()
-        TableLayoutPanel2 = New TableLayoutPanel()
-        lblCustomer = New Label()
-        lblService = New Label()
-        tbCustomerName = New TextBox()
-        tbChange = New TextBox()
-        lblChange = New Label()
-        tbAmountReceived = New TextBox()
-        lblAmountReceived = New Label()
-        tbTotal = New TextBox()
-        lblTotal = New Label()
-        tbPaymentMethod = New TextBox()
-        lblPaymentMethod = New Label()
         tbMachineUsed = New TextBox()
-        lblMachineUsed = New Label()
-        lblStatus = New Label()
-        tbAddress = New TextBox()
-        lblAddress = New Label()
-        lblContactNumber = New Label()
-        tbContactNum = New TextBox()
-        cbService = New ComboBox()
-        cbStatus = New ComboBox()
-        btnSave = New Button()
-        btnCancel = New Button()
-        Panel1 = New Panel()
-        lblTitle = New Label()
-        lblSubTitle = New Label()
+        tbCustomerName = New TextBox()
+        TableLayoutPanel12 = New TableLayoutPanel()
+        Label10 = New Label()
+        PictureBox6 = New PictureBox()
+        TableLayoutPanel7 = New TableLayoutPanel()
+        Label5 = New Label()
+        PictureBox1 = New PictureBox()
+        TableLayoutPanel2 = New TableLayoutPanel()
+        lblSubtitle = New Label()
+        lblMode = New Label()
+        TableLayoutPanel3 = New TableLayoutPanel()
         lblDate = New Label()
+        lblAddress = New TableLayoutPanel()
+        Label6 = New Label()
+        PictureBox4 = New PictureBox()
+        TableLayoutPanel9 = New TableLayoutPanel()
+        Label7 = New Label()
+        PictureBox3 = New PictureBox()
+        TableLayoutPanel11 = New TableLayoutPanel()
+        Label9 = New Label()
+        PictureBox5 = New PictureBox()
+        cbStatus = New ComboBox()
+        TableLayoutPanel15 = New TableLayoutPanel()
+        PictureBox9 = New PictureBox()
+        Label13 = New Label()
+        TableLayoutPanel16 = New TableLayoutPanel()
+        PictureBox10 = New PictureBox()
+        Label14 = New Label()
+        TableLayoutPanel17 = New TableLayoutPanel()
+        cbService = New ComboBox()
+        tbPaymentMethod = New TextBox()
+        TableLayoutPanel21 = New TableLayoutPanel()
+        PictureBox2 = New PictureBox()
+        Label22 = New Label()
+        TableLayoutPanel19 = New TableLayoutPanel()
+        Label18 = New Label()
+        PictureBox7 = New PictureBox()
+        TableLayoutPanel20 = New TableLayoutPanel()
+        tbTotal = New TextBox()
+        TableLayoutPanel23 = New TableLayoutPanel()
+        Label23 = New Label()
+        PictureBox8 = New PictureBox()
+        tbContactNum = New TextBox()
+        TableLayoutPanel22 = New TableLayoutPanel()
+        tbAmountReceived = New TextBox()
+        tbAddress = New TextBox()
+        TableLayoutPanel24 = New TableLayoutPanel()
+        tbChange = New TextBox()
+        btnCancel = New Button()
+        btnSave = New Guna.UI2.WinForms.Guna2GradientButton()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        TableLayoutPanel8 = New TableLayoutPanel()
+        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Label2 = New Label()
+        Panel5 = New Panel()
+        Panel6 = New Panel()
+        Panel7 = New Panel()
+        Panel8 = New Panel()
+        Panel10 = New Panel()
+        Panel11 = New Panel()
+        Panel12 = New Panel()
         TableLayoutPanel1.SuspendLayout()
-        Panel2.SuspendLayout()
+        TableLayoutPanel12.SuspendLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel7.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel2.SuspendLayout()
-        Panel1.SuspendLayout()
+        TableLayoutPanel3.SuspendLayout()
+        lblAddress.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel9.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel11.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel15.SuspendLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel16.SuspendLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel17.SuspendLayout()
+        TableLayoutPanel21.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel19.SuspendLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel20.SuspendLayout()
+        TableLayoutPanel23.SuspendLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel22.SuspendLayout()
+        TableLayoutPanel24.SuspendLayout()
+        TableLayoutPanel8.SuspendLayout()
+        Guna2GradientPanel1.SuspendLayout()
+        Panel5.SuspendLayout()
+        Panel6.SuspendLayout()
+        Panel7.SuspendLayout()
+        Panel8.SuspendLayout()
+        Panel10.SuspendLayout()
+        Panel11.SuspendLayout()
+        Panel12.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -63,418 +134,1009 @@ Partial Class TransactionForm
         TableLayoutPanel1.ColumnCount = 2
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel1.Controls.Add(Panel2, 0, 2)
-        TableLayoutPanel1.Controls.Add(btnSave, 0, 3)
-        TableLayoutPanel1.Controls.Add(btnCancel, 1, 3)
-        TableLayoutPanel1.Controls.Add(Panel1, 0, 0)
-        TableLayoutPanel1.Controls.Add(lblSubTitle, 0, 1)
-        TableLayoutPanel1.Controls.Add(lblDate, 1, 1)
+        TableLayoutPanel1.Controls.Add(tbMachineUsed, 1, 1)
+        TableLayoutPanel1.Controls.Add(tbCustomerName, 0, 1)
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel12, 1, 0)
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel7, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(4)
+        TableLayoutPanel1.Margin = New Padding(2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 4
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 90.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 60.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 32.0F))
-        TableLayoutPanel1.Size = New Size(627, 369)
+        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.Size = New Size(794, 61)
         TableLayoutPanel1.TabIndex = 0
-        ' 
-        ' Panel2
-        ' 
-        TableLayoutPanel1.SetColumnSpan(Panel2, 2)
-        Panel2.Controls.Add(TableLayoutPanel2)
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(4, 154)
-        Panel2.Margin = New Padding(4)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(619, 151)
-        Panel2.TabIndex = 1
-        ' 
-        ' TableLayoutPanel2
-        ' 
-        TableLayoutPanel2.ColumnCount = 2
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel2.Controls.Add(lblCustomer, 0, 0)
-        TableLayoutPanel2.Controls.Add(lblService, 0, 2)
-        TableLayoutPanel2.Controls.Add(tbCustomerName, 0, 1)
-        TableLayoutPanel2.Controls.Add(tbChange, 1, 9)
-        TableLayoutPanel2.Controls.Add(lblChange, 1, 8)
-        TableLayoutPanel2.Controls.Add(tbAmountReceived, 1, 7)
-        TableLayoutPanel2.Controls.Add(lblAmountReceived, 1, 6)
-        TableLayoutPanel2.Controls.Add(tbTotal, 1, 5)
-        TableLayoutPanel2.Controls.Add(lblTotal, 1, 4)
-        TableLayoutPanel2.Controls.Add(tbPaymentMethod, 1, 3)
-        TableLayoutPanel2.Controls.Add(lblPaymentMethod, 1, 2)
-        TableLayoutPanel2.Controls.Add(tbMachineUsed, 1, 1)
-        TableLayoutPanel2.Controls.Add(lblMachineUsed, 1, 0)
-        TableLayoutPanel2.Controls.Add(lblStatus, 0, 8)
-        TableLayoutPanel2.Controls.Add(tbAddress, 0, 7)
-        TableLayoutPanel2.Controls.Add(lblAddress, 0, 6)
-        TableLayoutPanel2.Controls.Add(lblContactNumber, 0, 4)
-        TableLayoutPanel2.Controls.Add(tbContactNum, 0, 5)
-        TableLayoutPanel2.Controls.Add(cbService, 0, 3)
-        TableLayoutPanel2.Controls.Add(cbStatus, 0, 9)
-        TableLayoutPanel2.Dock = DockStyle.Fill
-        TableLayoutPanel2.Location = New Point(0, 0)
-        TableLayoutPanel2.Margin = New Padding(4)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 10
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel2.Size = New Size(619, 151)
-        TableLayoutPanel2.TabIndex = 0
-        ' 
-        ' lblCustomer
-        ' 
-        lblCustomer.AutoSize = True
-        lblCustomer.Dock = DockStyle.Fill
-        lblCustomer.Font = New Font("Segoe UI", 14.25F)
-        lblCustomer.Location = New Point(4, 0)
-        lblCustomer.Margin = New Padding(4, 0, 4, 0)
-        lblCustomer.Name = "lblCustomer"
-        lblCustomer.Size = New Size(301, 15)
-        lblCustomer.TabIndex = 0
-        lblCustomer.Text = "Customer Name:"
-        lblCustomer.TextAlign = ContentAlignment.BottomLeft
-        ' 
-        ' lblService
-        ' 
-        lblService.AutoSize = True
-        lblService.Dock = DockStyle.Fill
-        lblService.Font = New Font("Segoe UI", 14.25F)
-        lblService.Location = New Point(3, 30)
-        lblService.Name = "lblService"
-        lblService.Size = New Size(303, 15)
-        lblService.TabIndex = 1
-        lblService.TextAlign = ContentAlignment.BottomLeft
-        ' 
-        ' tbCustomerName
-        ' 
-        tbCustomerName.Dock = DockStyle.Fill
-        tbCustomerName.Font = New Font("Segoe UI", 14.25F)
-        tbCustomerName.Location = New Point(3, 18)
-        tbCustomerName.Name = "tbCustomerName"
-        tbCustomerName.Size = New Size(303, 33)
-        tbCustomerName.TabIndex = 2
-        ' 
-        ' tbChange
-        ' 
-        tbChange.Dock = DockStyle.Fill
-        tbChange.Enabled = False
-        tbChange.Font = New Font("Segoe UI", 14.25F)
-        tbChange.Location = New Point(312, 138)
-        tbChange.Name = "tbChange"
-        tbChange.Size = New Size(304, 33)
-        tbChange.TabIndex = 17
-        ' 
-        ' lblChange
-        ' 
-        lblChange.AutoSize = True
-        lblChange.Dock = DockStyle.Fill
-        lblChange.Font = New Font("Segoe UI", 14.25F)
-        lblChange.Location = New Point(312, 120)
-        lblChange.Name = "lblChange"
-        lblChange.Size = New Size(304, 15)
-        lblChange.TabIndex = 8
-        lblChange.TextAlign = ContentAlignment.BottomLeft
-        ' 
-        ' tbAmountReceived
-        ' 
-        tbAmountReceived.Dock = DockStyle.Fill
-        tbAmountReceived.Enabled = False
-        tbAmountReceived.Font = New Font("Segoe UI", 14.25F)
-        tbAmountReceived.Location = New Point(311, 107)
-        tbAmountReceived.Margin = New Padding(2)
-        tbAmountReceived.Name = "tbAmountReceived"
-        tbAmountReceived.Size = New Size(306, 33)
-        tbAmountReceived.TabIndex = 16
-        ' 
-        ' lblAmountReceived
-        ' 
-        lblAmountReceived.AutoSize = True
-        lblAmountReceived.Dock = DockStyle.Fill
-        lblAmountReceived.Font = New Font("Segoe UI", 14.25F)
-        lblAmountReceived.Location = New Point(312, 90)
-        lblAmountReceived.Name = "lblAmountReceived"
-        lblAmountReceived.RightToLeft = RightToLeft.No
-        lblAmountReceived.Size = New Size(304, 15)
-        lblAmountReceived.TabIndex = 18
-        lblAmountReceived.Text = "Amount Received:"
-        ' 
-        ' tbTotal
-        ' 
-        tbTotal.Dock = DockStyle.Fill
-        tbTotal.Enabled = False
-        tbTotal.Font = New Font("Segoe UI", 14.25F)
-        tbTotal.Location = New Point(311, 77)
-        tbTotal.Margin = New Padding(2)
-        tbTotal.Name = "tbTotal"
-        tbTotal.Size = New Size(306, 33)
-        tbTotal.TabIndex = 15
-        ' 
-        ' lblTotal
-        ' 
-        lblTotal.AutoSize = True
-        lblTotal.Dock = DockStyle.Fill
-        lblTotal.Font = New Font("Segoe UI", 14.25F)
-        lblTotal.Location = New Point(312, 60)
-        lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(304, 15)
-        lblTotal.TabIndex = 6
-        lblTotal.TextAlign = ContentAlignment.BottomLeft
-        ' 
-        ' tbPaymentMethod
-        ' 
-        tbPaymentMethod.Dock = DockStyle.Fill
-        tbPaymentMethod.Enabled = False
-        tbPaymentMethod.Font = New Font("Segoe UI", 14.25F)
-        tbPaymentMethod.Location = New Point(311, 47)
-        tbPaymentMethod.Margin = New Padding(2)
-        tbPaymentMethod.Name = "tbPaymentMethod"
-        tbPaymentMethod.Size = New Size(306, 33)
-        tbPaymentMethod.TabIndex = 14
-        ' 
-        ' lblPaymentMethod
-        ' 
-        lblPaymentMethod.AutoSize = True
-        lblPaymentMethod.Dock = DockStyle.Fill
-        lblPaymentMethod.Font = New Font("Segoe UI", 14.25F)
-        lblPaymentMethod.Location = New Point(312, 30)
-        lblPaymentMethod.Name = "lblPaymentMethod"
-        lblPaymentMethod.Size = New Size(304, 15)
-        lblPaymentMethod.TabIndex = 5
-        lblPaymentMethod.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' tbMachineUsed
         ' 
+        tbMachineUsed.BackColor = Color.LightGray
         tbMachineUsed.Dock = DockStyle.Fill
-        tbMachineUsed.Font = New Font("Segoe UI", 14.25F)
-        tbMachineUsed.Location = New Point(312, 18)
+        tbMachineUsed.Font = New Font("Poppins", 12.0F)
+        tbMachineUsed.Location = New Point(399, 32)
+        tbMachineUsed.Margin = New Padding(2)
         tbMachineUsed.Name = "tbMachineUsed"
-        tbMachineUsed.Size = New Size(304, 33)
-        tbMachineUsed.TabIndex = 19
+        tbMachineUsed.Size = New Size(393, 31)
+        tbMachineUsed.TabIndex = 35
+        tbMachineUsed.TextAlign = HorizontalAlignment.Center
         ' 
-        ' lblMachineUsed
+        ' tbCustomerName
         ' 
-        lblMachineUsed.AutoSize = True
-        lblMachineUsed.Dock = DockStyle.Fill
-        lblMachineUsed.Font = New Font("Segoe UI", 14.25F)
-        lblMachineUsed.Location = New Point(312, 0)
-        lblMachineUsed.Name = "lblMachineUsed"
-        lblMachineUsed.Size = New Size(304, 15)
-        lblMachineUsed.TabIndex = 4
-        lblMachineUsed.TextAlign = ContentAlignment.BottomLeft
+        tbCustomerName.BackColor = Color.LightGray
+        tbCustomerName.Dock = DockStyle.Fill
+        tbCustomerName.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        tbCustomerName.Location = New Point(2, 32)
+        tbCustomerName.Margin = New Padding(2)
+        tbCustomerName.Name = "tbCustomerName"
+        tbCustomerName.Size = New Size(393, 31)
+        tbCustomerName.TabIndex = 33
+        tbCustomerName.TextAlign = HorizontalAlignment.Center
         ' 
-        ' lblStatus
+        ' TableLayoutPanel12
         ' 
-        lblStatus.AutoSize = True
-        lblStatus.Dock = DockStyle.Fill
-        lblStatus.Font = New Font("Segoe UI", 14.25F)
-        lblStatus.Location = New Point(2, 120)
-        lblStatus.Margin = New Padding(2, 0, 2, 0)
-        lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(305, 15)
-        lblStatus.TabIndex = 3
-        lblStatus.TextAlign = ContentAlignment.BottomLeft
+        TableLayoutPanel12.ColumnCount = 2
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel12.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel12.Controls.Add(Label10, 1, 0)
+        TableLayoutPanel12.Controls.Add(PictureBox6, 0, 0)
+        TableLayoutPanel12.Dock = DockStyle.Fill
+        TableLayoutPanel12.Location = New Point(399, 2)
+        TableLayoutPanel12.Margin = New Padding(2)
+        TableLayoutPanel12.Name = "TableLayoutPanel12"
+        TableLayoutPanel12.RowCount = 1
+        TableLayoutPanel12.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel12.Size = New Size(393, 26)
+        TableLayoutPanel12.TabIndex = 17
         ' 
-        ' tbAddress
+        ' Label10
         ' 
-        tbAddress.Dock = DockStyle.Fill
-        tbAddress.Font = New Font("Segoe UI", 14.25F)
-        tbAddress.Location = New Point(3, 108)
-        tbAddress.Name = "tbAddress"
-        tbAddress.Size = New Size(303, 33)
-        tbAddress.TabIndex = 20
+        Label10.AutoSize = True
+        Label10.Dock = DockStyle.Fill
+        Label10.Font = New Font("Poppins", 12.0F)
+        Label10.ForeColor = Color.Black
+        Label10.Location = New Point(42, 0)
+        Label10.Margin = New Padding(2, 0, 2, 0)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(349, 26)
+        Label10.TabIndex = 6
+        Label10.Text = "Machine Used:"
+        Label10.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' lblAddress
+        ' PictureBox6
         ' 
-        lblAddress.AutoSize = True
-        lblAddress.Dock = DockStyle.Fill
-        lblAddress.Font = New Font("Segoe UI", 14.25F)
-        lblAddress.Location = New Point(3, 90)
-        lblAddress.Name = "lblAddress"
-        lblAddress.Size = New Size(303, 15)
-        lblAddress.TabIndex = 2
-        lblAddress.TextAlign = ContentAlignment.BottomLeft
+        PictureBox6.Dock = DockStyle.Fill
+        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
+        PictureBox6.Location = New Point(2, 2)
+        PictureBox6.Margin = New Padding(2)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(36, 22)
+        PictureBox6.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox6.TabIndex = 37
+        PictureBox6.TabStop = False
         ' 
-        ' lblContactNumber
+        ' TableLayoutPanel7
         ' 
-        lblContactNumber.AutoSize = True
-        lblContactNumber.Dock = DockStyle.Fill
-        lblContactNumber.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblContactNumber.Location = New Point(2, 60)
-        lblContactNumber.Margin = New Padding(2, 0, 2, 0)
-        lblContactNumber.Name = "lblContactNumber"
-        lblContactNumber.Size = New Size(305, 15)
-        lblContactNumber.TabIndex = 18
-        lblContactNumber.TextAlign = ContentAlignment.BottomLeft
+        TableLayoutPanel7.ColumnCount = 2
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel7.Controls.Add(Label5, 1, 0)
+        TableLayoutPanel7.Controls.Add(PictureBox1, 0, 0)
+        TableLayoutPanel7.Dock = DockStyle.Fill
+        TableLayoutPanel7.Location = New Point(2, 2)
+        TableLayoutPanel7.Margin = New Padding(2)
+        TableLayoutPanel7.Name = "TableLayoutPanel7"
+        TableLayoutPanel7.RowCount = 1
+        TableLayoutPanel7.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel7.Size = New Size(393, 26)
+        TableLayoutPanel7.TabIndex = 10
         ' 
-        ' tbContactNum
+        ' Label5
         ' 
-        tbContactNum.Dock = DockStyle.Fill
-        tbContactNum.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        tbContactNum.Location = New Point(3, 78)
-        tbContactNum.Name = "tbContactNum"
-        tbContactNum.Size = New Size(303, 33)
-        tbContactNum.TabIndex = 21
+        Label5.AutoSize = True
+        Label5.Dock = DockStyle.Fill
+        Label5.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.Black
+        Label5.ImageAlign = ContentAlignment.BottomCenter
+        Label5.Location = New Point(42, 0)
+        Label5.Margin = New Padding(2, 0, 2, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(349, 26)
+        Label5.TabIndex = 6
+        Label5.Text = "Customer Name:"
+        Label5.TextAlign = ContentAlignment.BottomLeft
         ' 
-        ' cbService
+        ' PictureBox1
         ' 
-        cbService.Dock = DockStyle.Fill
-        cbService.DropDownStyle = ComboBoxStyle.DropDownList
-        cbService.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        cbService.FormattingEnabled = True
-        cbService.Location = New Point(3, 48)
-        cbService.Name = "cbService"
-        cbService.Size = New Size(303, 33)
-        cbService.TabIndex = 22
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.name
+        PictureBox1.Location = New Point(2, 2)
+        PictureBox1.Margin = New Padding(2)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(36, 22)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 32
+        PictureBox1.TabStop = False
         ' 
-        ' cbStatus
+        ' TableLayoutPanel2
         ' 
-        cbStatus.Dock = DockStyle.Fill
-        cbStatus.DropDownStyle = ComboBoxStyle.DropDownList
-        cbStatus.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        cbStatus.FormattingEnabled = True
-        cbStatus.Location = New Point(3, 138)
-        cbStatus.Name = "cbStatus"
-        cbStatus.Size = New Size(303, 33)
-        cbStatus.TabIndex = 23
+        TableLayoutPanel2.ColumnCount = 1
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.Controls.Add(lblSubtitle, 0, 1)
+        TableLayoutPanel2.Controls.Add(lblMode, 0, 0)
+        TableLayoutPanel2.Dock = DockStyle.Fill
+        TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Margin = New Padding(2)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 2
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel2.Size = New Size(394, 61)
+        TableLayoutPanel2.TabIndex = 1
         ' 
-        ' btnSave
+        ' lblSubtitle
         ' 
-        btnSave.Dock = DockStyle.Right
-        btnSave.Location = New Point(235, 312)
-        btnSave.Name = "btnSave"
-        btnSave.Size = New Size(75, 54)
-        btnSave.TabIndex = 2
-        btnSave.Text = "Save"
-        btnSave.UseVisualStyleBackColor = True
+        lblSubtitle.AutoSize = True
+        lblSubtitle.Dock = DockStyle.Fill
+        lblSubtitle.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblSubtitle.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblSubtitle.Location = New Point(2, 30)
+        lblSubtitle.Margin = New Padding(2, 0, 2, 0)
+        lblSubtitle.Name = "lblSubtitle"
+        lblSubtitle.Size = New Size(390, 31)
+        lblSubtitle.TabIndex = 7
+        lblSubtitle.Text = "Transaction ID:"
         ' 
-        ' btnCancel
+        ' lblMode
         ' 
-        btnCancel.Dock = DockStyle.Left
-        btnCancel.Location = New Point(316, 312)
-        btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(75, 54)
-        btnCancel.TabIndex = 3
-        btnCancel.UseVisualStyleBackColor = True
+        lblMode.AutoSize = True
+        lblMode.Font = New Font("Poppins SemiBold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMode.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblMode.Location = New Point(2, 0)
+        lblMode.Margin = New Padding(2, 0, 2, 0)
+        lblMode.Name = "lblMode"
+        lblMode.Size = New Size(111, 28)
+        lblMode.TabIndex = 5
+        lblMode.Text = "VIEW MODE: "
         ' 
-        ' Panel1
+        ' TableLayoutPanel3
         ' 
-        TableLayoutPanel1.SetColumnSpan(Panel1, 2)
-        Panel1.Controls.Add(lblTitle)
-        Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(4, 4)
-        Panel1.Margin = New Padding(4)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(619, 82)
-        Panel1.TabIndex = 4
-        ' 
-        ' lblTitle
-        ' 
-        lblTitle.Dock = DockStyle.Fill
-        lblTitle.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(0, 0)
-        lblTitle.Margin = New Padding(4, 0, 4, 0)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(619, 82)
-        lblTitle.TabIndex = 0
-        lblTitle.Text = "TRANSACTION FORM"
-        lblTitle.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' lblSubTitle
-        ' 
-        lblSubTitle.AutoSize = True
-        lblSubTitle.Dock = DockStyle.Fill
-        lblSubTitle.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblSubTitle.Location = New Point(3, 90)
-        lblSubTitle.Name = "lblSubTitle"
-        lblSubTitle.Size = New Size(307, 60)
-        lblSubTitle.TabIndex = 5
-        lblSubTitle.Text = "Mode: (TransactionID)"
+        TableLayoutPanel3.ColumnCount = 1
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.Controls.Add(lblDate, 0, 0)
+        TableLayoutPanel3.Dock = DockStyle.Fill
+        TableLayoutPanel3.Location = New Point(0, 0)
+        TableLayoutPanel3.Margin = New Padding(2)
+        TableLayoutPanel3.Name = "TableLayoutPanel3"
+        TableLayoutPanel3.RowCount = 2
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.Size = New Size(394, 61)
+        TableLayoutPanel3.TabIndex = 2
         ' 
         ' lblDate
         ' 
         lblDate.AutoSize = True
         lblDate.Dock = DockStyle.Fill
-        lblDate.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDate.Location = New Point(317, 90)
-        lblDate.Margin = New Padding(4, 0, 4, 0)
+        lblDate.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDate.ForeColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        lblDate.Location = New Point(2, 0)
+        lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
-        lblDate.Size = New Size(306, 60)
-        lblDate.TabIndex = 6
-        lblDate.Text = "Transaction Date:"
+        lblDate.Size = New Size(390, 30)
+        lblDate.TabIndex = 8
+        lblDate.Text = "Date:"
+        lblDate.TextAlign = ContentAlignment.TopRight
+        ' 
+        ' lblAddress
+        ' 
+        lblAddress.ColumnCount = 2
+        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        lblAddress.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        lblAddress.Controls.Add(Label6, 1, 0)
+        lblAddress.Controls.Add(PictureBox4, 0, 0)
+        lblAddress.Dock = DockStyle.Fill
+        lblAddress.Location = New Point(2, 2)
+        lblAddress.Margin = New Padding(2)
+        lblAddress.Name = "lblAddress"
+        lblAddress.RowCount = 1
+        lblAddress.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        lblAddress.Size = New Size(393, 26)
+        lblAddress.TabIndex = 14
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Dock = DockStyle.Fill
+        Label6.Font = New Font("Poppins", 12.0F)
+        Label6.ForeColor = Color.Black
+        Label6.Location = New Point(42, 0)
+        Label6.Margin = New Padding(2, 0, 2, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(349, 26)
+        Label6.TabIndex = 6
+        Label6.Text = "Address:"
+        Label6.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Dock = DockStyle.Fill
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(2, 2)
+        PictureBox4.Margin = New Padding(2)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(36, 22)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 35
+        PictureBox4.TabStop = False
+        ' 
+        ' TableLayoutPanel9
+        ' 
+        TableLayoutPanel9.ColumnCount = 2
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel9.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel9.Controls.Add(Label7, 1, 0)
+        TableLayoutPanel9.Controls.Add(PictureBox3, 0, 0)
+        TableLayoutPanel9.Dock = DockStyle.Fill
+        TableLayoutPanel9.Location = New Point(2, 2)
+        TableLayoutPanel9.Margin = New Padding(2)
+        TableLayoutPanel9.Name = "TableLayoutPanel9"
+        TableLayoutPanel9.RowCount = 1
+        TableLayoutPanel9.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel9.Size = New Size(393, 26)
+        TableLayoutPanel9.TabIndex = 15
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Dock = DockStyle.Fill
+        Label7.Font = New Font("Poppins", 12.0F)
+        Label7.ForeColor = Color.Black
+        Label7.Location = New Point(42, 0)
+        Label7.Margin = New Padding(2, 0, 2, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(349, 26)
+        Label7.TabIndex = 6
+        Label7.Text = "Contact Number:"
+        Label7.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Dock = DockStyle.Fill
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(2, 2)
+        PictureBox3.Margin = New Padding(2)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(36, 22)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 34
+        PictureBox3.TabStop = False
+        ' 
+        ' TableLayoutPanel11
+        ' 
+        TableLayoutPanel11.ColumnCount = 2
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel11.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel11.Controls.Add(Label9, 1, 0)
+        TableLayoutPanel11.Controls.Add(PictureBox5, 0, 0)
+        TableLayoutPanel11.Dock = DockStyle.Fill
+        TableLayoutPanel11.Location = New Point(2, 2)
+        TableLayoutPanel11.Margin = New Padding(2)
+        TableLayoutPanel11.Name = "TableLayoutPanel11"
+        TableLayoutPanel11.RowCount = 1
+        TableLayoutPanel11.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel11.Size = New Size(393, 26)
+        TableLayoutPanel11.TabIndex = 16
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Dock = DockStyle.Fill
+        Label9.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.Black
+        Label9.Location = New Point(42, 0)
+        Label9.Margin = New Padding(2, 0, 2, 0)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(349, 26)
+        Label9.TabIndex = 6
+        Label9.Text = "Status:"
+        Label9.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Dock = DockStyle.Fill
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(2, 2)
+        PictureBox5.Margin = New Padding(2)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(36, 22)
+        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox5.TabIndex = 36
+        PictureBox5.TabStop = False
+        ' 
+        ' cbStatus
+        ' 
+        cbStatus.Dock = DockStyle.Fill
+        cbStatus.Font = New Font("Poppins", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbStatus.FormattingEnabled = True
+        cbStatus.Location = New Point(2, 32)
+        cbStatus.Margin = New Padding(2)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(393, 36)
+        cbStatus.TabIndex = 34
+        ' 
+        ' TableLayoutPanel15
+        ' 
+        TableLayoutPanel15.ColumnCount = 2
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel15.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel15.Controls.Add(PictureBox9, 0, 0)
+        TableLayoutPanel15.Controls.Add(Label13, 1, 0)
+        TableLayoutPanel15.Dock = DockStyle.Fill
+        TableLayoutPanel15.Location = New Point(399, 2)
+        TableLayoutPanel15.Margin = New Padding(2)
+        TableLayoutPanel15.Name = "TableLayoutPanel15"
+        TableLayoutPanel15.RowCount = 1
+        TableLayoutPanel15.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel15.Size = New Size(393, 26)
+        TableLayoutPanel15.TabIndex = 20
+        ' 
+        ' PictureBox9
+        ' 
+        PictureBox9.Dock = DockStyle.Fill
+        PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), Image)
+        PictureBox9.Location = New Point(2, 2)
+        PictureBox9.Margin = New Padding(2)
+        PictureBox9.Name = "PictureBox9"
+        PictureBox9.Size = New Size(36, 22)
+        PictureBox9.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox9.TabIndex = 40
+        PictureBox9.TabStop = False
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Dock = DockStyle.Fill
+        Label13.Font = New Font("Poppins", 12.0F)
+        Label13.ForeColor = Color.Black
+        Label13.Location = New Point(42, 0)
+        Label13.Margin = New Padding(2, 0, 2, 0)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(349, 26)
+        Label13.TabIndex = 6
+        Label13.Text = "Amount Received:"
+        Label13.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' TableLayoutPanel16
+        ' 
+        TableLayoutPanel16.ColumnCount = 2
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel16.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel16.Controls.Add(PictureBox10, 0, 0)
+        TableLayoutPanel16.Controls.Add(Label14, 1, 0)
+        TableLayoutPanel16.Dock = DockStyle.Fill
+        TableLayoutPanel16.Location = New Point(399, 2)
+        TableLayoutPanel16.Margin = New Padding(2)
+        TableLayoutPanel16.Name = "TableLayoutPanel16"
+        TableLayoutPanel16.RowCount = 1
+        TableLayoutPanel16.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel16.Size = New Size(393, 26)
+        TableLayoutPanel16.TabIndex = 21
+        ' 
+        ' PictureBox10
+        ' 
+        PictureBox10.Dock = DockStyle.Fill
+        PictureBox10.Location = New Point(2, 2)
+        PictureBox10.Margin = New Padding(2)
+        PictureBox10.Name = "PictureBox10"
+        PictureBox10.Size = New Size(36, 22)
+        PictureBox10.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox10.TabIndex = 39
+        PictureBox10.TabStop = False
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Dock = DockStyle.Fill
+        Label14.Font = New Font("Poppins", 12.0F)
+        Label14.ForeColor = Color.Black
+        Label14.Location = New Point(42, 0)
+        Label14.Margin = New Padding(2, 0, 2, 0)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(349, 26)
+        Label14.TabIndex = 6
+        Label14.Text = "Change:"
+        Label14.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' TableLayoutPanel17
+        ' 
+        TableLayoutPanel17.ColumnCount = 2
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.Controls.Add(cbService, 0, 1)
+        TableLayoutPanel17.Controls.Add(tbPaymentMethod, 1, 1)
+        TableLayoutPanel17.Controls.Add(TableLayoutPanel21, 0, 0)
+        TableLayoutPanel17.Controls.Add(TableLayoutPanel19, 1, 0)
+        TableLayoutPanel17.Dock = DockStyle.Fill
+        TableLayoutPanel17.Location = New Point(0, 0)
+        TableLayoutPanel17.Margin = New Padding(2)
+        TableLayoutPanel17.Name = "TableLayoutPanel17"
+        TableLayoutPanel17.RowCount = 2
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel17.Size = New Size(794, 61)
+        TableLayoutPanel17.TabIndex = 25
+        ' 
+        ' cbService
+        ' 
+        cbService.Dock = DockStyle.Fill
+        cbService.DropDownStyle = ComboBoxStyle.DropDownList
+        cbService.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbService.FormattingEnabled = True
+        cbService.Location = New Point(2, 32)
+        cbService.Margin = New Padding(2)
+        cbService.Name = "cbService"
+        cbService.Size = New Size(393, 31)
+        cbService.TabIndex = 33
+        ' 
+        ' tbPaymentMethod
+        ' 
+        tbPaymentMethod.BackColor = Color.LightGray
+        tbPaymentMethod.Dock = DockStyle.Fill
+        tbPaymentMethod.Font = New Font("Poppins", 12.0F)
+        tbPaymentMethod.Location = New Point(399, 32)
+        tbPaymentMethod.Margin = New Padding(2)
+        tbPaymentMethod.Name = "tbPaymentMethod"
+        tbPaymentMethod.Size = New Size(393, 31)
+        tbPaymentMethod.TabIndex = 35
+        tbPaymentMethod.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TableLayoutPanel21
+        ' 
+        TableLayoutPanel21.ColumnCount = 2
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel21.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel21.Controls.Add(PictureBox2, 0, 0)
+        TableLayoutPanel21.Controls.Add(Label22, 1, 0)
+        TableLayoutPanel21.Dock = DockStyle.Fill
+        TableLayoutPanel21.Location = New Point(2, 2)
+        TableLayoutPanel21.Margin = New Padding(2)
+        TableLayoutPanel21.Name = "TableLayoutPanel21"
+        TableLayoutPanel21.RowCount = 1
+        TableLayoutPanel21.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel21.Size = New Size(393, 26)
+        TableLayoutPanel21.TabIndex = 28
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Dock = DockStyle.Fill
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(2, 2)
+        PictureBox2.Margin = New Padding(2)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(36, 22)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 33
+        PictureBox2.TabStop = False
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Dock = DockStyle.Fill
+        Label22.Font = New Font("Poppins", 12.0F)
+        Label22.ForeColor = Color.Black
+        Label22.Location = New Point(42, 0)
+        Label22.Margin = New Padding(2, 0, 2, 0)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(349, 26)
+        Label22.TabIndex = 6
+        Label22.Text = "Service Type:"
+        Label22.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' TableLayoutPanel19
+        ' 
+        TableLayoutPanel19.ColumnCount = 2
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel19.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel19.Controls.Add(Label18, 1, 0)
+        TableLayoutPanel19.Controls.Add(PictureBox7, 0, 0)
+        TableLayoutPanel19.Dock = DockStyle.Fill
+        TableLayoutPanel19.Location = New Point(399, 2)
+        TableLayoutPanel19.Margin = New Padding(2)
+        TableLayoutPanel19.Name = "TableLayoutPanel19"
+        TableLayoutPanel19.RowCount = 1
+        TableLayoutPanel19.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel19.Size = New Size(393, 26)
+        TableLayoutPanel19.TabIndex = 18
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Dock = DockStyle.Fill
+        Label18.Font = New Font("Poppins", 12.0F)
+        Label18.ForeColor = Color.Black
+        Label18.Location = New Point(42, 0)
+        Label18.Margin = New Padding(2, 0, 2, 0)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(349, 26)
+        Label18.TabIndex = 6
+        Label18.Text = "Payment Method:"
+        Label18.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.Dock = DockStyle.Fill
+        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
+        PictureBox7.Location = New Point(2, 2)
+        PictureBox7.Margin = New Padding(2)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(36, 22)
+        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox7.TabIndex = 38
+        PictureBox7.TabStop = False
+        ' 
+        ' TableLayoutPanel20
+        ' 
+        TableLayoutPanel20.ColumnCount = 2
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.Controls.Add(tbTotal, 1, 1)
+        TableLayoutPanel20.Controls.Add(TableLayoutPanel23, 1, 0)
+        TableLayoutPanel20.Controls.Add(TableLayoutPanel9, 0, 0)
+        TableLayoutPanel20.Controls.Add(tbContactNum, 0, 1)
+        TableLayoutPanel20.Dock = DockStyle.Fill
+        TableLayoutPanel20.Location = New Point(0, 0)
+        TableLayoutPanel20.Margin = New Padding(2)
+        TableLayoutPanel20.Name = "TableLayoutPanel20"
+        TableLayoutPanel20.RowCount = 2
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel20.Size = New Size(794, 61)
+        TableLayoutPanel20.TabIndex = 26
+        ' 
+        ' tbTotal
+        ' 
+        tbTotal.BackColor = Color.LightGray
+        tbTotal.Dock = DockStyle.Fill
+        tbTotal.Font = New Font("Poppins", 12.0F)
+        tbTotal.Location = New Point(399, 32)
+        tbTotal.Margin = New Padding(2)
+        tbTotal.Name = "tbTotal"
+        tbTotal.Size = New Size(393, 31)
+        tbTotal.TabIndex = 35
+        tbTotal.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TableLayoutPanel23
+        ' 
+        TableLayoutPanel23.ColumnCount = 2
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 40.0F))
+        TableLayoutPanel23.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel23.Controls.Add(Label23, 1, 0)
+        TableLayoutPanel23.Controls.Add(PictureBox8, 0, 0)
+        TableLayoutPanel23.Dock = DockStyle.Fill
+        TableLayoutPanel23.Location = New Point(399, 2)
+        TableLayoutPanel23.Margin = New Padding(2)
+        TableLayoutPanel23.Name = "TableLayoutPanel23"
+        TableLayoutPanel23.RowCount = 1
+        TableLayoutPanel23.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel23.Size = New Size(393, 26)
+        TableLayoutPanel23.TabIndex = 30
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Dock = DockStyle.Fill
+        Label23.Font = New Font("Poppins", 12.0F)
+        Label23.ForeColor = Color.Black
+        Label23.Location = New Point(42, 0)
+        Label23.Margin = New Padding(2, 0, 2, 0)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(349, 26)
+        Label23.TabIndex = 6
+        Label23.Text = "Total"
+        Label23.TextAlign = ContentAlignment.BottomLeft
+        ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.Dock = DockStyle.Fill
+        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
+        PictureBox8.Location = New Point(2, 2)
+        PictureBox8.Margin = New Padding(2)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(36, 22)
+        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox8.TabIndex = 39
+        PictureBox8.TabStop = False
+        ' 
+        ' tbContactNum
+        ' 
+        tbContactNum.BackColor = Color.LightGray
+        tbContactNum.Dock = DockStyle.Fill
+        tbContactNum.Font = New Font("Poppins", 12.0F)
+        tbContactNum.Location = New Point(2, 32)
+        tbContactNum.Margin = New Padding(2)
+        tbContactNum.Name = "tbContactNum"
+        tbContactNum.Size = New Size(393, 31)
+        tbContactNum.TabIndex = 34
+        tbContactNum.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TableLayoutPanel22
+        ' 
+        TableLayoutPanel22.ColumnCount = 2
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.Controls.Add(tbAmountReceived, 1, 1)
+        TableLayoutPanel22.Controls.Add(tbAddress, 0, 1)
+        TableLayoutPanel22.Controls.Add(lblAddress, 0, 0)
+        TableLayoutPanel22.Controls.Add(TableLayoutPanel15, 1, 0)
+        TableLayoutPanel22.Dock = DockStyle.Fill
+        TableLayoutPanel22.Location = New Point(0, 0)
+        TableLayoutPanel22.Margin = New Padding(2)
+        TableLayoutPanel22.Name = "TableLayoutPanel22"
+        TableLayoutPanel22.RowCount = 2
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel22.Size = New Size(794, 61)
+        TableLayoutPanel22.TabIndex = 28
+        ' 
+        ' tbAmountReceived
+        ' 
+        tbAmountReceived.BackColor = Color.LightGray
+        tbAmountReceived.Dock = DockStyle.Fill
+        tbAmountReceived.Font = New Font("Poppins", 12.0F)
+        tbAmountReceived.Location = New Point(399, 32)
+        tbAmountReceived.Margin = New Padding(2)
+        tbAmountReceived.Name = "tbAmountReceived"
+        tbAmountReceived.Size = New Size(393, 31)
+        tbAmountReceived.TabIndex = 36
+        tbAmountReceived.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' tbAddress
+        ' 
+        tbAddress.BackColor = Color.LightGray
+        tbAddress.Dock = DockStyle.Fill
+        tbAddress.Font = New Font("Poppins", 12.0F)
+        tbAddress.Location = New Point(2, 32)
+        tbAddress.Margin = New Padding(2)
+        tbAddress.Name = "tbAddress"
+        tbAddress.Size = New Size(393, 31)
+        tbAddress.TabIndex = 35
+        tbAddress.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TableLayoutPanel24
+        ' 
+        TableLayoutPanel24.ColumnCount = 2
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.Controls.Add(cbStatus, 0, 1)
+        TableLayoutPanel24.Controls.Add(tbChange, 1, 1)
+        TableLayoutPanel24.Controls.Add(TableLayoutPanel16, 1, 0)
+        TableLayoutPanel24.Controls.Add(TableLayoutPanel11, 0, 0)
+        TableLayoutPanel24.Dock = DockStyle.Fill
+        TableLayoutPanel24.Location = New Point(0, 0)
+        TableLayoutPanel24.Margin = New Padding(2)
+        TableLayoutPanel24.Name = "TableLayoutPanel24"
+        TableLayoutPanel24.RowCount = 2
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel24.Size = New Size(794, 61)
+        TableLayoutPanel24.TabIndex = 30
+        ' 
+        ' tbChange
+        ' 
+        tbChange.BackColor = Color.LightGray
+        tbChange.Dock = DockStyle.Fill
+        tbChange.Font = New Font("Poppins", 12.0F)
+        tbChange.Location = New Point(399, 32)
+        tbChange.Margin = New Padding(2)
+        tbChange.Name = "tbChange"
+        tbChange.Size = New Size(393, 31)
+        tbChange.TabIndex = 36
+        tbChange.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' btnCancel
+        ' 
+        btnCancel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
+        btnCancel.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCancel.Location = New Point(323, 471)
+        btnCancel.Margin = New Padding(2)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(75, 27)
+        btnCancel.TabIndex = 32
+        btnCancel.Text = "Cancel"
+        btnCancel.UseVisualStyleBackColor = True
+        ' 
+        ' btnSave
+        ' 
+        btnSave.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        btnSave.BorderRadius = 5
+        btnSave.CustomizableEdges = CustomizableEdges1
+        btnSave.DisabledState.BorderColor = Color.DarkGray
+        btnSave.DisabledState.CustomBorderColor = Color.DarkGray
+        btnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSave.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSave.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        btnSave.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        btnSave.Font = New Font("Poppins", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSave.ForeColor = Color.White
+        btnSave.Location = New Point(402, 471)
+        btnSave.Margin = New Padding(2)
+        btnSave.Name = "btnSave"
+        btnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnSave.Size = New Size(75, 27)
+        btnSave.TabIndex = 34
+        btnSave.Text = "SAVE"
+        ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
+        ' TableLayoutPanel8
+        ' 
+        TableLayoutPanel8.ColumnCount = 2
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel8.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel8.Controls.Add(Guna2GradientPanel1, 0, 0)
+        TableLayoutPanel8.Controls.Add(btnCancel, 0, 7)
+        TableLayoutPanel8.Controls.Add(btnSave, 1, 7)
+        TableLayoutPanel8.Controls.Add(Panel5, 0, 1)
+        TableLayoutPanel8.Controls.Add(Panel6, 1, 1)
+        TableLayoutPanel8.Controls.Add(Panel7, 0, 2)
+        TableLayoutPanel8.Controls.Add(Panel8, 0, 3)
+        TableLayoutPanel8.Controls.Add(Panel10, 0, 4)
+        TableLayoutPanel8.Controls.Add(Panel11, 0, 5)
+        TableLayoutPanel8.Controls.Add(Panel12, 0, 6)
+        TableLayoutPanel8.Dock = DockStyle.Fill
+        TableLayoutPanel8.Location = New Point(0, 0)
+        TableLayoutPanel8.Margin = New Padding(0)
+        TableLayoutPanel8.MaximumSize = New Size(800, 500)
+        TableLayoutPanel8.MinimumSize = New Size(800, 500)
+        TableLayoutPanel8.Name = "TableLayoutPanel8"
+        TableLayoutPanel8.RowCount = 8
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Percent, 14.2857141F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 30.0F))
+        TableLayoutPanel8.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel8.Size = New Size(800, 500)
+        TableLayoutPanel8.TabIndex = 35
+        ' 
+        ' Guna2GradientPanel1
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Guna2GradientPanel1, 2)
+        Guna2GradientPanel1.Controls.Add(Label2)
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges3
+        Guna2GradientPanel1.Dock = DockStyle.Fill
+        Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
+        Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
+        Guna2GradientPanel1.Location = New Point(3, 3)
+        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2GradientPanel1.Size = New Size(794, 61)
+        Guna2GradientPanel1.TabIndex = 35
+        ' 
+        ' Label2
+        ' 
+        Label2.BackColor = Color.Transparent
+        Label2.Dock = DockStyle.Fill
+        Label2.Font = New Font("Poppins", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.White
+        Label2.Location = New Point(0, 0)
+        Label2.Margin = New Padding(2, 0, 2, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(794, 61)
+        Label2.TabIndex = 6
+        Label2.Text = "TRANSACTION FORM"
+        Label2.TextAlign = ContentAlignment.BottomCenter
+        ' 
+        ' Panel5
+        ' 
+        Panel5.Controls.Add(TableLayoutPanel2)
+        Panel5.Dock = DockStyle.Fill
+        Panel5.Location = New Point(3, 70)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(394, 61)
+        Panel5.TabIndex = 2
+        ' 
+        ' Panel6
+        ' 
+        Panel6.Controls.Add(TableLayoutPanel3)
+        Panel6.Dock = DockStyle.Fill
+        Panel6.Location = New Point(403, 70)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(394, 61)
+        Panel6.TabIndex = 3
+        ' 
+        ' Panel7
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel7, 2)
+        Panel7.Controls.Add(TableLayoutPanel1)
+        Panel7.Dock = DockStyle.Fill
+        Panel7.Location = New Point(3, 137)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(794, 61)
+        Panel7.TabIndex = 4
+        ' 
+        ' Panel8
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel8, 2)
+        Panel8.Controls.Add(TableLayoutPanel17)
+        Panel8.Dock = DockStyle.Fill
+        Panel8.Location = New Point(3, 204)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(794, 61)
+        Panel8.TabIndex = 5
+        ' 
+        ' Panel10
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel10, 2)
+        Panel10.Controls.Add(TableLayoutPanel20)
+        Panel10.Dock = DockStyle.Fill
+        Panel10.Location = New Point(3, 271)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(794, 61)
+        Panel10.TabIndex = 7
+        ' 
+        ' Panel11
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel11, 2)
+        Panel11.Controls.Add(TableLayoutPanel22)
+        Panel11.Dock = DockStyle.Fill
+        Panel11.Location = New Point(3, 338)
+        Panel11.Name = "Panel11"
+        Panel11.Size = New Size(794, 61)
+        Panel11.TabIndex = 8
+        ' 
+        ' Panel12
+        ' 
+        TableLayoutPanel8.SetColumnSpan(Panel12, 2)
+        Panel12.Controls.Add(TableLayoutPanel24)
+        Panel12.Dock = DockStyle.Fill
+        Panel12.Location = New Point(3, 405)
+        Panel12.Name = "Panel12"
+        Panel12.Size = New Size(794, 61)
+        Panel12.TabIndex = 9
         ' 
         ' TransactionForm
         ' 
+        AcceptButton = btnSave
         AutoScaleDimensions = New SizeF(96.0F, 96.0F)
         AutoScaleMode = AutoScaleMode.Dpi
-        ClientSize = New Size(627, 369)
-        Controls.Add(TableLayoutPanel1)
+        ClientSize = New Size(800, 500)
+        Controls.Add(TableLayoutPanel8)
+        FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(2)
-        MaximumSize = New Size(643, 408)
+        MinimumSize = New Size(800, 500)
         Name = "TransactionForm"
+        StartPosition = FormStartPosition.CenterParent
         Text = "Transaction Form"
+        TopMost = True
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
-        Panel2.ResumeLayout(False)
+        TableLayoutPanel12.ResumeLayout(False)
+        TableLayoutPanel12.PerformLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel7.ResumeLayout(False)
+        TableLayoutPanel7.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
-        Panel1.ResumeLayout(False)
+        TableLayoutPanel3.ResumeLayout(False)
+        TableLayoutPanel3.PerformLayout()
+        lblAddress.ResumeLayout(False)
+        lblAddress.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel9.ResumeLayout(False)
+        TableLayoutPanel9.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel11.ResumeLayout(False)
+        TableLayoutPanel11.PerformLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel15.ResumeLayout(False)
+        TableLayoutPanel15.PerformLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel16.ResumeLayout(False)
+        TableLayoutPanel16.PerformLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel17.ResumeLayout(False)
+        TableLayoutPanel17.PerformLayout()
+        TableLayoutPanel21.ResumeLayout(False)
+        TableLayoutPanel21.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel19.ResumeLayout(False)
+        TableLayoutPanel19.PerformLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel20.ResumeLayout(False)
+        TableLayoutPanel20.PerformLayout()
+        TableLayoutPanel23.ResumeLayout(False)
+        TableLayoutPanel23.PerformLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel22.ResumeLayout(False)
+        TableLayoutPanel22.PerformLayout()
+        TableLayoutPanel24.ResumeLayout(False)
+        TableLayoutPanel24.PerformLayout()
+        TableLayoutPanel8.ResumeLayout(False)
+        Guna2GradientPanel1.ResumeLayout(False)
+        Panel5.ResumeLayout(False)
+        Panel6.ResumeLayout(False)
+        Panel7.ResumeLayout(False)
+        Panel8.ResumeLayout(False)
+        Panel10.ResumeLayout(False)
+        Panel11.ResumeLayout(False)
+        Panel12.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
-
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Panel2 As Panel
-
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents btnSave As Button
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblMode As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents lblAddress As TableLayoutPanel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
+    Friend WithEvents Label14 As Label
+    Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel19 As TableLayoutPanel
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TableLayoutPanel20 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel21 As TableLayoutPanel
+    Friend WithEvents Label22 As Label
+    Friend WithEvents TableLayoutPanel22 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel23 As TableLayoutPanel
+    Friend WithEvents Label23 As Label
+    Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents lblCustomer As Label
-    Friend WithEvents lblService As Label
-    Friend WithEvents lblAddress As Label
-    Friend WithEvents lblStatus As Label
-    Friend WithEvents lblMachineUsed As Label
-    Friend WithEvents lblPaymentMethod As Label
-    Friend WithEvents lblTotal As Label
-    Friend WithEvents lblAmountReceived As Label
-    Friend WithEvents lblChange As Label
     Friend WithEvents tbCustomerName As TextBox
-    Friend WithEvents tbAddress As TextBox
+    Friend WithEvents tbContactNum As TextBox
     Friend WithEvents tbMachineUsed As TextBox
     Friend WithEvents tbPaymentMethod As TextBox
+    Friend WithEvents cbService As ComboBox
     Friend WithEvents tbTotal As TextBox
     Friend WithEvents tbAmountReceived As TextBox
+    Friend WithEvents tbAddress As TextBox
     Friend WithEvents tbChange As TextBox
-    Friend WithEvents lblContactNumber As Label
-    Friend WithEvents tbContactNum As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblTitle As Label
-    Friend WithEvents lblSubTitle As Label
-    Friend WithEvents lblDate As Label
-    Friend WithEvents cbService As ComboBox
     Friend WithEvents cbStatus As ComboBox
+    Friend WithEvents btnSave As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents lblSubtitle As Label
+    Friend WithEvents lblDate As Label
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents Label2 As Label
 End Class

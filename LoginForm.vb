@@ -1,29 +1,91 @@
-﻿Public Class LoginForm
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+﻿Imports System.Data.OleDb
+
+Public Class LoginForm
+
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+    Private passwordVisible As Boolean = False
+
+    ' --- LOGIN BUTTON CLICK ---
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim inputPassword As String = gtbPassword.Text.Trim()
+
+        If String.IsNullOrEmpty(inputPassword) Then
+            MessageBox.Show("Please enter a password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Try
+            Using con As New OleDbConnection(connectionString)
+                con.Open()
+                Dim query As String = "SELECT COUNT(*) FROM Account WHERE Password = @password"
+                Using cmd As New OleDbCommand(query, con)
+                    cmd.Parameters.AddWithValue("@password", inputPassword)
+                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                    If count > 0 Then
+                        MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                        Dim mainForm As New MainForm()
+                        mainForm.Show()
+                        Me.Hide()
+                    Else
+                        MessageBox.Show("Incorrect password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error connecting to database: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+    ' --- TOGGLE PASSWORD VISIBILITY ---
+    Private Sub picEye_Click(sender As Object, e As EventArgs) Handles picEye.Click
+        If passwordVisible Then
+            gtbPassword.PasswordChar = "●"c
+            picEye.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\open-eye.png")
+            passwordVisible = False
+        Else
+            gtbPassword.PasswordChar = ChrW(0)
+            picEye.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\closed-eye.png")
+            passwordVisible = True
+        End If
+    End Sub
+
+
+
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        gtbPassword.PasswordChar = "●"c
+        picEye.Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\closed-eye.png")
+
+        ' --- Overlay the PictureBox over the textbox ---
+        picEye.Parent = gtbPassword
+        picEye.BackColor = Color.Transparent
+        picEye.SizeMode = PictureBoxSizeMode.Zoom
+
+        picEye.Width = 20
+        picEye.Height = 20
+
+
+        picEye.Location = New Point(gtbPassword.Width - picEye.Width - 8, (gtbPassword.Height - picEye.Height) \ 2)
+
+        picEye.BringToFront()
+    End Sub
+
+    ' --- LOGIN WHEN ENTER IS PRESSED ---
+    Private Sub gtbPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles gtbPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            btnLogin.PerformClick()
+        End If
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
 
     End Sub
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
-
+    Private Sub closeBtn_Click(sender As Object, e As EventArgs) Handles closeBtn.Click
+        Me.Close()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
-    Private Sub TableLayoutPanel3_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel3.Paint
-
-    End Sub
-
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
-
-    End Sub
-
-    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
-
-    End Sub
 End Class
