@@ -26,10 +26,10 @@ Partial Class ExitConfirmForm
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ExitConfirmForm))
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         PictureBox1 = New PictureBox()
@@ -161,8 +161,8 @@ Partial Class ExitConfirmForm
         TableLayoutPanel3.ColumnCount = 2
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel3.Controls.Add(exitFormCnclBtn, 0, 0)
         TableLayoutPanel3.Controls.Add(exitFormCloseBtn, 1, 0)
+        TableLayoutPanel3.Controls.Add(exitFormCnclBtn, 0, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
         TableLayoutPanel3.Location = New Point(0, 233)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -175,7 +175,7 @@ Partial Class ExitConfirmForm
         ' exitFormCnclBtn
         ' 
         exitFormCnclBtn.BorderRadius = 5
-        exitFormCnclBtn.CustomizableEdges = CustomizableEdges3
+        exitFormCnclBtn.CustomizableEdges = CustomizableEdges5
         exitFormCnclBtn.DisabledState.BorderColor = Color.DarkGray
         exitFormCnclBtn.DisabledState.CustomBorderColor = Color.DarkGray
         exitFormCnclBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -188,7 +188,7 @@ Partial Class ExitConfirmForm
         exitFormCnclBtn.Location = New Point(33, 18)
         exitFormCnclBtn.Name = "exitFormCnclBtn"
         exitFormCnclBtn.PressedColor = Color.Transparent
-        exitFormCnclBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        exitFormCnclBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         exitFormCnclBtn.Size = New Size(164, 31)
         exitFormCnclBtn.TabIndex = 2
         exitFormCnclBtn.Text = "Cancel"
@@ -196,7 +196,7 @@ Partial Class ExitConfirmForm
         ' exitFormCloseBtn
         ' 
         exitFormCloseBtn.BorderRadius = 5
-        exitFormCloseBtn.CustomizableEdges = CustomizableEdges5
+        exitFormCloseBtn.CustomizableEdges = CustomizableEdges3
         exitFormCloseBtn.DisabledState.BorderColor = Color.DarkGray
         exitFormCloseBtn.DisabledState.CustomBorderColor = Color.DarkGray
         exitFormCloseBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -208,7 +208,7 @@ Partial Class ExitConfirmForm
         exitFormCloseBtn.ForeColor = Color.White
         exitFormCloseBtn.Location = New Point(203, 18)
         exitFormCloseBtn.Name = "exitFormCloseBtn"
-        exitFormCloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        exitFormCloseBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         exitFormCloseBtn.Size = New Size(164, 31)
         exitFormCloseBtn.TabIndex = 3
         exitFormCloseBtn.Text = "Exit"

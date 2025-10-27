@@ -1,5 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DashboardControl
+
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
