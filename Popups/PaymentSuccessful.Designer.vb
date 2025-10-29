@@ -22,15 +22,15 @@ Partial Class PaymentSuccessful
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PaymentSuccessful))
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label2 = New Label()
@@ -39,13 +39,13 @@ Partial Class PaymentSuccessful
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel2 = New TableLayoutPanel()
         TableLayoutPanel5 = New TableLayoutPanel()
-        Label9 = New Label()
-        Label6 = New Label()
+        lblTransactionID = New Label()
+        lblPaymentMethod = New Label()
         Label8 = New Label()
         Label5 = New Label()
-        Label10 = New Label()
+        lblDateTime = New Label()
         Label7 = New Label()
-        Label4 = New Label()
+        lblAmountPaid = New Label()
         Label3 = New Label()
         Panel1 = New Panel()
         Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
@@ -65,7 +65,7 @@ Partial Class PaymentSuccessful
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(240), CByte(253), CByte(244))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(236), CByte(253), CByte(245))
@@ -73,7 +73,7 @@ Partial Class PaymentSuccessful
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.Padding = New Padding(10)
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientPanel1.Size = New Size(356, 531)
         Guna2GradientPanel1.TabIndex = 0
         ' 
@@ -108,7 +108,7 @@ Partial Class PaymentSuccessful
         Label2.Name = "Label2"
         Label2.Size = New Size(330, 35)
         Label2.TabIndex = 2
-        Label2.Text = "Cash payment confirmed"
+        Label2.Text = "Payment confirmed"
         Label2.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' PictureBox1
@@ -141,13 +141,13 @@ Partial Class PaymentSuccessful
         Guna2Panel1.BorderRadius = 10
         Guna2Panel1.BorderThickness = 1
         Guna2Panel1.Controls.Add(TableLayoutPanel2)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges1
+        Guna2Panel1.CustomizableEdges = CustomizableEdges11
         Guna2Panel1.Dock = DockStyle.Fill
         Guna2Panel1.Location = New Point(17, 220)
         Guna2Panel1.Margin = New Padding(17, 3, 17, 3)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.Padding = New Padding(10)
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Panel1.Size = New Size(302, 198)
         Guna2Panel1.TabIndex = 3
         ' 
@@ -156,7 +156,7 @@ Partial Class PaymentSuccessful
         TableLayoutPanel2.ColumnCount = 1
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel2.Controls.Add(TableLayoutPanel5, 0, 3)
-        TableLayoutPanel2.Controls.Add(Label4, 0, 1)
+        TableLayoutPanel2.Controls.Add(lblAmountPaid, 0, 1)
         TableLayoutPanel2.Controls.Add(Label3, 0, 0)
         TableLayoutPanel2.Controls.Add(Panel1, 0, 2)
         TableLayoutPanel2.Dock = DockStyle.Fill
@@ -177,11 +177,11 @@ Partial Class PaymentSuccessful
         TableLayoutPanel5.ColumnCount = 2
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40F))
         TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 60F))
-        TableLayoutPanel5.Controls.Add(Label9, 1, 1)
-        TableLayoutPanel5.Controls.Add(Label6, 1, 0)
+        TableLayoutPanel5.Controls.Add(lblTransactionID, 1, 1)
+        TableLayoutPanel5.Controls.Add(lblPaymentMethod, 1, 0)
         TableLayoutPanel5.Controls.Add(Label8, 0, 1)
         TableLayoutPanel5.Controls.Add(Label5, 0, 0)
-        TableLayoutPanel5.Controls.Add(Label10, 1, 2)
+        TableLayoutPanel5.Controls.Add(lblDateTime, 1, 2)
         TableLayoutPanel5.Controls.Add(Label7, 0, 2)
         TableLayoutPanel5.Dock = DockStyle.Fill
         TableLayoutPanel5.Location = New Point(3, 94)
@@ -193,29 +193,29 @@ Partial Class PaymentSuccessful
         TableLayoutPanel5.Size = New Size(276, 81)
         TableLayoutPanel5.TabIndex = 7
         ' 
-        ' Label9
+        ' lblTransactionID
         ' 
-        Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.Black
-        Label9.Location = New Point(113, 26)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(160, 27)
-        Label9.TabIndex = 11
-        Label9.Text = "TXN-2024-001"
-        Label9.TextAlign = ContentAlignment.MiddleRight
+        lblTransactionID.Dock = DockStyle.Fill
+        lblTransactionID.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTransactionID.ForeColor = Color.Black
+        lblTransactionID.Location = New Point(113, 26)
+        lblTransactionID.Name = "lblTransactionID"
+        lblTransactionID.Size = New Size(160, 27)
+        lblTransactionID.TabIndex = 11
+        lblTransactionID.Text = "TXN-2024-001"
+        lblTransactionID.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label6
+        ' lblPaymentMethod
         ' 
-        Label6.Dock = DockStyle.Fill
-        Label6.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.Black
-        Label6.Location = New Point(113, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(160, 26)
-        Label6.TabIndex = 10
-        Label6.Text = "Cash"
-        Label6.TextAlign = ContentAlignment.MiddleRight
+        lblPaymentMethod.Dock = DockStyle.Fill
+        lblPaymentMethod.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPaymentMethod.ForeColor = Color.Black
+        lblPaymentMethod.Location = New Point(113, 0)
+        lblPaymentMethod.Name = "lblPaymentMethod"
+        lblPaymentMethod.Size = New Size(160, 26)
+        lblPaymentMethod.TabIndex = 10
+        lblPaymentMethod.Text = "Cash"
+        lblPaymentMethod.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label8
         ' 
@@ -241,17 +241,17 @@ Partial Class PaymentSuccessful
         Label5.Text = "Payment Method:"
         Label5.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label10
+        ' lblDateTime
         ' 
-        Label10.Dock = DockStyle.Fill
-        Label10.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.Black
-        Label10.Location = New Point(113, 53)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(160, 28)
-        Label10.TabIndex = 6
-        Label10.Text = "October 19, 2025, 11:10 AM"
-        Label10.TextAlign = ContentAlignment.MiddleRight
+        lblDateTime.Dock = DockStyle.Fill
+        lblDateTime.Font = New Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDateTime.ForeColor = Color.Black
+        lblDateTime.Location = New Point(113, 53)
+        lblDateTime.Name = "lblDateTime"
+        lblDateTime.Size = New Size(160, 28)
+        lblDateTime.TabIndex = 6
+        lblDateTime.Text = "October 19, 2025, 11:10 AM"
+        lblDateTime.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label7
         ' 
@@ -265,17 +265,17 @@ Partial Class PaymentSuccessful
         Label7.Text = "Date and Time:"
         Label7.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label4
+        ' lblAmountPaid
         ' 
-        Label4.Dock = DockStyle.Fill
-        Label4.Font = New Font("Poppins", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(21), CByte(128), CByte(61))
-        Label4.Location = New Point(3, 35)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(276, 55)
-        Label4.TabIndex = 4
-        Label4.Text = "₱525.00"
-        Label4.TextAlign = ContentAlignment.MiddleCenter
+        lblAmountPaid.Dock = DockStyle.Fill
+        lblAmountPaid.Font = New Font("Poppins", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAmountPaid.ForeColor = Color.FromArgb(CByte(21), CByte(128), CByte(61))
+        lblAmountPaid.Location = New Point(3, 35)
+        lblAmountPaid.Name = "lblAmountPaid"
+        lblAmountPaid.Size = New Size(276, 55)
+        lblAmountPaid.TabIndex = 4
+        lblAmountPaid.Text = "₱525.00"
+        lblAmountPaid.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label3
         ' 
@@ -305,7 +305,7 @@ Partial Class PaymentSuccessful
         Guna2GradientPanel2.BorderRadius = 5
         Guna2GradientPanel2.BorderThickness = 1
         Guna2GradientPanel2.Controls.Add(TableLayoutPanel3)
-        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges5
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges13
         Guna2GradientPanel2.Dock = DockStyle.Fill
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
         Guna2GradientPanel2.FillColor2 = Color.FromArgb(CByte(192), CByte(255), CByte(192))
@@ -314,7 +314,7 @@ Partial Class PaymentSuccessful
         Guna2GradientPanel2.Margin = New Padding(14, 15, 14, 15)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
         Guna2GradientPanel2.Padding = New Padding(5)
-        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2GradientPanel2.Size = New Size(308, 60)
         Guna2GradientPanel2.TabIndex = 4
         ' 
@@ -347,14 +347,14 @@ Partial Class PaymentSuccessful
         ' 
         ' ProgressBar
         ' 
-        ProgressBar.CustomizableEdges = CustomizableEdges3
+        ProgressBar.CustomizableEdges = CustomizableEdges15
         ProgressBar.FillColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
         ProgressBar.Location = New Point(9, 34)
         ProgressBar.Margin = New Padding(9)
         ProgressBar.Name = "ProgressBar"
         ProgressBar.ProgressColor = Color.FromArgb(CByte(21), CByte(128), CByte(61))
         ProgressBar.ProgressColor2 = Color.FromArgb(CByte(21), CByte(128), CByte(61))
-        ProgressBar.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        ProgressBar.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         ProgressBar.Size = New Size(280, 7)
         ProgressBar.TabIndex = 12
         ProgressBar.Text = "Guna2ProgressBar1"
@@ -390,14 +390,14 @@ Partial Class PaymentSuccessful
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblAmountPaid As Label
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblDateTime As Label
+    Friend WithEvents lblTransactionID As Label
+    Friend WithEvents lblPaymentMethod As Label
     Friend WithEvents Guna2GradientPanel2 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label11 As Label
