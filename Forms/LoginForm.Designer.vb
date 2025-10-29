@@ -23,21 +23,23 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        closeBtn = New Button()
+        Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         TableLayoutPanel2 = New TableLayoutPanel()
         Label3 = New Label()
         Label4 = New Label()
@@ -75,12 +77,12 @@ Partial Class LoginForm
         ' 
         Guna2GradientPanel1.AutoSize = True
         Guna2GradientPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Guna2GradientPanel1.Controls.Add(closeBtn)
+        Guna2GradientPanel1.Controls.Add(Guna2ControlBox1)
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
         Guna2GradientPanel1.Controls.Add(picEye)
         Guna2GradientPanel1.Controls.Add(Guna2CustomGradientPanel1)
         Guna2GradientPanel1.Controls.Add(Guna2PictureBox2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges11
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges21
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
@@ -88,22 +90,22 @@ Partial Class LoginForm
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2GradientPanel1.Size = New Size(928, 476)
         Guna2GradientPanel1.TabIndex = 0
         ' 
-        ' closeBtn
+        ' Guna2ControlBox1
         ' 
-        closeBtn.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        closeBtn.BackColor = Color.Transparent
-        closeBtn.FlatAppearance.BorderSize = 0
-        closeBtn.FlatStyle = FlatStyle.Flat
-        closeBtn.Image = CType(resources.GetObject("closeBtn.Image"), Image)
-        closeBtn.Location = New Point(904, 3)
-        closeBtn.Name = "closeBtn"
-        closeBtn.Size = New Size(21, 19)
-        closeBtn.TabIndex = 7
-        closeBtn.UseVisualStyleBackColor = False
+        Guna2ControlBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Guna2ControlBox1.BackColor = Color.Transparent
+        Guna2ControlBox1.CustomizableEdges = CustomizableEdges15
+        Guna2ControlBox1.FillColor = Color.Transparent
+        Guna2ControlBox1.IconColor = Color.White
+        Guna2ControlBox1.Location = New Point(871, 12)
+        Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Guna2ControlBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2ControlBox1.Size = New Size(45, 29)
+        Guna2ControlBox1.TabIndex = 8
         ' 
         ' TableLayoutPanel2
         ' 
@@ -179,7 +181,7 @@ Partial Class LoginForm
         ' picEye
         ' 
         picEye.BackColor = Color.Transparent
-        picEye.Location = New Point(492, 423)
+        picEye.Location = New Point(447, 426)
         picEye.Name = "picEye"
         picEye.Size = New Size(100, 50)
         picEye.TabIndex = 5
@@ -190,12 +192,12 @@ Partial Class LoginForm
         Guna2CustomGradientPanel1.BackColor = Color.Transparent
         Guna2CustomGradientPanel1.BorderRadius = 15
         Guna2CustomGradientPanel1.Controls.Add(TableLayoutPanel5)
-        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges7
-        Guna2CustomGradientPanel1.Location = New Point(595, 27)
+        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges17
+        Guna2CustomGradientPanel1.Location = New Point(565, 26)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.Quality = 20
         Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 50
-        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2CustomGradientPanel1.Size = New Size(300, 417)
         Guna2CustomGradientPanel1.TabIndex = 4
         ' 
@@ -224,7 +226,7 @@ Partial Class LoginForm
         ' btnLogin
         ' 
         btnLogin.BorderRadius = 12
-        btnLogin.CustomizableEdges = CustomizableEdges1
+        btnLogin.CustomizableEdges = CustomizableEdges23
         btnLogin.DisabledState.BorderColor = Color.DarkGray
         btnLogin.DisabledState.CustomBorderColor = Color.DarkGray
         btnLogin.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -239,7 +241,7 @@ Partial Class LoginForm
         btnLogin.Location = New Point(12, 377)
         btnLogin.Margin = New Padding(12, 11, 12, 11)
         btnLogin.Name = "btnLogin"
-        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         btnLogin.Size = New Size(276, 29)
         btnLogin.TabIndex = 3
         btnLogin.Text = "LOGIN"
@@ -264,7 +266,7 @@ Partial Class LoginForm
         ' 
         gtbPassword.BorderColor = SystemColors.GrayText
         gtbPassword.BorderRadius = 10
-        gtbPassword.CustomizableEdges = CustomizableEdges3
+        gtbPassword.CustomizableEdges = CustomizableEdges25
         gtbPassword.DefaultText = ""
         gtbPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         gtbPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -281,7 +283,7 @@ Partial Class LoginForm
         gtbPassword.PasswordChar = "•"c
         gtbPassword.PlaceholderText = ""
         gtbPassword.SelectedText = ""
-        gtbPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        gtbPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         gtbPassword.Size = New Size(270, 30)
         gtbPassword.TabIndex = 4
         ' 
@@ -306,7 +308,7 @@ Partial Class LoginForm
         LinkLabel1.LinkBehavior = LinkBehavior.NeverUnderline
         LinkLabel1.Location = New Point(92, 79)
         LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New Size(110, 22)
+        LinkLabel1.Size = New Size(109, 22)
         LinkLabel1.TabIndex = 6
         LinkLabel1.TabStop = True
         LinkLabel1.Text = "Forgot password"
@@ -382,12 +384,12 @@ Partial Class LoginForm
         ' 
         Guna2PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges27
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(55, 3)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2PictureBox1.Size = New Size(52, 70)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         Guna2PictureBox1.TabIndex = 7
@@ -397,13 +399,13 @@ Partial Class LoginForm
         ' 
         Guna2PictureBox2.BackColor = Color.Transparent
         Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges9
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges19
         Guna2PictureBox2.FillColor = Color.Transparent
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.Location = New Point(0, 146)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2PictureBox2.Size = New Size(557, 476)
         Guna2PictureBox2.TabIndex = 2
         Guna2PictureBox2.TabStop = False
@@ -412,6 +414,7 @@ Partial Class LoginForm
         ' 
         ' Guna2BorderlessForm1
         ' 
+        Guna2BorderlessForm1.BorderRadius = 16
         Guna2BorderlessForm1.ContainerControl = Me
         Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
         Guna2BorderlessForm1.TransparentWhileDrag = True
@@ -447,7 +450,6 @@ Partial Class LoginForm
     End Sub
 
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
-    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
@@ -468,5 +470,6 @@ Partial Class LoginForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents closeBtn As Button
+    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
 End Class

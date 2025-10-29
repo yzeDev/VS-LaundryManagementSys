@@ -84,8 +84,8 @@ Public Class LoginForm
 
     End Sub
 
-    Private Sub closeBtn_Click(sender As Object, e As EventArgs) Handles closeBtn.Click
-        Me.Close()
+    Private Sub closeBtn_Click(sender As Object, e As EventArgs)
+        Close
     End Sub
 
 End Class
