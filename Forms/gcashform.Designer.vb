@@ -22,21 +22,21 @@ Partial Class gcashform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gcashform))
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         cancelPayBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        totalPaymentLbl = New Label()
+        lblTotalPayment = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
         PictureBox1 = New PictureBox()
         Label1 = New Label()
@@ -73,15 +73,15 @@ Partial Class gcashform
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges11
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.Padding = New Padding(15, 15, 15, 15)
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2GradientPanel1.Padding = New Padding(15)
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2GradientPanel1.Size = New Size(356, 618)
         Guna2GradientPanel1.TabIndex = 0
         ' 
@@ -91,7 +91,7 @@ Partial Class gcashform
         TableLayoutPanel1.ColumnCount = 1
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel1.Controls.Add(cancelPayBtn, 0, 6)
-        TableLayoutPanel1.Controls.Add(totalPaymentLbl, 0, 1)
+        TableLayoutPanel1.Controls.Add(lblTotalPayment, 0, 1)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
         TableLayoutPanel1.Controls.Add(Guna2Panel1, 0, 2)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel4, 0, 3)
@@ -118,7 +118,7 @@ Partial Class gcashform
         cancelPayBtn.BorderColor = Color.White
         cancelPayBtn.BorderRadius = 5
         cancelPayBtn.BorderThickness = 1
-        cancelPayBtn.CustomizableEdges = CustomizableEdges1
+        cancelPayBtn.CustomizableEdges = CustomizableEdges13
         cancelPayBtn.DisabledState.BorderColor = Color.DarkGray
         cancelPayBtn.DisabledState.CustomBorderColor = Color.DarkGray
         cancelPayBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -132,22 +132,22 @@ Partial Class gcashform
         cancelPayBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         cancelPayBtn.Location = New Point(3, 547)
         cancelPayBtn.Name = "cancelPayBtn"
-        cancelPayBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        cancelPayBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         cancelPayBtn.Size = New Size(320, 38)
         cancelPayBtn.TabIndex = 7
         cancelPayBtn.Text = "CANCEL"
         ' 
-        ' totalPaymentLbl
+        ' lblTotalPayment
         ' 
-        totalPaymentLbl.Dock = DockStyle.Fill
-        totalPaymentLbl.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        totalPaymentLbl.Location = New Point(3, 60)
-        totalPaymentLbl.Margin = New Padding(3, 2, 3, 2)
-        totalPaymentLbl.Name = "totalPaymentLbl"
-        totalPaymentLbl.Size = New Size(320, 60)
-        totalPaymentLbl.TabIndex = 2
-        totalPaymentLbl.Text = "₱525.00"
-        totalPaymentLbl.TextAlign = ContentAlignment.MiddleCenter
+        lblTotalPayment.Dock = DockStyle.Fill
+        lblTotalPayment.Font = New Font("Poppins", 21F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTotalPayment.Location = New Point(3, 60)
+        lblTotalPayment.Margin = New Padding(3, 2, 3, 2)
+        lblTotalPayment.Name = "lblTotalPayment"
+        lblTotalPayment.Size = New Size(320, 60)
+        lblTotalPayment.TabIndex = 2
+        lblTotalPayment.Text = "₱525.00"
+        lblTotalPayment.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' TableLayoutPanel2
         ' 
@@ -195,12 +195,12 @@ Partial Class gcashform
         Guna2Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
         Guna2Panel1.BorderRadius = 10
         Guna2Panel1.Controls.Add(TableLayoutPanel3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges3
+        Guna2Panel1.CustomizableEdges = CustomizableEdges15
         Guna2Panel1.FillColor = Color.White
         Guna2Panel1.Location = New Point(38, 125)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.Padding = New Padding(40, 3, 40, 3)
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2Panel1.Size = New Size(250, 229)
         Guna2Panel1.TabIndex = 3
         ' 
@@ -264,7 +264,7 @@ Partial Class gcashform
         Label4.Dock = DockStyle.Fill
         Label4.Font = New Font("Poppins", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(131, 3)
-        Label4.Margin = New Padding(3, 3, 3, 3)
+        Label4.Margin = New Padding(3)
         Label4.Name = "Label4"
         Label4.Size = New Size(58, 46)
         Label4.TabIndex = 5
@@ -304,12 +304,12 @@ Partial Class gcashform
         ' 
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.Controls.Add(TableLayoutPanel5)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges5
+        Guna2Panel2.CustomizableEdges = CustomizableEdges17
         Guna2Panel2.Dock = DockStyle.Fill
         Guna2Panel2.FillColor = Color.White
         Guna2Panel2.Location = New Point(3, 418)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2Panel2.Size = New Size(320, 82)
         Guna2Panel2.TabIndex = 5
         ' 
@@ -384,7 +384,7 @@ Partial Class gcashform
         confirmPaymentBtn.BorderColor = Color.White
         confirmPaymentBtn.BorderRadius = 5
         confirmPaymentBtn.BorderThickness = 1
-        confirmPaymentBtn.CustomizableEdges = CustomizableEdges7
+        confirmPaymentBtn.CustomizableEdges = CustomizableEdges19
         confirmPaymentBtn.DisabledState.BorderColor = Color.DarkGray
         confirmPaymentBtn.DisabledState.CustomBorderColor = Color.DarkGray
         confirmPaymentBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -398,7 +398,7 @@ Partial Class gcashform
         confirmPaymentBtn.GradientMode = Drawing2D.LinearGradientMode.Vertical
         confirmPaymentBtn.Location = New Point(3, 506)
         confirmPaymentBtn.Name = "confirmPaymentBtn"
-        confirmPaymentBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        confirmPaymentBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         confirmPaymentBtn.Size = New Size(320, 35)
         confirmPaymentBtn.TabIndex = 6
         confirmPaymentBtn.Text = "CONFIRM PAYMENT"
@@ -433,7 +433,7 @@ Partial Class gcashform
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents totalPaymentLbl As Label
+    Friend WithEvents lblTotalPayment As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label3 As Label

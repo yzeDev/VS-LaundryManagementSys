@@ -1,18 +1,19 @@
 ﻿Public Class gcashform
-    Public Property TotalAmount As String
+    Public Property TotalAmount As Decimal  ' set by caller
 
-    Private Sub gcashform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Display the total when the form loads
-        totalPaymentLbl.Text = TotalAmount
+    Private Sub maya_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        lblTotalPayment.Text = "₱ " & TotalAmount.ToString("N2")  ' <- ensure you have this label
     End Sub
 
     Private Sub cancelPayBtn_Click(sender As Object, e As EventArgs) Handles cancelPayBtn.Click
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
 
     Private Sub confirmPaymentBtn_Click(sender As Object, e As EventArgs) Handles confirmPaymentBtn.Click
-        Dim confirmForm As New confirmpayment()
-        confirmForm.ShowDialog()
+        ' User confirms they scanned/paid → proceed to confirm dialog
+        Me.DialogResult = DialogResult.OK
+        Me.Close()
     End Sub
 
 End Class
