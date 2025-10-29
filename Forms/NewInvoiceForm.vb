@@ -1,12 +1,9 @@
 ﻿Imports System.Drawing
 Imports System.Runtime.InteropServices
-Imports System.Security.Policy
 Imports Guna.UI2.WinForms
 
 Public Class NewInvoiceForm
-
-
-
+    Private _referenceNumber As String = ""
     Public ReadOnly Property InvoiceCustomerName As String
         Get
             Return lblName.Text
@@ -80,22 +77,17 @@ Public Class NewInvoiceForm
     End Property
 
 
-
-    ' === DLL for caret hiding ===
-    <DllImport("user32.dll")>
-    Private Shared Function HideCaret(ByVal hWnd As IntPtr) As Boolean
+    <DllImport("user32.dll")> Private Shared Function HideCaret(ByVal hWnd As IntPtr) As Boolean
     End Function
 
-    ' === BORDER COLORS ===
     Private ReadOnly SelectedBorderColor As Color = Color.FromArgb(175, 213, 253)
     Private ReadOnly UnselectedBorderColor As Color = Color.FromArgb(195, 217, 240)
     Private ReadOnly BorderSize As Integer = 2
     Private ReadOnly DefaultBorderSize As Integer = 1
 
-    ' === PAYMENT METHOD VARIABLE ===
     Private selectedPayment As String = ""
 
-    ' === RECEIVED DATA (from service forms) ===
+    ' data from previous form
     Public Property PreviousForm As Form
     Public Property CustomerName As String
     Public Property ContactNumber As String
@@ -109,50 +101,37 @@ Public Class NewInvoiceForm
     Public Property TotalAmount As String
     Public Property DeliveryMode As String
 
-
-
-    ' === HIDE CARET EVENTS ===
+    ' caret hiding
     Private Sub addressBox_GotFocus(sender As Object, e As EventArgs) Handles addressBox.GotFocus
         HideCaret(addressBox.Handle)
     End Sub
-
     Private Sub addressBox_MouseDown(sender As Object, e As MouseEventArgs) Handles addressBox.MouseDown
         Me.BeginInvoke(New Action(Sub() HideCaret(addressBox.Handle)))
     End Sub
 
-    ' === SELECTED BUTTON BORDER EFFECT ===
+    ' select/highlight payment
     Private Sub SetPaymentMethod(ByVal selectedButton As Guna2Button)
-        ' Reset all buttons
-        cashBtn.BorderColor = UnselectedBorderColor
-        cashBtn.BorderThickness = DefaultBorderSize
+        cashBtn.BorderColor = UnselectedBorderColor : cashBtn.BorderThickness = DefaultBorderSize
+        GCashBtn.BorderColor = UnselectedBorderColor : GCashBtn.BorderThickness = DefaultBorderSize
+        mayaBtn.BorderColor = UnselectedBorderColor : mayaBtn.BorderThickness = DefaultBorderSize
 
-        GCashBtn.BorderColor = UnselectedBorderColor
-        GCashBtn.BorderThickness = DefaultBorderSize
-
-        mayaBtn.BorderColor = UnselectedBorderColor
-        mayaBtn.BorderThickness = DefaultBorderSize
-
-        ' Highlight selected
         selectedButton.BorderColor = SelectedBorderColor
         selectedButton.BorderThickness = BorderSize
 
-        ' Store payment name
         selectedPayment = selectedButton.Text
-
-        ' Enable confirm button
         selectBtn.Enabled = True
     End Sub
 
-    ' === FORM LOAD (Display received data + default setup) ===
+    ' load received data
     Private Sub NewInvoiceForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         addressBox.SelectionStart = 0
         addressBox.SelectionLength = 0
         CloseBtn.Focus()
 
-        ' SET CASH AS DEFAULT SELECTED PAYMENT METHOD
+        ' default payment: cash
         SetPaymentMethod(cashBtn)
 
-        ' DISPLAY DATA RECEIVED FROM PREVIOUS FORM
+        ' display received data
         lblName.Text = CustomerName
         lblContact.Text = ContactNumber
         addressBox.Text = Address
@@ -166,88 +145,146 @@ Public Class NewInvoiceForm
         lblDelivery.Text = DeliveryMode
     End Sub
 
-    ' === PAYMENT BUTTONS ===
-
-
+    ' payment buttons
     Private Sub cashBtn_Click(sender As Object, e As EventArgs) Handles cashBtn.Click
         SetPaymentMethod(cashBtn)
     End Sub
-
     Private Sub GCashBtn_Click(sender As Object, e As EventArgs) Handles GCashBtn.Click
         SetPaymentMethod(GCashBtn)
     End Sub
-
     Private Sub mayaBtn_Click(sender As Object, e As EventArgs) Handles mayaBtn.Click
         SetPaymentMethod(mayaBtn)
     End Sub
 
-    ' === CLOSE & BACK ===
+    ' close X
     Private Sub CloseBtn_Click(sender As Object, e As EventArgs) Handles CloseBtn.Click
         Me.Close()
     End Sub
 
+    ' ✅ Go Back: restore previous form (or owner), then close this dialog
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        If PreviousForm IsNot Nothing Then
+        If PreviousForm IsNot Nothing AndAlso Not PreviousForm.IsDisposed Then
             PreviousForm.Show()
-        Else
-            ' fallback detection based on service type
-            Select Case lblServiceType.Text
-                Case "Full Service" : FullServiceForm.Show()
-                Case "Self Service" : SelfServiceForm.Show()
-                Case "Basic Service" : BasicServiceForm.Show()
-                Case "Dry Cleaning" : DryCleaningForm.Show()
-            End Select
+        ElseIf Me.Owner IsNot Nothing AndAlso Not Me.Owner.IsDisposed Then
+            Me.Owner.Show()
         End If
-        Me.Hide()
+        Me.Close()
     End Sub
 
-    ' === CONFIRM PAYMENT ===
+    ' confirm payment → save → show receipt → close invoice
     Private Sub selectBtn_Click(sender As Object, e As EventArgs) Handles selectBtn.Click
-        If selectedPayment = "" Then
+        If String.IsNullOrWhiteSpace(selectedPayment) Then
             MessageBox.Show("Please select a payment method first.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        ' === Handle Payment Method Forms ===
-        Select Case selectedPayment
-            Case GCashBtn.Text
-                Dim gcashForm As New gcashform()
-                gcashForm.TotalAmount = lblTotal.Text
-                gcashForm.ShowDialog()
+        ' Parse total amount
+        Dim totalDec As Decimal = 0D
+        Decimal.TryParse(lblTotal.Text.Replace("₱", "").Trim(), totalDec)
 
-            Case mayaBtn.Text
-                Dim mayaForm As New maya()
-                mayaForm.ShowDialog()
+        Dim refNo As String = ""
+        Dim amountPaid As Decimal = 0D
 
-            Case "Cash"
-                MessageBox.Show("Cash payment selected. Proceed to cashier.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End Select
+        If selectedPayment = GCashBtn.Text OrElse selectedPayment = mayaBtn.Text Then
+            ' 1) Show QR form (Maya/GCash)
+            If selectedPayment = GCashBtn.Text Then
+                Using qr As New gcashform()
+                    qr.TotalAmount = totalDec
+                    If qr.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+                End Using
+            Else
+                Using qr As New maya()
+                    qr.TotalAmount = totalDec
+                    If qr.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+                End Using
+            End If
+
+            ' 2) Confirm payment (reference + amount paid)
+            Using dlg As New confirmpayment()
+                dlg.PaymentMethod = selectedPayment
+                dlg.TotalAmount = totalDec
+                dlg.StartPosition = FormStartPosition.CenterParent
+                If dlg.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+
+                refNo = dlg.ReferenceNumber
+                amountPaid = dlg.AmountPaid
+            End Using
+
+            ' 3) Show "Payment Successful" with preview TransactionID
+            Dim previewId As Long = GetNextTransactionIdEstimate()
+            Using ps As New PaymentSuccessful()
+                ps.PaymentMethod = selectedPayment
+                ps.TransactionID = previewId
+                ps.Timestamp = DateTime.Now
+                ps.AmountPaid = amountPaid           ' ✅ NEW: show paid amount
+                ps.StartPosition = FormStartPosition.CenterParent
+                If ps.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+            End Using
 
 
-        ' === CREATE RECEIPT AND PASS VALUES FROM THIS FORM ===
-        Dim receipt As New Receipt()
-        receipt.CustomerName = lblName.Text
-        receipt.ContactNumber = Convert.ToInt64(lblContact.Text) ' Number type in DB
-        receipt.Address = addressBox.Text
-        receipt.Weight = Convert.ToDecimal(lblWeight.Text.Replace(" kg", "")) ' Number
-        receipt.ServiceType = lblServiceType.Text
-        receipt.PackageType = lblPackage.Text
-        receipt.Rate = Convert.ToDecimal(lblRate.Text.Replace("₱", "").Replace("/kg", ""))
-        receipt.ServiceFee = Convert.ToDecimal(lblServiceFee.Text.Replace("₱", ""))
-        receipt.DeliveryFee = Convert.ToDecimal(lblDeliveryFee.Text.Replace("₱", ""))
-        receipt.TotalAmount = Convert.ToDecimal(lblTotal.Text.Replace("₱", ""))
-        receipt.PaymentMethod = selectedPayment
-        receipt.DeliveryMode = lblDelivery.Text
-        receipt.AmountReceived = 0D ' Set when actual payment is received
-        receipt.Change = 0D
+        Else
+            ' Cash flow (no QR/ref required)
+            MessageBox.Show("Cash payment selected. Proceed to cashier.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            refNo = ""                  ' optional for cash
+            amountPaid = 0D             ' or set to totalDec if collecting immediately here
+        End If
 
-        ' === SAVE TO DATABASE ===
-        receipt.SaveToDatabase()
+        ' === Build & show Receipt ===
+        Dim receiptForm As New Receipt()
 
-        ' === SHOW RECEIPT FORM ===
-        receipt.Show()
-        Me.Hide()
+        ' Basic details
+        receiptForm.CustomerName = lblName.Text
+
+        ' Contact optional
+        Dim rawContact As String = lblContact.Text.Trim()
+        receiptForm.ContactNumber = If(rawContact = "+63" OrElse rawContact = "", "", rawContact)
+
+        ' Service details
+        receiptForm.Address = addressBox.Text
+        receiptForm.Weight = Convert.ToDecimal(lblWeight.Text.Replace(" kg", ""))
+        receiptForm.ServiceType = lblServiceType.Text
+        receiptForm.PackageType = lblPackage.Text
+        receiptForm.Rate = Convert.ToDecimal(lblRate.Text.Replace("₱", "").Replace("/kg", ""))
+        receiptForm.ServiceFee = Convert.ToDecimal(lblServiceFee.Text.Replace("₱", ""))
+        receiptForm.DeliveryFee = Convert.ToDecimal(lblDeliveryFee.Text.Replace("₱", ""))
+        receiptForm.TotalAmount = totalDec
+        receiptForm.PaymentMethod = selectedPayment
+        receiptForm.DeliveryMode = lblDelivery.Text
+
+        ' Payment capture
+        receiptForm.ReferenceNumber = refNo
+        receiptForm.AmountReceived = amountPaid
+        receiptForm.ChangeAmount = Math.Max(0D, amountPaid - totalDec)
+
+        ' Timestamp
+        receiptForm.TransactionDate = DateTime.Now
+
+        ' Show receipt (it will save and display real TransactionID)
+        receiptForm.StartPosition = FormStartPosition.CenterParent
+        receiptForm.ShowDialog(Me)
+
+        ' Close invoice; parent form will be shown by owner if needed
+        Me.Close()
     End Sub
+
+
+    ' Add inside NewInvoiceForm (or a shared utility module)
+    Private Function GetNextTransactionIdEstimate() As Long
+        Dim nextId As Long = 1
+        Dim cs As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        Try
+            Using cn As New OleDb.OleDbConnection(cs)
+                cn.Open()
+                Using cmd As New OleDb.OleDbCommand("SELECT MAX(TransactionID) FROM Transactions", cn)
+                    Dim v = cmd.ExecuteScalar()
+                    If v IsNot Nothing AndAlso Not IsDBNull(v) Then nextId = Convert.ToInt64(v) + 1
+                End Using
+            End Using
+        Catch
+            nextId = 1
+        End Try
+        Return nextId
+    End Function
 
 
 End Class

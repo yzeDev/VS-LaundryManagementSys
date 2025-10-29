@@ -3,47 +3,33 @@ Imports Guna.UI2.WinForms
 
 Public Class DryCleaningForm
 
-    ' Get the latest price dynamically from database
-    Private Function GetLatestPrice_Basic(subService As String) As Double
-        Dim price As Double = 0
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-
-        Using conn As New OleDbConnection(connString)
-            conn.Open()
-            ' ServiceType hardcoded as "Dry Cleaning"
-            Dim query As String = "SELECT TOP 1 Price FROM PricingUpd WHERE ServiceType='Dry Cleaning' AND SubService=? ORDER BY LastUpdated DESC"
-
-            Using cmd As New OleDbCommand(query, conn)
-                cmd.Parameters.AddWithValue("?", subService)
-                Dim result = cmd.ExecuteScalar()
-                If result IsNot Nothing Then
-                    price = Convert.ToDouble(result)
-                End If
-            End Using
-        End Using
-        Return price
+    ' Get latest price for Dry Cleaning subservice (Small/Medium/Large)
+    Private Function GetLatestPrice_Dry(subService As String) As Decimal
+        Return GetLatestPrice("Dry Cleaning", subService)
     End Function
 
-    ' ===== FORM LOAD =====
+    ' Load: show rates and (optional) preview ID if you have the label
     Private Sub DryCleaningForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Display latest rates on label
-        Dim SmallPrice As Double = GetLatestPrice_Basic("Small")
-        Dim MediumPrice As Double = GetLatestPrice_Basic("Medium")
-        Dim LargePrice As Double = GetLatestPrice_Basic("Large")
+        Dim pSmall = GetLatestPrice_Dry("Small")
+        Dim pMedium = GetLatestPrice_Dry("Medium")
+        Dim pLarge = GetLatestPrice_Dry("Large")
 
-        lblRate.Text = "• Small: ₱" & SmallPrice.ToString("F0") & " per piece" & Environment.NewLine &
-                       "• Medium: ₱" & MediumPrice.ToString("F0") & " per piece" & Environment.NewLine &
-                       "• Large: ₱" & LargePrice.ToString("F0") & " per piece"
+        lblRate.Text =
+            $"• Small: {pSmall.Peso()} per piece{Environment.NewLine}" &
+            $"• Medium: {pMedium.Peso()} per piece{Environment.NewLine}" &
+            $"• Large: {pLarge.Peso()} per piece"
+
+        ' If you added a preview TransactionID label on this form, uncomment:
+        ' lblTransactionID.Text = GetNextTransactionIdEstimate().ToString("00000")
     End Sub
 
-
+    ' Delivery toggles
     Private Sub Guna2CheckBoxdelivery_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2CheckBoxdelivery.CheckedChanged
         If Guna2CheckBoxdelivery.Checked Then
             Guna2CheckBoxPickup.Checked = False
             txtboxAddress.Enabled = True
         End If
     End Sub
-
 
     Private Sub Guna2CheckBoxPickup_CheckedChanged(sender As Object, e As EventArgs) Handles Guna2CheckBoxPickup.CheckedChanged
         If Guna2CheckBoxPickup.Checked Then
@@ -55,7 +41,7 @@ Public Class DryCleaningForm
         End If
     End Sub
 
-
+    ' Contact formatting
     Private Sub Guna2txtboxContact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2txtboxContact.KeyPress
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then e.Handled = True
         Dim txt = Guna2txtboxContact.Text
@@ -82,11 +68,12 @@ Public Class DryCleaningForm
         End If
     End Sub
 
-
+    ' Quantity (pieces)
     Private Sub Guna2txtboxQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Guna2txtboxQuantity.KeyPress
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then e.Handled = True
     End Sub
 
+    ' Cancel
     Private Sub gbCancel_Click(sender As Object, e As EventArgs) Handles gbCancel.Click
         Dim confirmForm As New transacCancelConfirm()
         confirmForm.TopMost = True
@@ -98,43 +85,50 @@ Public Class DryCleaningForm
         End If
     End Sub
 
-    ' Continue button kung san nya sinesend sa invoice
+    ' Continue → compute and open Invoice (manual, to use "per piece" and "pcs")
     Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
-
-        If Guna2txtboxName.Text = "" OrElse
-           Guna2txtboxContact.Text.Length < 14 OrElse
-           Guna2txtboxQuantity.Text = "" OrElse
-           gcbClotheSize.SelectedItem Is Nothing Then
+        If String.IsNullOrWhiteSpace(Guna2txtboxName.Text) OrElse
+           gcbClotheSize.SelectedItem Is Nothing OrElse
+           String.IsNullOrWhiteSpace(Guna2txtboxQuantity.Text) Then
 
             MessageBox.Show("Please fill out all fields properly.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
         Dim packageType As String = gcbClotheSize.SelectedItem.ToString()
-        Dim rate As Double = GetLatestPrice_Basic(packageType) ' Dynamic rate from DB
+        Dim rate As Decimal = GetLatestPrice_Dry(packageType)
 
-        Dim qty As Double = Val(Guna2txtboxQuantity.Text)
-        Dim serviceFee As Double = rate * qty
-        Dim deliveryFee As Double = If(Guna2CheckBoxdelivery.Checked, serviceFee * 0.05, 0)
-        Dim totalAmount As Double = serviceFee + deliveryFee
+        Dim qty As Decimal
+        If Not Decimal.TryParse(Guna2txtboxQuantity.Text, qty) OrElse qty <= 0D Then
+            MessageBox.Show("Enter a valid quantity.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
 
-        ' Pass data to Invoice Form
-        Dim invoice As New NewInvoiceForm()
-        invoice.PreviousForm = Me
-        invoice.ServiceType = "Dry Cleaning"
-        invoice.PackageType = packageType
-        invoice.CustomerName = Guna2txtboxName.Text
-        invoice.ContactNumber = Guna2txtboxContact.Text
-        invoice.Address = txtboxAddress.Text
-        invoice.Weight = qty
-        invoice.Rate = "₱" & rate.ToString("F2")
-        invoice.ServiceFee = "₱" & serviceFee.ToString("F2")
-        invoice.DeliveryFee = "₱" & deliveryFee.ToString("F2")
-        invoice.TotalAmount = "₱" & totalAmount.ToString("F2")
-        invoice.DeliveryMode = If(Guna2CheckBoxdelivery.Checked, "Yes", "No")
+        ' Use ComputeFees even if "weight" here is quantity; same math
+        Dim isDelivery = Guna2CheckBoxdelivery.Checked
+        Dim fees = ComputeFees(rate, qty, isDelivery)
+        Dim deliveryMode = If(isDelivery, "Delivery", "Pickup")
 
-        invoice.Show()
-        Me.Hide()
+        ' Build invoice manually so we can show "per piece" and "pcs"
+        Using invoice As New NewInvoiceForm()
+            invoice.PreviousForm = Me
+            invoice.CustomerName = Guna2txtboxName.Text
+            invoice.ContactNumber = NormalizeOptionalContact(Guna2txtboxContact.Text)
+            invoice.Address = txtboxAddress.Text
+            invoice.Weight = qty.ToString("F0") & " pcs"       ' <- show pieces
+            invoice.ServiceType = "Dry Cleaning"
+            invoice.PackageType = packageType
+            invoice.Rate = rate.Peso() & " per piece"          ' <- unit text
+            invoice.ServiceFee = fees.ServiceFee.Peso()
+            invoice.DeliveryFee = fees.DeliveryFee.Peso()
+            invoice.TotalAmount = fees.Total.Peso()
+            invoice.DeliveryMode = deliveryMode
+
+            Me.Hide()
+            invoice.StartPosition = FormStartPosition.CenterParent
+            invoice.ShowDialog(Me)
+            Me.Show()
+        End Using
     End Sub
 
 End Class
