@@ -51,9 +51,8 @@ Partial Class MainForm
         logoIcon = New PictureBox()
         controlsPanel = New Panel()
         controlsTblPanel = New TableLayoutPanel()
-        xBtn = New Button()
-        maximizeBtn = New Button()
         minimizeBtn = New Button()
+        xBtn = New Button()
         topDivider = New Panel()
         contentSpacePanel = New Panel()
         titleBarPanel = New Panel()
@@ -400,9 +399,8 @@ Partial Class MainForm
         controlsTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333321F))
         controlsTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333359F))
         controlsTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.3333359F))
+        controlsTblPanel.Controls.Add(minimizeBtn, 1, 0)
         controlsTblPanel.Controls.Add(xBtn, 2, 0)
-        controlsTblPanel.Controls.Add(maximizeBtn, 1, 0)
-        controlsTblPanel.Controls.Add(minimizeBtn, 0, 0)
         controlsTblPanel.Dock = DockStyle.Right
         controlsTblPanel.Location = New Point(911, 3)
         controlsTblPanel.Name = "controlsTblPanel"
@@ -410,6 +408,21 @@ Partial Class MainForm
         controlsTblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         controlsTblPanel.Size = New Size(75, 19)
         controlsTblPanel.TabIndex = 0
+        ' 
+        ' minimizeBtn
+        ' 
+        minimizeBtn.BackColor = Color.FromArgb(CByte(152), CByte(169), CByte(192))
+        minimizeBtn.Dock = DockStyle.Fill
+        minimizeBtn.FlatAppearance.BorderSize = 0
+        minimizeBtn.FlatStyle = FlatStyle.Flat
+        minimizeBtn.ForeColor = Color.Transparent
+        minimizeBtn.Location = New Point(24, 0)
+        minimizeBtn.Margin = New Padding(0)
+        minimizeBtn.Name = "minimizeBtn"
+        minimizeBtn.Size = New Size(25, 19)
+        minimizeBtn.TabIndex = 5
+        minimizeBtn.TextAlign = ContentAlignment.TopCenter
+        minimizeBtn.UseVisualStyleBackColor = False
         ' 
         ' xBtn
         ' 
@@ -424,35 +437,6 @@ Partial Class MainForm
         xBtn.Size = New Size(26, 19)
         xBtn.TabIndex = 3
         xBtn.UseVisualStyleBackColor = False
-        ' 
-        ' maximizeBtn
-        ' 
-        maximizeBtn.BackColor = Color.FromArgb(CByte(182), CByte(213), CByte(255))
-        maximizeBtn.Dock = DockStyle.Fill
-        maximizeBtn.FlatAppearance.BorderSize = 0
-        maximizeBtn.FlatStyle = FlatStyle.Flat
-        maximizeBtn.Image = CType(resources.GetObject("maximizeBtn.Image"), Image)
-        maximizeBtn.Location = New Point(24, 0)
-        maximizeBtn.Margin = New Padding(0)
-        maximizeBtn.Name = "maximizeBtn"
-        maximizeBtn.Size = New Size(25, 19)
-        maximizeBtn.TabIndex = 2
-        maximizeBtn.UseVisualStyleBackColor = False
-        ' 
-        ' minimizeBtn
-        ' 
-        minimizeBtn.BackColor = Color.FromArgb(CByte(152), CByte(169), CByte(192))
-        minimizeBtn.Dock = DockStyle.Fill
-        minimizeBtn.FlatAppearance.BorderSize = 0
-        minimizeBtn.FlatStyle = FlatStyle.Flat
-        minimizeBtn.ForeColor = Color.Transparent
-        minimizeBtn.Location = New Point(0, 0)
-        minimizeBtn.Margin = New Padding(0)
-        minimizeBtn.Name = "minimizeBtn"
-        minimizeBtn.Size = New Size(24, 19)
-        minimizeBtn.TabIndex = 2
-        minimizeBtn.TextAlign = ContentAlignment.TopCenter
-        minimizeBtn.UseVisualStyleBackColor = False
         ' 
         ' topDivider
         ' 
@@ -512,6 +496,7 @@ Partial Class MainForm
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "BubbleFresh"
+        WindowState = FormWindowState.Maximized
         navbarPanel.ResumeLayout(False)
         navbarBtnPanel.ResumeLayout(False)
         settingsBtnPanel.ResumeLayout(False)
@@ -559,7 +544,6 @@ Partial Class MainForm
     Friend WithEvents titleBarPanel As Panel
     Friend WithEvents controlsTblPanel As TableLayoutPanel
     Friend WithEvents xBtn As Button
-    Friend WithEvents maximizeBtn As Button
-    Friend WithEvents minimizeBtn As Button
     Friend WithEvents Guna2ShapesTool1 As Guna.UI2.WinForms.Guna2ShapesTool
+    Friend WithEvents minimizeBtn As Button
 End Class

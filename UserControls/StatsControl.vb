@@ -5,7 +5,7 @@ Imports System.Globalization
 Public Class StatsControl
 
     ' Keep dbPath WITHOUT a trailing semicolon
-    Private dbPath As String = "C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb"
+    Private dbPath As String = "C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
     Private conString As String
 
     Private chartStats As Chart
@@ -18,6 +18,7 @@ Public Class StatsControl
         cmbPeriod.Items.Clear()
         cmbPeriod.Items.AddRange({"Weekly", "Monthly", "Semi-Annually", "Annually"})
         cmbPeriod.SelectedIndex = 0
+
 
         ' Setup chart
         SetupChart()

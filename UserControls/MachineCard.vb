@@ -1,6 +1,14 @@
 ﻿Imports System.Data.OleDb
 
 Public Class MachineCard
+    Public Sub New()
+        InitializeComponent()
+        Me.AutoSize = False
+        Me.Dock = DockStyle.None
+        Me.Anchor = AnchorStyles.None
+        picMachine.SizeMode = PictureBoxSizeMode.Zoom
+    End Sub
+
     Public Property MachineImage As Image
         Get
             Return picMachine.Image
@@ -21,9 +29,6 @@ Public Class MachineCard
     Public originalProceedColor As Color
     Public originalProceedText As String
 
-    ' Change this to match your actual database path or connection setup
-    Private ReadOnly connectionString As String =
-        "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
     Public ReadOnly Property ProceedButton As Guna.UI2.WinForms.Guna2Button
         Get
@@ -172,7 +177,7 @@ Public Class MachineCard
         Dim unitLabel As String = $"Unit {UnitNumber}"
 
         Try
-            Using con As New OleDbConnection(connectionString)
+            Using con As New OleDbConnection(Db.ConnectionString)
                 con.Open()
 
                 Dim query As String =
@@ -196,10 +201,6 @@ Public Class MachineCard
             MessageBox.Show("Error updating transaction status: " & ex.Message,
                             "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-    End Sub
-    Public Sub New()
-        InitializeComponent()
-        picMachine.SizeMode = PictureBoxSizeMode.Zoom
     End Sub
 
 End Class
