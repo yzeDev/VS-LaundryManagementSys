@@ -503,6 +503,7 @@ Partial Class MainForm
         Controls.Add(topDivider)
         Controls.Add(controlsPanel)
         Controls.Add(navbarPanel)
+        DoubleBuffered = True
         Font = New Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
