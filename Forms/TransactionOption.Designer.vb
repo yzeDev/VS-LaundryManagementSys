@@ -22,31 +22,32 @@ Partial Class TransactionOption
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransactionOption))
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges55 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges57 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges58 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges59 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges60 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges61 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges62 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges63 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges64 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges65 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges66 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges67 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges68 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges69 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges70 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges71 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges72 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Panel1 = New Panel()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -137,6 +138,7 @@ Partial Class TransactionOption
         Label6 = New Label()
         TableLayoutPanel7 = New TableLayoutPanel()
         PictureBox2 = New PictureBox()
+        Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Panel1.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -309,9 +311,9 @@ Partial Class TransactionOption
         btnCancelOrder.FlatAppearance.BorderSize = 0
         btnCancelOrder.FlatStyle = FlatStyle.Flat
         btnCancelOrder.Image = CType(resources.GetObject("btnCancelOrder.Image"), Image)
-        btnCancelOrder.Location = New Point(957, 3)
+        btnCancelOrder.Location = New Point(950, 3)
         btnCancelOrder.Name = "btnCancelOrder"
-        btnCancelOrder.Size = New Size(24, 23)
+        btnCancelOrder.Size = New Size(31, 28)
         btnCancelOrder.TabIndex = 5
         btnCancelOrder.UseVisualStyleBackColor = False
         ' 
@@ -363,12 +365,12 @@ Partial Class TransactionOption
         Guna2Panel2.BorderRadius = 5
         Guna2Panel2.BorderThickness = 2
         Guna2Panel2.Controls.Add(TableLayoutPanel8)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges5
+        Guna2Panel2.CustomizableEdges = CustomizableEdges49
         Guna2Panel2.Dock = DockStyle.Fill
         Guna2Panel2.Location = New Point(5, 5)
         Guna2Panel2.Name = "Guna2Panel2"
         Guna2Panel2.Padding = New Padding(3)
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges50
         Guna2Panel2.Size = New Size(218, 330)
         Guna2Panel2.TabIndex = 3
         ' 
@@ -398,7 +400,7 @@ Partial Class TransactionOption
         ' selfServBtn
         ' 
         selfServBtn.BorderRadius = 3
-        selfServBtn.CustomizableEdges = CustomizableEdges1
+        selfServBtn.CustomizableEdges = CustomizableEdges51
         selfServBtn.DisabledState.BorderColor = Color.DarkGray
         selfServBtn.DisabledState.CustomBorderColor = Color.DarkGray
         selfServBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -413,7 +415,7 @@ Partial Class TransactionOption
         selfServBtn.Location = New Point(7, 289)
         selfServBtn.Margin = New Padding(7)
         selfServBtn.Name = "selfServBtn"
-        selfServBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        selfServBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges52
         selfServBtn.Size = New Size(198, 28)
         selfServBtn.TabIndex = 12
         selfServBtn.Text = "SELECT SERVICE"
@@ -485,12 +487,12 @@ Partial Class TransactionOption
         Guna2Panel5.BorderRadius = 5
         Guna2Panel5.BorderThickness = 1
         Guna2Panel5.Controls.Add(TableLayoutPanel14)
-        Guna2Panel5.CustomizableEdges = CustomizableEdges3
+        Guna2Panel5.CustomizableEdges = CustomizableEdges53
         Guna2Panel5.Dock = DockStyle.Fill
         Guna2Panel5.Location = New Point(7, 163)
         Guna2Panel5.Margin = New Padding(7, 3, 7, 3)
         Guna2Panel5.Name = "Guna2Panel5"
-        Guna2Panel5.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Panel5.ShadowDecoration.CustomizableEdges = CustomizableEdges54
         Guna2Panel5.Size = New Size(198, 110)
         Guna2Panel5.TabIndex = 7
         ' 
@@ -640,12 +642,12 @@ Partial Class TransactionOption
         Guna2Panel4.BorderRadius = 5
         Guna2Panel4.BorderThickness = 2
         Guna2Panel4.Controls.Add(TableLayoutPanel12)
-        Guna2Panel4.CustomizableEdges = CustomizableEdges11
+        Guna2Panel4.CustomizableEdges = CustomizableEdges55
         Guna2Panel4.Dock = DockStyle.Fill
         Guna2Panel4.Location = New Point(5, 5)
         Guna2Panel4.Name = "Guna2Panel4"
         Guna2Panel4.Padding = New Padding(3)
-        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges56
         Guna2Panel4.Size = New Size(218, 330)
         Guna2Panel4.TabIndex = 3
         ' 
@@ -675,7 +677,7 @@ Partial Class TransactionOption
         ' dryCleanBtn
         ' 
         dryCleanBtn.BorderRadius = 3
-        dryCleanBtn.CustomizableEdges = CustomizableEdges7
+        dryCleanBtn.CustomizableEdges = CustomizableEdges57
         dryCleanBtn.DisabledState.BorderColor = Color.DarkGray
         dryCleanBtn.DisabledState.CustomBorderColor = Color.DarkGray
         dryCleanBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -690,7 +692,7 @@ Partial Class TransactionOption
         dryCleanBtn.Location = New Point(7, 289)
         dryCleanBtn.Margin = New Padding(7)
         dryCleanBtn.Name = "dryCleanBtn"
-        dryCleanBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        dryCleanBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges58
         dryCleanBtn.Size = New Size(198, 28)
         dryCleanBtn.TabIndex = 13
         dryCleanBtn.Text = "SELECT SERVICE"
@@ -712,12 +714,12 @@ Partial Class TransactionOption
         Guna2Panel7.BorderRadius = 5
         Guna2Panel7.BorderThickness = 1
         Guna2Panel7.Controls.Add(TableLayoutPanel17)
-        Guna2Panel7.CustomizableEdges = CustomizableEdges9
+        Guna2Panel7.CustomizableEdges = CustomizableEdges59
         Guna2Panel7.Dock = DockStyle.Fill
         Guna2Panel7.Location = New Point(7, 163)
         Guna2Panel7.Margin = New Padding(7, 3, 7, 3)
         Guna2Panel7.Name = "Guna2Panel7"
-        Guna2Panel7.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2Panel7.ShadowDecoration.CustomizableEdges = CustomizableEdges60
         Guna2Panel7.Size = New Size(198, 110)
         Guna2Panel7.TabIndex = 10
         ' 
@@ -917,12 +919,12 @@ Partial Class TransactionOption
         Guna2Panel1.BorderRadius = 5
         Guna2Panel1.BorderThickness = 2
         Guna2Panel1.Controls.Add(TableLayoutPanel10)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges17
+        Guna2Panel1.CustomizableEdges = CustomizableEdges61
         Guna2Panel1.Dock = DockStyle.Fill
         Guna2Panel1.Location = New Point(5, 5)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.Padding = New Padding(3)
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges62
         Guna2Panel1.Size = New Size(218, 330)
         Guna2Panel1.TabIndex = 3
         ' 
@@ -952,7 +954,7 @@ Partial Class TransactionOption
         ' fullServBtn
         ' 
         fullServBtn.BorderRadius = 3
-        fullServBtn.CustomizableEdges = CustomizableEdges13
+        fullServBtn.CustomizableEdges = CustomizableEdges63
         fullServBtn.DisabledState.BorderColor = Color.DarkGray
         fullServBtn.DisabledState.CustomBorderColor = Color.DarkGray
         fullServBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -967,7 +969,7 @@ Partial Class TransactionOption
         fullServBtn.Location = New Point(7, 289)
         fullServBtn.Margin = New Padding(7)
         fullServBtn.Name = "fullServBtn"
-        fullServBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        fullServBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges64
         fullServBtn.Size = New Size(198, 28)
         fullServBtn.TabIndex = 13
         fullServBtn.Text = "SELECT SERVICE"
@@ -989,12 +991,12 @@ Partial Class TransactionOption
         Guna2Panel8.BorderRadius = 5
         Guna2Panel8.BorderThickness = 1
         Guna2Panel8.Controls.Add(TableLayoutPanel16)
-        Guna2Panel8.CustomizableEdges = CustomizableEdges15
+        Guna2Panel8.CustomizableEdges = CustomizableEdges65
         Guna2Panel8.Dock = DockStyle.Fill
         Guna2Panel8.Location = New Point(7, 163)
         Guna2Panel8.Margin = New Padding(7, 3, 7, 3)
         Guna2Panel8.Name = "Guna2Panel8"
-        Guna2Panel8.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel8.ShadowDecoration.CustomizableEdges = CustomizableEdges66
         Guna2Panel8.Size = New Size(198, 110)
         Guna2Panel8.TabIndex = 9
         ' 
@@ -1194,12 +1196,12 @@ Partial Class TransactionOption
         Guna2Panel3.BorderRadius = 5
         Guna2Panel3.BorderThickness = 2
         Guna2Panel3.Controls.Add(TableLayoutPanel6)
-        Guna2Panel3.CustomizableEdges = CustomizableEdges23
+        Guna2Panel3.CustomizableEdges = CustomizableEdges67
         Guna2Panel3.Dock = DockStyle.Fill
         Guna2Panel3.Location = New Point(5, 5)
         Guna2Panel3.Name = "Guna2Panel3"
         Guna2Panel3.Padding = New Padding(3)
-        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges68
         Guna2Panel3.Size = New Size(218, 330)
         Guna2Panel3.TabIndex = 3
         ' 
@@ -1229,7 +1231,7 @@ Partial Class TransactionOption
         ' basicServBtn
         ' 
         basicServBtn.BorderRadius = 3
-        basicServBtn.CustomizableEdges = CustomizableEdges19
+        basicServBtn.CustomizableEdges = CustomizableEdges69
         basicServBtn.DisabledState.BorderColor = Color.DarkGray
         basicServBtn.DisabledState.CustomBorderColor = Color.DarkGray
         basicServBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1244,7 +1246,7 @@ Partial Class TransactionOption
         basicServBtn.Location = New Point(7, 289)
         basicServBtn.Margin = New Padding(7)
         basicServBtn.Name = "basicServBtn"
-        basicServBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        basicServBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges70
         basicServBtn.Size = New Size(198, 28)
         basicServBtn.TabIndex = 13
         basicServBtn.Text = "SELECT SERVICE"
@@ -1266,12 +1268,12 @@ Partial Class TransactionOption
         Guna2Panel6.BorderRadius = 5
         Guna2Panel6.BorderThickness = 1
         Guna2Panel6.Controls.Add(TableLayoutPanel15)
-        Guna2Panel6.CustomizableEdges = CustomizableEdges21
+        Guna2Panel6.CustomizableEdges = CustomizableEdges71
         Guna2Panel6.Dock = DockStyle.Fill
         Guna2Panel6.Location = New Point(7, 163)
         Guna2Panel6.Margin = New Padding(7, 3, 7, 3)
         Guna2Panel6.Name = "Guna2Panel6"
-        Guna2Panel6.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2Panel6.ShadowDecoration.CustomizableEdges = CustomizableEdges72
         Guna2Panel6.Size = New Size(198, 110)
         Guna2Panel6.TabIndex = 8
         ' 
@@ -1442,6 +1444,11 @@ Partial Class TransactionOption
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
         ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 20
+        Guna2Elipse1.TargetControl = Me
+        ' 
         ' TransactionOption
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1608,4 +1615,5 @@ Partial Class TransactionOption
     Friend WithEvents fullServBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents basicServBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnCancelOrder As Button
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
 End Class

@@ -46,7 +46,7 @@ Partial Class PaymentDetails
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
         TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 3)
         TableLayoutPanel1.Controls.Add(Panel1, 0, 1)
         TableLayoutPanel1.Controls.Add(Label1, 0, 0)
@@ -55,18 +55,18 @@ Partial Class PaymentDetails
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 4
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 1.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 53.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 1F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 53F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23F))
         TableLayoutPanel1.Size = New Size(400, 220)
         TableLayoutPanel1.TabIndex = 2
         ' 
         ' TableLayoutPanel3
         ' 
         TableLayoutPanel3.ColumnCount = 2
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.Controls.Add(cancelBtn, 0, 0)
         TableLayoutPanel3.Controls.Add(confirmBtn, 1, 0)
         TableLayoutPanel3.Dock = DockStyle.Fill
@@ -74,7 +74,7 @@ Partial Class PaymentDetails
         TableLayoutPanel3.Margin = New Padding(15, 0, 15, 15)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 1
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel3.Size = New Size(370, 37)
         TableLayoutPanel3.TabIndex = 10
         ' 
@@ -147,14 +147,14 @@ Partial Class PaymentDetails
         Label1.Name = "Label1"
         Label1.Size = New Size(370, 20)
         Label1.TabIndex = 3
-        Label1.Text = "Payment Details"
+        Label1.Text = "Cash Payment"
         Label1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TableLayoutPanel2
         ' 
         TableLayoutPanel2.ColumnCount = 2
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 57.0F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 43.0F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 57F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 43F))
         TableLayoutPanel2.Controls.Add(amountPaidBox, 1, 0)
         TableLayoutPanel2.Controls.Add(Label2, 0, 0)
         TableLayoutPanel2.Dock = DockStyle.Fill
@@ -162,7 +162,7 @@ Partial Class PaymentDetails
         TableLayoutPanel2.Margin = New Padding(15, 35, 15, 35)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
         TableLayoutPanel2.Size = New Size(370, 46)
         TableLayoutPanel2.TabIndex = 11
         ' 
@@ -197,12 +197,12 @@ Partial Class PaymentDetails
         Label2.Name = "Label2"
         Label2.Size = New Size(210, 46)
         Label2.TabIndex = 4
-        Label2.Text = "Amount To Pay:"
+        Label2.Text = "Amount Paid:"
         Label2.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' PaymentDetails
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(400, 220)

@@ -5,7 +5,7 @@ Public Class TransactionForm
     Public Property Mode As String = "View" ' "View" or "Edit"
     Public Property TransactionId As Integer
 
-    Private connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\source\repos\LaundryManagementSys\LaundryDatabase.accdb;"
+    'Private connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\source\repos\LaundryManagementSys\LaundryDatabase.accdb;"
 
     Public Sub New()
         InitializeComponent()
@@ -44,7 +44,7 @@ Public Class TransactionForm
 
     ' ✅ Loads transaction info from database
     Private Sub LoadTransactionData()
-        Using conn As New OleDbConnection(connStr)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Dim sql As String = "SELECT * FROM Transactions WHERE TransactionID=@id"
             Using cmd As New OleDbCommand(sql, conn)
@@ -206,33 +206,56 @@ Public Class TransactionForm
 
 
     ' ✅ Save changes to database
-    Private Sub btnSave_Click(sender As Object, e As EventArgs)
-        If Mode = "Edit" Then
-            Try
-                Using conn As New OleDbConnection(connStr)
-                    conn.Open()
-                    Dim sql = "UPDATE Transactions SET CustomerName=@name, ServiceType=@service, ContactNumber=@contact, Address=@address, Status=@status, AmountReceived=@received WHERE TransactionID=@id"
-                    Using cmd As New OleDbCommand(sql, conn)
-                        cmd.Parameters.AddWithValue("@name", tbCustomerName.Text)
-                        cmd.Parameters.AddWithValue("@service", cbService.Text)
-                        cmd.Parameters.AddWithValue("@contact", tbContactNum.Text)
-                        cmd.Parameters.AddWithValue("@address", tbAddress.Text)
-                        cmd.Parameters.AddWithValue("@status", cbStatus.Text)
-                        cmd.Parameters.AddWithValue("@received", tbAmountReceived.Text)
-                        cmd.Parameters.AddWithValue("@id", TransactionId)
-                        cmd.ExecuteNonQuery()
-                    End Using
-                End Using
-
-                MessageBox.Show("Transaction updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                DialogResult = DialogResult.OK
-                Close()
-
-            Catch ex As Exception
-                MessageBox.Show("Error updating transaction: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        If Not String.Equals(Mode, "Edit", StringComparison.OrdinalIgnoreCase) Then
+            Return
         End If
+
+        Try
+            Using conn As New OleDb.OleDbConnection(Db.ConnectionString)
+                conn.Open()
+
+                Dim sql As String =
+                "UPDATE [Transactions] " &
+                "SET [CustomerName]=?, [ServiceType]=?, [ContactNumber]=?, [Address]=?, [Status]=?, [AmountReceived]=? " &
+                "WHERE [TransactionID]=?"
+
+                Using cmd As New OleDb.OleDbCommand(sql, conn)
+                    ' order matters for OleDb:
+                    cmd.Parameters.Add("?", OleDb.OleDbType.VarWChar).Value = tbCustomerName.Text
+                    cmd.Parameters.Add("?", OleDb.OleDbType.VarWChar).Value = cbService.Text
+                    cmd.Parameters.Add("?", OleDb.OleDbType.VarWChar).Value = tbContactNum.Text
+                    cmd.Parameters.Add("?", OleDb.OleDbType.VarWChar).Value = tbAddress.Text
+                    cmd.Parameters.Add("?", OleDb.OleDbType.VarWChar).Value = cbStatus.Text
+
+                    Dim amtReceived As Decimal
+                    If Not Decimal.TryParse(tbAmountReceived.Text, amtReceived) Then amtReceived = 0D
+                    cmd.Parameters.Add("?", OleDb.OleDbType.Currency).Value = amtReceived
+
+                    cmd.Parameters.Add("?", OleDb.OleDbType.Integer).Value = TransactionId
+
+                    Dim affected = cmd.ExecuteNonQuery()
+                    If affected = 0 Then
+                        MessageBox.Show("No rows were updated. The transaction may have been changed or removed.",
+                                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Return
+                    End If
+                End Using
+            End Using
+
+            MessageBox.Show("Transaction updated successfully!", "Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' Let the caller know to refresh
+            Me.DialogResult = DialogResult.OK
+            Me.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error updating transaction: " & ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
+
 
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

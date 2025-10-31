@@ -23,17 +23,17 @@ Partial Class FullServiceForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label14 = New Label()
         Label4 = New Label()
@@ -98,7 +98,7 @@ Partial Class FullServiceForm
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.Padding = New Padding(2, 2, 2, 2)
+        TableLayoutPanel1.Padding = New Padding(2)
         TableLayoutPanel1.RowCount = 9
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 100F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 40F))
@@ -209,7 +209,7 @@ Partial Class FullServiceForm
         ' Guna2txtboxName
         ' 
         Guna2txtboxName.BorderRadius = 5
-        Guna2txtboxName.CustomizableEdges = CustomizableEdges16
+        Guna2txtboxName.CustomizableEdges = CustomizableEdges1
         Guna2txtboxName.DefaultText = ""
         Guna2txtboxName.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxName.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -224,7 +224,7 @@ Partial Class FullServiceForm
         Guna2txtboxName.Name = "Guna2txtboxName"
         Guna2txtboxName.PlaceholderText = ""
         Guna2txtboxName.SelectedText = ""
-        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2txtboxName.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2txtboxName.Size = New Size(490, 37)
         Guna2txtboxName.TabIndex = 1
         ' 
@@ -261,7 +261,7 @@ Partial Class FullServiceForm
         ' Guna2txtboxContact
         ' 
         Guna2txtboxContact.BorderRadius = 5
-        Guna2txtboxContact.CustomizableEdges = CustomizableEdges18
+        Guna2txtboxContact.CustomizableEdges = CustomizableEdges3
         Guna2txtboxContact.DefaultText = ""
         Guna2txtboxContact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxContact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -276,7 +276,7 @@ Partial Class FullServiceForm
         Guna2txtboxContact.Name = "Guna2txtboxContact"
         Guna2txtboxContact.PlaceholderText = ""
         Guna2txtboxContact.SelectedText = ""
-        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        Guna2txtboxContact.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2txtboxContact.Size = New Size(254, 29)
         Guna2txtboxContact.TabIndex = 2
         ' 
@@ -295,7 +295,7 @@ Partial Class FullServiceForm
         ' Guna2txtboxWeight
         ' 
         Guna2txtboxWeight.BorderRadius = 5
-        Guna2txtboxWeight.CustomizableEdges = CustomizableEdges20
+        Guna2txtboxWeight.CustomizableEdges = CustomizableEdges5
         Guna2txtboxWeight.DefaultText = ""
         Guna2txtboxWeight.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2txtboxWeight.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -308,10 +308,10 @@ Partial Class FullServiceForm
         Guna2txtboxWeight.Location = New Point(284, 40)
         Guna2txtboxWeight.Margin = New Padding(9, 4, 9, 4)
         Guna2txtboxWeight.Name = "Guna2txtboxWeight"
-        Guna2txtboxWeight.Padding = New Padding(3, 3, 3, 3)
+        Guna2txtboxWeight.Padding = New Padding(3)
         Guna2txtboxWeight.PlaceholderText = ""
         Guna2txtboxWeight.SelectedText = ""
-        Guna2txtboxWeight.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2txtboxWeight.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2txtboxWeight.Size = New Size(197, 29)
         Guna2txtboxWeight.TabIndex = 6
         ' 
@@ -463,7 +463,7 @@ Partial Class FullServiceForm
         ' gbContinue
         ' 
         gbContinue.BorderRadius = 5
-        gbContinue.CustomizableEdges = CustomizableEdges12
+        gbContinue.CustomizableEdges = CustomizableEdges7
         gbContinue.DisabledState.BorderColor = Color.DarkGray
         gbContinue.DisabledState.CustomBorderColor = Color.DarkGray
         gbContinue.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -476,7 +476,7 @@ Partial Class FullServiceForm
         gbContinue.Location = New Point(258, 2)
         gbContinue.Margin = New Padding(3, 2, 3, 2)
         gbContinue.Name = "gbContinue"
-        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        gbContinue.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         gbContinue.Size = New Size(105, 33)
         gbContinue.TabIndex = 37
         gbContinue.Text = "CONTINUE"
@@ -484,14 +484,14 @@ Partial Class FullServiceForm
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel2)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges14
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges10
         Guna2GradientPanel1.Dock = DockStyle.Fill
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.GradientMode = Drawing2D.LinearGradientMode.Vertical
         Guna2GradientPanel1.Location = New Point(5, 5)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges11
         Guna2GradientPanel1.Size = New Size(490, 94)
         Guna2GradientPanel1.TabIndex = 9
         ' 
@@ -562,7 +562,7 @@ Partial Class FullServiceForm
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(0, 0)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(94, 77)
         Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage

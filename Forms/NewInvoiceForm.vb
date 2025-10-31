@@ -271,9 +271,9 @@ Public Class NewInvoiceForm
     ' Add inside NewInvoiceForm (or a shared utility module)
     Private Function GetNextTransactionIdEstimate() As Long
         Dim nextId As Long = 1
-        Dim cs As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        'Dim cs As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
         Try
-            Using cn As New OleDb.OleDbConnection(cs)
+            Using cn As New OleDb.OleDbConnection(Db.ConnectionString)
                 cn.Open()
                 Using cmd As New OleDb.OleDbCommand("SELECT MAX(TransactionID) FROM Transactions", cn)
                     Dim v = cmd.ExecuteScalar()
