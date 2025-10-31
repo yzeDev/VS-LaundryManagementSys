@@ -3,28 +3,47 @@ Imports System.Net.Http
 Imports System.Net.Http.Headers
 Imports System.Text
 Imports System.Threading.Tasks
+Imports System.Reflection
+
 Public Class DashboardControl
+
+
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
     Private Shared ReadOnly httpClient As New HttpClient()
-    ' Store the clickable icon areas per row
+    ' ==== Caches and click areas ====
+    Private dashboardCache As New List(Of TransactionItem)
+
     Private notifyIconRects As New Dictionary(Of Integer, Rectangle)
     Private completeIconRects As New Dictionary(Of Integer, Rectangle)
+    Private archiveIconRects As New Dictionary(Of Integer, Rectangle)
+
+    ' Current view after search/sort
+    Private filteredView As New List(Of TransactionItem)
+
+
+
+
+    ' ==== Model for rows ====
+    Private Class TransactionItem
+        Public Property TransactionID As Integer
+        Public Property CustomerName As String
+        Public Property ContactNumber As String
+        Public Property Status As String
+        Public Property TransactionDate As Nullable(Of DateTime)
+    End Class
+
+
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Setup main dashboard transaction table
         SetupDashboardTransactionTable()
-
-
-        ' Load counters
+        InitSortCombo()
         LoadDashboardCounters()
         LoadMachineCounters()
         LoadDashboardTransactions()
-
-        ' Make the pendingOrdersPanel clickable with hand cursor
         MakeGuna2PanelClickable(pendingOrdersPanel, Sub() ShowPendingOrders(Nothing, Nothing))
-
     End Sub
+
 
     Public Sub RefreshDashboard()
         CheckForTransactionUpdates()
@@ -35,11 +54,10 @@ Public Class DashboardControl
     ' TRANSACTION COUNTERS
     ' =======================
     Private Sub CheckForTransactionUpdates()
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
         Dim totalCount As Integer = 0
 
         Try
-            Using conn As New OleDbConnection(connString)
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
                 Using cmd As New OleDbCommand("SELECT COUNT(*) FROM Transactions", conn)
                     totalCount = Convert.ToInt32(cmd.ExecuteScalar())
@@ -58,8 +76,8 @@ Public Class DashboardControl
 
     Private Sub LoadDashboardCounters()
         Try
-            Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-            Using conn As New OleDbConnection(connString)
+
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
 
                 Dim query As String = "
@@ -70,7 +88,6 @@ Public Class DashboardControl
 
                 Using cmd As New OleDbCommand(query, conn)
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
-                        ' Reset all counts
                         lblPendingOrders.Text = "0"
                         lblinProgress.Text = "0"
                         lblDelivery.Text = "0"
@@ -103,11 +120,10 @@ Public Class DashboardControl
     ' MACHINE COUNTERS
     ' =======================
     Private Sub CheckForMachineUpdates()
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
         Dim totalCount As Integer = 0
 
         Try
-            Using conn As New OleDbConnection(connString)
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
                 Using cmd As New OleDbCommand("SELECT COUNT(*) FROM UnitData", conn)
                     totalCount = Convert.ToInt32(cmd.ExecuteScalar())
@@ -126,8 +142,7 @@ Public Class DashboardControl
 
     Private Sub LoadMachineCounters()
         Try
-            Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-            Using conn As New OleDbConnection(connString)
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
 
                 Dim query As String = "
@@ -135,7 +150,6 @@ Public Class DashboardControl
                     FROM UnitData
                     GROUP BY Status;
                 "
-
                 Using cmd As New OleDbCommand(query, conn)
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
                         lblAvailableMachines.Text = "0"
@@ -164,46 +178,244 @@ Public Class DashboardControl
     End Sub
     Private Sub LoadDashboardTransactions()
         Try
-            dgvDashboardTransactions.Rows.Clear()
+            dashboardCache.Clear()
 
-            Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-            Using conn As New OleDbConnection(connString)
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
 
                 Dim query As String = "
-                SELECT TransactionID, CustomerName, ContactNumber, Status
-                FROM Transactions
-                WHERE Status IN ('For Pickup', 'For Delivery')
-                ORDER BY TransactionID DESC;
-            "
+SELECT [TransactionID], [CustomerName], [ContactNumber], [Status], [TransactionDate]
+FROM [Transactions]
+WHERE [Status] IN ('For Pickup', 'For Delivery')
+ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
 
                 Using cmd As New OleDbCommand(query, conn)
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
-                        Dim notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\bell.png")
-                        Dim completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
-
                         While reader.Read()
-                            dgvDashboardTransactions.Rows.Add(
-                                reader("TransactionID").ToString(),
-                                reader("CustomerName").ToString(),
-                                reader("ContactNumber").ToString(),
-                                reader("Status").ToString(),
-                                Nothing, ' waiting time column (blank for now)
-                                notifyIcon,
-                                completeIcon
-                            )
-                        End While
+                            Dim txDate As Nullable(Of DateTime) = Nothing
+                            If Not reader.IsDBNull(reader.GetOrdinal("TransactionDate")) Then
+                                txDate = Convert.ToDateTime(reader("TransactionDate"))
+                            End If
 
+                            dashboardCache.Add(New TransactionItem With {
+                            .TransactionID = Convert.ToInt32(reader("TransactionID")),
+                            .CustomerName = reader("CustomerName").ToString(),
+                            .ContactNumber = reader("ContactNumber").ToString(),
+                            .Status = reader("Status").ToString(),
+                            .TransactionDate = txDate
+                        })
+                        End While
                     End Using
                 End Using
             End Using
 
+            RenderDashboardRows()
+
         Catch ex As Exception
             MessageBox.Show("Error loading dashboard transactions: " & ex.Message)
-        End Try '
+        End Try
+
         dgvDashboardTransactions.ClearSelection()
         dgvDashboardTransactions.CurrentCell = Nothing
     End Sub
+
+
+    Private Sub RenderDashboardRows()
+        ' Suspend painting to prevent flicker during update
+        dgvDashboardTransactions.SuspendLayout()
+
+        Try
+            notifyIconRects.Clear()
+            completeIconRects.Clear()
+            archiveIconRects.Clear()
+
+            dgvDashboardTransactions.Rows.Clear()
+
+            Dim q As String = If(gtbSearch IsNot Nothing, gtbSearch.Text.Trim().ToLower(), "")
+            Dim sortSel As String = If(gcbSort IsNot Nothing AndAlso gcbSort.SelectedItem IsNot Nothing,
+                                   gcbSort.SelectedItem.ToString(), "")
+
+            ' Filter
+            Dim filtered = dashboardCache.Where(Function(t)
+                                                    If q = "" Then Return True
+                                                    Return t.TransactionID.ToString().Contains(q) _
+                                                    OrElse (t.CustomerName?.ToLower().Contains(q)) _
+                                                    OrElse (t.ContactNumber?.ToLower().Contains(q)) _
+                                                    OrElse (t.Status?.ToLower().Contains(q))
+                                                End Function)
+
+            ' Add rows with numbering + computed waiting time
+            Dim rowNum As Integer = 1
+            For Each t In filtered
+                Dim waitingStr As String = ""
+                If t.TransactionDate.HasValue Then
+                    Dim span = DateTime.Now - t.TransactionDate.Value
+                    If span.TotalMinutes < 1 Then
+                        waitingStr = "<1m"
+                    ElseIf span.TotalDays >= 1 Then
+                        waitingStr = $"{CInt(Math.Floor(span.TotalDays))}d {span.Hours}h"
+                    ElseIf span.TotalHours >= 1 Then
+                        waitingStr = $"{CInt(Math.Floor(span.TotalHours))}h {span.Minutes}m"
+                    Else
+                        waitingStr = $"{CInt(Math.Floor(span.TotalMinutes))}m"
+                    End If
+                End If
+
+                dgvDashboardTransactions.Rows.Add(
+                rowNum,
+                t.TransactionID.ToString(),
+                t.CustomerName,
+                t.ContactNumber,
+                t.Status,
+                waitingStr,
+                Nothing
+            )
+                rowNum += 1
+            Next
+
+        Finally
+            ' Resume painting
+            dgvDashboardTransactions.ResumeLayout(True)
+            dgvDashboardTransactions.ClearSelection()
+            dgvDashboardTransactions.CurrentCell = Nothing
+        End Try
+    End Sub
+
+
+    Private Sub InitSortCombo()
+        gcbSort.Items.Clear()
+        gcbSort.Items.AddRange(New Object() {
+        "Date (Oldest First)",
+        "Date (Newest First)",
+        "ID (Oldest First)",
+        "ID (Newest First)",
+        "Customer (A-Z)",
+        "Customer (Z-A)",
+        "Status (For Pickup first)",
+        "Status (For Delivery first)"
+    })
+        gcbSort.SelectedIndex = 0 ' default: Date oldest first
+    End Sub
+
+
+    Private Sub gtbSearch_TextChanged(sender As Object, e As EventArgs) Handles gtbSearch.TextChanged
+        ApplyFilterAndSort()
+    End Sub
+
+    Private Sub gcbSort_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gcbSort.SelectedIndexChanged
+        ApplyFilterAndSort()
+    End Sub
+
+    Private Sub dgvDashboardTransactions_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvDashboardTransactions.ColumnHeaderMouseClick
+        ' keep headers inert (no built-in sort); just re-apply view
+        ApplyFilterAndSort()
+    End Sub
+
+
+    Private Sub ApplyFilterAndSort()
+        Dim q As String = If(gtbSearch IsNot Nothing, gtbSearch.Text.Trim().ToLower(), "")
+        Dim sortSel As String = If(gcbSort IsNot Nothing AndAlso gcbSort.SelectedItem IsNot Nothing,
+                               gcbSort.SelectedItem.ToString(), "")
+
+        ' --- FILTER (case-insensitive contains) ---
+        filteredView = dashboardCache.Where(Function(t)
+                                                If q = "" Then Return True
+
+                                                Dim cust = If(t.CustomerName, "")
+                                                Dim phone = If(t.ContactNumber, "")
+                                                Dim stat = If(t.Status, "")
+
+                                                Return t.TransactionID.ToString().IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0 _
+        OrElse cust.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0 _
+        OrElse phone.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0 _
+        OrElse stat.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0
+                                            End Function).ToList()
+
+
+        ' --- SORT ---
+        Select Case sortSel
+            Case "Date (Newest First)"
+                filteredView = filteredView _
+                .OrderByDescending(Function(t) If(t.TransactionDate, Date.MinValue)) _
+                .ThenByDescending(Function(t) t.TransactionID).ToList()
+
+            Case "ID (Oldest First)"
+                filteredView = filteredView.OrderBy(Function(t) t.TransactionID).ToList()
+
+            Case "ID (Newest First)"
+                filteredView = filteredView.OrderByDescending(Function(t) t.TransactionID).ToList()
+
+            Case "Customer (A-Z)"
+                filteredView = filteredView.OrderBy(Function(t) t.CustomerName).ToList()
+
+            Case "Customer (Z-A)"
+                filteredView = filteredView.OrderByDescending(Function(t) t.CustomerName).ToList()
+
+            Case "Status (For Pickup first)"
+                filteredView = filteredView _
+                .OrderBy(Function(t) If(String.Equals(t.Status, "For Pickup", StringComparison.OrdinalIgnoreCase), 0, 1)) _
+                .ThenBy(Function(t) If(t.TransactionDate, Date.MinValue)) _
+                .ThenBy(Function(t) t.TransactionID).ToList()
+
+            Case "Status (For Delivery first)"
+                filteredView = filteredView _
+                .OrderBy(Function(t) If(String.Equals(t.Status, "For Delivery", StringComparison.OrdinalIgnoreCase), 0, 1)) _
+                .ThenBy(Function(t) If(t.TransactionDate, Date.MinValue)) _
+                .ThenBy(Function(t) t.TransactionID).ToList()
+
+            Case Else ' "Date (Oldest First)" or blank
+                filteredView = filteredView _
+                .OrderBy(Function(t) If(t.TransactionDate, Date.MaxValue)) _
+                .ThenBy(Function(t) t.TransactionID).ToList()
+        End Select
+
+        RenderRows()
+    End Sub
+
+
+    Private Sub RenderRows()
+        dgvDashboardTransactions.SuspendLayout()
+        Try
+            notifyIconRects.Clear()
+            completeIconRects.Clear()
+            archiveIconRects.Clear()
+            dgvDashboardTransactions.Rows.Clear()
+
+            Dim rowNum As Integer = 1
+            For Each t In filteredView
+                Dim waitingStr As String = ""
+                If t.TransactionDate.HasValue Then
+                    Dim span = DateTime.Now - t.TransactionDate.Value
+                    If span.TotalMinutes < 1 Then
+                        waitingStr = "<1m"
+                    ElseIf span.TotalDays >= 1 Then
+                        waitingStr = $"{CInt(Math.Floor(span.TotalDays))}d {span.Hours}h"
+                    ElseIf span.TotalHours >= 1 Then
+                        waitingStr = $"{CInt(Math.Floor(span.TotalHours))}h {span.Minutes}m"
+                    Else
+                        waitingStr = $"{CInt(Math.Floor(span.TotalMinutes))}m"
+                    End If
+                End If
+
+                dgvDashboardTransactions.Rows.Add(
+                rowNum,                 ' NumberColumn (no header)
+                t.TransactionID,        ' hidden TransactionID
+                t.CustomerName,
+                t.ContactNumber,
+                t.Status,
+                waitingStr,             ' Waiting = Now - TransactionDate
+                Nothing                 ' actions (painted)
+            )
+                rowNum += 1
+            Next
+        Finally
+            dgvDashboardTransactions.ResumeLayout(True)
+            dgvDashboardTransactions.ClearSelection()
+            dgvDashboardTransactions.CurrentCell = Nothing
+        End Try
+    End Sub
+
+
 
 
     Private Sub HandleCheckClick(id As Integer)
@@ -212,8 +424,8 @@ Public Class DashboardControl
         If confirm <> DialogResult.Yes Then Exit Sub
 
         Try
-            Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-            Using conn As New OleDbConnection(connString)
+
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
                 Dim sql As String = "UPDATE Transactions SET Status = 'Completed' WHERE TransactionID = @id"
                 Using cmd As New OleDbCommand(sql, conn)
@@ -239,9 +451,8 @@ Public Class DashboardControl
 
     Private Sub SetupDashboardTransactionTable()
         With dgvDashboardTransactions
-            ' === BASIC STYLE SETTINGS ===
             .ReadOnly = True
-            .Font = New Font("Poppins", 12, FontStyle.Regular) ' Bigger font
+            .Font = New Font("Poppins", 14, FontStyle.Regular)
             .ColumnHeadersHeight = 35
             .ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
             .Columns.Clear()
@@ -258,66 +469,200 @@ Public Class DashboardControl
             .ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
             .GridColor = Color.White
 
-            ' === PURE WHITE HEADER DESIGN ===
+            ' ====== CRITICAL FIX: Suspend layout during setup ======
+            .SuspendLayout()
+
             With .ColumnHeadersDefaultCellStyle
                 .BackColor = Color.White
                 .ForeColor = Color.Black
-                .Font = New Font("Poppins", 12, FontStyle.Regular) ' Bigger header font
+                .Font = New Font("Poppins", 14, FontStyle.Regular)
                 .Alignment = DataGridViewContentAlignment.MiddleCenter
                 .SelectionBackColor = Color.White
                 .SelectionForeColor = Color.Black
             End With
 
-            ' === THIN BOTTOM BORDER UNDER HEADER ===
-            AddHandler .CellPainting, Sub(sender, e)
-                                          If e.RowIndex = -1 Then
-                                              e.PaintBackground(e.ClipBounds, True)
-                                              Using pen As New Pen(Color.LightGray, 1)
-                                                  e.Graphics.DrawLine(pen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right, e.CellBounds.Bottom - 1)
-                                              End Using
-                                              e.PaintContent(e.ClipBounds)
-                                              e.Handled = True
-                                          End If
-                                      End Sub
+            AddHandler .CellPainting, AddressOf dgvDashboardTransactions_CellPainting
+            AddHandler .ColumnHeaderMouseClick, AddressOf dgvDashboardTransactions_ColumnHeaderMouseClick
 
-            ' === ADD TEXT COLUMNS ===
-            .Columns.Add("TransactionID", "ID")
+            ' Number column
+            .Columns.Add(New DataGridViewTextBoxColumn() With {
+            .Name = "NumberColumn",
+            .HeaderText = "",
+            .ReadOnly = True,
+            .AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
+            .Width = 50
+        })
+
+            ' Hidden TransactionID
+            .Columns.Add(New DataGridViewTextBoxColumn() With {
+            .Name = "TransactionID",
+            .HeaderText = "ID",
+            .Visible = False
+        })
+
             .Columns.Add("CustomerName", "Customer")
             .Columns.Add("ContactNumber", "Contact")
             .Columns.Add("Status", "Status")
             .Columns.Add("WaitingTime", "Waiting")
 
-            ' === ADJUST ROW HEIGHT TO FIT FONT ===
-            .RowTemplate.Height = 30  ' Adjust this to fit your font nicely
-            .RowTemplate.DefaultCellStyle.Font = New Font("Poppins", 11, FontStyle.Regular) ' row font
+            .RowTemplate.Resizable = DataGridViewTriState.False
+            .RowTemplate.Height = 30
+            .RowTemplate.DefaultCellStyle.Font = New Font("Poppins", 11, FontStyle.Regular)
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
-            ' === ADD COMBINED ACTION COLUMN ===
             Dim actionCol As New DataGridViewImageColumn() With {
             .Name = "btnActions",
             .HeaderText = "Actions",
             .ImageLayout = DataGridViewImageCellLayout.Normal,
-            .Width = 50
+            .Width = 78
         }
             .Columns.Add(actionCol)
 
-            ' === CENTER ALIGN DATA CELLS ===
-            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-
-            ' === PREVENT SORTING (EXCEPT STATUS) ===
             For Each col As DataGridViewColumn In .Columns
                 col.SortMode = DataGridViewColumnSortMode.NotSortable
             Next
-            If .Columns.Contains("Status") Then
-                .Columns("Status").SortMode = DataGridViewColumnSortMode.Automatic
-            End If
+
+            ' ====== Resume layout ======
+            .ResumeLayout(False)
+            .PerformLayout()
         End With
+
+        ' Enhanced double buffering
+        EnableDoubleBuffering(dgvDashboardTransactions)
+
+        ' ====== REMOVE the Scroll handler that calls Invalidate() ======
+        ' This is likely causing the flickering!
+        ' Comment out or remove this line:
+        ' AddHandler dgvDashboardTransactions.Scroll, Sub(_s, _e) dgvDashboardTransactions.Invalidate()
     End Sub
+
+
+
+
+    ' ====================== HANDLE BUTTON CLICK ======================
 
     Private Sub addOrderBtn_Click(sender As Object, e As EventArgs) Handles addOrderBtn.Click
         Dim optionsForm As New TransactionOption()
         optionsForm.StartPosition = FormStartPosition.CenterParent
         optionsForm.ShowDialog()
     End Sub
+
+    Private Async Sub dgvDashboardTransactions_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvDashboardTransactions.CellMouseClick
+        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
+        If e.ColumnIndex <> dgvDashboardTransactions.Columns("btnActions").Index Then Exit Sub
+
+        Dim id As Integer = CInt(dgvDashboardTransactions.Rows(e.RowIndex).Cells("TransactionID").Value)
+        Dim customerName As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("CustomerName").Value.ToString()
+        Dim contactNumber As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("ContactNumber").Value.ToString()
+        Dim status As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("Status").Value.ToString()
+
+        ' Mouse location in DataGridView client coords
+        Dim clickPos As Point = dgvDashboardTransactions.PointToClient(Control.MousePosition)
+
+        ' Ensure rectangles exist for this row (they’re created in CellPainting)
+        If Not notifyIconRects.ContainsKey(e.RowIndex) _
+       OrElse Not completeIconRects.ContainsKey(e.RowIndex) _
+       OrElse Not archiveIconRects.ContainsKey(e.RowIndex) Then Exit Sub
+
+        If notifyIconRects(e.RowIndex).Contains(clickPos) Then
+            ' --- Notify ---
+            Dim smsMessage As String
+            If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
+                smsMessage = $"Hi {customerName}, your laundry is ready for pickup. Thank you!"
+            ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
+                smsMessage = $"Hi {customerName}, your laundry is out for delivery. It will arrive soon. Thank you!"
+            Else
+                smsMessage = $"Hi {customerName}, your laundry update: {status}."
+            End If
+
+            Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
+                                      "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If confirm = DialogResult.Yes Then
+                Dim success As Boolean = Await SendSmsGsm(contactNumber, smsMessage)
+                MessageBox.Show(If(success, "SMS sent successfully!", "Failed to send SMS."),
+                            "Customer Notified",
+                            MessageBoxButtons.OK,
+                            If(success, MessageBoxIcon.Information, MessageBoxIcon.Warning))
+            End If
+
+        ElseIf completeIconRects(e.RowIndex).Contains(clickPos) Then
+            ' --- Complete ---
+            HandleCheckClick(id)
+
+        ElseIf archiveIconRects(e.RowIndex).Contains(clickPos) Then
+            ' --- Archive ---
+            HandleArchiveClick(id)
+        End If
+    End Sub
+
+
+    Private Sub HandleArchiveClick(id As Integer)
+        Dim confirm = MessageBox.Show($"Archive transaction #{id}? It will be removed from the dashboard view.",
+                                  "Confirm Archive", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm <> DialogResult.Yes Then Exit Sub
+
+        Try
+            Using conn As New OleDbConnection(Db.ConnectionString)
+                conn.Open()
+                Dim sql As String = "UPDATE Transactions SET Status = 'Archived' WHERE TransactionID = @id"
+                Using cmd As New OleDbCommand(sql, conn)
+                    cmd.Parameters.AddWithValue("@id", id)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            MessageBox.Show("Transaction archived.", "Archived", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' Update cache and re-render fast (no full DB hit needed)
+            Dim idx = dashboardCache.FindIndex(Function(t) t.TransactionID = id)
+            If idx >= 0 Then dashboardCache.RemoveAt(idx)
+            RenderDashboardRows()
+
+            ' If you also maintain counters that exclude Archived:
+            LoadDashboardCounters()
+
+        Catch ex As Exception
+            MessageBox.Show("Error archiving transaction: " & ex.Message)
+        End Try
+    End Sub
+
+
+    Private Sub dgvDashboardTransactions_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgvDashboardTransactions.CellPainting
+        If e.RowIndex < 0 Then Return
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvDashboardTransactions.Columns("btnActions").Index Then
+            e.PaintBackground(e.CellBounds, True)
+            If e.RowIndex < 0 Then Return
+
+            ' Load once (static)
+            Static notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\send-mail.png")
+            Static completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
+            Static archiveIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\folder.png") ' <-- add this asset
+
+            Dim iconSize As Integer = 30
+            Dim spacing As Integer = 8
+            Dim totalWidth As Integer = (iconSize * 3) + (spacing * 2)
+
+            Dim startX As Integer = e.CellBounds.Left + (e.CellBounds.Width - totalWidth) \ 2
+            Dim startY As Integer = e.CellBounds.Top + (e.CellBounds.Height - iconSize) \ 2
+
+            Dim notifyRect As New Rectangle(startX, startY, iconSize, iconSize)
+            Dim completeRect As New Rectangle(startX + iconSize + spacing, startY, iconSize, iconSize)
+            Dim archiveRect As New Rectangle(startX + (iconSize + spacing) * 2, startY, iconSize, iconSize)
+
+            e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+            e.Graphics.DrawImage(notifyIcon, notifyRect)
+            e.Graphics.DrawImage(completeIcon, completeRect)
+            e.Graphics.DrawImage(archiveIcon, archiveRect)
+
+            ' store rectangles for hit testing
+            notifyIconRects(e.RowIndex) = notifyRect
+            completeIconRects(e.RowIndex) = completeRect
+            archiveIconRects(e.RowIndex) = archiveRect
+
+            e.Handled = True
+        End If
+    End Sub
+
 
     ' ====================== SMS FUNCTION ======================
     Private Async Function SendSmsGsm(phoneNumber As String, message As String) As Task(Of Boolean)
@@ -347,86 +692,6 @@ Public Class DashboardControl
             End Try
         End Using
     End Function
-
-
-    ' ====================== HANDLE BUTTON CLICK ======================
-    Private Async Sub dgvDashboardTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellContentClick
-        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
-        If e.ColumnIndex <> dgvDashboardTransactions.Columns("btnActions").Index Then Exit Sub
-
-        ' Identify which transaction row was clicked
-        Dim id As Integer = Convert.ToInt32(dgvDashboardTransactions.Rows(e.RowIndex).Cells("TransactionID").Value)
-        Dim customerName As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("CustomerName").Value.ToString()
-        Dim contactNumber As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("ContactNumber").Value.ToString()
-        Dim status As String = dgvDashboardTransactions.Rows(e.RowIndex).Cells("Status").Value.ToString()
-
-        ' Get current mouse position relative to DataGridView
-        Dim clickPos As Point = dgvDashboardTransactions.PointToClient(Cursor.Position)
-
-        ' Make sure rectangles exist for this row (created in CellPainting)
-        If Not notifyIconRects.ContainsKey(e.RowIndex) OrElse Not completeIconRects.ContainsKey(e.RowIndex) Then Exit Sub
-
-        ' Check which icon was clicked
-        If notifyIconRects(e.RowIndex).Contains(clickPos) Then
-            ' 🔔 Notify icon clicked
-            Dim smsMessage As String
-            If status.Equals("For Pickup", StringComparison.OrdinalIgnoreCase) Then
-                smsMessage = $"Hi {customerName}, your laundry is ready for pickup. Thank you!"
-            ElseIf status.Equals("For Delivery", StringComparison.OrdinalIgnoreCase) Then
-                smsMessage = $"Hi {customerName}, your laundry is out for delivery. It will arrive soon. Thank you!"
-            Else
-                smsMessage = $"Hi {customerName}, your laundry update: {status}."
-            End If
-
-            Dim confirm = MessageBox.Show($"Send SMS to {customerName} ({contactNumber})?" & vbCrLf & vbCrLf & smsMessage,
-                                      "Send Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If confirm = DialogResult.Yes Then
-                Dim success As Boolean = Await SendSmsGsm(contactNumber, smsMessage)
-                If success Then
-                    MessageBox.Show("SMS sent successfully!", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Else
-                    MessageBox.Show("Failed to send SMS.", "Customer Notified", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                End If
-            End If
-
-        ElseIf completeIconRects(e.RowIndex).Contains(clickPos) Then
-            ' ✅ Complete icon clicked
-            HandleCheckClick(id)
-        End If
-    End Sub
-
-
-
-    Private Sub dgvDashboardTransactions_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgvDashboardTransactions.CellPainting
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvDashboardTransactions.Columns("btnActions").Index Then
-            e.PaintBackground(e.CellBounds, True)
-
-            ' (💡 Load icons only once to improve performance)
-            Static notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\bell.png")
-            Static completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
-
-            Dim iconSize As Integer = 20
-            Dim spacing As Integer = 2
-            Dim totalWidth As Integer = iconSize * 2 + spacing
-
-            Dim startX As Integer = e.CellBounds.Left + (e.CellBounds.Width - totalWidth) \ 2
-            Dim startY As Integer = e.CellBounds.Top + (e.CellBounds.Height - iconSize) \ 2
-
-            Dim notifyRect As New Rectangle(startX - 5, startY, iconSize, iconSize)
-            Dim completeRect As New Rectangle(startX + iconSize + spacing, startY, iconSize, iconSize)
-
-            ' Draw the icons
-            e.Graphics.DrawImage(notifyIcon, notifyRect)
-            e.Graphics.DrawImage(completeIcon, completeRect)
-
-            ' Save the clickable areas for this row
-            notifyIconRects(e.RowIndex) = notifyRect
-            completeIconRects(e.RowIndex) = completeRect
-
-            e.Handled = True
-        End If
-    End Sub
-
 
 
     '==========PENDING ORDERS CLICK==========
@@ -590,9 +855,9 @@ Public Class DashboardControl
         dgv.Columns.Add("WaitingTime", "Waiting Time")
 
         ' Database connection
-        Dim connString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
-        Using conn As New OleDbConnection(connString)
+
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Dim query As String = "
             SELECT TransactionID, CustomerName, ContactNumber, ServiceType, TransactionDate
@@ -658,4 +923,16 @@ Public Class DashboardControl
         dgv.CurrentCell = Nothing
     End Sub
 
+    Private Sub EnableDoubleBuffering(dgv As DataGridView)
+        ' Enable all double buffering properties
+        Dim dgvType As Type = dgv.GetType()
+        Dim pi As Reflection.PropertyInfo = dgvType.GetProperty("DoubleBuffered",
+        Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic)
+        pi.SetValue(dgv, True, Nothing)
+
+        ' Additional optimization flags
+        dgv.GetType().InvokeMember("DoubleBuffered",
+        Reflection.BindingFlags.NonPublic Or Reflection.BindingFlags.Instance Or Reflection.BindingFlags.SetProperty,
+        Nothing, dgv, New Object() {True})
+    End Sub
 End Class

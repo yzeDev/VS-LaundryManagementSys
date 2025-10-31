@@ -22,90 +22,133 @@ Partial Class TransactionRow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
-        lblTotal = New Label()
-        lblDate = New Label()
-        lblMachine = New Label()
+        btnArchive = New Guna.UI2.WinForms.Guna2Button()
+        btnComplete = New Guna.UI2.WinForms.Guna2Button()
+        btnNotify = New Guna.UI2.WinForms.Guna2Button()
+        lblWaiting = New Label()
         lblStatus = New Label()
         lblServiceType = New Label()
         lblCustomer = New Label()
-        lblTransactionID = New Label()
-        btnView = New Button()
+        rowNum = New Label()
         TableLayoutPanel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 8
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 14.2857141F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 60F))
-        TableLayoutPanel1.Controls.Add(lblTotal, 6, 0)
-        TableLayoutPanel1.Controls.Add(lblDate, 5, 0)
-        TableLayoutPanel1.Controls.Add(lblMachine, 4, 0)
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.499999F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.499999F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.Controls.Add(btnArchive, 7, 0)
+        TableLayoutPanel1.Controls.Add(btnComplete, 6, 0)
+        TableLayoutPanel1.Controls.Add(btnNotify, 5, 0)
+        TableLayoutPanel1.Controls.Add(lblWaiting, 4, 0)
         TableLayoutPanel1.Controls.Add(lblStatus, 3, 0)
         TableLayoutPanel1.Controls.Add(lblServiceType, 2, 0)
         TableLayoutPanel1.Controls.Add(lblCustomer, 1, 0)
-        TableLayoutPanel1.Controls.Add(lblTransactionID, 0, 0)
-        TableLayoutPanel1.Controls.Add(btnView, 7, 0)
+        TableLayoutPanel1.Controls.Add(rowNum, 0, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Margin = New Padding(2)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(640, 45)
+        TableLayoutPanel1.Size = New Size(1104, 45)
         TableLayoutPanel1.TabIndex = 0
         ' 
-        ' lblTotal
+        ' btnArchive
         ' 
-        lblTotal.Dock = DockStyle.Fill
-        lblTotal.Font = New Font("Poppins", 8.25F)
-        lblTotal.Location = New Point(494, 0)
-        lblTotal.Margin = New Padding(2, 0, 2, 0)
-        lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(78, 45)
-        lblTotal.TabIndex = 6
-        lblTotal.Text = "Total"
-        lblTotal.TextAlign = ContentAlignment.MiddleCenter
+        btnArchive.BorderRadius = 16
+        btnArchive.CustomizableEdges = CustomizableEdges1
+        btnArchive.DisabledState.BorderColor = Color.DarkGray
+        btnArchive.DisabledState.CustomBorderColor = Color.DarkGray
+        btnArchive.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnArchive.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnArchive.Dock = DockStyle.Fill
+        btnArchive.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
+        btnArchive.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnArchive.ForeColor = Color.Black
+        btnArchive.Location = New Point(974, 3)
+        btnArchive.Margin = New Padding(10, 3, 3, 3)
+        btnArchive.Name = "btnArchive"
+        btnArchive.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnArchive.Size = New Size(127, 39)
+        btnArchive.TabIndex = 13
+        btnArchive.Text = "Archive"
         ' 
-        ' lblDate
+        ' btnComplete
         ' 
-        lblDate.Dock = DockStyle.Fill
-        lblDate.Font = New Font("Poppins", 8.25F)
-        lblDate.Location = New Point(412, 0)
-        lblDate.Margin = New Padding(2, 0, 2, 0)
-        lblDate.Name = "lblDate"
-        lblDate.Size = New Size(78, 45)
-        lblDate.TabIndex = 5
-        lblDate.Text = "Date"
-        lblDate.TextAlign = ContentAlignment.MiddleCenter
+        btnComplete.BorderRadius = 16
+        btnComplete.CustomizableEdges = CustomizableEdges3
+        btnComplete.DisabledState.BorderColor = Color.DarkGray
+        btnComplete.DisabledState.CustomBorderColor = Color.DarkGray
+        btnComplete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnComplete.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnComplete.Dock = DockStyle.Fill
+        btnComplete.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
+        btnComplete.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnComplete.ForeColor = Color.Black
+        btnComplete.Location = New Point(836, 3)
+        btnComplete.Margin = New Padding(10, 3, 3, 3)
+        btnComplete.Name = "btnComplete"
+        btnComplete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnComplete.Size = New Size(125, 39)
+        btnComplete.TabIndex = 12
+        btnComplete.Text = "Complete"
         ' 
-        ' lblMachine
+        ' btnNotify
         ' 
-        lblMachine.Dock = DockStyle.Fill
-        lblMachine.Font = New Font("Poppins", 8.25F)
-        lblMachine.Location = New Point(330, 0)
-        lblMachine.Margin = New Padding(2, 0, 2, 0)
-        lblMachine.Name = "lblMachine"
-        lblMachine.Size = New Size(78, 45)
-        lblMachine.TabIndex = 4
-        lblMachine.Text = "Machine"
-        lblMachine.TextAlign = ContentAlignment.MiddleCenter
+        btnNotify.BorderRadius = 16
+        btnNotify.CustomizableEdges = CustomizableEdges5
+        btnNotify.DisabledState.BorderColor = Color.DarkGray
+        btnNotify.DisabledState.CustomBorderColor = Color.DarkGray
+        btnNotify.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnNotify.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnNotify.Dock = DockStyle.Fill
+        btnNotify.FillColor = Color.FromArgb(CByte(187), CByte(246), CByte(162))
+        btnNotify.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnNotify.ForeColor = Color.Black
+        btnNotify.Location = New Point(699, 3)
+        btnNotify.Margin = New Padding(10, 3, 3, 3)
+        btnNotify.Name = "btnNotify"
+        btnNotify.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnNotify.Size = New Size(124, 39)
+        btnNotify.TabIndex = 11
+        btnNotify.Text = "Notify"
+        ' 
+        ' lblWaiting
+        ' 
+        lblWaiting.Dock = DockStyle.Fill
+        lblWaiting.Font = New Font("Poppins", 8.25F)
+        lblWaiting.Location = New Point(553, 0)
+        lblWaiting.Margin = New Padding(2, 0, 2, 0)
+        lblWaiting.Name = "lblWaiting"
+        lblWaiting.Size = New Size(134, 45)
+        lblWaiting.TabIndex = 4
+        lblWaiting.Text = "Waiting"
+        lblWaiting.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblStatus
         ' 
         lblStatus.Dock = DockStyle.Fill
         lblStatus.Font = New Font("Poppins", 8.25F)
-        lblStatus.Location = New Point(248, 0)
+        lblStatus.Location = New Point(415, 0)
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(78, 45)
+        lblStatus.Size = New Size(134, 45)
         lblStatus.TabIndex = 3
         lblStatus.Text = "Status"
         lblStatus.TextAlign = ContentAlignment.MiddleCenter
@@ -114,10 +157,10 @@ Partial Class TransactionRow
         ' 
         lblServiceType.Dock = DockStyle.Fill
         lblServiceType.Font = New Font("Poppins", 8.25F)
-        lblServiceType.Location = New Point(166, 0)
+        lblServiceType.Location = New Point(277, 0)
         lblServiceType.Margin = New Padding(2, 0, 2, 0)
         lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(78, 45)
+        lblServiceType.Size = New Size(134, 45)
         lblServiceType.TabIndex = 2
         lblServiceType.Text = "Service"
         lblServiceType.TextAlign = ContentAlignment.MiddleCenter
@@ -126,39 +169,25 @@ Partial Class TransactionRow
         ' 
         lblCustomer.Dock = DockStyle.Fill
         lblCustomer.Font = New Font("Poppins", 8.25F)
-        lblCustomer.Location = New Point(84, 0)
+        lblCustomer.Location = New Point(139, 0)
         lblCustomer.Margin = New Padding(2, 0, 2, 0)
         lblCustomer.Name = "lblCustomer"
-        lblCustomer.Size = New Size(78, 45)
+        lblCustomer.Size = New Size(134, 45)
         lblCustomer.TabIndex = 1
         lblCustomer.Text = "Name"
         lblCustomer.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' lblTransactionID
+        ' rowNum
         ' 
-        lblTransactionID.Dock = DockStyle.Fill
-        lblTransactionID.Font = New Font("Poppins", 8.25F)
-        lblTransactionID.Location = New Point(2, 0)
-        lblTransactionID.Margin = New Padding(2, 0, 2, 0)
-        lblTransactionID.Name = "lblTransactionID"
-        lblTransactionID.Size = New Size(78, 45)
-        lblTransactionID.TabIndex = 0
-        lblTransactionID.Text = "Transac"
-        lblTransactionID.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' btnView
-        ' 
-        btnView.BackColor = Color.Transparent
-        btnView.Dock = DockStyle.Fill
-        btnView.Font = New Font("Poppins", 8.25F)
-        btnView.ForeColor = Color.Black
-        btnView.Location = New Point(576, 2)
-        btnView.Margin = New Padding(2)
-        btnView.Name = "btnView"
-        btnView.Size = New Size(62, 41)
-        btnView.TabIndex = 7
-        btnView.Text = "VIEW"
-        btnView.UseVisualStyleBackColor = False
+        rowNum.Dock = DockStyle.Fill
+        rowNum.Font = New Font("Poppins", 8.25F)
+        rowNum.Location = New Point(2, 0)
+        rowNum.Margin = New Padding(2, 0, 2, 0)
+        rowNum.Name = "rowNum"
+        rowNum.Size = New Size(133, 45)
+        rowNum.TabIndex = 0
+        rowNum.Text = "Num"
+        rowNum.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' TransactionRow
         ' 
@@ -168,19 +197,19 @@ Partial Class TransactionRow
         Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(0)
         Name = "TransactionRow"
-        Size = New Size(640, 45)
+        Size = New Size(1104, 45)
         TableLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents lblTransactionID As Label
-    Friend WithEvents lblTotal As Label
-    Friend WithEvents lblDate As Label
-    Friend WithEvents lblMachine As Label
+    Friend WithEvents rowNum As Label
+    Friend WithEvents lblWaiting As Label
     Friend WithEvents lblStatus As Label
     Friend WithEvents lblServiceType As Label
     Friend WithEvents lblCustomer As Label
-    Friend WithEvents btnView As Button
+    Friend WithEvents btnArchive As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnComplete As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnNotify As Guna.UI2.WinForms.Guna2Button
 
 End Class

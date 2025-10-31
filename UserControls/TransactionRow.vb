@@ -1,32 +1,51 @@
-﻿Public Class TransactionRow
+﻿Imports Guna.UI2.WinForms
+Imports System.ComponentModel
+
+Public Class TransactionRow
+    Inherits UserControl
+
+    ' ---------- Public state ----------
+    <Browsable(False)>
     Public Property TransactionID As Integer
+
+    <Browsable(False)>
+    Public Property CustomerName As String = ""
+
+    <Browsable(False)>
+    Public Property ContactNumber As String = ""   ' optional: set by parent if you need it when clicking Notify
+
     Public Property IsHeader As Boolean = False
 
+    ' ---------- Events ----------
     Public Event RowClicked(ByVal sender As TransactionRow)
     Public Event RowDoubleClicked(ByVal sender As TransactionRow)
-    Public Event ViewButtonClicked(ByVal sender As TransactionRow)
 
+    ' Button events (parent subscribes)
+    Public Event NotifyClicked(ByVal sender As TransactionRow)
+    Public Event CompleteClicked(ByVal sender As TransactionRow)
+    Public Event ArchiveClicked(ByVal sender As TransactionRow)
+
+    ' ---------- Private UI state ----------
     Private isSelected As Boolean = False
     Private isInitialized As Boolean = False
 
-    'Private defaultBackColor As Color = Color.White
+    Private defaultBackColor As Color = Color.White
     Private hoverBackColor As Color = Color.AliceBlue
     Private selectedBackColor As Color = Color.FromArgb(220, 235, 252)
-
-    Private ReadOnly viewButtonName As String = "btnView"
 
     ' -------------------------
     ' INITIALIZATION
     ' -------------------------
     Private Sub InitializeRow()
-        Me.Margin = New Padding(0)
         If isInitialized Then Return
         isInitialized = True
 
-        ' ===============================
-        ' HEADER ROW LOGIC
-        ' ===============================
+        Me.Margin = New Padding(0)
+        Me.DoubleBuffered = True
+        SetStyle(ControlStyles.AllPaintingInWmPaint Or ControlStyles.OptimizedDoubleBuffer Or ControlStyles.UserPaint, True)
+
         If IsHeader Then
+            ' ------- HEADER LOOK -------
             Me.BackColor = Color.FromArgb(235, 235, 235)
 
             For Each lbl As Label In Me.Controls.OfType(Of Label)()
@@ -35,61 +54,155 @@
                 lbl.BackColor = Color.Transparent
             Next
 
-            Dim btnView As Button = TryCast(Me.Controls.Find(viewButtonName, True).FirstOrDefault(), Button)
-            If btnView Is Nothing Then
-                btnView = Me.Controls.OfType(Of Button)().FirstOrDefault()
-            End If
-
-
-            If btnView IsNot Nothing Then
-                btnView.Visible = False
-                btnView.Enabled = False
-            End If
-
+            ' Hide buttons on header
+            For Each b In New Control() {btnNotify, btnComplete, btnArchive}
+                If b IsNot Nothing Then
+                    b.Visible = False
+                    b.Enabled = False
+                End If
+            Next
 
             Me.Cursor = Cursors.Default
             Return
         End If
 
-        ' ===============================
-        ' NON-HEADER (NORMAL ROW) LOGIC
-        ' ===============================
-        AttachHandlersRecursively(Me)
+        ' ------- NORMAL ROW -------
+        Me.BackColor = defaultBackColor
+        Me.Cursor = Cursors.Hand
+
+        ' Labels generic setup
+        For Each lbl As Label In {rowNum, lblCustomer, lblServiceType, lblStatus, lblWaiting}
+            If lbl Is Nothing Then Continue For
+            lbl.BackColor = Color.Transparent
+            lbl.AutoEllipsis = True
+            lbl.Cursor = Cursors.Hand
+            AddHandler lbl.Click, AddressOf ForwardClickToRow
+            AddHandler lbl.DoubleClick, AddressOf ForwardDoubleClickToRow
+        Next
+
+        AddHandler btnNotify.Click, Sub() RaiseEvent NotifyClicked(Me)
+        AddHandler btnComplete.Click, Sub() RaiseEvent CompleteClicked(Me)
+        AddHandler btnArchive.Click, Sub() RaiseEvent ArchiveClicked(Me)
+
+        ' Forward clicks from row background, too
         AddHandler Me.Click, AddressOf ForwardClickToRow
         AddHandler Me.DoubleClick, AddressOf ForwardDoubleClickToRow
+    End Sub
 
-        Dim viewBtn = TryCast(Me.Controls.Find(viewButtonName, True).FirstOrDefault(), Button)
-        If viewBtn Is Nothing Then
-            viewBtn = Me.Controls.OfType(Of Button)().FirstOrDefault()
-        End If
+    Private Sub StyleGhostButton(b As Guna2Button, text As String, Optional icon As Image = Nothing)
+        If b Is Nothing Then Exit Sub
+        b.Text = text
+        b.Image = icon
+        b.ImageAlign = HorizontalAlignment.Left
+        b.TextAlign = HorizontalAlignment.Left
+        b.Padding = New Padding(8, 0, 0, 0)
+        b.Cursor = Cursors.Hand
 
-        If viewBtn IsNot Nothing Then
-            RemoveHandler viewBtn.Click, AddressOf OnViewButtonClick
-            AddHandler viewBtn.Click, AddressOf OnViewButtonClick
-            viewBtn.Cursor = Cursors.Hand
-            viewBtn.BringToFront()
-        End If
+        b.UseTransparentBackground = True
+        b.BackColor = Color.Transparent
+        b.FillColor = Color.Transparent
+        b.BorderThickness = 0
+        b.BorderRadius = 10
+        b.Font = New Font("Poppins", 10, FontStyle.Bold)
+        b.ForeColor = Color.Black
 
-        Me.Cursor = Cursors.Hand
-        Me.BackColor = defaultBackColor
+        b.HoverState.FillColor = Color.FromArgb(245, 245, 245)
+        b.HoverState.ForeColor = Color.Black
+        b.PressedColor = Color.FromArgb(235, 235, 235)
+        b.DisabledState.FillColor = Color.Transparent
+        b.DisabledState.ForeColor = Color.Gray
+    End Sub
+
+    ' -------------------------
+    ' SET DATA
+    ' -------------------------
+    ' Use this overload for your current layout (no machine/date columns)
+    Public Sub SetData(transactionId As Integer,
+                       rowNumber As Integer,
+                       customerName As String,
+                       serviceType As String,
+                       status As String,
+                       waitingText As String,
+                       Optional contact As String = "")
+        Me.TransactionID = transactionId
+        Me.CustomerName = customerName
+        Me.ContactNumber = contact
+
+        rowNum.Text = rowNumber.ToString()
+        lblCustomer.Text = customerName
+        lblServiceType.Text = serviceType
+        lblStatus.Text = status
+        lblWaiting.Text = waitingText
+
+        ' Status color
+        Select Case status.Trim().ToLowerInvariant()
+            Case "pending" : lblStatus.ForeColor = Color.DarkGoldenrod
+            Case "in-progress" : lblStatus.ForeColor = Color.DodgerBlue
+            Case "for pickup" : lblStatus.ForeColor = Color.MediumSlateBlue
+            Case "for delivery" : lblStatus.ForeColor = Color.DarkOrange
+            Case "completed" : lblStatus.ForeColor = Color.ForestGreen
+            Case "refunded" : lblStatus.ForeColor = Color.Crimson
+            Case Else : lblStatus.ForeColor = Color.Black
+        End Select
+
+        InitializeRow()
+    End Sub
+
+    ' -------------------------
+    ' LAYOUT HELPERS
+    ' -------------------------
+    ' Replaces your old version: only the 5 labels remain
+    Public Sub AdjustColumnWidthsScaled(scaledWidths As Integer(), scaledSpacings As Integer(), availWidth As Integer)
+        Try
+            Dim pl As FlowLayoutPanel = TryCast(Me.Parent, FlowLayoutPanel)
+            Dim vscrollVisible As Boolean = False
+            Dim scrollW As Integer = 0
+
+            If pl IsNot Nothing Then
+                vscrollVisible = (pl.DisplayRectangle.Height > pl.ClientSize.Height)
+                scrollW = If(vscrollVisible, SystemInformation.VerticalScrollBarWidth, 0)
+
+                ' SUBTRACT the scrollbar width and panel paddings
+                Dim usable = Math.Max(0, pl.ClientSize.Width - pl.Padding.Horizontal - scrollW)
+                Me.Width = usable
+            Else
+                ' Fallback if not in a panel yet
+                Me.Width = Math.Max(0, availWidth - scrollW)
+            End If
+
+            ' ---- lay out the labels ----
+            Dim x As Integer = 10
+            Dim labels = {rowNum, lblCustomer, lblServiceType, lblStatus, lblWaiting}
+
+            For i As Integer = 0 To Math.Min(labels.Length - 1, scaledWidths.Length - 1)
+                Dim lbl = labels(i)
+                lbl.AutoEllipsis = True
+                lbl.Left = x
+                lbl.Width = scaledWidths(i)
+                lbl.Anchor = AnchorStyles.Left Or AnchorStyles.Top
+                x += scaledWidths(i) + If(i < scaledSpacings.Length, scaledSpacings(i), 10)
+            Next
+
+            ' stretch the last label to consume any leftover pixels (removes gap)
+            If labels.Length > 0 AndAlso x < Me.Width Then
+                Dim lastLbl = labels(labels.Length - 1)
+                lastLbl.Width = Math.Max(20, lastLbl.Width + (Me.Width - x - 10))
+            End If
+        Catch
+            ' swallow layout hiccups safely
+        End Try
     End Sub
 
 
-    Private Sub AttachHandlersRecursively(ctrl As Control)
-        For Each c As Control In ctrl.Controls
-
-            If c.Name.Equals(viewButtonName, StringComparison.OrdinalIgnoreCase) Then
-                c.Cursor = Cursors.Hand
-            Else
-                AddHandler c.Click, AddressOf ForwardClickToRow
-                AddHandler c.DoubleClick, AddressOf ForwardDoubleClickToRow
-                c.Cursor = Cursors.Hand
-            End If
-
-
-            c.BackColor = Color.Transparent
-
-            If c.HasChildren Then AttachHandlersRecursively(c)
+    ' Simple fixed widths overload
+    Public Sub AdjustColumnWidths(widths As Integer())
+        Dim x As Integer = 10
+        Dim labels = {rowNum, lblCustomer, lblServiceType, lblStatus, lblWaiting}
+        For i As Integer = 0 To Math.Min(labels.Length - 1, widths.Length - 1)
+            If labels(i) Is Nothing Then Continue For
+            labels(i).Width = widths(i)
+            labels(i).Left = x
+            x += widths(i)
         Next
     End Sub
 
@@ -105,124 +218,18 @@
     End Sub
 
     ' -------------------------
-    ' VIEW BUTTON HANDLER
-    ' -------------------------
-    Private Sub OnViewButtonClick(sender As Object, e As EventArgs)
-
-        RaiseEvent ViewButtonClicked(Me)
-    End Sub
-
-    ' -------------------------
-    ' SET DATA
-    ' -------------------------
-    Public Sub SetData(transactionId As Integer, customerName As String, serviceType As String,
-                       status As String, machineUsed As String, transDate As Date, totalPayment As Decimal)
-
-        Me.TransactionID = transactionId
-
-        lblTransactionID.Text = transactionId.ToString()
-        lblCustomer.Text = customerName
-        lblServiceType.Text = serviceType
-        lblStatus.Text = status
-        lblMachine.Text = machineUsed
-        lblDate.Text = transDate.ToShortDateString()
-        lblTotal.Text = "₱" & totalPayment.ToString("N2")
-
-        Select Case status.ToLower()
-            Case "pending"
-                lblStatus.ForeColor = Color.DarkGoldenrod
-            Case "in-progress"
-                lblStatus.ForeColor = Color.DodgerBlue
-            Case "for pickup"
-                lblStatus.ForeColor = Color.MediumSlateBlue
-            Case "for delivery"
-                lblStatus.ForeColor = Color.DarkOrange
-            Case "completed"
-                lblStatus.ForeColor = Color.ForestGreen
-            Case "refunded"
-                lblStatus.ForeColor = Color.Crimson
-        End Select
-
-
-        InitializeRow()
-    End Sub
-
-    Public Sub AdjustColumnWidthsScaled(scaledWidths As Integer(), scaledSpacings As Integer(), availWidth As Integer)
-        Try
-            If Me.Parent IsNot Nothing Then
-                Dim pl As FlowLayoutPanel = TryCast(Me.Parent, FlowLayoutPanel)
-                If pl IsNot Nothing Then
-                    Dim vscrollVisible As Boolean = (pl.DisplayRectangle.Height > pl.ClientSize.Height)
-                    Dim extra As Integer = If(vscrollVisible, SystemInformation.VerticalScrollBarWidth, 0)
-                    Me.Width = Math.Max(0, pl.ClientSize.Width + extra - pl.Padding.Horizontal - 2)
-                End If
-            End If
-
-            Dim x As Integer = 10
-            Dim labels = {lblTransactionID, lblCustomer, lblServiceType, lblStatus, lblMachine, lblDate, lblTotal}
-
-            For i As Integer = 0 To Math.Min(labels.Length - 1, scaledWidths.Length - 1)
-                Dim lbl = labels(i)
-                lbl.AutoEllipsis = True
-                lbl.Left = x
-                lbl.Width = scaledWidths(i)
-                lbl.Anchor = AnchorStyles.Left Or AnchorStyles.Top Or AnchorStyles.Right
-                x += scaledWidths(i) + If(i < scaledSpacings.Length, scaledSpacings(i), 10)
-            Next
-
-            If labels.Length > 0 AndAlso x < Me.Width Then
-                Dim lastLbl = labels(labels.Length - 1)
-                lastLbl.Width += (Me.Width - x - 10)
-            End If
-        Catch
-
-        End Try
-    End Sub
-
-
-    Private Function flPHasVisibleVScroll(flP As FlowLayoutPanel) As Boolean
-        Try
-            Return flP.DisplayRectangle.Height > flP.ClientSize.Height
-        Catch
-            Return flP.VerticalScroll.Visible
-        End Try
-    End Function
-
-
-    ' -------------------------
-    ' SELECTION HIGHLIGHT
+    ' SELECTION & HOVER
     ' -------------------------
     Public Sub SetSelected(selected As Boolean)
         isSelected = selected
-        If selected Then
-            Me.BackColor = selectedBackColor
-        Else
-            Me.BackColor = defaultBackColor
-        End If
+        Me.BackColor = If(selected, selectedBackColor, defaultBackColor)
     End Sub
 
-    ' -------------------------
-    ' HOVER EFFECT
-    ' -------------------------
     Private Sub TransactionRow_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter
-        If Not isSelected Then Me.BackColor = hoverBackColor
+        If Not isSelected AndAlso Not IsHeader Then Me.BackColor = hoverBackColor
     End Sub
 
     Private Sub TransactionRow_MouseLeave(sender As Object, e As EventArgs) Handles MyBase.MouseLeave
-        If Not isSelected Then Me.BackColor = defaultBackColor
-    End Sub
-
-    ' -------------------------
-    ' DYNAMIC WIDTH ADJUST
-    ' -------------------------
-    Public Sub AdjustColumnWidths(widths As Integer())
-        Dim x As Integer = 10
-        Dim labels = {lblTransactionID, lblCustomer, lblServiceType, lblStatus, lblMachine, lblDate, lblTotal}
-
-        For i As Integer = 0 To Math.Min(labels.Length - 1, widths.Length - 1)
-            labels(i).Width = widths(i)
-            labels(i).Left = x
-            x += widths(i)
-        Next
+        If Not isSelected AndAlso Not IsHeader Then Me.BackColor = defaultBackColor
     End Sub
 End Class
