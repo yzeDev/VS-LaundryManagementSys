@@ -3,13 +3,6 @@
 ' Put this in a new file: LaundryHelpers.vb
 Public Module LaundryHelpers
 
-    ' === Central connection string (edit once here) ===
-    Public ReadOnly Property ConnString As String
-        Get
-            Return "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-        End Get
-    End Property
-
     ' === Currency formatting helper ===
     <Runtime.CompilerServices.Extension>
     Public Function Peso(amount As Decimal) As String
@@ -19,7 +12,7 @@ Public Module LaundryHelpers
     ' === Get latest price for a service/subservice ===
     Public Function GetLatestPrice(serviceType As String, subService As String) As Decimal
         Dim price As Decimal = 0D
-        Using cn As New OleDbConnection(ConnString)
+        Using cn As New OleDbConnection(Db.ConnectionString)
             cn.Open()
             Using cmd As New OleDbCommand("SELECT TOP 1 Price FROM PricingUpd WHERE ServiceType=? AND SubService=? ORDER BY LastUpdated DESC", cn)
                 cmd.Parameters.AddWithValue("?", serviceType)
@@ -58,7 +51,7 @@ Public Module LaundryHelpers
     Public Function GetNextTransactionIdEstimate() As Long
         Dim nextId As Long = 1
         Try
-            Using cn As New OleDbConnection(ConnString)
+            Using cn As New OleDbConnection(Db.ConnectionString)
                 cn.Open()
                 Using cmd As New OleDbCommand("SELECT MAX(TransactionID) FROM Transactions", cn)
                     Dim v = cmd.ExecuteScalar()

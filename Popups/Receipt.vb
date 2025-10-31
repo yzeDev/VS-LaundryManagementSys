@@ -25,8 +25,8 @@ Public Class Receipt  ' <-- this is your Receipt FORM
     Private _saved As Boolean = False
 
     ' Your Access connection string
-    Private ReadOnly connString As String =
-        "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+    'Private ReadOnly connString As String =
+    '   "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
     ' ===== Form lifecycle =====
     Private Sub Receipt_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -73,7 +73,7 @@ Public Class Receipt  ' <-- this is your Receipt FORM
             " PaymentMethod, AmountReceived, [Change], DeliverMethod, [Weight], ReferenceNum) " &
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
-        Using cn As New OleDbConnection(connString)
+        Using cn As New OleDbConnection(Db.ConnectionString)
             cn.Open()
             Using tx = cn.BeginTransaction()
                 Using cmd As New OleDbCommand(sql, cn, tx)
@@ -137,7 +137,7 @@ Public Class Receipt  ' <-- this is your Receipt FORM
     ' ===== Optional: if you need a preview before saving (not used now) =====
     Private Function GetNextTransactionIdEstimate() As Long
         Dim nextId As Long = 1
-        Using cn As New OleDbConnection(connString)
+        Using cn As New OleDbConnection(Db.ConnectionString)
             cn.Open()
             Using cmd As New OleDbCommand("SELECT MAX(TransactionID) FROM Transactions", cn)
                 Dim val = cmd.ExecuteScalar()

@@ -23,7 +23,7 @@ Public Class MachinesControl
     End Sub
 
     Private Sub UpdateMachineInDB(machine As MachineCard)
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Dim query As String = "UPDATE UnitData SET Capacity=@cap, Status=@status WHERE UnitNumber=@unit"
             Using cmd As New OleDbCommand(query, conn)
@@ -61,7 +61,7 @@ Public Class MachinesControl
     Private Sub LoadMachinesFromDB()
         flpMachines.Controls.Clear()
 
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Using cmd As New OleDbCommand("SELECT * FROM UnitData ORDER BY IIF(Status='Unavailable',1,0), UnitNumber", conn)
                 Using reader As OleDbDataReader = cmd.ExecuteReader()
@@ -212,7 +212,7 @@ Public Class MachinesControl
             Dim serviceDuration As String = ""
 
             ' Get pending transaction
-            Using conn As New OleDbConnection(ConnectionString)
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
                 Using cmd As New OleDbCommand("SELECT TOP 1 TransactionID, DeliverMethod, ServiceDuration FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate", conn)
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
@@ -276,7 +276,7 @@ Public Class MachinesControl
                 Dim deliverMethod As String = ""
 
                 ' Get delivery method from Transactions
-                Using conn As New OleDbConnection(ConnectionString)
+                Using conn As New OleDbConnection(Db.ConnectionString)
                     conn.Open()
                     Using qcmd As New OleDbCommand("SELECT DeliverMethod FROM Transactions WHERE TransactionID=@id", conn)
                         qcmd.Parameters.AddWithValue("@id", transID)
@@ -386,7 +386,7 @@ Public Class MachinesControl
         End If
 
         ' Update database: Set UnitNumber to NULL and mark as Unavailable
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Dim query As String = "UPDATE UnitData SET Status=@status, Reason=@reason, UnitNumber=NULL WHERE ID=@id"
             Using cmd As New OleDbCommand(query, conn)
@@ -412,7 +412,7 @@ Public Class MachinesControl
     Private Sub RenumberMachines()
         Dim unitIndex As Integer = 1
 
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
 
             For Each ctrl As Control In flpMachines.Controls
@@ -439,7 +439,7 @@ Public Class MachinesControl
         ' Find the lowest available unit number (reusing gaps from unavailable machines)
         Dim usedNumbers As New List(Of Integer)
 
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             ' Get all unit numbers from AVAILABLE machines only
             Dim query As String = "SELECT UnitNumber FROM UnitData WHERE Status <> 'Unavailable' AND UnitNumber IS NOT NULL ORDER BY UnitNumber"
@@ -485,7 +485,7 @@ Public Class MachinesControl
     End Sub
 
     Private Sub ReAdjustUnitNumbers()
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
 
             ' Only renumber AVAILABLE units (unavailable ones will stay 0)
@@ -512,7 +512,7 @@ Public Class MachinesControl
 
     Private Function SaveMachineToDB(machine As MachineCard) As Integer
         Dim newID As Integer = -1
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Dim query As String = "INSERT INTO UnitData (UnitNumber, Capacity, Status) VALUES (@unitnum, @cap, @status)"
             Using cmd As New OleDbCommand(query, conn)
@@ -631,7 +631,7 @@ Public Class MachinesControl
 
     ' New method to renumber only available machines sequentially
     Private Sub RenumberAvailableMachines()
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
 
             ' Get all available machines ordered by their current unit number

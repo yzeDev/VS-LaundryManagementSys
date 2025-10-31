@@ -15,9 +15,9 @@ Public Class SelfServiceForm
 
     ' Load: show latest rates + preview TransactionID
     Private Sub SelfServiceForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim wash = GetLatestPrice("Self Service", "Wash Only")
-        Dim dry = GetLatestPrice("Self Service", "Dry Only")
-        Dim both = GetLatestPrice("Self Service", "Wash + Dry")
+        Dim wash = GetLatestPrice("Self-Service", "Wash Only")
+        Dim dry = GetLatestPrice("Self-Service", "Dry Only")
+        Dim both = GetLatestPrice("Self-Service", "Wash + Dry")
 
         lblRate.Text =
             $"• Wash Only: {wash.Peso()}/kg{Environment.NewLine}" &
@@ -97,14 +97,14 @@ Public Class SelfServiceForm
             Exit Sub
         End If
 
-        Dim rate = GetLatestPrice("Self Service", packageType)
+        Dim rate = GetLatestPrice("Self-Service", packageType)
 
         OpenInvoiceModal(Me,
                          Guna2TxtboxName.Text,
                          Guna2txtboxContact.Text,
                          txtboxAddress.Text,
                          weightVal,
-                         "Self Service",
+                         "Self-Service",
                          packageType,
                          rate,
                          Guna2CheckBoxDelivery.Checked)

@@ -27,7 +27,7 @@ Public Class ConfigureMachineForm
         Capacity = CInt(nudCapacity.Value)
         Status = cboStatus.SelectedItem.ToString
 
-        Using conn As New OleDbConnection(ConnectionString)
+        Using conn As New OleDbConnection(Db.ConnectionString)
             conn.Open()
             Dim query = "UPDATE UnitData SET Capacity=@cap, Status=@status WHERE UnitNumber=@unit"
             Using cmd As New OleDbCommand(query, conn)
@@ -44,31 +44,4 @@ Public Class ConfigureMachineForm
         Close()
     End Sub
 
-    Private Sub SplitContainer3_SplitterMoved(sender As Object, e As SplitterEventArgs)
-
-    End Sub
-
-    Private Sub SplitContainer3_Panel2_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel2.Paint
-
-    End Sub
-
-    Private Sub lblUnitNumber_Click(sender As Object, e As EventArgs) Handles lblUnitNumber.Click
-
-    End Sub
-
-    Private Sub cboStatus_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub nudCapacity_ValueChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub SplitContainer2_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer2.Panel1.Paint
-
-    End Sub
-
-    Private Sub nudCapacity_ValueChanged_1(sender As Object, e As EventArgs) Handles nudCapacity.ValueChanged
-
-    End Sub
 End Class

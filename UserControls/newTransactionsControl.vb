@@ -5,6 +5,8 @@ Public Class newTransactionsControl
     Private transactionData As New DataTable()
     Private lastOpenTime As DateTime = DateTime.MinValue
     Private isOpening As Boolean = False
+    Private suppressSelectionEvents As Boolean = False
+
 
     Private Sub TransactionsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitializeDataGridView()
@@ -17,6 +19,8 @@ Public Class newTransactionsControl
 
         ' Load data
         LoadTransactions()
+        btnEdit.Enabled = False
+        btnDelete.Enabled = False
     End Sub
 
     Private Sub InitializeDataGridView()
@@ -36,7 +40,7 @@ Public Class newTransactionsControl
             .ThemeStyle.BackColor = Color.White
             ' Theme & Colors
             '.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(250, 252, 253)
-            .ThemeStyle.AlternatingRowsStyle.Font = New Font("Poppins", 9)
+            .ThemeStyle.AlternatingRowsStyle.Font = New Font("Poppins", 12)
             .ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(71, 69, 94)
             .ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(220, 235, 252)
             .ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94)
@@ -44,11 +48,17 @@ Public Class newTransactionsControl
             ' Header Style — clean white minimal design
             .ThemeStyle.HeaderStyle.BackColor = Color.White
             .ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-            .ThemeStyle.HeaderStyle.Font = New Font("Poppins", 9, FontStyle.Regular)
+            .ThemeStyle.HeaderStyle.Font = New Font("Poppins", 12, FontStyle.Regular)
             .ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(64, 64, 64)
             .ThemeStyle.HeaderStyle.Height = 40
             .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             .EnableHeadersVisualStyles = False
+
+            With dgvTransactions
+                .ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+                .RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+            End With
+
 
             ' Remove all dividers except bottom line
             .AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
@@ -64,7 +74,7 @@ Public Class newTransactionsControl
             ' Row Style
             .ThemeStyle.RowsStyle.BackColor = Color.White
             .ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-            .ThemeStyle.RowsStyle.Font = New Font("Poppins", 9)
+            .ThemeStyle.RowsStyle.Font = New Font("Poppins", 12)
             .ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94)
             .ThemeStyle.RowsStyle.Height = 45
             .ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(220, 235, 252)
@@ -93,6 +103,12 @@ Public Class newTransactionsControl
         ' Handle events
         AddHandler dgvTransactions.CellDoubleClick, AddressOf dgvTransactions_CellDoubleClick
         AddHandler dgvTransactions.CellContentClick, AddressOf dgvTransactions_CellContentClick
+        AddHandler dgvTransactions.SelectionChanged, AddressOf dgvTransactions_SelectionChanged
+        AddHandler dgvTransactions.DataBindingComplete, AddressOf dgvTransactions_DataBindingComplete
+        AddHandler dgvTransactions.MouseDown, AddressOf dgvTransactions_MouseDown
+        AddHandler dgvTransactions.CellMouseDown, AddressOf dgvTransactions_CellMouseDown
+
+
     End Sub
 
     Private Sub AddViewButtonColumn()
@@ -113,14 +129,14 @@ Public Class newTransactionsControl
 
     Private Sub LoadTransactions()
         ' Ensure the path is correct and accessible by your application
-        Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
+        'Dim connStr As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
 
         Try
             'Debug.WriteLine("DEBUG >>> Starting LoadTransactions()")
             transactionData.Clear()
             dgvTransactions.SuspendLayout()
 
-            Using conn As New OleDbConnection(connStr)
+            Using conn As New OleDbConnection(Db.ConnectionString)
                 'Debug.WriteLine("DEBUG >>> Opening connection to database...")
                 conn.Open()
                 'MessageBox.Show("Connected successfully to database!", "DEBUG", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -332,8 +348,206 @@ Public Class newTransactionsControl
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim optionsForm As New TransactionOption()
+        Dim optionsForm As New TransactionOption
         optionsForm.StartPosition = FormStartPosition.CenterParent
         optionsForm.ShowDialog()
+    End Sub
+
+    ' Make sure nothing is selected after binding
+    Private Sub dgvTransactions_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs)
+        suppressSelectionEvents = True
+        Try
+            dgvTransactions.ClearSelection()
+            dgvTransactions.CurrentCell = Nothing
+            btnEdit.Enabled = False
+            btnDelete.Enabled = False
+        Finally
+            suppressSelectionEvents = False
+        End Try
+    End Sub
+
+    ' Enable/disable buttons based on selection
+    Private Sub dgvTransactions_SelectionChanged(sender As Object, e As EventArgs)
+        If suppressSelectionEvents Then Return
+        Dim hasSelection As Boolean = GetSelectedTransactionId().HasValue
+        btnEdit.Enabled = hasSelection
+        btnDelete.Enabled = hasSelection
+    End Sub
+
+    Private Function GetSelectedTransactionId() As Integer?
+        If dgvTransactions.SelectedRows.Count > 0 Then
+            Dim row = dgvTransactions.SelectedRows(0)
+            If row.Cells("TransactionID").Value IsNot Nothing Then
+                Return CInt(row.Cells("TransactionID").Value)
+            End If
+        End If
+
+        ' Fallback if user clicked a single cell while FullRowSelect is on
+        If dgvTransactions.CurrentRow IsNot Nothing AndAlso Not dgvTransactions.CurrentRow.IsNewRow Then
+            Dim cellVal = dgvTransactions.CurrentRow.Cells("TransactionID").Value
+            If cellVal IsNot Nothing Then
+                Return CInt(cellVal)
+            End If
+        End If
+
+        Return Nothing
+    End Function
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Dim selId? As Integer = GetSelectedTransactionId()
+        If Not selId.HasValue Then
+            MessageBox.Show("Please select a transaction to edit.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        Dim frm As New TransactionForm With {
+        .TransactionId = selId.Value,
+        .Mode = "Edit"
+    }
+
+        ' If user saved changes (you set DialogResult=OK on save)
+        If frm.ShowDialog() = DialogResult.OK Then
+            RefreshAndReselect(selId.Value)
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim selId? As Integer = GetSelectedTransactionId()
+        If Not selId.HasValue Then
+            MessageBox.Show("Please select a transaction to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        Dim id As Integer = selId.Value
+        Dim name As String = TryCast(GetCellValue(dgvTransactions, "CustomerName"), String)
+
+        Dim prompt As String = $"Delete Transaction #{id}{If(String.IsNullOrWhiteSpace(name), "", $" ({name})")}?" &
+                           Environment.NewLine & "This action cannot be undone."
+        Dim ans = MessageBox.Show(prompt, "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        If ans <> DialogResult.Yes Then Return
+
+        Try
+            Using conn As New OleDb.OleDbConnection(Db.ConnectionString)
+                conn.Open()
+                Using cmd As New OleDb.OleDbCommand("DELETE FROM [Transactions] WHERE [TransactionID]=?", conn)
+                    cmd.Parameters.Add("?", OleDb.OleDbType.Integer).Value = id
+                    Dim affected = cmd.ExecuteNonQuery()
+                    If affected = 0 Then
+                        MessageBox.Show("Transaction not found or already deleted.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                End Using
+            End Using
+
+            ' After deletion, refresh list but don't try to reselect the deleted row
+            RefreshAndReselect(Nothing)
+        Catch ex As Exception
+            MessageBox.Show("Error deleting transaction: " & ex.Message, "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Function GetCellValue(grid As DataGridView, columnName As String) As Object
+        ' Validate inputs and column existence
+        If grid Is Nothing OrElse String.IsNullOrWhiteSpace(columnName) Then Return Nothing
+        If grid.Columns(columnName) Is Nothing Then Return Nothing
+
+        ' Prefer a full-row selection if available, else fall back to CurrentRow
+        Dim row As DataGridViewRow = Nothing
+        If grid.SelectedRows IsNot Nothing AndAlso grid.SelectedRows.Count > 0 Then
+            row = grid.SelectedRows(0)
+        Else
+            row = grid.CurrentRow
+        End If
+
+        If row Is Nothing OrElse row.IsNewRow Then Return Nothing
+        Return row.Cells(columnName).Value
+    End Function
+
+
+    Private Sub RefreshAndReselect(Optional transactionIdToSelect As Integer? = Nothing)
+        ' Capture current filter UI state
+        Dim prevStatus As String = If(cmbStatus.SelectedItem, "All").ToString()
+        Dim prevSearch As String = tbSearch.Text
+        Dim useDate As Boolean = Not toggleDate.Checked
+        Dim prevDate As Date = dtpDateFilter.Value.Date
+
+        ' Reload
+        LoadTransactions()
+
+        ' Restore UI filters
+        If cmbStatus.Items.Contains(prevStatus) Then cmbStatus.SelectedItem = prevStatus
+        tbSearch.Text = prevSearch
+        toggleDate.Checked = Not useDate
+        dtpDateFilter.Value = If(useDate, prevDate, DateTime.Now)
+
+        ' Re-apply data view filter
+        ApplyFilters()
+
+        ' Try to reselect the given row
+        suppressSelectionEvents = True
+        Try
+            dgvTransactions.ClearSelection()
+            dgvTransactions.CurrentCell = Nothing
+
+            If transactionIdToSelect.HasValue Then
+                For Each row As DataGridViewRow In dgvTransactions.Rows
+                    If Not row.IsNewRow AndAlso row.Cells("TransactionID").Value IsNot Nothing AndAlso
+                   CInt(row.Cells("TransactionID").Value) = transactionIdToSelect.Value Then
+                        row.Selected = True
+                        dgvTransactions.FirstDisplayedScrollingRowIndex = row.Index
+                        Exit For
+                    End If
+                Next
+            End If
+
+            ' After refresh, enable/disable buttons based on current selection
+            Dim hasSelection As Boolean = GetSelectedTransactionId().HasValue
+            btnEdit.Enabled = hasSelection
+            btnDelete.Enabled = hasSelection
+        Finally
+            suppressSelectionEvents = False
+        End Try
+    End Sub
+
+    ' Click blank space / headers => clear selection
+    Private Sub dgvTransactions_MouseDown(sender As Object, e As MouseEventArgs)
+        Dim hit = dgvTransactions.HitTest(e.X, e.Y)
+
+        ' Clicked on nothing or headers? Deselect.
+        If hit.Type = DataGridViewHitTestType.None _
+       OrElse hit.Type = DataGridViewHitTestType.ColumnHeader _
+       OrElse hit.Type = DataGridViewHitTestType.TopLeftHeader Then
+
+            suppressSelectionEvents = True
+            Try
+                dgvTransactions.ClearSelection()
+                dgvTransactions.CurrentCell = Nothing
+                btnEdit.Enabled = False
+                btnDelete.Enabled = False
+            Finally
+                suppressSelectionEvents = False
+            End Try
+        End If
+    End Sub
+
+    ' Ctrl+click on a selected row => toggle it off (deselect)
+    Private Sub dgvTransactions_CellMouseDown(sender As Object, e As DataGridViewCellMouseEventArgs)
+        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Return
+
+        ' Only if Ctrl is pressed and the clicked row is currently selected
+        If (ModifierKeys And Keys.Control) = Keys.Control Then
+            Dim row = dgvTransactions.Rows(e.RowIndex)
+            If row.Selected Then
+                suppressSelectionEvents = True
+                Try
+                    dgvTransactions.ClearSelection()
+                    dgvTransactions.CurrentCell = Nothing
+                    btnEdit.Enabled = False
+                    btnDelete.Enabled = False
+                    ' Prevent default selection from the click
+                Finally
+                    suppressSelectionEvents = False
+                End Try
+            End If
+        End If
     End Sub
 End Class
