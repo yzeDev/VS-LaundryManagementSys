@@ -6,25 +6,17 @@ Imports System.Threading.Tasks
 Imports System.Reflection
 
 Public Class DashboardControl
-
-
     Private lastTransactionCount As Integer = -1
     Private lastMachineCount As Integer = -1
     Private Shared ReadOnly httpClient As New HttpClient()
-    ' ==== Caches and click areas ====
-    Private dashboardCache As New List(Of TransactionItem)
 
     Private notifyIconRects As New Dictionary(Of Integer, Rectangle)
     Private completeIconRects As New Dictionary(Of Integer, Rectangle)
     Private archiveIconRects As New Dictionary(Of Integer, Rectangle)
 
-    ' Current view after search/sort
+    Private dashboardCache As New List(Of TransactionItem)
     Private filteredView As New List(Of TransactionItem)
 
-
-
-
-    ' ==== Model for rows ====
     Private Class TransactionItem
         Public Property TransactionID As Integer
         Public Property CustomerName As String
@@ -32,7 +24,6 @@ Public Class DashboardControl
         Public Property Status As String
         Public Property TransactionDate As Nullable(Of DateTime)
     End Class
-
 
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -76,25 +67,40 @@ Public Class DashboardControl
 
     Private Sub LoadDashboardCounters()
         Try
-
             Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
 
+                ' --- Compute current week [Mon 00:00) .. [next Mon 00:00) ---
+                Dim today As Date = Date.Now
+                Dim weekStart As Date
+                ' start week on Monday
+                If today.DayOfWeek = DayOfWeek.Sunday Then
+                    weekStart = today.Date.AddDays(-6)
+                Else
+                    weekStart = today.Date.AddDays(-CInt(today.DayOfWeek) + 1)
+                End If
+                Dim weekEnd As Date = weekStart.AddDays(7)
+
                 Dim query As String = "
-                    SELECT Status, COUNT(*) AS Total
-                    FROM Transactions
-                    GROUP BY Status;
-                "
+                SELECT [Status], COUNT(*) AS Total
+                FROM [Transactions]
+                WHERE [TransactionDate] >= ? AND [TransactionDate] < ?
+                GROUP BY [Status];
+            "
 
                 Using cmd As New OleDbCommand(query, conn)
+                    cmd.Parameters.Add("?", OleDbType.Date).Value = weekStart
+                    cmd.Parameters.Add("?", OleDbType.Date).Value = weekEnd
+
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
+                        ' reset counters
                         lblPendingOrders.Text = "0"
                         lblinProgress.Text = "0"
                         lblDelivery.Text = "0"
                         lblCompleted.Text = "0"
 
                         While reader.Read()
-                            Dim status As String = reader("Status").ToString().ToLower()
+                            Dim status As String = reader("Status").ToString().ToLowerInvariant()
                             Dim count As Integer = Convert.ToInt32(reader("Total"))
 
                             Select Case status
@@ -111,10 +117,13 @@ Public Class DashboardControl
                     End Using
                 End Using
             End Using
+
         Catch ex As Exception
             MessageBox.Show("Error loading transaction counters: " & ex.Message)
         End Try
     End Sub
+
+
 
     ' =======================
     ' MACHINE COUNTERS
@@ -636,7 +645,7 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
             ' Load once (static)
             Static notifyIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\send-mail.png")
             Static completeIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\yes.png")
-            Static archiveIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\folder.png") ' <-- add this asset
+            Static archiveIcon As Image = Image.FromFile("C:\Users\Eisen\OneDrive\Documents\Assets\folder.png")
 
             Dim iconSize As Integer = 30
             Dim spacing As Integer = 8
