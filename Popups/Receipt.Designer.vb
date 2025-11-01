@@ -23,29 +23,29 @@ Partial Class Receipt
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Receipt))
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
         TableLayoutPanel4 = New TableLayoutPanel()
@@ -244,14 +244,14 @@ Partial Class Receipt
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges23
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.Dock = DockStyle.Fill
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(3, 2)
         Guna2PictureBox1.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2PictureBox1.Size = New Size(49, 33)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 6
@@ -325,13 +325,13 @@ Partial Class Receipt
         ' 
         ' Guna2PictureBox4
         ' 
-        Guna2PictureBox4.CustomizableEdges = CustomizableEdges25
+        Guna2PictureBox4.CustomizableEdges = CustomizableEdges3
         Guna2PictureBox4.Image = My.Resources.Resources._17
         Guna2PictureBox4.ImageRotate = 0F
         Guna2PictureBox4.Location = New Point(3, 32)
         Guna2PictureBox4.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox4.Name = "Guna2PictureBox4"
-        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2PictureBox4.Size = New Size(18, 13)
         Guna2PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox4.TabIndex = 44
@@ -339,13 +339,13 @@ Partial Class Receipt
         ' 
         ' Guna2PictureBox3
         ' 
-        Guna2PictureBox3.CustomizableEdges = CustomizableEdges27
+        Guna2PictureBox3.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox3.Image = My.Resources.Resources._16
         Guna2PictureBox3.ImageRotate = 0F
         Guna2PictureBox3.Location = New Point(3, 16)
         Guna2PictureBox3.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox3.Size = New Size(15, 12)
         Guna2PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox3.TabIndex = 44
@@ -392,13 +392,13 @@ Partial Class Receipt
         ' 
         ' Guna2PictureBox2
         ' 
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges29
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges7
         Guna2PictureBox2.Image = My.Resources.Resources._15
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.Location = New Point(3, 2)
         Guna2PictureBox2.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2PictureBox2.Size = New Size(15, 9)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox2.TabIndex = 44
@@ -453,13 +453,13 @@ Partial Class Receipt
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel1)
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel3)
         Guna2GradientPanel1.Controls.Add(TableLayoutPanel7)
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges31
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
         Guna2GradientPanel1.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
         Guna2GradientPanel1.Location = New Point(-2, 0)
         Guna2GradientPanel1.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientPanel1.Size = New Size(429, 101)
         Guna2GradientPanel1.TabIndex = 5
         ' 
@@ -865,7 +865,7 @@ Partial Class Receipt
         ' 
         ' btnDownloadReceipt
         ' 
-        btnDownloadReceipt.CustomizableEdges = CustomizableEdges33
+        btnDownloadReceipt.CustomizableEdges = CustomizableEdges11
         btnDownloadReceipt.DisabledState.BorderColor = Color.DarkGray
         btnDownloadReceipt.DisabledState.CustomBorderColor = Color.DarkGray
         btnDownloadReceipt.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -876,7 +876,7 @@ Partial Class Receipt
         btnDownloadReceipt.Location = New Point(1, 611)
         btnDownloadReceipt.Margin = New Padding(3, 2, 3, 2)
         btnDownloadReceipt.Name = "btnDownloadReceipt"
-        btnDownloadReceipt.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        btnDownloadReceipt.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnDownloadReceipt.Size = New Size(144, 21)
         btnDownloadReceipt.TabIndex = 44
         btnDownloadReceipt.Text = "DOWNLOAD RECEIPT"
@@ -1152,13 +1152,13 @@ Partial Class Receipt
         ' 
         TableLayoutPanel20.SetColumnSpan(Guna2GradientPanel2, 2)
         Guna2GradientPanel2.Controls.Add(TableLayoutPanel9)
-        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges35
+        Guna2GradientPanel2.CustomizableEdges = CustomizableEdges17
         Guna2GradientPanel2.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel2.FillColor2 = Color.White
         Guna2GradientPanel2.Location = New Point(3, 27)
         Guna2GradientPanel2.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel2.Name = "Guna2GradientPanel2"
-        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2GradientPanel2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2GradientPanel2.Size = New Size(194, 21)
         Guna2GradientPanel2.TabIndex = 16
         ' 
@@ -1180,13 +1180,13 @@ Partial Class Receipt
         ' 
         ' Guna2PictureBox5
         ' 
-        Guna2PictureBox5.CustomizableEdges = CustomizableEdges37
+        Guna2PictureBox5.CustomizableEdges = CustomizableEdges15
         Guna2PictureBox5.Image = My.Resources.Resources._131
         Guna2PictureBox5.ImageRotate = 0F
         Guna2PictureBox5.Location = New Point(3, 2)
         Guna2PictureBox5.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox5.Name = "Guna2PictureBox5"
-        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2PictureBox5.Size = New Size(18, 15)
         Guna2PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox5.TabIndex = 44
@@ -1288,14 +1288,14 @@ Partial Class Receipt
         Guna2GradientPanel3.AutoSize = True
         TableLayoutPanel20.SetColumnSpan(Guna2GradientPanel3, 2)
         Guna2GradientPanel3.Controls.Add(TableLayoutPanel17)
-        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges39
+        Guna2GradientPanel3.CustomizableEdges = CustomizableEdges21
         Guna2GradientPanel3.Dock = DockStyle.Fill
         Guna2GradientPanel3.FillColor = Color.FromArgb(CByte(224), CByte(240), CByte(255))
         Guna2GradientPanel3.FillColor2 = Color.White
         Guna2GradientPanel3.Location = New Point(3, 112)
         Guna2GradientPanel3.Margin = New Padding(3, 2, 3, 2)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
-        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2GradientPanel3.Size = New Size(344, 16)
         Guna2GradientPanel3.TabIndex = 17
         ' 
@@ -1318,13 +1318,13 @@ Partial Class Receipt
         ' 
         ' Guna2PictureBox6
         ' 
-        Guna2PictureBox6.CustomizableEdges = CustomizableEdges41
+        Guna2PictureBox6.CustomizableEdges = CustomizableEdges19
         Guna2PictureBox6.Dock = DockStyle.Fill
         Guna2PictureBox6.ImageRotate = 0F
         Guna2PictureBox6.Location = New Point(3, 2)
         Guna2PictureBox6.Margin = New Padding(3, 2, 3, 2)
         Guna2PictureBox6.Name = "Guna2PictureBox6"
-        Guna2PictureBox6.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        Guna2PictureBox6.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2PictureBox6.Size = New Size(44, 12)
         Guna2PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox6.TabIndex = 44
@@ -1368,7 +1368,7 @@ Partial Class Receipt
         ' 
         ' btnClose
         ' 
-        btnClose.CustomizableEdges = CustomizableEdges43
+        btnClose.CustomizableEdges = CustomizableEdges13
         btnClose.DisabledState.BorderColor = Color.DarkGray
         btnClose.DisabledState.CustomBorderColor = Color.DarkGray
         btnClose.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -1379,7 +1379,7 @@ Partial Class Receipt
         btnClose.Location = New Point(328, 611)
         btnClose.Margin = New Padding(3, 2, 3, 2)
         btnClose.Name = "btnClose"
-        btnClose.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        btnClose.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnClose.Size = New Size(64, 21)
         btnClose.TabIndex = 46
         btnClose.Text = "CLOSE"

@@ -73,19 +73,23 @@ Public Class Receipt
     ' ===== Insert transaction into Access and return ID =====
     Private Function InsertTransactionAndReturnId() As Long
         Dim newId As Long = 0
+
+        ' ✅ Added OptionType column and parameter
         Dim sql As String =
-            "INSERT INTO Transactions " &
-            "(CustomerName, ServiceType, [Status], [TransactionDate], TotalPayment, ContactNumber, [Address], " &
-            "PaymentMethod, AmountReceived, [Change], DeliverMethod, [Weight], ReferenceNum) " &
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        "INSERT INTO Transactions " &
+        "(CustomerName, ServiceType, OptionType, [Status], [TransactionDate], TotalPayment, ContactNumber, [Address], " &
+        "PaymentMethod, AmountReceived, [Change], DeliverMethod, [Weight], ReferenceNum) " &
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
         Try
             Using cn As New OleDbConnection(Db.ConnectionString)
                 cn.Open()
                 Using tx = cn.BeginTransaction()
                     Using cmd As New OleDbCommand(sql, cn, tx)
+                        ' Match order of fields above exactly
                         cmd.Parameters.Add("?", OleDbType.VarWChar, 255).Value = If(CustomerName, "")
                         cmd.Parameters.Add("?", OleDbType.VarWChar, 100).Value = If(ServiceType, "")
+                        cmd.Parameters.Add("?", OleDbType.VarWChar, 100).Value = If(OptionType, "") ' ✅ Added this line
                         cmd.Parameters.Add("?", OleDbType.VarWChar, 50).Value = "Pending"
                         cmd.Parameters.Add("?", OleDbType.Date).Value = TransactionDate
                         cmd.Parameters.Add("?", OleDbType.Currency).Value = TotalAmount
@@ -100,7 +104,7 @@ Public Class Receipt
                         cmd.ExecuteNonQuery()
                     End Using
 
-                    ' Get new ID
+                    ' Retrieve the auto-generated TransactionID
                     Using idCmd As New OleDbCommand("SELECT @@IDENTITY", cn, tx)
                         Dim scalar = idCmd.ExecuteScalar()
                         If scalar IsNot Nothing AndAlso Not IsDBNull(scalar) Then
@@ -113,11 +117,12 @@ Public Class Receipt
             End Using
         Catch ex As Exception
             MessageBox.Show("Error saving transaction: " & ex.Message,
-                            "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
         Return newId
     End Function
+
 
     ' ===== Close button =====
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
