@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Compile Update="DashboardTransactionRowHeader.vb" />
+    <Compile Update="Forms\AdminForm.vb" />
     <Compile Update="InvoiceForm - Copy.vb" />
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>

@@ -1254,7 +1254,7 @@ Partial Class DashboardControl
         gtbSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         gtbSearch.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         gtbSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        gtbSearch.Dock = DockStyle.Fill
+        gtbSearch.Dock = DockStyle.Right
         gtbSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         gtbSearch.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         gtbSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -1271,9 +1271,9 @@ Partial Class DashboardControl
         ' 
         ' gcbSort
         ' 
-        gcbSort.Anchor = AnchorStyles.Left
         gcbSort.BackColor = Color.Transparent
         gcbSort.CustomizableEdges = CustomizableEdges33
+        gcbSort.Dock = DockStyle.Right
         gcbSort.DrawMode = DrawMode.OwnerDrawFixed
         gcbSort.DropDownStyle = ComboBoxStyle.DropDownList
         gcbSort.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -1281,7 +1281,7 @@ Partial Class DashboardControl
         gcbSort.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         gcbSort.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         gcbSort.ItemHeight = 30
-        gcbSort.Location = New Point(123, 4)
+        gcbSort.Location = New Point(123, 3)
         gcbSort.Name = "gcbSort"
         gcbSort.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         gcbSort.Size = New Size(201, 36)

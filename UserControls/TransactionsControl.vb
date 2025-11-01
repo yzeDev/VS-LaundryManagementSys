@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports Guna.UI2.WinForms
 
-Public Class newTransactionsControl
+Public Class TransactionsControl
     Private transactionData As New DataTable()
     Private lastOpenTime As DateTime = DateTime.MinValue
     Private isOpening As Boolean = False
@@ -107,7 +107,6 @@ Public Class newTransactionsControl
         AddHandler dgvTransactions.DataBindingComplete, AddressOf dgvTransactions_DataBindingComplete
         AddHandler dgvTransactions.MouseDown, AddressOf dgvTransactions_MouseDown
         AddHandler dgvTransactions.CellMouseDown, AddressOf dgvTransactions_CellMouseDown
-
 
     End Sub
 
@@ -288,9 +287,9 @@ Public Class newTransactionsControl
         End Try
     End Sub
 
-    Private Sub dgvTransactions_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvTransactions.CellFormatting
+    Private Sub dgvTransactions_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs)
         If dgvTransactions.Columns(e.ColumnIndex).Name = "Status" AndAlso e.Value IsNot Nothing Then
-            Select Case e.Value.ToString().ToLower()
+            Select Case e.Value.ToString.ToLower
                 Case "pending" : e.CellStyle.ForeColor = Color.DarkGoldenrod
                 Case "in-progress" : e.CellStyle.ForeColor = Color.DodgerBlue
                 Case "for pickup" : e.CellStyle.ForeColor = Color.MediumSlateBlue
@@ -302,12 +301,12 @@ Public Class newTransactionsControl
     End Sub
 
 
-    Private Sub dgvTransactions_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactions.CellDoubleClick
+    Private Sub dgvTransactions_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs)
         If e.RowIndex < 0 OrElse dgvTransactions.Columns(e.ColumnIndex).Name = "btnView" Then Return
         OpenTransactionOnce(e.RowIndex)
     End Sub
 
-    Private Sub dgvTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransactions.CellContentClick
+    Private Sub dgvTransactions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
         If e.RowIndex < 0 Then Return
 
         ' Only respond if user clicked the View button
