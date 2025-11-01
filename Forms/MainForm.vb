@@ -1,30 +1,21 @@
-﻿Public Class MainForm
+﻿Imports Guna.UI2.WinForms
+Imports TheArtOfDevHtmlRenderer.Adapters.Entities
 
-    Private activeNavButton As Button = Nothing
+Public Class MainForm
+
+    Private activeNavButton As Guna2GradientButton = Nothing
 
     Private ReadOnly ActiveColor As Color = Color.FromArgb(5, 33, 90)
     Private ReadOnly HoverColor As Color = Color.FromArgb(5, 33, 90)
+
+    Private ReadOnly FillColor2 As Color = Color.MediumSeaGreen
+
     Private ReadOnly NormalColor As Color = Color.Transparent
     Private originalClientSize As Size
     Private isMaximizedManually As Boolean = False
 
 
     '  WINDOW CONTROL BUTTONS 
-
-    Private Sub minimizeBtn_Click(sender As Object, e As EventArgs) Handles minimizeBtn.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub maximizeBtn_Click(sender As Object, e As EventArgs)
-        If WindowState = FormWindowState.Normal Then
-            isMaximizedManually = True
-            originalClientSize = ClientSize
-            WindowState = FormWindowState.Maximized
-        Else
-            WindowState = FormWindowState.Normal
-        End If
-    End Sub
-
 
     Private Sub MainForm_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         ' Handle restore from maximized to normal
@@ -57,12 +48,12 @@
 
 
     Private Sub xBtn_Click(sender As Object, e As EventArgs) Handles xBtn.Click
-        Dim exitPopup As New ExitConfirmForm()
+        Dim exitPopup As New ExitConfirmForm
 
-        exitPopup.Left = (Me.ClientSize.Width - exitPopup.Width) \ 2
-        exitPopup.Top = (Me.ClientSize.Height - exitPopup.Height) \ 2
+        exitPopup.Left = (ClientSize.Width - exitPopup.Width) \ 2
+        exitPopup.Top = (ClientSize.Height - exitPopup.Height) \ 2
 
-        Me.Controls.Add(exitPopup)
+        Controls.Add(exitPopup)
         exitPopup.BringToFront()
     End Sub
 
@@ -95,17 +86,18 @@
 
 
 
-    Private Sub SetActiveButton(clickedButton As Button)
+    Private Sub SetActiveButton(clickedButton As Guna2GradientButton)
         If activeNavButton IsNot Nothing Then
-            activeNavButton.BackColor = NormalColor
+            activeNavButton.FillColor = NormalColor
+            activeNavButton.FillColor2 = NormalColor
         End If
 
-        clickedButton.BackColor = ActiveColor
+        clickedButton.FillColor2 = FillColor2
         activeNavButton = clickedButton
     End Sub
 
     Private Sub NavButton_Hover(sender As Object, e As EventArgs)
-        Dim btn As Button = CType(sender, Button)
+        Dim btn As Guna2GradientButton = CType(sender, Guna2GradientButton)
         If btn IsNot activeNavButton Then
             If e.GetType Is GetType(MouseEventArgs) Then
                 btn.BackColor = HoverColor
@@ -130,11 +122,11 @@
     End Sub
 
     Private Sub NavButton_Click(sender As Object, e As EventArgs)
-        Dim clickedButton As Button = CType(sender, Button)
+        Dim clickedButton As Guna2GradientButton = CType(sender, Guna2GradientButton)
         LoadSection(clickedButton)
     End Sub
 
-    Private Sub LoadSection(clickedButton As Button)
+    Private Sub LoadSection(clickedButton As Guna2GradientButton)
         Dim titleBar As UserControl = Nothing
         Dim content As UserControl = Nothing
 
@@ -154,6 +146,12 @@
             Case "settingsBtn"
                 titleBar = New settingsTitleBarUser()
                 content = New OptionsControl()
+            Case "logsBtn"
+                titleBar = New logsTitleBarUser()
+                content = New LogsControl()
+            Case "manageUsersBtn"
+                titleBar = New manageUsersTitleBarUser()
+                content = New ManageUsersControl()
             Case Else
                 Return
         End Select

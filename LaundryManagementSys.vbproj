@@ -35,6 +35,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Update="MachineDetailsForm.vb" />
+    <Compile Update="UserControls\TabTitles\logsTitleBarUser.vb" />
+    <Compile Update="UserControls\TabTitles\manageUsersTitleBarUser.vb" />
   </ItemGroup>
 
   <ItemGroup>
