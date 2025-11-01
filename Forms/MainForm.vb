@@ -116,6 +116,8 @@ Public Class MainForm
         AddHandler transactionsBtn.Click, AddressOf NavButton_Click
         AddHandler statisticsBtn.Click, AddressOf NavButton_Click
         AddHandler settingsBtn.Click, AddressOf NavButton_Click
+        AddHandler logsBtn.Click, AddressOf NavButton_Click
+        AddHandler manageUsersBtn.Click, AddressOf NavButton_Click
 
         ' Load default view
         LoadSection(dashboardBtn)
@@ -139,7 +141,7 @@ Public Class MainForm
                 content = New MachinesControl()
             Case "transactionsBtn"
                 titleBar = New transacTitleBarUser()
-                content = New newTransactionsControl()
+                content = New TransactionsControl()
             Case "statisticsBtn"
                 titleBar = New statsTitleBarUser()
                 content = New StatsControl()

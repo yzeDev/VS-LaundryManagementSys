@@ -248,7 +248,7 @@ Partial Class MainForm
         dashboardBtn.Dock = DockStyle.Fill
         dashboardBtn.FillColor = Color.Transparent
         dashboardBtn.FillColor2 = Color.Transparent
-        dashboardBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Image = CType(resources.GetObject("dashboardBtn.Image"), Image)
         dashboardBtn.ImageAlign = HorizontalAlignment.Left
@@ -285,7 +285,7 @@ Partial Class MainForm
         machinesBtn.Dock = DockStyle.Fill
         machinesBtn.FillColor = Color.Transparent
         machinesBtn.FillColor2 = Color.Transparent
-        machinesBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        machinesBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         machinesBtn.ForeColor = Color.White
         machinesBtn.Image = CType(resources.GetObject("machinesBtn.Image"), Image)
         machinesBtn.ImageAlign = HorizontalAlignment.Left
@@ -322,7 +322,7 @@ Partial Class MainForm
         transactionsBtn.Dock = DockStyle.Fill
         transactionsBtn.FillColor = Color.Transparent
         transactionsBtn.FillColor2 = Color.Transparent
-        transactionsBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        transactionsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         transactionsBtn.ForeColor = Color.White
         transactionsBtn.Image = CType(resources.GetObject("transactionsBtn.Image"), Image)
         transactionsBtn.ImageAlign = HorizontalAlignment.Left
@@ -359,7 +359,7 @@ Partial Class MainForm
         statisticsBtn.Dock = DockStyle.Fill
         statisticsBtn.FillColor = Color.Transparent
         statisticsBtn.FillColor2 = Color.Transparent
-        statisticsBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        statisticsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         statisticsBtn.ForeColor = Color.White
         statisticsBtn.Image = CType(resources.GetObject("statisticsBtn.Image"), Image)
         statisticsBtn.ImageAlign = HorizontalAlignment.Left
@@ -396,7 +396,7 @@ Partial Class MainForm
         settingsBtn.Dock = DockStyle.Fill
         settingsBtn.FillColor = Color.Transparent
         settingsBtn.FillColor2 = Color.Transparent
-        settingsBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        settingsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         settingsBtn.ForeColor = Color.White
         settingsBtn.Image = CType(resources.GetObject("settingsBtn.Image"), Image)
         settingsBtn.ImageAlign = HorizontalAlignment.Left
@@ -433,7 +433,7 @@ Partial Class MainForm
         logsBtn.Dock = DockStyle.Fill
         logsBtn.FillColor = Color.Transparent
         logsBtn.FillColor2 = Color.Transparent
-        logsBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        logsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         logsBtn.ForeColor = Color.White
         logsBtn.Image = CType(resources.GetObject("logsBtn.Image"), Image)
         logsBtn.ImageAlign = HorizontalAlignment.Left
@@ -470,7 +470,7 @@ Partial Class MainForm
         manageUsersBtn.Dock = DockStyle.Fill
         manageUsersBtn.FillColor = Color.Transparent
         manageUsersBtn.FillColor2 = Color.Transparent
-        manageUsersBtn.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        manageUsersBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
         manageUsersBtn.ForeColor = Color.White
         manageUsersBtn.Image = CType(resources.GetObject("manageUsersBtn.Image"), Image)
         manageUsersBtn.ImageAlign = HorizontalAlignment.Left
