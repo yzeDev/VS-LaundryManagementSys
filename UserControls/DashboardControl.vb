@@ -460,9 +460,12 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
 
     Private Sub SetupDashboardTransactionTable()
         With dgvDashboardTransactions
+            .DefaultCellStyle.Font = New Font("Poppins", 12, FontStyle.Regular) ' font size for rows
+            .RowTemplate.Height = 45 ' increase row height
+            .ColumnHeadersDefaultCellStyle.Font = New Font("Poppins", 14, FontStyle.Bold)
             .ReadOnly = True
             .Font = New Font("Poppins", 14, FontStyle.Regular)
-            .ColumnHeadersHeight = 35
+            .ColumnHeadersHeight = 45
             .ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
             .Columns.Clear()
             .AutoGenerateColumns = False
@@ -490,6 +493,7 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
                 .SelectionForeColor = Color.Black
             End With
 
+
             AddHandler .CellPainting, AddressOf dgvDashboardTransactions_CellPainting
             AddHandler .ColumnHeaderMouseClick, AddressOf dgvDashboardTransactions_ColumnHeaderMouseClick
 
@@ -515,8 +519,7 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
             .Columns.Add("WaitingTime", "Waiting")
 
             .RowTemplate.Resizable = DataGridViewTriState.False
-            .RowTemplate.Height = 30
-            .RowTemplate.DefaultCellStyle.Font = New Font("Poppins", 11, FontStyle.Regular)
+            .RowTemplate.DefaultCellStyle.Font = New Font("Poppins", 12, FontStyle.Regular)
             .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
             Dim actionCol As New DataGridViewImageColumn() With {
@@ -530,6 +533,15 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
             For Each col As DataGridViewColumn In .Columns
                 col.SortMode = DataGridViewColumnSortMode.NotSortable
             Next
+            dgvDashboardTransactions.RowHeadersVisible = False
+            dgvDashboardTransactions.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+            dgvDashboardTransactions.EnableHeadersVisualStyles = False
+            dgvDashboardTransactions.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+            dgvDashboardTransactions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
+            ' Disable row virtualization to prevent flicker/ghosting
+            dgvDashboardTransactions.RowTemplate.Resizable = DataGridViewTriState.False
+            dgvDashboardTransactions.VirtualMode = False
 
             ' ====== Resume layout ======
             .ResumeLayout(False)

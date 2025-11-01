@@ -496,7 +496,6 @@ Partial Class MainForm
         Name = "MainForm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "BubbleFresh"
-        WindowState = FormWindowState.Maximized
         navbarPanel.ResumeLayout(False)
         navbarBtnPanel.ResumeLayout(False)
         settingsBtnPanel.ResumeLayout(False)
