@@ -15,13 +15,13 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub maximizeBtn_Click(sender As Object, e As EventArgs) Handles maximizeBtn.Click
-        If Me.WindowState = FormWindowState.Normal Then
+    Private Sub maximizeBtn_Click(sender As Object, e As EventArgs)
+        If WindowState = FormWindowState.Normal Then
             isMaximizedManually = True
-            originalClientSize = Me.ClientSize
-            Me.WindowState = FormWindowState.Maximized
+            originalClientSize = ClientSize
+            WindowState = FormWindowState.Maximized
         Else
-            Me.WindowState = FormWindowState.Normal
+            WindowState = FormWindowState.Normal
         End If
     End Sub
 

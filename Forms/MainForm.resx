@@ -366,19 +366,6 @@
         38gGoAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="maximizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAd0SU1FB+kK
-        DQQHEWe9Pn8AAAGHSURBVEhL7ZXNisIwFIWzGQruZqlvNo/iqi7czTMIvoS2UJC2/lRbGhNSXJluBCni
-        /0LsQjPcMjMdA5YUYVY98JFFTu5Z3ROEKr2i/X6fsdvt0Ha7LcXhcMgo1Gg0QpxzJITQ0jRtpGlaV+F6
-        vcLZgHdxHKPxeCyPzgUhlmVp8/n8M4qiJIqidQkSeDcYDLTJZCKPzgUhGOOmYRj3Xq8nDMNQ5tt/D4Kg
-        6bquPDqX4zhoNpt1+/2+IIQklNI2xljHGLcK0MEHfghyHKdrWZY8Opdt2xDSgZA4jokQ4o1SigghT4F7
-        8HHOCbyzbbujHMI5p0KI2ul0km0POh6PEFJbLpe0CqlCZFuufw/52RPf99F0On0K3Jfak78bH4Zh4vt+
-        2/M83fO8VgE6+MCvtPFQbISQpmmaWXdBmCrgN01TQPcVtnAQBFDTGmMsa2HG2FqRBGPsDofDj8ViUcMY
-        y6NzQchqtfr9Ty6XS12Rxu12e4f2ZYyhMAzl0Y86n88Z8NNtNpvSVHpZX06jegv/zGbMAAAAAElFTkSu
-        QmCC
-</value>
-  </data>
   <metadata name="Guna2ShapesTool1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

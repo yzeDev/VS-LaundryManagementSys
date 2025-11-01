@@ -1,9 +1,5 @@
 ﻿Imports System.Data.OleDb
 
-Module DatabaseHelper
-    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Eisen\OneDrive\Documents\LaundryDatabase.accdb;"
-End Module
-
 Public Class MachinesControl
     Private machineCardsCache As New Dictionary(Of Integer, MachineCard)()
     Private selectedMachine As MachineCard = Nothing
@@ -57,8 +53,59 @@ Public Class MachinesControl
         Next
     End Sub
 
+    Private Sub flpMachines_Resize(sender As Object, e As EventArgs) Handles flpMachines.Resize
+        AdjustMachineCardLayout()
+    End Sub
+
+    Private Sub FlowLayoutPanel1_SizeChanged(sender As Object, e As EventArgs) Handles flpMachines.SizeChanged
+        ' Recalculate spacing when the panel resizes
+        Dim totalWidth As Integer = flpMachines.ClientSize.Width
+        Dim cardWidth As Integer = 500
+        Dim cardsPerRow As Integer = 4
+
+        Dim totalCardWidth As Integer = cardWidth * cardsPerRow
+        Dim spacing As Integer = (totalWidth - totalCardWidth) \ (cardsPerRow + 1)
+
+        If spacing < 0 Then spacing = 0
+
+        For Each ctrl As Control In flpMachines.Controls
+            ctrl.Margin = New Padding(spacing, 10, 0, 10)
+        Next
+    End Sub
+
+
+    Private Sub AdjustMachineCardLayout()
+        If flpMachines.Controls.Count = 0 Then Exit Sub
+
+        ' Desired number of cards per row (auto-adjust based on width)
+        Dim panelWidth As Integer = flpMachines.ClientSize.Width
+        Dim idealCardWidth As Integer = 500
+        Dim cardMargin As Integer = 5
+        Dim totalCardWidth As Integer = idealCardWidth + (cardMargin * 2)
+
+        ' Decide how many cards fit per row
+        Dim cardsPerRow As Integer = Math.Max(1, Math.Min(3, panelWidth \ totalCardWidth))
+
+        ' Compute new width so cards fit evenly
+        Dim availableWidth As Integer = panelWidth - (cardsPerRow + 1) * cardMargin
+        Dim newCardWidth As Integer = availableWidth \ cardsPerRow
+
+        ' Update each card’s size
+        For Each ctrl As Control In flpMachines.Controls
+            If TypeOf ctrl Is MachineCard Then
+                Dim card As MachineCard = DirectCast(ctrl, MachineCard)
+                card.AutoSize = False
+                card.Width = newCardWidth
+                card.Height = 300 ' Keep consistent height
+                card.Margin = New Padding(cardMargin)
+            End If
+        Next
+
+        flpMachines.PerformLayout()
+    End Sub
 
     Private Sub LoadMachinesFromDB()
+        flpMachines.SuspendLayout()
         flpMachines.Controls.Clear()
 
         Using conn As New OleDbConnection(Db.ConnectionString)
@@ -99,8 +146,8 @@ Public Class MachinesControl
 
                         ' --- RESET LAYOUT & SIZE TO FIX ENLARGEMENT ---
                         card.AutoSize = False
-                        card.Size = New Size(420, 300)
-                        card.Margin = New Padding(5)
+                        card.Size = New Size(500, 300)
+                        card.Margin = New Padding(10)
                         card.Padding = New Padding(0)
                         card.picMachine.SizeMode = PictureBoxSizeMode.Zoom
                         card.lblTransactionID.AutoSize = False
@@ -180,13 +227,23 @@ Public Class MachinesControl
 
                         ' Disable interaction for Damaged / Unavailable
                         card.Enabled = (card.Status <> "Damaged" AndAlso card.Status <> "Unavailable")
-
+                        ' --- FORCE FIX LAYOUT (prevents old cards enlarging) ---
+                        card.AutoSize = False
+                        card.AutoSizeMode = AutoSizeMode.GrowAndShrink
+                        card.Dock = DockStyle.None
+                        card.Anchor = AnchorStyles.Top Or AnchorStyles.Left
+                        card.Margin = New Padding(10)
+                        card.MinimumSize = New Size(500, 300)
+                        card.MaximumSize = New Size(500, 300)
+                        card.Size = New Size(500, 300)
                         ' --- ADD CARD TO PANEL ---
                         flpMachines.Controls.Add(card)
                     End While
                 End Using
             End Using
         End Using
+        flpMachines.ResumeLayout()
+        flpMachines.PerformLayout()
 
         FilterMachinesByStatus()
     End Sub
@@ -331,8 +388,6 @@ Public Class MachinesControl
         End If
     End Sub
 
-
-
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
         ' --- Ask the user for capacity ---
@@ -370,8 +425,9 @@ Public Class MachinesControl
         newMachine.MachineID = newID
         newMachine.lblMachineIDText.Text = "Machine ID: " & newID.ToString
 
-        ' --- Refresh UI from DB ---
+        machineCardsCache.Clear() ' 🔧 Prevent reusing old cards
         LoadMachinesFromDB()
+
     End Sub
 
     ' Remove
@@ -400,12 +456,28 @@ Public Class MachinesControl
         ' Now renumber all available machines to fill the gap
         RenumberAvailableMachines()
 
-        ' Refresh everything from DB
+        machineCardsCache.Clear() ' 🔧 Prevent reusing old cards
         LoadMachinesFromDB()
+
 
         selectedMachine = Nothing
         btnRemoveMachine.Enabled = False
         btnConfigure.Enabled = False
+    End Sub
+
+    ' Configure machine
+    Private Sub btnConfigure_Click(sender As Object, e As EventArgs) Handles btnConfigure.Click
+        If selectedMachine Is Nothing Then Return
+
+        Dim configForm As New ConfigureMachineForm()
+        configForm.UnitNumber = selectedMachine.UnitNumber
+        configForm.Capacity = CInt(selectedMachine.Capacity.Replace(" kg", ""))
+        configForm.Status = selectedMachine.Status
+
+        If configForm.ShowDialog() = DialogResult.OK Then
+            ' Just reload everything from DB
+            LoadMachinesFromDB()
+        End If
     End Sub
 
     ' Re-assign unit numbers sequentially
@@ -468,21 +540,6 @@ Public Class MachinesControl
         ' No gaps found, return the next sequential number
         Return nextNumber
     End Function
-
-    ' Configure machine
-    Private Sub btnConfigure_Click(sender As Object, e As EventArgs) Handles btnConfigure.Click
-        If selectedMachine Is Nothing Then Return
-
-        Dim configForm As New ConfigureMachineForm()
-        configForm.UnitNumber = selectedMachine.UnitNumber
-        configForm.Capacity = CInt(selectedMachine.Capacity.Replace(" kg", ""))
-        configForm.Status = selectedMachine.Status
-
-        If configForm.ShowDialog() = DialogResult.OK Then
-            ' Just reload everything from DB
-            LoadMachinesFromDB()
-        End If
-    End Sub
 
     Private Sub ReAdjustUnitNumbers()
         Using conn As New OleDbConnection(Db.ConnectionString)
@@ -600,8 +657,6 @@ Public Class MachinesControl
         btnConfigure.Enabled = True
     End Sub
 
-
-
     Private Sub HandleViewDetails(sender As Object, e As EventArgs)
         Dim btn = TryCast(sender, Guna.UI2.WinForms.Guna2Button)
         If btn Is Nothing Then Return
@@ -625,9 +680,6 @@ Public Class MachinesControl
         frm.TransactionId = card.TransactionID
         frm.ShowDialog()
     End Sub
-
-
-
 
     ' New method to renumber only available machines sequentially
     Private Sub RenumberAvailableMachines()
