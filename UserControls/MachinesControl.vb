@@ -167,17 +167,94 @@ Public Class MachinesControl
                         If card.TransactionID > 0 Then
                             ' Machine is in-use: fetch transaction details
                             Try
-                                Using qcmd As New OleDbCommand("SELECT ServiceDuration, DeliverMethod FROM Transactions WHERE TransactionID=@tid", conn)
+                                Using qcmd As New OleDbCommand("
+            SELECT ServiceType, OptionType, DeliverMethod, Weight, ServiceDuration
+            FROM Transactions
+            WHERE TransactionID=@tid", conn)
+
                                     qcmd.Parameters.AddWithValue("@tid", card.TransactionID)
+
                                     Using r2 As OleDbDataReader = qcmd.ExecuteReader()
                                         If r2.Read() Then
-                                            card.lblServiceTime.Text = If(IsDBNull(r2("ServiceDuration")), DateTime.Now.ToShortTimeString(), r2("ServiceDuration").ToString())
-                                            card.DeliverMethod = If(IsDBNull(r2("DeliverMethod")), "", r2("DeliverMethod").ToString())
+                                            Dim serviceType As String = If(IsDBNull(r2("ServiceType")), "", r2("ServiceType").ToString())
+                                            Dim optionType As String = If(IsDBNull(r2("OptionType")), "", r2("OptionType").ToString())
+                                            Dim deliverMethod As String = If(IsDBNull(r2("DeliverMethod")), "", r2("DeliverMethod").ToString())
+                                            Dim weight As Decimal = If(IsDBNull(r2("Weight")), 0, Convert.ToDecimal(r2("Weight")))
+                                            Dim storedDuration As String = If(IsDBNull(r2("ServiceDuration")), "", r2("ServiceDuration").ToString())
+
+                                            card.DeliverMethod = deliverMethod
+                                            card.ClothesWeight = weight
+
+                                            ' --- Compute or reuse ServiceDuration ---
+                                            Dim serviceDuration As String = storedDuration
+                                            Dim totalMinutes As Integer = 0
+
+                                            If String.IsNullOrEmpty(serviceDuration) Then
+                                                ' Retrieve MinutesPerKG from ServiceTime table
+                                                Dim minutesPerKG As Decimal = 0
+                                                Using tcmd As New OleDbCommand("
+        SELECT MinutesPerKG
+        FROM ServiceTime
+        WHERE ServiceType=@stype AND OptionType=@otype", conn)
+
+                                                    tcmd.Parameters.AddWithValue("@stype", serviceType)
+                                                    tcmd.Parameters.AddWithValue("@otype", optionType)
+
+                                                    Dim result = tcmd.ExecuteScalar()
+                                                    If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                                                        minutesPerKG = Convert.ToDecimal(result)
+                                                    End If
+                                                End Using
+
+                                                ' Calculate total duration
+                                                totalMinutes = CInt(Math.Round(weight * minutesPerKG))
+                                                serviceDuration = $"{totalMinutes} mins"
+
+                                                ' --- Save computed duration back to Transactions ---
+                                                Using ucmd As New OleDbCommand("
+        UPDATE Transactions
+        SET ServiceDuration=@dur
+        WHERE TransactionID=@tid", conn)
+
+                                                    ucmd.Parameters.AddWithValue("@dur", serviceDuration)
+                                                    ucmd.Parameters.AddWithValue("@tid", card.TransactionID)
+                                                    ucmd.ExecuteNonQuery()
+                                                End Using
+                                            Else
+                                                ' Try to parse stored duration (e.g. "90 mins") to minutes
+                                                Dim numPart As String = New String(serviceDuration.Where(AddressOf Char.IsDigit).ToArray())
+                                                Integer.TryParse(numPart, totalMinutes)
+                                            End If
+
+                                            ' --- Display estimated completion time ---
+                                            If totalMinutes > 0 Then
+                                                Dim finishTime As DateTime = DateTime.Now.AddMinutes(totalMinutes)
+                                                card.lblServiceTime.Text = finishTime.ToString("hh:mm tt")
+                                            Else
+                                                ' fallback if we can’t compute
+                                                card.lblServiceTime.Text = "In Progress"
+                                            End If
+
+
+                                            ' --- Display the final duration ---
+                                            card.lblServiceTime.Text = serviceDuration
+
+                                            ' --- NEW: Cycles calculation ---
+                                            Dim maxWeight As Decimal = 0
+                                            Decimal.TryParse(card.Capacity.Replace("kg", "").Trim(), maxWeight)
+                                            Dim cycles As Integer = 1
+                                            If maxWeight > 0 AndAlso weight > maxWeight Then
+                                                cycles = CInt(Math.Ceiling(weight / maxWeight))
+                                            End If
+                                            card.Cycles = cycles
                                         End If
                                     End Using
                                 End Using
-                            Catch : End Try
+                            Catch ex As Exception
+                                Debug.WriteLine("Error loading transaction details: " & ex.Message)
+                            End Try
 
+                            ' --- Restore UI visuals ---
                             card.lblTransactionID.Text = "Transaction #" & card.TransactionID
                             card.lblTransactionID.Visible = True
                             card.lblServiceTime.Visible = True
@@ -196,14 +273,14 @@ Public Class MachinesControl
                             Catch : End Try
 
                         Else
-                            ' Available / other status
-                            card.lblTransactionID.Visible = False
+                            ' --- Machine is Available / Other status ---
+                            card.lblTransactionID.Visible = True
                             card.lblServiceTime.Visible = False
-                            card.ProceedButton.Text = If(String.IsNullOrEmpty(card.originalProceedText), "Get Pending", card.originalProceedText)
+                            card.ProceedButton.Text = If(String.IsNullOrEmpty(card.originalProceedText), "In-Use", card.originalProceedText)
                             card.ProceedButton.FillColor = If(card.originalProceedColor = Color.Empty, Color.FromArgb(94, 148, 255), card.originalProceedColor)
                             card.ProceedButton.Enabled = (card.Status = "Available")
 
-                            ' Set default icon
+                            ' Set appropriate icon
                             If card.MachineImage Is Nothing Then
                                 Try
                                     Dim imagePath As String = ""
@@ -217,6 +294,7 @@ Public Class MachinesControl
                                         Case Else
                                             imagePath = "C:\Users\Eisen\OneDrive\Documents\Assets\available.png"
                                     End Select
+
                                     If System.IO.File.Exists(imagePath) Then
                                         card.MachineImage = Image.FromFile(imagePath)
                                         card.picMachine.Image = card.MachineImage
@@ -224,6 +302,7 @@ Public Class MachinesControl
                                 Catch : End Try
                             End If
                         End If
+
 
                         ' Disable interaction for Damaged / Unavailable
                         card.Enabled = (card.Status <> "Damaged" AndAlso card.Status <> "Unavailable")
@@ -267,16 +346,67 @@ Public Class MachinesControl
             Dim transID As Integer = 0
             Dim deliverMethod As String = ""
             Dim serviceDuration As String = ""
+            Dim totalMinutes As Integer = 0
 
-            ' Get pending transaction
             Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
-                Using cmd As New OleDbCommand("SELECT TOP 1 TransactionID, DeliverMethod, ServiceDuration FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate", conn)
+
+                ' Get pending transaction
+                Using cmd As New OleDbCommand("
+                SELECT TOP 1 TransactionID, DeliverMethod, ServiceDuration, ServiceType, OptionType, Weight 
+                FROM Transactions 
+                WHERE Status='Pending' 
+                ORDER BY TransactionDate", conn)
+
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
                         If reader.Read() Then
                             transID = Convert.ToInt32(reader("TransactionID"))
                             deliverMethod = If(IsDBNull(reader("DeliverMethod")), "", reader("DeliverMethod").ToString())
-                            serviceDuration = If(IsDBNull(reader("ServiceDuration")), DateTime.Now.ToShortTimeString(), reader("ServiceDuration").ToString())
+                            serviceDuration = If(IsDBNull(reader("ServiceDuration")), "", reader("ServiceDuration").ToString())
+
+                            ' --- NEW: Compute duration if not stored ---
+                            Dim weight As Decimal = If(IsDBNull(reader("Weight")), 0, Convert.ToDecimal(reader("Weight")))
+                            Dim serviceType As String = If(IsDBNull(reader("ServiceType")), "", reader("ServiceType").ToString())
+                            Dim optionType As String = If(IsDBNull(reader("OptionType")), "", reader("OptionType").ToString())
+
+                            card.ClothesWeight = weight
+
+                            ' Compute machine cycles
+                            Dim maxWeight As Decimal = 0
+                            Decimal.TryParse(card.Capacity.Replace("kg", "").Trim(), maxWeight)
+                            Dim cycles As Integer = 1
+                            If maxWeight > 0 AndAlso weight > maxWeight Then
+                                cycles = CInt(Math.Ceiling(weight / maxWeight))
+                            End If
+                            card.Cycles = cycles
+
+                            ' Compute missing duration if empty
+                            If String.IsNullOrEmpty(serviceDuration) Then
+                                Using tcmd As New OleDbCommand("
+                                SELECT MinutesPerKG FROM ServiceTime 
+                                WHERE ServiceType=@stype AND OptionType=@otype", conn)
+                                    tcmd.Parameters.AddWithValue("@stype", serviceType)
+                                    tcmd.Parameters.AddWithValue("@otype", optionType)
+                                    Dim result = tcmd.ExecuteScalar()
+                                    If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                                        Dim minutesPerKG As Decimal = Convert.ToDecimal(result)
+                                        totalMinutes = CInt(Math.Round(weight * minutesPerKG))
+                                        serviceDuration = $"{totalMinutes} mins"
+
+                                        ' Save computed duration
+                                        Using ucmd As New OleDbCommand("
+                                        UPDATE Transactions SET ServiceDuration=@dur WHERE TransactionID=@tid", conn)
+                                            ucmd.Parameters.AddWithValue("@dur", serviceDuration)
+                                            ucmd.Parameters.AddWithValue("@tid", transID)
+                                            ucmd.ExecuteNonQuery()
+                                        End Using
+                                    End If
+                                End Using
+                            Else
+                                ' Parse stored "90 mins" string
+                                Dim numPart As String = New String(serviceDuration.Where(AddressOf Char.IsDigit).ToArray())
+                                Integer.TryParse(numPart, totalMinutes)
+                            End If
                         Else
                             MessageBox.Show("No pending transactions available.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             Return
@@ -285,27 +415,37 @@ Public Class MachinesControl
                 End Using
 
                 ' Assign transaction to machine (update UnitData)
-                Using ucmd As New OleDbCommand("UPDATE UnitData SET Status='In-Use', TransactionID=@tid WHERE ID=@mid", conn)
+                Using ucmd As New OleDbCommand("
+                UPDATE UnitData SET Status='In-Use', TransactionID=@tid WHERE ID=@mid", conn)
                     ucmd.Parameters.AddWithValue("@tid", transID)
                     ucmd.Parameters.AddWithValue("@mid", card.MachineID)
                     ucmd.ExecuteNonQuery()
                 End Using
             End Using
 
-            ' Update UI
+            ' --- Update UI ---
             card.TransactionID = transID
             card.DeliverMethod = deliverMethod
             card.Status = "In-Use"
             card.lblTransactionID.Text = "Transaction #" & transID
             card.lblTransactionID.Visible = True
-            card.lblServiceTime.Text = serviceDuration
+            card.lblClothesWeight.Text = $"{card.ClothesWeight} kg"
+            card.lblCycles.Text = $"{card.Cycles} cycle(s)"
+
+            ' --- Display service duration only in minutes ---
+            If totalMinutes > 0 Then
+                card.lblServiceTime.Text = $"{totalMinutes} mins"
+            Else
+                card.lblServiceTime.Text = If(String.IsNullOrEmpty(serviceDuration), "0 mins", serviceDuration)
+            End If
             card.lblServiceTime.Visible = True
+
 
             btn.Text = "Complete"
             btn.FillColor = Color.LightGreen
             btn.Enabled = True
 
-            ' Set in-use icon
+            ' In-use image
             Try
                 Dim imagePath As String = "C:\Users\Eisen\OneDrive\Documents\Assets\in-use.gif"
                 If System.IO.File.Exists(imagePath) Then
@@ -317,7 +457,6 @@ Public Class MachinesControl
                 Debug.WriteLine("Error loading in-use image: " & ex.Message)
             End Try
 
-            ' Optional: call AssignPendingTransaction
             Try
                 card.AssignPendingTransaction(transID)
             Catch ex As Exception
@@ -327,14 +466,12 @@ Public Class MachinesControl
             card.Refresh()
 
         Else
-            ' --- COMPLETE ASSIGNED TRANSACTION ---
+            ' --- COMPLETE TRANSACTION ---
             Dim transID As Integer = card.TransactionID
             If transID > 0 Then
-                Dim deliverMethod As String = ""
-
-                ' Get delivery method from Transactions
                 Using conn As New OleDbConnection(Db.ConnectionString)
                     conn.Open()
+                    Dim deliverMethod As String = ""
                     Using qcmd As New OleDbCommand("SELECT DeliverMethod FROM Transactions WHERE TransactionID=@id", conn)
                         qcmd.Parameters.AddWithValue("@id", transID)
                         Dim res = qcmd.ExecuteScalar()
@@ -344,28 +481,28 @@ Public Class MachinesControl
                     Dim newStatus As String = If(deliverMethod.Equals("Delivery", StringComparison.OrdinalIgnoreCase),
                                              "For Delivery", "For Pickup")
 
-                    ' Update transaction status
                     Using ucmd As New OleDbCommand("UPDATE Transactions SET Status=@status WHERE TransactionID=@id", conn)
                         ucmd.Parameters.AddWithValue("@status", newStatus)
                         ucmd.Parameters.AddWithValue("@id", transID)
                         ucmd.ExecuteNonQuery()
                     End Using
 
-                    ' Reset machine: Available, clear TransactionID
-                    Using umc As New OleDbCommand("UPDATE UnitData SET Status='Available', TransactionID=NULL WHERE ID=@mid", conn)
+                    Using umc As New OleDbCommand("
+                    UPDATE UnitData SET Status='Available', TransactionID=NULL WHERE ID=@mid", conn)
                         umc.Parameters.AddWithValue("@mid", card.MachineID)
                         umc.ExecuteNonQuery()
                     End Using
                 End Using
 
-                ' Update UI
+                ' --- Reset UI ---
                 card.TransactionID = 0
                 card.DeliverMethod = ""
                 card.Status = "Available"
-                card.lblTransactionID.Text = ""
                 card.lblTransactionID.Visible = False
+                card.lblClothesWeight.Text = ""
+                card.lblCycles.Text = ""
                 card.lblServiceTime.Text = ""
-                card.lblServiceTime.Visible = False
+                card.lblServiceTime.Visible = True
 
                 btn.Text = If(String.IsNullOrEmpty(card.originalProceedText), "Get Pending", card.originalProceedText)
                 btn.FillColor = If(card.originalProceedColor = Color.Empty, Color.FromArgb(94, 148, 255), card.originalProceedColor)
@@ -387,6 +524,7 @@ Public Class MachinesControl
             End If
         End If
     End Sub
+
 
     ' Add 
     Private Sub btnAddMachine_Click(sender As Object, e As EventArgs) Handles btnAddMachine.Click
@@ -456,7 +594,7 @@ Public Class MachinesControl
         ' Now renumber all available machines to fill the gap
         RenumberAvailableMachines()
 
-        machineCardsCache.Clear() ' 🔧 Prevent reusing old cards
+        machineCardsCache.Clear()
         LoadMachinesFromDB()
 
 

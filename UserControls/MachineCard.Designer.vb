@@ -31,6 +31,10 @@ Partial Class MachineCard
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
+        lblCycles = New Label()
+        Label2 = New Label()
+        lblClothesWeight = New Label()
+        ClothesKGTitle = New Label()
         lblUnit = New Label()
         lblTransactionID = New Label()
         lblWeightText = New Label()
@@ -78,6 +82,10 @@ Partial Class MachineCard
         TableLayoutPanel2.ColumnCount = 2
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.Controls.Add(lblCycles, 1, 5)
+        TableLayoutPanel2.Controls.Add(Label2, 0, 5)
+        TableLayoutPanel2.Controls.Add(lblClothesWeight, 1, 4)
+        TableLayoutPanel2.Controls.Add(ClothesKGTitle, 0, 4)
         TableLayoutPanel2.Controls.Add(lblUnit, 0, 0)
         TableLayoutPanel2.Controls.Add(lblTransactionID, 0, 1)
         TableLayoutPanel2.Controls.Add(lblWeightText, 0, 2)
@@ -96,6 +104,54 @@ Partial Class MachineCard
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel2.Size = New Size(239, 214)
         TableLayoutPanel2.TabIndex = 10
+        ' 
+        ' lblCycles
+        ' 
+        lblCycles.AutoSize = True
+        lblCycles.Dock = DockStyle.Fill
+        lblCycles.Font = New Font("Poppins", 12F)
+        lblCycles.Location = New Point(122, 175)
+        lblCycles.Name = "lblCycles"
+        lblCycles.Size = New Size(114, 39)
+        lblCycles.TabIndex = 14
+        lblCycles.Text = "0"
+        lblCycles.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Dock = DockStyle.Fill
+        Label2.Font = New Font("Poppins", 12F)
+        Label2.Location = New Point(3, 175)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(113, 39)
+        Label2.TabIndex = 13
+        Label2.Text = "# of Cycles:"
+        Label2.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' lblClothesWeight
+        ' 
+        lblClothesWeight.AutoSize = True
+        lblClothesWeight.Dock = DockStyle.Fill
+        lblClothesWeight.Font = New Font("Poppins", 12F)
+        lblClothesWeight.Location = New Point(122, 140)
+        lblClothesWeight.Name = "lblClothesWeight"
+        lblClothesWeight.Size = New Size(114, 35)
+        lblClothesWeight.TabIndex = 12
+        lblClothesWeight.Text = "kg"
+        lblClothesWeight.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' ClothesKGTitle
+        ' 
+        ClothesKGTitle.AutoSize = True
+        ClothesKGTitle.Dock = DockStyle.Fill
+        ClothesKGTitle.Font = New Font("Poppins", 12F)
+        ClothesKGTitle.Location = New Point(3, 140)
+        ClothesKGTitle.Name = "ClothesKGTitle"
+        ClothesKGTitle.Size = New Size(113, 35)
+        ClothesKGTitle.TabIndex = 11
+        ClothesKGTitle.Text = "Clothes (kg):"
+        ClothesKGTitle.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblUnit
         ' 
@@ -155,7 +211,7 @@ Partial Class MachineCard
         Label1.Name = "Label1"
         Label1.Size = New Size(113, 35)
         Label1.TabIndex = 9
-        Label1.Text = "Time"
+        Label1.Text = "Finishes in:"
         Label1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblServiceTime
@@ -286,5 +342,9 @@ Partial Class MachineCard
     Friend WithEvents btnProceedMachine As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnViewDetails As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents lblClothesWeight As Label
+    Friend WithEvents ClothesKGTitle As Label
+    Friend WithEvents lblCycles As Label
+    Friend WithEvents Label2 As Label
 
 End Class

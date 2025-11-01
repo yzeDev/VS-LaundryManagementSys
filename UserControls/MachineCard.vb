@@ -203,4 +203,25 @@ Public Class MachineCard
         End Try
     End Sub
 
+    Public Property ClothesWeight As Decimal
+        Get
+            If lblClothesWeight.Text = "" Then Return 0
+            Return Convert.ToDecimal(lblClothesWeight.Text.Replace(" kg", "").Trim())
+        End Get
+        Set(value As Decimal)
+            lblClothesWeight.Text = value.ToString("0.##") & " kg"
+        End Set
+    End Property
+
+    Public Property Cycles As Integer
+        Get
+            If lblCycles.Text = "" Then Return 0
+            Return Convert.ToInt32(lblCycles.Text.Replace(" cycles", "").Trim())
+        End Get
+        Set(value As Integer)
+            lblCycles.Text = value & " cycles"
+        End Set
+    End Property
+
+
 End Class

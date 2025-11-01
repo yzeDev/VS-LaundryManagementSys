@@ -115,10 +115,10 @@ Public Class DryCleaningForm
             invoice.CustomerName = Guna2txtboxName.Text
             invoice.ContactNumber = NormalizeOptionalContact(Guna2txtboxContact.Text)
             invoice.Address = txtboxAddress.Text
-            invoice.Weight = qty.ToString("F0") & " pcs"       ' <- show pieces
+            invoice.Weight = qty.ToString("F0") & " pcs"
             invoice.ServiceType = "Dry Cleaning"
             invoice.PackageType = packageType
-            invoice.Rate = rate.Peso() & " per piece"          ' <- unit text
+            invoice.Rate = rate.Peso() & " per piece"
             invoice.ServiceFee = fees.ServiceFee.Peso()
             invoice.DeliveryFee = fees.DeliveryFee.Peso()
             invoice.TotalAmount = fees.Total.Peso()

@@ -99,22 +99,32 @@ Public Class FullServiceForm
 
     ' Continue → open invoice via helper
     Private Sub gbContinue_Click(sender As Object, e As EventArgs) Handles gbContinue.Click
+        ' Validate weight
         Dim weightVal As Decimal
         If Not Decimal.TryParse(Guna2txtboxWeight.Text, weightVal) OrElse weightVal <= 0D Then
             MessageBox.Show("Enter a valid weight.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
+        ' Fixed values
+        Dim serviceType As String = "Full Service"
+        Dim packageType As String = "Wash, Dry, and Fold"
+        Dim optionType As String = "Standard" ' 👈 since there’s no combo box, use a default name
+        Dim isDelivery As Boolean = Guna2CheckBoxDelivery.Checked
+
+        ' Open invoice modal with proper parameter order
         OpenInvoiceModal(Me,
-                         Guna2txtboxName.Text,
-                         Guna2txtboxContact.Text,
-                         txtboxAddress.Text,
-                         weightVal,
-                         "Full Service",
-                         "Wash, Dry, and Fold",
-                         latestPrice,
-                         Guna2CheckBoxDelivery.Checked)
+                     Guna2txtboxName.Text,
+                     Guna2txtboxContact.Text,
+                     txtboxAddress.Text,
+                     weightVal,
+                     serviceType,
+                     packageType,
+                     optionType,
+                     latestPrice,
+                     isDelivery)
     End Sub
+
 
     ' Optional: refresh preview ID when re-activated
     Private Sub FullServiceForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated

@@ -101,6 +101,8 @@ Public Class NewInvoiceForm
     Public Property TotalAmount As String
     Public Property DeliveryMode As String
 
+    Public Property OptionType As String
+
     ' caret hiding
     Private Sub addressBox_GotFocus(sender As Object, e As EventArgs) Handles addressBox.GotFocus
         HideCaret(addressBox.Handle)
@@ -138,6 +140,7 @@ Public Class NewInvoiceForm
         lblWeight.Text = Weight
         lblServiceType.Text = ServiceType
         lblPackage.Text = PackageType
+        'lblOptionType.Text = OptionType
         lblRate.Text = Rate
         lblServiceFee.Text = ServiceFee
         lblDeliveryFee.Text = DeliveryFee
@@ -185,8 +188,10 @@ Public Class NewInvoiceForm
         Dim refNo As String = ""
         Dim amountPaid As Decimal = 0D
 
+        ' === DIGITAL PAYMENTS (GCash / Maya) ===
         If selectedPayment = GCashBtn.Text OrElse selectedPayment = mayaBtn.Text Then
-            ' 1) Show QR form (Maya/GCash)
+
+            ' 1) Show QR form
             If selectedPayment = GCashBtn.Text Then
                 Using qr As New gcashform()
                     qr.TotalAmount = totalDec
@@ -204,46 +209,74 @@ Public Class NewInvoiceForm
                 dlg.PaymentMethod = selectedPayment
                 dlg.TotalAmount = totalDec
                 dlg.StartPosition = FormStartPosition.CenterParent
+
+                ' Show form (Reference + Amount)
                 If dlg.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
 
                 refNo = dlg.ReferenceNumber
                 amountPaid = dlg.AmountPaid
             End Using
 
-            ' 3) Show "Payment Successful" with preview TransactionID
+            ' 3) Payment successful popup
             Dim previewId As Long = GetNextTransactionIdEstimate()
             Using ps As New PaymentSuccessful()
                 ps.PaymentMethod = selectedPayment
                 ps.TransactionID = previewId
                 ps.Timestamp = DateTime.Now
-                ps.AmountPaid = amountPaid           ' ✅ NEW: show paid amount
+                ps.AmountPaid = amountPaid
                 ps.StartPosition = FormStartPosition.CenterParent
                 If ps.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
             End Using
 
+        ElseIf selectedPayment = cashBtn.Text Then
+            ' === CASH PAYMENT ===
+            ' Use the same ConfirmPayment form, but disable Reference textbox
+            Using dlg As New confirmpayment()
+                dlg.PaymentMethod = selectedPayment
+                dlg.TotalAmount = totalDec
+                dlg.StartPosition = FormStartPosition.CenterParent
 
-        Else
-            ' Cash flow (no QR/ref required)
-            MessageBox.Show("Cash payment selected. Proceed to cashier.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            refNo = ""                  ' optional for cash
-            amountPaid = 0D             ' or set to totalDec if collecting immediately here
+                ' Disable Reference textbox for cash payments
+                dlg.referencetb.Enabled = False
+                dlg.referencetb.Text = "(N/A)"
+
+                If dlg.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+
+                ' Only capture amount paid
+                refNo = ""
+                amountPaid = dlg.AmountPaid
+            End Using
+
+            ' Payment successful popup (optional)
+            Dim previewId As Long = GetNextTransactionIdEstimate()
+            Using ps As New PaymentSuccessful()
+                ps.PaymentMethod = selectedPayment
+                ps.TransactionID = previewId
+                ps.Timestamp = DateTime.Now
+                ps.AmountPaid = amountPaid
+                ps.StartPosition = FormStartPosition.CenterParent
+                If ps.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+            End Using
         End If
 
-        ' === Build & show Receipt ===
+        ' === BUILD & SHOW RECEIPT ===
         Dim receiptForm As New Receipt()
 
-        ' Basic details
+        ' Customer info
         receiptForm.CustomerName = lblName.Text
-
-        ' Contact optional
         Dim rawContact As String = lblContact.Text.Trim()
         receiptForm.ContactNumber = If(rawContact = "+63" OrElse rawContact = "", "", rawContact)
-
-        ' Service details
         receiptForm.Address = addressBox.Text
+
+        ' Service info
         receiptForm.Weight = Convert.ToDecimal(lblWeight.Text.Replace(" kg", ""))
         receiptForm.ServiceType = lblServiceType.Text
         receiptForm.PackageType = lblPackage.Text
+
+        ' ✅ Include OptionType silently
+        receiptForm.OptionType = Me.OptionType
+
+        ' Pricing info
         receiptForm.Rate = Convert.ToDecimal(lblRate.Text.Replace("₱", "").Replace("/kg", ""))
         receiptForm.ServiceFee = Convert.ToDecimal(lblServiceFee.Text.Replace("₱", ""))
         receiptForm.DeliveryFee = Convert.ToDecimal(lblDeliveryFee.Text.Replace("₱", ""))
@@ -251,7 +284,7 @@ Public Class NewInvoiceForm
         receiptForm.PaymentMethod = selectedPayment
         receiptForm.DeliveryMode = lblDelivery.Text
 
-        ' Payment capture
+        ' Payment info
         receiptForm.ReferenceNumber = refNo
         receiptForm.AmountReceived = amountPaid
         receiptForm.ChangeAmount = Math.Max(0D, amountPaid - totalDec)
@@ -259,13 +292,14 @@ Public Class NewInvoiceForm
         ' Timestamp
         receiptForm.TransactionDate = DateTime.Now
 
-        ' Show receipt (it will save and display real TransactionID)
+        ' Show receipt (it will handle DB save)
         receiptForm.StartPosition = FormStartPosition.CenterParent
         receiptForm.ShowDialog(Me)
 
-        ' Close invoice; parent form will be shown by owner if needed
+        ' Close invoice form
         Me.Close()
     End Sub
+
 
 
     ' Add inside NewInvoiceForm (or a shared utility module)

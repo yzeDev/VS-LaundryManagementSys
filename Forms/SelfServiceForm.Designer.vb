@@ -336,7 +336,7 @@ Partial Class SelfServiceForm
         Guna2cmbService.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2cmbService.ForeColor = Color.Black
         Guna2cmbService.ItemHeight = 20
-        Guna2cmbService.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash & Dry"})
+        Guna2cmbService.Items.AddRange(New Object() {"Wash Only", "Dry Only", "Wash + Dry"})
         Guna2cmbService.Location = New Point(200, 46)
         Guna2cmbService.Margin = New Padding(9, 10, 9, 4)
         Guna2cmbService.Name = "Guna2cmbService"

@@ -94,7 +94,7 @@ Partial Class Receipt
         lbltotalAmountPaid = New Label()
         lblChange = New Label()
         Label35 = New Label()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        btnDownloadReceipt = New Guna.UI2.WinForms.Guna2Button()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Panel8 = New Panel()
         Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
@@ -133,7 +133,7 @@ Partial Class Receipt
         Label11 = New Label()
         Panel1 = New Panel()
         Label14 = New Label()
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        btnClose = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel4.SuspendLayout()
@@ -863,23 +863,23 @@ Partial Class Receipt
         Label35.TabIndex = 41
         Label35.TextAlign = ContentAlignment.TopCenter
         ' 
-        ' Guna2Button1
+        ' btnDownloadReceipt
         ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges11
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.FillColor = Color.Transparent
-        Guna2Button1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Guna2Button1.ForeColor = Color.Blue
-        Guna2Button1.Location = New Point(1, 611)
-        Guna2Button1.Margin = New Padding(3, 2, 3, 2)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2Button1.Size = New Size(144, 21)
-        Guna2Button1.TabIndex = 44
-        Guna2Button1.Text = "DOWNLOAD RECEIPT"
+        btnDownloadReceipt.CustomizableEdges = CustomizableEdges11
+        btnDownloadReceipt.DisabledState.BorderColor = Color.DarkGray
+        btnDownloadReceipt.DisabledState.CustomBorderColor = Color.DarkGray
+        btnDownloadReceipt.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnDownloadReceipt.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnDownloadReceipt.FillColor = Color.Transparent
+        btnDownloadReceipt.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        btnDownloadReceipt.ForeColor = Color.Blue
+        btnDownloadReceipt.Location = New Point(1, 611)
+        btnDownloadReceipt.Margin = New Padding(3, 2, 3, 2)
+        btnDownloadReceipt.Name = "btnDownloadReceipt"
+        btnDownloadReceipt.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnDownloadReceipt.Size = New Size(144, 21)
+        btnDownloadReceipt.TabIndex = 44
+        btnDownloadReceipt.Text = "DOWNLOAD RECEIPT"
         ' 
         ' Guna2BorderlessForm1
         ' 
@@ -1366,36 +1366,36 @@ Partial Class Receipt
         Label14.Text = "RECEIPT"
         Label14.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Guna2Button2
+        ' btnClose
         ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges13
-        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button2.FillColor = Color.Transparent
-        Guna2Button2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2Button2.ForeColor = Color.Black
-        Guna2Button2.Location = New Point(328, 611)
-        Guna2Button2.Margin = New Padding(3, 2, 3, 2)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2Button2.Size = New Size(64, 21)
-        Guna2Button2.TabIndex = 46
-        Guna2Button2.Text = "CLOSE"
+        btnClose.CustomizableEdges = CustomizableEdges13
+        btnClose.DisabledState.BorderColor = Color.DarkGray
+        btnClose.DisabledState.CustomBorderColor = Color.DarkGray
+        btnClose.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnClose.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnClose.FillColor = Color.Transparent
+        btnClose.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnClose.ForeColor = Color.Black
+        btnClose.Location = New Point(328, 611)
+        btnClose.Margin = New Padding(3, 2, 3, 2)
+        btnClose.Name = "btnClose"
+        btnClose.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnClose.Size = New Size(64, 21)
+        btnClose.TabIndex = 46
+        btnClose.Text = "CLOSE"
         ' 
         ' Receipt
         ' 
         AutoScaleDimensions = New SizeF(96F, 96F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(404, 640)
-        Controls.Add(Guna2Button2)
+        Controls.Add(btnClose)
         Controls.Add(Panel2)
         Controls.Add(Panel7)
         Controls.Add(Panel6)
         Controls.Add(Panel5)
         Controls.Add(Panel9)
-        Controls.Add(Guna2Button1)
+        Controls.Add(btnDownloadReceipt)
         Controls.Add(Label35)
         Controls.Add(Guna2GradientPanel1)
         FormBorderStyle = FormBorderStyle.None
@@ -1501,7 +1501,7 @@ Partial Class Receipt
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnDownloadReceipt As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
@@ -1543,5 +1543,5 @@ Partial Class Receipt
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label14 As Label
     Friend WithEvents lblPackageType As Label
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2Button
 End Class

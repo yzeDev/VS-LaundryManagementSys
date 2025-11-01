@@ -1271,9 +1271,9 @@ Partial Class DashboardControl
         ' 
         ' gcbSort
         ' 
+        gcbSort.Anchor = AnchorStyles.Left
         gcbSort.BackColor = Color.Transparent
         gcbSort.CustomizableEdges = CustomizableEdges33
-        gcbSort.Dock = DockStyle.Fill
         gcbSort.DrawMode = DrawMode.OwnerDrawFixed
         gcbSort.DropDownStyle = ComboBoxStyle.DropDownList
         gcbSort.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -1281,7 +1281,7 @@ Partial Class DashboardControl
         gcbSort.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         gcbSort.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         gcbSort.ItemHeight = 30
-        gcbSort.Location = New Point(123, 3)
+        gcbSort.Location = New Point(123, 4)
         gcbSort.Name = "gcbSort"
         gcbSort.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         gcbSort.Size = New Size(201, 36)

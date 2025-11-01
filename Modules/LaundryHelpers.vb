@@ -72,6 +72,7 @@ Public Module LaundryHelpers
                                 weightKg As Decimal,
                                 serviceType As String,
                                 packageType As String,
+                                optionType As String,
                                 ratePerKg As Decimal,
                                 isDelivery As Boolean)
         Dim fees = ComputeFees(ratePerKg, weightKg, isDelivery)
@@ -85,6 +86,7 @@ Public Module LaundryHelpers
             invoice.Weight = weightKg.ToString("F2") & " kg"
             invoice.ServiceType = serviceType
             invoice.PackageType = packageType
+            invoice.OptionType = optionType
             invoice.Rate = ratePerKg.Peso() & "/kg"
             invoice.ServiceFee = fees.ServiceFee.Peso()
             invoice.DeliveryFee = fees.DeliveryFee.Peso()
