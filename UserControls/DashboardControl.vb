@@ -425,8 +425,6 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
     End Sub
 
 
-
-
     Private Sub HandleCheckClick(id As Integer)
         Dim confirm = MessageBox.Show($"Mark transaction #{id} as Completed?",
                                   "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -684,6 +682,40 @@ ORDER BY [TransactionDate] ASC, [TransactionID] ASC;"
         End If
     End Sub
 
+    ' === Change cursor when hovering over action icons ===
+    Private Sub dgvDashboardTransactions_CellMouseMove(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvDashboardTransactions.CellMouseMove
+        ' Reset cursor if outside bounds
+        If e.RowIndex < 0 OrElse e.ColumnIndex <> dgvDashboardTransactions.Columns("btnActions").Index Then
+            dgvDashboardTransactions.Cursor = Cursors.Default
+            Exit Sub
+        End If
+
+        ' Get mouse position relative to the DataGridView
+        Dim mousePos As Point = dgvDashboardTransactions.PointToClient(Control.MousePosition)
+
+        ' Make sure we have valid icon rectangles for this row
+        If notifyIconRects.ContainsKey(e.RowIndex) AndAlso
+       completeIconRects.ContainsKey(e.RowIndex) AndAlso
+       archiveIconRects.ContainsKey(e.RowIndex) Then
+
+            ' Check if mouse is over any of the icons
+            If notifyIconRects(e.RowIndex).Contains(mousePos) OrElse
+           completeIconRects(e.RowIndex).Contains(mousePos) OrElse
+           archiveIconRects(e.RowIndex).Contains(mousePos) Then
+
+                dgvDashboardTransactions.Cursor = Cursors.Hand  ' 👈 Hand pointer to show interactivity
+            Else
+                dgvDashboardTransactions.Cursor = Cursors.Default
+            End If
+        Else
+            dgvDashboardTransactions.Cursor = Cursors.Default
+        End If
+    End Sub
+
+    ' === Reset cursor when leaving the cell ===
+    Private Sub dgvDashboardTransactions_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDashboardTransactions.CellMouseLeave
+        dgvDashboardTransactions.Cursor = Cursors.Default
+    End Sub
 
     ' ====================== SMS FUNCTION ======================
     Private Async Function SendSmsGsm(phoneNumber As String, message As String) As Task(Of Boolean)

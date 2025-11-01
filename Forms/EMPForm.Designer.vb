@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MainForm
+Partial Class EMPForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,37 +23,29 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EMPForm))
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         navbarPanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         navBottomDivider = New Panel()
         adminPanel = New Panel()
         adminnNavTblPanel = New TableLayoutPanel()
         btnLogout = New Button()
-        administratorLbl = New Label()
+        lblUserRole = New Label()
         adminPicBox = New PictureBox()
-        adminNameLbl = New Label()
+        lblEmployeeID = New Label()
         navbarBtnPanel = New FlowLayoutPanel()
         Panel4 = New Panel()
         dashboardBtn = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -61,14 +53,6 @@ Partial Class MainForm
         machinesBtn = New Guna.UI2.WinForms.Guna2GradientButton()
         Panel6 = New Panel()
         transactionsBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Panel7 = New Panel()
-        statisticsBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Panel8 = New Panel()
-        settingsBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Panel9 = New Panel()
-        logsBtn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Panel10 = New Panel()
-        manageUsersBtn = New Guna.UI2.WinForms.Guna2GradientButton()
         logoTblPanel = New TableLayoutPanel()
         shopLabel = New Label()
         logoIcon = New PictureBox()
@@ -89,10 +73,6 @@ Partial Class MainForm
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
         Panel6.SuspendLayout()
-        Panel7.SuspendLayout()
-        Panel8.SuspendLayout()
-        Panel9.SuspendLayout()
-        Panel10.SuspendLayout()
         logoTblPanel.SuspendLayout()
         CType(logoIcon, ComponentModel.ISupportInitialize).BeginInit()
         controlsPanel.SuspendLayout()
@@ -105,7 +85,7 @@ Partial Class MainForm
         navbarPanel.Controls.Add(adminPanel)
         navbarPanel.Controls.Add(navbarBtnPanel)
         navbarPanel.Controls.Add(logoTblPanel)
-        navbarPanel.CustomizableEdges = CustomizableEdges15
+        navbarPanel.CustomizableEdges = CustomizableEdges7
         navbarPanel.Dock = DockStyle.Left
         navbarPanel.FillColor = Color.FromArgb(CByte(13), CByte(67), CByte(188))
         navbarPanel.FillColor2 = Color.FromArgb(CByte(76), CByte(102), CByte(232))
@@ -113,7 +93,7 @@ Partial Class MainForm
         navbarPanel.Margin = New Padding(6, 7, 6, 7)
         navbarPanel.Name = "navbarPanel"
         navbarPanel.Padding = New Padding(0, 30, 0, 10)
-        navbarPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        navbarPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         navbarPanel.Size = New Size(220, 800)
         navbarPanel.TabIndex = 0
         ' 
@@ -144,9 +124,9 @@ Partial Class MainForm
         adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 51F))
         adminnNavTblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20F))
         adminnNavTblPanel.Controls.Add(btnLogout, 2, 0)
-        adminnNavTblPanel.Controls.Add(administratorLbl, 1, 1)
+        adminnNavTblPanel.Controls.Add(lblUserRole, 1, 1)
         adminnNavTblPanel.Controls.Add(adminPicBox, 0, 0)
-        adminnNavTblPanel.Controls.Add(adminNameLbl, 1, 0)
+        adminnNavTblPanel.Controls.Add(lblEmployeeID, 1, 0)
         adminnNavTblPanel.Dock = DockStyle.Bottom
         adminnNavTblPanel.Location = New Point(0, 14)
         adminnNavTblPanel.Name = "adminnNavTblPanel"
@@ -171,19 +151,19 @@ Partial Class MainForm
         btnLogout.TabIndex = 6
         btnLogout.UseVisualStyleBackColor = False
         ' 
-        ' administratorLbl
+        ' lblUserRole
         ' 
-        administratorLbl.AutoSize = True
-        administratorLbl.Dock = DockStyle.Fill
-        administratorLbl.Font = New Font("Poppins", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        administratorLbl.ForeColor = Color.White
-        administratorLbl.Location = New Point(66, 20)
-        administratorLbl.Name = "administratorLbl"
-        administratorLbl.Padding = New Padding(4, 0, 0, 0)
-        administratorLbl.Size = New Size(106, 20)
-        administratorLbl.TabIndex = 5
-        administratorLbl.Text = "Administrator"
-        administratorLbl.TextAlign = ContentAlignment.MiddleLeft
+        lblUserRole.AutoSize = True
+        lblUserRole.Dock = DockStyle.Fill
+        lblUserRole.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUserRole.ForeColor = Color.White
+        lblUserRole.Location = New Point(66, 20)
+        lblUserRole.Name = "lblUserRole"
+        lblUserRole.Padding = New Padding(4, 0, 0, 0)
+        lblUserRole.Size = New Size(106, 20)
+        lblUserRole.TabIndex = 5
+        lblUserRole.Text = "Administrator"
+        lblUserRole.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' adminPicBox
         ' 
@@ -197,19 +177,19 @@ Partial Class MainForm
         adminPicBox.TabIndex = 3
         adminPicBox.TabStop = False
         ' 
-        ' adminNameLbl
+        ' lblEmployeeID
         ' 
-        adminNameLbl.AutoSize = True
-        adminNameLbl.Dock = DockStyle.Fill
-        adminNameLbl.Font = New Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        adminNameLbl.ForeColor = Color.White
-        adminNameLbl.Location = New Point(66, 0)
-        adminNameLbl.Name = "adminNameLbl"
-        adminNameLbl.Padding = New Padding(4, 0, 0, 0)
-        adminNameLbl.Size = New Size(106, 20)
-        adminNameLbl.TabIndex = 4
-        adminNameLbl.Text = "OWNER"
-        adminNameLbl.TextAlign = ContentAlignment.MiddleLeft
+        lblEmployeeID.AutoSize = True
+        lblEmployeeID.Dock = DockStyle.Fill
+        lblEmployeeID.Font = New Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEmployeeID.ForeColor = Color.White
+        lblEmployeeID.Location = New Point(66, 0)
+        lblEmployeeID.Name = "lblEmployeeID"
+        lblEmployeeID.Padding = New Padding(4, 0, 0, 0)
+        lblEmployeeID.Size = New Size(106, 20)
+        lblEmployeeID.TabIndex = 4
+        lblEmployeeID.Text = "ID"
+        lblEmployeeID.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' navbarBtnPanel
         ' 
@@ -217,10 +197,6 @@ Partial Class MainForm
         navbarBtnPanel.Controls.Add(Panel4)
         navbarBtnPanel.Controls.Add(Panel5)
         navbarBtnPanel.Controls.Add(Panel6)
-        navbarBtnPanel.Controls.Add(Panel7)
-        navbarBtnPanel.Controls.Add(Panel8)
-        navbarBtnPanel.Controls.Add(Panel9)
-        navbarBtnPanel.Controls.Add(Panel10)
         navbarBtnPanel.Dock = DockStyle.Fill
         navbarBtnPanel.Location = New Point(0, 117)
         navbarBtnPanel.Name = "navbarBtnPanel"
@@ -338,154 +314,6 @@ Partial Class MainForm
         transactionsBtn.TextAlign = HorizontalAlignment.Left
         transactionsBtn.TextOffset = New Point(0, 2)
         ' 
-        ' Panel7
-        ' 
-        Panel7.Controls.Add(statisticsBtn)
-        Panel7.Location = New Point(0, 150)
-        Panel7.Margin = New Padding(0)
-        Panel7.Name = "Panel7"
-        Panel7.Size = New Size(220, 50)
-        Panel7.TabIndex = 7
-        ' 
-        ' statisticsBtn
-        ' 
-        statisticsBtn.BackColor = Color.Transparent
-        statisticsBtn.CustomizableEdges = CustomizableEdges7
-        statisticsBtn.DisabledState.BorderColor = Color.DarkGray
-        statisticsBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        statisticsBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        statisticsBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        statisticsBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        statisticsBtn.Dock = DockStyle.Fill
-        statisticsBtn.FillColor = Color.Transparent
-        statisticsBtn.FillColor2 = Color.Transparent
-        statisticsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
-        statisticsBtn.ForeColor = Color.White
-        statisticsBtn.Image = CType(resources.GetObject("statisticsBtn.Image"), Image)
-        statisticsBtn.ImageAlign = HorizontalAlignment.Left
-        statisticsBtn.ImageOffset = New Point(20, 0)
-        statisticsBtn.ImageSize = New Size(25, 25)
-        statisticsBtn.Location = New Point(0, 0)
-        statisticsBtn.Margin = New Padding(0)
-        statisticsBtn.Name = "statisticsBtn"
-        statisticsBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        statisticsBtn.Size = New Size(220, 50)
-        statisticsBtn.TabIndex = 5
-        statisticsBtn.Text = "     Statistics"
-        statisticsBtn.TextAlign = HorizontalAlignment.Left
-        statisticsBtn.TextOffset = New Point(0, 2)
-        ' 
-        ' Panel8
-        ' 
-        Panel8.Controls.Add(settingsBtn)
-        Panel8.Location = New Point(0, 200)
-        Panel8.Margin = New Padding(0)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(220, 50)
-        Panel8.TabIndex = 7
-        ' 
-        ' settingsBtn
-        ' 
-        settingsBtn.BackColor = Color.Transparent
-        settingsBtn.CustomizableEdges = CustomizableEdges9
-        settingsBtn.DisabledState.BorderColor = Color.DarkGray
-        settingsBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        settingsBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        settingsBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        settingsBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        settingsBtn.Dock = DockStyle.Fill
-        settingsBtn.FillColor = Color.Transparent
-        settingsBtn.FillColor2 = Color.Transparent
-        settingsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
-        settingsBtn.ForeColor = Color.White
-        settingsBtn.Image = CType(resources.GetObject("settingsBtn.Image"), Image)
-        settingsBtn.ImageAlign = HorizontalAlignment.Left
-        settingsBtn.ImageOffset = New Point(20, 0)
-        settingsBtn.ImageSize = New Size(25, 25)
-        settingsBtn.Location = New Point(0, 0)
-        settingsBtn.Margin = New Padding(0)
-        settingsBtn.Name = "settingsBtn"
-        settingsBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        settingsBtn.Size = New Size(220, 50)
-        settingsBtn.TabIndex = 5
-        settingsBtn.Text = "     Settings"
-        settingsBtn.TextAlign = HorizontalAlignment.Left
-        settingsBtn.TextOffset = New Point(0, 2)
-        ' 
-        ' Panel9
-        ' 
-        Panel9.Controls.Add(logsBtn)
-        Panel9.Location = New Point(0, 250)
-        Panel9.Margin = New Padding(0)
-        Panel9.Name = "Panel9"
-        Panel9.Size = New Size(220, 50)
-        Panel9.TabIndex = 7
-        ' 
-        ' logsBtn
-        ' 
-        logsBtn.BackColor = Color.Transparent
-        logsBtn.CustomizableEdges = CustomizableEdges11
-        logsBtn.DisabledState.BorderColor = Color.DarkGray
-        logsBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        logsBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        logsBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        logsBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        logsBtn.Dock = DockStyle.Fill
-        logsBtn.FillColor = Color.Transparent
-        logsBtn.FillColor2 = Color.Transparent
-        logsBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
-        logsBtn.ForeColor = Color.White
-        logsBtn.Image = CType(resources.GetObject("logsBtn.Image"), Image)
-        logsBtn.ImageAlign = HorizontalAlignment.Left
-        logsBtn.ImageOffset = New Point(20, 0)
-        logsBtn.ImageSize = New Size(25, 25)
-        logsBtn.Location = New Point(0, 0)
-        logsBtn.Margin = New Padding(0)
-        logsBtn.Name = "logsBtn"
-        logsBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        logsBtn.Size = New Size(220, 50)
-        logsBtn.TabIndex = 5
-        logsBtn.Text = "     Logs"
-        logsBtn.TextAlign = HorizontalAlignment.Left
-        logsBtn.TextOffset = New Point(0, 2)
-        ' 
-        ' Panel10
-        ' 
-        Panel10.Controls.Add(manageUsersBtn)
-        Panel10.Location = New Point(0, 300)
-        Panel10.Margin = New Padding(0)
-        Panel10.Name = "Panel10"
-        Panel10.Size = New Size(220, 50)
-        Panel10.TabIndex = 7
-        ' 
-        ' manageUsersBtn
-        ' 
-        manageUsersBtn.BackColor = Color.Transparent
-        manageUsersBtn.CustomizableEdges = CustomizableEdges13
-        manageUsersBtn.DisabledState.BorderColor = Color.DarkGray
-        manageUsersBtn.DisabledState.CustomBorderColor = Color.DarkGray
-        manageUsersBtn.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        manageUsersBtn.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        manageUsersBtn.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        manageUsersBtn.Dock = DockStyle.Fill
-        manageUsersBtn.FillColor = Color.Transparent
-        manageUsersBtn.FillColor2 = Color.Transparent
-        manageUsersBtn.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
-        manageUsersBtn.ForeColor = Color.White
-        manageUsersBtn.Image = CType(resources.GetObject("manageUsersBtn.Image"), Image)
-        manageUsersBtn.ImageAlign = HorizontalAlignment.Left
-        manageUsersBtn.ImageOffset = New Point(20, 0)
-        manageUsersBtn.ImageSize = New Size(25, 25)
-        manageUsersBtn.Location = New Point(0, 0)
-        manageUsersBtn.Margin = New Padding(0)
-        manageUsersBtn.Name = "manageUsersBtn"
-        manageUsersBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        manageUsersBtn.Size = New Size(220, 50)
-        manageUsersBtn.TabIndex = 5
-        manageUsersBtn.Text = "     Manage Users"
-        manageUsersBtn.TextAlign = HorizontalAlignment.Left
-        manageUsersBtn.TextOffset = New Point(0, 2)
-        ' 
         ' logoTblPanel
         ' 
         logoTblPanel.BackColor = Color.Transparent
@@ -561,12 +389,12 @@ Partial Class MainForm
         ' 
         xBtn.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         xBtn.CustomClick = True
-        xBtn.CustomizableEdges = CustomizableEdges17
+        xBtn.CustomizableEdges = CustomizableEdges9
         xBtn.FillColor = Color.Transparent
         xBtn.IconColor = Color.Black
         xBtn.Location = New Point(55, 3)
         xBtn.Name = "xBtn"
-        xBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        xBtn.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         xBtn.Size = New Size(21, 19)
         xBtn.TabIndex = 0
         ' 
@@ -574,12 +402,12 @@ Partial Class MainForm
         ' 
         Guna2ControlBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox
-        Guna2ControlBox2.CustomizableEdges = CustomizableEdges19
+        Guna2ControlBox2.CustomizableEdges = CustomizableEdges11
         Guna2ControlBox2.FillColor = Color.Transparent
         Guna2ControlBox2.IconColor = Color.Black
         Guna2ControlBox2.Location = New Point(29, 3)
         Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Guna2ControlBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2ControlBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2ControlBox2.Size = New Size(20, 19)
         Guna2ControlBox2.TabIndex = 1
         ' 
@@ -587,12 +415,12 @@ Partial Class MainForm
         ' 
         Guna2ControlBox3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Guna2ControlBox3.CustomizableEdges = CustomizableEdges21
+        Guna2ControlBox3.CustomizableEdges = CustomizableEdges13
         Guna2ControlBox3.FillColor = Color.Transparent
         Guna2ControlBox3.IconColor = Color.Black
         Guna2ControlBox3.Location = New Point(3, 3)
         Guna2ControlBox3.Name = "Guna2ControlBox3"
-        Guna2ControlBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2ControlBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2ControlBox3.Size = New Size(20, 19)
         Guna2ControlBox3.TabIndex = 2
         ' 
@@ -631,7 +459,7 @@ Partial Class MainForm
         Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
         Guna2BorderlessForm1.TransparentWhileDrag = True
         ' 
-        ' MainForm
+        ' EMPForm
         ' 
         AutoScaleDimensions = New SizeF(13F, 37F)
         AutoScaleMode = AutoScaleMode.Font
@@ -648,7 +476,7 @@ Partial Class MainForm
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(6, 7, 6, 7)
         MinimumSize = New Size(1200, 800)
-        Name = "MainForm"
+        Name = "EMPForm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "BubbleFresh"
         navbarPanel.ResumeLayout(False)
@@ -660,10 +488,6 @@ Partial Class MainForm
         Panel4.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         Panel6.ResumeLayout(False)
-        Panel7.ResumeLayout(False)
-        Panel8.ResumeLayout(False)
-        Panel9.ResumeLayout(False)
-        Panel10.ResumeLayout(False)
         logoTblPanel.ResumeLayout(False)
         logoTblPanel.PerformLayout()
         CType(logoIcon, ComponentModel.ISupportInitialize).EndInit()
@@ -676,11 +500,11 @@ Partial Class MainForm
     Friend WithEvents logoTblPanel As TableLayoutPanel
     Friend WithEvents shopLabel As Label
     Friend WithEvents logoIcon As PictureBox
-    Friend WithEvents adminNameLbl As Label
+    Friend WithEvents lblEmployeeID As Label
     Friend WithEvents adminPicBox As PictureBox
     Friend WithEvents adminnNavTblPanel As TableLayoutPanel
     Friend WithEvents btnLogout As Button
-    Friend WithEvents administratorLbl As Label
+    Friend WithEvents lblUserRole As Label
     Friend WithEvents adminPanel As Panel
     Friend WithEvents navBottomDivider As Panel
     Friend WithEvents controlsPanel As Panel
@@ -691,14 +515,6 @@ Partial Class MainForm
     Friend WithEvents navbarBtnPanel As FlowLayoutPanel
     Friend WithEvents dashboardBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents manageUsersBtn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents logsBtn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents settingsBtn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents statisticsBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Panel6 As Panel
     Friend WithEvents transactionsBtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Panel5 As Panel

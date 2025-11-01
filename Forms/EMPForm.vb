@@ -1,7 +1,10 @@
 ﻿Imports Guna.UI2.WinForms
 Imports TheArtOfDevHtmlRenderer.Adapters.Entities
 
-Public Class MainForm
+Public Class EMPForm
+
+    Public Property CurrentUserID As String
+    Public Property UserRole As String
 
     Private activeNavButton As Guna2GradientButton = Nothing
 
@@ -13,6 +16,19 @@ Public Class MainForm
     Private ReadOnly NormalColor As Color = Color.Transparent
     Private originalClientSize As Size
     Private isMaximizedManually As Boolean = False
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Attach the same handler to all navigation buttons
+        AddHandler dashboardBtn.Click, AddressOf NavButton_Click
+        AddHandler machinesBtn.Click, AddressOf NavButton_Click
+        AddHandler transactionsBtn.Click, AddressOf NavButton_Click
+
+        lblEmployeeID.Text = CurrentUserID
+        lblUserRole.Text = UserRole
+
+        ' Load default view
+        LoadSection(dashboardBtn)
+    End Sub
 
 
     '  WINDOW CONTROL BUTTONS 
@@ -109,19 +125,7 @@ Public Class MainForm
     End Sub
 
 
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Attach the same handler to all navigation buttons
-        AddHandler dashboardBtn.Click, AddressOf NavButton_Click
-        AddHandler machinesBtn.Click, AddressOf NavButton_Click
-        AddHandler transactionsBtn.Click, AddressOf NavButton_Click
-        AddHandler statisticsBtn.Click, AddressOf NavButton_Click
-        AddHandler settingsBtn.Click, AddressOf NavButton_Click
-        AddHandler logsBtn.Click, AddressOf NavButton_Click
-        AddHandler manageUsersBtn.Click, AddressOf NavButton_Click
 
-        ' Load default view
-        LoadSection(dashboardBtn)
-    End Sub
 
     Private Sub NavButton_Click(sender As Object, e As EventArgs)
         Dim clickedButton As Guna2GradientButton = CType(sender, Guna2GradientButton)
@@ -142,18 +146,6 @@ Public Class MainForm
             Case "transactionsBtn"
                 titleBar = New transacTitleBarUser()
                 content = New TransactionsControl()
-            Case "statisticsBtn"
-                titleBar = New statsTitleBarUser()
-                content = New StatsControl()
-            Case "settingsBtn"
-                titleBar = New settingsTitleBarUser()
-                content = New OptionsControl()
-            Case "logsBtn"
-                titleBar = New logsTitleBarUser()
-                content = New LogsControl()
-            Case "manageUsersBtn"
-                titleBar = New manageUsersTitleBarUser()
-                content = New ManageUsersControl()
             Case Else
                 Return
         End Select
