@@ -173,10 +173,27 @@ Public Class MachinesControl
                                         If r2.Read() Then
                                             card.lblServiceTime.Text = If(IsDBNull(r2("ServiceDuration")), DateTime.Now.ToShortTimeString(), r2("ServiceDuration").ToString())
                                             card.DeliverMethod = If(IsDBNull(r2("DeliverMethod")), "", r2("DeliverMethod").ToString())
+
+                                            ' --- NEW: Weight + Cycles calculation ---
+                                            Dim weight As Decimal = If(IsDBNull(r2("Weight")), 0, Convert.ToDecimal(r2("Weight")))
+                                            card.ClothesWeight = weight
+
+                                            ' Parse capacity numeric (remove kg if included)
+                                            Dim maxWeight As Decimal = 0
+                                            Decimal.TryParse(card.Capacity.Replace("kg", "").Trim(), maxWeight)
+
+                                            ' Calculate number of cycles required
+                                            Dim cycles As Integer = 1
+                                            If maxWeight > 0 AndAlso weight > maxWeight Then
+                                                cycles = CInt(Math.Ceiling(weight / maxWeight))
+                                            End If
+                                            card.Cycles = cycles
                                         End If
                                     End Using
                                 End Using
-                            Catch : End Try
+                            Catch ex As Exception
+                                Debug.WriteLine("Error loading transaction details: " & ex.Message)
+                            End Try
 
                             card.lblTransactionID.Text = "Transaction #" & card.TransactionID
                             card.lblTransactionID.Visible = True
@@ -271,12 +288,26 @@ Public Class MachinesControl
             ' Get pending transaction
             Using conn As New OleDbConnection(Db.ConnectionString)
                 conn.Open()
-                Using cmd As New OleDbCommand("SELECT TOP 1 TransactionID, DeliverMethod, ServiceDuration FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate", conn)
+                Using cmd As New OleDbCommand("SELECT TOP 1 TransactionID, DeliverMethod, ServiceDuration, Weight FROM Transactions WHERE Status='Pending' ORDER BY TransactionDate", conn)
+
                     Using reader As OleDbDataReader = cmd.ExecuteReader()
                         If reader.Read() Then
                             transID = Convert.ToInt32(reader("TransactionID"))
                             deliverMethod = If(IsDBNull(reader("DeliverMethod")), "", reader("DeliverMethod").ToString())
                             serviceDuration = If(IsDBNull(reader("ServiceDuration")), DateTime.Now.ToShortTimeString(), reader("ServiceDuration").ToString())
+
+                            ' --- NEW ---
+                            Dim weight As Decimal = If(IsDBNull(reader("Weight")), 0, Convert.ToDecimal(reader("Weight")))
+                            card.ClothesWeight = weight
+
+                            Dim maxWeight As Decimal = 0
+                            Decimal.TryParse(card.Capacity.Replace("kg", "").Trim(), maxWeight)
+
+                            Dim cycles As Integer = 1
+                            If maxWeight > 0 AndAlso weight > maxWeight Then
+                                cycles = CInt(Math.Ceiling(weight / maxWeight))
+                            End If
+                            card.Cycles = cycles
                         Else
                             MessageBox.Show("No pending transactions available.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             Return
@@ -456,7 +487,7 @@ Public Class MachinesControl
         ' Now renumber all available machines to fill the gap
         RenumberAvailableMachines()
 
-        machineCardsCache.Clear() ' 🔧 Prevent reusing old cards
+        machineCardsCache.Clear()
         LoadMachinesFromDB()
 
 

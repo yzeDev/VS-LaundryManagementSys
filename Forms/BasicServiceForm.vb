@@ -6,9 +6,9 @@ Public Class BasicServiceForm
 
     Public Sub New()
         InitializeComponent()
-        If Guna2cmbServiceType.Items.Count > 0 Then
-            Guna2cmbServiceType.SelectedIndex = 0
-            packageType = Guna2cmbServiceType.SelectedItem.ToString()
+        If Guna2cmbService.Items.Count > 0 Then
+            Guna2cmbService.SelectedIndex = 0
+            packageType = Guna2cmbService.SelectedItem.ToString()
         Else
             packageType = "Wash Only"
         End If
@@ -29,9 +29,9 @@ Public Class BasicServiceForm
     End Sub
 
     ' Keep packageType in sync
-    Private Sub Guna2cmbServiceType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Guna2cmbServiceType.SelectedIndexChanged
-        If Guna2cmbServiceType.SelectedItem IsNot Nothing Then
-            packageType = Guna2cmbServiceType.SelectedItem.ToString()
+    Private Sub Guna2cmbServiceType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Guna2cmbService.SelectedIndexChanged
+        If Guna2cmbService.SelectedItem IsNot Nothing Then
+            packageType = Guna2cmbService.SelectedItem.ToString()
         End If
     End Sub
 
@@ -128,18 +128,25 @@ Public Class BasicServiceForm
             Exit Sub
         End If
 
+        ' 🧺 Get the selected Option Type
+        Dim optionType As String = Guna2cmbService.Text.Trim()
+
+        ' 🧮 Get latest rate
         Dim rate = GetLatestPrice("Basic Service", packageType)
 
+        ' 🧾 Pass optionType into invoice
         OpenInvoiceModal(Me,
-                         Guna2txtboxName.Text,
-                         Guna2txtboxContact.Text,
-                         txtboxAddress.Text,
-                         weightVal,
-                         "Basic Service",
-                         packageType,
-                         rate,
-                         Guna2CheckBoxdelivery.Checked)
+                     Guna2txtboxName.Text,
+                     Guna2txtboxContact.Text,
+                     txtboxAddress.Text,
+                     weightVal,
+                     "Basic Service",
+                     packageType,
+                     optionType,
+                     rate,
+                     Guna2CheckBoxdelivery.Checked)
     End Sub
+
 
     ' Optional: preview ID refresh
     Private Sub BasicServiceForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated

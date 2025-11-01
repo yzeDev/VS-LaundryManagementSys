@@ -47,7 +47,7 @@ Partial Class NewInvoiceForm
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         TableLayoutPanel2 = New TableLayoutPanel()
         TableLayoutPanel7 = New TableLayoutPanel()
-        Label9 = New Label()
+        lblTransactionID = New Label()
         Label10 = New Label()
         Label8 = New Label()
         TableLayoutPanel6 = New TableLayoutPanel()
@@ -226,7 +226,7 @@ Partial Class NewInvoiceForm
         ' 
         TableLayoutPanel7.ColumnCount = 1
         TableLayoutPanel7.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel7.Controls.Add(Label9, 0, 2)
+        TableLayoutPanel7.Controls.Add(lblTransactionID, 0, 2)
         TableLayoutPanel7.Controls.Add(Label10, 0, 0)
         TableLayoutPanel7.Controls.Add(Label8, 0, 1)
         TableLayoutPanel7.Dock = DockStyle.Fill
@@ -239,18 +239,18 @@ Partial Class NewInvoiceForm
         TableLayoutPanel7.Size = New Size(148, 65)
         TableLayoutPanel7.TabIndex = 5
         ' 
-        ' Label9
+        ' lblTransactionID
         ' 
-        Label9.AutoSize = True
-        Label9.Dock = DockStyle.Fill
-        Label9.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.White
-        Label9.Location = New Point(3, 43)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(142, 22)
-        Label9.TabIndex = 9
-        Label9.Text = "TRX-2025-001"
-        Label9.TextAlign = ContentAlignment.MiddleRight
+        lblTransactionID.AutoSize = True
+        lblTransactionID.Dock = DockStyle.Fill
+        lblTransactionID.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTransactionID.ForeColor = Color.White
+        lblTransactionID.Location = New Point(3, 43)
+        lblTransactionID.Name = "lblTransactionID"
+        lblTransactionID.Size = New Size(142, 22)
+        lblTransactionID.TabIndex = 9
+        lblTransactionID.Text = "TRX-2025-001"
+        lblTransactionID.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' Label10
         ' 
@@ -1484,7 +1484,7 @@ Partial Class NewInvoiceForm
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lblTransactionID As Label
     Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
     Friend WithEvents Guna2GradientPanel2 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents TableLayoutPanel9 As TableLayoutPanel

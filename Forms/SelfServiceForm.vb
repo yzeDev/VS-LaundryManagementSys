@@ -97,8 +97,13 @@ Public Class SelfServiceForm
             Exit Sub
         End If
 
+        ' 🧺 Get the selected Option Type (from your combo box)
+        Dim optionType As String = Guna2cmbService.Text.Trim()
+
+        ' 🧮 Get latest price based on ServiceType + PackageType
         Dim rate = GetLatestPrice("Self-Service", packageType)
 
+        ' 🧾 Open the Invoice Form with the correct parameter order
         OpenInvoiceModal(Me,
                          Guna2TxtboxName.Text,
                          Guna2txtboxContact.Text,
@@ -106,7 +111,9 @@ Public Class SelfServiceForm
                          weightVal,
                          "Self-Service",
                          packageType,
+                         optionType,
                          rate,
                          Guna2CheckBoxDelivery.Checked)
     End Sub
+
 End Class
